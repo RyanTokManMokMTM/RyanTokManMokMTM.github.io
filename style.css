@@ -1,0 +1,229 @@
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+    
+    body {
+        width: 100%;
+        min-height: 100vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/wallpaper.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
+        padding: 2%;
+        padding-left: 7%;
+    }
+    
+    .nav-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+    
+    .logo {
+        font-size: x-large;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        text-shadow: 3px 3px 3px rgb(95, 83, 83);
+        flex: 2
+    }
+    
+    .nav-item ul {
+        padding-right: 1.2em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+    }
+
+    
+    .nav-link a {
+        padding-left: 25px;
+        text-decoration: none;
+        color: #808080;
+        font-size: large;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+    /*When nav item is hover*/
+    
+    .nav-item a:hover {
+        color: white;
+        transition: all 2s ease 0s;
+    }
+   
+    
+    .introl {
+        display: flex;
+        height: 88%;
+        align-items: center;
+    }
+    
+    .row h1 {
+        font-size: 60px;
+    }
+    
+    .row p {
+        font-size: x-large;
+        font-weight: normal;
+    }
+    
+    .button {
+        font-size: 20px;
+        text-decoration: none;
+        background-color: azure;
+        width: 200px;
+        padding: 10px;
+        border-radius: 25px;
+        outline: none;
+        margin-top: 25px;
+        cursor: pointer;
+    }
+    
+    .button {
+        color: #7B68EE;
+        font-size: 25px;
+        padding-left: 20px;
+        text-decoration: none;
+    }
+    
+    .button:hover {
+        background-color: black;
+        transition: all 2s ease 0s;
+    }
+    
+    .button:hover {
+        color: white;
+        transition: all 2s ease 0s;
+    }
+    
+    .row {
+        flex-basis: 50%;
+    }
+    
+    .card {
+        width: 240px;
+        height: 280px;
+        display: inline-block;
+        margin: 30px;
+        padding: 20px;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: transform 0.5s;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-size: 30px;
+        font-family: 'Source Sans Pro', sans-serif;
+        z-index: 0;
+    }
+    
+    .card:hover {
+        transform: translateY(-20px) scale(1.2, 1.2);
+    }
+    
+    .card h5 {
+        font-family: 'Josefin Sans', sans-serif;
+        padding-bottom: 2px;
+    }
+    
+    .card li {
+        list-style: none;
+        font-size: 18px;
+        padding-top: 10px;
+    }
+    
+    .card li span {
+        margin-left: 10px;
+        color: white;
+    }
+    
+    .c1 {
+        background-image: url("img/card4.jpg");
+    }
+    
+    .c2 {
+        background-image: url("img/card2.png");
+    }
+    
+    .c3 {
+        background-image: url("img/card3.jpg");
+    }
+    
+    .c4 {
+        background-image: url("img/card.jpg");
+    }
+    
+    .toogle-button {
+        position: absolute;
+        top: 1.5rem;
+        right: 1rem;
+        padding-right: 5%;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+    
+    .toogle-button .bar {
+        width: 30px;
+        height: 5px;
+        background-color: red;
+        border-radius: 25px;
+    }
+    
+    @media (max-width: 1024px) {
+        .introl {
+            display: flex;
+            flex-flow: column;
+            height: 50%;
+            margin-top: 10%;
+        }
+        .card {
+            margin-left: 12%;
+            margin-top: 10%;
+        }
+        .button {
+            width: 280px;
+            margin-left: 20%;
+            padding-left: 17%;
+        }
+        .nav-link {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
+        .toogle-button {
+            display: flex;
+        }
+        .toogle-button:hover {
+            color: beige
+        }
+        .nav-item ul {
+            flex-direction: column;
+            width: 100%;
+        }
+        .nav-item {
+            margin-top: 1.2rem;
+            width: 100%;
+            transition: opacity .5s ease-out;
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+        }
+        .nav-item ul li {
+            margin-top: 1.2rem;
+            text-align: center;
+        }
+        .nav-item.active {
+            opacity: 1;
+            height: auto;
+        }
+    }

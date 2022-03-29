@@ -1,6 +1,6 @@
 Title =  "Loving life and dreams."
 BaseUrl = "https://ryantokmanmokmtm.github.io"
-
+disableKinds = ["RSS"]
 DefaultContentLanguage = "zh-tw"
 LanguageCode = "zh-TW"
 

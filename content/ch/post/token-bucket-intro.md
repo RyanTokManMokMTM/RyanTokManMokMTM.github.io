@@ -1,5 +1,5 @@
 ---
-title: "[Note]Token Bucket algorithm introduction and play with golang Limiter"
+title: "[Note]Token Bucket algorithm introduction and play with golang rate Limiter"
 date: 2022-03-29T18:33:07+08:00
 draft: false
 toc: false

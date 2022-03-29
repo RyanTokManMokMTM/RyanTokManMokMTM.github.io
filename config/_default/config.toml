@@ -1,8 +1,8 @@
 Title =  "Loving life and dreams."
-BaseUrl = "https://ryantokmanmokmtm.github.io/"
+BaseUrl = "https://ryantokmanmokmtm.github.io"
 
-DefaultContentLanguage = "zh-cn"
-LanguageCode = "zh-CN"
+DefaultContentLanguage = "zh-tw"
+LanguageCode = "zh-TW"
 
 Theme =  "hugo-theme-next"
 
@@ -11,7 +11,7 @@ MetaDataFormat =  "toml"
 PaginatePath =  "p"
 Paginate = 5
 
-DisablePathToLower =  false
+DisablePathToLower =  true
 
 PreserveTaxonomyNames = false
 

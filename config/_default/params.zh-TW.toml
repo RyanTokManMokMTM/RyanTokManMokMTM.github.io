@@ -1,0 +1,53 @@
+Description = "歡迎來的Jackson.tmm的空間站。個人主要專注於Web開發，程序開發，以及學習上。"
+Keywords =  "博客, 工程師, 程序員, 學習, 筆記, 技術, 分析, 後端, 生活"
+Subtitle = "努力練習的普通人"
+AuthorImg = "/images/avatar.jpg"
+AuthorName = "jackson.tmm"
+Introduce = "每天告訴自己一次：我真的很不錯。"
+DateFormat = "2006-01-02"
+YearFormat = "2006年"
+MonthFormat = "01-02"
+
+#[Footer]
+#  StorageLink = "https://www.ucloud.cn/"
+#  StorageName = "UCloud云存储"
+#  ICPLink = "http://beian.miit.gov.cn"
+#  ICPNo = "粤ICP备18047355号"
+
+[[Socials]]
+  Name = "GitHub"
+  Icon = "github"
+  URL = "https://github.com/RyanTokManMokMTM"
+  
+[[Socials]]
+  Name = "Facebook"
+  Icon = "facebook"
+  URL = "https://www.facebook.com/karot.ka.7505/"  
+  
+[[Socials]]
+  Name = "Instagram"
+  Icon = "instagram"
+  URL = "https://www.instagram.com/tm_m.0418/"
+  
+
+
+#[[Socials]]
+#  Name = "知乎"
+#  Icon = "globe"
+#  URL = "https://www.zhihu.com/people/fan-meng-xing-chen-1"
+
+#[[Links]]
+#  Name = "Nutz"
+#  Permalink = "https://nutzam.com/"
+
+#[[Links]]
+#  Name = "JFinal"
+#  Permalink = "https://jfinal.com/"
+
+#[[Links]]
+#  Name = "Wendal"
+#  Permalink = "http://wendal.net/"
+
+#[[Links]]
+#  Name = "廖雪峰"
+#  Permalink = "https://www.liaoxuefeng.com/"

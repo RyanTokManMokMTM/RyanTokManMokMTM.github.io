@@ -1,0 +1,72 @@
+[StatsCats]
+  other = "目前共計 <span class='span-stats-tip'>{{ len .Data.Terms }}</span> 個分類"
+[StatsTags]
+  other = "目前共計 <span class='span-stats-tip'>{{ len .Data.Terms }}</span> 個分類"
+[StatsBlogs]
+  other = "目前共計 <span class='span-stats-tip'>{{ .Count }} </span>篇文章， 請繼續努力，加油!"
+[Blog]
+  other = "日誌"
+[Category]
+  other = "分類"
+[Archive]
+  other = "歸檔"
+[Tag]
+  other = "標籤"
+[ToC]
+  other = "文章目錄"
+[RSS]
+  other = "RSS 訂閱"
+[SiteInfo]
+  other = "站點概覽"
+[Link]
+  other = "鏈接"
+[TagCloud]
+  other = "標籤雲"
+[Time]
+  other = "時間"
+[View]
+  other = "閱讀"
+[ReadMore]
+  other = "閱讀全文"
+[Word]
+  other = "字數"
+[WordCount]
+  other = "{{ .WordCount }} 字"
+[ReadingTime]
+  other = "{{ .ReadingTime }}分鐘"
+[Colon]
+  other = "："
+[Visit]
+  other = "閱讀次數"
+[Search]
+  other = ""
+[404PageTitle]
+  other = "404錯誤，網頁不存在！"
+[BackHomeTip]
+  other = "返回我的主页"
+[SearchPhr]
+  other = "搜索關鍵字..."
+[ScanQQCode]
+  other = "QQ交流QRCode"
+[ArticleTitle]
+  other = "標題"
+[ArticleAuthor]
+  other = "作者"
+[ArticleLink]
+  other = "文章連接"
+[ArticleDeclaration]
+  other = "文章聲明"
+[ArticleDecContent]
+  other = "本博客文章除特别声明外，均采用 <a href='https://creativecommons.org/licenses/by-nc-sa/3.0/' target='_blank' style='text-decoration: underline;'>CC BY-NC-SA 3.0</a>许可协议，转载请注明出处！"
+[RewardTips]
+  other = "大家一起努力家園!ヾ(◍°∇°◍)ﾉﾞ"
+[RewardBtnText]
+  other = "打賞"
+[RewardWxPay]
+  other = "微信打賞"
+[RewardAliPay]
+  other = "支付寶打賞"
+[CommentPh]
+  other = "歡迎留下你寶貴的意見，請您填寫名字和郵箱以便後續交流. ^_^"
+[UnComment]
+  other ="抱歉，Waline插件不支持IE或Edge，建議使用Chrome Browser。"

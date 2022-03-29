@@ -7,14 +7,14 @@
   AddthisId = "Your AddthisId"
 
 [Comment]
-  Enable = false
-  Module = "Waline"
+  Enable = true
+  Module = "Utterances"
   LiveReId = "Your LiveReId"
   WalineSerURL = "Your WalineSerURL"
 
   # If Module is "Utterances",see https://utteranc.es/
   UtterancesRepo = "owner/repo"
-  UtterancesTheme = "github-light"
+  UtterancesTheme = "github-drak"
   UtterancesTitle = "pathname"
 
 #[LeanCloud]

@@ -13,6 +13,7 @@ categories:
     - note
     - algorithm
     - system design
+author: jackson.tmm
 ---
 
 ## Token Bucket(令牌桶算法)

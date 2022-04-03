@@ -55,3 +55,6 @@ ignoreErrors = ["error-remote-getjson"]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+[params]
+  custom_js = "js/CustomLive2D.js"  

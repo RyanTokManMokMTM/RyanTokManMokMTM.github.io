@@ -47,6 +47,7 @@
   {{ end }}
   {{ if isset .Site.Params.Statis "googlesiteid" }}
   <!-- Google Analytics -->
+
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.Statis.GoogleSiteId }}"></script>
   <script type="text/javascript">
     window.dataLayer = window.dataLayer || [];

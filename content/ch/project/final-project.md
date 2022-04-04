@@ -15,7 +15,7 @@ author: jackson.tmm
 
 [**OTT Movies recommender system-IOS Client**](https://github.com/RyanTokManMokMTM/MovieAppSwiftUI.git)  
 
-![test](/images/iosClient.png)
+![client](/images/iosClient.png)
 <!-- | 功能   | 簡介     | 
 | ------- | ------- |
 |用戶基本功能|登入/註冊/登出等基本功能|
@@ -36,11 +36,7 @@ author: jackson.tmm
 
 * PostgresSQL Database
 
-
-<!-- ### 新增的功能
-完善使用者個人頁面 - UI設計參考 **小紅書APP**  
-![Personal page](/personal-blogger/images/person.jpg)
-![PersonalGenre page](/personal-blogger/images/personalGenre.jpg)
-
-待完善之功能: 用戶聊天功能  
-![User Chat](/personal-blogger/images/chat.jpg) -->
+---
+### In Progress
+*User chatting UI*
+![chattingUI](/images/chatting.jpg)

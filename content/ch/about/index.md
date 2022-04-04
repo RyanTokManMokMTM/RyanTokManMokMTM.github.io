@@ -12,16 +12,23 @@ type = "about"
 
 ### Introduction  
 你好~ 歡迎來到我的網站!  
-我是Jackson.tmm, 是一個從香港來到台灣讀大學的四年級學生。目前就讀於**長庚大學-資訊工程學系(Computer Science And Information Engineering)**。是一個不會輕易放棄的小朋友，正所謂**我命由我,不由天**
+我是Jackson.tmm, 是一個從香港來到台灣讀大學的四年級學生。目前就讀於**長庚大學-資訊工程學系(Computer Science And Information Engineering)**。
+
 
 ### Why i choose Computer Science? 
-要從我小時候獲得了一台單核心CPU,512MB RAM,還沒有DisplayCard的電腦開始說起(雖然很爛)。哪個時候因為喜歡玩遊戲，所以,對於遊戲製作這件事是哪時候的夢想。直到了中學(大概是國一或國二)，某某網絡遊戲關服後，因為很喜歡哪個遊戲，所以，與網絡上認識的小夥伴一起研究別人的源代碼(雖然看不太懂)，這也是我接觸程式的開始。到了高中我便一心想要往Computer Science方向前進，也因此選擇了Information Computer Technology(ICT)科目。雖然我其他科目的成績沒有很好，但是在ICT的這門科中，連續拿了3年的第一名。但是因為高考失利，但又希望自己能學習到CS相關的科目，因此來到了台灣就讀CS科系。
+要從我小時候獲得了**一台單核心CPU,512MB RAM,還沒有DisplayCard的電腦**開始說起(雖然很爛)。哪個時候因為喜歡玩遊戲，所以,對於遊戲製作這件事是哪時候的夢想。直到了中學(大概是國一或國二)，因某某網絡遊戲關服，但卻對此心有不甘。所以，便與網絡上認識的小夥伴一起研究放出來的源代碼(雖然看不太懂)，這也是我接觸程式的開始。到了高中我便一心想要往Computer Science方向前進，也因此選擇了Information Computer Technology(ICT)科目。雖然我其他科目的成績沒有很好，但是在ICT的這門科中，連續拿了3年的第一名。但是因為高考失利，但又希望自己能學習到CS相關的科目，因此來到了台灣就讀CS科系。
 
 ### A special and meaningful experience during my university
 上大學以後，也是正式開始學習程式設計的開始。可能是以前有自學過一段時間C++，學起來比較輕鬆一點。大二下的時候，很不辛*COVIN-19*疫情爆發，不能會台灣只能留在香港上網絡課程，因此，便開始了我的自學之路。由於有了學習C++的經驗以及程式語言的基礎，我開始自我探索模式，嘗試接觸不同的領域。了解過網頁設計,後端開發,數據庫設計,Apple App開發,ML/TensorFlow基礎,甚至是其他領域的探索如遊戲開發，美術設計，3D建模等等...這段自學探索的旅程,**貌似看上去毫無意義**(**也就是啥都學，沒有一個是精的**)。但是，**對我來說有巨大的意義**，能夠讓我更認識自己，知道自己喜歡的東西，不喜歡的東西，甚至是知道哪些學習方法是適合自己。雖然很想什麼都想要會，但是也決定了只做自己感興趣的事情。以下是我在這段時間所做的東西(你們應該不會嫌棄吧><)  
 
 **第一次學習IOS開發的Demo**
 ![ios-demo](/images/ios-learn.PNG)
+
+**基於IOS的Netfilx UI Clone**
+![netfilx](/images/netfilxClone.jpg)
+
+**基於IOS的微博UI Clone**
+![netfilx](/images/weiboClone.jpg)
 
 **第一次學遊戲開發的作品**
 ![game](/images/game.jpg)

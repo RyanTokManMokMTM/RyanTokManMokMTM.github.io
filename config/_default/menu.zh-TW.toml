@@ -8,13 +8,20 @@
   Pre = "archive"
   URL = "post"
   Weight = 2
+  
 [[Main]]
   Name = "About"
   Pre = "user"
   URL = "about.html"
+   Weight = 3
   
 [[Main]]
   Name = "Projects"
   Pre = "code"
   URL = "project"
-  Weight = 3
+  Weight = 4
+[[Main]]
+  Name = "achievement"
+  Pre = "trophy"
+  URL = "achievement"
+  Weight = 5

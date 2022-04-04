@@ -36,6 +36,9 @@ author: jackson.tmm
 
 * PostgresSQL Database
 
+### Demo Video
+<video src="/videos/final.MP4" controls="controls" width="500" height="300"></video>
+
 ---
 ### In Progress
 *User chatting UI*

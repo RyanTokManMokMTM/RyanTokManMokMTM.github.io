@@ -19,7 +19,8 @@
 <link href=/css/main.css rel=stylesheet type=text/css>
 <link href=/css/syntax.css rel=stylesheet type=text/css>
 <script src=https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js></script> <script>mermaid.initialize({startOnLoad:!0,securityLevel:"loose"})</script>
-</head><body itemscope itemtype=http://schema.org/WebPage lang=zh-hans>
+</head><link href=/css/pio.css rel=stylesheet type=text/css>
+<body itemscope itemtype=http://schema.org/WebPage lang=zh-hans>
 <div class="container one-collumn sidebar-position-left page-home">
 <div class=headband></div><header id=header class=header itemscope itemtype=http://schema.org/WPHeader>
 <div class=header-inner> <div class=site-brand-container>
@@ -286,8 +287,9 @@ Theme by - <a class=powered-link href=//github.com/elkan1788/hugo-theme-next tar
 </div><div class=vistor-info>
 </div><script type=text/javascript src=https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js></script>
 <script type=text/javascript src=https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.0.min.js></script>
-<script type=text/javascript>L2Dwidget.init({model:{scale:1,hHeadPos:.5,vHeadPos:.618,jsonPath:"/model/umaru/model.json"},display:{superSample:1,width:230,height:420,position:"right",hOffset:0,vOffset:50},mobile:{show:!1,scale:0,motion:!1},react:{opacityDefault:1,opacityOnHover:1}})</script>
-</div></footer><div class=back-to-top>
+<div class="pio-container right">
+<div class=pio-action></div><canvas id=pio width=200 height=400></canvas>
+</div></div></footer><div class=back-to-top>
 <i class="fa fa-arrow-up"></i>
 <span id=scrollpercent><span>0</span>%</span>
 </div></div><script type=text/javascript src=//cdn.bootcdn.net/ajax/libs/jquery/2.1.4/jquery.min.js></script>
@@ -296,4 +298,7 @@ Theme by - <a class=powered-link href=//github.com/elkan1788/hugo-theme-next tar
 <script type=text/javascript src=/js/scrollspy.js></script>
 <script type=text/javascript>function detectIE(){var e=window.navigator.userAgent,t=e.indexOf("MSIE "),n=e.indexOf("Trident/"),s=e.indexOf("Edge/");return t>0||n>0||s>0?-1:1}function getCntViewHeight(){var t=$("#content").height(),e=$(window).height(),n=t>e?t-e:$(document).height()-e;return n}function getScrollbarWidth(){var e=$("<div />").addClass("scrollbar-measure").prependTo("body"),t=e[0],n=t.offsetWidth-t.clientWidth;return e.remove(),n}function registerBackTop(){var t=50,e=$(".back-to-top");$(window).on("scroll",function(){e.toggleClass("back-to-top-on",window.pageYOffset>t);var s=$(window).scrollTop(),o=getCntViewHeight(),i=s/o,n=Math.round(i*100),a=n>100?100:n;$("#scrollpercent>span").html(a)}),e.on("click",function(){$("html,body").animate({scrollTop:0,screenLeft:0},800)})}function initScrollSpy(){var e=".post-toc",s=$(e),t=".active-current";s.on("activate.bs.scrollspy",function(){var t=$(e+" .active").last();n(),t.addClass("active-current")}).on("clear.bs.scrollspy",n),$("body").scrollspy({target:e});function n(){$(e+" "+t).removeClass(t.substring(1))}}function initAffix(){var e=$(".header-inner").height(),t=parseInt($(".main").css("padding-bottom"),10),n=e+10;$(".sidebar-inner").affix({offset:{top:n,bottom:t}}),$(document).on("affixed.bs.affix",function(){updateTOCHeight(document.body.clientHeight-100)})}function initTOCDimension(){$(window).on("resize",function(){e&&clearTimeout(e),e=setTimeout(function(){var e=document.body.clientHeight-100;updateTOCHeight(e)},0)}),updateTOCHeight(document.body.clientHeight-100);var e,t=getScrollbarWidth();$(".post-toc").css("width","calc(100% + "+t+"px)")}function updateTOCHeight(e){e=e||"auto",$(".post-toc").css("max-height",e)}$(function(){var t=$(".header-inner").height()+10,n,s,e,o;$("#sidebar").css({'margin-top':t}).show(),n=parseInt($("#sidebar").css("margin-top")),s=parseInt($(".sidebar-inner").css("height")),e=n+s,o=$(".content-wrap").height(),o<e&&$(".content-wrap").css("min-height",e),$(".site-nav-toggle").on("click",function(){var e=$(".site-nav"),o=$(".toggle"),t="site-nav-on",i="toggle-close",n=e.hasClass(t),a=n?"slideUp":"slideDown",s=n?"removeClass":"addClass";e.stop()[a]("normal",function(){e[s](t),o[s](i)})}),registerBackTop(),initScrollSpy(),initAffix(),initTOCDimension(),$(".sidebar-nav-toc").click(function(){$(this).addClass("sidebar-nav-active"),$(this).next().removeClass("sidebar-nav-active"),$("."+$(this).next().attr("data-target")).toggle(500),$("."+$(this).attr("data-target")).toggle(500)}),$(".sidebar-nav-overview").click(function(){$(this).addClass("sidebar-nav-active"),$(this).prev().removeClass("sidebar-nav-active"),$("."+$(this).prev().attr("data-target")).toggle(500),$("."+$(this).attr("data-target")).toggle(500)})})</script>
 <script>(function(){var e=document.createElement("script"),t,n=window.location.protocol.split(":")[0];n==="https"?e.src="https://zz.bdstatic.com/linksubmit/push.js":e.src="http://push.zhanzhang.baidu.com/push.js",t=document.getElementsByTagName("script")[0],t.parentNode.insertBefore(e,t)})()</script>
+<script src=/js/l2d.js></script>
+<script src=/js/pio.js></script>
+<script>var pio=new Paul_Pio({mode:"draggable",hidden:!0,content:{welcome:["歡迎來到Jackson的小宇宙！","今天天氣不錯，一起来玩吧！","博主有空的話，會寫一寫博客記錄一下!"],custom:[{selector:".home-social a:last-child",text:"在這里可以了解博主的日常噢~"},{selector:".post-item a",type:"read"},{selector:".post-content a, .page-content a",type:"link"}]},model:["/model/umaru/model.json","/model/HN/blanc_normal/model.json","/model/HN/blanc_classic/model.json","/model/chino/model.json"],touch:["不可以這樣欺負我啦><"]})</script>
 </body></html>

@@ -19,7 +19,8 @@
 <link href=/css/main.css rel=stylesheet type=text/css>
 <link href=/css/syntax.css rel=stylesheet type=text/css>
 <script src=https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js></script> <script>mermaid.initialize({startOnLoad:!0,securityLevel:"loose"})</script>
-</head><body itemscope itemtype=http://schema.org/WebPage lang=zh-hans>
+</head><link href=/css/pio.css rel=stylesheet type=text/css>
+<body itemscope itemtype=http://schema.org/WebPage lang=zh-hans>
 <div class="container one-collumn sidebar-position-left page-home">
 <div class=headband></div><header id=header class=header itemscope itemtype=http://schema.org/WPHeader>
 <div class=header-inner> <div class=site-brand-container>
@@ -297,8 +298,9 @@ Theme by - <a class=powered-link href=//github.com/elkan1788/hugo-theme-next tar
 </div><div class=vistor-info>
 </div><script type=text/javascript src=https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js></script>
 <script type=text/javascript src=https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.0.min.js></script>
-<script type=text/javascript>L2Dwidget.init({model:{scale:1,hHeadPos:.5,vHeadPos:.618,jsonPath:"/model/umaru/model.json"},display:{superSample:1,width:230,height:420,position:"right",hOffset:0,vOffset:50},mobile:{show:!1,scale:0,motion:!1},react:{opacityDefault:1,opacityOnHover:1}})</script>
-</div></footer><div class=back-to-top>
+<div class="pio-container right">
+<div class=pio-action></div><canvas id=pio width=200 height=400></canvas>
+</div></div></footer><div class=back-to-top>
 <i class="fa fa-arrow-up"></i>
 <span id=scrollpercent><span>0</span>%</span>
 </div></div><script type=text/javascript src=//cdn.bootcdn.net/ajax/libs/jquery/2.1.4/jquery.min.js></script>
@@ -309,4 +311,7 @@ Theme by - <a class=powered-link href=//github.com/elkan1788/hugo-theme-next tar
 <script src=//cdn.bootcdn.net/ajax/libs/imageviewer/0.1.0/viewer.min.js></script>
 <script type=text/javascript>$(function(){$(".post-body").viewer()})</script>
 <script>(function(){var e=document.createElement("script"),t,n=window.location.protocol.split(":")[0];n==="https"?e.src="https://zz.bdstatic.com/linksubmit/push.js":e.src="http://push.zhanzhang.baidu.com/push.js",t=document.getElementsByTagName("script")[0],t.parentNode.insertBefore(e,t)})()</script>
+<script src=/js/l2d.js></script>
+<script src=/js/pio.js></script>
+<script>var pio=new Paul_Pio({mode:"draggable",hidden:!0,content:{welcome:["歡迎來到Jackson的小宇宙！","今天天氣不錯，一起来玩吧！","博主有空的話，會寫一寫博客記錄一下!"],custom:[{selector:".home-social a:last-child",text:"在這里可以了解博主的日常噢~"},{selector:".post-item a",type:"read"},{selector:".post-content a, .page-content a",type:"link"}]},model:["/model/umaru/model.json","/model/HN/blanc_normal/model.json","/model/HN/blanc_classic/model.json","/model/chino/model.json"],touch:["不可以這樣欺負我啦><"]})</script>
 </body></html>

@@ -43,3 +43,6 @@ author: jackson.tmm
 ### In Progress
 *User chatting UI*
 ![chattingUI](/images/chatting.jpg)
+
+*User profile Demo*(參考**小紅書**)  
+<video src="/videos/profile.MP4" controls="controls" width="500" height="300"></video>

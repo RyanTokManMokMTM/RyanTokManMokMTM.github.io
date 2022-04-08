@@ -33,7 +33,7 @@ kthLargest.add(4);   // return 8
 First thing first, we need to know what this problem is asking about. This question is asking about what is the k<sup>th</sup> largest element in the array, so we just need to know what the largest k<sup>th</sup> elements are. For example `[1,2,3,4,5 ]  k=3`, the  largest 3 elements are `[3,4,5]` right?. Therefore, we just need to consider the top k elements in the array and the other elements will be discarded.
 
 ## The solving steps:
-1.  using priority queue with `greater/maxinum cmp` or using max heap.
+1.  using priority queue with `greater/maxinum cmp` or using min heap.
 2.  keep the largest k elements.
 3.  return the last element/top element(`the size of the queue is k`)
 

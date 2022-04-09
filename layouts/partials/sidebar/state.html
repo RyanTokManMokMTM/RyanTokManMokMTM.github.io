@@ -20,7 +20,7 @@
     <div class="site-state-item site-state-tags">
         <a href="{{ "/tags/" | relLangURL }}">
         {{if isset .Site.Taxonomies "tags"}} 
-        <span class="site-state-item-count">{{len .Site.Taxonomies.tags}}</span>
+        <span class="site-state-item-count">{{len .Site.Taxonomies.tags}} </span>
         {{else}}
         <span class="site-state-item-count">0</span>
         {{end}}

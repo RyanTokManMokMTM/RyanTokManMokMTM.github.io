@@ -1,7 +1,12 @@
 ---
 title: "Leetcode-703 Kth Largest Element in a Stream(Easy)"
 date: 2022-04-08T20:21:39+08:00
-draft: true
+draft: false
+tags:
+    - heap
+    - priority queue
+categories:
+    - leetcode
 ---
 
 ## LeetCode 703 - Kth Largest Element in a Stream

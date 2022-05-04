@@ -9,27 +9,21 @@
   URL = "post"
   Weight = 2
 
-# [[Main]]
-#   Name = "Leetcodes"
-#   Pre = "code"
-#   URL = "leetcodes"
-#   Weight = 3
-
 [[Main]]
   Name = "Projects"
   Pre = "tasks"
   URL = "project"
-  Weight = 4
+  Weight = 3
 
   
 [[Main]]
   Name = "About"
   Pre = "user"
   URL = "about.html"
-   Weight = 5
+   Weight = 4
   
 [[Main]]
   Name = "achievement"
   Pre = "trophy"
   URL = "achievement"
-  Weight = 6
+  Weight = 5

@@ -9,7 +9,7 @@ type = "about"
 
 <!-- 
 **Sorry about my bad English :(**   -->
-#### [MY CV](/cv/moktokman-cv.pdf)
+#### [個人簡歷](/cv/moktokman-cv.pdf)
 
 ### Introduction  
 你好~ 歡迎來到我的網站!  

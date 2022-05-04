@@ -31,7 +31,8 @@ Explanation:
 "D" - Add 2 * 5 = 10 to the record, record is now [5, 10].
 "+" - Add 5 + 10 = 15 to the record, record is now [5, 10, 15].
 The total sum is 5 + 10 + 15 = 30.
-
+```
+```
 Input: ops = ["5","-2","4","C","D","9","+","+"]
 Output: 27
 Explanation:

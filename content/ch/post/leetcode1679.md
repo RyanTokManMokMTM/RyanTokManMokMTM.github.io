@@ -66,7 +66,7 @@ public:
 第二種解法是透過`map`來記錄。首先，會透過`x = k - nums[i]`得出一個數，如果這個數不存在`map`裡面或者`map[x] <= 0`就代表沒有，就把目前的`nums[i]`加入到`map`。如果存在，就將`answer+1`並且從`map`中移除`map[x]`的數量(`map[x]--`)。
 
 #### Solution:
-```
+```c++
 class Solution {
 public:
     int maxOperations(vector<int>& nums, int k) {

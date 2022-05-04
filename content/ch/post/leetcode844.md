@@ -19,11 +19,13 @@ example:
 Input: s = "ab#c", t = "ad#c"
 Output: true
 Explanation: Both s and t become "ac".
-
+```
+```
 Input: s = "ab##", t = "c#d#"
 Output: true
 Explanation: Both s and t become "".
-
+```
+```
 Input: s = "a#c", t = "b"
 Output: false
 Explanation: s becomes "c" while t becomes "b".

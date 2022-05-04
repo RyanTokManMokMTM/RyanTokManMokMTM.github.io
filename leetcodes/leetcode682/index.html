@@ -52,10 +52,6 @@
 <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Posts
 </a>
 </li><li class=menu-item>
-<a href=/leetcodes rel=section>
-<i class="menu-item-icon fa fa-fw fa-code"></i> <br>Leetcodes
-</a>
-</li><li class=menu-item>
 <a href=/project rel=section>
 <i class="menu-item-icon fa fa-fw fa-tasks"></i> <br>Projects
 </a>
@@ -110,13 +106,13 @@ Baseball Game(easy)
 |
 <i class="fa fa-file-word-o fa-fw"></i>
 <span class=post-meta-item-text>字數：</span>
-<span class=leancloud-world-count>528 字</span>
+<span class=leancloud-world-count>602 字</span>
 </span>
 <span>
 |
 <i class="fa fa-eye fa-fw"></i>
 <span class=post-meta-item-text>閱讀：</span>
-<span class=leancloud-view-count>3分鐘</span>
+<span class=leancloud-view-count>2分鐘</span>
 </span>
 <span id=/leetcodes/leetcode682/ class=leancloud_visitors data-flag-title="Baseball Game(easy)">
 |
@@ -149,8 +145,8 @@ Return the sum of all the scores on the record.</li></ol><p>example</p><div clas
 </span></span><span style=display:flex><span>&#34;+&#34; - Add -4 + 9 = 5 to the record, record is now [5, -2, -4, 9, 5].
 </span></span><span style=display:flex><span>&#34;+&#34; - Add 9 + 5 = 14 to the record, record is now [5, -2, -4, 9, 5, 14].
 </span></span><span style=display:flex><span>The total sum is 5 + -2 + -4 + 9 + 5 + 14 = 27.
-</span></span></code></pre></div><h2 id=how-can-we-solve-this-problem>How can we solve this problem?</h2><p>This question is simply simulating a baseball game. We just need to care about games rules and store the score separately into any container like <code>array</code> or <code>stack</code>.</p><h2 id=the-solving-steps>The solving steps:</h2><ol>
-<li>iterate the array and determine the score by applying the game rules.</li><li>store the score into a <code>stack</code> or <code>array</code></li><li>return sum up numbers storted in the container.</li></ol><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=display:flex><span><span style=color:#a2f;font-weight:700>class</span> <span style=color:#00f>Solution</span> {
+</span></span></code></pre></div><h2 id=how-can-we-solve-this-problem>How can we solve this problem?</h2><p>這題就是一個簡單的籃球比賽模擬。我們只要關心遊戲rule，並透過額外的container(<code>array/stack</code>)進行分數保存即可。</p><h2 id=the-solving-steps>The solving steps:</h2><ol>
+<li>iterate整個array並以遊戲rule作為計算條件</li><li>保存對應分數到<code>stack</code>/<code>array</code></li><li>返回整個<code>array</code>/<code>stack</code>的總和</li></ol><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=display:flex><span><span style=color:#a2f;font-weight:700>class</span> <span style=color:#00f>Solution</span> {
 </span></span><span style=display:flex><span><span style=color:#a2f;font-weight:700>public</span><span style=color:#666>:</span>
 </span></span><span style=display:flex><span>    <span style=color:#0b0;font-weight:700>int</span> calPoints(vector<span style=color:#666>&lt;</span>string<span style=color:#666>&gt;&amp;</span> ops) {
 </span></span><span style=display:flex><span>        <span style=color:#080;font-style:italic>//ops : + D C x
@@ -225,7 +221,7 @@ Top K Frequent Elements(Midium)
 </p></div><nav class="site-state motion-element">
 <div class="site-state-item site-state-posts">
 <a href=/post/>
-<span class=site-state-item-count>8</span>
+<span class=site-state-item-count>20</span>
 <span class=site-state-item-name>日誌</span>
 </a>
 </div><div class="site-state-item site-state-categories">
@@ -235,7 +231,7 @@ Top K Frequent Elements(Midium)
 </a>
 </div><div class="site-state-item site-state-tags">
 <a href=/tags/>
-<span class=site-state-item-count>20 </span>
+<span class=site-state-item-count>22 </span>
 <span class=site-state-item-name>標籤</span>
 </a>
 </div></nav><div class="links-of-author motion-element">
@@ -267,21 +263,21 @@ Instagram
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/learning>Learning</a>
 </li><li class=tagcloud-of-blogroll-item>
-<a href=/tags/creational>Creational</a>
-</li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/binary-Tree>Binary tree</a>
+</li><li class=tagcloud-of-blogroll-item>
+<a href=/tags/creational>Creational</a>
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/priority-queue>Priority queue</a>
 </li><li class=tagcloud-of-blogroll-item>
-<a href=/tags/rate-limiter>Rate limiter</a>
-</li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/recursion>Recursion</a>
 </li><li class=tagcloud-of-blogroll-item>
-<a href=/tags/app-dev>App dev</a>
+<a href=/tags/map>Map</a>
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/binary-Search-Tree>Binary search tree</a>
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/binary-search-tree>Binary search tree</a>
+</li><li class=tagcloud-of-blogroll-item>
+<a href=/tags/heap>Heap</a>
 </li></ul></div></section></div></aside></div></main><footer id=footer class=footer>
 <div class=footer-inner>
 <div class=copyright>

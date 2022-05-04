@@ -52,10 +52,6 @@
 <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Posts
 </a>
 </li><li class=menu-item>
-<a href=/leetcodes rel=section>
-<i class="menu-item-icon fa fa-fw fa-code"></i> <br>Leetcodes
-</a>
-</li><li class=menu-item>
 <a href=/project rel=section>
 <i class="menu-item-icon fa fa-fw fa-tasks"></i> <br>Projects
 </a>
@@ -110,7 +106,7 @@ Search in a Binary Search Tree(easy)
 |
 <i class="fa fa-file-word-o fa-fw"></i>
 <span class=post-meta-item-text>字數：</span>
-<span class=leancloud-world-count>358 字</span>
+<span class=leancloud-world-count>546 字</span>
 </span>
 <span>
 |
@@ -130,10 +126,10 @@ Search in a Binary Search Tree(easy)
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>Input: root = [4,2,7,1,3], val = 5
 </span></span><span style=display:flex><span>Output: []
-</span></span></code></pre></div><h2 id=how-can-we-solve-this-problem>How can we solve this problem?</h2><p>Before solving this problem, we need to kown what is a Binary Search Tree. According to Binary Search Tree definition:</p><ul>
-<li><code>Binary Search Tree</code> is base on a Binary Tree</li><li>All elememts in <code>left sub-tree</code> are less than root value</li><li>All elememts in <code>right sub-tree</code> are greater than root value</li><li>Key/Value in <code>Binary Search Tree</code> are unique</li></ul><p>Now we know what is a <code>Binary Search Tree</code>, so we can start to solve this problem. This problem is asking about the sub-tree of the value. For solving this problem, we can use recursion to help us to search the value by applying some rules of <code>Binary Search Tree</code>:</p><ul>
-<li>All elememts in <code>left sub-tree</code> are less than root value</li><li>All elememts in <code>right sub-tree</code> are greater than root value</li></ul><p>If the <code>val</code> is less than the root value, pass the left child pointer to the recursive function. Otherwise, pass the right child pointer to the recursive function. After it finds the value, return its root as the result.</p><h2 id=the-solving-steps>The solving steps:</h2><ol>
-<li>Define a recursive function for binary search</li><li>Define some conditions for searching</li><li>If the value is found ,return the root. Otherwise return NULL</li></ol><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=display:flex><span><span style=color:#080;font-style:italic>/**
+</span></span></code></pre></div><h2 id=how-can-we-solve-this-problem>How can we solve this problem?</h2><p>在解決問題之前，我們需要知道什麼是<code>Binary Search Tree</code>。根據<code>BST</code>的定義:</p><ul>
+<li><code>Binary Search Tree</code> 基於<code>Binary Tree</code></li><li><code>left sub-tree</code>的所有Node value 都小於root value</li><li><code>right sub-tree</code>的所有Node value 都大於root value</li><li><code>Binary Search Tree</code>的key/value都是unique的</li></ul><p>現在我們知道什麼是<code>BST</code>了。這個問題是要在<code>BST</code>中找<code>val</code>，我們通過以下幾個條件以及遞歸幫我們求解:</p><ul>
+<li><code>left sub-tree</code>的所有Node value 都小於root value</li><li><code>right sub-tree</code>的所有Node value 都大於root value</li></ul><p>如果<code>val</code>是小於root,就移動到<code>左子樹(left sub-tree)</code>，否者移動到<code>右子樹(right sub-tree)</code>,直到找到<code>val</code>並返回<code>root的pointer</code>或者沒有找到返回<code>null</code></p><h2 id=the-solving-steps>The solving steps:</h2><ol>
+<li>定義一個遞歸函數同於進行binary searching</li><li>在遞歸函數中定義搜尋的條件</li><li>如果找到返回<code>root pointer</code>,否則返回<code>null</code></li></ol><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=display:flex><span><span style=color:#080;font-style:italic>/**
 </span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic> * Definition for a binary tree node.
 </span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic> * struct TreeNode {
 </span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic> *     int val;
@@ -201,7 +197,7 @@ Shift 2D Grid(easy)
 </p></div><nav class="site-state motion-element">
 <div class="site-state-item site-state-posts">
 <a href=/post/>
-<span class=site-state-item-count>8</span>
+<span class=site-state-item-count>20</span>
 <span class=site-state-item-name>日誌</span>
 </a>
 </div><div class="site-state-item site-state-categories">
@@ -211,7 +207,7 @@ Shift 2D Grid(easy)
 </a>
 </div><div class="site-state-item site-state-tags">
 <a href=/tags/>
-<span class=site-state-item-count>20 </span>
+<span class=site-state-item-count>22 </span>
 <span class=site-state-item-name>標籤</span>
 </a>
 </div></nav><div class="links-of-author motion-element">
@@ -243,21 +239,21 @@ Instagram
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/learning>Learning</a>
 </li><li class=tagcloud-of-blogroll-item>
-<a href=/tags/creational>Creational</a>
-</li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/binary-Tree>Binary tree</a>
+</li><li class=tagcloud-of-blogroll-item>
+<a href=/tags/creational>Creational</a>
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/priority-queue>Priority queue</a>
 </li><li class=tagcloud-of-blogroll-item>
-<a href=/tags/rate-limiter>Rate limiter</a>
-</li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/recursion>Recursion</a>
 </li><li class=tagcloud-of-blogroll-item>
-<a href=/tags/app-dev>App dev</a>
+<a href=/tags/map>Map</a>
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/binary-Search-Tree>Binary search tree</a>
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/binary-search-tree>Binary search tree</a>
+</li><li class=tagcloud-of-blogroll-item>
+<a href=/tags/heap>Heap</a>
 </li></ul></div></section></div></aside></div></main><footer id=footer class=footer>
 <div class=footer-inner>
 <div class=copyright>

@@ -52,10 +52,6 @@
 <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Posts
 </a>
 </li><li class=menu-item>
-<a href=/leetcodes rel=section>
-<i class="menu-item-icon fa fa-fw fa-code"></i> <br>Leetcodes
-</a>
-</li><li class=menu-item>
 <a href=/project rel=section>
 <i class="menu-item-icon fa fa-fw fa-tasks"></i> <br>Projects
 </a>
@@ -110,13 +106,13 @@ Shift 2D Grid(easy)
 |
 <i class="fa fa-file-word-o fa-fw"></i>
 <span class=post-meta-item-text>字數：</span>
-<span class=leancloud-world-count>398 字</span>
+<span class=leancloud-world-count>496 字</span>
 </span>
 <span>
 |
 <i class="fa fa-eye fa-fw"></i>
 <span class=post-meta-item-text>閱讀：</span>
-<span class=leancloud-view-count>2分鐘</span>
+<span class=leancloud-view-count>1分鐘</span>
 </span>
 <span id=/leetcodes/leetcode1260/ class=leancloud_visitors data-flag-title="Shift 2D Grid(easy)">
 |
@@ -134,12 +130,13 @@ Shift 2D Grid(easy)
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>Input: grid = [[1,2,3],[4,5,6],[7,8,9]], k = 9
 </span></span><span style=display:flex><span>Output: [[1,2,3],[4,5,6],[7,8,9]]
-</span></span></code></pre></div><h2 id=how-can-we-solve-this-problem>How can we solve this problem?</h2><p>This question is easy, but we need to care about the last column of the grid if it right-shifts to the first column of the grid, the last element of this column becomes the first and the others will move down by 1 step. In order to solve this question, we can use math to help us:<br>
-<strong>n is the row size and m is the column size</strong></p><ol>
+</span></span></code></pre></div><h2 id=how-can-we-solve-this-problem>How can we solve this problem?</h2><p>其實這個問題很簡單，我們只需要關心<code>grid</code>的最後得<code>column</code>，因為最後一個<code>Column</code>被<code>right-shift</code>到第一個Column的時候，最後一個element會被移動到<code>0th</code>。其餘的<code>column</code>只要<code>right-shift by 1 step</code>即可。
+我們可以參考以下數學公式:<br>
+<strong>n是row size 以及 m 是 column size</strong></p><ol>
 <li>left-shifting : <code>currentColum + k % n, moving by k step</code></li><li>shifting row :
 <ol>
 <li><code>(j + k) / n), if it is in the last column, (j + k) / m will be 1. Otherwise will be 0</code></li><li>total row shifting step : <code>(i + (j + k) / n)) % m</code>. For example, suppose n = 3 , j = 2 , m = 3 and i = 2: <code>(2 + ((2+1)/3)) % 3 = 0</code> so that it will move to <code>[0][0]</code></li></ol></li></ol><h2 id=the-solving-steps>The solving steps:</h2><ol>
-<li>iterate the array and apply the formula to calumniate new row and column index.</li><li>store the number to the new new row and column index</li></ol><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=display:flex><span><span style=color:#a2f;font-weight:700>class</span> <span style=color:#00f>Solution</span> {
+<li>iterate整個array並套用數學公式。</li><li>將新的數字保存額外定義的container中。</li></ol><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=display:flex><span><span style=color:#a2f;font-weight:700>class</span> <span style=color:#00f>Solution</span> {
 </span></span><span style=display:flex><span><span style=color:#a2f;font-weight:700>public</span><span style=color:#666>:</span>
 </span></span><span style=display:flex><span>    vector<span style=color:#666>&lt;</span>vector<span style=color:#666>&lt;</span><span style=color:#0b0;font-weight:700>int</span><span style=color:#666>&gt;&gt;</span> shiftGrid(vector<span style=color:#666>&lt;</span>vector<span style=color:#666>&lt;</span><span style=color:#0b0;font-weight:700>int</span><span style=color:#666>&gt;&gt;&amp;</span> grid, <span style=color:#0b0;font-weight:700>int</span> k) {
 </span></span><span style=display:flex><span>        <span style=color:#080;font-style:italic>//just be careful the last element on [m-1][n-1]
@@ -200,7 +197,7 @@ Spiral Matrix II(medium)
 </p></div><nav class="site-state motion-element">
 <div class="site-state-item site-state-posts">
 <a href=/post/>
-<span class=site-state-item-count>8</span>
+<span class=site-state-item-count>20</span>
 <span class=site-state-item-name>日誌</span>
 </a>
 </div><div class="site-state-item site-state-categories">
@@ -210,7 +207,7 @@ Spiral Matrix II(medium)
 </a>
 </div><div class="site-state-item site-state-tags">
 <a href=/tags/>
-<span class=site-state-item-count>20 </span>
+<span class=site-state-item-count>22 </span>
 <span class=site-state-item-name>標籤</span>
 </a>
 </div></nav><div class="links-of-author motion-element">
@@ -242,21 +239,21 @@ Instagram
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/learning>Learning</a>
 </li><li class=tagcloud-of-blogroll-item>
-<a href=/tags/creational>Creational</a>
-</li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/binary-Tree>Binary tree</a>
+</li><li class=tagcloud-of-blogroll-item>
+<a href=/tags/creational>Creational</a>
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/priority-queue>Priority queue</a>
 </li><li class=tagcloud-of-blogroll-item>
-<a href=/tags/rate-limiter>Rate limiter</a>
-</li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/recursion>Recursion</a>
 </li><li class=tagcloud-of-blogroll-item>
-<a href=/tags/app-dev>App dev</a>
+<a href=/tags/map>Map</a>
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/binary-Search-Tree>Binary search tree</a>
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/binary-search-tree>Binary search tree</a>
+</li><li class=tagcloud-of-blogroll-item>
+<a href=/tags/heap>Heap</a>
 </li></ul></div></section></div></aside></div></main><footer id=footer class=footer>
 <div class=footer-inner>
 <div class=copyright>

@@ -1,5 +1,5 @@
 ---
-title: "Baseball Game(easy)"
+title: "[Leetcode] Baseball Game(EASY)"
 date: 2022-04-10T19:15:31+08:00
 draft: false
 tags:
@@ -50,14 +50,14 @@ The total sum is 5 + -2 + -4 + 9 + 5 + 14 = 27.
 這題就是一個簡單的籃球比賽模擬。我們只要關心遊戲rule，並透過額外的container(`array/stack`)進行分數保存即可。
 <!-- This question is simply simulating a baseball game. We just need to care about games rules and store the score separately into any container like `array` or `stack`. -->
 
-## The solving steps:
+<!-- ## The solving steps:
 1. iterate整個array並以遊戲rule作為計算條件
 2. 保存對應分數到`stack`/`array`
-3. 返回整個`array`/`stack`的總和
+3. 返回整個`array`/`stack`的總和 -->
 <!-- 1. iterate the array and determine the score by applying the game rules.
 2. store the score into a `stack` or `array`
 3. return sum up numbers storted in the container. -->
-
+#### Solution:
 ```c++
 class Solution {
 public:

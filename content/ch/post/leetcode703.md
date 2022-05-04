@@ -1,5 +1,5 @@
 ---
-title: "Kth Largest Element in a Stream(Easy)"
+title: "[Leetcode] Kth Largest Element in a Stream(EASY)"
 date: 2022-04-08T20:21:39+08:00
 draft: false
 tags:
@@ -39,11 +39,11 @@ kthLargest.add(4);   // return 8
 
 <!-- First thing first, we need to know what this problem is asking about. This question is asking about what is the k<sup>th</sup> largest element in the array, so we just need to know what the largest k<sup>th</sup> elements are. For example `[1,2,3,4,5 ]  k=3`, the  largest 3 elements are `[3,4,5]` right?. Therefore, we just need to consider the top k elements in the array and the other elements will be discarded. -->
 
-## The solving steps:
+<!-- ## The solving steps:
 1.  使用priority queue或者max heap(大小為k個).
 2.  queue中元素的數量不能超過k個.
-3.  回傳queue中的top即可(便是第K個最大的element)
-
+3.  回傳queue中的top即可(便是第K個最大的element) -->
+#### Solution:
 ```c++
 class KthLargest {
 private:

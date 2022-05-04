@@ -1,5 +1,5 @@
 ---
-title: "Shift 2D Grid(easy)"
+title: "[Leetcode] Shift 2D Grid(EASY)"
 date: 2022-04-13T19:14:44+08:00
 draft: false
 tags:
@@ -48,10 +48,10 @@ Output: [[1,2,3],[4,5,6],[7,8,9]]
    1. `(j + k) / n), if it is in the last column, (j + k) / m will be 1. Otherwise will be 0`
    2. total row shifting step : `(i + (j + k) / n)) % m`. For example, suppose n = 3 , j = 2 , m = 3 and i = 2: `(2 + ((2+1)/3)) % 3 = 0` so that it will move to `[0][0]` -->
 
-## The solving steps:
+<!-- ## The solving steps:
 1. iterate整個array並套用數學公式。
-1. 將新的數字保存額外定義的container中。
-
+1. 將新的數字保存額外定義的container中。 -->
+#### Solution:
 ```c++
 class Solution {
 public:

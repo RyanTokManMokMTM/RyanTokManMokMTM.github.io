@@ -1,5 +1,5 @@
 ---
-title: "Game of Life(medium)"
+title: "[Leetcode] Game of Life(MEDIUM)"
 date: 2022-04-12T19:15:53+08:00
 draft: false
 tags:
@@ -33,10 +33,10 @@ Output: [[1,1],[1,1]]
 要解決這個，我們需要知道目前的cell的狀態(活/死)。要知道目前cell的狀態，我們可以用過條件判斷他身邊的cells(最多9個細胞)即可。
 <!-- For solving this problem, we need to know what the current cell state is``(dead or alive)``. After that,we just need to check its neighbor `cell' s` state by the rules to determine the cell state. Because the maximum number of its neighbor cells is 9, from top to bottom and left to right. So, we can simply use some conditions to check. -->
 
-## The solving steps:
+<!-- ## The solving steps:
 1. iterate the array and check the cell state.
-2. Get the new state of the cell by applying the 4 rules
-
+2. Get the new state of the cell by applying the 4 rules -->
+#### Solution:
 ```c++
 class Solution {
 public:

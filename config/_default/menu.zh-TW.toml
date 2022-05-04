@@ -9,11 +9,11 @@
   URL = "post"
   Weight = 2
 
-[[Main]]
-  Name = "Leetcodes"
-  Pre = "code"
-  URL = "leetcodes"
-  Weight = 3
+# [[Main]]
+#   Name = "Leetcodes"
+#   Pre = "code"
+#   URL = "leetcodes"
+#   Weight = 3
 
 [[Main]]
   Name = "Projects"

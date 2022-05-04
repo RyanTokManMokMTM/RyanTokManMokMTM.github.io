@@ -1,5 +1,5 @@
 ---
-title: "Search in a Binary Search Tree(easy)"
+title: "[Leetcode] Search in a Binary Search Tree(EASY)"
 date: 2022-04-14T15:05:44+08:00
 draft: false
 tags:
@@ -48,11 +48,11 @@ Now we know what is a `Binary Search Tree`, so we can start to solve this proble
 
 <!-- If the `val` is less than the root value, pass the left child pointer to the recursive function. Otherwise, pass the right child pointer to the recursive function. After it finds the value, return its root as the result. -->
 
-## The solving steps:
+<!-- ## The solving steps:
 1. 定義一個遞歸函數同於進行binary searching
 2. 在遞歸函數中定義搜尋的條件
-3. 如果找到返回`root pointer`,否則返回`null`
-
+3. 如果找到返回`root pointer`,否則返回`null` -->
+#### Solution:
 <!-- 1. Define a recursive function for binary search
 1. Define some conditions for searching
 2. If the value is found ,return the root. Otherwise return NULL  -->

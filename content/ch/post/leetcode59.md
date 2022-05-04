@@ -1,5 +1,5 @@
 ---
-title: "Spiral Matrix II(medium)"
+title: "[Leetcode] Spiral Matrix II(MEDIUM)"
 date: 2022-04-13T14:26:29+08:00
 draft: false
 tags:
@@ -24,10 +24,7 @@ Output: [[1]]
 這題跟`Spiral Matrix`做法差不多，我們不難發現他的移動模式就是(右→下↓左←上)，我們只需要通過幾個變數來限制移動的步數。另外，這題需要我們返回一個n*n的array，所以，需要額外定義一個counter來記錄每次插入的數值為多少，因此，只要counter 到達`n*n`的大小就知道是否完成插入所需的值。
 <!-- First thing first, let's  think about how we can insert a number into an array spirally? Can we just simply set a boundary of row and column to limit its inserted direction? <span style="color:red">YES! You Can!</span> Let me explain how it works. According to the example, we can find out its moving pattern(`top-left to top-right`,`top-right to bottom-right`,`bottom-right to bottom-left` and `bottom-left to top left`), it always follows these 4 moving patterns, so that we can define a boundary of row and column to limit pointer moving to has inserted a number. Until reaching n<sup>2</sup>, it will break the loop and return the answer. -->
 
-## The solving steps:
-1. 定義row和column的upper以及lower的邊界，以免重複插入值到已插入值的位置。
-2. 遵循這個移動模式((右→下↓左←上),並以邊界變數來限制移動步數
-3. 直到到達`n*n`即可
+#### Solution:
 <!-- 1. Define the upper boundary, lower boundary of row and column.
 2. Follow the moving pattern(`top-left to top-right`,`top-right to bottom-right`,`bottom-right to bottom-left` and `bottom-left to top left`) and update upper boundary, lower boundary depending on what moving pattern it has done.
 3. Until reaching n<sup>2</sup>, then return the answer -->

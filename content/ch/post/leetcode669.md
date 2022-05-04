@@ -1,5 +1,5 @@
 ---
-title: "Trim a Binary Search Tree"
+title: "[Leetcode] Trim a Binary Search Tree(MEDIUM)"
 date: 2022-04-15T18:29:14+08:00
 draft: false
 tags:
@@ -31,12 +31,12 @@ Output: [3,2,null,1]
 
 <!-- We are going to apply the recursive function. Because the `Input` is a binary search tree and all left child nodes of the `low` node are less than the `low` node. So, the simple solution is that change its parent's left child to its right child node. And the `heigh` bound is similar to `low` bound solution but changes its parent's right child to its left child node. -->
 
-## The solving steps:
+<!-- ## The solving steps:
 1. 我們透過遞歸BST,並使用preorder traversal的方式
 2. 檢查節點是否比`Low`小，如果是就將它的右子樹(如有)接到父節點的左指標
 3. 檢查節點是否比`heigh`大，如果是就將它的左子樹(如有)接到父節點的右指標
-4. 最後返回整顆Tree即可
-
+4. 最後返回整顆Tree即可 -->
+#### Solution:
 ```c++
 /**
  * Definition for a binary tree node.

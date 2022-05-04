@@ -123,8 +123,7 @@
 </div></header><div class=post-body itemprop=articleBody>
 <h2 id=leetcode-59----spiral-matrix-ii>LeetCode 59 - Spiral Matrix II</h2><p>Given a positive integer n, generate an n x n matrix filled with elements from 1 to n<sup>2</sup> in spiral order.</p><p>example</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>Input: n = 3
 </span></span><span style=display:flex><span>Output: [[1,2,3],[8,9,4],[7,6,5]]
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>Input: n = 1
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>Input: n = 1
 </span></span><span style=display:flex><span>Output: [[1]]
 </span></span></code></pre></div><h2 id=how-can-we-solve-this-problem>How can we solve this problem?</h2><p>這題跟<code>Spiral Matrix</code>做法差不多，我們不難發現他的移動模式就是(右→下↓左←上)，我們只需要通過幾個變數來限制移動的步數。另外，這題需要我們返回一個n*n的array，所以，需要額外定義一個counter來記錄每次插入的數值為多少，因此，只要counter 到達<code>n*n</code>的大小就知道是否完成插入所需的值。</p><h4 id=solution>Solution:</h4><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=display:flex><span><span style=color:#a2f;font-weight:700>class</span> <span style=color:#00f>Solution</span> {
 </span></span><span style=display:flex><span><span style=color:#a2f;font-weight:700>public</span><span style=color:#666>:</span>

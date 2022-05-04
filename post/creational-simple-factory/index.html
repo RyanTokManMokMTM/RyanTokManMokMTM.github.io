@@ -133,7 +133,7 @@
 </div></header><div class=post-body itemprop=articleBody>
 <h2 id=什麼是simple-factory簡單工廠呢>什麼是Simple Factory(簡單工廠)呢?</h2><blockquote>
 <p>簡單而言就是: 由一個工廠來生產全部產品
-定義:建立一個接口,讓子類自己決定實現哪一個Factory,重點在於工廠，透過工廠的Static method 進行生成的Object</p></blockquote><h4 id=簡單例子>簡單例子</h4><p><em>注: 以及程式單純用於解釋，並不能實際執行</em></p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>透過Factory 類的Static 方法調用方法，傳入參數生成相關的Product
+定義:建立一個接口,讓子類自己決定實現哪一個Factory,重點在於工廠，透過工廠的Static method 進行生成的Object</p></blockquote><h3 id=簡單例子>簡單例子</h3><p><em>注: 以下程式單純用於解釋，並不能實際執行</em></p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>透過Factory 類的Static 方法調用方法，傳入參數生成相關的Product
 </span></span></code></pre></div><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=display:flex><span><span style=color:#a2f;font-weight:700>class</span> <span style=color:#00f>Product</span>{
 </span></span><span style=display:flex><span> <span style=color:#a2f;font-weight:700>public</span><span style=color:#666>:</span>
 </span></span><span style=display:flex><span> 	<span style=color:#a2f;font-weight:700>virtual</span> <span style=color:#0b0;font-weight:700>void</span> someMethod() <span style=color:#666>=</span> <span style=color:#666>0</span>
@@ -233,7 +233,7 @@
 </a>
 </div><div class="site-state-item site-state-tags">
 <a href=/tags/>
-<span class=site-state-item-count>14 </span>
+<span class=site-state-item-count>20 </span>
 <span class=site-state-item-name>標籤</span>
 </a>
 </div></nav><div class="links-of-author motion-element">
@@ -261,32 +261,32 @@ Instagram
 標籤雲
 </div><ul class=tagcloud-of-blogroll-list>
 <li class=tagcloud-of-blogroll-item>
+<a href=/tags/array>Array</a>
+</li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/learning>Learning</a>
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/creational>Creational</a>
+</li><li class=tagcloud-of-blogroll-item>
+<a href=/tags/binary-Tree>Binary tree</a>
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/priority-queue>Priority queue</a>
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/rate-limiter>Rate limiter</a>
 </li><li class=tagcloud-of-blogroll-item>
+<a href=/tags/recursion>Recursion</a>
+</li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/app-dev>App dev</a>
 </li><li class=tagcloud-of-blogroll-item>
-<a href=/tags/array>Array</a>
+<a href=/tags/binary-Search-Tree>Binary search tree</a>
 </li><li class=tagcloud-of-blogroll-item>
-<a href=/tags/gin>Gin</a>
-</li><li class=tagcloud-of-blogroll-item>
-<a href=/tags/golang-package>Golang package</a>
-</li><li class=tagcloud-of-blogroll-item>
-<a href=/tags/heap>Heap</a>
-</li><li class=tagcloud-of-blogroll-item>
-<a href=/tags/ios-app>Ios app</a>
+<a href=/tags/binary-search-tree>Binary search tree</a>
 </li></ul></div></section><section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
 <div class=post-toc>
 <div class=post-toc-content><nav id=TableOfContents>
 <ul>
 <li><a href=#什麼是simple-factory簡單工廠呢>什麼是Simple Factory(簡單工廠)呢?</a>
 <ul>
-<li></li><li><a href=#優點>優點</a></li><li><a href=#缺點>缺點</a></li><li><a href=#違背原則>違背原則</a></li></ul></li></ul></nav></div></div></section></div></aside></div></main><footer id=footer class=footer>
+<li><a href=#簡單例子>簡單例子</a></li><li><a href=#優點>優點</a></li><li><a href=#缺點>缺點</a></li><li><a href=#違背原則>違背原則</a></li></ul></li></ul></nav></div></div></section></div></aside></div></main><footer id=footer class=footer>
 <div class=footer-inner>
 <div class=copyright>
 <span class=copyright-year>

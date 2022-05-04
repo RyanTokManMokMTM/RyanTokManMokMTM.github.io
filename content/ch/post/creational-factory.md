@@ -15,8 +15,8 @@ author: jackson.tmm
 ## 什麼是Factory(工廠)呢?
 > 定義:建立一個接口,讓子類自己決定實現哪一個Factory,其**重點是繼承了Simple Factory Patterns的優點,同時解決了它的問題**
 
-#### 簡單例子
-*注: 以及程式單純用於解釋，並不能實際執行*  
+### 簡單例子
+*注: 以下程式單純用於解釋，並不能實際執行*  
 ```
 可透過子類繼承Factory的抽象類自主決定生產什麼樣的Product。  
 生產的Product在透過里氏替換原則(Lisko Subsititution princeple)替換成繼承與Logger的子類，即可換成的需要的Logger。

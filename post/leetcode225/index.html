@@ -4,12 +4,12 @@
 <meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta http-equiv=content-security-policy content="upgrade-insecure-requests">
-<title> [Leetcode] Top K Frequent Elements(MEDIUM) - Jackson.tmm </title><meta name=keywords content="博客,工程師,程序員,學習,筆記,技術,分析,後端,生活">
+<title> [Leetcode] Implement Stack using Queues(EASY) - Jackson.tmm </title><meta name=keywords content="博客,工程師,程序員,學習,筆記,技術,分析,後端,生活">
 <meta name=author content="jackson.tmm">
-<meta property="og:title" content="[Leetcode] Top K Frequent Elements(MEDIUM)">
+<meta property="og:title" content="[Leetcode] Implement Stack using Queues(EASY)">
 <meta property="og:site_name" content="Jackson.tmm">
 <meta property="og:image" content="/images/favicon.png">
-<meta name=title content="[Leetcode] Top K Frequent Elements(MEDIUM) - Jackson.tmm">
+<meta name=title content="[Leetcode] Implement Stack using Queues(EASY) - Jackson.tmm">
 <meta name=description content="歡迎來的Jackson.tmm的空間站。個人主要專注於Web開發，程序開發，以及學習上。">
 <link rel="shortcut icon" href=/images/favicon.png>
 <link rel=apple-touch-icon href=/images/avatar.jpg>
@@ -80,15 +80,15 @@
 <article class="post post-type-normal" itemscope itemtype=http://schema.org/Article>
 <header class=post-header>
 <h1 class=post-title itemprop="name headline">
-<a class=post-title-link href=https://ryantokmanmokmtm.github.io/post/leetcode347/ itemprop=url>
-[Leetcode] Top K Frequent Elements(MEDIUM)
+<a class=post-title-link href=https://ryantokmanmokmtm.github.io/post/leetcode225/ itemprop=url>
+[Leetcode] Implement Stack using Queues(EASY)
 </a>
 </h1><div class=post-meta>
 <span class=post-time>
 <i class="fa fa-calendar-o fa-fw"></i>
 <span class=post-meta-item-text>時間：</span>
-<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2022-04-09">
-2022-04-09
+<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2022-05-05">
+2022-05-05
 </time>
 </span>
 <span class=post-category>
@@ -106,64 +106,131 @@
 |
 <i class="fa fa-file-word-o fa-fw"></i>
 <span class=post-meta-item-text>字數：</span>
-<span class=leancloud-world-count>240 字</span>
+<span class=leancloud-world-count>909 字</span>
 </span>
 <span>
 |
 <i class="fa fa-eye fa-fw"></i>
 <span class=post-meta-item-text>閱讀：</span>
-<span class=leancloud-view-count>1分鐘</span>
+<span class=leancloud-view-count>2分鐘</span>
 </span>
-<span id=/post/leetcode347/ class=leancloud_visitors data-flag-title="[Leetcode] Top K Frequent Elements(MEDIUM)">
+<span id=/post/leetcode225/ class=leancloud_visitors data-flag-title="[Leetcode] Implement Stack using Queues(EASY)">
 |
 <i class="fa fa-binoculars fa-fw"></i>
 <span class=post-meta-item-text>閱讀次數：</span>
 <span class=leancloud-visitors-count></span>
 </span>
 </div></header><div class=post-body itemprop=articleBody>
-<h2 id=leetcode-347---top-k-frequent-elements>LeetCode 347 - Top K Frequent Elements</h2><p>Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.</p><p>example</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>Input: nums = [1,1,1,2,2,3], k = 2
-</span></span><span style=display:flex><span>Output: [1,2]
-</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>Input: nums = [1], k = 1
-</span></span><span style=display:flex><span>Output: [1]
-</span></span></code></pre></div><h2 id=how-can-we-solve-this-problem>How can we solve this problem?</h2><p>這一題需要我們返回K個數量最多的element。所以，我們可以使用<code>map</code>記錄我們array中element的個數，然後在把他們以<code>&lt;frequency,element></code>存到<code>priority queue/max queue</code>，最後只要返回<code>priority queue</code>中的<code>k</code>個element即可。</p><h4 id=solution>Solution:</h4><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=display:flex><span><span style=color:#a2f;font-weight:700>class</span> <span style=color:#00f>Solution</span> {
+<h2 id=leetcode-225---implement-stack-using-queues>LeetCode 225 - Implement Stack using Queues</h2><p>Implement a last-in-first-out (LIFO) stack using only two queues. The implemented stack should support all the functions of a normal stack (<code>push</code>, <code>top</code>, <code>pop</code>, and <code>empty</code>).</p><p>Implement the <code>MyStack</code> class:</p><ul>
+<li>void <code>push(int x)</code> Pushes element x to the top of the stack.</li><li>int <code>pop()</code> Removes the element on the top of the stack and returns it.</li><li>int <code>top()</code> Returns the element on the top of the stack.</li><li>boolean <code>empty()</code> Returns <code>true</code> if the stack is empty, <code>false</code> otherwise.</li></ul><p><strong>Notes</strong>:</p><ul>
+<li>You must use only standard operations of a queue, which means that only <code>push to back</code>, <code>peek/pop</code> from front, <code>size</code> and is empty operations are valid.</li><li>Depending on your language, the queue may not be supported natively. You may simulate a queue using a list or deque (double-ended queue) as long as you use only a queue&rsquo;s standard operations.</li></ul><p>example</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>Input
+</span></span><span style=display:flex><span>[&#34;MyStack&#34;, &#34;push&#34;, &#34;push&#34;, &#34;top&#34;, &#34;pop&#34;, &#34;empty&#34;]
+</span></span><span style=display:flex><span>[[], [1], [2], [], [], []]
+</span></span><span style=display:flex><span>Output
+</span></span><span style=display:flex><span>[null, null, null, 2, 2, false]
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Explanation
+</span></span><span style=display:flex><span>MyStack myStack = new MyStack();
+</span></span><span style=display:flex><span>myStack.push(1);
+</span></span><span style=display:flex><span>myStack.push(2);
+</span></span><span style=display:flex><span>myStack.top(); // return 2
+</span></span><span style=display:flex><span>myStack.pop(); // return 2
+</span></span><span style=display:flex><span>myStack.empty(); // return False
+</span></span></code></pre></div><h2 id=how-can-we-solve-this-problem>How can we solve this problem?</h2><p>這題就是要我們用<code>Queue</code>來模擬<code>Stack</code>。做這題之前我們要先知道<code>Queue</code>和<code>Stack</code>的差異。</p><ul>
+<li><code>Queue</code>是First In First Out, 也就是先進去的element會先被拿出來</li><li><code>Stack</code>是First In Last Out, 也就是先進去的element最後才會被拿出來</li></ul><p><code>push(int x)</code>:<br>
+如果要用<code>Queue</code>來模擬<code>Stack</code>就要注意在<code>Queue</code>中的最後一個元素會是<code>Stack</code>的第一個元素。所以，這題我們可以用比較簡單粗暴的方式來解決。因為我們已經知道後進(<code>Last In</code>)<code>Stack</code>的值會是第一個元素。因此,我們可以直接用一個<code>variable</code>保存最後插入進<code>Queue</code>的element即可。</p><p><code>pop()</code><br>
+如果我們要移除element，就必須要將<code>Queue</code>的最後一個元素搬到最前面，同時因為最前面的元素會被移除，所以我們用於保存最後插入進<code>Queue</code>的<code>variable</code>所記錄的值也必須被改變，變成<code>Queue</code>的倒數第二個element。因此我們要先將<code>Queue</code>中最後的2個element搬到最前面，第一個便是我們<code>stack</code>的<code>top</code>,而第二個是我們要<code>pop</code>的element。最後，我們記錄完<code>top</code>的值後，插入到<code>Queue</code>的尾巴，並返回要<code>Queue</code>的<code>front</code>即可。</p><p><code>clear()</code>: <br>
+只需將空的<code>Queue</code>取代成當前不是空的<code>Queue</code>即可。</p><p><code>empty()</code>:<br>
+只需檢查<code>Queue</code>是否為<code>empty()</code>即可。</p><h4 id=solution>Solution:</h4><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=display:flex><span><span style=color:#a2f;font-weight:700>class</span> <span style=color:#00f>MyStack</span> {
 </span></span><span style=display:flex><span><span style=color:#a2f;font-weight:700>public</span><span style=color:#666>:</span>
-</span></span><span style=display:flex><span>    vector<span style=color:#666>&lt;</span><span style=color:#0b0;font-weight:700>int</span><span style=color:#666>&gt;</span> topKFrequent(vector<span style=color:#666>&lt;</span><span style=color:#0b0;font-weight:700>int</span><span style=color:#666>&gt;&amp;</span> nums, <span style=color:#0b0;font-weight:700>int</span> k) {
-</span></span><span style=display:flex><span>        vector<span style=color:#666>&lt;</span><span style=color:#0b0;font-weight:700>int</span><span style=color:#666>&gt;</span> res;
-</span></span><span style=display:flex><span>        unordered_map<span style=color:#666>&lt;</span><span style=color:#0b0;font-weight:700>int</span>,<span style=color:#0b0;font-weight:700>int</span><span style=color:#666>&gt;</span> map;
-</span></span><span style=display:flex><span>        priority_queue<span style=color:#666>&lt;</span>pair<span style=color:#666>&lt;</span><span style=color:#0b0;font-weight:700>int</span>,<span style=color:#0b0;font-weight:700>int</span><span style=color:#666>&gt;&gt;</span> q;
-</span></span><span style=display:flex><span>        <span style=color:#a2f;font-weight:700>for</span>(<span style=color:#a2f;font-weight:700>auto</span> <span style=color:#a0a000>i</span> : nums) map[i]<span style=color:#666>++</span>; <span style=color:#080;font-style:italic>//counter numbers 
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        <span style=color:#a2f;font-weight:700>for</span>(<span style=color:#a2f;font-weight:700>auto</span> <span style=color:#a0a000>it</span> : map) q.push({it.second,it.first}); <span style=color:#080;font-style:italic>//according to the second for priority
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        <span style=color:#a2f;font-weight:700>while</span>(k<span style=color:#666>--</span> <span style=color:#666>&gt;</span> <span style=color:#666>0</span>) {
-</span></span><span style=display:flex><span>            res.push_back(q.top().second);
+</span></span><span style=display:flex><span>    queue<span style=color:#666>&lt;</span><span style=color:#0b0;font-weight:700>int</span><span style=color:#666>&gt;</span> q;
+</span></span><span style=display:flex><span>    <span style=color:#0b0;font-weight:700>int</span> t;
+</span></span><span style=display:flex><span>    <span style=color:#080;font-style:italic>// queue&lt;int&gt; q2;
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>    MyStack() {
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#080;font-style:italic>//O(N)
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>    <span style=color:#0b0;font-weight:700>void</span> <span style=color:#00a000>push</span>(<span style=color:#0b0;font-weight:700>int</span> x) {
+</span></span><span style=display:flex><span>        <span style=color:#080;font-style:italic>// q2.push(x);
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        <span style=color:#080;font-style:italic>// while(!q.empty()){
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        <span style=color:#080;font-style:italic>//     q2.push(q.front());q.pop();
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        <span style=color:#080;font-style:italic>// }
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        <span style=color:#080;font-style:italic>// q = q2;
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        <span style=color:#080;font-style:italic>// clear(q2);
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        q.push(x);
+</span></span><span style=display:flex><span>        t <span style=color:#666>=</span> x;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#080;font-style:italic>//O(1)
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>    <span style=color:#0b0;font-weight:700>int</span> <span style=color:#00a000>pop</span>() {
+</span></span><span style=display:flex><span>        <span style=color:#080;font-style:italic>// if(empty()) return -1;
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        <span style=color:#080;font-style:italic>// int value = q.front();q.pop();
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        
+</span></span><span style=display:flex><span>        <span style=color:#080;font-style:italic>//get the last 2 elements
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        <span style=color:#0b0;font-weight:700>int</span> size <span style=color:#666>=</span> q.size();
+</span></span><span style=display:flex><span>        <span style=color:#a2f;font-weight:700>while</span>(size<span style=color:#666>--</span> <span style=color:#666>&gt;</span> <span style=color:#666>2</span>) {
+</span></span><span style=display:flex><span>            q.push(q.front());
 </span></span><span style=display:flex><span>            q.pop();
 </span></span><span style=display:flex><span>        }
-</span></span><span style=display:flex><span>        <span style=color:#a2f;font-weight:700>return</span> res;
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#080;font-style:italic>//getting the 2th top value in stack
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        t <span style=color:#666>=</span> q.front();
+</span></span><span style=display:flex><span>        q.push(q.front()); <span style=color:#080;font-style:italic>//push it at the back of the queue
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        q.pop();
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#080;font-style:italic>//getting the 1th top value in stack
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        <span style=color:#0b0;font-weight:700>int</span> popVal <span style=color:#666>=</span> q.front();
+</span></span><span style=display:flex><span>        q.pop();
+</span></span><span style=display:flex><span>        <span style=color:#a2f;font-weight:700>return</span> popVal;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#0b0;font-weight:700>void</span> <span style=color:#00a000>clear</span>(queue<span style=color:#666>&lt;</span><span style=color:#0b0;font-weight:700>int</span><span style=color:#666>&gt;&amp;</span> q){
+</span></span><span style=display:flex><span>	    queue<span style=color:#666>&lt;</span><span style=color:#0b0;font-weight:700>int</span><span style=color:#666>&gt;</span> empty;
+</span></span><span style=display:flex><span>	    swap(empty, q);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#0b0;font-weight:700>int</span> <span style=color:#00a000>top</span>() {
+</span></span><span style=display:flex><span>        <span style=color:#080;font-style:italic>// if(empty()) return -1;
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        <span style=color:#080;font-style:italic>// return q.front();
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        <span style=color:#a2f;font-weight:700>return</span> t;
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#0b0;font-weight:700>bool</span> <span style=color:#00a000>empty</span>() {
+</span></span><span style=display:flex><span>        <span style=color:#a2f;font-weight:700>return</span> q.empty() <span style=color:#666>?</span> <span style=color:#a2f>true</span> <span style=color:#666>:</span> <span style=color:#a2f>false</span>; 
 </span></span><span style=display:flex><span>    }
 </span></span><span style=display:flex><span>};
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#080;font-style:italic>/**
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic> * Your MyStack object will be instantiated and called as such:
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic> * MyStack* obj = new MyStack();
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic> * obj-&gt;push(x);
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic> * int param_2 = obj-&gt;pop();
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic> * int param_3 = obj-&gt;top();
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic> * bool param_4 = obj-&gt;empty();
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic> */</span>
 </span></span></code></pre></div></div><footer class=post-footer>
 <div class=post-tags>
-<a href=/tags/map rel=tag title=map>#map#</a>
-<a href=/tags/priority-queue rel=tag title="priority queue">#priority queue#</a>
-<a href=/tags/array rel=tag title=array>#array#</a>
+<a href=/tags/stack rel=tag title=stack>#stack#</a>
+<a href=/tags/queue rel=tag title=queue>#queue#</a>
+<a href=/tags/design rel=tag title=design>#design#</a>
 </div><div class=post-nav>
 <div class=article-copyright>
 <div class=article-copyright-info>
 <p>
-<span>文章聲明：</span>[Leetcode] Top K Frequent Elements(MEDIUM)
+<span>文章聲明：</span>[Leetcode] Implement Stack using Queues(EASY)
 </p><p>
-<span>文章連接：</span>https://ryantokmanmokmtm.github.io/post/leetcode347/
+<span>文章連接：</span>https://ryantokmanmokmtm.github.io/post/leetcode225/
 </p><p>
 <span>作者：</span>jackson.tmm
 </p><p>
 <span>文章聲明： </span>本博客文章除特别声明外，均采用 <a href=https://creativecommons.org/licenses/by-nc-sa/3.0/ target=_blank style=text-decoration:underline>CC BY-NC-SA 3.0</a>许可协议，转载请注明出处！
 </p></div></div><div class=clear></div></div><div class=post-nav>
 <div class="post-nav-next post-nav-item">
-<a href=https://ryantokmanmokmtm.github.io/post/creational-singleton-pattern/ rel=next title="[Note]Creational Singleton Pattern">
-<i class="fa fa-chevron-left"></i> [Note]Creational Singleton Pattern
-</a>
 </div><div class="post-nav-prev post-nav-item">
-<a href=https://ryantokmanmokmtm.github.io/post/leetcode703/ rel=prev title="[Leetcode] Kth Largest Element in a Stream(EASY)">
-[Leetcode] Kth Largest Element in a Stream(EASY)
+<a href=https://ryantokmanmokmtm.github.io/post/leetcode1679/ rel=prev title="[Leetcode] Max Number of K-Sum Pairs(MEDIUM)">
+[Leetcode] Max Number of K-Sum Pairs(MEDIUM)
 <i class="fa fa-chevron-right"></i>
 </a>
 </div></div></footer></article></section></div></div><div class=sidebar-toggle>

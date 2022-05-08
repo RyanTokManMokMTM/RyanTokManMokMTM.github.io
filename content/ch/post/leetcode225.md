@@ -3,9 +3,9 @@ title: "[Leetcode] Implement Stack using Queues(EASY)"
 date: 2022-05-05T09:39:35+08:00
 draft: false
 tags:
-    - Stack
-    - Queue
-    - Design
+    - stack
+    - queue
+    - design
 categories:
     - leetcode
 ---

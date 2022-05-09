@@ -17,7 +17,6 @@ type = "about"
 感興趣的領域如下:
 - 遊戲設計與圖形學
 - 3D建模技術
-- MetaHuman  
 
 <!-- 
 ### More About me

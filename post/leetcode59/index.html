@@ -106,7 +106,7 @@
 |
 <i class="fa fa-file-word-o fa-fw"></i>
 <span class=post-meta-item-text>字數：</span>
-<span class=leancloud-world-count>386 字</span>
+<span class=leancloud-world-count>384 字</span>
 </span>
 <span>
 |
@@ -125,7 +125,7 @@
 </span></span><span style=display:flex><span>Output: [[1,2,3],[8,9,4],[7,6,5]]
 </span></span></code></pre></div><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>Input: n = 1
 </span></span><span style=display:flex><span>Output: [[1]]
-</span></span></code></pre></div><h2 id=how-can-we-solve-this-problem>How can we solve this problem?</h2><p>這題跟<code>Spiral Matrix</code>做法差不多，我們不難發現他的移動模式就是(右→下↓左←上)，我們只需要通過幾個變數來限制移動的步數。另外，這題需要我們返回一個n*n的array，所以，需要額外定義一個counter來記錄每次插入的數值為多少，因此，只要counter 到達<code>n*n</code>的大小就知道是否完成插入所需的值。</p><h4 id=solution>Solution:</h4><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=display:flex><span><span style=color:#a2f;font-weight:700>class</span> <span style=color:#00f>Solution</span> {
+</span></span></code></pre></div><h2 id=how-can-we-solve-this-problem>How can we solve this problem?</h2><p>這題跟<code>Spiral Matrix</code>做法差不多，我們不難發現他的移動模式就是(<em>右→下↓左←上</em>)，我們只需要通過幾個變數來限制移動的步數。另外，這題需要我們返回一個n<sup>2</sup>的array，所以，需要額外定義一個counter來記錄每次插入的數值為多少，因此，只要counter 到達n<sup>2</sup>的大小就知道是否完成插入所需的值。</p><h4 id=solution>Solution:</h4><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=display:flex><span><span style=color:#a2f;font-weight:700>class</span> <span style=color:#00f>Solution</span> {
 </span></span><span style=display:flex><span><span style=color:#a2f;font-weight:700>public</span><span style=color:#666>:</span>
 </span></span><span style=display:flex><span>    vector<span style=color:#666>&lt;</span>vector<span style=color:#666>&lt;</span><span style=color:#0b0;font-weight:700>int</span><span style=color:#666>&gt;&gt;</span> generateMatrix(<span style=color:#0b0;font-weight:700>int</span> n) {
 </span></span><span style=display:flex><span>        <span style=color:#080;font-style:italic>//total step n^2
@@ -209,7 +209,7 @@
 </p></div><nav class="site-state motion-element">
 <div class="site-state-item site-state-posts">
 <a href=/post/>
-<span class=site-state-item-count>25</span>
+<span class=site-state-item-count>26</span>
 <span class=site-state-item-name>日誌</span>
 </a>
 </div><div class="site-state-item site-state-categories">
@@ -251,21 +251,21 @@ Instagram
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/learning>Learning</a>
 </li><li class=tagcloud-of-blogroll-item>
-<a href=/tags/creational>Creational</a>
-</li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/recursion>Recursion</a>
+</li><li class=tagcloud-of-blogroll-item>
+<a href=/tags/creational>Creational</a>
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/stack>Stack</a>
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/string>String</a>
+</li><li class=tagcloud-of-blogroll-item>
+<a href=/tags/back-tracking>Back tracking</a>
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/binary-Tree>Binary tree</a>
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/design>Design</a>
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/map>Map</a>
-</li><li class=tagcloud-of-blogroll-item>
-<a href=/tags/priority-queue>Priority queue</a>
 </li></ul></div></section></div></aside></div></main><footer id=footer class=footer>
 <div class=footer-inner>
 <div class=copyright>

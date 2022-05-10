@@ -127,7 +127,7 @@
 </span></span><span style=display:flex><span>Output: []
 </span></span></code></pre></div><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>Input: digits = &#34;2&#34;
 </span></span><span style=display:flex><span>Output: [&#34;a&#34;,&#34;b&#34;,&#34;c&#34;]
-</span></span></code></pre></div><h2 id=how-can-we-solve-this-problem>How can we solve this problem?</h2><p>這題是要我們拿到<code>Input</code>的數字所能組合出所有字串。解法也很簡單，我們可以透過<code>Map</code>記錄每個數字代表來那些字符，然後再透過<code>Back-tracking</code>技巧來幫助我們組合字串。你有可能會問什麼是<code>Back-tracking</code>。簡單來說就是一個<code>Recursive Function</code>,但他會迴避一些不正常的數值。比如:&ldquo;abc&rdquo;,而"abc"可能不是我們要的。因此退回上一步的"ab",並嘗試其他數值/結果。</p><h4 id=solution>Solution:</h4><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=display:flex><span><span style=color:#a2f;font-weight:700>class</span> <span style=color:#00f>Solution</span> {
+</span></span></code></pre></div><h2 id=how-can-we-solve-this-problem>How can we solve this problem?</h2><p>這題是要我們拿到<code>Input</code>的數字所能組合出所有字串。解法也很簡單，我們可以透過<code>Map</code>記錄每個數字代表來那些字符，然後再透過<strong>Back-tracking</strong>技巧來幫助我們組合字串。你有可能會問什麼是<strong>Back-tracking</strong>。簡單來說就是一個<strong>Recursive Function</strong>,但他會迴避一些不正常的數值。比如:&ldquo;abc&rdquo;,而"abc"可能不是我們要的。因此退回上一步的"ab",並嘗試其他數值/結果。</p><h4 id=solution>Solution:</h4><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=display:flex><span><span style=color:#a2f;font-weight:700>class</span> <span style=color:#00f>Solution</span> {
 </span></span><span style=display:flex><span>    unordered_map<span style=color:#666>&lt;</span><span style=color:#0b0;font-weight:700>char</span>,string<span style=color:#666>&gt;</span> temp <span style=color:#666>=</span> {
 </span></span><span style=display:flex><span>        {<span style=color:#b44>&#39;2&#39;</span>,<span style=color:#b44>&#34;abc&#34;</span>},
 </span></span><span style=display:flex><span>        {<span style=color:#b44>&#39;3&#39;</span>,<span style=color:#b44>&#34;def&#34;</span>},
@@ -178,6 +178,9 @@
 <span>文章聲明： </span>本博客文章除特別聲明外，均采用 <a href=https://creativecommons.org/licenses/by-nc-sa/3.0/ target=_blank style=text-decoration:underline>CC BY-NC-SA 3.0</a>許可協議，轉載請注明出處！
 </p></div></div><div class=clear></div></div><div class=post-nav>
 <div class="post-nav-next post-nav-item">
+<a href=https://ryantokmanmokmtm.github.io/post/leetcode216/ rel=next title="[Leetcode] Combination Sum III(MEDIUM)">
+<i class="fa fa-chevron-left"></i> [Leetcode] Combination Sum III(MEDIUM)
+</a>
 </div><div class="post-nav-prev post-nav-item">
 <a href=https://ryantokmanmokmtm.github.io/post/leetcode341/ rel=prev title="[Leetcode] Flatten Nested List Iterator(MEDIUM)">
 [Leetcode] Flatten Nested List Iterator(MEDIUM)
@@ -198,7 +201,7 @@
 </p></div><nav class="site-state motion-element">
 <div class="site-state-item site-state-posts">
 <a href=/post/>
-<span class=site-state-item-count>25</span>
+<span class=site-state-item-count>26</span>
 <span class=site-state-item-name>日誌</span>
 </a>
 </div><div class="site-state-item site-state-categories">
@@ -240,21 +243,21 @@ Instagram
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/learning>Learning</a>
 </li><li class=tagcloud-of-blogroll-item>
-<a href=/tags/creational>Creational</a>
-</li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/recursion>Recursion</a>
+</li><li class=tagcloud-of-blogroll-item>
+<a href=/tags/creational>Creational</a>
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/stack>Stack</a>
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/string>String</a>
+</li><li class=tagcloud-of-blogroll-item>
+<a href=/tags/back-tracking>Back tracking</a>
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/binary-Tree>Binary tree</a>
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/design>Design</a>
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/map>Map</a>
-</li><li class=tagcloud-of-blogroll-item>
-<a href=/tags/priority-queue>Priority queue</a>
 </li></ul></div></section></div></aside></div></main><footer id=footer class=footer>
 <div class=footer-inner>
 <div class=copyright>

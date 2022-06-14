@@ -3,27 +3,40 @@
   Pre = "home"
   #URL = "/"
   Weight = 1
+
+[[Main]]
+  Name = "About"
+  Pre = "user"
+  URL = "about.html"
+   Weight = 2
+  
 [[Main]]
   Name = "Posts"
   Pre = "archive"
   URL = "post"
-  Weight = 2
+  Weight = 3
+
+[[Main]]
+  Name = "Leetcodes Codes"
+  Pre = "code"
+  URL = "leetcodes"
+  Weight = 4
+
+[[Main]]
+  Name = "Leetcodes Notes"
+  Pre = "code"
+  URL = "leetcodenotes"
+  Weight = 5
 
 [[Main]]
   Name = "Projects"
   Pre = "tasks"
   URL = "project"
-  Weight = 3
+  Weight = 6
 
-  
-[[Main]]
-  Name = "About"
-  Pre = "user"
-  URL = "about.html"
-   Weight = 4
   
 [[Main]]
   Name = "achievement"
   Pre = "trophy"
   URL = "achievement"
-  Weight = 5
+  Weight = 6

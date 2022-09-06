@@ -39,10 +39,5 @@ author: jackson.tmm
 ### Demo Video
 <video src="/videos/final.MP4" controls="controls" width="500" height="300"></video>
 
----
-### In Progress
-*User chatting UI*
-![chattingUI](/images/chatting.jpg)
-
-*User profile Demo*(參考**小紅書**)  
-<video src="/videos/profile.MP4" controls="controls" width="500" height="300"></video>
+### Updated Video
+<video src="/videos/ott-app.mov" controls="controls" width="500" height="300"></video>

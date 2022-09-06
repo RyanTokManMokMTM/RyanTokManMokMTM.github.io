@@ -17,15 +17,15 @@
   Weight = 3
 
 [[Main]]
-  Name = "Leetcodes Codes"
+  Name = "Leetcodes "
   Pre = "code"
   URL = "leetcodes"
   Weight = 4
 
 [[Main]]
-  Name = "Leetcodes Notes"
-  Pre = "code"
-  URL = "leetcodenotes"
+  Name = "Notes"
+  Pre = "sticky-note-o"
+  URL = "notes"
   Weight = 5
 
 [[Main]]

@@ -38,7 +38,7 @@
 <span class=site-title>Jackson.tmm</span>
 <span class=logo-line-after><i></i></span>
 </a>
-</div><p class=site-subtitle>努力生活,努力社交,努力學習...</p></div><div class=site-nav-right>
+</div><p class=site-subtitle>只有奮鬥才能改變命運</p></div><div class=site-nav-right>
 <div class="toggle popup-trigger" style=opacity:1;top:0>
 <i class="fa fa-search fa-fw fa-lg"></i>
 </div></div></div><nav class=site-nav>
@@ -57,11 +57,11 @@
 </a>
 </li><li class=menu-item>
 <a href=/leetcodes rel=section>
-<i class="menu-item-icon fa fa-fw fa-code"></i> <br>Leetcodes Codes
+<i class="menu-item-icon fa fa-fw fa-code"></i> <br>Leetcodes
 </a>
 </li><li class=menu-item>
-<a href=/leetcodenotes rel=section>
-<i class="menu-item-icon fa fa-fw fa-code"></i> <br>Leetcodes Notes
+<a href=/notes rel=section>
+<i class="menu-item-icon fa fa-fw fa-sticky-note-o"></i> <br>Notes
 </a>
 </li><li class=menu-item>
 <a href=/achievement rel=section>
@@ -86,6 +86,134 @@
 <div id=content class=content>
 <section id=posts class=posts-expand>
 <article class="post post-type-normal" itemscope itemtype=http://schema.org/Article>
+<header class=post-header>
+<h1 class=post-title itemprop="name headline">
+<a class=post-title-link href=https://ryantokmanmokmtm.github.io/post/simple-rateLimiter-example-based-on-IP/ itemprop=url>
+[Note]Simple RateLimiter Example Based on IP
+</a>
+</h1><div class=post-meta>
+<span class=post-time>
+<i class="fa fa-calendar-o fa-fw"></i>
+<span class=post-meta-item-text>時間：</span>
+<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2022-03-30">
+2022-03-30
+</time>
+</span>
+<span class=post-category>
+&nbsp; | &nbsp;
+<i class="fa fa-folder-o fa-fw"></i>
+<span class=post-meta-item-text>分類：</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/golang itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>golang</span>
+</a>
+&nbsp;
+</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/backend itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>backend</span>
+</a>
+&nbsp;
+</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/note itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>note</span>
+</a>
+&nbsp;
+</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/system-design itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>system design</span>
+</a>
+&nbsp;
+</span>
+</span>
+<span>
+|
+<i class="fa fa-file-word-o fa-fw"></i>
+<span class=post-meta-item-text>字數：</span>
+<span class=leancloud-world-count>1556 字</span>
+</span>
+<span>
+|
+<i class="fa fa-eye fa-fw"></i>
+<span class=post-meta-item-text>閱讀：</span>
+<span class=leancloud-view-count>4分鐘</span>
+</span>
+</div></header><div class=post-body itemprop=articleBody>
+基於Gin實作Rate Limiter 假設我們有2個APIs,而每個API都需要消耗1個Tokens uri method desc /api/posts/{id} GET return a simple demo message /ping GET return pong 我們先設置一下rate li
+</div><div class="post-more-link text-center">
+<a class=btn href=https://ryantokmanmokmtm.github.io/post/simple-rateLimiter-example-based-on-IP/ rel=contents>
+閱讀全文 &#187;
+</a>
+</div><footer class=post-footer><div class=post-eof></div></footer></article><article class="post post-type-normal" itemscope itemtype=http://schema.org/Article>
+<header class=post-header>
+<h1 class=post-title itemprop="name headline">
+<a class=post-title-link href=https://ryantokmanmokmtm.github.io/post/token-bucket-intro/ itemprop=url>
+[Note]Token Bucket algorithm introduction and play with golang rate Limiter
+</a>
+</h1><div class=post-meta>
+<span class=post-time>
+<i class="fa fa-calendar-o fa-fw"></i>
+<span class=post-meta-item-text>時間：</span>
+<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2022-03-29">
+2022-03-29
+</time>
+</span>
+<span class=post-category>
+&nbsp; | &nbsp;
+<i class="fa fa-folder-o fa-fw"></i>
+<span class=post-meta-item-text>分類：</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/golang itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>golang</span>
+</a>
+&nbsp;
+</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/backend itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>backend</span>
+</a>
+&nbsp;
+</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/note itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>note</span>
+</a>
+&nbsp;
+</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/algorithm itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>algorithm</span>
+</a>
+&nbsp;
+</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/system-design itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>system design</span>
+</a>
+&nbsp;
+</span>
+</span>
+<span>
+|
+<i class="fa fa-file-word-o fa-fw"></i>
+<span class=post-meta-item-text>字數：</span>
+<span class=leancloud-world-count>1953 字</span>
+</span>
+<span>
+|
+<i class="fa fa-eye fa-fw"></i>
+<span class=post-meta-item-text>閱讀：</span>
+<span class=leancloud-view-count>4分鐘</span>
+</span>
+</div></header><div class=post-body itemprop=articleBody>
+Token Bucket(令牌桶算法) 什麼是Token Bucket 呢? 簡單來說就是運用Token Bucket的系統會以一個設定的速率往桶子(Bucket)裡面丟
+</div><div class="post-more-link text-center">
+<a class=btn href=https://ryantokmanmokmtm.github.io/post/token-bucket-intro/ rel=contents>
+閱讀全文 &#187;
+</a>
+</div><footer class=post-footer><div class=post-eof></div></footer></article><article class="post post-type-normal" itemscope itemtype=http://schema.org/Article>
 <header class=post-header>
 <h1 class=post-title itemprop="name headline">
 <a class=post-title-link href=https://ryantokmanmokmtm.github.io/post/creational-factory/ itemprop=url>
@@ -232,79 +360,12 @@
 <a class=btn href=https://ryantokmanmokmtm.github.io/post/design-pattern-princeple/ rel=contents>
 閱讀全文 &#187;
 </a>
-</div><footer class=post-footer><div class=post-eof></div></footer></article><article class="post post-type-normal" itemscope itemtype=http://schema.org/Article>
-<header class=post-header>
-<h1 class=post-title itemprop="name headline">
-<a class=post-title-link href=https://ryantokmanmokmtm.github.io/post/jwt-note/ itemprop=url>
-[Note]What Is JWT(Json Web Token)-EN
-</a>
-</h1><div class=post-meta>
-<span class=post-time>
-<i class="fa fa-calendar-o fa-fw"></i>
-<span class=post-meta-item-text>時間：</span>
-<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2022-03-24">
-2022-03-24
-</time>
-</span>
-<span class=post-category>
-&nbsp; | &nbsp;
-<i class="fa fa-folder-o fa-fw"></i>
-<span class=post-meta-item-text>分類：</span>
-<span itemprop=about itemscope itemtype=https://schema.org/Thing>
-<a href=/categories/backend itemprop=url rel=index style=text-decoration:underline>
-<span itemprop=name>backend</span>
-</a>
-&nbsp;
-</span>
-<span itemprop=about itemscope itemtype=https://schema.org/Thing>
-<a href=/categories/development itemprop=url rel=index style=text-decoration:underline>
-<span itemprop=name>development</span>
-</a>
-&nbsp;
-</span>
-<span itemprop=about itemscope itemtype=https://schema.org/Thing>
-<a href=/categories/web-develpment itemprop=url rel=index style=text-decoration:underline>
-<span itemprop=name>web develpment</span>
-</a>
-&nbsp;
-</span>
-<span itemprop=about itemscope itemtype=https://schema.org/Thing>
-<a href=/categories/note itemprop=url rel=index style=text-decoration:underline>
-<span itemprop=name>note</span>
-</a>
-&nbsp;
-</span>
-<span itemprop=about itemscope itemtype=https://schema.org/Thing>
-<a href=/categories/english itemprop=url rel=index style=text-decoration:underline>
-<span itemprop=name>english</span>
-</a>
-&nbsp;
-</span>
-</span>
-<span>
-|
-<i class="fa fa-file-word-o fa-fw"></i>
-<span class=post-meta-item-text>字數：</span>
-<span class=leancloud-world-count>361 字</span>
-</span>
-<span>
-|
-<i class="fa fa-eye fa-fw"></i>
-<span class=post-meta-item-text>閱讀：</span>
-<span class=leancloud-view-count>2分鐘</span>
-</span>
-</div></header><div class=post-body itemprop=articleBody>
-What is JWT(Json Web Token)? The full name of JWT is Json Web Token. Acccording to the definition, JWT is a proposed Internet standard for creating data with optinal signature and/or opntional encryption whose payload holds JSON that asserts some number of clamis.
-It&rsquo;s used for identity authentication between client and the server that allows accessing resources in the server.
-The Structure of JWT JWT consists of three parts including:
-</div><div class="post-more-link text-center">
-<a class=btn href=https://ryantokmanmokmtm.github.io/post/jwt-note/ rel=contents>
-閱讀全文 &#187;
-</a>
 </div><footer class=post-footer><div class=post-eof></div></footer></article></section><nav class=pagination>
 <a class="extend prev" rel=prev href=/><i class="fa fa-angle-left"></i></a>
 <a class=page-number href=/>1</a>
 <span class="page-number current">2</span>
+<a class=page-number href=/p/3/>3</a>
+<a class="extend next" rel=next href=/p/3/><i class="fa fa-angle-right"></i></a>
 </nav></div></div><div class=sidebar-toggle>
 <div class=sidebar-toggle-line-wrap>
 <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
@@ -316,21 +377,21 @@ The Structure of JWT JWT consists of three parts including:
 <div class="site-author motion-element" itemprop=author itemscope itemtype=http://schema.org/Person>
 <img class=site-author-image itemprop=image src=/images/avatar.jpg alt=jackson.tmm>
 <p class=site-author-name itemprop=name>jackson.tmm</p><p class="site-description motion-element" itemprop=description>
-每天告訴自己一次：我真的很不錯。
+努力學習，成為更好的自己
 </p></div><nav class="site-state motion-element">
 <div class="site-state-item site-state-posts">
 <a href=/post/>
-<span class=site-state-item-count>9</span>
+<span class=site-state-item-count>11</span>
 <span class=site-state-item-name>日誌</span>
 </a>
 </div><div class="site-state-item site-state-categories">
 <a href=/categories/>
-<span class=site-state-item-count>20</span>
+<span class=site-state-item-count>24</span>
 <span class=site-state-item-name>分類</span>
 </a>
 </div><div class="site-state-item site-state-tags">
 <a href=/tags/>
-<span class=site-state-item-count>28 </span>
+<span class=site-state-item-count>38 </span>
 <span class=site-state-item-name>標籤</span>
 </a>
 </div></nav><div class="links-of-author motion-element">
@@ -360,23 +421,23 @@ Instagram
 <li class=tagcloud-of-blogroll-item>
 <a href=/tags/array>Array</a>
 </li><li class=tagcloud-of-blogroll-item>
+<a href=/tags/string>String</a>
+</li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/learning>Learning</a>
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/recursion>Recursion</a>
 </li><li class=tagcloud-of-blogroll-item>
-<a href=/tags/string>String</a>
-</li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/creational>Creational</a>
-</li><li class=tagcloud-of-blogroll-item>
-<a href=/tags/stack>Stack</a>
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/dynamic-programming>Dynamic programming</a>
 </li><li class=tagcloud-of-blogroll-item>
-<a href=/tags/back-tracking>Back tracking</a>
+<a href=/tags/priority-queue>Priority queue</a>
 </li><li class=tagcloud-of-blogroll-item>
-<a href=/tags/binary-Tree>Binary tree</a>
+<a href=/tags/stack>Stack</a>
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/design>Design</a>
+</li><li class=tagcloud-of-blogroll-item>
+<a href=/tags/heap>Heap</a>
 </li></ul></div></section></div></aside></div></main><footer id=footer class=footer>
 <div class=footer-inner>
 <div class=copyright>

@@ -114,7 +114,7 @@ categories:
 #### FRIEND API
 ![custom_list](/images/ott_app/backend/friend_api.png)
 
-#### CMMENT API
+#### COMMENT API
 ![custom_list](/images/ott_app/backend/comment_api.png)
 
 #### 待完成

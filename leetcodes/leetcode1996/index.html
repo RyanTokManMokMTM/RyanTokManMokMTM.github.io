@@ -4,12 +4,12 @@
 <meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta http-equiv=content-security-policy content="upgrade-insecure-requests">
-<title> [Leetcode] Reverse Linked List II(MEDIUM) - Jackson.tmm </title><meta name=keywords content="博客,工程師,程序員,學習,筆記,技術,分析,後端,生活">
+<title> [Leetcode] The Number of Weak Characters in the Game(MEDIUM) - Jackson.tmm </title><meta name=keywords content="博客,工程師,程序員,學習,筆記,技術,分析,後端,生活">
 <meta name=author content="jackson.tmm">
-<meta property="og:title" content="[Leetcode] Reverse Linked List II(MEDIUM)">
+<meta property="og:title" content="[Leetcode] The Number of Weak Characters in the Game(MEDIUM)">
 <meta property="og:site_name" content="Jackson.tmm">
 <meta property="og:image" content="/images/favicon.png">
-<meta name=title content="[Leetcode] Reverse Linked List II(MEDIUM) - Jackson.tmm">
+<meta name=title content="[Leetcode] The Number of Weak Characters in the Game(MEDIUM) - Jackson.tmm">
 <meta name=description content="歡迎來的Jackson.tmm的空間站。個人主要專注於Web開發，程序開發，以及學習上。">
 <link rel="shortcut icon" href=/images/favicon.png>
 <link rel=apple-touch-icon href=/images/avatar.jpg>
@@ -88,15 +88,15 @@
 <article class="post post-type-normal" itemscope itemtype=http://schema.org/Article>
 <header class=post-header>
 <h1 class=post-title itemprop="name headline">
-<a class=post-title-link href=https://ryantokmanmokmtm.github.io/leetcodes/leetcode92/ itemprop=url>
-[Leetcode] Reverse Linked List II(MEDIUM)
+<a class=post-title-link href=https://ryantokmanmokmtm.github.io/leetcodes/leetcode1996/ itemprop=url>
+[Leetcode] The Number of Weak Characters in the Game(MEDIUM)
 </a>
 </h1><div class=post-meta>
 <span class=post-time>
 <i class="fa fa-calendar-o fa-fw"></i>
 <span class=post-meta-item-text>時間：</span>
-<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2022-07-21">
-2022-07-21
+<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2022-09-09">
+2022-09-09
 </time>
 </span>
 <span class=post-category>
@@ -114,7 +114,7 @@
 |
 <i class="fa fa-file-word-o fa-fw"></i>
 <span class=post-meta-item-text>字數：</span>
-<span class=leancloud-world-count>518 字</span>
+<span class=leancloud-world-count>713 字</span>
 </span>
 <span>
 |
@@ -122,111 +122,83 @@
 <span class=post-meta-item-text>閱讀：</span>
 <span class=leancloud-view-count>2分鐘</span>
 </span>
-<span id=/leetcodes/leetcode92/ class=leancloud_visitors data-flag-title="[Leetcode] Reverse Linked List II(MEDIUM)">
+<span id=/leetcodes/leetcode1996/ class=leancloud_visitors data-flag-title="[Leetcode] The Number of Weak Characters in the Game(MEDIUM)">
 |
 <i class="fa fa-binoculars fa-fw"></i>
 <span class=post-meta-item-text>閱讀次數：</span>
 <span class=leancloud-visitors-count></span>
 </span>
 </div></header><div class=post-body itemprop=articleBody>
-<h2 id=leetcode-92----reverse-linked-list-ii>LeetCode 92 - Reverse Linked List II</h2><p>Given the <code>head</code> of a singly linked list and two integers <code>left</code> and <code>right</code> where <code>left &lt;= right</code>, reverse the nodes of the list from position <code>left</code> to position <code>right</code>, and return the <em>reversed list</em>.</p><p>example</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>Input: head = [1,2,3,4,5], left = 2, right = 4
-</span></span><span style=display:flex><span>Output: [1,4,3,2,5]
-</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>Input: head = [5], left = 1, right = 1
-</span></span><span style=display:flex><span>Output: [5]
-</span></span></code></pre></div><h2 id=how-can-we-solve-this-problem>How can we solve this problem?</h2><p>這一題的問題非常的簡單,就是要讓我們在給定的一個<code>list</code>中翻轉(Reverse)<code>[left,right]</code>之間的Node,並返回結果。這題跟<strong>Reverse Linked List I</strong>解法類似,不同的是多了個翻轉範圍。<br>
-首先，我們要做的是在的翻轉的開始的位置。然後再透過recursive來翻轉List,最後返回的<code>node/head</code>再由<code>left</code>位置的Node的前一個<code>Node</code>接起來(如有)就可以了~</p><p><img src=/images/leetcodesHelper/92-helper.png alt=LeetCode92></p><h4 id=solution>Solution:</h4><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=display:flex><span><span style=color:#080;font-style:italic>/**
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic> * Definition for singly-linked list.
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic> * struct ListNode {
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic> *     int val;
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic> *     ListNode *next;
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic> *     ListNode() : val(0), next(nullptr) {}
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic> *     ListNode(int x) : val(x), next(nullptr) {}
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic> *     ListNode(int x, ListNode *next) : val(x), next(next) {}
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic> * };
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic> */</span>
-</span></span><span style=display:flex><span><span style=color:#a2f;font-weight:700>class</span> <span style=color:#00f>Solution</span> {
-</span></span><span style=display:flex><span>    ListNode<span style=color:#666>*</span> theNodeAfter <span style=color:#666>=</span> <span style=color:#a2f;font-weight:700>nullptr</span>;
-</span></span><span style=display:flex><span>    <span style=color:#080;font-style:italic>// ListNode* pre = nullptr;
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>    <span style=color:#080;font-style:italic>// ListNode* starting = nullptr;
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>    <span style=color:#080;font-style:italic>// ListNode* last = nullptr;
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>    <span style=color:#080;font-style:italic>// ListNode* first = nullptr;
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span><span style=color:#a2f;font-weight:700>public</span><span style=color:#666>:</span>
-</span></span><span style=display:flex><span>    ListNode<span style=color:#666>*</span> reverseBetween(ListNode<span style=color:#666>*</span> head, <span style=color:#0b0;font-weight:700>int</span> left, <span style=color:#0b0;font-weight:700>int</span> right) {
-</span></span><span style=display:flex><span>        <span style=color:#080;font-style:italic>// if(head-&gt;next == nullptr) return head;
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        <span style=color:#080;font-style:italic>// if(left == right) return head;
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>//         //getting the starting point
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>//         int n = right - left;
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>//         starting = head;
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>//         while(--left &gt; 0){
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>//             pre = starting;
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>//             starting = starting-&gt;next;
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>//         }
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>//         // cout &lt;&lt; starting-&gt;val &lt;&lt; endl;
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>//         reverseList(0,n,starting); //reverse list between left and right
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>//         if(pre != nullptr) pre-&gt;next = first;
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>//         else head = first;
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>//         last-&gt;next = afterBreak;
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        <span style=color:#a2f;font-weight:700>if</span>(left <span style=color:#666>==</span> <span style=color:#666>1</span>){
-</span></span><span style=display:flex><span>            <span style=color:#080;font-style:italic>//found
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>            <span style=color:#080;font-style:italic>//reverse the list
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>            <span style=color:#a2f;font-weight:700>return</span> <span style=color:#00a000>reverseList</span>(right,head); <span style=color:#080;font-style:italic>//reverse the list and return the new head which node is the right node
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        }
-</span></span><span style=display:flex><span>        
-</span></span><span style=display:flex><span>        head<span style=color:#666>-&gt;</span>next <span style=color:#666>=</span> reverseBetween(head<span style=color:#666>-&gt;</span>next,left <span style=color:#666>-</span> <span style=color:#666>1</span>,right <span style=color:#666>-</span> <span style=color:#666>1</span>); <span style=color:#080;font-style:italic>//keep finding the starting point
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        <span style=color:#a2f;font-weight:700>return</span>  head;
-</span></span><span style=display:flex><span>    }
+<h2 id=leetcode-1996---the-number-of-weak-characters-in-the-game>LeetCode 1996 - The Number of Weak Characters in the Game</h2><p>You are playing a game that contains multiple characters, and each of the characters has <strong>two</strong> main properties: <strong>attack</strong> and <strong>defense</strong>. You are given a 2D integer array <code>properties</code> where <code>properties[i] = [attacki, defensei]</code> represents the properties of the i<sup>th</sup> character in the game.</p><p>A character is said to be <strong>weak</strong> if any other character has <strong>both</strong> attack and defense levels <strong>strictly greater</strong> than this character&rsquo;s attack and defense levels. More formally, a character <code>i</code> is said to be <strong>weak</strong> if there exists another character <code>j</code> where attack<sub>j</sub> attack<sub>i</sub> and defense<sub>j</sub> > defense<sub>i</sub>.</p><p>Return <em>the number of <strong>weak</strong> characters</em>.</p><p>example</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>Input: properties = [[5,5],[6,3],[3,6]]
+</span></span><span style=display:flex><span>Output: 0
+</span></span><span style=display:flex><span>Explanation: No character has strictly greater attack and defense than the other.
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>Input: properties = [[2,2],[3,3]]
+</span></span><span style=display:flex><span>Output: 1
+</span></span><span style=display:flex><span>Explanation: The first character is weak because the second character has a strictly greater attack and defense.
+</span></span></code></pre></div><h2 id=how-can-we-solve-this-problem>How can we solve this problem?</h2><p>這題就是要我們找出多少個<strong>弱角色(會被攻擊的人)</strong>。對於這種包含了2個維度資訊的題目(<code>attack</code>,<code>defense</code>)，直接藉並不好解，所以，通常我們都會<strong>固定一個維度</strong>去解<strong>另外一個維度</strong>，這樣就會相對容易許多。</p><p>這題我們可以透過固定<code>attack</code>這個維度。因為我們知道高<code>attack</code>的可以攻擊低<code>attack</code>d的人。所以我們根據<code>attack</code>做排序。這樣<code>attack</code>就會是單調遞增排序。我們自然就可以不讓管這個維度(因為已經符合 <em>attack<sub>i</sub> &lt; attack<sub>j</sub></em> 這個條件)。之後我們只需要處理<code>defense</code>這個維度就可以了。</p><p><code>defense</code>這個維度必須以單調遞減的方式處理! 為什麼呢?<br>
+假設 <em>Attack</em> : <code>[[1,1],[1,2],[2,4]]</code> -> 這裡會有2個attack為1的角色。如果不以遞減的方式除了,這樣就會不符合條件(<strong>相同attack不能互打</strong>)。所以一遞減方式會變成這樣<code>[[1,2],[1,1]...]</code>，這樣一來就能避免互打的情況</p><p>解決完維度問題後，就很簡單了，只需要透過<code>stack</code>就可以知道有多少個人被攻擊了。只要進來的人<code>defense</code>的比<code>stack top</code>的人<code>defense</code> 大就<code>+1</code>即可。</p><h4 id=solution>Solution:</h4><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=display:flex><span><span style=color:#a2f;font-weight:700>class</span> <span style=color:#00f>Solution</span> {
+</span></span><span style=display:flex><span><span style=color:#a2f;font-weight:700>public</span><span style=color:#666>:</span>
+</span></span><span style=display:flex><span>    <span style=color:#0b0;font-weight:700>int</span> numberOfWeakCharacters(vector<span style=color:#666>&lt;</span>vector<span style=color:#666>&lt;</span><span style=color:#0b0;font-weight:700>int</span><span style=color:#666>&gt;&gt;&amp;</span> pro) {
+</span></span><span style=display:flex><span>        <span style=color:#080;font-style:italic>//[attacki, defensei]
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        sort(pro.begin(),pro.end(),[<span style=color:#666>&amp;</span>](<span style=color:#a2f;font-weight:700>auto</span> <span style=color:#666>&amp;</span>a1,<span style=color:#a2f;font-weight:700>auto</span> <span style=color:#666>&amp;</span>a2){
+</span></span><span style=display:flex><span>            <span style=color:#a2f;font-weight:700>if</span>(a1[<span style=color:#666>0</span>]<span style=color:#666>==</span>a2[<span style=color:#666>0</span>]){
+</span></span><span style=display:flex><span>                <span style=color:#a2f;font-weight:700>return</span> a1[<span style=color:#666>1</span>]<span style=color:#666>&gt;</span>a2[<span style=color:#666>1</span>];
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>            <span style=color:#a2f;font-weight:700>return</span> a1[<span style=color:#666>0</span>]<span style=color:#666>&lt;</span>a2[<span style=color:#666>0</span>];
+</span></span><span style=display:flex><span>        });
+</span></span><span style=display:flex><span>        <span style=color:#080;font-style:italic>/*
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>        3: 6
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>        5: 5
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>        6: 3
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>        */</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    
-</span></span><span style=display:flex><span>    ListNode<span style=color:#666>*</span> <span style=color:#00a000>reverseList</span>(<span style=color:#0b0;font-weight:700>int</span> right,ListNode<span style=color:#666>*</span> head){ 
-</span></span><span style=display:flex><span>        <span style=color:#a2f;font-weight:700>if</span>(right <span style=color:#666>==</span> <span style=color:#666>1</span>){
-</span></span><span style=display:flex><span>            theNodeAfter <span style=color:#666>=</span> head<span style=color:#666>-&gt;</span>next;
-</span></span><span style=display:flex><span>            <span style=color:#a2f;font-weight:700>return</span> head;
+</span></span><span style=display:flex><span>        <span style=color:#080;font-style:italic>/*
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>        get the maxinum defense value from previous group 
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>        if previous group defense value is greater the current group characteri -&gt; this guy is the weak one
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>        in this case: [9,1] is a weak character
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>        [10,5] -&gt;[9,1]
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>        [10,4] -&gt;[9,1]
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>        [10,3] -&gt;[9,1]
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>        [10,2] -&gt;[9,1]
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>        
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>        [9,2] is a weak character
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>        [10,5] -&gt;[9,3]
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>        [10,4] -&gt;[9,3]
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>        */</span>
+</span></span><span style=display:flex><span>        <span style=color:#0b0;font-weight:700>int</span> res <span style=color:#666>=</span> <span style=color:#666>0</span>;
+</span></span><span style=display:flex><span>        stack<span style=color:#666>&lt;</span><span style=color:#0b0;font-weight:700>int</span><span style=color:#666>&gt;</span> s;
+</span></span><span style=display:flex><span>        <span style=color:#a2f;font-weight:700>for</span>(<span style=color:#0b0;font-weight:700>int</span> i <span style=color:#666>=</span> <span style=color:#666>0</span>;i<span style=color:#666>&lt;</span>pro.size();i<span style=color:#666>++</span>){
+</span></span><span style=display:flex><span>            <span style=color:#a2f;font-weight:700>while</span>(<span style=color:#666>!</span>s.empty() <span style=color:#666>&amp;&amp;</span> s.top() <span style=color:#666>&lt;</span> pro[i][<span style=color:#666>1</span>]){
+</span></span><span style=display:flex><span>                s.pop();
+</span></span><span style=display:flex><span>                res<span style=color:#666>++</span>;
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>            s.push(pro[i][<span style=color:#666>1</span>]);
 </span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>        
-</span></span><span style=display:flex><span>        ListNode<span style=color:#666>*</span> last <span style=color:#666>=</span> reverseList(right<span style=color:#666>-</span><span style=color:#666>1</span>,head<span style=color:#666>-&gt;</span>next); 
-</span></span><span style=display:flex><span>        head<span style=color:#666>-&gt;</span>next<span style=color:#666>-&gt;</span>next<span style=color:#666>=</span>head;
-</span></span><span style=display:flex><span>        head<span style=color:#666>-&gt;</span>next<span style=color:#666>=</span>theNodeAfter; <span style=color:#080;font-style:italic>//
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        <span style=color:#a2f;font-weight:700>return</span> last;
+</span></span><span style=display:flex><span>        <span style=color:#a2f;font-weight:700>return</span> res;
 </span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>    
-</span></span><span style=display:flex><span><span style=color:#080;font-style:italic>//     void reverseList(int i ,int n,ListNode* head){ 
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>//         if(i == n){
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>//             afterBreak = head-&gt;next;
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>//             head-&gt;next = nullptr;
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>//             first = head;
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>//             last = head;
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>//             return;
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>//         }
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        
-</span></span><span style=display:flex><span><span style=color:#080;font-style:italic>//         reverseList(i+1,n,head-&gt;next); 
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>//         head-&gt;next =nullptr;
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>//         last-&gt;next = head;
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>//         last = last-&gt;next;
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>//     }
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>};
+</span></span><span style=display:flex><span>};
 </span></span></code></pre></div></div><footer class=post-footer>
 <div class=post-tags>
-<a href=/tags/list rel=tag title=list>#list#</a>
-<a href=/tags/recursive rel=tag title=recursive>#recursive#</a>
+<a href=/tags/array rel=tag title=array>#array#</a>
+<a href=/tags/stack rel=tag title=stack>#stack#</a>
 </div><div class=post-nav>
 <div class=article-copyright>
 <div class=article-copyright-info>
 <p>
-<span>文章聲明：</span>[Leetcode] Reverse Linked List II(MEDIUM)
+<span>文章聲明：</span>[Leetcode] The Number of Weak Characters in the Game(MEDIUM)
 </p><p>
-<span>文章連接：</span>https://ryantokmanmokmtm.github.io/leetcodes/leetcode92/
+<span>文章連接：</span>https://ryantokmanmokmtm.github.io/leetcodes/leetcode1996/
 </p><p>
 <span>作者：</span>jackson.tmm
 </p><p>
 <span>文章聲明： </span>本博客文章除特別聲明外，均采用 <a href=https://creativecommons.org/licenses/by-nc-sa/3.0/ target=_blank style=text-decoration:underline>CC BY-NC-SA 3.0</a>許可協議，轉載請注明出處！
 </p></div></div><div class=clear></div></div><div class=post-nav>
 <div class="post-nav-next post-nav-item">
-<a href=https://ryantokmanmokmtm.github.io/leetcodes/leetcode814/ rel=next title="[Leetcode] Binary Tree Pruning(Medium)">
-<i class="fa fa-chevron-left"></i> [Leetcode] Binary Tree Pruning(Medium)
-</a>
 </div><div class="post-nav-prev post-nav-item">
-<a href=https://ryantokmanmokmtm.github.io/leetcodes/leetcode629/ rel=prev title="[Leetcode DP] K Inverse Pairs Array(HARD)">
-[Leetcode DP] K Inverse Pairs Array(HARD)
+<a href=https://ryantokmanmokmtm.github.io/leetcodes/leetcode94/ rel=prev title="[Leetcode] Binary Tree Inorder Traversal(Easy)">
+[Leetcode] Binary Tree Inorder Traversal(Easy)
 <i class="fa fa-chevron-right"></i>
 </a>
 </div></div></footer></article></section></div></div><div class=sidebar-toggle>

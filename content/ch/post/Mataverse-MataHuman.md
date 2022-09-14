@@ -52,8 +52,8 @@ Step 2:
 
 ## 結論
 有沒有發現很簡單又很好玩呢!我們透過**Reallusion**工具讓我們能在很短的時間內就可以完成一個屬於自己的MetaHuman。除此之外**Reallusion**還提供很多很強大的功能，例如:**圖片生成3D角色模型,手機臉部動作捕捉,與Unreal Engine 5的MetaHuman工具連動**等等，有機會的話再跟大家分享。
-最後給大家分享一張虛擬網美照><
-![Reallusion Character Creator](/images/metahumanCC/pose.png)
+<!-- 最後給大家分享一張虛擬網美照><
+![Reallusion Character Creator](/images/metahumanCC/pose.png) -->
 
 **參考資料:**  
 [Reallusion](www.reallusion.com)  

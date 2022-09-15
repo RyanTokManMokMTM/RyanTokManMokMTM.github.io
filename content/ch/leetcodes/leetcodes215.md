@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode] Kth Largest Element in an Array(MIDIUM)"
+title: "[Leetcode] Kth Largest Element in an Array(Medium)"
 date: 2022-06-22T22:55:53+08:00
 draft: false
 tags:

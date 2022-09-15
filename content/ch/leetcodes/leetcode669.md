@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode] Trim a Binary Search Tree(MEDIUM)"
+title: "[Leetcode] Trim a Binary Search Tree(Medium)"
 date: 2022-04-15T18:29:14+08:00
 draft: false
 tags:

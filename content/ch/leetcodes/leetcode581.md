@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode] Shortest Unsorted Continuous Subarray(MEDIUM)"
+title: "[Leetcode] Shortest Unsorted Continuous Subarray(Medium)"
 date: 2022-05-03T18:27:24+08:00
 draft: false
 tags:

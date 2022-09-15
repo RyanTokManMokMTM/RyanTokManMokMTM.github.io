@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode] Shift 2D Grid(EASY)"
+title: "[Leetcode] Shift 2D Grid(Easy)"
 date: 2022-04-13T19:14:44+08:00
 draft: false
 tags:

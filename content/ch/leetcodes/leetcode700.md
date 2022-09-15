@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode] Search in a Binary Search Tree(EASY)"
+title: "[Leetcode] Search in a Binary Search Tree(Easy)"
 date: 2022-04-14T15:05:44+08:00
 draft: false
 tags:

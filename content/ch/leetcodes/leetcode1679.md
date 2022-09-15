@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode] Max Number of K-Sum Pairs(MEDIUM)"
+title: "[Leetcode] Max Number of K-Sum Pairs(Medium)"
 date: 2022-05-04T20:11:43+08:00
 draft: false
 tags:

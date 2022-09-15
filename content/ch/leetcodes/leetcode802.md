@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode] Short Encoding of Words(MEDIUM)"
+title: "[Leetcode] Short Encoding of Words(Medium)"
 date: 2022-06-20T12:45:05+08:00
 draft: false
 tags:

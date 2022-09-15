@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode] Flatten Nested List Iterator(MEDIUM)"
+title: "[Leetcode] Flatten Nested List Iterator(Medium)"
 date: 2022-05-08T06:30:23+08:00
 draft: false
 tags:

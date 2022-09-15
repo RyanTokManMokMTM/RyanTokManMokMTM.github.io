@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode] Furthest Building You Can Reach(MEDIUM)"
+title: "[Leetcode] Furthest Building You Can Reach(Medium)"
 date: 2022-06-21T22:55:43+08:00
 draft: false
 tags:

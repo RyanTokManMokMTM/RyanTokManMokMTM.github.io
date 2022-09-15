@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode] Search Suggestions System[MEDIUM]"
+title: "[Leetcode] Search Suggestions System[Medium]"
 date: 2022-06-19T12:45:24+08:00
 draft: true
 tags:

@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode] The Number of Weak Characters in the Game(MEDIUM)"
+title: "[Leetcode] The Number of Weak Characters in the Game(Medium)"
 date: 2022-09-09T23:36:50+08:00
 draft: false
 tags:

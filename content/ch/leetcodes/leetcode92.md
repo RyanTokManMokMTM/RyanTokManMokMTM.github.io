@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode] Reverse Linked List II(MEDIUM)"
+title: "[Leetcode] Reverse Linked List II(Medium)"
 date: 2022-07-21T11:09:21+08:00
 draft: false
 tags:

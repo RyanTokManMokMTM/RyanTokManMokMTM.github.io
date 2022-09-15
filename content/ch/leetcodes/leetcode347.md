@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode] Top K Frequent Elements(MEDIUM)"
+title: "[Leetcode] Top K Frequent Elements(Medium)"
 date: 2022-04-09T06:22:34+08:00
 draft: false
 tags:

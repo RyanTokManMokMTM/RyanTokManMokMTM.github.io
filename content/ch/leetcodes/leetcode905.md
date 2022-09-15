@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode] Sort Array By Parity(EASY)"
+title: "[Leetcode] Sort Array By Parity(Easy)"
 date: 2022-05-02T18:19:41+08:00
 draft: false
 tags:

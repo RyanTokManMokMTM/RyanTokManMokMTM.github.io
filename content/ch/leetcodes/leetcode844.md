@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode] Backspace String Compare(EASY)"
+title: "[Leetcode] Backspace String Compare(Easy)"
 date: 2022-05-01T17:52:25+08:00
 draft: false
 tags:

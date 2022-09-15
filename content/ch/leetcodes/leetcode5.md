@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode] Longest Palindromic Substring(MEDIUM)"
+title: "[Leetcode] Longest Palindromic Substring(Medium)"
 date: 2022-06-16T14:09:50+08:00
 draft: false
 tags:

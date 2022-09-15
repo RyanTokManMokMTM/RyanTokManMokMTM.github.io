@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode] Game of Life(MEDIUM)"
+title: "[Leetcode] Game of Life(Medium)"
 date: 2022-04-12T19:15:53+08:00
 draft: false
 tags:

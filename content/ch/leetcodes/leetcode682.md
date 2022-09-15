@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode] Baseball Game(EASY)"
+title: "[Leetcode] Baseball Game(Easy)"
 date: 2022-04-10T19:15:31+08:00
 draft: false
 tags:

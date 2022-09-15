@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode] Implement Stack using Queues(EASY)"
+title: "[Leetcode] Implement Stack using Queues(Easy)"
 date: 2022-05-05T09:39:35+08:00
 draft: false
 tags:

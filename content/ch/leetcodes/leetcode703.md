@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode] Kth Largest Element in a Stream(EASY)"
+title: "[Leetcode] Kth Largest Element in a Stream(Easy)"
 date: 2022-04-08T20:21:39+08:00
 draft: false
 tags:

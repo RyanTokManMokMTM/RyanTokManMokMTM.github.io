@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode] Letter Combinations of a Phone Number(MEDIUM)"
+title: "[Leetcode] Letter Combinations of a Phone Number(Medium)"
 date: 2022-05-09T21:50:34+08:00
 draft: false
 tags:

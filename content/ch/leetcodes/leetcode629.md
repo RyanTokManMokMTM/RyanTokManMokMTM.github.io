@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode DP] K Inverse Pairs Array(HARD)"
+title: "[Leetcode DP] K Inverse Pairs Array(Hard)"
 date: 2022-07-17T11:55:10+08:00
 draft: false
 ---

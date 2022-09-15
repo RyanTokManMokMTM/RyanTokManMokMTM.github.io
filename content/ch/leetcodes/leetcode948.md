@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode] Bag of Tokens(MEDIUM)"
+title: "[Leetcode] Bag of Tokens(Medium)"
 date: 2022-09-12T18:01:44+08:00
 draft: false
 tags:

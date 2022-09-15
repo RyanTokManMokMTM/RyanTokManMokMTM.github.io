@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode] UTF-8 Validation(MEDIUM)"
+title: "[Leetcode] UTF-8 Validation(Medium)"
 date: 2022-09-13T14:41:37+08:00
 draft: false
 tags:

@@ -1,5 +1,5 @@
 ---
-title: "[LeetCode] Remove All Adjacent Duplicates in String II(MEDIUM)"
+title: "[LeetCode] Remove All Adjacent Duplicates in String II(Medium)"
 date: 2022-05-06T21:19:25+08:00
 draft: false
 tags:

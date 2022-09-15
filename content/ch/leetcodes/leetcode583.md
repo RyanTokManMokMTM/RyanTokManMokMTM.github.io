@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode] Delete Operation for Two Strings(MEDIUM)"
+title: "[Leetcode] Delete Operation for Two Strings(Medium)"
 date: 2022-06-14T13:37:49+08:00
 draft: true
 tags:

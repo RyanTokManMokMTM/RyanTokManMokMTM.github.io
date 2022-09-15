@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode] Pseudo-Palindromic Paths in a Binary Tree(MEDIUM)"
+title: "[Leetcode] Pseudo-Palindromic Paths in a Binary Tree(Medium)"
 date: 2022-09-14T15:27:08+08:00
 draft: false
 tags:

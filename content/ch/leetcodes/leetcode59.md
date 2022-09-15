@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode] Spiral Matrix II(MEDIUM)"
+title: "[Leetcode] Spiral Matrix II(Medium)"
 date: 2022-04-13T14:26:29+08:00
 draft: false
 tags:

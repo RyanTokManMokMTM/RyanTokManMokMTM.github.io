@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode] 132 Pattern(MEDIUM)"
+title: "[Leetcode] 132 Pattern(Medium)"
 date: 2022-05-07T06:30:23+08:00
 draft: false
 tags:

@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode] Combination Sum III(MEDIUM)"
+title: "[Leetcode] Combination Sum III(Medium)"
 date: 2022-05-10T11:41:43+08:00
 draft: false
 tags:

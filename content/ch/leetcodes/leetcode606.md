@@ -1,5 +1,5 @@
 ---
-title: "[Leetcode] Construct String from Binary Tree(EASY)"
+title: "[Leetcode] Construct String from Binary Tree(Easy)"
 date: 2022-09-07T10:12:28+08:00
 draft: false
 tags:

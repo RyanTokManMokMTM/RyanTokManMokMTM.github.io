@@ -46,6 +46,7 @@ Note that other answers, such as [3, 3], would also be accepted.
 * 翻轉[0,n) -> 最大值就會被移動的最後面
 我們只需要重複以上步驟，每次做完就代表著[n-i,n-1]的這段範圍是已經被排序了。所以，每次做完只關注`n-i-i`即可(就是當前位置的前面的所有**未排序**元素`[x,x,x,|y(n-i),y,y(n-1)]`)。
 #### Solution:
+```c++
 class Solution {
 public:
     vector<int> pancakeSort(vector<int>& arr) {

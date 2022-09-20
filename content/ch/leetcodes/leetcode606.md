@@ -11,6 +11,7 @@ categories:
     - leetcode
 
 ---
+
 ## LeetCode 606 - Construct String from Binary Tree
 Given the `root` of a binary tree, construct a string consisting of parenthesis and integers from a binary tree with the preorder traversal way, and return it.
 

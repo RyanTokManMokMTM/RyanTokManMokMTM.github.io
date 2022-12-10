@@ -13,18 +13,10 @@ categories:
 author: jackson.tmm
 ---
 
-[**OTT Movies recommender system-IOS Client**](https://github.com/RyanTokManMokMTM/MovieAppSwiftUI.git)  
+~~[**OTT Movies recommender system-IOS Client**](https://github.com/RyanTokManMokMTM/MovieAppSwiftUI.git)~~
+Project have been changed/updated
 
 ![client](/images/iosClient.png)
-<!-- | 功能   | 簡介     | 
-| ------- | ------- |
-|用戶基本功能|登入/註冊/登出等基本功能|
-|推薦電影|以卡片的形式呈現電影|
-|宣傳片推薦|以全屏影片的方式推薦電影|
-|類型搜尋|分成了電影類型,演員類型以及導演類型|
-|文字搜尋|基本的文字搜尋電影|、
-|電影詳細介紹|顯示相關電影的資訊:介紹,演員,導演等|
-|喜好列表|用戶可以加入電影至自己喜歡的電影| -->
 
 ### Frontend
 * SwiftUI apple framework
@@ -39,5 +31,5 @@ author: jackson.tmm
 ### Demo Video
 <video src="/videos/final.MP4" controls="controls" width="500" height="300"></video>
 
-### Updated Video
-<video src="/videos/ott-app.mov" controls="controls" width="500" height="300"></video>
+<!-- ### Updated Video
+<video src="/videos/ott-app.mov" controls="controls" width="500" height="300"></video> -->

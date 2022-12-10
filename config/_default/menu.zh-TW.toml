@@ -27,16 +27,22 @@
   Pre = "sticky-note-o"
   URL = "notes"
   Weight = 5
+  
+[[Main]]
+  Name = "Review"
+  Pre = "quote-right"
+  URL = "review"
+  Weight = 6
 
 [[Main]]
   Name = "Projects"
   Pre = "tasks"
   URL = "project"
-  Weight = 6
+  Weight = 7
 
   
 [[Main]]
   Name = "achievement"
   Pre = "trophy"
   URL = "achievement"
-  Weight = 6
+  Weight = 8

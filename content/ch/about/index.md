@@ -9,7 +9,8 @@ type = "about"
 
 <!-- 
 **Sorry about my bad English :(**   -->
-#### [個人簡歷(中)](/cv/2022/moktokman(ch)-22-12-21.pdf)
+#### [個人簡歷(中)](/cv/2022/moktokman(ch).pdf)
+#### [Resume(EN)](/cv/2022/moktokman(en).pdf)
 ### Introduction  
 你好~ 歡迎來到我的網站!  
 我是Jackson.tmm, 是一個從香港來到台灣讀大學的四年級學生。~~目前就讀於**長庚大學-資訊工程學系(Computer Science And Information Engineering)**~~。目前已經畢業了。我目前主要是研究學習**後端開發**的技術。  

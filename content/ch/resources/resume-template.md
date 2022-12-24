@@ -8,7 +8,7 @@ categories:
 ---
 
 # 中英文簡歷模板
-[English CV Template(docx)](/files/Resume-template.docx)
+[English CV Template(docx)](/files/Resume-template(en).docx)
 ![English CV Template](/files/eng-cv.png)
 
 

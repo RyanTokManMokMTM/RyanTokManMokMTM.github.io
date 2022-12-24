@@ -46,3 +46,9 @@
   Pre = "trophy"
   URL = "achievement"
   Weight = 8
+
+[[Main]]
+  Name = "resources"
+  Pre = "file"
+  URL = "resources"
+  Weight = 8

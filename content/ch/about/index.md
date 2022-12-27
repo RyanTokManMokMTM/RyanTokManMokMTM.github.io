@@ -9,8 +9,8 @@ type = "about"
 
 <!-- 
 **Sorry about my bad English :(**   -->
-#### [個人簡歷(中)](/cv/2022/moktokman(ch)-updated.pdf)
-#### [Resume(EN)](/cv/2022/moktokman(en)-updated.pdf)
+#### [個人簡歷(中)](/cv/2022/MOKTOKMAN_Resume(CH).pdf)
+#### [Resume(EN)](/cv/2022/MOKTOKMAN_Resume(EN).pdf)
 ### Introduction  
 你好~ 歡迎來到我的網站!  
 我是Jackson.tmm, 是一個從香港來到台灣讀大學的四年級學生。~~目前就讀於**長庚大學-資訊工程學系(Computer Science And Information Engineering)**~~。目前已經畢業了。我目前主要是研究學習**後端開發**的技術。  
@@ -33,35 +33,39 @@ type = "about"
 ### A special and meaningful experience during my university
 上大學以後，也是正式開始學習程式設計的開始。可能是以前有自學過一段時間C++，學起來比較輕鬆一點。大二下的時候，很不辛*COVIN-19*疫情爆發，不能會台灣只能留在香港上網絡課程，因此，便開始了我的自學之路。由於有了學習C++的經驗以及程式語言的基礎，**便開始自我探索模式，嘗試接觸不同的領域。了解過網頁設計,後端開發,數據庫設計,Apple App開發,ML/TensorFlow基礎,甚至是其他領域的探索如遊戲開發，美術設計，3D建模等等**...這段自學探索的旅程,**貌似看上去毫無意義**(**也就是啥都學，沒有一個是精的**)。但是，**對我來說有巨大的意義**，能夠讓我更認識自己，知道自己喜歡的東西，不喜歡的東西，甚至是知道哪些學習方法是適合自己。雖然很想什麼都想要會，但是也**決定了只做自己感興趣的事情**。以下是我在這段時間所做的東西(你們應該不會嫌棄吧><)   -->
 
-**第一次學習IOS開發的Demo**
-![ios-demo](/images/ios-learn.PNG)
-
-**基於IOS的Netfilx UI Clone**
-![netfilx](/images/netfilxClone.jpg)
-
-**基於IOS的微博UI Clone**
+**2019年 - 基於IOS的微博UI Clone**
 ![netfilx](/images/weiboClone.jpg)
 
-**第一次學遊戲開發的作品**
+**2020年 -第一次學習IOS開發的Demo**
+![ios-demo](/images/ios-learn.PNG)
+
+**2020年 - 基於IOS的Netfilx UI Clone**
+![netfilx](/images/netfilxClone.jpg)
+
+**2020年 - 第一次學遊戲開發的作品**
 ![game](/images/game.jpg)
 
-**第一次學建模的作品**
+**2020年 - 第一次學建模的作品**
 ![shield](/images/shield.jpg)
 
-**送給自己20歲的生日禮物的一顆排球模型** 
+**2020年 - 送給自己20歲的生日禮物的一顆排球模型** 
 ![volleyball](/images/20-birth.jpg)
 
-**模擬水還是很好玩的(渲染了12小時 (◑‿◐) )**
+**2020年 - 模擬水還是很好玩的(渲染了12小時 (◑‿◐) )**
 ![liquid-sim](/images/liquid.jpg)
 
-**燈籠魚(Lophiiformes)作品**
+**2020年 - 燈籠魚(Lophiiformes)作品**
 ![Lophiiformes](/images/Lophiiformes.jpg)
 
-**第一次網絡課學習建模的作業**
+**2021年 - 第一次網絡課學習建模的作業**
 ![game axe](/images/axe.png)
 
-**第一次網絡課學習建模的結課作品(還沒上貼圖><,有空就上)**
+**2021年 - 第一次網絡課學習建模的結課作品(還沒上貼圖><,有空就上)**
 ![human](/images/final-model.jpg)
+
+**2022年 - 電影資源社群平台App**
+![IOS_APP](/images/ott_app/movie-app/AppImg.png)
+
 ### Interest
 * 跑步，打球，說唱，唱歌，看電影，看動漫
 * 遊戲設計，遊戲美術，3D建模

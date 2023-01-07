@@ -43,6 +43,12 @@ author: jackson.tmm
 * Websocket
 * CI/CD Pipeline (Github Action + AWS CodeDeploy)
 * TMDB - 電影數據來源處
+* K8S
+* AWS
+
+### 進度
+* 用戶zhu'ch
+
 
 ### App 測試影片
 

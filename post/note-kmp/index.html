@@ -1,0 +1,454 @@
+<!doctype html><html lang=zh-tw dir=content/ch>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta http-equiv=content-security-policy content="upgrade-insecure-requests">
+<title> [筆記] KMP - Knuth-Morris-Pratt 演算法 - Jackson.tmm </title><meta name=keywords content="博客,工程師,程序員,學習,筆記,技術,分析,後端,生活">
+<meta name=author content="jackson.tmm">
+<meta property="og:title" content="[筆記] KMP - Knuth-Morris-Pratt 演算法">
+<meta property="og:site_name" content="Jackson.tmm">
+<meta property="og:image" content="/images/favicon.png">
+<meta name=title content="[筆記] KMP - Knuth-Morris-Pratt 演算法 - Jackson.tmm">
+<meta name=description content="歡迎來的Jackson.tmm的空間站。個人主要專注於Web開發，程序開發，以及學習上。">
+<link rel="shortcut icon" href=/images/favicon.png>
+<link rel=apple-touch-icon href=/images/avatar.jpg>
+<link rel=apple-touch-icon-precomposed href=/images/favicon.png>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css rel=stylesheet type=text/css>
+<link href=//cdn.bootcdn.net/ajax/libs/imageviewer/0.1.0/viewer.min.css rel=stylesheet>
+<link href=/css/main.css rel=stylesheet type=text/css>
+<link href=/css/syntax.css rel=stylesheet type=text/css>
+<script src=https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js></script> <script>mermaid.initialize({startOnLoad:!0,securityLevel:"loose"})</script>
+</head><link href=/css/pio.css rel=stylesheet type=text/css>
+<body itemscope itemtype=http://schema.org/WebPage lang=zh-hans>
+<div class="container one-collumn sidebar-position-left page-home">
+<div class=headband></div><header id=header class=header itemscope itemtype=http://schema.org/WPHeader>
+<div class=header-inner> <div class=site-brand-container>
+<div class=site-nav-toggle>
+<div class=toggle role=button style=opacity:1;top:0>
+<span class=toggle-line></span>
+<span class=toggle-line></span>
+<span class=toggle-line></span>
+</div></div><div class=site-meta>
+<div class=multi-lang-switch>
+<i class="fa fa-fw fa-language" style=margin-right:5px></i>
+</div><div class=custom-logo-site-title>
+<a href=/ class=brand rel=start>
+<span class=logo-line-before><i></i></span>
+<span class=site-title>Jackson.tmm</span>
+<span class=logo-line-after><i></i></span>
+</a>
+</div><p class=site-subtitle>只有奮鬥才能改變命運</p></div><div class=site-nav-right>
+<div class="toggle popup-trigger" style=opacity:1;top:0>
+<i class="fa fa-search fa-fw fa-lg"></i>
+</div></div></div><nav class=site-nav>
+<ul id=menu class=menu>
+<li class=menu-item>
+<a href=/ rel=section>
+<i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home
+</a>
+</li><li class=menu-item>
+<a href=/about.html rel=section>
+<i class="menu-item-icon fa fa-fw fa-user"></i> <br>About
+</a>
+</li><li class=menu-item>
+<a href=/post rel=section>
+<i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Posts
+</a>
+</li><li class=menu-item>
+<a href=/leetcodes rel=section>
+<i class="menu-item-icon fa fa-fw fa-code"></i> <br>Leetcodes
+</a>
+</li><li class=menu-item>
+<a href=/notes rel=section>
+<i class="menu-item-icon fa fa-fw fa-sticky-note-o"></i> <br>Notes
+</a>
+</li><li class=menu-item>
+<a href=/review rel=section>
+<i class="menu-item-icon fa fa-fw fa-quote-right"></i> <br>Review
+</a>
+</li><li class=menu-item>
+<a href=/project rel=section>
+<i class="menu-item-icon fa fa-fw fa-tasks"></i> <br>Projects
+</a>
+</li><li class=menu-item>
+<a href=/achievement rel=section>
+<i class="menu-item-icon fa fa-fw fa-trophy"></i> <br>achievement
+</a>
+</li><li class=menu-item>
+<a href=/resources rel=section>
+<i class="menu-item-icon fa fa-fw fa-file"></i> <br>resources
+</a>
+</li><li class="menu-item menu-item-search">
+<a href=javascript:; class=popup-trigger> <i class="menu-item-icon fa fa-search fa-fw"></i> <br> Search</a>
+</li></ul><div class=site-search>
+<div class="popup search-popup local-search-popup">
+<div class="local-search-header clearfix">
+<span class=search-icon><i class="fa fa-search"></i> </span>
+<span class=popup-btn-close><i class="fa fa-times-circle"></i></span>
+<div class=local-search-input-wrapper>
+<input autocomplete=off placeholder=搜索關鍵字... spellcheck=false type=text id=local-search-input autocapitalize=none autocorrect=off>
+</div></div><div id=local-search-result></div></div></div></nav></div></header><main id=main class=main>
+<div class=main-inner>
+<div class=content-wrap>
+<div id=content class=content>
+<section id=posts class=posts-expand>
+<article class="post post-type-normal" itemscope itemtype=http://schema.org/Article>
+<header class=post-header>
+<h1 class=post-title itemprop="name headline">
+<a class=post-title-link href=https://ryantokmanmokmtm.github.io/post/note-kmp/ itemprop=url>
+[筆記] KMP - Knuth-Morris-Pratt 演算法
+</a>
+</h1><div class=post-meta>
+<span class=post-time>
+<i class="fa fa-calendar-o fa-fw"></i>
+<span class=post-meta-item-text>時間：</span>
+<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2023-03-06">
+2023-03-06
+</time>
+</span>
+<span class=post-category>
+&nbsp; | &nbsp;
+<i class="fa fa-folder-o fa-fw"></i>
+<span class=post-meta-item-text>分類：</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/note itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>note</span>
+</a>
+&nbsp;
+</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/algorithm itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>algorithm</span>
+</a>
+&nbsp;
+</span>
+</span>
+<span>
+|
+<i class="fa fa-file-word-o fa-fw"></i>
+<span class=post-meta-item-text>字數：</span>
+<span class=leancloud-world-count>1958 字</span>
+</span>
+<span>
+|
+<i class="fa fa-eye fa-fw"></i>
+<span class=post-meta-item-text>閱讀：</span>
+<span class=leancloud-view-count>4分鐘</span>
+</span>
+<span id=/post/note-kmp/ class=leancloud_visitors data-flag-title="[筆記] KMP - Knuth-Morris-Pratt 演算法">
+|
+<i class="fa fa-binoculars fa-fw"></i>
+<span class=post-meta-item-text>閱讀次數：</span>
+<span class=leancloud-visitors-count></span>
+</span>
+</div></header><div class=post-body itemprop=articleBody>
+<p>KMP(Knuth-Morris-Pratt) 算法是一個用於字符串匹配的一個算法，但確實有點抽象和複雜，因此打算寫一篇筆記來紀錄一下這個算法！<br>
+給定一個<code>text</code>以及<code>pattern</code>字符串，透過KMP 算法可以在<code>text</code>中是否存在<code>pattern</code>這個字符串。</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>    返回在text中匹配pattern的index的位置。如果沒有找到則返回-1.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    case 1:
+</span></span><span style=display:flex><span>    text : aaaaaabcccd
+</span></span><span style=display:flex><span>    pattern : aaabc 
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    aaaaaabcccd
+</span></span><span style=display:flex><span>       aaabc
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    我們可以看到text的index = 3的位置匹配到了pattern，因此返回3
+</span></span><span style=display:flex><span>    ---------------------------------------------------------------
+</span></span><span style=display:flex><span>    case 2:
+</span></span><span style=display:flex><span>    text : aaaaaabcccd
+</span></span><span style=display:flex><span>    pattern : aabd
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    可以看到text中並不存在這個pattern，因此返回-1 
+</span></span></code></pre></div><p>如果我們透過暴力解也可以找到<code>text</code>中是否存在pattern，但TC為<strong>O(n * m)</strong>,其中n為<code>text</code>的長度以及m為<code>pattern</code>的長度。代碼如下：</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=display:flex><span><span style=color:#0b0;font-weight:700>int</span> <span style=color:#00a000>strStr</span>(string text,string pattern) {
+</span></span><span style=display:flex><span>    <span style=color:#0b0;font-weight:700>int</span> n <span style=color:#666>=</span> text.size();
+</span></span><span style=display:flex><span>    <span style=color:#0b0;font-weight:700>int</span> m <span style=color:#666>=</span> pattern.size();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a2f;font-weight:700>for</span>(<span style=color:#0b0;font-weight:700>int</span> i <span style=color:#666>=</span> <span style=color:#666>0</span>;i <span style=color:#666>&lt;</span> n;i<span style=color:#666>++</span>){
+</span></span><span style=display:flex><span>       <span style=color:#0b0;font-weight:700>int</span> j;
+</span></span><span style=display:flex><span>       <span style=color:#a2f;font-weight:700>for</span>(j <span style=color:#666>=</span> <span style=color:#666>0</span>;j <span style=color:#666>&lt;</span>,;j<span style=color:#666>++</span>) {
+</span></span><span style=display:flex><span>            <span style=color:#a2f;font-weight:700>if</span>(text[i<span style=color:#666>+</span>j] <span style=color:#666>!=</span> pattern[j]) <span style=color:#a2f;font-weight:700>break</span>;
+</span></span><span style=display:flex><span>       }
+</span></span><span style=display:flex><span>   
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#a2f;font-weight:700>if</span>(j <span style=color:#666>==</span> m) <span style=color:#a2f;font-weight:700>return</span> i;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a2f;font-weight:700>return</span> <span style=color:#666>-</span><span style=color:#666>1</span>; <span style=color:#080;font-style:italic>//pattern isn&#39;t exist in text
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>}
+</span></span></code></pre></div><p>以上這個算法，<code>pattern</code>對會與<code>text</code>進行匹配，即便是不存在的字符也會進行比較，多做了無必要的操作。例如：</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>text :  aaabaaac
+</span></span><span style=display:flex><span>pattern aaac
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>使用暴力解的話，pattern中並不存在b這個字符串，但還會把text的i pointer給回退回去，從下一個index 開始比較。
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Step:
+</span></span><span style=display:flex><span>aaabaaac
+</span></span><span style=display:flex><span>aaac 
+</span></span><span style=display:flex><span>(不匹配)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>aaabaaac
+</span></span><span style=display:flex><span> aaac
+</span></span><span style=display:flex><span>(不匹配)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>aaabaaac
+</span></span><span style=display:flex><span>  aaac
+</span></span><span style=display:flex><span>(不匹配)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>aaabaaac
+</span></span><span style=display:flex><span>   aaac
+</span></span><span style=display:flex><span>(不匹配)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>aaabaaac
+</span></span><span style=display:flex><span>    aaac
+</span></span><span style=display:flex><span>(匹配) -&gt; return result
+</span></span></code></pre></div><p>從以上例子我們看的出來，暴力解重複比較的不存在的字符數次。如果我們知道不存在的字符，是不是可以直接跳過前面的比較呢？
+例如:</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>aaabaaac
+</span></span><span style=display:flex><span>aaac 
+</span></span><span style=display:flex><span>(不匹配)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>aaabaaac
+</span></span><span style=display:flex><span>    aaac 
+</span></span><span style=display:flex><span>(匹配) -&gt; return result
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>example 2:
+</span></span><span style=display:flex><span>aaaaaaac (j = 3)
+</span></span><span style=display:flex><span>aaac (i = 3) 
+</span></span><span style=display:flex><span>(不匹配)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>aaaaaaac (j = 4)
+</span></span><span style=display:flex><span> aaac (i = 3)
+</span></span><span style=display:flex><span>(不匹配)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>aaaaaaac (j = 5)
+</span></span><span style=display:flex><span>  aaac (i = 3)
+</span></span><span style=display:flex><span>(不匹配)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>aaaaaaac (j = 6)
+</span></span><span style=display:flex><span>   aaac (i = 3)
+</span></span><span style=display:flex><span>(不匹配)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>aaaaaaac (j = 7)
+</span></span><span style=display:flex><span>    aaac (i = 3)
+</span></span><span style=display:flex><span>(不匹配)
+</span></span></code></pre></div><p>即便是沒有匹配，text的pointer 也不會退回去，一直往前走。這就是KMP算法，透過預計算的方式，知道在不匹配的情況下，把pattern 移動到正常匹配的位置。因此直接從<strong>TC:O(n*m)</strong> 降至 <strong>O(n)</strong>,但是因為要保存紀錄，因此<strong>SC：O(m)</strong>。透過空間換取時間的作法。</p><h2 id=算法說明與設計>算法說明與設計</h2><p>我們現在知道了透過KMP算法可以有效率的找出<code>pattern</code>是否存在於<code>text</code>中。前面我們有提及到KMP是透過預先計算在不同情況下有不同的移動方式，問題是我們要如何計算呢？</p><p><strong>根據不同的字符會轉移到不同的位置</strong>，這個有沒有很像<a href=https://en.wikipedia.org/wiki/Finite-state_machine>FSM(Finite State Machine/ Finite State automaton) 有限狀態機/有限狀態自動機</a>呢？</p><p>舉個例子：pattern : ABABC 的FSM如下：<br>
+<img src=/images/fsm-kmp1.png alt=FSM></p><p>我們可以看到以上的FSM會按照不同匹配到的字符會轉到不用的State！<strong>這個FSM便是KMP算法的重點部分</strong>！</p><h2 id=實現>實現</h2><p>要實現KMP的FSM我們透過2D Array來幫組我們。定義如下：</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>n = pattern的長度
+</span></span><span style=display:flex><span>c = 字符 - 假設只包含小寫英文字母共26個
+</span></span><span style=display:flex><span>states[i][c], 0 &lt; i &lt; n, 0 &lt; c &lt; 26;
+</span></span><span style=display:flex><span>j 為當前State, 0 &lt; j &lt; n
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>例如：
+</span></span><span style=display:flex><span>states[3][&#39;a&#39;] = 4
+</span></span><span style=display:flex><span>當前狀態為3，如果遇到&#39;a&#39;, pattern轉移都狀態4
+</span></span></code></pre></div><p><strong>KMP Search 算法</strong></p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=display:flex><span><span style=color:#0b0;font-weight:700>int</span> <span style=color:#00a000>search</span>(string text,string pattern){
+</span></span><span style=display:flex><span>    <span style=color:#0b0;font-weight:700>int</span> n <span style=color:#666>=</span> text.size()<span style=color:#666>:</span>
+</span></span><span style=display:flex><span>    <span style=color:#0b0;font-weight:700>int</span> m <span style=color:#666>=</span> pattern.size();
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#0b0;font-weight:700>int</span> j <span style=color:#666>=</span> <span style=color:#666>0</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a2f;font-weight:700>for</span>(<span style=color:#0b0;font-weight:700>int</span> i <span style=color:#666>=</span> <span style=color:#666>0</span>;i<span style=color:#666>&lt;</span>n;i<span style=color:#666>++</span>){
+</span></span><span style=display:flex><span>        j <span style=color:#666>=</span> states[j][text[i]]; <span style=color:#080;font-style:italic>//to which state
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        <span style=color:#a2f;font-weight:700>if</span>(j <span style=color:#666>==</span> m) <span style=color:#a2f;font-weight:700>return</span> i <span style=color:#666>-</span> m <span style=color:#666>+</span> <span style=color:#666>1</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a2f;font-weight:700>return</span> <span style=color:#666>-</span><span style=color:#666>1</span>;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p><strong>哪我們要怎樣建構這個FSM的圖的？</strong></p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=display:flex><span><span style=color:#a2f;font-weight:700>for</span>(<span style=color:#0b0;font-weight:700>int</span> i <span style=color:#666>=</span> <span style=color:#666>0</span>;i <span style=color:#666>&lt;</span> n; i<span style=color:#666>++</span>){
+</span></span><span style=display:flex><span>    <span style=color:#a2f;font-weight:700>for</span>(<span style=color:#0b0;font-weight:700>int</span> c <span style=color:#666>=</span> <span style=color:#666>0</span>; c <span style=color:#666>&lt;</span> <span style=color:#666>26</span>;c<span style=color:#666>++</span>)
+</span></span><span style=display:flex><span>        states[i][c] <span style=color:#666>=</span> j;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p><em>Q： 這個<code>j</code>要怎麼得到呢？</em>
+這裡會分成2種情況：</p><ol>
+<li>
+<p>匹配的情況 <br>
+匹配的情況就很容易，就一直往前走就好了<code>j = i + 1</code></p></li><li>
+<p>不匹配的情況：<br>
+不匹配的情況就比較複雜，有可能會留在原地不動，也有可能回去以前的State。
+這裡我們需要一個人來幫我們處理這個問題，我們使用variable 來幫組我們，而這個variable 和我們的<code>j</code>有相同的前綴prefix。</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>例如
+</span></span><span style=display:flex><span>A -&gt; B -&gt; A -&gt; B -&gt; C
+</span></span><span style=display:flex><span>     x         j
+</span></span></code></pre></div><p><code>state[j][text[c]] = state[x][text[c]];</code><br>
+在這個情況下state j 只有在遇到c的情況下 才會往前走，然而我們的x跟j是有著相同的prefix，也就是AB。 假設現在的是A，在不匹配的情況下，我們可以把當前的字符交給x來處理。 在State x 中 遇到A會往前走，所以j便會往後退（畢竟不能往前只能往後退了）。因為j的前綴跟x的前綴是的一樣的，所以把字符交給x來處理，可以盡可能少的回退！ 所以j最後會去到state 3</p><p>不過也有可能當前x state 是無法匹配的情況，哪只要按照state x的路回退即可（x 永遠都會尾隨 j的，而x的狀態也是在以前計算過的，所以只要按照x的紀錄表走就可以）</p></li></ol><p><strong>KMP 建立FSM</strong></p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=display:flex><span><span style=color:#0b0;font-weight:700>void</span> <span style=color:#00a000>KMP</span>(string pattern) {
+</span></span><span style=display:flex><span>    <span style=color:#0b0;font-weight:700>int</span> n <span style=color:#666>=</span> pattern.size();
+</span></span><span style=display:flex><span>    vector<span style=color:#666>&lt;</span>vector<span style=color:#666>&lt;</span><span style=color:#0b0;font-weight:700>char</span><span style=color:#666>&gt;&gt;</span> states(n,vector<span style=color:#666>&lt;</span><span style=color:#0b0;font-weight:700>char</span><span style=color:#666>&gt;</span>(<span style=color:#666>26</span>,<span style=color:#666>0</span>));
+</span></span><span style=display:flex><span>    states[<span style=color:#666>0</span>][pattern[<span style=color:#666>0</span>]] <span style=color:#666>=</span> <span style=color:#666>1</span>; <span style=color:#080;font-style:italic>//在狀態0的時候，如何遇到pattern[0]，會到狀態1，而其他情況會原地不動。
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>    <span style=color:#0b0;font-weight:700>int</span> x <span style=color:#666>=</span> <span style=color:#666>0</span>; <span style=color:#080;font-style:italic>//與j 有相同前綴的變數
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>    <span style=color:#a2f;font-weight:700>for</span> (<span style=color:#0b0;font-weight:700>int</span> j <span style=color:#666>=</span> <span style=color:#666>1</span>; j <span style=color:#666>&lt;</span> n ;j<span style=color:#666>++</span>){
+</span></span><span style=display:flex><span>        <span style=color:#a2f;font-weight:700>for</span>(<span style=color:#0b0;font-weight:700>int</span> c <span style=color:#666>=</span> <span style=color:#666>0</span> ; c <span style=color:#666>&lt;</span> <span style=color:#666>26</span> ;c<span style=color:#666>++</span>){
+</span></span><span style=display:flex><span>            state[j][pattern[c]] <span style=color:#666>=</span> state[x][pattern[c]];
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#080;font-style:italic>//Move to next state iff text[c] == pattern[c]
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        state[j][pattern[c]] <span style=color:#666>=</span> j <span style=color:#666>+</span> <span style=color:#666>1</span>;
+</span></span><span style=display:flex><span>        x <span style=color:#666>=</span> state[x][pattern[c]; <span style=color:#080;font-style:italic>//to next x state
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h3 id=kmp-算法代碼>KMP 算法代碼</h3><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=display:flex><span><span style=color:#a2f;font-weight:700>class</span> <span style=color:#00f>KMP</span> {
+</span></span><span style=display:flex><span>    <span style=color:#a2f;font-weight:700>private</span><span style=color:#666>:</span>
+</span></span><span style=display:flex><span>        string pattern;
+</span></span><span style=display:flex><span>        vector<span style=color:#666>&lt;</span>vector<span style=color:#666>&lt;</span><span style=color:#0b0;font-weight:700>char</span><span style=color:#666>&gt;&gt;</span> states;
+</span></span><span style=display:flex><span>    <span style=color:#a2f;font-weight:700>public</span><span style=color:#666>:</span>
+</span></span><span style=display:flex><span>        KMP(string pattern){
+</span></span><span style=display:flex><span>            <span style=color:#a2f;font-weight:700>this</span><span style=color:#666>-&gt;</span>pattern <span style=color:#666>=</span> pattern;
+</span></span><span style=display:flex><span>            <span style=color:#0b0;font-weight:700>int</span> n <span style=color:#666>=</span> pattern.size();
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>            states <span style=color:#666>=</span> vector<span style=color:#666>&lt;</span>vector<span style=color:#666>&lt;</span><span style=color:#0b0;font-weight:700>char</span><span style=color:#666>&gt;&gt;</span> (n,vector<span style=color:#666>&lt;</span><span style=color:#0b0;font-weight:700>char</span><span style=color:#666>&gt;</span>(<span style=color:#666>26</span>,<span style=color:#666>0</span>));
+</span></span><span style=display:flex><span>            states[<span style=color:#666>0</span>][pattern[<span style=color:#666>0</span>]] <span style=color:#666>=</span> <span style=color:#666>1</span>; <span style=color:#080;font-style:italic>//在狀態0的時候，如何遇到pattern[0]，會到狀態1，而其他情況會原地不動。
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>            <span style=color:#0b0;font-weight:700>int</span> x <span style=color:#666>=</span> <span style=color:#666>0</span>; <span style=color:#080;font-style:italic>//與j 有相同前綴的變數
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>            <span style=color:#a2f;font-weight:700>for</span> (<span style=color:#0b0;font-weight:700>int</span> j <span style=color:#666>=</span> <span style=color:#666>1</span>; j <span style=color:#666>&lt;</span> n ;j<span style=color:#666>++</span>){
+</span></span><span style=display:flex><span>                <span style=color:#a2f;font-weight:700>for</span>(<span style=color:#0b0;font-weight:700>int</span> c <span style=color:#666>=</span> <span style=color:#666>0</span> ; c <span style=color:#666>&lt;</span> <span style=color:#666>26</span> ;c<span style=color:#666>++</span>)
+</span></span><span style=display:flex><span>                    state[j][pattern[c]] <span style=color:#666>=</span> state[x][pattern[c]];
+</span></span><span style=display:flex><span>                <span style=color:#080;font-style:italic>//Move to next state iff text[c] == pattern[c]
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>                state[j][pattern[c]] <span style=color:#666>=</span> j <span style=color:#666>+</span> <span style=color:#666>1</span>;
+</span></span><span style=display:flex><span>                x <span style=color:#666>=</span> state[x][pattern[c]; <span style=color:#080;font-style:italic>//to next x state
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>            }
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#0b0;font-weight:700>int</span> <span style=color:#00a000>search</span>(string text) {
+</span></span><span style=display:flex><span>            <span style=color:#0b0;font-weight:700>int</span> n <span style=color:#666>=</span> text.size();
+</span></span><span style=display:flex><span>            <span style=color:#0b0;font-weight:700>int</span> m <span style=color:#666>=</span> <span style=color:#a2f;font-weight:700>this</span><span style=color:#666>-&gt;</span>pattern.size();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            <span style=color:#0b0;font-weight:700>int</span> j <span style=color:#666>=</span> <span style=color:#666>0</span>;
+</span></span><span style=display:flex><span>            <span style=color:#a2f;font-weight:700>for</span>(<span style=color:#0b0;font-weight:700>int</span> i <span style=color:#666>=</span> <span style=color:#666>0</span>;i<span style=color:#666>&lt;</span>m;i<span style=color:#666>++</span>){
+</span></span><span style=display:flex><span>                j <span style=color:#666>=</span> states[j][text[i]];
+</span></span><span style=display:flex><span>                <span style=color:#a2f;font-weight:700>if</span>(j <span style=color:#666>==</span> m) <span style=color:#a2f;font-weight:700>return</span> i <span style=color:#666>-</span> m <span style=color:#666>+</span> <span style=color:#666>1</span>;
+</span></span><span style=display:flex><span>            
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>            <span style=color:#a2f;font-weight:700>return</span> <span style=color:#666>-</span><span style=color:#666>1</span>
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h2 id=參考資料>參考資料</h2><p><a href=https://mp.weixin.qq.com/s/r9pbkMyFyMAvmkf4QnL-1g>动态规划之 KMP 算法详解</a></p></div><footer class=post-footer>
+<div class=post-tags>
+<a href=/tags/note rel=tag title=note>#note#</a>
+<a href=/tags/algorithm rel=tag title=algorithm>#algorithm#</a>
+</div><div class=post-nav>
+<div class=article-copyright>
+<div class=article-copyright-info>
+<p>
+<span>文章聲明：</span>[筆記] KMP - Knuth-Morris-Pratt 演算法
+</p><p>
+<span>文章連接：</span>https://ryantokmanmokmtm.github.io/post/note-kmp/
+</p><p>
+<span>作者：</span>jackson.tmm
+</p><p>
+<span>文章聲明： </span>本博客文章除特別聲明外，均采用 <a href=https://creativecommons.org/licenses/by-nc-sa/3.0/ target=_blank style=text-decoration:underline>CC BY-NC-SA 3.0</a>許可協議，轉載請注明出處！
+</p></div></div><div class=clear></div></div><div class=post-nav>
+<div class="post-nav-next post-nav-item">
+</div><div class="post-nav-prev post-nav-item">
+<a href=https://ryantokmanmokmtm.github.io/post/summary-of-2022/ rel=prev title=2022年度總結(Summary)>
+2022年度總結(Summary)
+<i class="fa fa-chevron-right"></i>
+</a>
+</div></div></footer></article></section></div></div><div class=sidebar-toggle>
+<div class=sidebar-toggle-line-wrap>
+<span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+<span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+<span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+</div></div><aside id=sidebar class=sidebar>
+<div class=sidebar-inner>
+<section class="site-overview sidebar-panel sidebar-panel-active">
+<div class="site-author motion-element" itemprop=author itemscope itemtype=http://schema.org/Person>
+<img class=site-author-image itemprop=image src=/images/avatar.jpg alt=jackson.tmm>
+<p class=site-author-name itemprop=name>jackson.tmm</p><p class="site-description motion-element" itemprop=description>
+努力學習，成為更好的自己
+</p></div><nav class="site-state motion-element">
+<div class="site-state-item site-state-posts">
+<a href=/post/>
+<span class=site-state-item-count>15</span>
+<span class=site-state-item-name>日誌</span>
+</a>
+</div><div class="site-state-item site-state-categories">
+<a href=/categories/>
+<span class=site-state-item-count>28</span>
+<span class=site-state-item-name>分類</span>
+</a>
+</div><div class="site-state-item site-state-tags">
+<a href=/tags/>
+<span class=site-state-item-count>51 </span>
+<span class=site-state-item-name>標籤</span>
+</a>
+</div></nav><div class="links-of-author motion-element">
+<span class=links-of-author-item>
+<a href=https://github.com/RyanTokManMokMTM target=_blank title=GitHub>
+<i class="fa fa-fw fa-github"></i>
+GitHub
+</a>
+</span>
+<span class=links-of-author-item>
+<a href=https://www.facebook.com/karot.ka.7505/ target=_blank title=Facebook>
+<i class="fa fa-fw fa-facebook"></i>
+Facebook
+</a>
+</span>
+<span class=links-of-author-item>
+<a href=https://www.instagram.com/tm_m.0418/ target=_blank title=Instagram>
+<i class="fa fa-fw fa-instagram"></i>
+Instagram
+</a>
+</span>
+<span class=links-of-author-item>
+<a href=https://www.linkedin.com/in/jackson-314ba5227/ target=_blank title=Linkedin>
+<i class="fa fa-fw fa-linkedin"></i>
+Linkedin
+</a>
+</span>
+</div><div class="tagcloud-of-blogroll motion-element tagcloud-of-blogroll-inline">
+<div class=tagcloud-of-blogroll-title>
+<i class="fa fa-fw fa-tags"></i>
+標籤雲
+</div><ul class=tagcloud-of-blogroll-list>
+<li class=tagcloud-of-blogroll-item>
+<a href=/tags/array>Array</a>
+</li><li class=tagcloud-of-blogroll-item>
+<a href=/tags/string>String</a>
+</li><li class=tagcloud-of-blogroll-item>
+<a href=/tags/recursion>Recursion</a>
+</li><li class=tagcloud-of-blogroll-item>
+<a href=/tags/binary-tree>Binary tree</a>
+</li><li class=tagcloud-of-blogroll-item>
+<a href=/tags/dynamic-programming>Dynamic programming</a>
+</li><li class=tagcloud-of-blogroll-item>
+<a href=/tags/learning>Learning</a>
+</li><li class=tagcloud-of-blogroll-item>
+<a href=/tags/recursive>Recursive</a>
+</li><li class=tagcloud-of-blogroll-item>
+<a href=/tags/stack>Stack</a>
+</li><li class=tagcloud-of-blogroll-item>
+<a href=/tags/creational>Creational</a>
+</li><li class=tagcloud-of-blogroll-item>
+<a href=/tags/priority-queue>Priority queue</a>
+</li></ul></div></section></div></aside></div></main><footer id=footer class=footer>
+<div class=footer-inner>
+<div class=copyright>
+<span class=copyright-year>
+&copy; 2022 - 2023
+</span>
+<span class=with-love><i class="fa fa-heart"></i></span>
+<span class=copyright-author>Jackson.tmm</span>
+</div><div class=powered-info>
+<span class=powered-by>
+Powered by - <a class=powered-link href=//gohugo.io target=_blank title=hugo>Hugo v0.93.2</a>
+</span>
+<span class=separator-line>/</span>
+<span class=theme-info>
+Theme by - <a class=powered-link href=//github.com/elkan1788/hugo-theme-next target=_blank> NexT
+</a>
+</span>
+</div><div class=vistor-info>
+</div><script type=text/javascript src=https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js></script>
+<script type=text/javascript src=https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.0.min.js></script>
+<div class="pio-container right">
+<div class=pio-action></div><canvas id=pio width=200 height=400></canvas>
+</div></div></footer><div class=back-to-top>
+<i class="fa fa-arrow-up"></i>
+<span id=scrollpercent><span>0</span>%</span>
+</div></div><script type=text/javascript src=https://code.jquery.com/jquery-2.2.4.min.js></script>
+<script type=text/javascript src=/js/search.js></script>
+<script type=text/javascript src=/js/affix.js></script>
+<script type=text/javascript src=/js/scrollspy.js></script>
+<script type=text/javascript>function detectIE(){var e=window.navigator.userAgent,t=e.indexOf("MSIE "),n=e.indexOf("Trident/"),s=e.indexOf("Edge/");return t>0||n>0||s>0?-1:1}function getCntViewHeight(){var t=$("#content").height(),e=$(window).height(),n=t>e?t-e:$(document).height()-e;return n}function getScrollbarWidth(){var e=$("<div />").addClass("scrollbar-measure").prependTo("body"),t=e[0],n=t.offsetWidth-t.clientWidth;return e.remove(),n}function registerBackTop(){var t=50,e=$(".back-to-top");$(window).on("scroll",function(){e.toggleClass("back-to-top-on",window.pageYOffset>t);var s=$(window).scrollTop(),o=getCntViewHeight(),i=s/o,n=Math.round(i*100),a=n>100?100:n;$("#scrollpercent>span").html(a)}),e.on("click",function(){$("html,body").animate({scrollTop:0,screenLeft:0},800)})}function initScrollSpy(){var e=".post-toc",s=$(e),t=".active-current";s.on("activate.bs.scrollspy",function(){var t=$(e+" .active").last();n(),t.addClass("active-current")}).on("clear.bs.scrollspy",n),$("body").scrollspy({target:e});function n(){$(e+" "+t).removeClass(t.substring(1))}}function initAffix(){var e=$(".header-inner").height(),t=parseInt($(".main").css("padding-bottom"),10),n=e+10;$(".sidebar-inner").affix({offset:{top:n,bottom:t}}),$(document).on("affixed.bs.affix",function(){updateTOCHeight(document.body.clientHeight-100)})}function initTOCDimension(){$(window).on("resize",function(){e&&clearTimeout(e),e=setTimeout(function(){var e=document.body.clientHeight-100;updateTOCHeight(e)},0)}),updateTOCHeight(document.body.clientHeight-100);var e,t=getScrollbarWidth();$(".post-toc").css("width","calc(100% + "+t+"px)")}function updateTOCHeight(e){e=e||"auto",$(".post-toc").css("max-height",e)}$(function(){var t=$(".header-inner").height()+10,n,s,e,o;$("#sidebar").css({'margin-top':t}).show(),n=parseInt($("#sidebar").css("margin-top")),s=parseInt($(".sidebar-inner").css("height")),e=n+s,o=$(".content-wrap").height(),o<e&&$(".content-wrap").css("min-height",e),$(".site-nav-toggle").on("click",function(){var e=$(".site-nav"),o=$(".toggle"),t="site-nav-on",i="toggle-close",n=e.hasClass(t),a=n?"slideUp":"slideDown",s=n?"removeClass":"addClass";e.stop()[a]("normal",function(){e[s](t),o[s](i)})}),registerBackTop(),initScrollSpy(),initAffix(),initTOCDimension(),$(".sidebar-nav-toc").click(function(){$(this).addClass("sidebar-nav-active"),$(this).next().removeClass("sidebar-nav-active"),$("."+$(this).next().attr("data-target")).toggle(500),$("."+$(this).attr("data-target")).toggle(500)}),$(".sidebar-nav-overview").click(function(){$(this).addClass("sidebar-nav-active"),$(this).prev().removeClass("sidebar-nav-active"),$("."+$(this).prev().attr("data-target")).toggle(500),$("."+$(this).attr("data-target")).toggle(500)})})</script>
+<script src=//cdn.bootcdn.net/ajax/libs/imageviewer/0.1.0/viewer.min.js></script>
+<script type=text/javascript>$(function(){$(".post-body").viewer()})</script>
+<script>(function(){var e=document.createElement("script"),t,n=window.location.protocol.split(":")[0];n==="https"?e.src="https://zz.bdstatic.com/linksubmit/push.js":e.src="http://push.zhanzhang.baidu.com/push.js",t=document.getElementsByTagName("script")[0],t.parentNode.insertBefore(e,t)})()</script>
+<script src=/js/l2d.js></script>
+<script src=/js/pio.js></script>
+<script>var pio=new Paul_Pio({mode:"draggable",hidden:!0,content:{welcome:["歡迎來到Jackson的小宇宙！","今天天氣不錯，一起来玩吧！","博主有空的話，會寫一寫博客記錄一下!"],custom:[{selector:".home-social a:last-child",text:"在這里可以了解博主的日常噢~"},{selector:".post-item a",type:"read"},{selector:".post-content a, .page-content a",type:"link"}]},model:["/model/umaru/model.json","/model/HN/blanc_normal/model.json","/model/HN/blanc_classic/model.json","/model/chino/model.json"],touch:["不可以這樣欺負我啦><"]})</script>
+</body></html>

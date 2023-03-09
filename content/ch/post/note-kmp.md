@@ -234,6 +234,7 @@ class KMP {
         }
 }
 ```
+
 ## 參考資料
 [动态规划之 KMP 算法详解](https://mp.weixin.qq.com/s/r9pbkMyFyMAvmkf4QnL-1g)
 

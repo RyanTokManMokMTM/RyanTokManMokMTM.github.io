@@ -1,21 +1,21 @@
 <!doctype html><html lang=zh-tw dir=content/ch>
 <head>
+<meta name=generator content="Hugo 0.93.2">
 <meta charset=utf-8>
 <meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta http-equiv=content-security-policy content="upgrade-insecure-requests">
-<title> [Leetcode] Longest Palindromic Substring(Medium) - Jackson.tmm </title><meta name=keywords content="博客,工程師,程序員,學習,筆記,技術,分析,後端,生活">
+<title> Jackson.tmm </title><meta name=keywords content="博客,工程師,程序員,學習,筆記,技術,分析,後端,生活">
 <meta name=author content="jackson.tmm">
-<meta property="og:title" content="[Leetcode] Longest Palindromic Substring(Medium)">
+<meta property="og:title" content="Home">
 <meta property="og:site_name" content="Jackson.tmm">
 <meta property="og:image" content="/images/favicon.png">
-<meta name=title content="[Leetcode] Longest Palindromic Substring(Medium) - Jackson.tmm">
+<meta name=title content="Home - Jackson.tmm">
 <meta name=description content="歡迎來的Jackson.tmm的空間站。個人主要專注於Web開發，程序開發，以及學習上。">
 <link rel="shortcut icon" href=/images/favicon.png>
 <link rel=apple-touch-icon href=/images/avatar.jpg>
 <link rel=apple-touch-icon-precomposed href=/images/favicon.png>
 <link href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css rel=stylesheet type=text/css>
-<link href=//cdn.bootcdn.net/ajax/libs/imageviewer/0.1.0/viewer.min.css rel=stylesheet>
 <link href=/css/main.css rel=stylesheet type=text/css>
 <link href=/css/syntax.css rel=stylesheet type=text/css>
 <script src=https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js></script> <script>mermaid.initialize({startOnLoad:!0,securityLevel:"loose"})</script>
@@ -43,7 +43,7 @@
 <i class="fa fa-search fa-fw fa-lg"></i>
 </div></div></div><nav class=site-nav>
 <ul id=menu class=menu>
-<li class=menu-item>
+<li class="menu-item menu-item-active">
 <a href=/ rel=section>
 <i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home
 </a>
@@ -96,15 +96,15 @@
 <article class="post post-type-normal" itemscope itemtype=http://schema.org/Article>
 <header class=post-header>
 <h1 class=post-title itemprop="name headline">
-<a class=post-title-link href=https://ryantokmanmokmtm.github.io/leetcodes/leetcode5/ itemprop=url>
-[Leetcode] Longest Palindromic Substring(Medium)
+<a class=post-title-link href=https://ryantokmanmokmtm.github.io/post/jwt-note/ itemprop=url>
+[Note]What Is JWT(Json Web Token)-EN
 </a>
 </h1><div class=post-meta>
 <span class=post-time>
 <i class="fa fa-calendar-o fa-fw"></i>
 <span class=post-meta-item-text>時間：</span>
-<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2022-06-16">
-2022-06-16
+<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2022-03-24">
+2022-03-24
 </time>
 </span>
 <span class=post-category>
@@ -112,8 +112,32 @@
 <i class="fa fa-folder-o fa-fw"></i>
 <span class=post-meta-item-text>分類：</span>
 <span itemprop=about itemscope itemtype=https://schema.org/Thing>
-<a href=/categories/leetcode itemprop=url rel=index style=text-decoration:underline>
-<span itemprop=name>leetcode</span>
+<a href=/categories/backend itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>backend</span>
+</a>
+&nbsp;
+</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/development itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>development</span>
+</a>
+&nbsp;
+</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/web-develpment itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>web develpment</span>
+</a>
+&nbsp;
+</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/note itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>note</span>
+</a>
+&nbsp;
+</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/english itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>english</span>
 </a>
 &nbsp;
 </span>
@@ -122,7 +146,7 @@
 |
 <i class="fa fa-file-word-o fa-fw"></i>
 <span class=post-meta-item-text>字數：</span>
-<span class=leancloud-world-count>517 字</span>
+<span class=leancloud-world-count>361 字</span>
 </span>
 <span>
 |
@@ -130,93 +154,21 @@
 <span class=post-meta-item-text>閱讀：</span>
 <span class=leancloud-view-count>2分鐘</span>
 </span>
-<span id=/leetcodes/leetcode5/ class=leancloud_visitors data-flag-title="[Leetcode] Longest Palindromic Substring(Medium)">
-|
-<i class="fa fa-binoculars fa-fw"></i>
-<span class=post-meta-item-text>閱讀次數：</span>
-<span class=leancloud-visitors-count></span>
-</span>
 </div></header><div class=post-body itemprop=articleBody>
-<h2 id=leetcode-5---longest-palindromic-substring>LeetCode 5 - Longest Palindromic Substring</h2><p>Given a string s, return the longest palindromic substring in s.</p><p>example</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>Input: s = &#34;babad&#34;
-</span></span><span style=display:flex><span>Output: &#34;bab&#34;
-</span></span><span style=display:flex><span>Explanation: &#34;aba&#34; is also a valid answer.
-</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>Input: s = &#34;cbbd&#34;
-</span></span><span style=display:flex><span>Output: &#34;bb&#34;
-</span></span></code></pre></div><h2 id=how-can-we-solve-this-problem>How can we solve this problem?</h2><p>要解決這題，我們必須要先知道什麼是Palindrome。可以參考這篇文章<a href=/leetcodenotes/palindromicstring>Palindromic string迴文</a>。而這題要我們找出在給定string中,找到最長的Palindrome。我們可以透過以每個單一字元(<code>index i</code>)以及倆個字元(<code>index i</code>,<code>index i+1</code>)為中心點，並擴展<code>left,right</code>找出他們的局部的最長Palindrome為多少，然後根據這個長度計算<code>starting point i</code>以及記錄長度<code>len</code>,最後以<code>starting point</code>和<code>len</code>得出字串中<code>str[startingPoint,len]</code>為解。</p><h4 id=solution>Solution:</h4><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=display:flex><span><span style=color:#a2f;font-weight:700>class</span> <span style=color:#00f>Solution</span> {
-</span></span><span style=display:flex><span><span style=color:#a2f;font-weight:700>public</span><span style=color:#666>:</span>
-</span></span><span style=display:flex><span>    string longestPalindrome(string s) {
-</span></span><span style=display:flex><span>        <span style=color:#080;font-style:italic>/*
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>        Using an easy solution
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>        
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>        &#34;babad&#34; 
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>        finding all posible palindrome string starting at index i(mid point)
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>        odd case:
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>        i-1 i i+1 ? Palindrome
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>        i-2 i-1 i i+1 i+2  ?Palindrome
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>        
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>        what about even case.We&#39;re simply starting at index i and i+1
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>        i-1 [i,i+1] i+2 ?Palindrome
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic>        */</span>
-</span></span><span style=display:flex><span>        <span style=color:#0b0;font-weight:700>int</span> n <span style=color:#666>=</span> s.length();
-</span></span><span style=display:flex><span>        <span style=color:#0b0;font-weight:700>int</span> len <span style=color:#666>=</span> <span style=color:#666>0</span>;
-</span></span><span style=display:flex><span>        <span style=color:#0b0;font-weight:700>int</span> startPoint <span style=color:#666>=</span> <span style=color:#666>0</span>;
-</span></span><span style=display:flex><span>        <span style=color:#080;font-style:italic>//O(n * n(finding Palindrome))
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        
-</span></span><span style=display:flex><span>        
-</span></span><span style=display:flex><span>        <span style=color:#a2f;font-weight:700>for</span>(<span style=color:#0b0;font-weight:700>int</span> i <span style=color:#666>=</span> <span style=color:#666>0</span>;i<span style=color:#666>&lt;</span>n;i<span style=color:#666>++</span>){
-</span></span><span style=display:flex><span>            <span style=color:#0b0;font-weight:700>int</span> cur <span style=color:#666>=</span> max(getLen(s,i,i,n),getLen(s,i,i<span style=color:#666>+</span><span style=color:#666>1</span>,n)); <span style=color:#080;font-style:italic>// which one is longest? odd or even
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>            <span style=color:#a2f;font-weight:700>if</span>(cur <span style=color:#666>&gt;</span> len){
-</span></span><span style=display:flex><span>                <span style=color:#080;font-style:italic>//update our len and starting point
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>                len <span style=color:#666>=</span> cur;
-</span></span><span style=display:flex><span>                startPoint <span style=color:#666>=</span> i <span style=color:#666>-</span> (len<span style=color:#666>-</span><span style=color:#666>1</span>)<span style=color:#666>/</span><span style=color:#666>2</span>; <span style=color:#080;font-style:italic>//(len-1) for even case 
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>                <span style=color:#080;font-style:italic>//suppose the len is 3 and the index is 1 ,then the starting point will be 1 - (3-1)/2 =&gt; 0-&gt; len str[0...2]
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>                <span style=color:#080;font-style:italic>//suppose the len is 4 and the index is 1 ,then the starting point will be 1 - (4-1)/2 =&gt; 0-&gt; len str[0...2]
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>            }
-</span></span><span style=display:flex><span>        }
-</span></span><span style=display:flex><span>        
-</span></span><span style=display:flex><span>        <span style=color:#a2f;font-weight:700>return</span> s.substr(startPoint,len);
-</span></span><span style=display:flex><span>    }
-</span></span><span style=display:flex><span>    
-</span></span><span style=display:flex><span>    <span style=color:#080;font-style:italic>//str[i..j] is our middle point of Palindrome
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>    <span style=color:#0b0;font-weight:700>int</span> <span style=color:#00a000>getLen</span>(string<span style=color:#666>&amp;</span>str,<span style=color:#0b0;font-weight:700>int</span> i,<span style=color:#0b0;font-weight:700>int</span> j,<span style=color:#0b0;font-weight:700>int</span> n){
-</span></span><span style=display:flex><span>        <span style=color:#080;font-style:italic>//left(i) right(j)
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        <span style=color:#a2f;font-weight:700>while</span>(i<span style=color:#666>&gt;=</span><span style=color:#666>0</span> <span style=color:#666>&amp;&amp;</span> j<span style=color:#666>&lt;</span>n <span style=color:#666>&amp;&amp;</span> str[i] <span style=color:#666>==</span> str[j]){
-</span></span><span style=display:flex><span>            i<span style=color:#666>--</span>;
-</span></span><span style=display:flex><span>            j<span style=color:#666>++</span>;
-</span></span><span style=display:flex><span>        }
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        <span style=color:#080;font-style:italic>//string at i+1 and getting
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        <span style=color:#080;font-style:italic>//|y|x2|x1|x|x1|x2|y| =&gt; the length of this string is l - r + 1 -(out of bounds of both i and j =&gt; 2) =&gt; l-r-1
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        <span style=color:#a2f;font-weight:700>return</span> j<span style=color:#666>-</span>i<span style=color:#666>-</span><span style=color:#666>1</span>; <span style=color:#080;font-style:italic>//string at i+1(is decreased from the loop),total
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>    }
-</span></span><span style=display:flex><span>};
-</span></span></code></pre></div></div><footer class=post-footer>
-<div class=post-tags>
-<a href=/tags/string rel=tag title=string>#string#</a>
-<a href=/tags/dynamic-programming rel=tag title="dynamic programming">#dynamic programming#</a>
-</div><div class=post-nav>
-<div class=article-copyright>
-<div class=article-copyright-info>
-<p>
-<span>文章聲明：</span>[Leetcode] Longest Palindromic Substring(Medium)
-</p><p>
-<span>文章連接：</span>https://ryantokmanmokmtm.github.io/leetcodes/leetcode5/
-</p><p>
-<span>作者：</span>jackson.tmm
-</p><p>
-<span>文章聲明： </span>本博客文章除特別聲明外，均采用 <a href=https://creativecommons.org/licenses/by-nc-sa/3.0/ target=_blank style=text-decoration:underline>CC BY-NC-SA 3.0</a>許可協議，轉載請注明出處！
-</p></div></div><div class=clear></div></div><div class=post-nav>
-<div class="post-nav-next post-nav-item">
-<a href=https://ryantokmanmokmtm.github.io/leetcodes/leetcode802/ rel=next title="[Leetcode] Short Encoding of Words(Medium)">
-<i class="fa fa-chevron-left"></i> [Leetcode] Short Encoding of Words(Medium)
+What is JWT(Json Web Token)? The full name of JWT is Json Web Token. Acccording to the definition, JWT is a proposed Internet standard for creating data with optinal signature and/or opntional encryption whose payload holds JSON that asserts some number of clamis.
+It&rsquo;s used for identity authentication between client and the server that allows accessing resources in the server.
+The Structure of JWT JWT consists of three parts including:
+</div><div class="post-more-link text-center">
+<a class=btn href=https://ryantokmanmokmtm.github.io/post/jwt-note/ rel=contents>
+閱讀全文 &#187;
 </a>
-</div><div class="post-nav-prev post-nav-item">
-<a href=https://ryantokmanmokmtm.github.io/leetcodes/leetcode216/ rel=prev title="[Leetcode] Combination Sum III(Medium)">
-[Leetcode] Combination Sum III(Medium)
-<i class="fa fa-chevron-right"></i>
-</a>
-</div></div></footer></article></section></div></div><div class=sidebar-toggle>
+</div><footer class=post-footer><div class=post-eof></div></footer></article></section><nav class=pagination>
+<a class="extend prev" rel=prev href=/p/3/><i class="fa fa-angle-left"></i></a>
+<a class=page-number href=/>1</a>
+<a class=page-number href=/p/2/>2</a>
+<a class=page-number href=/p/3/>3</a>
+<span class="page-number current">4</span>
+</nav></div></div><div class=sidebar-toggle>
 <div class=sidebar-toggle-line-wrap>
 <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
 <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
@@ -324,8 +276,6 @@ Theme by - <a class=powered-link href=//github.com/elkan1788/hugo-theme-next tar
 <script type=text/javascript src=/js/affix.js></script>
 <script type=text/javascript src=/js/scrollspy.js></script>
 <script type=text/javascript>function detectIE(){var e=window.navigator.userAgent,t=e.indexOf("MSIE "),n=e.indexOf("Trident/"),s=e.indexOf("Edge/");return t>0||n>0||s>0?-1:1}function getCntViewHeight(){var t=$("#content").height(),e=$(window).height(),n=t>e?t-e:$(document).height()-e;return n}function getScrollbarWidth(){var e=$("<div />").addClass("scrollbar-measure").prependTo("body"),t=e[0],n=t.offsetWidth-t.clientWidth;return e.remove(),n}function registerBackTop(){var t=50,e=$(".back-to-top");$(window).on("scroll",function(){e.toggleClass("back-to-top-on",window.pageYOffset>t);var s=$(window).scrollTop(),o=getCntViewHeight(),i=s/o,n=Math.round(i*100),a=n>100?100:n;$("#scrollpercent>span").html(a)}),e.on("click",function(){$("html,body").animate({scrollTop:0,screenLeft:0},800)})}function initScrollSpy(){var e=".post-toc",s=$(e),t=".active-current";s.on("activate.bs.scrollspy",function(){var t=$(e+" .active").last();n(),t.addClass("active-current")}).on("clear.bs.scrollspy",n),$("body").scrollspy({target:e});function n(){$(e+" "+t).removeClass(t.substring(1))}}function initAffix(){var e=$(".header-inner").height(),t=parseInt($(".main").css("padding-bottom"),10),n=e+10;$(".sidebar-inner").affix({offset:{top:n,bottom:t}}),$(document).on("affixed.bs.affix",function(){updateTOCHeight(document.body.clientHeight-100)})}function initTOCDimension(){$(window).on("resize",function(){e&&clearTimeout(e),e=setTimeout(function(){var e=document.body.clientHeight-100;updateTOCHeight(e)},0)}),updateTOCHeight(document.body.clientHeight-100);var e,t=getScrollbarWidth();$(".post-toc").css("width","calc(100% + "+t+"px)")}function updateTOCHeight(e){e=e||"auto",$(".post-toc").css("max-height",e)}$(function(){var t=$(".header-inner").height()+10,n,s,e,o;$("#sidebar").css({'margin-top':t}).show(),n=parseInt($("#sidebar").css("margin-top")),s=parseInt($(".sidebar-inner").css("height")),e=n+s,o=$(".content-wrap").height(),o<e&&$(".content-wrap").css("min-height",e),$(".site-nav-toggle").on("click",function(){var e=$(".site-nav"),o=$(".toggle"),t="site-nav-on",i="toggle-close",n=e.hasClass(t),a=n?"slideUp":"slideDown",s=n?"removeClass":"addClass";e.stop()[a]("normal",function(){e[s](t),o[s](i)})}),registerBackTop(),initScrollSpy(),initAffix(),initTOCDimension(),$(".sidebar-nav-toc").click(function(){$(this).addClass("sidebar-nav-active"),$(this).next().removeClass("sidebar-nav-active"),$("."+$(this).next().attr("data-target")).toggle(500),$("."+$(this).attr("data-target")).toggle(500)}),$(".sidebar-nav-overview").click(function(){$(this).addClass("sidebar-nav-active"),$(this).prev().removeClass("sidebar-nav-active"),$("."+$(this).prev().attr("data-target")).toggle(500),$("."+$(this).attr("data-target")).toggle(500)})})</script>
-<script src=//cdn.bootcdn.net/ajax/libs/imageviewer/0.1.0/viewer.min.js></script>
-<script type=text/javascript>$(function(){$(".post-body").viewer()})</script>
 <script>(function(){var e=document.createElement("script"),t,n=window.location.protocol.split(":")[0];n==="https"?e.src="https://zz.bdstatic.com/linksubmit/push.js":e.src="http://push.zhanzhang.baidu.com/push.js",t=document.getElementsByTagName("script")[0],t.parentNode.insertBefore(e,t)})()</script>
 <script src=/js/l2d.js></script>
 <script src=/js/pio.js></script>

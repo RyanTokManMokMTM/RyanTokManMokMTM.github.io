@@ -128,13 +128,13 @@
 |
 <i class="fa fa-file-word-o fa-fw"></i>
 <span class=post-meta-item-text>字數：</span>
-<span class=leancloud-world-count>755 字</span>
+<span class=leancloud-world-count>1468 字</span>
 </span>
 <span>
 |
 <i class="fa fa-eye fa-fw"></i>
 <span class=post-meta-item-text>閱讀：</span>
-<span class=leancloud-view-count>2分鐘</span>
+<span class=leancloud-view-count>3分鐘</span>
 </span>
 <span id=/post/note-binarysearch/ class=leancloud_visitors data-flag-title="[筆記] Binary Search 演算法">
 |
@@ -163,7 +163,7 @@
 </span></span><span style=display:flex><span>    <span style=color:#a2f;font-weight:700>while</span>(left <span style=color:#666>&lt;</span> right){ <span style=color:#080;font-style:italic>//not equals ,coz right = n -&gt; ended when left == right
 </span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        <span style=color:#0b0;font-weight:700>int</span> mid <span style=color:#666>=</span> left <span style=color:#666>+</span> (right <span style=color:#666>-</span> left) <span style=color:#666>/</span> <span style=color:#666>2</span>;
 </span></span><span style=display:flex><span>        <span style=color:#a2f;font-weight:700>if</span>(arr[mid] <span style=color:#666>&gt;=</span> value) right <span style=color:#666>=</span> mid; <span style=color:#080;font-style:italic>//shrink to left
-</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        <span style=color:#a2f;font-weight:700>else</span> <span style=color:#a2f;font-weight:700>if</span>(arr[mid] <span style=color:#666>&gt;</span> value) left <span style=color:#666>=</span> mid <span style=color:#666>+</span> <span style=color:#666>1</span>;
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>        <span style=color:#a2f;font-weight:700>else</span> <span style=color:#a2f;font-weight:700>if</span>(arr[mid] <span style=color:#666>&lt;</span> value) left <span style=color:#666>=</span> mid <span style=color:#666>+</span> <span style=color:#666>1</span>;
 </span></span><span style=display:flex><span>    }
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>    <span style=color:#a2f;font-weight:700>return</span> left;
@@ -213,6 +213,45 @@
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>step 2: ended - i = j -&gt; return i(8) - 1 = 7
 </span></span><span style=display:flex><span>[1,2,3,4,4,4,4,4,5(i)(j),7]
+</span></span></code></pre></div><h3 id=實際例子>實際例子</h3><p><a href=https://leetcode.com/problems/minimum-time-to-complete-trips/><strong>Leetcode - 2187. Minimum Time to Complete Trips</strong></a></p><p>You are given an array <code>time</code> where <code>time[i]</code> denotes the time taken by the i<sup>th</sup> bus to complete one trip.</p><p>Each bus can make multiple trips <strong>successively</strong>; that is, the next trip can start <strong>immediately after</strong> completing the current trip. Also, each bus operates independently; that is, the trips of one bus do not influence the trips of any other bus.</p><p>You are also given an integer <code>totalTrips</code>, which denotes the number of trips all buses should make in total. Return the <em>minimum time required for all buses to complete at least <code>totalTrips</code> trips</em>.</p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>example 1
+</span></span><span style=display:flex><span>Input: time = [1,2,3], totalTrips = 5
+</span></span><span style=display:flex><span>Output: 3
+</span></span><span style=display:flex><span>Explanation:
+</span></span><span style=display:flex><span>- At time t = 1, the number of trips completed by each bus are [1,0,0]. 
+</span></span><span style=display:flex><span>  The total number of trips completed is 1 + 0 + 0 = 1.
+</span></span><span style=display:flex><span>- At time t = 2, the number of trips completed by each bus are [2,1,0]. 
+</span></span><span style=display:flex><span>  The total number of trips completed is 2 + 1 + 0 = 3.
+</span></span><span style=display:flex><span>- At time t = 3, the number of trips completed by each bus are [3,1,1]. 
+</span></span><span style=display:flex><span>  The total number of trips completed is 3 + 1 + 1 = 5.
+</span></span><span style=display:flex><span>So the minimum time needed for all buses to complete at least 5 trips is 3.
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>Input: time = [2], totalTrips = 1
+</span></span><span style=display:flex><span>Output: 2
+</span></span><span style=display:flex><span>Explanation:
+</span></span><span style=display:flex><span>There is only one bus, and it will complete its first trip at t = 2.
+</span></span><span style=display:flex><span>So the minimum time needed to complete 1 trip is 2.
+</span></span></code></pre></div><p>這題給定的數組中每個數字代表的數字表示i<sup>th</sup> <code>Bus</code>完成一次<code>trip</code>所要的次數，題目要我們找出所有<code>Bus</code>總共能完成<code>trip time</code>的最少次數是多少.<br>
+我們看得出來這題就是要讓我們在一個區間裡面找出一個最小能達到特定值的值，所以我們可以通過Binary Search來找。<br>
+首先我們要先定義最小值值和最大值是多少，最小值就是<code>time</code>數組中最小能完成一次<code>trip</code>的值(<em>小於這個值就代表沒有一輛<code>Bus</code>可以完成啊，哈哈哈哈</em>)。哪最大值呢？因為我們要求的最少能夠完成<code>total trip</code>的次數，哪我們最多是不是就是最小的哪輛<code>Bus</code>跑了<code>total trip</code>那麼多次呢？(超過了這個值就一定不會是最少了～)。<br>
+所以區間為 <code>[low，low * total trip]</code>，然後我們就可以從這個裡面取值，取一個符合條件切最小的值即可。</p><p><strong>題解(Solution)</strong></p><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=display:flex><span><span style=color:#0b0;font-weight:700>long</span> <span style=color:#0b0;font-weight:700>long</span> <span style=color:#00a000>minimumTime</span>(vector<span style=color:#666>&lt;</span><span style=color:#0b0;font-weight:700>int</span><span style=color:#666>&gt;&amp;</span> time, <span style=color:#0b0;font-weight:700>int</span> totalTrips) {
+</span></span><span style=display:flex><span>        <span style=color:#0b0;font-weight:700>long</span> <span style=color:#0b0;font-weight:700>long</span> min <span style=color:#666>=</span> <span style=color:#666>*</span>min_element(time.begin(),time.end());
+</span></span><span style=display:flex><span>        <span style=color:#0b0;font-weight:700>long</span> <span style=color:#0b0;font-weight:700>long</span> low <span style=color:#666>=</span> min, heigh <span style=color:#666>=</span> min <span style=color:#666>*</span> totalTrips;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#a2f;font-weight:700>while</span>(low <span style=color:#666>&lt;</span> heigh){
+</span></span><span style=display:flex><span>            <span style=color:#080;font-style:italic>//try to tarvel by mid speed
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>            <span style=color:#0b0;font-weight:700>long</span> <span style=color:#0b0;font-weight:700>long</span> mid <span style=color:#666>=</span> low <span style=color:#666>+</span> (heigh <span style=color:#666>-</span> low) <span style=color:#666>/</span> <span style=color:#666>2</span>;
+</span></span><span style=display:flex><span>            <span style=color:#0b0;font-weight:700>long</span> <span style=color:#0b0;font-weight:700>long</span> total <span style=color:#666>=</span> <span style=color:#666>0</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            <span style=color:#080;font-style:italic>//TODO: calculate the total time in the array 
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>            <span style=color:#a2f;font-weight:700>for</span>(<span style=color:#0b0;font-weight:700>int</span> i <span style=color:#666>=</span> <span style=color:#666>0</span>; i <span style=color:#666>&lt;</span> time.size();i<span style=color:#666>++</span>) total <span style=color:#666>+=</span> (mid <span style=color:#666>/</span> time[i]);
+</span></span><span style=display:flex><span>            <span style=color:#a2f;font-weight:700>if</span>(total <span style=color:#666>&gt;=</span> totalTrips) {
+</span></span><span style=display:flex><span>                heigh <span style=color:#666>=</span> mid; <span style=color:#080;font-style:italic>//may be the mininum time - lock it
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>            }<span style=color:#a2f;font-weight:700>else</span> {
+</span></span><span style=display:flex><span>                low <span style=color:#666>=</span> mid <span style=color:#666>+</span> <span style=color:#666>1</span>; <span style=color:#080;font-style:italic>// move forward
+</span></span></span><span style=display:flex><span><span style=color:#080;font-style:italic></span>            }
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        <span style=color:#a2f;font-weight:700>return</span> heigh;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>};
 </span></span></code></pre></div><h2 id=參考資料>參考資料</h2><p><a href=https://labuladong.github.io/algo/di-yi-zhan-da78c/shou-ba-sh-48c1d/er-fen-sou-ae51e>二分搜索怎么用？我又总结了套路</a><br>
 <a href=https://labuladong.github.io/algo/di-ling-zh-bfe1b/wo-xie-le--3c789/>我写了首诗，把二分搜索算法变成了默写题</a></p></div><footer class=post-footer>
 <div class=post-tags>
@@ -231,6 +270,9 @@
 <span>文章聲明： </span>本博客文章除特別聲明外，均采用 <a href=https://creativecommons.org/licenses/by-nc-sa/3.0/ target=_blank style=text-decoration:underline>CC BY-NC-SA 3.0</a>許可協議，轉載請注明出處！
 </p></div></div><div class=clear></div></div><div class=post-nav>
 <div class="post-nav-next post-nav-item">
+<a href=https://ryantokmanmokmtm.github.io/post/last-moment-in-taiwan/ rel=next title=臺灣的最後的二個月🇹🇼>
+<i class="fa fa-chevron-left"></i> 臺灣的最後的二個月🇹🇼
+</a>
 </div><div class="post-nav-prev post-nav-item">
 <a href=https://ryantokmanmokmtm.github.io/post/note-kmp/ rel=prev title="[筆記] KMP - Knuth-Morris-Pratt 演算法">
 [筆記] KMP - Knuth-Morris-Pratt 演算法
@@ -251,17 +293,17 @@
 </p></div><nav class="site-state motion-element">
 <div class="site-state-item site-state-posts">
 <a href=/post/>
-<span class=site-state-item-count>16</span>
+<span class=site-state-item-count>17</span>
 <span class=site-state-item-name>日誌</span>
 </a>
 </div><div class="site-state-item site-state-categories">
 <a href=/categories/>
-<span class=site-state-item-count>28</span>
+<span class=site-state-item-count>29</span>
 <span class=site-state-item-name>分類</span>
 </a>
 </div><div class="site-state-item site-state-tags">
 <a href=/tags/>
-<span class=site-state-item-count>51 </span>
+<span class=site-state-item-count>52 </span>
 <span class=site-state-item-name>標籤</span>
 </a>
 </div></nav><div class="links-of-author motion-element">

@@ -9,17 +9,11 @@ type = "about"
 
 <!-- 
 **Sorry about my bad English :(**   -->
-#### [個人簡歷(中)](/cv/2023/MOKTOKMAN_Resume(CH).pdf)
+#### ~~[個人簡歷(中)](/cv/2023/MOKTOKMAN_Resume(CH).pdf)~~
 #### [Resume(EN)](/cv/2023/MOKTOKMAN_Resume(EN).pdf)
 ### Introduction  
 你好~ 歡迎來到我的網站!  
 我是Jackson.tmm, 是一個從香港來到台灣讀大學的四年級學生。~~目前就讀於**長庚大學-資訊工程學系(Computer Science And Information Engineering)**~~。目前已經畢業了。我目前主要是研究學習**後端開發**的技術。  
-感興趣的領域如下:
-- 電影動畫
-- 3D建模技術
-- 後端開發
-- UI設計
-- 圖形學
 
 <!-- 
 ### More About me

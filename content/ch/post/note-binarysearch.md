@@ -47,7 +47,7 @@ int binarySearch(vector<int> arr,int value){
     while(left < right){ //not equals ,coz right = n -> ended when left == right
         int mid = left + (right - left) / 2;
         if(arr[mid] >= value) right = mid; //shrink to left
-        else if(arr[mid] > value) left = mid + 1;
+        else if(arr[mid] < value) left = mid + 1;
     }
 
     return left;
@@ -107,6 +107,66 @@ step 2:
 
 step 2: ended - i = j -> return i(8) - 1 = 7
 [1,2,3,4,4,4,4,4,5(i)(j),7]
+```
+
+### 實際例子
+[**Leetcode - 2187. Minimum Time to Complete Trips**](https://leetcode.com/problems/minimum-time-to-complete-trips/)
+
+You are given an array `time` where `time[i]` denotes the time taken by the i<sup>th</sup> bus to complete one trip.    
+
+Each bus can make multiple trips **successively**; that is, the next trip can start **immediately after** completing the current trip. Also, each bus operates independently; that is, the trips of one bus do not influence the trips of any other bus.   
+
+You are also given an integer `totalTrips`, which denotes the number of trips all buses should make in total. Return the *minimum time required for all buses to complete at least `totalTrips` trips*.  
+
+```
+example 1
+Input: time = [1,2,3], totalTrips = 5
+Output: 3
+Explanation:
+- At time t = 1, the number of trips completed by each bus are [1,0,0]. 
+  The total number of trips completed is 1 + 0 + 0 = 1.
+- At time t = 2, the number of trips completed by each bus are [2,1,0]. 
+  The total number of trips completed is 2 + 1 + 0 = 3.
+- At time t = 3, the number of trips completed by each bus are [3,1,1]. 
+  The total number of trips completed is 3 + 1 + 1 = 5.
+So the minimum time needed for all buses to complete at least 5 trips is 3.
+```
+
+```
+Input: time = [2], totalTrips = 1
+Output: 2
+Explanation:
+There is only one bus, and it will complete its first trip at t = 2.
+So the minimum time needed to complete 1 trip is 2.
+```
+
+這題給定的數組中每個數字代表的數字表示i<sup>th</sup> `Bus`完成一次`trip`所要的次數，題目要我們找出所有`Bus`總共能完成`trip time`的最少次數是多少.  
+我們看得出來這題就是要讓我們在一個區間裡面找出一個最小能達到特定值的值，所以我們可以通過Binary Search來找。  
+首先我們要先定義最小值值和最大值是多少，最小值就是`time`數組中最小能完成一次`trip`的值(*小於這個值就代表沒有一輛`Bus`可以完成啊，哈哈哈哈*)。哪最大值呢？因為我們要求的最少能夠完成`total trip`的次數，哪我們最多是不是就是最小的哪輛`Bus`跑了`total trip`那麼多次呢？(超過了這個值就一定不會是最少了～)。  
+所以區間為 `[low，low * total trip]`，然後我們就可以從這個裡面取值，取一個符合條件切最小的值即可。
+
+**題解(Solution)**
+```c++
+long long minimumTime(vector<int>& time, int totalTrips) {
+        long long min = *min_element(time.begin(),time.end());
+        long long low = min, heigh = min * totalTrips;
+
+        while(low < heigh){
+            //try to tarvel by mid speed
+            long long mid = low + (heigh - low) / 2;
+            long long total = 0;
+
+            //TODO: calculate the total time in the array 
+            for(int i = 0; i < time.size();i++) total += (mid / time[i]);
+            if(total >= totalTrips) {
+                heigh = mid; //may be the mininum time - lock it
+            }else {
+                low = mid + 1; // move forward
+            }
+        }
+        return heigh;
+    }
+};
 ```
 
 ## 參考資料

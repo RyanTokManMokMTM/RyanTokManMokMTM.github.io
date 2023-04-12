@@ -17,35 +17,29 @@
   Weight = 3
 
 [[Main]]
-  Name = "Leetcodes "
-  Pre = "code"
-  URL = "leetcodes"
+  Name = "Memories"
+  Pre = "star"
+  URL = "memories"
   Weight = 4
 
 [[Main]]
-  Name = "Notes"
-  Pre = "sticky-note-o"
-  URL = "notes"
+  Name = "Leetcodes "
+  Pre = "code"
+  URL = "leetcodes"
   Weight = 5
-  
-[[Main]]
-  Name = "Review"
-  Pre = "quote-right"
-  URL = "review"
-  Weight = 6
 
 [[Main]]
   Name = "Projects"
   Pre = "tasks"
   URL = "project"
-  Weight = 7
+  Weight = 6
 
   
 [[Main]]
   Name = "achievement"
   Pre = "trophy"
   URL = "achievement"
-  Weight = 8
+  Weight = 7
 
 [[Main]]
   Name = "resources"

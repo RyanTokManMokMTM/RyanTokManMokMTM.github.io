@@ -1,5 +1,5 @@
 ---
-title: "Longest Common SubString(最長公共子序列)"
+title: "[筆記]Longest Common SubString(最長公共子序列)"
 date: 2022-06-14T13:11:28+08:00
 draft: false
 tags:

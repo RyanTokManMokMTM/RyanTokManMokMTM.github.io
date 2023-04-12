@@ -1,5 +1,5 @@
 ---
-title: "Palindromic String(迴文字串)"
+title: "[筆記]Palindromic String(迴文字串)"
 date: 2022-06-16T12:26:03+08:00
 draft: false
 tags:

@@ -1,5 +1,5 @@
 ---
-title: "TrieTree(前綴樹/字典樹)"
+title: "[筆記]TrieTree(前綴樹/字典樹)"
 date: 2022-06-21T11:19:28+08:00
 draft: false
 tags:

@@ -1,5 +1,5 @@
 ---
-title: "Traversal Graph(圖)"
+title: "[筆記]Traversal Graph(圖)"
 date: 2022-09-08T10:34:50+08:00
 draft: true
 ---

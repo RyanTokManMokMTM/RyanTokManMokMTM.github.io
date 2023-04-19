@@ -36,6 +36,29 @@ tags:
 ![chat-app-screen](/images/chat-app/screenshot.png)
 
 ### 階段性Demo
-<video src="/videos/chat-app/demo1.mov" controls="controls" width="500" height="300"></video> 
+<video src="/videos/chat-app/demo.mp4" controls="controls" width="500" height="300"></video> 
 
-<video src="/videos/chat-app/demo.mov" controls="controls" width="500" height="300"></video> 
+<video src="/videos/chat-app/demo1.mp4" controls="controls" width="500" height="300"></video> 
+
+### 進度
+**完成**
+- 用戶登入/註冊
+- 好友添加/移除
+- 好友查詢
+- 建立群組
+- 單聊/群聊
+- 發布/移除個人限時動態
+- 查看好友限時動態
+- 限時動態留言
+- 離線消息推送(上線時推送
+  
+**通訊功能**
+- 發送文字
+- 發送圖片
+- 發送文件(doc,pdf,ppt,etc)
+- 發送限動回覆
+
+**待修復(發現問題)**
+- 限動留言聊天室資訊錯誤(發送方)
+- refresh 功能缺失
+- 限動錯誤/提醒(限動不存在,已發送留言等)

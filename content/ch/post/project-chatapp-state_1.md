@@ -35,10 +35,10 @@ tags:
 ### app 截圖
 ![chat-app-screen](/images/chat-app/screenshot.png)
 
-<!-- ### 階段性Demo
+### 階段性Demo
 <video src="/videos/chat-app/demo.mp4" controls="controls" width="500" height="300"></video> 
 
-<video src="/videos/chat-app/demo1.mp4" controls="controls" width="500" height="300"></video>  -->
+<video src="/videos/chat-app/demo1.mp4" controls="controls" width="500" height="300"></video> 
 
 ### 進度
 **完成**

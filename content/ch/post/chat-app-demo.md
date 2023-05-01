@@ -13,7 +13,7 @@ tags:
 <video src="/videos/chat-app/full-demo-1.mp4" controls="controls" width="500" height="300"></video> 
 
 ### Demo說明
-這個App的詳細介紹在[[開發者日記] 聊天通訊APP(一)](/post/project-chatapp-state_1)中已經有基本的介紹，這裡就不作過多的介紹了。  
+這個App的詳細介紹在[[開發者日記] 聊天通訊APP(一)](/post/chat-app-init)中已經有基本的介紹，這裡就不作過多的介紹了。  
 這裡主要是說明一下以上Demo中所展示的內容：
 * 用戶登入和註冊
 * 用戶資訊修改，包括上傳Avatar, Cover, 修改Status Message等

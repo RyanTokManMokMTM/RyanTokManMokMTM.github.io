@@ -10,7 +10,7 @@ type = "about"
 <!-- 
 **Sorry about my bad English :(**   -->
 #### ~~[個人簡歷(中)](/cv/2023/MOKTOKMAN_Resume(CH).pdf)~~
-#### [Resume(EN)](/cv/2023/MOKTOKMAN_Resume(EN).pdf)
+#### [Resume(EN)](/cv/2023/MOKTOKMAN_Resume(EN)-v2.pdf)
 ### Introduction  
 你好~ 歡迎來到我的網站!  
 我是Jackson.tmm, 是一個從香港來到台灣讀大學的四年級學生。~~目前就讀於**長庚大學-資訊工程學系(Computer Science And Information Engineering)**~~。目前已經畢業了。我目前主要是研究學習**後端開發**的技術。  
@@ -27,7 +27,7 @@ type = "about"
 ### A special and meaningful experience during my university
 上大學以後，也是正式開始學習程式設計的開始。可能是以前有自學過一段時間C++，學起來比較輕鬆一點。大二下的時候，很不辛*COVIN-19*疫情爆發，不能會台灣只能留在香港上網絡課程，因此，便開始了我的自學之路。由於有了學習C++的經驗以及程式語言的基礎，**便開始自我探索模式，嘗試接觸不同的領域。了解過網頁設計,後端開發,數據庫設計,Apple App開發,ML/TensorFlow基礎,甚至是其他領域的探索如遊戲開發，美術設計，3D建模等等**...這段自學探索的旅程,**貌似看上去毫無意義**(**也就是啥都學，沒有一個是精的**)。但是，**對我來說有巨大的意義**，能夠讓我更認識自己，知道自己喜歡的東西，不喜歡的東西，甚至是知道哪些學習方法是適合自己。雖然很想什麼都想要會，但是也**決定了只做自己感興趣的事情**。以下是我在這段時間所做的東西(你們應該不會嫌棄吧><)   -->
 
-**2019年 - 基於IOS的微博UI Clone**
+**2020年 - 基於IOS的微博UI Clone**
 ![netfilx](/images/weiboClone.jpg)
 
 **2020年 -第一次學習IOS開發的Demo**
@@ -59,6 +59,9 @@ type = "about"
 
 **2022年 - 電影資源社群平台App**
 ![IOS_APP](/images/ott_app/movie-app/AppImg.png)
+
+**2023年 - 通訊軟體App**
+![Chat_APP](/images/chat-app/full-app.png)
 
 ### Interest
 * 跑步，打球，說唱，唱歌，看電影，看動漫

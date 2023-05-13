@@ -15,7 +15,7 @@ tags:
 * 視頻通訊 - 待完成
 
 這次他們真的來了！！廢話少說先看視頻  
-<video src="/videos/chat-app/voice-chat.mov" controls="controls" width="500" height="300"></video> 
+<video src="/videos/chat-app/voice-chat.mp4" controls="controls" width="500" height="300"></video> 
 
 #### 說明
 雖然現在只有展示了語音通訊(Voice-chat),但是他們的工作原理其實是差不多的，就差在有沒有傳送視頻數據而已。老實說，這個功能其實言研究了2個月都不知道要從何入手，而github上的simple-demo又是UIKit的版本，所以就一直拖，一直研究。知道最近就想試試也無妨，最多也就不成功，萬一它成功了呢！於是我便開始寫，寫了1-2天，發現失敗了，哈哈哈。然後debug了一下，發現好像是沒有連接上的問題，於是又花了一整天來測試是否有成功連接，當成功連接上且文字數據傳送成功的那一刻，那個激動的心啊❤️！！！然後打開視訊，還真的成功了！！！！好開心！  

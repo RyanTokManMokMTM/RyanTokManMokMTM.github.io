@@ -4,12 +4,12 @@
 <meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta http-equiv=content-security-policy content="upgrade-insecure-requests">
-<title> [開發者日記] 聊天通訊APP - 小更新 - Jackson.tmm </title><meta name=keywords content="博客,工程師,程序員,學習,筆記,技術,分析,後端,生活">
+<title> [開發者日記] 聊天通訊APP - RTC小更新 - Jackson.tmm </title><meta name=keywords content="博客,工程師,程序員,學習,筆記,技術,分析,後端,生活">
 <meta name=author content="jackson.tmm">
-<meta property="og:title" content="[開發者日記] 聊天通訊APP - 小更新">
+<meta property="og:title" content="[開發者日記] 聊天通訊APP - RTC小更新">
 <meta property="og:site_name" content="Jackson.tmm">
 <meta property="og:image" content="/images/favicon.png">
-<meta name=title content="[開發者日記] 聊天通訊APP - 小更新 - Jackson.tmm">
+<meta name=title content="[開發者日記] 聊天通訊APP - RTC小更新 - Jackson.tmm">
 <meta name=description content="歡迎來的Jackson.tmm的空間站。個人主要專注於Web開發，程序開發，以及學習上。">
 <link rel="shortcut icon" href=/images/favicon.png>
 <link rel=apple-touch-icon href=/images/avatar.jpg>
@@ -93,7 +93,7 @@
 <header class=post-header>
 <h1 class=post-title itemprop="name headline">
 <a class=post-title-link href=https://ryantokmanmokmtm.github.io/post/chat-app-voice-chat/ itemprop=url>
-[開發者日記] 聊天通訊APP - 小更新
+[開發者日記] 聊天通訊APP - RTC小更新
 </a>
 </h1><div class=post-meta>
 <span class=post-time>
@@ -124,7 +124,7 @@
 |
 <i class="fa fa-file-word-o fa-fw"></i>
 <span class=post-meta-item-text>字數：</span>
-<span class=leancloud-world-count>703 字</span>
+<span class=leancloud-world-count>841 字</span>
 </span>
 <span>
 |
@@ -132,7 +132,7 @@
 <span class=post-meta-item-text>閱讀：</span>
 <span class=leancloud-view-count>2分鐘</span>
 </span>
-<span id=/post/chat-app-voice-chat/ class=leancloud_visitors data-flag-title="[開發者日記] 聊天通訊APP - 小更新">
+<span id=/post/chat-app-voice-chat/ class=leancloud_visitors data-flag-title="[開發者日記] 聊天通訊APP - RTC小更新">
 |
 <i class="fa fa-binoculars fa-fw"></i>
 <span class=post-meta-item-text>閱讀次數：</span>
@@ -140,16 +140,21 @@
 </span>
 </div></header><div class=post-body itemprop=articleBody>
 <h4 id=簡介>簡介</h4><p>我在<a href=/post/chat-app-init>[開發者日記] 聊天通訊APP(一)</a>中有提及過這app會有</p><ul>
-<li>語音通訊</li><li>視頻通訊 - 待完成</li></ul><p>這次他們真的來了！！廢話少說先看視頻<br>
+<li>語音通訊</li><li>視頻通訊</li></ul><p>這次他們真的來了！！廢話少說先看視頻<br>
 <video src=/videos/chat-app/voice-chat.mp4 controls width=500 height=300></video></p><h4 id=說明>說明</h4><p>雖然現在只有展示了語音通訊(Voice-chat),但是他們的工作原理其實是差不多的，就差在有沒有傳送視頻數據而已。老實說，這個功能其實言研究了2個月都不知道要從何入手，而github上的simple-demo又是UIKit的版本，所以就一直拖，一直研究。知道最近就想試試也無妨，最多也就不成功，萬一它成功了呢！於是我便開始寫，寫了1-2天，發現失敗了，哈哈哈。然後debug了一下，發現好像是沒有連接上的問題，於是又花了一整天來測試是否有成功連接，當成功連接上且文字數據傳送成功的那一刻，那個激動的心啊❤️！！！然後打開視訊，還真的成功了！！！！好開心！</p><p>而我這裡用到是WebRTC這個框架。根據網絡上的文章以及我的理解說：要使用P2P連結，就要先繞過NAT，知道自己的Public IP，並通過STUN/TRUN Server來操作！哪這裡我是怎麼做的呢？</p><ul>
-<li>首先，要先跟另外一方交換SDP(Session Description Protocal),這裡的資訊包括很多，例如攝像機的sepc，解碼的資訊等等，有興趣可以自行google！而這裡我是透過Websocket 進行交換的。發起人發送offer的SDP，而接收人返回answer的SDP。這樣設備的資訊就交換完成了</li><li>接下來就是交換IP和進行連結,這邊我是有過google的public 的ICEServer，並把Ice Server 返回回來的candidate資訊也交換一樣，然後就可以建立P2P連結了！</li></ul><p>以上便是解決這個問題的心得，如果之後還有什麼心得，會繼續更新！</p></div><footer class=post-footer>
+<li>首先，要先跟另外一方交換SDP(Session Description Protocal),這裡的資訊包括很多，例如攝像機的sepc，解碼的資訊等等，有興趣可以自行google！而這裡我是透過Websocket 進行交換的。發起人發送offer的SDP，而接收人返回answer的SDP。這樣設備的資訊就交換完成了</li><li>接下來就是交換IP和進行連結,這邊我是有過google的public 的ICEServer，並把Ice Server 返回回來的candidate資訊也交換一樣，然後就可以建立P2P連結了！</li></ul><p>以上便是解決這個問題的心得，如果之後還有什麼心得，會繼續更新！</p><hr>
+<h4 id=更新>更新</h4><p><strong>視頻通訊 - Video Chat</strong> 這邊就不拍Demo視頻了🤣</p><p><img src=/images/chat-app/video-chat.jpg alt=VideoChat></p><ul>
+<li>支援Mic/Speaker/Video開啟與關閉，鏡頭與切換</li></ul><p>其實視訊的部分也只是Voice Chat開啟了視訊數據傳輸而已啦，哈哈哈！其他部分都一樣的呢。這邊就不多說了。</p><p><strong>這裡基本上所有功能都實現了，剩下就只是測試和部署。讚</strong></p><h4 id=參考資料>參考資料</h4><p><a href=https://webrtc.org/>WebRTC</a><br>
+<a href=https://github.com/stasel/WebRTC-iOS>Swift-RTC</a><br>
+<a href=https://github.com/luqigit/WebRTC-iOS-SwiftUI>SwiftUI-RTC</a><br>
+<a href=https://ithelp.ithome.com.tw/articles/10236998>何謂 WebRTC</a></p></div><footer class=post-footer>
 <div class=post-tags>
 <a href=/tags/side-project rel=tag title=side-project>#side-project#</a>
 </div><div class=post-nav>
 <div class=article-copyright>
 <div class=article-copyright-info>
 <p>
-<span>文章聲明：</span>[開發者日記] 聊天通訊APP - 小更新
+<span>文章聲明：</span>[開發者日記] 聊天通訊APP - RTC小更新
 </p><p>
 <span>文章連接：</span>https://ryantokmanmokmtm.github.io/post/chat-app-voice-chat/
 </p><p>

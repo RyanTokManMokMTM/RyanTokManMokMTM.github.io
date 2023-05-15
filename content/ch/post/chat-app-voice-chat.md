@@ -1,5 +1,5 @@
 ---
-title: "[開發者日記] 聊天通訊APP - 小更新"
+title: "[開發者日記] 聊天通訊APP - RTC小更新"
 date: 2023-05-13T23:58:58+08:00
 draft: false
 categories:
@@ -12,7 +12,7 @@ tags:
 #### 簡介
 我在[[開發者日記] 聊天通訊APP(一)](/post/chat-app-init)中有提及過這app會有
 * 語音通訊
-* 視頻通訊 - 待完成
+* 視頻通訊
 
 這次他們真的來了！！廢話少說先看視頻  
 <video src="/videos/chat-app/voice-chat.mp4" controls="controls" width="500" height="300"></video> 
@@ -25,3 +25,21 @@ tags:
 * 接下來就是交換IP和進行連結,這邊我是有過google的public 的ICEServer，並把Ice Server 返回回來的candidate資訊也交換一樣，然後就可以建立P2P連結了！
 
 以上便是解決這個問題的心得，如果之後還有什麼心得，會繼續更新！
+
+--- 
+#### 更新  
+
+**視頻通訊 - Video Chat** 這邊就不拍Demo視頻了🤣
+
+![VideoChat](/images/chat-app/video-chat.jpg)
+- 支援Mic/Speaker/Video開啟與關閉，鏡頭與切換
+
+其實視訊的部分也只是Voice Chat開啟了視訊數據傳輸而已啦，哈哈哈！其他部分都一樣的呢。這邊就不多說了。
+
+**這裡基本上所有功能都實現了，剩下就只是測試和部署。讚**
+
+#### 參考資料
+[WebRTC](https://webrtc.org/)  
+[Swift-RTC](https://github.com/stasel/WebRTC-iOS)  
+[SwiftUI-RTC](https://github.com/luqigit/WebRTC-iOS-SwiftUI)  
+[何謂 WebRTC](https://ithelp.ithome.com.tw/articles/10236998)  

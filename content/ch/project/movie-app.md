@@ -46,8 +46,6 @@ author: jackson.tmm
 * K8S
 * AWS
 
-### 進度
-* 用戶zhu'ch
 
 
 ### App 測試影片

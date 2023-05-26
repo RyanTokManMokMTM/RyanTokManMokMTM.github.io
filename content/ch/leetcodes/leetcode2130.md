@@ -1,5 +1,5 @@
 ---
-title: "Leetcode2130"
+title: "[Leetcode] Maximum Twin Sum of a Linked List(M) "
 date: 2023-05-18T15:44:17+08:00
 draft: false
 tags:
@@ -8,7 +8,8 @@ tags:
 categories:
     - leetcode
 ---
-## LeetCode 341 - Flatten Nested List Iterator
+## LeetCode 2130 - Maximum Twin Sum of a Linked List
+
 In a linked list of size n, where n is even, the ith node (0-indexed) of the linked list is known as the twin of the (n-1-i)th node, if 0 <= i <= (n / 2) - 1.
 
 For example, if n = 4, then node 0 is the twin of node 3, and node 1 is the twin of node 2. These are the only nodes with twins for n = 4.

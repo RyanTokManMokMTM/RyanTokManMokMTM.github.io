@@ -1,7 +1,12 @@
 ---
 title: "[Development Diary] Real Time Communication APP - Sicker Updated"
 date: 2023-05-24T21:32:47+08:00
-draft: true
+draft: false
+categories:
+    - dev-diary
+    - side-project
+tags: 
+    - side-project  
 ---
 
 ## Intro

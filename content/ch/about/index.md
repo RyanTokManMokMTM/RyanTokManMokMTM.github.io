@@ -36,20 +36,27 @@ type = "about"
 **2020年 - 基於IOS的Netfilx UI Clone**
 ![netfilx](/images/netfilxClone.jpg)
 
-**2020年 - 第一次學遊戲開發的作品**
-![game](/images/game.jpg)
+**2020年 - 第一次嘗試自學建模的作品 - 雷神之錘**
+![shield](/images/hammer.jpg)
 
-**2020年 - 第一次學建模的作品**
+**2020年 - 第二次嘗試自學建模的作品 - 美國隊長盾**
 ![shield](/images/shield.jpg)
+![shield2](/images/shield2.jpg)
 
 **2020年 - 送給自己20歲的生日禮物的一顆排球模型** 
 ![volleyball](/images/20-birth.jpg)
+
+**2020年 - 香港霓虹燈** 
+![volleyball](/images/hongkong-light.jpg)
 
 **2020年 - 模擬水還是很好玩的(渲染了12小時 (◑‿◐) )**
 ![liquid-sim](/images/liquid.jpg)
 
 **2020年 - 燈籠魚(Lophiiformes)作品**
 ![Lophiiformes](/images/Lophiiformes.jpg)
+
+**2020年 - 第一次學遊戲開發的作品**
+![game](/images/game.jpg)
 
 **2021年 - 第一次網絡課學習建模的作業**
 ![game axe](/images/axe.png)

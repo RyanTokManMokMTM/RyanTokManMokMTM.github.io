@@ -4,12 +4,12 @@
 <meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta http-equiv=content-security-policy content="upgrade-insecure-requests">
-<title> [Development Diary] Real Time Communication APP - Sicker Updated - Jackson.tmm </title><meta name=keywords content="博客,工程師,程序員,學習,筆記,技術,分析,後端,生活">
+<title> [Development Diary] Real Time Communication APP - Sicker Updated(I) - Jackson.tmm </title><meta name=keywords content="博客,工程師,程序員,學習,筆記,技術,分析,後端,生活">
 <meta name=author content="jackson.tmm">
-<meta property="og:title" content="[Development Diary] Real Time Communication APP - Sicker Updated">
+<meta property="og:title" content="[Development Diary] Real Time Communication APP - Sicker Updated(I)">
 <meta property="og:site_name" content="Jackson.tmm">
 <meta property="og:image" content="/images/favicon.png">
-<meta name=title content="[Development Diary] Real Time Communication APP - Sicker Updated - Jackson.tmm">
+<meta name=title content="[Development Diary] Real Time Communication APP - Sicker Updated(I) - Jackson.tmm">
 <meta name=description content="歡迎來的Jackson.tmm的空間站。個人主要專注於Web開發，程序開發，以及學習上。">
 <link rel="shortcut icon" href=/images/favicon.png>
 <link rel=apple-touch-icon href=/images/avatar.jpg>
@@ -19,7 +19,6 @@
 <link href=/css/main.css rel=stylesheet type=text/css>
 <link href=/css/syntax.css rel=stylesheet type=text/css>
 <script src=https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js></script> <script>mermaid.initialize({startOnLoad:!0,securityLevel:"loose"})</script>
-<script src=https://widget.chatalog.ai/chatalog-sdk.min.js app-id=uxeM3jRmENWpwNLfn9Fl position=bottom-left language=zh-hk defer></script>
 </head><link href=/css/pio.css rel=stylesheet type=text/css>
 <body itemscope itemtype=http://schema.org/WebPage lang=zh-hans>
 <div class="container one-collumn sidebar-position-left page-home">
@@ -94,7 +93,7 @@
 <header class=post-header>
 <h1 class=post-title itemprop="name headline">
 <a class=post-title-link href=https://ryantokmanmokmtm.github.io/post/chat-app-sticker-updated/ itemprop=url>
-[Development Diary] Real Time Communication APP - Sicker Updated
+[Development Diary] Real Time Communication APP - Sicker Updated(I)
 </a>
 </h1><div class=post-meta>
 <span class=post-time>
@@ -133,7 +132,7 @@
 <span class=post-meta-item-text>閱讀：</span>
 <span class=leancloud-view-count>2分鐘</span>
 </span>
-<span id=/post/chat-app-sticker-updated/ class=leancloud_visitors data-flag-title="[Development Diary] Real Time Communication APP - Sicker Updated">
+<span id=/post/chat-app-sticker-updated/ class=leancloud_visitors data-flag-title="[Development Diary] Real Time Communication APP - Sicker Updated(I)">
 |
 <i class="fa fa-binoculars fa-fw"></i>
 <span class=post-meta-item-text>閱讀次數：</span>
@@ -145,7 +144,7 @@
 <a href=/post/chat-app-demo/>ChatApp(II)</a><br>
 <a href=/post/chat-app-update/>ChatApp(III)</a><br>
 <a href=/post/chat-app-final/>ChatApp(IV)</a><br>
-<a href=/post/chat-app-final/>ChatApp(V)</a></p><p>Here is the demonstration video about the sicker feature.</p><p><video src=/videos/chat-app/sticker-demo.mp4 controls width=500></video></p><p>In the demonstration video, you can see that the sticker feature is similar to any other Real-time communication app on the internet. User be able to access all available stickers that we are provided and send it to another user or group. But the problem is how can we provide sticker resources to user and where are the sticker come from?</p><p>To solve the first problem, we can create a sticker resource by uploading all the necessary image to the server before client or user be able to access it. Each created sticker resources will be assigned a unique identifier as its stickerID. All resources releated to a same sticker id will be renamed in a standardized format for easy access. <code>stickerID_index.format</code>.</p><p>I designed 2 apis for creating and fetching sticker.</p><blockquote>
+<a href=/post/chat-app-voice-chat/>ChatApp(V)</a></p><p>Here is the demonstration video about the sicker feature.</p><p><video src=/videos/chat-app/sticker-demo.mp4 controls width=500></video></p><p>In the demonstration video, you can see that the sticker feature is similar to any other Real-time communication app on the internet. User be able to access all available stickers that we are provided and send it to another user or group. But the problem is how can we provide sticker resources to user and where are the sticker come from?</p><p>To solve the first problem, we can create a sticker resource by uploading all the necessary image to the server before client or user be able to access it. Each created sticker resources will be assigned a unique identifier as its stickerID. All resources releated to a same sticker id will be renamed in a standardized format for easy access. <code>stickerID_index.format</code>.</p><p>I designed 2 apis for creating and fetching sticker.</p><blockquote>
 <p>POST /api/v1/sticker -> To create a group of sticker and upload all related sticker to the server
 GET /api/v1/sticker/:id -> To obtain a related sticker resources with a given id</p></blockquote><p>To solve the second problem, for now i just simply download the sticker form Line by Web crawler <strong>(there is illegal problem if the app is published xD)</strong>. So the sticker is just for testing!</p><h2 id=summary>summary</h2><p>A sticker is an image in png format. To implement the sticker feature ,we just need to obtain a sticker&rsquo;s path and send it to the recevier,similar to sending a normal image. However, there is no need to upload the image to server because the sticker resources are already saved on server.</p><p>That is all what i want to share today!</p><p><em>Sorry about my bad english - I&rsquo;am still improving my english! ^^</em></p></div><footer class=post-footer>
 <div class=post-tags>
@@ -154,7 +153,7 @@ GET /api/v1/sticker/:id -> To obtain a related sticker resources with a given id
 <div class=article-copyright>
 <div class=article-copyright-info>
 <p>
-<span>文章聲明：</span>[Development Diary] Real Time Communication APP - Sicker Updated
+<span>文章聲明：</span>[Development Diary] Real Time Communication APP - Sicker Updated(I)
 </p><p>
 <span>文章連接：</span>https://ryantokmanmokmtm.github.io/post/chat-app-sticker-updated/
 </p><p>
@@ -186,7 +185,7 @@ GET /api/v1/sticker/:id -> To obtain a related sticker resources with a given id
 </p></div><nav class="site-state motion-element">
 <div class="site-state-item site-state-posts">
 <a href=/post/>
-<span class=site-state-item-count>27</span>
+<span class=site-state-item-count>30</span>
 <span class=site-state-item-name>日誌</span>
 </a>
 </div><div class="site-state-item site-state-categories">
@@ -232,11 +231,11 @@ Linkedin
 <li class=tagcloud-of-blogroll-item>
 <a href=/tags/array>Array</a>
 </li><li class=tagcloud-of-blogroll-item>
+<a href=/tags/side-project>Side project</a>
+</li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/string>String</a>
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/recursion>Recursion</a>
-</li><li class=tagcloud-of-blogroll-item>
-<a href=/tags/side-project>Side project</a>
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/binary-tree>Binary tree</a>
 </li><li class=tagcloud-of-blogroll-item>

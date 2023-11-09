@@ -19,7 +19,6 @@
 <link href=/css/main.css rel=stylesheet type=text/css>
 <link href=/css/syntax.css rel=stylesheet type=text/css>
 <script src=https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js></script> <script>mermaid.initialize({startOnLoad:!0,securityLevel:"loose"})</script>
-<script src=https://widget.chatalog.ai/chatalog-sdk.min.js app-id=uxeM3jRmENWpwNLfn9Fl position=bottom-left language=zh-hk defer></script>
 </head><link href=/css/pio.css rel=stylesheet type=text/css>
 <body itemscope itemtype=http://schema.org/WebPage lang=zh-hans>
 <div class="container one-collumn sidebar-position-left page-home">
@@ -91,6 +90,171 @@
 <div id=content class=content>
 <section id=posts class=posts-expand>
 <article class="post post-type-normal" itemscope itemtype=http://schema.org/Article>
+<header class=post-header>
+<h1 class=post-title itemprop="name headline">
+<a class=post-title-link href=https://ryantokmanmokmtm.github.io/post/token-bucket-intro/ itemprop=url>
+[Note]Token Bucket algorithm introduction and play with golang rate Limiter
+</a>
+</h1><div class=post-meta>
+<span class=post-time>
+<i class="fa fa-calendar-o fa-fw"></i>
+<span class=post-meta-item-text>時間：</span>
+<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2022-03-29">
+2022-03-29
+</time>
+</span>
+<span class=post-category>
+&nbsp; | &nbsp;
+<i class="fa fa-folder-o fa-fw"></i>
+<span class=post-meta-item-text>分類：</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/golang itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>golang</span>
+</a>
+&nbsp;
+</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/backend itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>backend</span>
+</a>
+&nbsp;
+</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/note itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>note</span>
+</a>
+&nbsp;
+</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/algorithm itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>algorithm</span>
+</a>
+&nbsp;
+</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/system-design itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>system design</span>
+</a>
+&nbsp;
+</span>
+</span>
+<span>
+|
+<i class="fa fa-file-word-o fa-fw"></i>
+<span class=post-meta-item-text>字數：</span>
+<span class=leancloud-world-count>1953 字</span>
+</span>
+<span>
+|
+<i class="fa fa-eye fa-fw"></i>
+<span class=post-meta-item-text>閱讀：</span>
+<span class=leancloud-view-count>4分鐘</span>
+</span>
+</div></header><div class=post-body itemprop=articleBody>
+Token Bucket(令牌桶算法) 什麼是Token Bucket 呢? 簡單來說就是運用Token Bucket的系統會以一個設定的速率往桶子(Bucket)裡面丟
+</div><div class="post-more-link text-center">
+<a class=btn href=https://ryantokmanmokmtm.github.io/post/token-bucket-intro/ rel=contents>
+閱讀全文 &#187;
+</a>
+</div><footer class=post-footer><div class=post-eof></div></footer></article><article class="post post-type-normal" itemscope itemtype=http://schema.org/Article>
+<header class=post-header>
+<h1 class=post-title itemprop="name headline">
+<a class=post-title-link href=https://ryantokmanmokmtm.github.io/post/creational-factory/ itemprop=url>
+[Note]Creational-Factory
+</a>
+</h1><div class=post-meta>
+<span class=post-time>
+<i class="fa fa-calendar-o fa-fw"></i>
+<span class=post-meta-item-text>時間：</span>
+<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2022-03-27">
+2022-03-27
+</time>
+</span>
+<span class=post-category>
+&nbsp; | &nbsp;
+<i class="fa fa-folder-o fa-fw"></i>
+<span class=post-meta-item-text>分類：</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/programming itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>programming</span>
+</a>
+&nbsp;
+</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/design-pattern itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>design pattern</span>
+</a>
+&nbsp;
+</span>
+</span>
+<span>
+|
+<i class="fa fa-file-word-o fa-fw"></i>
+<span class=post-meta-item-text>字數：</span>
+<span class=leancloud-world-count>931 字</span>
+</span>
+<span>
+|
+<i class="fa fa-eye fa-fw"></i>
+<span class=post-meta-item-text>閱讀：</span>
+<span class=leancloud-view-count>2分鐘</span>
+</span>
+</div></header><div class=post-body itemprop=articleBody>
+什麼是Factory(工廠)呢? 定義:建立一個接口,讓子類自己決定實現哪一個Factory,其重點是繼承了Simple Factory Patterns的優
+</div><div class="post-more-link text-center">
+<a class=btn href=https://ryantokmanmokmtm.github.io/post/creational-factory/ rel=contents>
+閱讀全文 &#187;
+</a>
+</div><footer class=post-footer><div class=post-eof></div></footer></article><article class="post post-type-normal" itemscope itemtype=http://schema.org/Article>
+<header class=post-header>
+<h1 class=post-title itemprop="name headline">
+<a class=post-title-link href=https://ryantokmanmokmtm.github.io/post/creational-simple-factory/ itemprop=url>
+[Note]Creational-Simple Factory
+</a>
+</h1><div class=post-meta>
+<span class=post-time>
+<i class="fa fa-calendar-o fa-fw"></i>
+<span class=post-meta-item-text>時間：</span>
+<time itemprop=dateCreated datetime=2016-03-22T13:04:35+08:00 content="2022-03-27">
+2022-03-27
+</time>
+</span>
+<span class=post-category>
+&nbsp; | &nbsp;
+<i class="fa fa-folder-o fa-fw"></i>
+<span class=post-meta-item-text>分類：</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/programming itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>programming</span>
+</a>
+&nbsp;
+</span>
+<span itemprop=about itemscope itemtype=https://schema.org/Thing>
+<a href=/categories/design-pattern itemprop=url rel=index style=text-decoration:underline>
+<span itemprop=name>design pattern</span>
+</a>
+&nbsp;
+</span>
+</span>
+<span>
+|
+<i class="fa fa-file-word-o fa-fw"></i>
+<span class=post-meta-item-text>字數：</span>
+<span class=leancloud-world-count>550 字</span>
+</span>
+<span>
+|
+<i class="fa fa-eye fa-fw"></i>
+<span class=post-meta-item-text>閱讀：</span>
+<span class=leancloud-view-count>2分鐘</span>
+</span>
+</div></header><div class=post-body itemprop=articleBody>
+什麼是Simple Factory(簡單工廠)呢? 簡單而言就是: 由一個工廠來生產全部產品 定義:建立一個接口,讓子類自己決定實現哪一個Facto
+</div><div class="post-more-link text-center">
+<a class=btn href=https://ryantokmanmokmtm.github.io/post/creational-simple-factory/ rel=contents>
+閱讀全文 &#187;
+</a>
+</div><footer class=post-footer><div class=post-eof></div></footer></article><article class="post post-type-normal" itemscope itemtype=http://schema.org/Article>
 <header class=post-header>
 <h1 class=post-title itemprop="name headline">
 <a class=post-title-link href=https://ryantokmanmokmtm.github.io/post/design-pattern-princeple/ itemprop=url>
@@ -231,7 +395,7 @@ The Structure of JWT JWT consists of three parts including:
 </p></div><nav class="site-state motion-element">
 <div class="site-state-item site-state-posts">
 <a href=/post/>
-<span class=site-state-item-count>27</span>
+<span class=site-state-item-count>30</span>
 <span class=site-state-item-name>日誌</span>
 </a>
 </div><div class="site-state-item site-state-categories">
@@ -277,11 +441,11 @@ Linkedin
 <li class=tagcloud-of-blogroll-item>
 <a href=/tags/array>Array</a>
 </li><li class=tagcloud-of-blogroll-item>
+<a href=/tags/side-project>Side project</a>
+</li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/string>String</a>
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/recursion>Recursion</a>
-</li><li class=tagcloud-of-blogroll-item>
-<a href=/tags/side-project>Side project</a>
 </li><li class=tagcloud-of-blogroll-item>
 <a href=/tags/binary-tree>Binary tree</a>
 </li><li class=tagcloud-of-blogroll-item>

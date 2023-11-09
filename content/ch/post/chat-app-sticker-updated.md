@@ -1,5 +1,5 @@
 ---
-title: "[Development Diary] Real Time Communication APP - Sicker Updated"
+title: "[Development Diary] Real Time Communication APP - Sicker Updated(I)"
 date: 2023-05-24T21:32:47+08:00
 draft: false
 categories:

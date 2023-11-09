@@ -76,3 +76,14 @@ Chat-App主要會包含一下之功能
 #### 開發階段Demo #6
 <video src="/videos/chat-app/voice-chat.mp4" controls="controls" width="500" height="300"></video> 
 
+#### 開發階段Demo #7
+<video src="/videos/chat-app/instance-story-alignment.mp4" controls="controls" width="500" height="300"></video> 
+
+#### 開發階段Demo #8
+<video src="/videos/chat-app/instance-story-editor.mp4" controls="controls" width="500" height="300"></video> 
+
+#### 開發階段Demo #9
+<video src="/videos/chat-app/instance-story-view.mp4" controls="controls" width="500" height="300"></video> 
+
+#### 開發階段Demo #10
+<video src="/videos/chat-app/sticker-shop.mp4" controls="controls" width="500" height="300"></video> 

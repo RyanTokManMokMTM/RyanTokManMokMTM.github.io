@@ -40,7 +40,11 @@ Chat App - Backend
 開發階段Demo #3
 開發階段Demo #4
 開發階段Demo #5
-開發階段Demo #6</content></entry><entry><title>[開發者日記] 聊天通訊APP - RTC小更新</title><url>https://ryantokmanmokmtm.github.io/post/chat-app-voice-chat/</url><categories><category>dev-diary</category><category>side-project</category></categories><tags><tag>side-project</tag></tags><content type="html"> 簡介 我在[開發者日記] 聊天通訊APP(一)中有提及過這app會有
+開發階段Demo #6
+開發階段Demo #7
+開發階段Demo #8
+開發階段Demo #9
+開發階段Demo #10</content></entry><entry><title>[開發者日記] 聊天通訊APP - RTC小更新</title><url>https://ryantokmanmokmtm.github.io/post/chat-app-voice-chat/</url><categories><category>dev-diary</category><category>side-project</category></categories><tags><tag>side-project</tag></tags><content type="html"> 簡介 我在[開發者日記] 聊天通訊APP(一)中有提及過這app會有
 語音通訊 視頻通訊 這次他們真的來了！！廢話少說先看視頻
 說明 雖然現在只有展示了語音通訊(Voice-chat),但是他們的工作原理其實是差不多的，就差在有沒有傳送視頻數據而已。老實說，這個功能其實言研究了2個月都不知道要從何入手，而github上的simple-demo又是UIKit的版本，所以就一直拖，一直研究。知道最近就想試試也無妨，最多也就不成功，萬一它成功了呢！於是我便開始寫，寫了1-2天，發現失敗了，哈哈哈。然後debug了一下，發現好像是沒有連接上的問題，於是又花了一整天來測試是否有成功連接，當成功連接上且文字數據傳送成功的那一刻，那個激動的心啊❤️！！！然後打開視訊，還真的成功了！！！！好開心！
 而我這裡用到是WebRTC這個框架。根據網絡上的文章以及我的理解說：要使用P2P連結，就要先繞過NAT，知道自己的Public IP，並通過STUN/TRUN Server來操作！哪這裡我是怎麼做的呢？

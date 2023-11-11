@@ -1,4 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>[Development Diary] Real Time Communication APP - Story updated(III)</title><url>https://ryantokmanmokmtm.github.io/post/chat-app-story-view-updated/</url><categories><category>dev-diary</category><category>side-project</category></categories><tags><tag>side-project</tag></tags><content type="html"> Intro If you want to checkout what is this project about, please go through articles below.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>[Development Diary] Real Time Communication APP - Sicker Updated(II)</title><url>https://ryantokmanmokmtm.github.io/post/chat-app-sticker-shop-updated/</url><categories><category>dev-diary</category><category>side-project</category></categories><tags><tag>side-project</tag></tags><content type="html"> Intro If you want to checkout what is this project about, please go through articles below.
+ChatApp(I)
+ChatApp(II)
+ChatApp(III)
+ChatApp(IV)
+ChatApp(V)
+ChatApp(VI)
+ChatApp(Ⅶ)
+ChatApp(Ⅷ)
+Demo Video
+TODO And Description As I mentioned in this article, I&rsquo;ve added a new feature about stickers, which is able to use the provided sticker resources in the chat. But that is not enough and is not flexible for the user. So, I&rsquo;ve developed some more about the sticker feature.
+First, due to the fact that a user can only use stickers that are provided by ADMIN, the user isn&rsquo;t allowed to add any other sticker resources without ADMIN. And also, all the users in the app have the same stickers, so there are no different stickers for different users. Therefore, I added a sticker shop to the app that allows users to choose what sticker they want to use.
+Second, in the previous version, users accessed sticker resources via API to fetch the data,which wasn&rsquo;t effective to fetch the same resources frequently. So, I added a feature that requires users to download the stickers to their devices before they can use them. Once the user has downloaded the sticker resources, the downloaded resources can be shared across different accounts on the same device if the account has the same sticker.
+Summary In this version, I have updated a few things about the sticker feature.
+Sticker Shop for users adding their favorite sticker to their account:(Sticker Shop's sticker can now only be added by API) Download the sticker locally and share the same resources across different accounts on the same devices. That the ends of my sharing, thanks you for your reading time ^^, see ya!</content></entry><entry><title>[Development Diary] Real Time Communication APP - Story updated(III)</title><url>https://ryantokmanmokmtm.github.io/post/chat-app-story-view-updated/</url><categories><category>dev-diary</category><category>side-project</category></categories><tags><tag>side-project</tag></tags><content type="html"> Intro If you want to checkout what is this project about, please go through articles below.
 ChatApp(I)
 ChatApp(II)
 ChatApp(III)
@@ -52,7 +66,6 @@ ChatApp(II)
 ChatApp(III)
 ChatApp(IV)
 ChatApp(V)
-Here is the demonstration video about the sicker feature.
 In the demonstration video, you can see that the sticker feature is similar to any other Real-time communication app on the internet. User be able to access all available stickers that we are provided and send it to another user or group. But the problem is how can we provide sticker resources to user and where are the sticker come from?
 To solve the first problem, we can create a sticker resource by uploading all the necessary image to the server before client or user be able to access it. Each created sticker resources will be assigned a unique identifier as its stickerID. All resources releated to a same sticker id will be renamed in a standardized format for easy access. stickerID_index.format.
 I designed 2 apis for creating and fetching sticker.

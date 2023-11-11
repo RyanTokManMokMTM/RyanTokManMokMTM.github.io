@@ -124,7 +124,7 @@
 |
 <i class="fa fa-file-word-o fa-fw"></i>
 <span class=post-meta-item-text>字數：</span>
-<span class=leancloud-world-count>318 字</span>
+<span class=leancloud-world-count>309 字</span>
 </span>
 <span>
 |
@@ -144,7 +144,7 @@
 <a href=/post/chat-app-demo/>ChatApp(II)</a><br>
 <a href=/post/chat-app-update/>ChatApp(III)</a><br>
 <a href=/post/chat-app-final/>ChatApp(IV)</a><br>
-<a href=/post/chat-app-voice-chat/>ChatApp(V)</a></p><p>Here is the demonstration video about the sicker feature.</p><p><video src=/videos/chat-app/sticker-demo.mp4 controls width=500></video></p><p>In the demonstration video, you can see that the sticker feature is similar to any other Real-time communication app on the internet. User be able to access all available stickers that we are provided and send it to another user or group. But the problem is how can we provide sticker resources to user and where are the sticker come from?</p><p>To solve the first problem, we can create a sticker resource by uploading all the necessary image to the server before client or user be able to access it. Each created sticker resources will be assigned a unique identifier as its stickerID. All resources releated to a same sticker id will be renamed in a standardized format for easy access. <code>stickerID_index.format</code>.</p><p>I designed 2 apis for creating and fetching sticker.</p><blockquote>
+<a href=/post/chat-app-voice-chat/>ChatApp(V)</a></p><p><video src=/videos/chat-app/sticker-demo.mp4 controls width=500></video></p><p>In the demonstration video, you can see that the sticker feature is similar to any other Real-time communication app on the internet. User be able to access all available stickers that we are provided and send it to another user or group. But the problem is how can we provide sticker resources to user and where are the sticker come from?</p><p>To solve the first problem, we can create a sticker resource by uploading all the necessary image to the server before client or user be able to access it. Each created sticker resources will be assigned a unique identifier as its stickerID. All resources releated to a same sticker id will be renamed in a standardized format for easy access. <code>stickerID_index.format</code>.</p><p>I designed 2 apis for creating and fetching sticker.</p><blockquote>
 <p>POST /api/v1/sticker -> To create a group of sticker and upload all related sticker to the server
 GET /api/v1/sticker/:id -> To obtain a related sticker resources with a given id</p></blockquote><p>To solve the second problem, for now i just simply download the sticker form Line by Web crawler <strong>(there is illegal problem if the app is published xD)</strong>. So the sticker is just for testing!</p><h2 id=summary>summary</h2><p>A sticker is an image in png format. To implement the sticker feature ,we just need to obtain a sticker&rsquo;s path and send it to the recevier,similar to sending a normal image. However, there is no need to upload the image to server because the sticker resources are already saved on server.</p><p>That is all what i want to share today!</p><p><em>Sorry about my bad english - I&rsquo;am still improving my english! ^^</em></p></div><footer class=post-footer>
 <div class=post-tags>
@@ -185,7 +185,7 @@ GET /api/v1/sticker/:id -> To obtain a related sticker resources with a given id
 </p></div><nav class="site-state motion-element">
 <div class="site-state-item site-state-posts">
 <a href=/post/>
-<span class=site-state-item-count>30</span>
+<span class=site-state-item-count>31</span>
 <span class=site-state-item-name>日誌</span>
 </a>
 </div><div class="site-state-item site-state-categories">

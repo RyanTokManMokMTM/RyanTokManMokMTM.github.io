@@ -17,8 +17,6 @@ I won't mention much about the project again, if you're interested in what is th
 [ChatApp(IV)](/post/chat-app-final/)  
 [ChatApp(V)](/post/chat-app-voice-chat/)  
 
-Here is the demonstration video about the sicker feature. 
-
 <video src="/videos/chat-app/sticker-demo.mp4" controls="controls" width="500"></video> 
 
 In the demonstration video, you can see that the sticker feature is similar to any other Real-time communication app on the internet. User be able to access all available stickers that we are provided and send it to another user or group. But the problem is how can we provide sticker resources to user and where are the sticker come from?

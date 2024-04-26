@@ -1,0 +1,799 @@
+<!DOCTYPE HTML>
+<html lang="zh-tw" dir="zh">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  <title> [筆記]Traversal Graph(圖) - Jackson.tmm </title>
+  
+  <meta name="keywords" content="博客, 工程師, 程序員, 學習, 筆記, 技術, 分析, 後端, 生活">
+  
+  
+  <meta name="author" content="jackson.tmm">
+  
+  <meta property="og:title" content="[筆記]Traversal Graph(圖)"/>
+  <meta property="og:site_name" content="Jackson.tmm">
+  <meta property="og:image" content="/images/favicon.png"> 
+  <meta name="title" content="[筆記]Traversal Graph(圖) - Jackson.tmm" />
+  
+  <meta name="description" content="歡迎來的Jackson.tmm的空間站。個人主要專注於Web開發，程序開發，以及學習上。">
+   
+  <link rel="shortcut icon" href="/images/favicon.png" />
+  <link rel="apple-touch-icon" href="/images/avatar.jpg" />
+  <link rel="apple-touch-icon-precomposed" href="/images/favicon.png" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  
+  <link href="//cdn.bootcdn.net/ajax/libs/imageviewer/0.1.0/viewer.min.css" rel="stylesheet"/>
+  
+  <link href="/css/main.css" rel="stylesheet" type="text/css" />
+  <link href="/css/syntax.css" rel="stylesheet" type="text/css" />    
+  
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js">
+  </script> <script>mermaid.initialize({ startOnLoad: true, securityLevel: 'loose'});</script>
+</head>
+
+<link href='/css/pio.css' rel='stylesheet' type='text/css'/>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-container">
+<div class="site-nav-toggle">
+  <div class="toggle" role="button" style="opacity: 1; top: 0px;">
+      <span class="toggle-line"></span>
+      <span class="toggle-line"></span>
+      <span class="toggle-line"></span>
+  </div>
+</div>
+<div class="site-meta ">
+  <div class="multi-lang-switch"> 
+    <i class="fa fa-fw fa-language" style="margin-right: 5px;"></i>
+    
+    
+    
+    
+        
+        
+                          
+              
+                 <a class="lang-link" id="zh-tw" href="#">中文</a>
+              
+              
+            
+        
+    
+  </div>
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Jackson.tmm</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">只有奮鬥才能改變命運</p>
+</div>
+
+<div class="site-nav-right">
+    <div class="toggle popup-trigger" style="opacity: 1; top: 0px;">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/about.html" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />About
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/post" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Posts
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/memories" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-star"></i> <br />Memories
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/leetcodes" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-code"></i> <br />Leetcodes 
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/project" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-tasks"></i> <br />Projects
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/achievement" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-trophy"></i> <br />achievement
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/resources" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-file"></i> <br />resources
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> </a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon"><i class="fa fa-search"></i> </span>
+    <span class="popup-btn-close"><i class="fa fa-times-circle"></i></span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索關鍵字..." spellcheck="false" type="text" id="local-search-input" autocapitalize="none" autocorrect="off">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://localhost:1313/post/bt-traversal/" itemprop="url">
+        [筆記]Traversal Graph(圖)
+        </a>
+      </h1>
+      
+      <div class="post-meta">
+      <span class="post-time">
+<i class="fa fa-calendar-o fa-fw"></i>
+<span class="post-meta-item-text">時間：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2022-09-08">
+    2022-09-08
+</time>
+</span> 
+      
+       <span>
+ | 
+<i class="fa fa-file-word-o fa-fw"></i>
+<span class="post-meta-item-text">字數：</span>
+<span class="leancloud-world-count">1410 字</span>
+</span>
+       <span>
+ | 
+<i class="fa fa-eye fa-fw"></i>
+<span class="post-meta-item-text">閱讀：</span>
+<span class="leancloud-view-count">3分鐘</span>
+</span>
+      <span id="/post/bt-traversal/" class="leancloud_visitors" data-flag-title="[筆記]Traversal Graph(圖)">
+ | 
+<i class="fa fa-binoculars fa-fw"></i>
+<span class="post-meta-item-text">閱讀次數：</span>
+<span class="leancloud-visitors-count"></span>
+</span>
+      </div>
+     
+    </header>
+  
+    <div class="post-body" itemprop="articleBody">
+    <blockquote>
+<p>總所周知Binary Tree也是圖的一種(單向無環圖)。所以,今天這裡以Binary Tree 為例。</p>
+</blockquote>
+<h1 id="introduction">Introduction</h1>
+<p>如果今天我們需要以<strong>特定</strong>的方式遍歷一棵*Binary Tree(圖的一種)*我們怎麼做呢? 我們可以透過DSF(深度優先搜尋)以及BFS(廣度優先搜尋)來幫助我們遍歷<strong>Binary Tree</strong></p>
+<blockquote>
+<p>DFS - Depath-First Search(深度優先搜尋)其核心理念就是在遍歷Binary Tree時會先遍歷Tree的高度/深度，直到所有Node都被遍歷過。簡單來說就是從root節點出發,沿著Tree的深度遍歷節點(先往下(深度)遍節點，再往右邊(廣度)遍歷)。<br>
+透過DSF方式,我們可以獲得Binary Tree的拓撲排序表。前序遍歷(Preorder),中序遍歷(Inorder)以及後續遍歷(PostOrder)</p>
+<ul>
+<li>前序遍歷(Preorder) - Rule: Visit(self) -&gt; left-child -&gt; right-child</li>
+<li>中序遍歷(Inorder) - Rule: left-child -&gt; Visit(self) -&gt; right-child</li>
+<li>後續遍歷(Postorder) - Rule: left-child -&gt; right-child -&gt; Visit(self)</li>
+</ul>
+</blockquote>
+<p>舉個例子:<br>
+<img alt="tree" src="/images/note/tree-example.png">
+<strong>Preorder Traversal(VLR)</strong></p>
+<ol>
+<li>查看當前node的val</li>
+<li>移動到Left-child</li>
+<li>移動到Right-child</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>根據上面這個規則,我們就會得出一下結果:  
+</span></span><span style="display:flex;"><span>[1,2,4,3]
+</span></span></code></pre></div><hr>
+<p><strong>Inorder Traversal(LVR)</strong></p>
+<ol>
+<li>移動到Left-child</li>
+<li>查看當前node的val</li>
+<li>移動到Right-child</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>根據上面這個規則,我們就會得出一下結果:  
+</span></span><span style="display:flex;"><span>[4,2,1,3]
+</span></span></code></pre></div><hr>
+<p><strong>Postorder Traversal(LRV)</strong></p>
+<ol>
+<li>移動到Left-child</li>
+<li>移動到Right-child</li>
+<li>查看當前node的val</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>根據上面這個規則,我們就會得出一下結果:  
+</span></span><span style="display:flex;"><span>[4,2,3,1]
+</span></span></code></pre></div><p>從以上例子我們可以發現透過不同的遍歷方式，可以得到一顆<strong>Tree</strong>的不同的拓撲排列。竟然我們能從<strong>Tree</strong>中得到拓撲排序，哪我們能不能從拓撲排序中反推會一棵Tree呢? 對於這個問題,我們先來分析一下這幾個拓撲排序的結構。</p>
+<p><em>PostOrder(前序) - [1,2,4,3]</em><br>
+在前序拓撲中,我們能看出什麼呢?好像暫時什麼都沒看出來，只知道<code>1</code>會是<strong>Tree</strong>的<strong>Head</strong></p>
+<p><em>Inorder(中序) - [4,2,1,3]</em><br>
+在中序拓撲中,仔細觀察的話可以看得出某個數字的<strong>左邊會是Tree的左邊的Node</strong>,而<strong>右邊則會是在Tree的右手邊的Node</strong>。例如: <code>1</code> -左[4,2], <code>1</code> - 右[4],我們再回去看圖,是不是就我們所說呢?</p>
+<p><em>Postorder(後序) - [4,2,3,1]</em><br>
+在後序拓撲中,我們能看出什麼呢?好像暫時什麼都沒看出來。</p>
+<p>從以上分析來看光靠其中一個拓撲排列並不能反推回一棵樹，哪我們是不是可以透過幾個拓撲結構回推呢?</p>
+<p><em>透過中序和前序</em></p>
+<p><code>前序:[1,2,4,3]</code> , <code>中序:[4,2,1,3]</code></p>
+<ol>
+<li>從前序中找到<strong>Node Head</strong>(通常都為未訪問的第一個為Head)</li>
+<li>再根據這個<strong>Node Head</strong>去中序中找到該<strong>Node</strong>的左邊的<strong>Node</strong>以及右邊<strong>Node</strong></li>
+<li>回到第一步,直到所有node都被訪問過</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>例如:  
+</span></span><span style="display:flex;"><span>首先,我們知道Root是1 : 前序:[2,4,3]  
+</span></span><span style="display:flex;"><span>從中序我們得知左:[4,2],右:[3] -&gt; 因為右邊只有1個值,所以直接會是right-sub tree的Head : 前序:[2,4]  
+</span></span><span style="display:flex;"><span>左手邊的Head會是前序的第一個值,也就是2。再根據中序,得知道2的左:[4],右:[1,3](已經被訪問過了),所以只剩下4,插入到2的左手邊，同時前序也剩下4未被訪問 : 前序:[]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>最後整棵樹會是
+</span></span><span style="display:flex;"><span>            1
+</span></span><span style="display:flex;"><span>        2       3
+</span></span><span style="display:flex;"><span>    4 
+</span></span></code></pre></div><!-- 首先,我們先要知道目前的head是多少,從前序中我們知道是`1`, 哪些node是`1`的左子樹和右子樹的node呢?   
+從中序中我們知道是`1`的左邊包含了`[4,2]`,而右邊則包含了`[3]`。問題又來了，左邊的哪個node會是`1`的左子樹的`head`呢?,我們在回到前序`1`的下一個node會是`2`,哪2將會是`1`的左子樹的head,然後再回到中序，查看`2`的左右node就可得知道`2`的左邊是`[4]`,右邊`[1,3](1是2的parent) - 無視`，因為`2`的左邊只有1個node,而前序中`2`的下一個是`4`。所有`2 left-> 4` -->
+<blockquote>
+<p>BFS - Breadth-First Search(廣度優先搜尋)其核心理念就是在遍歷Binary Tree時先遍歷廣度/寬度，直至所有Node都被遍歷。透過BFS,我們可以知道Binary Tree的最大深度。簡單而言就是，從root的節點開始遍歷，並沿Tree的寬度遍歷節點(先遍歷完同一層的Node後，再遍歷下一層)。</p>
+</blockquote>
+
+    </div>
+          
+    <footer class="post-footer">
+     
+
+     
+     <div class="post-nav">
+<div class="article-copyright">
+    
+    <div class="article-copyright-info">
+        <p> 
+            <span>文章聲明：</span>[筆記]Traversal Graph(圖)
+        </p>
+        <p> 
+            <span>文章連接：</span>http://localhost:1313/post/bt-traversal/
+        </p>
+        <p> 
+            <span>作者：</span>jackson.tmm
+        </p>
+        <p> 
+            <span>文章聲明： </span>本博客文章除特別聲明外，均采用 <a href='https://creativecommons.org/licenses/by-nc-sa/3.0/' target='_blank' style='text-decoration: underline;'>CC BY-NC-SA 3.0</a>許可協議，轉載請注明出處！
+        </p>
+    </div>
+</div>
+<div class="clear"></div>
+</div>
+     
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="http://localhost:1313/post/innodb_record_struct/" rel="next" title="[筆記]從底層理解MySQL InnoDB 記錄結構">
+        <i class="fa fa-chevron-left"></i> [筆記]從底層理解MySQL InnoDB 記錄結構
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="http://localhost:1313/post/dev-ottapp-1/" rel="prev" title="[開發日記]OTT電影社群APP(一)">
+        [開發日記]OTT電影社群APP(一) 
+        <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>  
+     
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="/images/avatar.jpg"
+        alt="jackson.tmm" />
+    <p class="site-author-name" itemprop="name">jackson.tmm</p>
+    <p class="site-description motion-element" itemprop="description"> 
+      
+        加油，好好生活，生活吃飯，好好玩耍，好好工作
+      
+    </p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="/post/">
+        <span class="site-state-item-count">40</span>
+        <span class="site-state-item-name">日誌</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="/categories/">      
+         
+        <span class="site-state-item-count">34</span>
+        
+        <span class="site-state-item-name">分類</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="/tags/">
+         
+        <span class="site-state-item-count">60 </span>
+        
+        <span class="site-state-item-name">標籤</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/RyanTokManMokMTM" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="https://www.facebook.com/karot.ka.7505/" target="_blank" title="Facebook">
+            <i class="fa fa-fw fa-facebook"></i>
+            Facebook
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="https://www.instagram.com/tm_m.0418/" target="_blank" title="Instagram">
+            <i class="fa fa-fw fa-instagram"></i>
+            Instagram
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/jackson-moktokman/" target="_blank" title="Linkedin">
+            <i class="fa fa-fw fa-linkedin"></i>
+            Linkedin
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      
+    <div class="tagcloud-of-blogroll motion-element tagcloud-of-blogroll-inline">
+    <div class="tagcloud-of-blogroll-title">
+        <i class="fa fa-fw fa-tags"></i>
+        標籤雲
+    </div>
+    <ul class="tagcloud-of-blogroll-list">
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/array">Array</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/side-project">Side project</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/string">String</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/binary-tree">Binary tree</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/dynamic-programming">Dynamic programming</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/recursion">Recursion</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/learning">Learning</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/recursive">Recursive</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/stack">Stack</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/creational">Creational</a>
+        </li>
+        
+    </ul>
+    </div>
+
+
+      
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span class="copyright-year">  
+    &copy; 2022 - 2024
+  </span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="copyright-author">Jackson.tmm</span>
+</div>
+<div class="powered-info">
+  <span class="powered-by">
+    Powered by - <a class="powered-link" href="//gohugo.io" target="_blank" title="hugo" >Hugo v0.125.2</a>
+  </span>
+  <span class="separator-line">/</span>
+  <span class="theme-info">
+    Theme by - <a class="powered-link" href="//github.com/elkan1788/hugo-theme-next" target="_blank"> NexT
+    </a>
+  </span>
+</div>
+<div class="vistor-info">
+
+
+</div>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.0.min.js"></script>
+<div class="pio-container right">
+  <div class="pio-action"></div>
+  <canvas id="pio" width="200" height="400"></canvas>
+</div>
+
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="/js/search.js"></script>
+<script type="text/javascript" src="/js/affix.js"></script>
+<script type="text/javascript" src="/js/scrollspy.js"></script> 
+
+<script type="text/javascript">
+
+  function detectIE() {
+    var ua = window.navigator.userAgent;
+
+    var msie = ua.indexOf('MSIE ');
+    var trident = ua.indexOf('Trident/');
+    var edge = ua.indexOf('Edge/');
+
+    if (msie>0 || trident>0 || edge>0) {
+      return -1;
+    }
+
+    return 1;
+  }
+
+
+  function getCntViewHeight() {
+    var docHeight = $('#content').height(),
+        winHeight = $(window).height(),
+        cntViewHeight = (docHeight > winHeight) ? (docHeight - winHeight) : ($(document).height() - winHeight);
+    return cntViewHeight;
+  }
+
+  function getScrollbarWidth() {
+    var $div = $('<div />').addClass('scrollbar-measure').prependTo('body');
+    var div = $div[0];
+    var scrollbarWidth = div.offsetWidth - div.clientWidth;
+
+    $div.remove();
+
+    return scrollbarWidth;
+  }
+
+  function registerBackTop() {
+    var THRESHOLD = 50;
+    var $top = $('.back-to-top');
+
+    $(window).on('scroll', function () {
+      $top.toggleClass('back-to-top-on', window.pageYOffset > THRESHOLD);
+
+      var scrollTop = $(window).scrollTop();
+      var cntViewHeight = getCntViewHeight();
+      var scrollPercent = (scrollTop) / (cntViewHeight);
+      var scrollPercentRounded = Math.round(scrollPercent*100);
+      var scrollPercentMaxed = (scrollPercentRounded > 100) ? 100 : scrollPercentRounded;
+      $('#scrollpercent>span').html(scrollPercentMaxed);
+    });
+
+    $top.on('click', function () {
+      $("html,body").animate({
+                 scrollTop: 0,
+                 screenLeft: 0,
+                 }, 800);
+    });
+  }
+
+  function initScrollSpy () {
+    var tocSelector = '.post-toc';
+    var $tocElement = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocElement
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+      })
+      .on('clear.bs.scrollspy', removeCurrentActiveClass);
+
+    $('body').scrollspy({ target: tocSelector });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+  }
+
+  function initAffix () {
+    var headerHeight = $('.header-inner').height();
+    var footerOffset = parseInt($('.main').css('padding-bottom'), 10);
+    var sidebarTop = headerHeight + 10;
+
+    $('.sidebar-inner').affix({
+      offset: {
+        top: sidebarTop,
+        bottom: footerOffset
+      }
+    });
+
+    $(document)
+      .on('affixed.bs.affix', function () {
+        updateTOCHeight(document.body.clientHeight - 100);
+      });
+  }
+
+  function initTOCDimension () {
+    var updateTOCHeightTimer;
+
+    $(window).on('resize', function () {
+      updateTOCHeightTimer && clearTimeout(updateTOCHeightTimer);
+
+      updateTOCHeightTimer = setTimeout(function () {
+        var tocWrapperHeight = document.body.clientHeight - 100;
+
+        updateTOCHeight(tocWrapperHeight);
+      }, 0);
+    });
+
+    
+    updateTOCHeight(document.body.clientHeight - 100);
+
+    
+    var scrollbarWidth = getScrollbarWidth();
+    $('.post-toc').css('width', 'calc(100% + ' + scrollbarWidth + 'px)');
+  }
+
+  function updateTOCHeight (height) {
+    height = height || 'auto';
+    $('.post-toc').css('max-height', height);
+  }
+
+$(function() {
+
+  var sidebarTop = $('.header-inner').height() + 10;
+  $('#sidebar').css({ 'margin-top': sidebarTop }).show(); 
+
+  
+  var sidebarMt = parseInt($('#sidebar').css('margin-top'));
+  var sidebarInHeight = parseInt($('.sidebar-inner').css('height'));
+  var sideHeight = sidebarMt + sidebarInHeight;
+  var contentHeight = $('.content-wrap').height();
+
+  if (contentHeight < sideHeight) {
+    $('.content-wrap').css('min-height', sideHeight);
+  }
+  
+  
+  $('.site-nav-toggle').on('click', function () {
+    var $siteNav = $('.site-nav');
+    var $toggleLine = $('.toggle');
+    var ON_CLASS_NAME = 'site-nav-on';
+    var CLOSE_CLASS_NAME = 'toggle-close';
+    var isSiteNavOn = $siteNav.hasClass(ON_CLASS_NAME);
+    var animateAction = isSiteNavOn ? 'slideUp' : 'slideDown';
+    var animateCallback = isSiteNavOn ? 'removeClass' : 'addClass';
+
+    $siteNav.stop()[animateAction]('normal', function () {
+      $siteNav[animateCallback](ON_CLASS_NAME);
+      $toggleLine[animateCallback](CLOSE_CLASS_NAME);
+    });
+
+  });
+
+  registerBackTop();
+  initScrollSpy();
+  initAffix();
+  initTOCDimension();
+
+  $('.sidebar-nav-toc').click(function(){
+    $(this).addClass('sidebar-nav-active');
+    $(this).next().removeClass('sidebar-nav-active');      
+    $('.'+$(this).next().attr('data-target')).toggle(500);
+    $('.'+$(this).attr('data-target')).toggle(500);
+  });
+
+  $('.sidebar-nav-overview').click(function(){
+    $(this).addClass('sidebar-nav-active');
+    $(this).prev().removeClass('sidebar-nav-active');      
+    $('.'+$(this).prev().attr('data-target')).toggle(500);
+    $('.'+$(this).attr('data-target')).toggle(500);
+  });
+});  
+
+</script>
+
+
+
+
+
+<script src="//cdn.bootcdn.net/ajax/libs/imageviewer/0.1.0/viewer.min.js"></script>
+<script type="text/javascript">
+$(function() {
+  $('.post-body').viewer(); 
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+<script src='/js/l2d.js'></script>
+
+<script src='/js/pio.js'></script>
+
+<script>
+  var pio = new Paul_Pio({
+      "mode": "draggable",
+      "hidden": true,
+      "content": {
+          "welcome": ["歡迎來到Jackson的小宇宙！", "今天天氣不錯，一起来玩吧！", "博主有空的話，會寫一寫博客記錄一下!"],
+          "custom": [
+              
+              {"selector": ".home-social a:last-child", "text": "在這里可以了解博主的日常噢~"},
+              {"selector": ".post-item a", "type": "read"},
+              {"selector": ".post-content a, .page-content a", "type": "link"}
+          ]
+      },
+      
+      "model": [
+      "/model/umaru/model.json",
+        "/model/HN/blanc_normal/model.json",
+        "/model/HN/blanc_classic/model.json",
+        "/model/chino/model.json"],
+        touch: ["不可以這樣欺負我啦><"]
+  })
+
+</script>
+</body>
+</html>

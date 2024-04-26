@@ -93,7 +93,7 @@ var Paul_Pio = function (prop) {
             if(document.referrer !== "" && document.referrer.indexOf(current.root) === -1){
                 var referrer = document.createElement('a');
                 referrer.href = document.referrer;
-                prop.content.referer ? modules.render(prop.content.referer.replace(/%t/, "“" + referrer.hostname + "”")) : modules.render("欢迎来自 “" + referrer.hostname + "” 的朋友！");
+                prop.content.referer ? modules.render(prop.content.referer.replace(/%t/, "“" + referrer.hostname + "”")) : modules.render("歡迎來自 “" + referrer.hostname + "” 的朋友！");
             }
             else if(prop.tips){
                 var text, hour = new Date().getHours();
@@ -135,7 +135,11 @@ var Paul_Pio = function (prop) {
         // 触摸
         touch: function () {
             current.canvas.onclick = function () {
-                modules.render(prop.content.touch || ["你在幹什麽？", "再摸我就報警了！", "HENTAI!", "不可以這樣欺負我啦！"]);
+                modules.render(prop.content.touch || 
+                    ["你在幹什麽？", 
+                    "再摸我就報警了！", 
+                    "HENTAI!", 
+                    "不可以這樣欺負我啦！"]);
             };
         },
         // 右侧按钮

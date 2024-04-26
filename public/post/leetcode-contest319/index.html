@@ -1,0 +1,966 @@
+<!DOCTYPE HTML>
+<html lang="zh-tw" dir="zh">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  <title> [總結]Leetcode 週賽第319場復盤總結 - Jackson.tmm </title>
+  
+  <meta name="keywords" content="博客, 工程師, 程序員, 學習, 筆記, 技術, 分析, 後端, 生活">
+  
+  
+  <meta name="author" content="jackson.tmm">
+  
+  <meta property="og:title" content="[總結]Leetcode 週賽第319場復盤總結"/>
+  <meta property="og:site_name" content="Jackson.tmm">
+  <meta property="og:image" content="/images/favicon.png"> 
+  <meta name="title" content="[總結]Leetcode 週賽第319場復盤總結 - Jackson.tmm" />
+  
+  <meta name="description" content="歡迎來的Jackson.tmm的空間站。個人主要專注於Web開發，程序開發，以及學習上。">
+   
+  <link rel="shortcut icon" href="/images/favicon.png" />
+  <link rel="apple-touch-icon" href="/images/avatar.jpg" />
+  <link rel="apple-touch-icon-precomposed" href="/images/favicon.png" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  
+  <link href="//cdn.bootcdn.net/ajax/libs/imageviewer/0.1.0/viewer.min.css" rel="stylesheet"/>
+  
+  <link href="/css/main.css" rel="stylesheet" type="text/css" />
+  <link href="/css/syntax.css" rel="stylesheet" type="text/css" />    
+  
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js">
+  </script> <script>mermaid.initialize({ startOnLoad: true, securityLevel: 'loose'});</script>
+</head>
+
+<link href='/css/pio.css' rel='stylesheet' type='text/css'/>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-container">
+<div class="site-nav-toggle">
+  <div class="toggle" role="button" style="opacity: 1; top: 0px;">
+      <span class="toggle-line"></span>
+      <span class="toggle-line"></span>
+      <span class="toggle-line"></span>
+  </div>
+</div>
+<div class="site-meta ">
+  <div class="multi-lang-switch"> 
+    <i class="fa fa-fw fa-language" style="margin-right: 5px;"></i>
+    
+    
+    
+    
+        
+        
+                          
+              
+                 <a class="lang-link" id="zh-tw" href="#">中文</a>
+              
+              
+            
+        
+    
+  </div>
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Jackson.tmm</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">只有奮鬥才能改變命運</p>
+</div>
+
+<div class="site-nav-right">
+    <div class="toggle popup-trigger" style="opacity: 1; top: 0px;">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/about.html" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />About
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/post" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Posts
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/memories" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-star"></i> <br />Memories
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/leetcodes" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-code"></i> <br />Leetcodes 
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/project" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-tasks"></i> <br />Projects
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/achievement" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-trophy"></i> <br />achievement
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/resources" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-file"></i> <br />resources
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> </a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon"><i class="fa fa-search"></i> </span>
+    <span class="popup-btn-close"><i class="fa fa-times-circle"></i></span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索關鍵字..." spellcheck="false" type="text" id="local-search-input" autocapitalize="none" autocorrect="off">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://localhost:1313/post/leetcode-contest319/" itemprop="url">
+        [總結]Leetcode 週賽第319場復盤總結
+        </a>
+      </h1>
+      
+      <div class="post-meta">
+      <span class="post-time">
+<i class="fa fa-calendar-o fa-fw"></i>
+<span class="post-meta-item-text">時間：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2022-11-13">
+    2022-11-13
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  
+  <i class="fa fa-folder-o fa-fw"></i>
+  
+  <span class="post-meta-item-text">分類：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="/categories/summary" itemprop="url" rel="index" style="text-decoration: underline">
+        <span itemprop="name">summary</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+ | 
+<i class="fa fa-file-word-o fa-fw"></i>
+<span class="post-meta-item-text">字數：</span>
+<span class="leancloud-world-count">1749 字</span>
+</span>
+       <span>
+ | 
+<i class="fa fa-eye fa-fw"></i>
+<span class="post-meta-item-text">閱讀：</span>
+<span class="leancloud-view-count">4分鐘</span>
+</span>
+      <span id="/post/leetcode-contest319/" class="leancloud_visitors" data-flag-title="[總結]Leetcode 週賽第319場復盤總結">
+ | 
+<i class="fa fa-binoculars fa-fw"></i>
+<span class="post-meta-item-text">閱讀次數：</span>
+<span class="leancloud-visitors-count"></span>
+</span>
+      </div>
+     
+    </header>
+  
+    <div class="post-body" itemprop="articleBody">
+    <h1 id="今日為2022年11月13日週日---leetcode-週賽第319場">今日為2022年11月13日(週日) - Leetcode 週賽第319場</h1>
+<blockquote>
+<p>目前參加週賽主要的目的是學習跟訓練，所有當前主要focus在解Easy 跟 Medium的題目，Hard的題目暫且先跳過了</p>
+</blockquote>
+<h3 id="週賽題目如下">週賽題目如下:</h3>
+<ol>
+<li>Convert the Temperature - <strong>Easy</strong></li>
+<li>Number of Subarrays With LCM Equal to K - <strong>Medium</strong></li>
+<li>Minimum Number of Operations to Sort a Binary Tree by Level - <strong>Medium</strong></li>
+</ol>
+<h3 id="convert-the-temperature---easy">Convert the Temperature - Easy</h3>
+<p>You are given a non-negative floating point number rounded to two decimal places <code>celsius</code>, that denotes <strong>the temperature in Celsius</strong>.</p>
+<p>You should convert Celsius into <strong>Kelvin</strong> and <strong>Fahrenheit</strong> and return it as an array <code>ans = [kelvin, fahrenheit].</code></p>
+<p>Return the array <code>ans</code>. Answers within <strong>10<sup>5</sup></strong> of the actual answer will be accepted.</p>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Input: celsius = 36.50
+</span></span><span style="display:flex;"><span>Output: [309.65000,97.70000]
+</span></span><span style="display:flex;"><span>Explanation: Temperature at 36.50 Celsius converted in Kelvin is 309.65 and converted in Fahrenheit is 97.70.
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Input: celsius = 122.11
+</span></span><span style="display:flex;"><span>Output: [395.26000,251.79800]
+</span></span><span style="display:flex;"><span>Explanation: Temperature at 122.11 Celsius converted in Kelvin is 395.26 and converted in Fahrenheit is 251.798.
+</span></span></code></pre></div><h5 id="解題思路">解題思路</h5>
+<p>這題沒有什麼難度呢，就直接代題目給的公式就可以<strong>AC</strong>了</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">Solution</span> {
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>    vector<span style="color:#666">&lt;</span><span style="color:#0b0;font-weight:bold">double</span><span style="color:#666">&gt;</span> convertTemperature(<span style="color:#0b0;font-weight:bold">double</span> celsius) {
+</span></span><span style="display:flex;"><span>        <span style="color:#0b0;font-weight:bold">double</span> kelvin <span style="color:#666">=</span> celsius <span style="color:#666">+</span> <span style="color:#666">273.15</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#0b0;font-weight:bold">double</span> Fahrenheit  <span style="color:#666">=</span> celsius <span style="color:#666">*</span> <span style="color:#666">1.80</span> <span style="color:#666">+</span> <span style="color:#666">32</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> {kelvin,Fahrenheit};
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><h3 id="number-of-subarrays-with-lcm-equal-to-k---medium">Number of Subarrays With LCM Equal to K - Medium</h3>
+<p>Given an integer array <code>nums</code> and an integer <code>k</code>, return the number of <strong>subarrays</strong> of <strong>nums</strong> where the least common multiple of the subarray&rsquo;s elements is <code>k</code>.</p>
+<p>A <strong>subarray</strong> is a contiguous non-empty sequence of elements within an array.</p>
+<p>The <strong>least common multiple of an array</strong> is the smallest positive integer that is divisible by all the array elements.</p>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Input: nums = [3,6,2,7,1], k = 6
+</span></span><span style="display:flex;"><span>Output: 4
+</span></span><span style="display:flex;"><span>Explanation: The subarrays of nums where 6 is the least common multiple of all the subarray&#39;s elements are:
+</span></span><span style="display:flex;"><span>- [3,6,2,7,1]
+</span></span><span style="display:flex;"><span>- [3,6,2,7,1]
+</span></span><span style="display:flex;"><span>- [3,6,2,7,1]
+</span></span><span style="display:flex;"><span>- [3,6,2,7,1]
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Input: nums = [3], k = 2
+</span></span><span style="display:flex;"><span>Output: 0
+</span></span><span style="display:flex;"><span>Explanation: There are no subarrays of nums where 2 is the least common multiple of all the subarray&#39;s elements.
+</span></span></code></pre></div><h5 id="解題思路-1">解題思路</h5>
+<p>這一題要注意的是<em>LCM</em>的計算以及<em>subarry</em>的定義</p>
+<blockquote>
+<p>Subarray 是 在array中連續的一組array，跟subsequence不一樣呢~</p>
+</blockquote>
+<p>這題的重點是要關注<code>subarray</code>的部分，也就是我們要知道<code>[i : n-1] where i = 0 to n - 1</code>的<code>LCM</code>是否與K相等。 所以我們要一個一個subarray的去找從<code>size為1</code> 擴展至<code>n - i - 1</code>, 檢查擴展的過程中是否存在<code>LCM</code>與K相等。</p>
+<p><em>注：因為LCM的算計過程中會進行multipy,所以不能使用sign int, 需使用unsign int。否者會overflow.</em></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">Solution</span> {
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0b0;font-weight:bold">int</span> subarrayLCM(vector<span style="color:#666">&lt;</span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">&gt;&amp;</span> nums, <span style="color:#0b0;font-weight:bold">int</span> k) {
+</span></span><span style="display:flex;"><span>        <span style="color:#0b0;font-weight:bold">int</span> ans <span style="color:#666">=</span> <span style="color:#666">0</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">for</span>(<span style="color:#0b0;font-weight:bold">int</span> i <span style="color:#666">=</span> <span style="color:#666">0</span>;i<span style="color:#666">&lt;</span>nums.size();i<span style="color:#666">++</span>){
+</span></span><span style="display:flex;"><span>            <span style="color:#0b0;font-weight:bold">unsigned</span> <span style="color:#0b0;font-weight:bold">int</span> curLCM <span style="color:#666">=</span> <span style="color:#666">1</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">for</span>(<span style="color:#0b0;font-weight:bold">int</span> j <span style="color:#666">=</span> i;j<span style="color:#666">&lt;</span>nums.size();j<span style="color:#666">++</span>){
+</span></span><span style="display:flex;"><span>                curLCM <span style="color:#666">=</span> lcm(curLCM,nums[j]); <span style="color:#080;font-style:italic">//[for i to n]
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>                <span style="color:#a2f;font-weight:bold">if</span>(curLCM <span style="color:#666">==</span> k) ans<span style="color:#666">++</span>;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> ans;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><h3 id="minimum-number-of-operations-to-sort-a-binary-tree-by-level---medium">Minimum Number of Operations to Sort a Binary Tree by Level - Medium</h3>
+<p>You are given the root of a binary tree with <strong>unique values</strong>.</p>
+<p>In one operation, you can choose any two nodes <strong>at the same level</strong> and swap their values.</p>
+<p>Return the minimum number of operations needed to make the values at each level sorted in a <strong>strictly increasing order</strong>.</p>
+<p>The <strong>level</strong> of a node is the number of edges along the path between it and the root node.</p>
+<p><strong>Example</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>     1        
+</span></span><span style="display:flex;"><span>    /   \     
+</span></span><span style="display:flex;"><span>  4       3   
+</span></span><span style="display:flex;"><span> / \     / \  
+</span></span><span style="display:flex;"><span>7   6   8    5
+</span></span><span style="display:flex;"><span>       /    / 
+</span></span><span style="display:flex;"><span>      9    10 
+</span></span><span style="display:flex;"><span>Input: root = [1,4,3,7,6,8,5,null,null,null,null,9,null,10]
+</span></span><span style="display:flex;"><span>Output: 3
+</span></span><span style="display:flex;"><span>Explanation:
+</span></span><span style="display:flex;"><span>- Swap 4 and 3. The 2nd level becomes [3,4].
+</span></span><span style="display:flex;"><span>- Swap 7 and 5. The 3rd level becomes [5,6,8,7].
+</span></span><span style="display:flex;"><span>- Swap 8 and 7. The 3rd level becomes [5,6,7,8].
+</span></span><span style="display:flex;"><span>We used 3 operations so return 3.
+</span></span><span style="display:flex;"><span>It can be proven that 3 is the minimum number of operations needed.
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>   1   
+</span></span><span style="display:flex;"><span>  / \  
+</span></span><span style="display:flex;"><span> 3   2 
+</span></span><span style="display:flex;"><span>/ \ / \
+</span></span><span style="display:flex;"><span>7 6 5 4
+</span></span><span style="display:flex;"><span>Input: root = [1,3,2,7,6,5,4]
+</span></span><span style="display:flex;"><span>Output: 3
+</span></span><span style="display:flex;"><span>Explanation:
+</span></span><span style="display:flex;"><span>- Swap 3 and 2. The 2nd level becomes [2,3].
+</span></span><span style="display:flex;"><span>- Swap 7 and 4. The 3rd level becomes [4,6,5,7].
+</span></span><span style="display:flex;"><span>- Swap 6 and 5. The 3rd level becomes [4,5,6,7].
+</span></span><span style="display:flex;"><span>We used 3 operations so return 3.
+</span></span><span style="display:flex;"><span>It can be proven that 3 is the minimum number of operations needed.
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>   1  
+</span></span><span style="display:flex;"><span>  / \ 
+</span></span><span style="display:flex;"><span> 2   3
+</span></span><span style="display:flex;"><span>/ \ / 
+</span></span><span style="display:flex;"><span>4 5 6 
+</span></span><span style="display:flex;"><span>Input: root = [1,2,3,4,5,6]
+</span></span><span style="display:flex;"><span>Output: 0
+</span></span><span style="display:flex;"><span>Explanation: Each level is already sorted in increasing order so return 0.
+</span></span></code></pre></div><h5 id="解題思路這題查的資料">解題思路(這題查的資料)</h5>
+<p>這題主要的難點是當我們拿到了每個level的Node的數時候，我們要怎麼得知<strong>最少的swap到正確的位置</strong>是多少呢？？</p>
+<p>假設我們現在有下面的這個情況</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>2 - 4 - 1 - 5  
+</span></span></code></pre></div><p>我們要透過最少的swap的次數，使之變為有序的。
+哪應該要怎麼解呢？</p>
+<p>我們是不是只需要將他們移動到他們各自對應的正確的<code>index</code>就可以了呢?<br>
+比如: <code>2 - 4 - 1 - 5</code> 這裡的<code>1</code>應該在<code>index 0</code>的位置,<code>2</code>應該在<code>index 1</code> 的位置,如此類推。最後就會得出 <code>1 - 2 - 4 -5</code></p>
+<p>由此可見，我們只需要將錯誤的<code>index</code> 與 正確的<code>index</code>連接在一起(也就是Swap) ，哪我們只要知道一共有多少條node連接到同一條edge上 , 哪我們就知道<code>swap</code>了多少回了。<br>
+例如： <code>7 6 4 5</code>  =&gt; <code>7(移動到5的位置) -&gt; 5(移動到6的位置) -&gt; 6(移動到4的位置) -&gt; 4</code>代表了 <code>swap(7,5)</code> + <code>swap(5,6)</code> + <code>swap(6,4)</code>
+<code>swap(7,5)</code> =&gt; <code>5 6 4 7</code>
+<code>swap(5,6)</code> =&gt; <code>6 5 4 7</code>
+<code>swap(6,4)</code> =&gt; <code>4 5 6 7</code></p>
+<p>只要對每層level建立一個<code>directed graph</code>就可以知道最少<code>swap</code>了多少次。</p>
+<p><strong>輔助函數</strong> -&gt; <em>因為我們計算的是edge的數目,而我們遍歷了node的數目，node = edge + 1,所以需要-1</em></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>    <span style="color:#0b0;font-weight:bold">int</span> <span style="color:#00a000">helper</span>(vector<span style="color:#666">&lt;</span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">&gt;&amp;</span> res){
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">if</span>(res.size() <span style="color:#666">&lt;=</span> <span style="color:#666">1</span>) <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#666">0</span>; <span style="color:#080;font-style:italic">//no need
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#0b0;font-weight:bold">int</span> swapTime <span style="color:#666">=</span> <span style="color:#666">0</span>;
+</span></span><span style="display:flex;"><span>        vector<span style="color:#666">&lt;</span>pair<span style="color:#666">&lt;</span><span style="color:#0b0;font-weight:bold">int</span>,<span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">&gt;&gt;</span> g;
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">for</span>(<span style="color:#0b0;font-weight:bold">int</span> i <span style="color:#666">=</span> <span style="color:#666">0</span>;i<span style="color:#666">&lt;</span>res.size();i<span style="color:#666">++</span>){ <span style="color:#080;font-style:italic">//building the graph //O(res.size())
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            g.push_back({res[i],i});
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        sort(g.begin(),g.end());<span style="color:#080;font-style:italic">//sort it by value not index
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        vector<span style="color:#666">&lt;</span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">&gt;</span> nodeVisited(res.size());
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">for</span>(<span style="color:#0b0;font-weight:bold">int</span> i <span style="color:#666">=</span> <span style="color:#666">0</span>;i<span style="color:#666">&lt;</span>res.size();i<span style="color:#666">++</span>){
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">//if current value need to keep in current index -&gt; continue or is already swapped
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span>(nodeVisited[i] <span style="color:#666">||</span> g[i].second <span style="color:#666">==</span> i) <span style="color:#a2f;font-weight:bold">continue</span>;
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#0b0;font-weight:bold">int</span> count <span style="color:#666">=</span> <span style="color:#666">0</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#0b0;font-weight:bold">int</span> start <span style="color:#666">=</span> i;
+</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">while</span>(<span style="color:#666">!</span>nodeVisited[start]){
+</span></span><span style="display:flex;"><span>                nodeVisited[start] <span style="color:#666">=</span> <span style="color:#a2f">true</span>;
+</span></span><span style="display:flex;"><span>                start <span style="color:#666">=</span> g[start].second;
+</span></span><span style="display:flex;"><span>                count<span style="color:#666">++</span>;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">if</span>(count <span style="color:#666">&gt;</span> <span style="color:#666">1</span>) swapTime <span style="color:#666">+=</span> count <span style="color:#666">-</span> <span style="color:#666">1</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> swapTime;
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><p><strong>遍歷每一個Level，透過BFS即可</strong></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#080;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"> * Definition for a binary tree node.
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"> * struct TreeNode {
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"> *     int val;
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"> *     TreeNode *left;
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"> *     TreeNode *right;
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"> *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"> *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"> *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"> * };
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"> */</span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">Solution</span> {
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#0b0;font-weight:bold">int</span> minimumOperations(TreeNode<span style="color:#666">*</span> root) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">if</span>(root <span style="color:#666">==</span> <span style="color:#a2f;font-weight:bold">nullptr</span>) <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#666">0</span>;
+</span></span><span style="display:flex;"><span>        queue<span style="color:#666">&lt;</span>TreeNode<span style="color:#666">*&gt;</span> q;
+</span></span><span style="display:flex;"><span>        q.push(root);
+</span></span><span style="display:flex;"><span>        <span style="color:#0b0;font-weight:bold">int</span> minTime <span style="color:#666">=</span> <span style="color:#666">0</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">while</span>(<span style="color:#666">!</span>q.empty()){
+</span></span><span style="display:flex;"><span>            <span style="color:#0b0;font-weight:bold">int</span> size <span style="color:#666">=</span> q.size();
+</span></span><span style="display:flex;"><span>            vector<span style="color:#666">&lt;</span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">&gt;</span> res;
+</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">for</span>(<span style="color:#0b0;font-weight:bold">int</span> i <span style="color:#666">=</span> <span style="color:#666">0</span>;i<span style="color:#666">&lt;</span>size;i<span style="color:#666">++</span>){
+</span></span><span style="display:flex;"><span>                <span style="color:#a2f;font-weight:bold">auto</span> front <span style="color:#666">=</span> q.front();q.pop();
+</span></span><span style="display:flex;"><span>                res.push_back(front<span style="color:#666">-&gt;</span>val);
+</span></span><span style="display:flex;"><span>                <span style="color:#a2f;font-weight:bold">if</span>(front<span style="color:#666">-&gt;</span>left <span style="color:#666">!=</span> <span style="color:#a2f;font-weight:bold">nullptr</span>) q.push(front<span style="color:#666">-&gt;</span>left);
+</span></span><span style="display:flex;"><span>                <span style="color:#a2f;font-weight:bold">if</span>(front<span style="color:#666">-&gt;</span>right <span style="color:#666">!=</span> <span style="color:#a2f;font-weight:bold">nullptr</span>) q.push(front<span style="color:#666">-&gt;</span>right);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            minTime <span style="color:#666">+=</span> helper(res);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> minTime;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#0b0;font-weight:bold">int</span> <span style="color:#00a000">helper</span>(vector<span style="color:#666">&lt;</span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">&gt;&amp;</span> res){
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">if</span>(res.size() <span style="color:#666">&lt;=</span> <span style="color:#666">1</span>) <span style="color:#a2f;font-weight:bold">return</span> <span style="color:#666">0</span>; <span style="color:#080;font-style:italic">//no need
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#0b0;font-weight:bold">int</span> swapTime <span style="color:#666">=</span> <span style="color:#666">0</span>;
+</span></span><span style="display:flex;"><span>        vector<span style="color:#666">&lt;</span>pair<span style="color:#666">&lt;</span><span style="color:#0b0;font-weight:bold">int</span>,<span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">&gt;&gt;</span> g;
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">for</span>(<span style="color:#0b0;font-weight:bold">int</span> i <span style="color:#666">=</span> <span style="color:#666">0</span>;i<span style="color:#666">&lt;</span>res.size();i<span style="color:#666">++</span>){ <span style="color:#080;font-style:italic">//building the graph //O(res.size())
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            g.push_back({res[i],i});
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        sort(g.begin(),g.end());<span style="color:#080;font-style:italic">//sort it by value not index
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        vector<span style="color:#666">&lt;</span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">&gt;</span> nodeVisited(res.size());
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">for</span>(<span style="color:#0b0;font-weight:bold">int</span> i <span style="color:#666">=</span> <span style="color:#666">0</span>;i<span style="color:#666">&lt;</span>res.size();i<span style="color:#666">++</span>){
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">//if current value need to keep in current index -&gt; continue or is already swapped
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>            <span style="color:#a2f;font-weight:bold">if</span>(nodeVisited[i] <span style="color:#666">||</span> g[i].second <span style="color:#666">==</span> i) <span style="color:#a2f;font-weight:bold">continue</span>;
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>            <span style="color:#0b0;font-weight:bold">int</span> count <span style="color:#666">=</span> <span style="color:#666">0</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#0b0;font-weight:bold">int</span> start <span style="color:#666">=</span> i;
+</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">while</span>(<span style="color:#666">!</span>nodeVisited[start]){
+</span></span><span style="display:flex;"><span>                nodeVisited[start] <span style="color:#666">=</span> <span style="color:#a2f">true</span>;
+</span></span><span style="display:flex;"><span>                start <span style="color:#666">=</span> g[start].second;
+</span></span><span style="display:flex;"><span>                count<span style="color:#666">++</span>;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#a2f;font-weight:bold">if</span>(count <span style="color:#666">&gt;</span> <span style="color:#666">1</span>) swapTime <span style="color:#666">+=</span> count <span style="color:#666">-</span> <span style="color:#666">1</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> swapTime;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><h2 id="總結">總結</h2>
+<ul>
+<li>對於Graph的處理以及思路需要加強改善, 特別是需要自己建立<code>Graph</code>的題目。</li>
+</ul>
+
+    </div>
+          
+    <footer class="post-footer">
+     
+
+     
+     <div class="post-nav">
+<div class="article-copyright">
+    
+    <div class="article-copyright-info">
+        <p> 
+            <span>文章聲明：</span>[總結]Leetcode 週賽第319場復盤總結
+        </p>
+        <p> 
+            <span>文章連接：</span>http://localhost:1313/post/leetcode-contest319/
+        </p>
+        <p> 
+            <span>作者：</span>jackson.tmm
+        </p>
+        <p> 
+            <span>文章聲明： </span>本博客文章除特別聲明外，均采用 <a href='https://creativecommons.org/licenses/by-nc-sa/3.0/' target='_blank' style='text-decoration: underline;'>CC BY-NC-SA 3.0</a>許可協議，轉載請注明出處！
+        </p>
+    </div>
+</div>
+<div class="clear"></div>
+</div>
+     
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="http://localhost:1313/post/kuberneters-on-aws/" rel="next" title="透過Kops工具在AWS中部署K8S集群">
+        <i class="fa fa-chevron-left"></i> 透過Kops工具在AWS中部署K8S集群
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="http://localhost:1313/post/leetcodeweeklycontest331/" rel="prev" title="Leetcode Weekly Contest 331(第一次參加競賽)">
+        Leetcode Weekly Contest 331(第一次參加競賽) 
+        <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>  
+     
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="/images/avatar.jpg"
+        alt="jackson.tmm" />
+    <p class="site-author-name" itemprop="name">jackson.tmm</p>
+    <p class="site-description motion-element" itemprop="description"> 
+      
+        加油，好好生活，生活吃飯，好好玩耍，好好工作
+      
+    </p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="/post/">
+        <span class="site-state-item-count">40</span>
+        <span class="site-state-item-name">日誌</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="/categories/">      
+         
+        <span class="site-state-item-count">34</span>
+        
+        <span class="site-state-item-name">分類</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="/tags/">
+         
+        <span class="site-state-item-count">60 </span>
+        
+        <span class="site-state-item-name">標籤</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/RyanTokManMokMTM" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="https://www.facebook.com/karot.ka.7505/" target="_blank" title="Facebook">
+            <i class="fa fa-fw fa-facebook"></i>
+            Facebook
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="https://www.instagram.com/tm_m.0418/" target="_blank" title="Instagram">
+            <i class="fa fa-fw fa-instagram"></i>
+            Instagram
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/jackson-moktokman/" target="_blank" title="Linkedin">
+            <i class="fa fa-fw fa-linkedin"></i>
+            Linkedin
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      
+    <div class="tagcloud-of-blogroll motion-element tagcloud-of-blogroll-inline">
+    <div class="tagcloud-of-blogroll-title">
+        <i class="fa fa-fw fa-tags"></i>
+        標籤雲
+    </div>
+    <ul class="tagcloud-of-blogroll-list">
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/array">Array</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/side-project">Side project</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/string">String</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/binary-tree">Binary tree</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/dynamic-programming">Dynamic programming</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/recursion">Recursion</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/learning">Learning</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/recursive">Recursive</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/stack">Stack</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/creational">Creational</a>
+        </li>
+        
+    </ul>
+    </div>
+
+
+      
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span class="copyright-year">  
+    &copy; 2022 - 2024
+  </span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="copyright-author">Jackson.tmm</span>
+</div>
+<div class="powered-info">
+  <span class="powered-by">
+    Powered by - <a class="powered-link" href="//gohugo.io" target="_blank" title="hugo" >Hugo v0.125.2</a>
+  </span>
+  <span class="separator-line">/</span>
+  <span class="theme-info">
+    Theme by - <a class="powered-link" href="//github.com/elkan1788/hugo-theme-next" target="_blank"> NexT
+    </a>
+  </span>
+</div>
+<div class="vistor-info">
+
+
+</div>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.0.min.js"></script>
+<div class="pio-container right">
+  <div class="pio-action"></div>
+  <canvas id="pio" width="200" height="400"></canvas>
+</div>
+
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="/js/search.js"></script>
+<script type="text/javascript" src="/js/affix.js"></script>
+<script type="text/javascript" src="/js/scrollspy.js"></script> 
+
+<script type="text/javascript">
+
+  function detectIE() {
+    var ua = window.navigator.userAgent;
+
+    var msie = ua.indexOf('MSIE ');
+    var trident = ua.indexOf('Trident/');
+    var edge = ua.indexOf('Edge/');
+
+    if (msie>0 || trident>0 || edge>0) {
+      return -1;
+    }
+
+    return 1;
+  }
+
+
+  function getCntViewHeight() {
+    var docHeight = $('#content').height(),
+        winHeight = $(window).height(),
+        cntViewHeight = (docHeight > winHeight) ? (docHeight - winHeight) : ($(document).height() - winHeight);
+    return cntViewHeight;
+  }
+
+  function getScrollbarWidth() {
+    var $div = $('<div />').addClass('scrollbar-measure').prependTo('body');
+    var div = $div[0];
+    var scrollbarWidth = div.offsetWidth - div.clientWidth;
+
+    $div.remove();
+
+    return scrollbarWidth;
+  }
+
+  function registerBackTop() {
+    var THRESHOLD = 50;
+    var $top = $('.back-to-top');
+
+    $(window).on('scroll', function () {
+      $top.toggleClass('back-to-top-on', window.pageYOffset > THRESHOLD);
+
+      var scrollTop = $(window).scrollTop();
+      var cntViewHeight = getCntViewHeight();
+      var scrollPercent = (scrollTop) / (cntViewHeight);
+      var scrollPercentRounded = Math.round(scrollPercent*100);
+      var scrollPercentMaxed = (scrollPercentRounded > 100) ? 100 : scrollPercentRounded;
+      $('#scrollpercent>span').html(scrollPercentMaxed);
+    });
+
+    $top.on('click', function () {
+      $("html,body").animate({
+                 scrollTop: 0,
+                 screenLeft: 0,
+                 }, 800);
+    });
+  }
+
+  function initScrollSpy () {
+    var tocSelector = '.post-toc';
+    var $tocElement = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocElement
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+      })
+      .on('clear.bs.scrollspy', removeCurrentActiveClass);
+
+    $('body').scrollspy({ target: tocSelector });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+  }
+
+  function initAffix () {
+    var headerHeight = $('.header-inner').height();
+    var footerOffset = parseInt($('.main').css('padding-bottom'), 10);
+    var sidebarTop = headerHeight + 10;
+
+    $('.sidebar-inner').affix({
+      offset: {
+        top: sidebarTop,
+        bottom: footerOffset
+      }
+    });
+
+    $(document)
+      .on('affixed.bs.affix', function () {
+        updateTOCHeight(document.body.clientHeight - 100);
+      });
+  }
+
+  function initTOCDimension () {
+    var updateTOCHeightTimer;
+
+    $(window).on('resize', function () {
+      updateTOCHeightTimer && clearTimeout(updateTOCHeightTimer);
+
+      updateTOCHeightTimer = setTimeout(function () {
+        var tocWrapperHeight = document.body.clientHeight - 100;
+
+        updateTOCHeight(tocWrapperHeight);
+      }, 0);
+    });
+
+    
+    updateTOCHeight(document.body.clientHeight - 100);
+
+    
+    var scrollbarWidth = getScrollbarWidth();
+    $('.post-toc').css('width', 'calc(100% + ' + scrollbarWidth + 'px)');
+  }
+
+  function updateTOCHeight (height) {
+    height = height || 'auto';
+    $('.post-toc').css('max-height', height);
+  }
+
+$(function() {
+
+  var sidebarTop = $('.header-inner').height() + 10;
+  $('#sidebar').css({ 'margin-top': sidebarTop }).show(); 
+
+  
+  var sidebarMt = parseInt($('#sidebar').css('margin-top'));
+  var sidebarInHeight = parseInt($('.sidebar-inner').css('height'));
+  var sideHeight = sidebarMt + sidebarInHeight;
+  var contentHeight = $('.content-wrap').height();
+
+  if (contentHeight < sideHeight) {
+    $('.content-wrap').css('min-height', sideHeight);
+  }
+  
+  
+  $('.site-nav-toggle').on('click', function () {
+    var $siteNav = $('.site-nav');
+    var $toggleLine = $('.toggle');
+    var ON_CLASS_NAME = 'site-nav-on';
+    var CLOSE_CLASS_NAME = 'toggle-close';
+    var isSiteNavOn = $siteNav.hasClass(ON_CLASS_NAME);
+    var animateAction = isSiteNavOn ? 'slideUp' : 'slideDown';
+    var animateCallback = isSiteNavOn ? 'removeClass' : 'addClass';
+
+    $siteNav.stop()[animateAction]('normal', function () {
+      $siteNav[animateCallback](ON_CLASS_NAME);
+      $toggleLine[animateCallback](CLOSE_CLASS_NAME);
+    });
+
+  });
+
+  registerBackTop();
+  initScrollSpy();
+  initAffix();
+  initTOCDimension();
+
+  $('.sidebar-nav-toc').click(function(){
+    $(this).addClass('sidebar-nav-active');
+    $(this).next().removeClass('sidebar-nav-active');      
+    $('.'+$(this).next().attr('data-target')).toggle(500);
+    $('.'+$(this).attr('data-target')).toggle(500);
+  });
+
+  $('.sidebar-nav-overview').click(function(){
+    $(this).addClass('sidebar-nav-active');
+    $(this).prev().removeClass('sidebar-nav-active');      
+    $('.'+$(this).prev().attr('data-target')).toggle(500);
+    $('.'+$(this).attr('data-target')).toggle(500);
+  });
+});  
+
+</script>
+
+
+
+
+
+<script src="//cdn.bootcdn.net/ajax/libs/imageviewer/0.1.0/viewer.min.js"></script>
+<script type="text/javascript">
+$(function() {
+  $('.post-body').viewer(); 
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+<script src='/js/l2d.js'></script>
+
+<script src='/js/pio.js'></script>
+
+<script>
+  var pio = new Paul_Pio({
+      "mode": "draggable",
+      "hidden": true,
+      "content": {
+          "welcome": ["歡迎來到Jackson的小宇宙！", "今天天氣不錯，一起来玩吧！", "博主有空的話，會寫一寫博客記錄一下!"],
+          "custom": [
+              
+              {"selector": ".home-social a:last-child", "text": "在這里可以了解博主的日常噢~"},
+              {"selector": ".post-item a", "type": "read"},
+              {"selector": ".post-content a, .page-content a", "type": "link"}
+          ]
+      },
+      
+      "model": [
+      "/model/umaru/model.json",
+        "/model/HN/blanc_normal/model.json",
+        "/model/HN/blanc_classic/model.json",
+        "/model/chino/model.json"],
+        touch: ["不可以這樣欺負我啦><"]
+  })
+
+</script>
+</body>
+</html>

@@ -11,7 +11,7 @@ tags:
 
 ## Intro
 Hello, it was a long time not updating my blogger because of doing some research of a issue about multiple user streaming feature. The article is to share about what have I achived about the multiple user streming and summrise this side project! Which means this project finllay over! It took a year to finish QQ.  
-Alough the project has done, but still has some issue on it. If i have the ablility to fix it on the future, I'll come back and fix it. All those issues are makeing the streaming not stable, but we can still play around!  
+Alough the project has done, but still has some issue on it. If i have the ablility to fix it on the future, I'll come back and fix it. All those issues are making the streaming not stable, but we can still play around!  
 
 Before I jump into today topic, If you don't remember what the project about, please check all the articles list below to get more information.  
 [ChatApp(I)](/post/chat-app-init/)  

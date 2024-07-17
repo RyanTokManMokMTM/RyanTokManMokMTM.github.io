@@ -11,7 +11,7 @@ tags:
 
 
 ## Intro
-If you want to checkout what is this project about, please go through articles below.
+If you want to checkout what is this project about, please go through articles below.  
 [ChatApp(I)](/post/chat-app-init/)  
 [ChatApp(II)](/post/chat-app-demo/)  
 [ChatApp(III)](/post/chat-app-update/)  

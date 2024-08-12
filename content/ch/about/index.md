@@ -67,11 +67,15 @@ type = "about"
 **2022年 - 電影資源社群平台App**
 ![IOS_APP](/images/ott_app/movie-app/AppImg.png)
 
-**2023年 - 通訊軟體App**
-![Chat_APP](/images/chat-app/full-app.png)
+**2023/2024年 - 通訊軟體App**
+![Chat_APP](/images/chat-app/2024-04-20-final.png)
+
+**2024年 - 日本71天自由行**
+![trip-jp](/images/jp/full-jp.png)
+
 
 ### Interest
-* 跑步，打球，說唱，唱歌，看電影，看動漫
+* 跑步，看電影，一個人到處跑
 * 遊戲設計，遊戲美術，3D建模
 * 搞設計，寫程式
 * 跟朋友分享、交流
@@ -80,7 +84,7 @@ type = "about"
 ### Current Plan
 * 學更多有關後端開發，系統設計相關的技術
 * 學好英文(看電影不要看字幕，能更外國人交流的程度)
-* ~~考好雅思~~ 跑去考多益了 哈哈哈 (目前660 目標800+)
+* 考雅思
 * 做好自己,不比較,但一起學習一起進步
 
 ### Contact Me:

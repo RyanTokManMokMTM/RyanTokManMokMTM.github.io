@@ -1,12 +1,11 @@
 [zh-TW]
   title = "Jackson.tmm"
   languageName = "中文"
-  weight = 3
+  weight = 1
   contentdir = "content/ch"
-# [en]
-#   title = "Loving life and dreams."
-#   languageName = "English"
-#   weight = 2
-#   contentdir = "content/en"
   
-
+[en]
+  title = "Jackson.tmm"
+  languageName = "En"
+  weight = 2
+  contentdir = "content/en"

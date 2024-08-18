@@ -1,0 +1,744 @@
+<!DOCTYPE HTML>
+<html lang="en" dir="zh">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  <title> Stack - Jackson.tmm </title>
+  
+  <meta name="keywords" content="Blogger, Enginner, Programmer, Learning, Note, Tech, Backend, Life">
+  
+  
+  <meta name="author" content="jackson.tmm">
+  
+  <meta property="og:title" content="Stack"/>
+  <meta property="og:site_name" content="Jackson.tmm">
+  <meta property="og:image" content="/images/favicon.png"> 
+  <meta name="title" content="Stack - Jackson.tmm" />
+  
+  <meta name="description" content="Welcome to Jackson.tmm&#39;s blogger! Here will share anything that interests me, but it will focus on Tech/Note/Learning.">
+   
+  <link rel="shortcut icon" href="/images/favicon.png" />
+  <link rel="apple-touch-icon" href="/images/avatar.jpg" />
+  <link rel="apple-touch-icon-precomposed" href="/images/favicon.png" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  
+  <link href="/css/main.css" rel="stylesheet" type="text/css" />
+  <link href="/css/syntax.css" rel="stylesheet" type="text/css" />    
+  
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js">
+  </script> <script>mermaid.initialize({ startOnLoad: true, securityLevel: 'loose'});</script>
+</head>
+
+<link href='/css/pio.css' rel='stylesheet' type='text/css'/>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left   ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-container">
+<div class="site-nav-toggle">
+  <div class="toggle" role="button" style="opacity: 1; top: 0px;">
+      <span class="toggle-line"></span>
+      <span class="toggle-line"></span>
+      <span class="toggle-line"></span>
+  </div>
+</div>
+<div class="site-meta ">
+  <div class="multi-lang-switch"> 
+    <i class="fa fa-fw fa-language" style="margin-right: 5px;"></i>
+    
+    
+    
+    
+        
+        
+                          
+              
+                <a class="lang-link" id="zh-tw" href="http://localhost:1313/tags/stack/">中文</a>
+              
+               
+              <span class="lang-line"> / </span> 
+              
+            
+        
+            
+        
+    
+        
+        
+            
+        
+                          
+              
+                 <a class="lang-link" id="en" href="#">En</a>
+              
+              
+            
+        
+    
+  </div>
+  <div class="custom-logo-site-title">
+    <a href="/en/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Jackson.tmm</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Having a happy life every single day</p>
+</div>
+
+<div class="site-nav-right">
+    <div class="toggle popup-trigger" style="opacity: 1; top: 0px;">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/en/" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/en/about.html" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />About
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/en/post" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Posts
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/en/leetcodes" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-code"></i> <br />Leetcodes 
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/en/project" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-tasks"></i> <br />Projects
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/en/achievement" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-trophy"></i> <br />achievement
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> Search</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon"><i class="fa fa-search"></i> </span>
+    <span class="popup-btn-close"><i class="fa fa-times-circle"></i></span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Enter key words..." spellcheck="false" type="text" id="local-search-input" autocapitalize="none" autocorrect="off">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-collapse">
+<div class="collection-title">
+    <h2 >Stack
+    <small>Tags</small>
+    </h2>
+</div>
+
+<div class="collection-title">
+  <h2 class="archive-year motion-element" id="archive-year-2022">2022</h2>
+</div>
+
+  <article class="post post-type-normal }}" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title">
+        <a class="post-title-link" href="http://localhost:1313/en/leetcodes/leetcode1996/" itemprop="url">
+            <span itemprop="name">[Leetcode] The Number of Weak Characters in the Game(Medium)</span>
+        </a>
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2022-09-09"
+              content="09-09" >
+          09-09
+        </time>
+      </div>
+    </header>
+  </article>
+
+  <article class="post post-type-normal }}" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title">
+        <a class="post-title-link" href="http://localhost:1313/en/leetcodes/leetcode456/" itemprop="url">
+            <span itemprop="name">[Leetcode] 132 Pattern(Medium)</span>
+        </a>
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2022-05-07"
+              content="05-07" >
+          05-07
+        </time>
+      </div>
+    </header>
+  </article>
+
+  <article class="post post-type-normal }}" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title">
+        <a class="post-title-link" href="http://localhost:1313/en/leetcodes/leetcode1209/" itemprop="url">
+            <span itemprop="name">[LeetCode] Remove All Adjacent Duplicates in String II(Medium)</span>
+        </a>
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2022-05-06"
+              content="05-06" >
+          05-06
+        </time>
+      </div>
+    </header>
+  </article>
+
+  <article class="post post-type-normal }}" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title">
+        <a class="post-title-link" href="http://localhost:1313/en/leetcodes/leetcode225/" itemprop="url">
+            <span itemprop="name">[Leetcode] Implement Stack using Queues(Easy)</span>
+        </a>
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2022-05-05"
+              content="05-05" >
+          05-05
+        </time>
+      </div>
+    </header>
+  </article>
+
+  <article class="post post-type-normal }}" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title">
+        <a class="post-title-link" href="http://localhost:1313/en/leetcodes/leetcode682/" itemprop="url">
+            <span itemprop="name">[Leetcode] Baseball Game(Easy)</span>
+        </a>
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2022-04-10"
+              content="04-10" >
+          04-10
+        </time>
+      </div>
+    </header>
+  </article>
+
+
+ </section>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+  
+  
+
+
+
+<nav class="pagination">
+    
+    
+        
+        
+          <span class="page-number current">1</span>
+        
+        
+    
+    
+</nav>
+
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="/images/avatar.jpg"
+        alt="jackson.tmm" />
+    <p class="site-author-name" itemprop="name">jackson.tmm</p>
+    <p class="site-description motion-element" itemprop="description"> 
+      
+        Finding the meaning of life &amp; Enjoy the life
+      
+    </p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="/en/post/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">Blogs</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="/en/categories/">      
+         
+        <span class="site-state-item-count">18</span>
+        
+        <span class="site-state-item-name">Categories</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="/en/tags/">
+         
+        <span class="site-state-item-count">46 </span>
+        
+        <span class="site-state-item-name">Tags</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/RyanTokManMokMTM" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="https://www.facebook.com/karot.ka.7505/" target="_blank" title="Facebook">
+            <i class="fa fa-fw fa-facebook"></i>
+            Facebook
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="https://www.instagram.com/tm_m.0418/" target="_blank" title="Instagram">
+            <i class="fa fa-fw fa-instagram"></i>
+            Instagram
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/jackson-moktokman/" target="_blank" title="Linkedin">
+            <i class="fa fa-fw fa-linkedin"></i>
+            Linkedin
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      
+    <div class="tagcloud-of-blogroll motion-element tagcloud-of-blogroll-inline">
+    <div class="tagcloud-of-blogroll-title">
+        <i class="fa fa-fw fa-tags"></i>
+        TagCloud
+    </div>
+    <ul class="tagcloud-of-blogroll-list">
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/array">Array</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/side-project">Side project</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/string">String</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/binary-tree">Binary tree</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/recursion">Recursion</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/recursive">Recursive</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/stack">Stack</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/dynamic-programming">Dynamic programming</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/japen">Japen</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/jp">Jp</a>
+        </li>
+        
+    </ul>
+    </div>
+
+
+      
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span class="copyright-year">  
+    &copy; 2022 - 2024
+  </span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="copyright-author">Jackson.tmm</span>
+</div>
+<div class="powered-info">
+  <span class="powered-by">
+    Powered by - <a class="powered-link" href="//gohugo.io" target="_blank" title="hugo" >Hugo v0.125.2</a>
+  </span>
+  <span class="separator-line">/</span>
+  <span class="theme-info">
+    Theme by - <a class="powered-link" href="//github.com/elkan1788/hugo-theme-next" target="_blank"> NexT
+    </a>
+  </span>
+</div>
+<div class="vistor-info">
+
+
+</div>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.0.min.js"></script>
+<div class="pio-container right">
+  <div class="pio-action"></div>
+  <canvas id="pio" width="200" height="400"></canvas>
+</div>
+
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="/js/search.js"></script>
+<script type="text/javascript" src="/js/affix.js"></script>
+<script type="text/javascript" src="/js/scrollspy.js"></script> 
+
+<script type="text/javascript">
+
+  function detectIE() {
+    var ua = window.navigator.userAgent;
+
+    var msie = ua.indexOf('MSIE ');
+    var trident = ua.indexOf('Trident/');
+    var edge = ua.indexOf('Edge/');
+
+    if (msie>0 || trident>0 || edge>0) {
+      return -1;
+    }
+
+    return 1;
+  }
+
+
+  function getCntViewHeight() {
+    var docHeight = $('#content').height(),
+        winHeight = $(window).height(),
+        cntViewHeight = (docHeight > winHeight) ? (docHeight - winHeight) : ($(document).height() - winHeight);
+    return cntViewHeight;
+  }
+
+  function getScrollbarWidth() {
+    var $div = $('<div />').addClass('scrollbar-measure').prependTo('body');
+    var div = $div[0];
+    var scrollbarWidth = div.offsetWidth - div.clientWidth;
+
+    $div.remove();
+
+    return scrollbarWidth;
+  }
+
+  function registerBackTop() {
+    var THRESHOLD = 50;
+    var $top = $('.back-to-top');
+
+    $(window).on('scroll', function () {
+      $top.toggleClass('back-to-top-on', window.pageYOffset > THRESHOLD);
+
+      var scrollTop = $(window).scrollTop();
+      var cntViewHeight = getCntViewHeight();
+      var scrollPercent = (scrollTop) / (cntViewHeight);
+      var scrollPercentRounded = Math.round(scrollPercent*100);
+      var scrollPercentMaxed = (scrollPercentRounded > 100) ? 100 : scrollPercentRounded;
+      $('#scrollpercent>span').html(scrollPercentMaxed);
+    });
+
+    $top.on('click', function () {
+      $("html,body").animate({
+                 scrollTop: 0,
+                 screenLeft: 0,
+                 }, 800);
+    });
+  }
+
+  function initScrollSpy () {
+    var tocSelector = '.post-toc';
+    var $tocElement = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocElement
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+      })
+      .on('clear.bs.scrollspy', removeCurrentActiveClass);
+
+    $('body').scrollspy({ target: tocSelector });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+  }
+
+  function initAffix () {
+    var headerHeight = $('.header-inner').height();
+    var footerOffset = parseInt($('.main').css('padding-bottom'), 10);
+    var sidebarTop = headerHeight + 10;
+
+    $('.sidebar-inner').affix({
+      offset: {
+        top: sidebarTop,
+        bottom: footerOffset
+      }
+    });
+
+    $(document)
+      .on('affixed.bs.affix', function () {
+        updateTOCHeight(document.body.clientHeight - 100);
+      });
+  }
+
+  function initTOCDimension () {
+    var updateTOCHeightTimer;
+
+    $(window).on('resize', function () {
+      updateTOCHeightTimer && clearTimeout(updateTOCHeightTimer);
+
+      updateTOCHeightTimer = setTimeout(function () {
+        var tocWrapperHeight = document.body.clientHeight - 100;
+
+        updateTOCHeight(tocWrapperHeight);
+      }, 0);
+    });
+
+    
+    updateTOCHeight(document.body.clientHeight - 100);
+
+    
+    var scrollbarWidth = getScrollbarWidth();
+    $('.post-toc').css('width', 'calc(100% + ' + scrollbarWidth + 'px)');
+  }
+
+  function updateTOCHeight (height) {
+    height = height || 'auto';
+    $('.post-toc').css('max-height', height);
+  }
+
+$(function() {
+
+  var sidebarTop = $('.header-inner').height() + 10;
+  $('#sidebar').css({ 'margin-top': sidebarTop }).show(); 
+
+  
+  var sidebarMt = parseInt($('#sidebar').css('margin-top'));
+  var sidebarInHeight = parseInt($('.sidebar-inner').css('height'));
+  var sideHeight = sidebarMt + sidebarInHeight;
+  var contentHeight = $('.content-wrap').height();
+
+  if (contentHeight < sideHeight) {
+    $('.content-wrap').css('min-height', sideHeight);
+  }
+  
+  
+  $('.site-nav-toggle').on('click', function () {
+    var $siteNav = $('.site-nav');
+    var $toggleLine = $('.toggle');
+    var ON_CLASS_NAME = 'site-nav-on';
+    var CLOSE_CLASS_NAME = 'toggle-close';
+    var isSiteNavOn = $siteNav.hasClass(ON_CLASS_NAME);
+    var animateAction = isSiteNavOn ? 'slideUp' : 'slideDown';
+    var animateCallback = isSiteNavOn ? 'removeClass' : 'addClass';
+
+    $siteNav.stop()[animateAction]('normal', function () {
+      $siteNav[animateCallback](ON_CLASS_NAME);
+      $toggleLine[animateCallback](CLOSE_CLASS_NAME);
+    });
+
+  });
+
+  registerBackTop();
+  initScrollSpy();
+  initAffix();
+  initTOCDimension();
+
+  $('.sidebar-nav-toc').click(function(){
+    $(this).addClass('sidebar-nav-active');
+    $(this).next().removeClass('sidebar-nav-active');      
+    $('.'+$(this).next().attr('data-target')).toggle(500);
+    $('.'+$(this).attr('data-target')).toggle(500);
+  });
+
+  $('.sidebar-nav-overview').click(function(){
+    $(this).addClass('sidebar-nav-active');
+    $(this).prev().removeClass('sidebar-nav-active');      
+    $('.'+$(this).prev().attr('data-target')).toggle(500);
+    $('.'+$(this).attr('data-target')).toggle(500);
+  });
+});  
+
+</script>
+
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+<script src='/js/l2d.js'></script>
+
+<script src='/js/pio.js'></script>
+
+<script>
+  var pio = new Paul_Pio({
+      "mode": "draggable",
+      "hidden": true,
+      "content": {
+          "welcome": ["歡迎來到Jackson的小宇宙！", "今天天氣不錯，一起来玩吧！", "博主有空的話，會寫一寫博客記錄一下!"],
+          "custom": [
+              
+              {"selector": ".home-social a:last-child", "text": "在這里可以了解博主的日常噢~"},
+              {"selector": ".post-item a", "type": "read"},
+              {"selector": ".post-content a, .page-content a", "type": "link"}
+          ]
+      },
+      
+      "model": [
+      "/model/umaru/model.json",
+        
+        
+        "/model/chino/model.json"],
+        touch: ["不可以這樣欺負我啦><"]
+  })
+
+</script>
+</body>
+</html>

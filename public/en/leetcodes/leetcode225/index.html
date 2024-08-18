@@ -1,0 +1,870 @@
+<!DOCTYPE HTML>
+<html lang="en" dir="zh">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  <title> [Leetcode] Implement Stack using Queues(Easy) - Jackson.tmm </title>
+  
+  <meta name="keywords" content="Blogger, Enginner, Programmer, Learning, Note, Tech, Backend, Life">
+  
+  
+  <meta name="author" content="jackson.tmm">
+  
+  <meta property="og:title" content="[Leetcode] Implement Stack using Queues(Easy)"/>
+  <meta property="og:site_name" content="Jackson.tmm">
+  <meta property="og:image" content="/images/favicon.png"> 
+  <meta name="title" content="[Leetcode] Implement Stack using Queues(Easy) - Jackson.tmm" />
+  
+  <meta name="description" content="Welcome to Jackson.tmm&#39;s blogger! Here will share anything that interests me, but it will focus on Tech/Note/Learning.">
+   
+  <link rel="shortcut icon" href="/images/favicon.png" />
+  <link rel="apple-touch-icon" href="/images/avatar.jpg" />
+  <link rel="apple-touch-icon-precomposed" href="/images/favicon.png" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  
+  <link href="//cdn.bootcdn.net/ajax/libs/imageviewer/0.1.0/viewer.min.css" rel="stylesheet"/>
+  
+  <link href="/css/main.css" rel="stylesheet" type="text/css" />
+  <link href="/css/syntax.css" rel="stylesheet" type="text/css" />    
+  
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js">
+  </script> <script>mermaid.initialize({ startOnLoad: true, securityLevel: 'loose'});</script>
+</head>
+
+<link href='/css/pio.css' rel='stylesheet' type='text/css'/>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-container">
+<div class="site-nav-toggle">
+  <div class="toggle" role="button" style="opacity: 1; top: 0px;">
+      <span class="toggle-line"></span>
+      <span class="toggle-line"></span>
+      <span class="toggle-line"></span>
+  </div>
+</div>
+<div class="site-meta ">
+  <div class="multi-lang-switch"> 
+    <i class="fa fa-fw fa-language" style="margin-right: 5px;"></i>
+    
+    
+    
+    
+        
+        
+                          
+              
+                <a class="lang-link" id="zh-tw" href="http://localhost:1313/leetcodes/leetcode225/">中文</a>
+              
+               
+              <span class="lang-line"> / </span> 
+              
+            
+        
+            
+        
+    
+        
+        
+            
+        
+                          
+              
+                 <a class="lang-link" id="en" href="#">En</a>
+              
+              
+            
+        
+    
+  </div>
+  <div class="custom-logo-site-title">
+    <a href="/en/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Jackson.tmm</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Having a happy life every single day</p>
+</div>
+
+<div class="site-nav-right">
+    <div class="toggle popup-trigger" style="opacity: 1; top: 0px;">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/en/" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/en/about.html" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />About
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/en/post" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Posts
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/en/leetcodes" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-code"></i> <br />Leetcodes 
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/en/project" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-tasks"></i> <br />Projects
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/en/achievement" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-trophy"></i> <br />achievement
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> Search</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon"><i class="fa fa-search"></i> </span>
+    <span class="popup-btn-close"><i class="fa fa-times-circle"></i></span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Enter key words..." spellcheck="false" type="text" id="local-search-input" autocapitalize="none" autocorrect="off">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://localhost:1313/en/leetcodes/leetcode225/" itemprop="url">
+        [Leetcode] Implement Stack using Queues(Easy)
+        </a>
+      </h1>
+      
+      <div class="post-meta">
+      <span class="post-time">
+<i class="fa fa-calendar-o fa-fw"></i>
+<span class="post-meta-item-text">Published at:</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2022-05-05">
+    2022-05-05
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  
+  <i class="fa fa-folder-o fa-fw"></i>
+  
+  <span class="post-meta-item-text">Categories:</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="/en/categories/leetcode" itemprop="url" rel="index" style="text-decoration: underline">
+        <span itemprop="name">leetcode</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+ | 
+<i class="fa fa-file-word-o fa-fw"></i>
+<span class="post-meta-item-text">Words:</span>
+<span class="leancloud-world-count">909 words</span>
+</span>
+       <span>
+ | 
+<i class="fa fa-eye fa-fw"></i>
+<span class="post-meta-item-text">Reading:</span>
+<span class="leancloud-view-count">2 minutes</span>
+</span>
+      <span id="/en/leetcodes/leetcode225/" class="leancloud_visitors" data-flag-title="[Leetcode] Implement Stack using Queues(Easy)">
+ | 
+<i class="fa fa-binoculars fa-fw"></i>
+<span class="post-meta-item-text">Visited:</span>
+<span class="leancloud-visitors-count"></span>
+</span>
+      </div>
+     
+    </header>
+  
+    <div class="post-body" itemprop="articleBody">
+    <h2 id="leetcode-225---implement-stack-using-queues">LeetCode 225 - Implement Stack using Queues</h2>
+<p>Implement a last-in-first-out (LIFO) stack using only two queues. The implemented stack should support all the functions of a normal stack (<code>push</code>, <code>top</code>, <code>pop</code>, and <code>empty</code>).</p>
+<p>Implement the <code>MyStack</code> class:</p>
+<ul>
+<li>void <code>push(int x)</code> Pushes element x to the top of the stack.</li>
+<li>int <code>pop()</code> Removes the element on the top of the stack and returns it.</li>
+<li>int <code>top()</code> Returns the element on the top of the stack.</li>
+<li>boolean <code>empty()</code> Returns <code>true</code> if the stack is empty, <code>false</code> otherwise.</li>
+</ul>
+<p><strong>Notes</strong>:</p>
+<ul>
+<li>You must use only standard operations of a queue, which means that only <code>push to back</code>, <code>peek/pop</code> from front, <code>size</code> and is empty operations are valid.</li>
+<li>Depending on your language, the queue may not be supported natively. You may simulate a queue using a list or deque (double-ended queue) as long as you use only a queue&rsquo;s standard operations.</li>
+</ul>
+<p>example</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Input
+</span></span><span style="display:flex;"><span>[&#34;MyStack&#34;, &#34;push&#34;, &#34;push&#34;, &#34;top&#34;, &#34;pop&#34;, &#34;empty&#34;]
+</span></span><span style="display:flex;"><span>[[], [1], [2], [], [], []]
+</span></span><span style="display:flex;"><span>Output
+</span></span><span style="display:flex;"><span>[null, null, null, 2, 2, false]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Explanation
+</span></span><span style="display:flex;"><span>MyStack myStack = new MyStack();
+</span></span><span style="display:flex;"><span>myStack.push(1);
+</span></span><span style="display:flex;"><span>myStack.push(2);
+</span></span><span style="display:flex;"><span>myStack.top(); // return 2
+</span></span><span style="display:flex;"><span>myStack.pop(); // return 2
+</span></span><span style="display:flex;"><span>myStack.empty(); // return False
+</span></span></code></pre></div><h2 id="how-can-we-solve-this-problem">How can we solve this problem?</h2>
+<p>這題就是要我們用<code>Queue</code>來模擬<code>Stack</code>。做這題之前我們要先知道<code>Queue</code>和<code>Stack</code>的差異。</p>
+<ul>
+<li><code>Queue</code>是First In First Out, 也就是先進去的element會先被拿出來</li>
+<li><code>Stack</code>是First In Last Out, 也就是先進去的element最後才會被拿出來</li>
+</ul>
+<p><code>push(int x)</code>:<br>
+如果要用<code>Queue</code>來模擬<code>Stack</code>就要注意在<code>Queue</code>中的最後一個元素會是<code>Stack</code>的第一個元素。所以，這題我們可以用比較簡單粗暴的方式來解決。因為我們已經知道後進(<code>Last In</code>)<code>Stack</code>的值會是第一個元素。因此,我們可以直接用一個<code>variable</code>保存最後插入進<code>Queue</code>的element即可。</p>
+<p><code>pop()</code><br>
+如果我們要移除element，就必須要將<code>Queue</code>的最後一個元素搬到最前面，同時因為最前面的元素會被移除，所以我們用於保存最後插入進<code>Queue</code>的<code>variable</code>所記錄的值也必須被改變，變成<code>Queue</code>的倒數第二個element。因此我們要先將<code>Queue</code>中最後的2個element搬到最前面，第一個便是我們<code>stack</code>的<code>top</code>,而第二個是我們要<code>pop</code>的element。最後，我們記錄完<code>top</code>的值後，插入到<code>Queue</code>的尾巴，並返回要<code>Queue</code>的<code>front</code>即可。</p>
+<p><code>clear()</code>: <br>
+只需將空的<code>Queue</code>取代成當前不是空的<code>Queue</code>即可。</p>
+<p><code>empty()</code>:<br>
+只需檢查<code>Queue</code>是否為<code>empty()</code>即可。</p>
+<h4 id="solution">Solution:</h4>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">MyStack</span> {
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>    queue<span style="color:#666">&lt;</span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">&gt;</span> q;
+</span></span><span style="display:flex;"><span>    <span style="color:#0b0;font-weight:bold">int</span> t;
+</span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">// queue&lt;int&gt; q2;
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    MyStack() {
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">//O(N)
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">push</span>(<span style="color:#0b0;font-weight:bold">int</span> x) {
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// q2.push(x);
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// while(!q.empty()){
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">//     q2.push(q.front());q.pop();
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// }
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// q = q2;
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// clear(q2);
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        q.push(x);
+</span></span><span style="display:flex;"><span>        t <span style="color:#666">=</span> x;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">//O(1)
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#0b0;font-weight:bold">int</span> <span style="color:#00a000">pop</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// if(empty()) return -1;
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// int value = q.front();q.pop();
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">//get the last 2 elements
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#0b0;font-weight:bold">int</span> size <span style="color:#666">=</span> q.size();
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">while</span>(size<span style="color:#666">--</span> <span style="color:#666">&gt;</span> <span style="color:#666">2</span>) {
+</span></span><span style="display:flex;"><span>            q.push(q.front());
+</span></span><span style="display:flex;"><span>            q.pop();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">//getting the 2th top value in stack
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        t <span style="color:#666">=</span> q.front();
+</span></span><span style="display:flex;"><span>        q.push(q.front()); <span style="color:#080;font-style:italic">//push it at the back of the queue
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        q.pop();
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">//getting the 1th top value in stack
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#0b0;font-weight:bold">int</span> popVal <span style="color:#666">=</span> q.front();
+</span></span><span style="display:flex;"><span>        q.pop();
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> popVal;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#0b0;font-weight:bold">void</span> <span style="color:#00a000">clear</span>(queue<span style="color:#666">&lt;</span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">&gt;&amp;</span> q){
+</span></span><span style="display:flex;"><span>	    queue<span style="color:#666">&lt;</span><span style="color:#0b0;font-weight:bold">int</span><span style="color:#666">&gt;</span> empty;
+</span></span><span style="display:flex;"><span>	    swap(empty, q);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#0b0;font-weight:bold">int</span> <span style="color:#00a000">top</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#080;font-style:italic">// if(empty()) return -1;
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#080;font-style:italic">// return q.front();
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        <span style="color:#a2f;font-weight:bold">return</span> t;
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#0b0;font-weight:bold">bool</span> <span style="color:#00a000">empty</span>() {
+</span></span><span style="display:flex;"><span>        <span style="color:#a2f;font-weight:bold">return</span> q.empty() <span style="color:#666">?</span> <span style="color:#a2f">true</span> <span style="color:#666">:</span> <span style="color:#a2f">false</span>; 
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"> * Your MyStack object will be instantiated and called as such:
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"> * MyStack* obj = new MyStack();
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"> * obj-&gt;push(x);
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"> * int param_2 = obj-&gt;pop();
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"> * int param_3 = obj-&gt;top();
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"> * bool param_4 = obj-&gt;empty();
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"> */</span>
+</span></span></code></pre></div>
+    </div>
+          
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+    
+    <a href="/en/tags/stack" rel="tag" title="stack">#stack#</a>
+    
+    <a href="/en/tags/queue" rel="tag" title="queue">#queue#</a>
+    
+    <a href="/en/tags/design" rel="tag" title="design">#design#</a>
+    
+</div>
+
+
+
+     
+     <div class="post-nav">
+<div class="article-copyright">
+    
+    <div class="article-copyright-info">
+        <p> 
+            <span>Declaration：</span>[Leetcode] Implement Stack using Queues(Easy)
+        </p>
+        <p> 
+            <span>Link：</span>http://localhost:1313/en/leetcodes/leetcode225/
+        </p>
+        <p> 
+            <span>Author：</span>jackson.tmm
+        </p>
+        <p> 
+            <span>Declaration： </span>This blog post article is under the <a href='https://creativecommons.org/licenses/by-nc-sa/3.0/' target='_blank' style='text-decoration: underline;'>CC BY-NC-SA 3.0</a> license,Please indicate the source!
+        </p>
+    </div>
+</div>
+<div class="clear"></div>
+</div>
+     
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="http://localhost:1313/en/leetcodes/leetcode1209/" rel="next" title="[LeetCode] Remove All Adjacent Duplicates in String II(Medium)">
+        <i class="fa fa-chevron-left"></i> [LeetCode] Remove All Adjacent Duplicates in String II(Medium)
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="http://localhost:1313/en/leetcodes/leetcode1679/" rel="prev" title="[Leetcode] Max Number of K-Sum Pairs(Medium)">
+        [Leetcode] Max Number of K-Sum Pairs(Medium) 
+        <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>  
+     
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="/images/avatar.jpg"
+        alt="jackson.tmm" />
+    <p class="site-author-name" itemprop="name">jackson.tmm</p>
+    <p class="site-description motion-element" itemprop="description"> 
+      
+        Finding the meaning of life &amp; Enjoy the life
+      
+    </p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="/en/post/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">Blogs</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="/en/categories/">      
+         
+        <span class="site-state-item-count">18</span>
+        
+        <span class="site-state-item-name">Categories</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="/en/tags/">
+         
+        <span class="site-state-item-count">46 </span>
+        
+        <span class="site-state-item-name">Tags</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/RyanTokManMokMTM" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="https://www.facebook.com/karot.ka.7505/" target="_blank" title="Facebook">
+            <i class="fa fa-fw fa-facebook"></i>
+            Facebook
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="https://www.instagram.com/tm_m.0418/" target="_blank" title="Instagram">
+            <i class="fa fa-fw fa-instagram"></i>
+            Instagram
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/jackson-moktokman/" target="_blank" title="Linkedin">
+            <i class="fa fa-fw fa-linkedin"></i>
+            Linkedin
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      
+    <div class="tagcloud-of-blogroll motion-element tagcloud-of-blogroll-inline">
+    <div class="tagcloud-of-blogroll-title">
+        <i class="fa fa-fw fa-tags"></i>
+        TagCloud
+    </div>
+    <ul class="tagcloud-of-blogroll-list">
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/array">Array</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/side-project">Side project</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/string">String</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/binary-tree">Binary tree</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/recursion">Recursion</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/recursive">Recursive</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/stack">Stack</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/dynamic-programming">Dynamic programming</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/japen">Japen</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/jp">Jp</a>
+        </li>
+        
+    </ul>
+    </div>
+
+
+      
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span class="copyright-year">  
+    &copy; 2022 - 2024
+  </span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="copyright-author">Jackson.tmm</span>
+</div>
+<div class="powered-info">
+  <span class="powered-by">
+    Powered by - <a class="powered-link" href="//gohugo.io" target="_blank" title="hugo" >Hugo v0.125.2</a>
+  </span>
+  <span class="separator-line">/</span>
+  <span class="theme-info">
+    Theme by - <a class="powered-link" href="//github.com/elkan1788/hugo-theme-next" target="_blank"> NexT
+    </a>
+  </span>
+</div>
+<div class="vistor-info">
+
+
+</div>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.0.min.js"></script>
+<div class="pio-container right">
+  <div class="pio-action"></div>
+  <canvas id="pio" width="200" height="400"></canvas>
+</div>
+
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="/js/search.js"></script>
+<script type="text/javascript" src="/js/affix.js"></script>
+<script type="text/javascript" src="/js/scrollspy.js"></script> 
+
+<script type="text/javascript">
+
+  function detectIE() {
+    var ua = window.navigator.userAgent;
+
+    var msie = ua.indexOf('MSIE ');
+    var trident = ua.indexOf('Trident/');
+    var edge = ua.indexOf('Edge/');
+
+    if (msie>0 || trident>0 || edge>0) {
+      return -1;
+    }
+
+    return 1;
+  }
+
+
+  function getCntViewHeight() {
+    var docHeight = $('#content').height(),
+        winHeight = $(window).height(),
+        cntViewHeight = (docHeight > winHeight) ? (docHeight - winHeight) : ($(document).height() - winHeight);
+    return cntViewHeight;
+  }
+
+  function getScrollbarWidth() {
+    var $div = $('<div />').addClass('scrollbar-measure').prependTo('body');
+    var div = $div[0];
+    var scrollbarWidth = div.offsetWidth - div.clientWidth;
+
+    $div.remove();
+
+    return scrollbarWidth;
+  }
+
+  function registerBackTop() {
+    var THRESHOLD = 50;
+    var $top = $('.back-to-top');
+
+    $(window).on('scroll', function () {
+      $top.toggleClass('back-to-top-on', window.pageYOffset > THRESHOLD);
+
+      var scrollTop = $(window).scrollTop();
+      var cntViewHeight = getCntViewHeight();
+      var scrollPercent = (scrollTop) / (cntViewHeight);
+      var scrollPercentRounded = Math.round(scrollPercent*100);
+      var scrollPercentMaxed = (scrollPercentRounded > 100) ? 100 : scrollPercentRounded;
+      $('#scrollpercent>span').html(scrollPercentMaxed);
+    });
+
+    $top.on('click', function () {
+      $("html,body").animate({
+                 scrollTop: 0,
+                 screenLeft: 0,
+                 }, 800);
+    });
+  }
+
+  function initScrollSpy () {
+    var tocSelector = '.post-toc';
+    var $tocElement = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocElement
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+      })
+      .on('clear.bs.scrollspy', removeCurrentActiveClass);
+
+    $('body').scrollspy({ target: tocSelector });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+  }
+
+  function initAffix () {
+    var headerHeight = $('.header-inner').height();
+    var footerOffset = parseInt($('.main').css('padding-bottom'), 10);
+    var sidebarTop = headerHeight + 10;
+
+    $('.sidebar-inner').affix({
+      offset: {
+        top: sidebarTop,
+        bottom: footerOffset
+      }
+    });
+
+    $(document)
+      .on('affixed.bs.affix', function () {
+        updateTOCHeight(document.body.clientHeight - 100);
+      });
+  }
+
+  function initTOCDimension () {
+    var updateTOCHeightTimer;
+
+    $(window).on('resize', function () {
+      updateTOCHeightTimer && clearTimeout(updateTOCHeightTimer);
+
+      updateTOCHeightTimer = setTimeout(function () {
+        var tocWrapperHeight = document.body.clientHeight - 100;
+
+        updateTOCHeight(tocWrapperHeight);
+      }, 0);
+    });
+
+    
+    updateTOCHeight(document.body.clientHeight - 100);
+
+    
+    var scrollbarWidth = getScrollbarWidth();
+    $('.post-toc').css('width', 'calc(100% + ' + scrollbarWidth + 'px)');
+  }
+
+  function updateTOCHeight (height) {
+    height = height || 'auto';
+    $('.post-toc').css('max-height', height);
+  }
+
+$(function() {
+
+  var sidebarTop = $('.header-inner').height() + 10;
+  $('#sidebar').css({ 'margin-top': sidebarTop }).show(); 
+
+  
+  var sidebarMt = parseInt($('#sidebar').css('margin-top'));
+  var sidebarInHeight = parseInt($('.sidebar-inner').css('height'));
+  var sideHeight = sidebarMt + sidebarInHeight;
+  var contentHeight = $('.content-wrap').height();
+
+  if (contentHeight < sideHeight) {
+    $('.content-wrap').css('min-height', sideHeight);
+  }
+  
+  
+  $('.site-nav-toggle').on('click', function () {
+    var $siteNav = $('.site-nav');
+    var $toggleLine = $('.toggle');
+    var ON_CLASS_NAME = 'site-nav-on';
+    var CLOSE_CLASS_NAME = 'toggle-close';
+    var isSiteNavOn = $siteNav.hasClass(ON_CLASS_NAME);
+    var animateAction = isSiteNavOn ? 'slideUp' : 'slideDown';
+    var animateCallback = isSiteNavOn ? 'removeClass' : 'addClass';
+
+    $siteNav.stop()[animateAction]('normal', function () {
+      $siteNav[animateCallback](ON_CLASS_NAME);
+      $toggleLine[animateCallback](CLOSE_CLASS_NAME);
+    });
+
+  });
+
+  registerBackTop();
+  initScrollSpy();
+  initAffix();
+  initTOCDimension();
+
+  $('.sidebar-nav-toc').click(function(){
+    $(this).addClass('sidebar-nav-active');
+    $(this).next().removeClass('sidebar-nav-active');      
+    $('.'+$(this).next().attr('data-target')).toggle(500);
+    $('.'+$(this).attr('data-target')).toggle(500);
+  });
+
+  $('.sidebar-nav-overview').click(function(){
+    $(this).addClass('sidebar-nav-active');
+    $(this).prev().removeClass('sidebar-nav-active');      
+    $('.'+$(this).prev().attr('data-target')).toggle(500);
+    $('.'+$(this).attr('data-target')).toggle(500);
+  });
+});  
+
+</script>
+
+
+
+
+
+<script src="//cdn.bootcdn.net/ajax/libs/imageviewer/0.1.0/viewer.min.js"></script>
+<script type="text/javascript">
+$(function() {
+  $('.post-body').viewer(); 
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+<script src='/js/l2d.js'></script>
+
+<script src='/js/pio.js'></script>
+
+<script>
+  var pio = new Paul_Pio({
+      "mode": "draggable",
+      "hidden": true,
+      "content": {
+          "welcome": ["歡迎來到Jackson的小宇宙！", "今天天氣不錯，一起来玩吧！", "博主有空的話，會寫一寫博客記錄一下!"],
+          "custom": [
+              
+              {"selector": ".home-social a:last-child", "text": "在這里可以了解博主的日常噢~"},
+              {"selector": ".post-item a", "type": "read"},
+              {"selector": ".post-content a, .page-content a", "type": "link"}
+          ]
+      },
+      
+      "model": [
+      "/model/umaru/model.json",
+        
+        
+        "/model/chino/model.json"],
+        touch: ["不可以這樣欺負我啦><"]
+  })
+
+</script>
+</body>
+</html>

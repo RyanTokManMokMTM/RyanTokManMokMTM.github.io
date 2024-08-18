@@ -33,29 +33,3 @@ MonthFormat = "01-02"
   Name = "Linkedin"
   Icon = "linkedin"
   URL = "https://www.linkedin.com/in/jackson-moktokman/"
-
-
-  
-  
-
-
-#[[Socials]]
-#  Name = "知乎"
-#  Icon = "globe"
-#  URL = "https://www.zhihu.com/people/fan-meng-xing-chen-1"
-
-#[[Links]]
-#  Name = "Nutz"
-#  Permalink = "https://nutzam.com/"
-
-#[[Links]]
-#  Name = "JFinal"
-#  Permalink = "https://jfinal.com/"
-
-#[[Links]]
-#  Name = "Wendal"
-#  Permalink = "http://wendal.net/"
-
-#[[Links]]
-#  Name = "廖雪峰"
-#  Permalink = "https://www.liaoxuefeng.com/"

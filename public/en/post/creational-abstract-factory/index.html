@@ -1,0 +1,961 @@
+<!DOCTYPE HTML>
+<html lang="en" dir="zh">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  <title> [Note]Creational Abstract Factory - Jackson.tmm </title>
+  
+  <meta name="keywords" content="Blogger, Enginner, Programmer, Learning, Note, Tech, Backend, Life">
+  
+  
+  <meta name="author" content="jackson.tmm">
+  
+  <meta property="og:title" content="[Note]Creational Abstract Factory"/>
+  <meta property="og:site_name" content="Jackson.tmm">
+  <meta property="og:image" content="/images/favicon.png"> 
+  <meta name="title" content="[Note]Creational Abstract Factory - Jackson.tmm" />
+  
+  <meta name="description" content="Welcome to Jackson.tmm&#39;s blogger! Here will share anything that interests me, but it will focus on Tech/Note/Learning.">
+   
+  <link rel="shortcut icon" href="/images/favicon.png" />
+  <link rel="apple-touch-icon" href="/images/avatar.jpg" />
+  <link rel="apple-touch-icon-precomposed" href="/images/favicon.png" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  
+  <link href="//cdn.bootcdn.net/ajax/libs/imageviewer/0.1.0/viewer.min.css" rel="stylesheet"/>
+  
+  <link href="/css/main.css" rel="stylesheet" type="text/css" />
+  <link href="/css/syntax.css" rel="stylesheet" type="text/css" />    
+  
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js">
+  </script> <script>mermaid.initialize({ startOnLoad: true, securityLevel: 'loose'});</script>
+</head>
+
+<link href='/css/pio.css' rel='stylesheet' type='text/css'/>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-container">
+<div class="site-nav-toggle">
+  <div class="toggle" role="button" style="opacity: 1; top: 0px;">
+      <span class="toggle-line"></span>
+      <span class="toggle-line"></span>
+      <span class="toggle-line"></span>
+  </div>
+</div>
+<div class="site-meta ">
+  <div class="multi-lang-switch"> 
+    <i class="fa fa-fw fa-language" style="margin-right: 5px;"></i>
+    
+    
+    
+    
+        
+        
+                          
+              
+                <a class="lang-link" id="zh-tw" href="http://localhost:1313/post/creational-abstract-factory/">中文</a>
+              
+               
+              <span class="lang-line"> / </span> 
+              
+            
+        
+            
+        
+    
+        
+        
+            
+        
+                          
+              
+                 <a class="lang-link" id="en" href="#">En</a>
+              
+              
+            
+        
+    
+  </div>
+  <div class="custom-logo-site-title">
+    <a href="/en/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Jackson.tmm</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Having a happy life every single day</p>
+</div>
+
+<div class="site-nav-right">
+    <div class="toggle popup-trigger" style="opacity: 1; top: 0px;">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/en/" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/en/about.html" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />About
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/en/post" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Posts
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/en/memories" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-star"></i> <br />Memories
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/en/leetcodes" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-code"></i> <br />Leetcodes 
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/en/project" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-tasks"></i> <br />Projects
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/en/achievement" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-trophy"></i> <br />achievement
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/en/resources" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-file"></i> <br />resources
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> Search</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon"><i class="fa fa-search"></i> </span>
+    <span class="popup-btn-close"><i class="fa fa-times-circle"></i></span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Enter key words..." spellcheck="false" type="text" id="local-search-input" autocapitalize="none" autocorrect="off">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://localhost:1313/en/post/creational-abstract-factory/" itemprop="url">
+        [Note]Creational Abstract Factory
+        </a>
+      </h1>
+      
+      <div class="post-meta">
+      <span class="post-time">
+<i class="fa fa-calendar-o fa-fw"></i>
+<span class="post-meta-item-text">Published at:</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2022-04-03">
+    2022-04-03
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  
+  <i class="fa fa-folder-o fa-fw"></i>
+  
+  <span class="post-meta-item-text">Categories:</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="/en/categories/programming" itemprop="url" rel="index" style="text-decoration: underline">
+        <span itemprop="name">programming</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="/en/categories/design-pattern" itemprop="url" rel="index" style="text-decoration: underline">
+        <span itemprop="name">design pattern</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+ | 
+<i class="fa fa-file-word-o fa-fw"></i>
+<span class="post-meta-item-text">Words:</span>
+<span class="leancloud-world-count">1571 words</span>
+</span>
+       <span>
+ | 
+<i class="fa fa-eye fa-fw"></i>
+<span class="post-meta-item-text">Reading:</span>
+<span class="leancloud-view-count">4 minutes</span>
+</span>
+      <span id="/en/post/creational-abstract-factory/" class="leancloud_visitors" data-flag-title="[Note]Creational Abstract Factory">
+ | 
+<i class="fa fa-binoculars fa-fw"></i>
+<span class="post-meta-item-text">Visited:</span>
+<span class="leancloud-visitors-count"></span>
+</span>
+      </div>
+     
+    </header>
+  
+    <div class="post-body" itemprop="articleBody">
+    <h2 id="什麼是abstract-factory抽象工廠呢">什麼是Abstract Factory(抽象工廠)呢?</h2>
+<blockquote>
+<p>定義: 又稱為Kit模式。提供一個創建系列相關或者互相依賴的Interface，而無需指定其具體的class</p>
+</blockquote>
+<h3 id="簡單例子">簡單例子</h3>
+<p><em>注: 以下程式單純用於解釋，並不能實際執行</em></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>透過定義不同組件的Abstraction類,並把Abstraction類組合在一起。通過繼承抽象工廠的方式，定義不同的工廠類，生成不同的Product。
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>由以下例子可見，有2組不同的UI分別是Summary以及Spring，他們都分包實現了Abstraction 類，然後在透過實現各自的工廠類，生成Summary以及Spring的Product
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#080;font-style:italic">//🌰UI
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">//Button TextField ComboBox
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">//Abstract Class UI
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">Button</span>{
+</span></span><span style="display:flex;"><span>   <span style="color:#a2f;font-weight:bold">public</span><span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>    	<span style="color:#a2f;font-weight:bold">virtual</span> <span style="color:#0b0;font-weight:bold">void</span> display() <span style="color:#666">=</span> <span style="color:#666">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">TextField</span>{
+</span></span><span style="display:flex;"><span>   <span style="color:#a2f;font-weight:bold">public</span><span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>    	<span style="color:#a2f;font-weight:bold">virtual</span> <span style="color:#0b0;font-weight:bold">void</span> display() <span style="color:#666">=</span> <span style="color:#666">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">ComboBox</span>{
+</span></span><span style="display:flex;"><span>   <span style="color:#a2f;font-weight:bold">public</span><span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>    	<span style="color:#a2f;font-weight:bold">virtual</span> <span style="color:#0b0;font-weight:bold">void</span> display() <span style="color:#666">=</span> <span style="color:#666">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">//Abstract Class Factory
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">//用於把不同類型的UI/主題Group 在一起
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">UIFactory</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">public</span><span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>    	<span style="color:#a2f;font-weight:bold">virtual</span> Button<span style="color:#666">*</span> createButton() <span style="color:#666">=</span> <span style="color:#666">0</span>;
+</span></span><span style="display:flex;"><span>    	<span style="color:#a2f;font-weight:bold">virtual</span> TextField<span style="color:#666">*</span> <span style="color:#00a000">createTextField</span>() <span style="color:#666">=</span> <span style="color:#666">0</span>;
+</span></span><span style="display:flex;"><span>    	<span style="color:#a2f;font-weight:bold">virtual</span> ComboBox<span style="color:#666">*</span> <span style="color:#00a000">createComboBox</span>() <span style="color:#666">=</span> <span style="color:#666">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#080;font-style:italic">//Spring
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">SpringButton</span> <span style="color:#666">:</span> <span style="color:#a2f;font-weight:bold">public</span> Button{
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">public</span><span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>    	<span style="color:#0b0;font-weight:bold">void</span> Draw(){
+</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">//Draw Spring style Button
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">SpringTextField</span> <span style="color:#666">:</span> <span style="color:#a2f;font-weight:bold">public</span> TextField{
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">public</span><span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>    	<span style="color:#0b0;font-weight:bold">void</span> Draw(){
+</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">//Draw Spring stype TextField
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">SpringComboBox</span> <span style="color:#666">:</span> <span style="color:#a2f;font-weight:bold">public</span> ComboBox{
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">public</span><span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>    	<span style="color:#0b0;font-weight:bold">void</span> Draw(){
+</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">//Draw Spring stype ComboBox
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#080;font-style:italic">//Summer
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">SummerButton</span> <span style="color:#666">:</span> <span style="color:#a2f;font-weight:bold">public</span> Button{
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">public</span><span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>    	<span style="color:#0b0;font-weight:bold">void</span> Draw(){
+</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">//Draw Summer style Button
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">SummerTextField</span> <span style="color:#666">:</span> <span style="color:#a2f;font-weight:bold">public</span> TextField{
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">public</span><span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>    	<span style="color:#0b0;font-weight:bold">void</span> Draw(){
+</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">//Draw Summer style TextField
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">SummerComboBox</span> <span style="color:#666">:</span> <span style="color:#a2f;font-weight:bold">public</span> ComboBox{
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">public</span><span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>    	<span style="color:#0b0;font-weight:bold">void</span> Draw(){
+</span></span><span style="display:flex;"><span>            <span style="color:#080;font-style:italic">//Draw Summer style ComboBox
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>        }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#080;font-style:italic">//Factory
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">SpringFactory</span> <span style="color:#666">:</span> <span style="color:#a2f;font-weight:bold">public</span> UIFactory{
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">public</span><span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>    	 Button<span style="color:#666">*</span> createButton(){
+</span></span><span style="display:flex;"><span>             <span style="color:#080;font-style:italic">//To init the button and some setting
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>             Button<span style="color:#666">*</span> button <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> SpringButton();
+</span></span><span style="display:flex;"><span>             <span style="color:#a2f;font-weight:bold">return</span> button;
+</span></span><span style="display:flex;"><span>         };
+</span></span><span style="display:flex;"><span>    	 TextField<span style="color:#666">*</span> <span style="color:#00a000">createTextField</span>(){
+</span></span><span style="display:flex;"><span>             <span style="color:#080;font-style:italic">//To init the TextField and some setting
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>             TextField<span style="color:#666">*</span> textField <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> SpringTextField();
+</span></span><span style="display:flex;"><span>             <span style="color:#a2f;font-weight:bold">return</span> textField;
+</span></span><span style="display:flex;"><span>         };
+</span></span><span style="display:flex;"><span>    	 ComboBox<span style="color:#666">*</span> <span style="color:#00a000">createComboBox</span>(){
+</span></span><span style="display:flex;"><span>             <span style="color:#080;font-style:italic">//To init the ComboBox and some setting
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>             ComboBox<span style="color:#666">*</span> comboBox <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> SpringComboBox();
+</span></span><span style="display:flex;"><span>			<span style="color:#a2f;font-weight:bold">return</span> ComboBox;
+</span></span><span style="display:flex;"><span>         };
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic">//SummerFactory
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">SummerFactory</span> <span style="color:#666">:</span> <span style="color:#a2f;font-weight:bold">public</span> UIFactory{
+</span></span><span style="display:flex;"><span>    <span style="color:#a2f;font-weight:bold">public</span><span style="color:#666">:</span>
+</span></span><span style="display:flex;"><span>       	 Button<span style="color:#666">*</span> createButton(){
+</span></span><span style="display:flex;"><span>             <span style="color:#080;font-style:italic">//To init the button and some setting
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>             Button<span style="color:#666">*</span> button <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> SummerButton();
+</span></span><span style="display:flex;"><span>             <span style="color:#a2f;font-weight:bold">return</span> button;
+</span></span><span style="display:flex;"><span>         };
+</span></span><span style="display:flex;"><span>    	 TextField<span style="color:#666">*</span> <span style="color:#00a000">createTextField</span>(){
+</span></span><span style="display:flex;"><span>             <span style="color:#080;font-style:italic">//To init the TextField and some setting
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>             TextField<span style="color:#666">*</span> textField <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> SummerTextField();
+</span></span><span style="display:flex;"><span>             <span style="color:#a2f;font-weight:bold">return</span> textField;
+</span></span><span style="display:flex;"><span>         };
+</span></span><span style="display:flex;"><span>    	 ComboBox<span style="color:#666">*</span> <span style="color:#00a000">createComboBox</span>(){
+</span></span><span style="display:flex;"><span>             <span style="color:#080;font-style:italic">//To init the ComboBox and some setting
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>             ComboBox<span style="color:#666">*</span> comboBox <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> SummerComboBox();
+</span></span><span style="display:flex;"><span>			<span style="color:#a2f;font-weight:bold">return</span> ComboBox;
+</span></span><span style="display:flex;"><span>         };
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#0b0;font-weight:bold">int</span> <span style="color:#00a000">main</span>(){
+</span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">//就是透過工廠生成接口生成不同的工廠 
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#080;font-style:italic">//再透過不同的工廠調用其生產的product
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#080;font-style:italic">//Summer 工廠
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>	UIFactory<span style="color:#666">*</span> factory <span style="color:#666">=</span> <span style="color:#a2f;font-weight:bold">new</span> SummerFactory();
+</span></span><span style="display:flex;"><span>    Button<span style="color:#666">*</span> button <span style="color:#666">=</span> factory<span style="color:#666">-&gt;</span>createButton();
+</span></span><span style="display:flex;"><span>    TextField<span style="color:#666">*</span> textField <span style="color:#666">=</span> factory<span style="color:#666">-&gt;</span>createTextField();
+</span></span><span style="display:flex;"><span>    ComboBox<span style="color:#666">*</span> comboBox <span style="color:#666">=</span> factory<span style="color:#666">-&gt;</span>createComboBox();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    button<span style="color:#666">-&gt;</span>draw();  <span style="color:#080;font-style:italic">//畫出Summer Style的Button
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    textField<span style="color:#666">-&gt;</span>draw(); <span style="color:#080;font-style:italic">//畫出Summer Style的textField
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    comboBox<span style="color:#666">-&gt;</span>draw(); <span style="color:#080;font-style:italic">//畫出Summer Style的comboBox
+</span></span></span><span style="display:flex;"><span><span style="color:#080;font-style:italic"></span>    <span style="color:#a2f;font-weight:bold">return</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h3 id="優點">優點</h3>
+<ul>
+<li>解決工廠模式中每個產品都使用一個工廠的生產的問題</li>
+<li>新增產品很方便，擴展產品以及工廠即可(增加統一產品族)</li>
+<li>擁有工廠模式的優點</li>
+</ul>
+<h3 id="缺點">缺點</h3>
+<ul>
+<li>如果要新增產品等級結構必須修過工廠抽象類，違反Open-Close 原則(增加產品等級結構)</li>
+<li>唯一缺點就是開閉原則的傾斜性</li>
+<li>何謂開閉原則的傾斜性呢?
+<ul>
+<li>就是在新增產品族(<strong>不同類型，相同產品</strong>)的時候可以符合開閉原則,但是在新增產品等級結構(<strong>同一類型，新增產品/不同的產品類型/等級</strong>)時候,必須修改抽象類。這個問題無法解決，只能透過設計避免。</li>
+<li>例子
+<ul>
+<li>新增A的產品族，只需實現工程類以及實現產品類型，即可新增一個新的工廠用於生成新產品(符合Open-Close)</li>
+<li>新增A的類型(如一個新的UI原件:IMG),這樣就必須要修改abstract class以及concrete class的內部(違反Open-Close)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="抽象工廠模式跟工廠模式的區別">抽象工廠模式跟工廠模式的區別</h3>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>區別</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>工廠模式(Factory Pattern)</td>
+<td>每一組相關的Product都由同一個具體工廠生產</td>
+</tr>
+<tr>
+<td>抽象工廠模式(Factory Pattern)</td>
+<td>每個產品族(product)都由同一個具體工廠生產 <br />例如:<br />電器(同牌子/同一產品族)/電器(同電器(如都是冰箱)/同一產品等級結構)<br /><ul><li><strong>產品等級結構: 產品的繼承結構</strong>,<strong>例如:同一種類的產品(如:同一電器但不同牌子)</strong></li><li><strong>產品族:同一工廠生產的，位於不用產品等級結構的一組產品</strong>,<strong>例如:同一族群的產品(如:同一牌子的不同電器)</strong></li></ul></td>
+</tr>
+</tbody>
+</table>
+<h3 id="抽象工廠模式abstract-factory-pattern使用場合">抽象工廠模式(abstract factory pattern)使用場合</h3>
+<blockquote>
+<p>當一個工廠的可以創立出屬於不同產品的等級結構的一個產品族中的所有對象時,此時使用抽象工廠模式更有效率和簡單</p>
+</blockquote>
+<ul>
+<li><strong>系統不應該依賴具體的細節(如何創建,表達細節等&hellip;)，依賴於抽象(所有工廠模式都一樣)</strong></li>
+<li><strong>系統中多於一個產品族時，而每次只會使用到某一個產品族。可通過配置文件動態修改產品族</strong></li>
+<li><strong>約束:屬於同一產品族的產品將在一起使用(同一類)，而這些產品可以沒有任何關係，但有相同約束(同一工廠)</strong></li>
+<li><strong>產品等級結構穩定，在設計完成後不會在系統更改/刪除產品等級結構(開閉原則的傾斜性)</strong></li>
+</ul>
+<hr>
+<p>參考資料:<br>
+<a href="https://blog.csdn.net/LoveLion/article/details/17517213">史上最全设计模式导学目录（完整版）</a></p>
+
+    </div>
+          
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+    
+    <a href="/en/tags/creational" rel="tag" title="creational">#creational#</a>
+    
+    <a href="/en/tags/learning" rel="tag" title="learning">#learning#</a>
+    
+</div>
+
+
+
+     
+     <div class="post-nav">
+<div class="article-copyright">
+    
+    <div class="article-copyright-info">
+        <p> 
+            <span>Declaration：</span>[Note]Creational Abstract Factory
+        </p>
+        <p> 
+            <span>Link：</span>http://localhost:1313/en/post/creational-abstract-factory/
+        </p>
+        <p> 
+            <span>Author：</span>jackson.tmm
+        </p>
+        <p> 
+            <span>Declaration： </span>This blog post article is under the <a href='https://creativecommons.org/licenses/by-nc-sa/3.0/' target='_blank' style='text-decoration: underline;'>CC BY-NC-SA 3.0</a> license,Please indicate the source!
+        </p>
+    </div>
+</div>
+<div class="clear"></div>
+</div>
+     
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="http://localhost:1313/en/post/creational-singleton-pattern/" rel="next" title="[Note]Creational Singleton Pattern">
+        <i class="fa fa-chevron-left"></i> [Note]Creational Singleton Pattern
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="http://localhost:1313/en/post/creational-factory/" rel="prev" title="[Note]Creational-Factory">
+        [Note]Creational-Factory 
+        <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>  
+     
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="/images/avatar.jpg"
+        alt="jackson.tmm" />
+    <p class="site-author-name" itemprop="name">jackson.tmm</p>
+    <p class="site-description motion-element" itemprop="description"> 
+      
+        Finding the meaning of life &amp; Enjoy the life
+      
+    </p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="/en/post/">
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">Blogs</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="/en/categories/">      
+         
+        <span class="site-state-item-count">21</span>
+        
+        <span class="site-state-item-name">Categories</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="/en/tags/">
+         
+        <span class="site-state-item-count">51 </span>
+        
+        <span class="site-state-item-name">Tags</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/RyanTokManMokMTM" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="https://www.facebook.com/karot.ka.7505/" target="_blank" title="Facebook">
+            <i class="fa fa-fw fa-facebook"></i>
+            Facebook
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="https://www.instagram.com/tm_m.0418/" target="_blank" title="Instagram">
+            <i class="fa fa-fw fa-instagram"></i>
+            Instagram
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/jackson-moktokman/" target="_blank" title="Linkedin">
+            <i class="fa fa-fw fa-linkedin"></i>
+            Linkedin
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      
+    <div class="tagcloud-of-blogroll motion-element tagcloud-of-blogroll-inline">
+    <div class="tagcloud-of-blogroll-title">
+        <i class="fa fa-fw fa-tags"></i>
+        TagCloud
+    </div>
+    <ul class="tagcloud-of-blogroll-list">
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/array">Array</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/side-project">Side project</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/string">String</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/binary-tree">Binary tree</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/recursion">Recursion</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/learning">Learning</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/recursive">Recursive</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/stack">Stack</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/creational">Creational</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/dynamic-programming">Dynamic programming</a>
+        </li>
+        
+    </ul>
+    </div>
+
+
+      
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span class="copyright-year">  
+    &copy; 2022 - 2024
+  </span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="copyright-author">Jackson.tmm</span>
+</div>
+<div class="powered-info">
+  <span class="powered-by">
+    Powered by - <a class="powered-link" href="//gohugo.io" target="_blank" title="hugo" >Hugo v0.125.2</a>
+  </span>
+  <span class="separator-line">/</span>
+  <span class="theme-info">
+    Theme by - <a class="powered-link" href="//github.com/elkan1788/hugo-theme-next" target="_blank"> NexT
+    </a>
+  </span>
+</div>
+<div class="vistor-info">
+
+
+</div>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.0.min.js"></script>
+<div class="pio-container right">
+  <div class="pio-action"></div>
+  <canvas id="pio" width="200" height="400"></canvas>
+</div>
+
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="/js/search.js"></script>
+<script type="text/javascript" src="/js/affix.js"></script>
+<script type="text/javascript" src="/js/scrollspy.js"></script> 
+
+<script type="text/javascript">
+
+  function detectIE() {
+    var ua = window.navigator.userAgent;
+
+    var msie = ua.indexOf('MSIE ');
+    var trident = ua.indexOf('Trident/');
+    var edge = ua.indexOf('Edge/');
+
+    if (msie>0 || trident>0 || edge>0) {
+      return -1;
+    }
+
+    return 1;
+  }
+
+
+  function getCntViewHeight() {
+    var docHeight = $('#content').height(),
+        winHeight = $(window).height(),
+        cntViewHeight = (docHeight > winHeight) ? (docHeight - winHeight) : ($(document).height() - winHeight);
+    return cntViewHeight;
+  }
+
+  function getScrollbarWidth() {
+    var $div = $('<div />').addClass('scrollbar-measure').prependTo('body');
+    var div = $div[0];
+    var scrollbarWidth = div.offsetWidth - div.clientWidth;
+
+    $div.remove();
+
+    return scrollbarWidth;
+  }
+
+  function registerBackTop() {
+    var THRESHOLD = 50;
+    var $top = $('.back-to-top');
+
+    $(window).on('scroll', function () {
+      $top.toggleClass('back-to-top-on', window.pageYOffset > THRESHOLD);
+
+      var scrollTop = $(window).scrollTop();
+      var cntViewHeight = getCntViewHeight();
+      var scrollPercent = (scrollTop) / (cntViewHeight);
+      var scrollPercentRounded = Math.round(scrollPercent*100);
+      var scrollPercentMaxed = (scrollPercentRounded > 100) ? 100 : scrollPercentRounded;
+      $('#scrollpercent>span').html(scrollPercentMaxed);
+    });
+
+    $top.on('click', function () {
+      $("html,body").animate({
+                 scrollTop: 0,
+                 screenLeft: 0,
+                 }, 800);
+    });
+  }
+
+  function initScrollSpy () {
+    var tocSelector = '.post-toc';
+    var $tocElement = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocElement
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+      })
+      .on('clear.bs.scrollspy', removeCurrentActiveClass);
+
+    $('body').scrollspy({ target: tocSelector });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+  }
+
+  function initAffix () {
+    var headerHeight = $('.header-inner').height();
+    var footerOffset = parseInt($('.main').css('padding-bottom'), 10);
+    var sidebarTop = headerHeight + 10;
+
+    $('.sidebar-inner').affix({
+      offset: {
+        top: sidebarTop,
+        bottom: footerOffset
+      }
+    });
+
+    $(document)
+      .on('affixed.bs.affix', function () {
+        updateTOCHeight(document.body.clientHeight - 100);
+      });
+  }
+
+  function initTOCDimension () {
+    var updateTOCHeightTimer;
+
+    $(window).on('resize', function () {
+      updateTOCHeightTimer && clearTimeout(updateTOCHeightTimer);
+
+      updateTOCHeightTimer = setTimeout(function () {
+        var tocWrapperHeight = document.body.clientHeight - 100;
+
+        updateTOCHeight(tocWrapperHeight);
+      }, 0);
+    });
+
+    
+    updateTOCHeight(document.body.clientHeight - 100);
+
+    
+    var scrollbarWidth = getScrollbarWidth();
+    $('.post-toc').css('width', 'calc(100% + ' + scrollbarWidth + 'px)');
+  }
+
+  function updateTOCHeight (height) {
+    height = height || 'auto';
+    $('.post-toc').css('max-height', height);
+  }
+
+$(function() {
+
+  var sidebarTop = $('.header-inner').height() + 10;
+  $('#sidebar').css({ 'margin-top': sidebarTop }).show(); 
+
+  
+  var sidebarMt = parseInt($('#sidebar').css('margin-top'));
+  var sidebarInHeight = parseInt($('.sidebar-inner').css('height'));
+  var sideHeight = sidebarMt + sidebarInHeight;
+  var contentHeight = $('.content-wrap').height();
+
+  if (contentHeight < sideHeight) {
+    $('.content-wrap').css('min-height', sideHeight);
+  }
+  
+  
+  $('.site-nav-toggle').on('click', function () {
+    var $siteNav = $('.site-nav');
+    var $toggleLine = $('.toggle');
+    var ON_CLASS_NAME = 'site-nav-on';
+    var CLOSE_CLASS_NAME = 'toggle-close';
+    var isSiteNavOn = $siteNav.hasClass(ON_CLASS_NAME);
+    var animateAction = isSiteNavOn ? 'slideUp' : 'slideDown';
+    var animateCallback = isSiteNavOn ? 'removeClass' : 'addClass';
+
+    $siteNav.stop()[animateAction]('normal', function () {
+      $siteNav[animateCallback](ON_CLASS_NAME);
+      $toggleLine[animateCallback](CLOSE_CLASS_NAME);
+    });
+
+  });
+
+  registerBackTop();
+  initScrollSpy();
+  initAffix();
+  initTOCDimension();
+
+  $('.sidebar-nav-toc').click(function(){
+    $(this).addClass('sidebar-nav-active');
+    $(this).next().removeClass('sidebar-nav-active');      
+    $('.'+$(this).next().attr('data-target')).toggle(500);
+    $('.'+$(this).attr('data-target')).toggle(500);
+  });
+
+  $('.sidebar-nav-overview').click(function(){
+    $(this).addClass('sidebar-nav-active');
+    $(this).prev().removeClass('sidebar-nav-active');      
+    $('.'+$(this).prev().attr('data-target')).toggle(500);
+    $('.'+$(this).attr('data-target')).toggle(500);
+  });
+});  
+
+</script>
+
+
+
+
+
+<script src="//cdn.bootcdn.net/ajax/libs/imageviewer/0.1.0/viewer.min.js"></script>
+<script type="text/javascript">
+$(function() {
+  $('.post-body').viewer(); 
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+<script src='/js/l2d.js'></script>
+
+<script src='/js/pio.js'></script>
+
+<script>
+  var pio = new Paul_Pio({
+      "mode": "draggable",
+      "hidden": true,
+      "content": {
+          "welcome": ["歡迎來到Jackson的小宇宙！", "今天天氣不錯，一起来玩吧！", "博主有空的話，會寫一寫博客記錄一下!"],
+          "custom": [
+              
+              {"selector": ".home-social a:last-child", "text": "在這里可以了解博主的日常噢~"},
+              {"selector": ".post-item a", "type": "read"},
+              {"selector": ".post-content a, .page-content a", "type": "link"}
+          ]
+      },
+      
+      "model": [
+      "/model/umaru/model.json",
+        "/model/HN/blanc_normal/model.json",
+        "/model/HN/blanc_classic/model.json",
+        "/model/chino/model.json"],
+        touch: ["不可以這樣欺負我啦><"]
+  })
+
+</script>
+</body>
+</html>

@@ -1,23 +1,23 @@
 [[Main]]
-  Name = "Home"
+  Name = "主頁"
   Pre = "home"
   #URL = "/"
   Weight = 1
 
 [[Main]]
-  Name = "About"
+  Name = "關於我"
   Pre = "user"
   URL = "about.html"
    Weight = 2
   
 [[Main]]
-  Name = "Posts"
+  Name = "貼文"
   Pre = "archive"
   URL = "post"
   Weight = 3
 
 [[Main]]
-  Name = "Memories"
+  Name = "回憶錄"
   Pre = "star"
   URL = "memories"
   Weight = 4
@@ -29,20 +29,20 @@
   Weight = 5
 
 [[Main]]
-  Name = "Projects"
+  Name = "專案"
   Pre = "tasks"
   URL = "project"
   Weight = 6
 
   
 [[Main]]
-  Name = "achievement"
+  Name = "成就"
   Pre = "trophy"
   URL = "achievement"
   Weight = 7
 
 [[Main]]
-  Name = "resources"
+  Name = "資源"
   Pre = "file"
   URL = "resources"
   Weight = 8

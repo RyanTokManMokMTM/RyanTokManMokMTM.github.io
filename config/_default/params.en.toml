@@ -1,0 +1,35 @@
+Description = "Welcome to Jackson.tmm's blogger! Here will share anything that interests me, but it will focus on Tech/Note/Learning."
+Keywords =  "Blogger, Enginner, Programmer, Learning, Note, Tech, Backend, Life"
+Subtitle = "Having a happy life every single day"
+AuthorImg = "/images/avatar.jpg"
+AuthorName = "jackson.tmm"
+Introduce = "Finding the meaning of life & Enjoy the life"
+DateFormat = "2006-01-02"
+YearFormat = "2006"
+MonthFormat = "01-02"
+
+#[Footer]
+#  StorageLink = "https://www.ucloud.cn/"
+#  StorageName = "UCloud云存储"
+#  ICPLink = "http://beian.miit.gov.cn"
+#  ICPNo = "粤ICP备18047355号"
+
+[[Socials]]
+  Name = "GitHub"
+  Icon = "github"
+  URL = "https://github.com/RyanTokManMokMTM"
+  
+[[Socials]]
+  Name = "Facebook"
+  Icon = "facebook"
+  URL = "https://www.facebook.com/karot.ka.7505/"  
+  
+[[Socials]]
+  Name = "Instagram"
+  Icon = "instagram"
+  URL = "https://www.instagram.com/tm_m.0418/"
+
+[[Socials]]
+  Name = "Linkedin"
+  Icon = "linkedin"
+  URL = "https://www.linkedin.com/in/jackson-moktokman/"

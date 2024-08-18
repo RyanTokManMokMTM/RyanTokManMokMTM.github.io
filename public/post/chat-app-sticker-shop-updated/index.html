@@ -5,17 +5,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-  <title> [Development Diary] Real Time Communication APP - Sicker Updated(III) - Jackson.tmm </title>
+  <title> [開發者日記] 聊天通訊APP - 貼圖更新(III) - Jackson.tmm </title>
   
   <meta name="keywords" content="博客, 工程師, 程序員, 學習, 筆記, 技術, 分析, 後端, 生活">
   
   
   <meta name="author" content="jackson.tmm">
   
-  <meta property="og:title" content="[Development Diary] Real Time Communication APP - Sicker Updated(III)"/>
+  <meta property="og:title" content="[開發者日記] 聊天通訊APP - 貼圖更新(III)"/>
   <meta property="og:site_name" content="Jackson.tmm">
   <meta property="og:image" content="/images/favicon.png"> 
-  <meta name="title" content="[Development Diary] Real Time Communication APP - Sicker Updated(III) - Jackson.tmm" />
+  <meta name="title" content="[開發者日記] 聊天通訊APP - 貼圖更新(III) - Jackson.tmm" />
   
   <meta name="description" content="歡迎來的Jackson.tmm的空間站。個人主要專注於Web開發，程序開發，以及學習上。">
    
@@ -202,7 +202,7 @@
       
       <h1 class="post-title" itemprop="name headline">
         <a class="post-title-link" href="http://localhost:1313/post/chat-app-sticker-shop-updated/" itemprop="url">
-        [Development Diary] Real Time Communication APP - Sicker Updated(III)
+        [開發者日記] 聊天通訊APP - 貼圖更新(III)
         </a>
       </h1>
       
@@ -244,7 +244,7 @@
  | 
 <i class="fa fa-file-word-o fa-fw"></i>
 <span class="post-meta-item-text">字數：</span>
-<span class="leancloud-world-count">281 字</span>
+<span class="leancloud-world-count">514 字</span>
 </span>
        <span>
  | 
@@ -252,7 +252,7 @@
 <span class="post-meta-item-text">閱讀：</span>
 <span class="leancloud-view-count">2分鐘</span>
 </span>
-      <span id="/post/chat-app-sticker-shop-updated/" class="leancloud_visitors" data-flag-title="[Development Diary] Real Time Communication APP - Sicker Updated(III)">
+      <span id="/post/chat-app-sticker-shop-updated/" class="leancloud_visitors" data-flag-title="[開發者日記] 聊天通訊APP - 貼圖更新(III)">
  | 
 <i class="fa fa-binoculars fa-fw"></i>
 <span class="post-meta-item-text">閱讀次數：</span>
@@ -263,8 +263,8 @@
     </header>
   
     <div class="post-body" itemprop="articleBody">
-    <h2 id="intro">Intro</h2>
-<p>If you want to checkout what is this project about, please go through articles below.  <br>
+    <h2 id="簡介">簡介</h2>
+<p>如果您想了解該項目的內容，請閱讀以下文章<br>
 <a href="/post/chat-app-init/">ChatApp(I)</a><br>
 <a href="/post/chat-app-demo/">ChatApp(II)</a><br>
 <a href="/post/chat-app-update/">ChatApp(III)</a><br>
@@ -273,19 +273,19 @@
 <a href="/post/chat-app-sticker-updated/">ChatApp(VI)</a><br>
 <a href="/post/chat-app-story-alignment-updated/">ChatApp(Ⅶ)</a><br>
 <a href="/post/chat-app-story-multiple-img-updated/">ChatApp(Ⅷ)</a></p>
-<h2 id="demo-video">Demo Video</h2>
+<h2 id="demo">Demo</h2>
 <p><video src="/videos/chat-app/sticker-shop.mp4" controls="controls" width="500"></video></p>
-<h2 id="todo-and-description">TODO And Description</h2>
-<p>As I mentioned in <a href="/post/chat-app-sticker-updated/">this article</a>, I&rsquo;ve added a new feature about stickers, which is able to use the provided sticker resources in the chat. But that is not enough and is not flexible for the user. So, I&rsquo;ve developed some more about the sticker feature.</p>
-<p>First, due to the fact that a user can only use stickers that are provided by <code>ADMIN</code>, the user isn&rsquo;t allowed to add any other sticker resources without <code>ADMIN</code>. And also, all the users in the app have the same stickers, so there are no different stickers for different users. Therefore, I added a sticker shop to the app that allows users to choose what sticker they want to use.</p>
-<p>Second, in the previous version, users accessed sticker resources via API to fetch the data,which wasn&rsquo;t effective to fetch the same resources frequently. So, I added a feature that requires users to download the stickers to their devices before they can use them. Once the user has downloaded the sticker resources, the downloaded resources can be shared across different accounts on the same device if the account has the same sticker.</p>
-<h2 id="summary">Summary</h2>
-<p>In this version, I have updated a few things about the sticker feature.</p>
+<h2 id="簡介-1">簡介</h2>
+<p>正如我在<a href="/post/chat-app-sticker-updated/">這篇文章</a>中提到的，我添加了一個關於貼紙的新功能，它可以在聊天中使用提供的貼圖資源。但這還不夠，對用戶來說也不靈活。因此，我開發了更多關於貼紙功能的內容。</p>
+<p>首先，由於使用者只能使用<code>ADMIN</code>提供的貼紙，因此不允許使用者在沒有<code>ADMIN</code>的情況下新增任何其他貼圖資源。而且，應用程式中的所有用戶都有相同的貼圖，因此不同的用戶沒有不同的貼圖。因此，我在應用程式中添加了一個貼圖商店，允許用戶選擇他們想要使用的貼圖。</p>
+<p>其次，在先前的版本中，使用者透過API存取貼圖資源來取得數據，這對於頻繁取得相同的資源效果不佳。因此，我添加了一項功能，要求用戶將貼圖下載到他們的裝置上才能使用。用戶下載完貼圖資源後，如果帳號擁有相同的貼圖，則可以在同一裝置上的不同帳號之間共用下載的資源。</p>
+<h2 id="總結">總結</h2>
+<p>在這個版本中，我更新了一些關於貼圖功能的內容。</p>
 <ul>
-<li>Sticker Shop for users adding their favorite sticker to their account:<code>(Sticker Shop's sticker can now only be added by API)</code></li>
-<li>Download the sticker locally and share the same resources across different accounts on the same devices.</li>
+<li>Sticker Shop供用戶將自己喜歡的貼圖添加到他們的帳戶中：<code>Sticker Shop的貼紙現在只能透過API添加）</code></li>
+<li>將貼圖下載到本機，並在同一裝置上的不同帳戶之間共用相同的資源。</li>
 </ul>
-<p>That the ends of my sharing, thanks you for your reading time ^^, see ya!</p>
+<p>我的分享到此結束，感謝您的閱讀^^，再見！</p>
 
     </div>
           
@@ -306,7 +306,7 @@
     
     <div class="article-copyright-info">
         <p> 
-            <span>文章聲明：</span>[Development Diary] Real Time Communication APP - Sicker Updated(III)
+            <span>文章聲明：</span>[開發者日記] 聊天通訊APP - 貼圖更新(III)
         </p>
         <p> 
             <span>文章連接：</span>http://localhost:1313/post/chat-app-sticker-shop-updated/
@@ -325,16 +325,16 @@
      <div class="post-nav">
     <div class="post-nav-next post-nav-item">
     
-        <a href="http://localhost:1313/post/chat-app-final-summary/" rel="next" title="[Development Diary] Real Time Communication APP(Ended) - Final &amp; Summary">
-        <i class="fa fa-chevron-left"></i> [Development Diary] Real Time Communication APP(Ended) - Final &amp; Summary
+        <a href="http://localhost:1313/post/chat-app-final-summary/" rel="next" title="[開發者日記] 聊天通訊APP(完結) - 總結">
+        <i class="fa fa-chevron-left"></i> [開發者日記] 聊天通訊APP(完結) - 總結
         </a>
     
     </div>
 
     <div class="post-nav-prev post-nav-item">
     
-        <a href="http://localhost:1313/post/chat-app-story-view-updated/" rel="prev" title="[Development Diary] Real Time Communication APP - Story updated(III)">
-        [Development Diary] Real Time Communication APP - Story updated(III) 
+        <a href="http://localhost:1313/post/chat-app-story-view-updated/" rel="prev" title="[開發者日記] 聊天通訊APP - 限時動態更新(III)">
+        [開發者日記] 聊天通訊APP - 限時動態更新(III) 
         <i class="fa fa-chevron-right"></i>
         </a>
     
@@ -372,14 +372,14 @@
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="/post/">
-        <span class="site-state-item-count">40</span>
+        <span class="site-state-item-count">37</span>
         <span class="site-state-item-name">日誌</span>
       </a>
     </div>
     <div class="site-state-item site-state-categories">    
         <a href="/categories/">      
          
-        <span class="site-state-item-count">34</span>
+        <span class="site-state-item-count">30</span>
         
         <span class="site-state-item-name">分類</span>
         
@@ -389,7 +389,7 @@
     <div class="site-state-item site-state-tags">
         <a href="/tags/">
          
-        <span class="site-state-item-count">62 </span>
+        <span class="site-state-item-count">60 </span>
         
         <span class="site-state-item-name">標籤</span>
         </a>
@@ -788,10 +788,14 @@ $(function() {
       },
       
       "model": [
-      "/model/umaru/model.json",
-        
-        
-        "/model/chino/model.json"],
+        "/model/umaru/model.json",
+        "/model/tororo/tororo.model.json",
+        "/model/HN/nepmaid/model.json",
+        "/model/HN/nepgearswim/model.json",
+        "/model/HN/neptune_santa/model.json",
+        "/model/HN/blanc_swimwear/model.json",
+        "/model/HN/noireswim/model.json",
+      ],
         touch: ["不可以這樣欺負我啦><"]
   })
 

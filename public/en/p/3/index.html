@@ -186,7 +186,7 @@
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
         <a class="post-title-link" href="http://localhost:1313/en/post/chat-app-update/" itemprop="url">
-        [開發者日記] 聊天通訊APP(三) - 聊天小更新
+        [Development Diary] Real Time Communication APP(III) - Chatting updated
         </a>
       </h1>
       <div class="post-meta">
@@ -227,7 +227,7 @@
  | 
 <i class="fa fa-file-word-o fa-fw"></i>
 <span class="post-meta-item-text">Words:</span>
-<span class="leancloud-world-count">372 words</span>
+<span class="leancloud-world-count">119 words</span>
 </span>
        <span>
  | 
@@ -239,7 +239,8 @@
       </div>
     </header>
     <div class="post-body" itemprop="articleBody">
-    廢話少說直接上影片 對上一次的demo中，雖然也包含了個人聊天和群組聊天的部分，但是只支援普通文本和圖片的傳送，而這次修復了文件發送，音頻發送
+    In the previous article, although I demonstrated single-person communication and group chat commnication, it only implemented text and image chatting. This time, I not only added file sending but also notification announcing.
+Updated - Chatting Support: Text, Image, Audio, File, Video Group&rsquo;s system notification Impletmention: Text : Setting the sending text to the field content and sending it via Websocket. Image: Image couldn&rsquo;t send it directly due to the large size of the image type.
     </div>
     
     <div class="post-more-link text-center">
@@ -255,7 +256,7 @@
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
         <a class="post-title-link" href="http://localhost:1313/en/post/chat-app-demo/" itemprop="url">
-        [Development Diary] Real Time Communication APP(2) - Demo
+        [Development Diary] Real Time Communication APP(II) - Demo
         </a>
       </h1>
       <div class="post-meta">
@@ -327,7 +328,7 @@ User login and registration Edit user information, including uploading Avatar, C
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
         <a class="post-title-link" href="http://localhost:1313/en/post/chat-app-init/" itemprop="url">
-        [Development Diary] Real Time Communication APP - Get started
+        [Development Diary] Real Time Communication APP(I) - Get started
         </a>
       </h1>
       <div class="post-meta">
@@ -952,9 +953,11 @@ $(function() {
       },
       
       "model": [
-      "/model/umaru/model.json",
-        
-        
+        "/model/umaru/model.json",
+        "/model/HN/blanc_swimwear/model.json",
+        "/model/HN/nepgear_extra/model.json",
+        "/model/HN/noireswim/model.json",
+        "/model/HN/nepgearswim/model.json",
         "/model/chino/model.json"],
         touch: ["不可以這樣欺負我啦><"]
   })

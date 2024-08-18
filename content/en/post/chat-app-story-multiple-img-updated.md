@@ -28,5 +28,5 @@ What i have done for this feature?
 * Baisc attribute for the item, for example: Text - (text color, bold,background etc), image(border)
 * Allowed friends to like the story by pressing the like button.
 
-## summary
-
+In this article, it is just a simple record of what I have updated in this version.  
+That the ends of my sharing, thanks you for your reading time ^^, see ya!  

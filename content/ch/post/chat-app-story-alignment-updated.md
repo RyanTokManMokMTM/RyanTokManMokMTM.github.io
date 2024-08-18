@@ -1,5 +1,5 @@
 ---
-title: "[Development Diary] Real Time Communication APP - Story Updated(I)"
+title: "[開發者日記] 聊天通訊APP - 限時動態更新(I)"
 date: 2023-09-05T20:19:33+08:00
 draft: false
 categories:
@@ -9,8 +9,8 @@ tags:
     - side-project 
 ---
 
-## Intro
-If you want to checkout what is this project about, please go through articles below.  
+## 簡介
+如果您想了解該項目的內容，請閱讀以下文章。  
 [ChatApp(I)](/post/chat-app-init/)  
 [ChatApp(II)](/post/chat-app-demo/)  
 [ChatApp(III)](/post/chat-app-update/)  
@@ -18,19 +18,20 @@ If you want to checkout what is this project about, please go through articles b
 [ChatApp(V)](/post/chat-app-voice-chat/)  
 [ChatApp(VI)](/post/chat-app-sticker-updated/)
 
-## Demo Video
+## Demo
 <video src="/videos/chat-app/instance-story-alignment.mp4" controls="controls" width="500"></video>   
 
 ## TODO
-In the previous version, it did allow users to add multiple `texts` to their `instance story`. But it’s hard to align all the text items without barely using their eyes to do so. So, in this version, I decided to add an alignment tool to help them, which is similar to the `Instagram` alignment tool.
+在先前的版本中，它確實允許用戶將多個`文本`添加到他們的`限時動態`中。但如果不使用眼睛就很難對齊所有文字項目。因此，在這個版本中，我決定添加一個對齊工具來幫助他們，這類似於「Instagram」對齊工具。  
 
-## HOW
-To implement this feature, we need to know the `width` and `height` of the item the user wants to align first. Due to the item's able to `scale` and `rotate`, the `width` and the `height` will be different than the original size, so we need to get the correct `size` before we can start to align.  
+## 如何實作
+為了實現這個功能，我們首先需要知道使用者想要對齊的項目的「寬度」和「高度」。由於項目可以`縮放`和`旋轉`，因此`寬度`和`高度`會與原始尺寸不同，因此我們需要先獲得正確的`尺寸`，然後才能開始對齊。  
 
-You may wonder how we can get the correct size after `scaling` and `rotation`. For'scaling', which is a bit easier than `roatation`, we just need to multiply the size by the scale factor, and then we can get the correct scaled size. But for calculating the size after `rotation`, we need some math to help us, which we learned from high school, which is `trigonometric functions`. Applying this math, we can calculate the `width` and `height` easily.  
+你可能想知道在`縮放`和`旋轉`之後我們如何才能得到正確的尺寸。對於`縮放`來說，它比`旋轉`要容易一些，我們只需要把尺寸乘以比例的factor，就可以得到正確的縮放尺寸。但是要計算`旋轉`後的大小，我們需要一些數學來幫助我們，這是我們在高中學過的，那就是「三角函數」。應用這個數學，我們可以輕鬆計算`寬度`和`高度`。  
+
 ![math](/images/chat-app/triangle-math.png)  
 
-After we get the correct size, we can start to align the item. Alignment functions are just a simple calculation, so I'm not going to share the details here, but I will provide all those functions here for your reference!  
+獲得正確的尺寸後，我們可以開始對齊項目。對齊函數只是一個簡單的計算，所以我不會在這裡分享細節，但我會在這裡提供所有這些函數供您參考！   
 > To calculate the size
 ```swift
 GeometryReader{ proxy -> Color in
@@ -218,4 +219,4 @@ GeometryReader{ proxy -> Color in
     }
 ```
 
-That the ends of my sharing, thanks you for your reading time ^^, see ya!
+我的分享到此結束，感謝您的閱讀^^，再見！

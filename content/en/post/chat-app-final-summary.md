@@ -47,7 +47,7 @@ If you are interested in `SFU` and `MCU`, you can read this [article](https://ge
 
 ##### What is the different between Mesh, SFU, MCU?
 > Mesh   
-The simple way to understand SFU is that a client will create a connection to the server for upstreaming and n-1 connections for downstreaming. The server uses it to receive upstream data from the client and broadcast it to other clients. So the role of the server is as a broadcaster. 
+Each client will establish a p2p connection with other users in the network and communicate through this connection. That is, each single client needs to manage n-1 connections and upload its own audio and video signals to n-1 users. This is acceptable when there are only a few people, but it is a challenge for the uploader's upload bandwidth when there are many people.
 
 > SFU   
 The simple way to understand SFU is that a client will create a connection to the server for upstreaming and n-1 connections for downstreaming. The server uses it to receive upstream data from the client and broadcast it to other clients. So the role of the server is as a broadcaster.

@@ -86,7 +86,7 @@
   </entry>
   
   <entry>
-    <title>[Development Diary] Real Time Communication APP(Ended) - Final & Summary</title>
+    <title>[開發者日記] 聊天通訊APP(完結) - 總結</title>
     <url>http://localhost:1313/post/chat-app-final-summary/</url>
     <categories>
       <category>dev-diary</category><category>side-project</category>
@@ -96,9 +96,9 @@
       <tag>side-project</tag>
       
     </tags>
-    <content type="html"> Intro Hello, it was a long time not updating my blogger because of doing some research of a issue about multiple user streaming feature. The article is to share about what have I achived about the multiple user streming and summrise this side project! Which means this project finllay over! It took a year to finish QQ.
-Alough the project has done, but still has some issue on it. If i have the ablility to fix it on the future, I&rsquo;ll come back and fix it. All those issues are making the streaming not stable, but we can still play around!
-Before I jump into today topic, If you don&rsquo;t remember what the project about, please check all the articles list below to get more information.
+    <content type="html"> 簡介 Hi, 已經有一段時間沒有更新了，因為最近在研究多人串流的問題。這篇文章主要是分享我做了些什麼以及對這個project做個總結，這裡的意思就是這個project終於完成了！！花了我近1年的時間呢。
+雖然這個project已完成，但是依然還有些問題，如果我們之後還有這個能力在修復～ 這些問題使得串流沒有這麼的穩定，但還是可以玩的呢！
+在進入今天主題之前，如果你不記得或不知道這個project關於什麼的話，可以回去閱讀這幾篇文章：
 ChatApp(I)
 ChatApp(II)
 ChatApp(III)
@@ -108,25 +108,24 @@ ChatApp(VI)
 ChatApp(Ⅶ)
 ChatApp(Ⅷ)
 ChatApp(IX)
-Here is the latest screen capture of the app:
-Issue description I developed an audio streaming call and a video streaming call for user-to-user chatting. Therefore, I wanted to develop these two features for group/multiple chats too. At the moment, I have encountered a problem. Person-to-person streaming is based on P2P. If I use the same way to develop the streaming feature for group chat, it&rsquo;ll have a huge cost on the client side when they communicate with more and more clients, especially upstreaming. For upstreaming, a client needs to upstream its media track to n-1 clients, which costs their bandwidth a huge amount(You can imagine we are uploading the same video to server n-1 times at the same time).We are not only upstreaming but also downsteaming from other client. So, I need to find a better solution before develop it.
-Here is the architecture of the problem I described above - Mesh.
-For each client will establish n-1 connection with other n-1 user in the network for upstreaming and downstreaming the media track.
-Solution After a few months of researching this issue, I found a suitable solution for this project. It is called SFU(Selective Forwording Unit)', and there is another solution called MCU(Multipoint Control Unit). Because I used SFUto develop the streaming feature, I'll focus onSFUas well. If you are interested inSFUandMCU`, you can read this article for more information.
-SFU(Selective Forwording Unit) MCU(Multipoint Control Unit) What is the different between Mesh, SFU, MCU? Mesh
-The simple way to understand SFU is that a client will create a connection to the server for upstreaming and n-1 connections for downstreaming. The server uses it to receive upstream data from the client and broadcast it to other clients. So the role of the server is as a broadcaster.
+這裡是App的最新截圖： 問題描述 我之前開發了一對一的音視頻通話，所以也想把多對多的音視頻通話也用出來。在這個時候，我遇到到了問題就是一對一的通話是通過P2P進行傳輸的，但是如果使用相同的方式來實作多對多音視頻傳流的話，在多人的時候會導致upstreaming有過高的網絡成本，使得效能下降。客戶端需要上傳他的音視頻數據給n-1個客戶端。這裡不單單只有upstreaming，還是downstraming，所以需要找到一個方法解決這個問題。
+這裡是我上面所講訴的問題的網絡拓墣 - Mesh.
+每個在網絡中的user需要與其餘n-1個user建立連線用於上傳和下載多媒體數據
+解決方案 經過數月的研究，我找到了一個合適的解決方案。這個解決方案的名稱為SFU(Selective Forwording Unit)以及另外一個解決方案為MCU(Multipoint Control Unit)。這裡我選擇使用了SFU解決方案來解決上訴的問題。如果你對SFU和MCU有興趣，可以閱讀這篇文章以獲得更多的資訊
+SFU(Selective Forwording Unit) MCU(Multipoint Control Unit) Mesh vs SFU vs MCH Mesh
+每個客戶端會與其他在網絡中的user建立p2p連結，並透過此連結進行通訊。也就是每單一個客戶端需要管理n-1個連結以及需要上傳自己的音視頻訊號給n-1個用戶，在少人的情況下還可以接受，但是在多人的情況下對於上傳者的上傳band-width而言是一項挑戰
 SFU
-The simple way to understand SFU is that a client will create a connection to the server for upstreaming and n-1 connections for downstreaming. The server uses it to receive upstream data from the client and broadcast it to other clients. So the role of the server is as a broadcaster.
+理解SFU的簡單方法是客戶端將建立一個到伺服器的連線用於up-steaming，並建立n-1個連線用於down-streaming。Server使用它從客戶端接接收up-straming的資料並將其廣播給其他user。所以server的角色就是作為廣播者。
 MCU
-A client in MCU will only have 1 connection for upstreaming and downstreaming, and the server will mix and transcode all received client&rsquo;s media into one media and transfer that media to all clients via the connection. But the performance depends on the server hardware.
-Solution in this project - SFU architechture to solve this issue. Def Role: Producer &amp; Consumer
-All client can be a Producer and Consumer, but each client will only have one connection for producing their meida to the server.
-SFU work-flow in the project
-Creating/Joining Room(Session)
-Client creating a new rooms if not exist or joining the existing room Client creating a connection and transfer their media tracks via the connection Server saving the client track&rsquo;s data Wating Consumer to consume the tracks&hellip; Consming a producer tracks in the same room
-Client creating a new connection to server, but not receving any media tracks via this connection Adding the producer tracks,which producer is consuming into the connection Client side received the tracks and display the tracks. It just a roughly work-flow, in the implementation will be more complicated. lol
-Summary Alough I spent a year finishing the project, and it wasn&rsquo;t running perfectly, and it still has some issues. But during this development time, I have learned a lot, not only about the programming skill but also about skill-solving and problem-researching. The most important thing is being persistent and focusing on one thing!
-Thanks for all of you following me from 0 to 1 of the project, hope all of you enjoy my development journey! Before the next interesting project, I&rsquo;ll leave for a while to take a break. I&rsquo;ll be back soon! ^^
+MCU 中的用戶端只有1個用於up-streaming和down-streaming的connection，server會將所有接收到的user媒體混合併轉碼為另一種媒體，並透過該連接將該媒體傳輸到所有user。但效能取決於server的硬體。
+問題的解決方案 - SFU Def Role: Producer &amp; Consumer
+所有client都可以是生產者和消費者，但每個client只有一個連接來產生其meida到server。
+Project中SFU的工作流程
+建立/加入房間(Session)
+用戶端檢查房間是否存在，如果不存在則建立一個新房間，若存在則加入現有房間。 客戶端建立連線並透過該連線傳輸其媒體軌道 伺服器保存客戶端的軌道資料 等待消費者消費這些軌道&hellip; 在同一房間消費生產者的軌道
+客戶端建立一個新的連接到伺服器，但不透過該連接接收任何媒體軌道。 將生產者正在消費的軌道加入該連結 客戶端接收軌道並顯示這些軌道 這只是一個大概的工作流程，實作上會比較複雜. lol
+總結 雖然我花了一年的時間完成了這個項目，但它運作得併不完美，而且仍然存在一些問題。但在這段時間的開發過程中，我學到了很多，不僅是程式技巧，還有解決問題和研究問題的技巧。最重要的是堅持並專注於一件事！
+感謝大家從0到1的關注我的項目，祝大家享受我的開發之旅！ 在下一個有趣的項目之前，我會離開一段時間休息一下。我很快就會回來！ ^^
 Reference SFU, MCU, or P2P: What’s the Difference Between These WebRTC Architectures?
 WebRTC Architechtrue的認知 Mesh, MCU, SFU
 </content>
@@ -182,7 +181,7 @@ WebRTC Architechtrue的認知 Mesh, MCU, SFU
   </entry>
   
   <entry>
-    <title>[Development Diary] Real Time Communication APP - Sicker Updated(III)</title>
+    <title>[開發者日記] 聊天通訊APP - 貼圖更新(III)</title>
     <url>http://localhost:1313/post/chat-app-sticker-shop-updated/</url>
     <categories>
       <category>dev-diary</category><category>side-project</category>
@@ -192,7 +191,8 @@ WebRTC Architechtrue的認知 Mesh, MCU, SFU
       <tag>side-project</tag>
       
     </tags>
-    <content type="html"> Intro If you want to checkout what is this project about, please go through articles below. ChatApp(I)
+    <content type="html"> 簡介 如果您想了解該項目的內容，請閱讀以下文章
+ChatApp(I)
 ChatApp(II)
 ChatApp(III)
 ChatApp(IV)
@@ -200,16 +200,16 @@ ChatApp(V)
 ChatApp(VI)
 ChatApp(Ⅶ)
 ChatApp(Ⅷ)
-Demo Video TODO And Description As I mentioned in this article, I&rsquo;ve added a new feature about stickers, which is able to use the provided sticker resources in the chat. But that is not enough and is not flexible for the user. So, I&rsquo;ve developed some more about the sticker feature.
-First, due to the fact that a user can only use stickers that are provided by ADMIN, the user isn&rsquo;t allowed to add any other sticker resources without ADMIN. And also, all the users in the app have the same stickers, so there are no different stickers for different users. Therefore, I added a sticker shop to the app that allows users to choose what sticker they want to use.
-Second, in the previous version, users accessed sticker resources via API to fetch the data,which wasn&rsquo;t effective to fetch the same resources frequently. So, I added a feature that requires users to download the stickers to their devices before they can use them. Once the user has downloaded the sticker resources, the downloaded resources can be shared across different accounts on the same device if the account has the same sticker.
-Summary In this version, I have updated a few things about the sticker feature.
-Sticker Shop for users adding their favorite sticker to their account:(Sticker Shop's sticker can now only be added by API) Download the sticker locally and share the same resources across different accounts on the same devices. That the ends of my sharing, thanks you for your reading time ^^, see ya!
+Demo 簡介 正如我在這篇文章中提到的，我添加了一個關於貼紙的新功能，它可以在聊天中使用提供的貼圖資源。但這還不夠，對用戶來說也不靈活。因此，我開發了更多關於貼紙功能的內容。
+首先，由於使用者只能使用ADMIN提供的貼紙，因此不允許使用者在沒有ADMIN的情況下新增任何其他貼圖資源。而且，應用程式中的所有用戶都有相同的貼圖，因此不同的用戶沒有不同的貼圖。因此，我在應用程式中添加了一個貼圖商店，允許用戶選擇他們想要使用的貼圖。
+其次，在先前的版本中，使用者透過API存取貼圖資源來取得數據，這對於頻繁取得相同的資源效果不佳。因此，我添加了一項功能，要求用戶將貼圖下載到他們的裝置上才能使用。用戶下載完貼圖資源後，如果帳號擁有相同的貼圖，則可以在同一裝置上的不同帳號之間共用下載的資源。
+總結 在這個版本中，我更新了一些關於貼圖功能的內容。
+Sticker Shop供用戶將自己喜歡的貼圖添加到他們的帳戶中：Sticker Shop的貼紙現在只能透過API添加） 將貼圖下載到本機，並在同一裝置上的不同帳戶之間共用相同的資源。 我的分享到此結束，感謝您的閱讀^^，再見！
 </content>
   </entry>
   
   <entry>
-    <title>[Development Diary] Real Time Communication APP - Story updated(III)</title>
+    <title>[開發者日記] 聊天通訊APP - 限時動態更新(III)</title>
     <url>http://localhost:1313/post/chat-app-story-view-updated/</url>
     <categories>
       <category>dev-diary</category><category>side-project</category>
@@ -219,8 +219,7 @@ Sticker Shop for users adding their favorite sticker to their account:(Sticker S
       <tag>side-project</tag>
       
     </tags>
-    <content type="html"> Intro If you want to checkout what is this project about, please go through articles below.
-ChatApp(I)
+    <content type="html"> 簡介 如果您想了解該項目的內容，請閱讀以下文章。 ChatApp(I)
 ChatApp(II)
 ChatApp(III)
 ChatApp(IV)
@@ -228,15 +227,15 @@ ChatApp(V)
 ChatApp(VI)
 ChatApp(Ⅶ)
 ChatApp(Ⅷ)
-Demo Video TODO &amp;&amp; Description In the previous version, a user could only view their friend&rsquo;s story and reply to the story. It can&rsquo;t have any interaction with their friends except replying to the story, so in this version, I planned to add more interaction features to it.
-There are three main features I have updated. The first is that the story can be liked; the second is that the story owner can view who sees the story and be able to send a message to the viewer; and the last thing is to share a story with any friend. All these features are not difficult to implement, so I have nothing to share with you about tech issues.
-In this article, it is just a simple record of what I have updated in this version.
-Hope you have a good day. Enjoy!
+Demo 描述 在先前的版本中，用戶只能查看好友的故事並回覆該限時動態。它除了回覆故事之外不能和朋友有任何互動，所以在這個版本中，我打算為它添加更多的互動功能。
+我更新了三個主要功能。第一是限時動態能被喜歡；第二個是限時動態所有者可以查看誰看到了該故事，並且能夠向觀眾發送訊息；最後一件事是與任何朋友分享一個限時動態。所有這些功能實現起來並不困難，因此我沒有任何可以與您分享的技術問題。
+本文只是簡單記錄我在這個版本中更新的內容。
+希望您有美好的一天。享受！
 </content>
   </entry>
   
   <entry>
-    <title>[Development Diary] Real Time Communication APP - Story Updated(II)</title>
+    <title>[[開發者日記] 聊天通訊APP - 限時動態更新(II)</title>
     <url>http://localhost:1313/post/chat-app-story-multiple-img-updated/</url>
     <categories>
       <category>dev-diary</category><category>side-project</category>
@@ -246,20 +245,21 @@ Hope you have a good day. Enjoy!
       <tag>side-project</tag>
       
     </tags>
-    <content type="html"> Intro If you want to checkout what is this project about, please go through articles below.
-ChatApp(I)
+    <content type="html"> 簡介 如果您想了解該項目的內容，請閱讀以下文章。 ChatApp(I)
 ChatApp(II)
 ChatApp(III)
 ChatApp(IV)
 ChatApp(V)
 ChatApp(VI)
-Here is the demonstration video about the story feature, is similar to instagram(I took the reference from instagram for the UI xD).
-What i have done for this feature?
-Allowed user to add text or image to his story. For making story editor more flexible, added a item alignment system and item scaling, rotation and movable. Baisc attribute for the item, for example: Text - (text color, bold,background etc), image(border) Allowed friends to like the story by pressing the like button. summary </content>
+這是關於限時動態功能的demo，類似於instagram（我的UI參考來自instagram xD）。
+我為這個功能做了什麼？
+允許使用者在他的故事中添加文字或圖像。 為了使故事編輯器更加靈活，添加了對齊系統和縮放、旋轉和移動。 Baisc 屬性，例如：文字 - （文字顏色、粗體、背景等）、圖像（邊框） 允許朋友透過按讚按鈕來喜歡這個限時動態。 這篇文章只是簡單分享一下我最近做了些什麼xD
+我的分享到此結束，感謝您的閱讀^^，再見！
+</content>
   </entry>
   
   <entry>
-    <title>[Development Diary] Real Time Communication APP - Story Updated(I)</title>
+    <title>[開發者日記] 聊天通訊APP - 限時動態更新(I)</title>
     <url>http://localhost:1313/post/chat-app-story-alignment-updated/</url>
     <categories>
       <category>dev-diary</category><category>side-project</category>
@@ -269,17 +269,17 @@ Allowed user to add text or image to his story. For making story editor more fle
       <tag>side-project</tag>
       
     </tags>
-    <content type="html"> Intro If you want to checkout what is this project about, please go through articles below.
+    <content type="html"> 簡介 如果您想了解該項目的內容，請閱讀以下文章。
 ChatApp(I)
 ChatApp(II)
 ChatApp(III)
 ChatApp(IV)
 ChatApp(V)
 ChatApp(VI)
-Demo Video TODO In the previous version, it did allow users to add multiple texts to their instance story. But it’s hard to align all the text items without barely using their eyes to do so. So, in this version, I decided to add an alignment tool to help them, which is similar to the Instagram alignment tool.
-HOW To implement this feature, we need to know the width and height of the item the user wants to align first. Due to the item&rsquo;s able to scale and rotate, the width and the height will be different than the original size, so we need to get the correct size before we can start to align.
-You may wonder how we can get the correct size after scaling and rotation. For&rsquo;scaling&rsquo;, which is a bit easier than roatation, we just need to multiply the size by the scale factor, and then we can get the correct scaled size. But for calculating the size after rotation, we need some math to help us, which we learned from high school, which is trigonometric functions. Applying this math, we can calculate the width and height easily.
-After we get the correct size, we can start to align the item. Alignment functions are just a simple calculation, so I&rsquo;m not going to share the details here, but I will provide all those functions here for your reference!
+Demo TODO 在先前的版本中，它確實允許用戶將多個文本添加到他們的限時動態中。但如果不使用眼睛就很難對齊所有文字項目。因此，在這個版本中，我決定添加一個對齊工具來幫助他們，這類似於「Instagram」對齊工具。
+如何實作 為了實現這個功能，我們首先需要知道使用者想要對齊的項目的「寬度」和「高度」。由於項目可以縮放和旋轉，因此寬度和高度會與原始尺寸不同，因此我們需要先獲得正確的尺寸，然後才能開始對齊。
+你可能想知道在縮放和旋轉之後我們如何才能得到正確的尺寸。對於縮放來說，它比旋轉要容易一些，我們只需要把尺寸乘以比例的factor，就可以得到正確的縮放尺寸。但是要計算旋轉後的大小，我們需要一些數學來幫助我們，這是我們在高中學過的，那就是「三角函數」。應用這個數學，我們可以輕鬆計算寬度和高度。
+獲得正確的尺寸後，我們可以開始對齊項目。對齊函數只是一個簡單的計算，所以我不會在這裡分享細節，但我會在這裡提供所有這些函數供您參考！
 To calculate the size
 GeometryReader{ proxy -&gt; Color in DispatchQueue.main.async { self.currentItemSize = proxy.size let newWidthAfterRotate1 = self.currentItemSize.height * sin(box.angle.radians) let newWidthAfterRotate2 = self.currentItemSize.width * cos(box.angle.radians) let newHeightAfterRotate1 = self.currentItemSize.height * cos(box.angle.radians) let newHeightAfterRotate2 = self.currentItemSize.width * sin(box.angle.radians) self.currentItemSize.width = abs(newWidthAfterRotate1) + abs(newWidthAfterRotate2) self.currentItemSize.height = abs(newHeightAfterRotate1) + abs(newHeightAfterRotate2) self.currentItemSize.width *= (box.scaleFactor + box.lastScaleFactor) //new width after scale self.currentItemSize.height *= (box.scaleFactor + box.lastScaleFactor) //new heigh after scale //https://i.stack.imgur.com/C6NVo.png } return Color.clear } Alignment functions - Leading Alignment
 private func leadingAlignmentChecking(proxyFrame : CGSize,newLocation : CGSize) -&gt; CGSize { var location = newLocation let startWidth = location.width - (self.currentItemSize.width / 2) let leadingAignment = -(proxyFrame.width / 2 - 10) if !isLeadingAlignment { if startWidth &gt;= leadingAignment &amp;&amp; startWidth &lt;= leadingAignment + 3{ withAnimation{ isLeadingAlignment = true } } }else { //TODO: To leave the alignment status if startWidth &lt;= leadingAignment - 10 || startWidth &gt;= leadingAignment + 10{ withAnimation{ isLeadingAlignment = false } } } withAnimation{ location.width = isLeadingAlignment ? leadingAignment + (self.currentItemSize.width / 2) : location.width } return location } Alignment functions - Traling Alignment
@@ -287,67 +287,12 @@ private func tralingAlignmentChecking(proxyFrame : CGSize,newLocation : CGSize) 
 private func topAlignmentChecking(proxyFrame : CGSize,newLocation : CGSize) -&gt; CGSize{ var location = newLocation let startHeight = location.height - (self.currentItemSize.height / 2) let topAignment = -((UIScreen.main.bounds.height / 1.22) / 2 - 50) if !isTopAlignment { if startHeight &gt;= topAignment &amp;&amp; startHeight &lt;= topAignment + 3{ withAnimation{ isTopAlignment = true } } }else { //TODO: To leave the alignment status if startHeight &lt;= topAignment - 10 || startHeight &gt;= topAignment + 10{ withAnimation{ isTopAlignment = false } } } withAnimation{ location.height = isTopAlignment ? topAignment + (self.currentItemSize.height / 2) : location.height } return location } Alignment functions - Bottom Alignment
 private func bottomAlignmentChecking(proxyFrame : CGSize,newLocation : CGSize) -&gt; CGSize{ var location = newLocation let endHeight = location.height + (self.currentItemSize.height / 2) let bottomAignment = ((UIScreen.main.bounds.height / 1.22) / 2 - 50) if !isBottomAlignment { if endHeight &gt;= bottomAignment &amp;&amp; endHeight &lt;= bottomAignment + 3{ withAnimation{ isBottomAlignment = true } } }else { //TODO: To leave the alignment status if endHeight &lt;= bottomAignment - 10 || endHeight &gt;= bottomAignment + 10{ withAnimation{ isBottomAlignment = false } } } withAnimation{ location.height = isBottomAlignment ? bottomAignment - (self.currentItemSize.height / 2) : location.height } return location } Alignment functions - Vertical Alignment
 private func verticalAlignmentChecking(proxyFrame : CGSize,newLocation : CGSize) -&gt; CGSize{ var location = newLocation if !isVerticalAlignment { if location.height &gt;= 0 &amp;&amp; location.height &lt;= 3 { withAnimation{ isVerticalAlignment = true } } }else { //TODO: To leave the alignment status if location.height &lt;= -10 || location.height &gt;= 10{ withAnimation{ isVerticalAlignment = false } } } withAnimation{ location.height = isVerticalAlignment ? 0 : location.height } return location } Alignment functions - Horizontal Alignment
-private func horizontalAlignmentChecking(proxyFrame : CGSize,newLocation : CGSize) -&gt; CGSize{ var location = newLocation if !isHorizontalAlignment { if location.width &gt;= 0 &amp;&amp; location.width &lt;= 3 { withAnimation{ isHorizontalAlignment = true } } }else { //TODO: To leave the alignment status if location.width &lt;= -10 || location.width &gt;= 10{ withAnimation{ isHorizontalAlignment = false } } } withAnimation(){ location.width = isHorizontalAlignment ? 0 : location.width } return location } That the ends of my sharing, thanks you for your reading time ^^, see ya!
+private func horizontalAlignmentChecking(proxyFrame : CGSize,newLocation : CGSize) -&gt; CGSize{ var location = newLocation if !isHorizontalAlignment { if location.width &gt;= 0 &amp;&amp; location.width &lt;= 3 { withAnimation{ isHorizontalAlignment = true } } }else { //TODO: To leave the alignment status if location.width &lt;= -10 || location.width &gt;= 10{ withAnimation{ isHorizontalAlignment = false } } } withAnimation(){ location.width = isHorizontalAlignment ? 0 : location.width } return location } 我的分享到此結束，感謝您的閱讀^^，再見！
 </content>
   </entry>
   
   <entry>
-    <title>My First Full Time as Swe</title>
-    <url>http://localhost:1313/post/my-first-full-time-week1/</url>
-    <categories>
-      <category>job diary</category>
-    </categories>
-    <tags>
-      
-    </tags>
-    <content type="html"> Introducation Today is my full-time job as a software engineer. I have been working for one week. So this post is going to share my feeling about my first full-time job this week.
-Before I jump into the topic, I want to share my interview experience with this company and the company in the Financial technology industry that works on blockchain technology and Web3. In the interview process, I needed to finish a written examination about basic programming within 45mins. After I finished it, I had to interview the manager and the manager asked about my experience during my college and introduced what are the company working on, that&rsquo;s all, he didn&rsquo;t ask me about some technical problem or algorithm, that wasn&rsquo;t what I expected in an interview, haha.
-Then, one week later, I got an offer of this job in this company.
-Working During this working week, I have done nothing rather than learn about blockchain and study their previous project. While I studied their project, I spent a lot of time building up the project environment. Let&rsquo;s share what was I struggle with in those projects.
-The first project is a front-end project which is using NextJS to develop. When I tried to run in the development mode, it couldn&rsquo;t load all the static resources such as image, javascript, and CSS, but this problem was just happening in the Window system. If I try to run in docker or Macos environment, all the resources can load successfully. But I didn&rsquo;t know why before backend tech told me the reason, it was caused by the path being different between macOS/Linux. Something like that: win: \xxx\yyy\ddd and /xxx/yyy/ddd
-The second project is a backened project which is using Kotlin/Java and Spring-boot framework. I have&rsquo;t leanrned Kotlin/Java and Spring before, so i need to spend time in setting up the enviroment. It wasn&rsquo;t the biggest challenge i was facing on, the main challenge was when i tried to run any server-applicated that was inside the project, it always failed due to SQL-Connection problem, but the sql connection was already connected. It was so weird. After i done some experiment, I found out the resson caused the problem, was the scheme&rsquo;s character-set wan&rsquo;t set to UTF-8. damn it,haha.
-Summary I think working in a small company is not such bad think that i through, all the people who are wokring here are really nice and feel free to communicate with them. ^^
-In the future, if i get much more feeling about working, i will be share here again!
-By a unreconcilied person
-</content>
-  </entry>
-  
-  <entry>
-    <title>[Google Cybersecurity Professional Certificate] Foundations of Cybersecurity - Week 2 note</title>
-    <url>http://localhost:1313/post/Google-Cybersecurity-Professional-Certificate-course1-w2/</url>
-    <categories>
-      <category>course</category><category>coursera</category>
-    </categories>
-    <tags>
-      
-      <tag>Google Cybersecurity Professional Certificate</tag>
-      
-    </tags>
-    <content type="html"> Google Cybersecurity Professional Certificate Course
-Week 1 course is talking about what is cybersecurity and the introducation of how can we learn the course and some learning tool we can use to help us dring the learning period in coursera. So, i&rsquo;m not written a post about week 1. XD
-note and basic concept This week is learning about the history of Cybersecurity and some basic concept in Cybersecurity field. So this post&rsquo;ll records all the concept i&rsquo;ve learned from this week.
-Basic Concept:
-Malware A software designed to harm devices or network.
-Virus A malware program that modifies other computer program by inserting its own code to damage and destory data.
-Worm Malware that self-replicates, spreading across the network and infecting computers
-Ransomware A malware attack during which threat actors encrypt an organization&rsquo;s data and demand payment to restore access.
-Spyware Malicious software installed on a user&rsquo;s computer without their permission, which is used to spy on and steal user data.
-Phishing The use of digital communication to trick people into revealing sensitive data or deploying malicious software.
-Spear phishing A malicious email attack targetting a specific user or group of users that appears to originate from a trusted source.
-Whaling A form of spear phishing during which threat actors target executives in order to gain access to sensitive data
-Business email compromise (BEC) An attack in which a threat actor impersonate a known source to obtain a financial advantage
-Vishing The exploitation of electronic voice communication to obtain sensitive information or to impersonate a known source.
-Social engineering A manipulate technique that exploits huamn error to gain unauthorized access to sensitive, private or valuable data.
-Social media phishing An attack in which a threat actor collects detailed information about their target on social media sites before initiating an attack
-Watering hole attack An attack in which a threat actor compromises a website frequently vistied by a sepcific group of users.
-Physical social engineering An attack in which a threat actor impersonates an employee, customer, or vendor to obtain unauthorized access to a physical location
-USB baiting An attack in which a threat actor strategically leaves a malware usb stick for an employee to find and unknowingly infect a network.
-Attacks example
-</content>
-  </entry>
-  
-  <entry>
-    <title>[Development Diary] Real Time Communication APP - Sicker Updated(I)</title>
+    <title>[開發者日記] 聊天通訊APP - 貼圖更新(I)</title>
     <url>http://localhost:1313/post/chat-app-sticker-updated/</url>
     <categories>
       <category>dev-diary</category><category>side-project</category>
@@ -357,20 +302,18 @@ Attacks example
       <tag>side-project</tag>
       
     </tags>
-    <content type="html"> Intro I won&rsquo;t mention much about the project again, if you&rsquo;re interested in what is the project about, please check out my previous posts. In the previous posts, i&rsquo;ve introduced the project in detail.
-ChatApp(I)
+    <content type="html"> 簡介 關於這個專案我就不多說了，如果你對這個專案有興趣的話，請看我之前的貼文。在之前的文章中，我已經詳細介紹了這個專案。 ChatApp(I)
 ChatApp(II)
 ChatApp(III)
 ChatApp(IV)
 ChatApp(V)
-In the demonstration video, you can see that the sticker feature is similar to any other Real-time communication app on the internet. User be able to access all available stickers that we are provided and send it to another user or group. But the problem is how can we provide sticker resources to user and where are the sticker come from?
-To solve the first problem, we can create a sticker resource by uploading all the necessary image to the server before client or user be able to access it. Each created sticker resources will be assigned a unique identifier as its stickerID. All resources releated to a same sticker id will be renamed in a standardized format for easy access. stickerID_index.format.
-I designed 2 apis for creating and fetching sticker.
-POST /api/v1/sticker -&gt; To create a group of sticker and upload all related sticker to the server GET /api/v1/sticker/:id -&gt; To obtain a related sticker resources with a given id
-To solve the second problem, for now i just simply download the sticker form Line by Web crawler (there is illegal problem if the app is published xD). So the sticker is just for testing!
-summary A sticker is an image in png format. To implement the sticker feature ,we just need to obtain a sticker&rsquo;s path and send it to the recevier,similar to sending a normal image. However, there is no need to upload the image to server because the sticker resources are already saved on server.
-That is all what i want to share today!
-Sorry about my bad english - I&rsquo;am still improving my english! ^^
+在demo影片中，您可以看到貼圖功能與網路上任何其他即時通訊應用程式類似。用戶能夠存取我們提供的所有可用貼圖並將其發送給其他用戶或群組。但問題是我們如何提供使用者貼圖資源，貼圖從哪裡來呢？
+為了解決第一個問題，我們可以透過在客戶端或使用者能夠存取它之前將所有必要的圖像上傳到伺服器來建立貼圖資源。每個建立的貼圖資源都會被分配一個唯一的ID作為其貼圖ID。與相同貼圖ID相關的所有資源都將以標準化格式重新命名，以便於存取。 stickerID_index.format。
+我設計了 2 個用於創建和獲取貼圖的api。
+POST /api/v1/sticker -&gt; 建立一組貼圖並將所有相關貼圖上傳到伺服器 GET /api/v1/sticker/:id -&gt; 取得給定id的相關貼圖資源
+為了解決第二個問題，現在我只是簡單地透過網路爬蟲下載了Line的貼圖如果應用程式發布則存在非法問題xD。所以貼圖只是為了測試！
+總結 貼圖是png格式的圖像。要實現貼圖功能，我們只需要獲取貼紙的路徑並將其發送給接收者，類似於發送普通圖像。不過，不需要將圖片上傳到伺服器，因為貼圖資源已經保存在伺服器上。
+這就是我今天要分享的全部內容！
 </content>
   </entry>
   
@@ -394,25 +337,6 @@ Input: head = [5,4,2,1] Output: 6 Explanation: Nodes 0 and 1 are the twins of no
 A simple graph of this approch
 Orignal List: a-&gt;b-&gt;c-&gt;d-&gt;e-&gt;f the n/2th node : d reverse all nodes before b: a&lt;-b&lt;-c d-&gt;e-&gt;f both list has the same length ,the ending condtion will be either list a or list b. Solution(Recursion): 我們可以在initial透過Recursive Function來遍歷Input,並把所有Integer先Push到Array/List裡面。然後在定義一個pointer用於存取Next的值即可。
 /** * // This is the interface that allows for creating nested lists. * // You should not implement it, or speculate about its implementation * class NestedInteger { * public: * // Return true if this NestedInteger holds a single integer, rather than a nested list. * bool isInteger() const; * * // Return the single integer that this NestedInteger holds, if it holds a single integer * // The result is undefined if this NestedInteger holds a nested list * int getInteger() const; * * // Return the nested list that this NestedInteger holds, if it holds a nested list * // The result is undefined if this NestedInteger holds a single integer * const vector&lt;NestedInteger&gt; &amp;getList() const; * }; */ //calling hasNext -&gt; next class NestedIterator { vector&lt;int&gt; ans; // vector&lt;NestedInteger&gt; list; int cur = 0; void getValue(vector&lt;NestedInteger&gt;&amp; data){ for(int i = 0;i&lt;data.size();i++){ if(data[i].isInteger()) ans.push_back(data[i].getInteger()); else getValue(data[i].getList()); } } public: NestedIterator(vector&lt;NestedInteger&gt; &amp;nestedList) { getValue(nestedList); } int next() { return ans[cur++]; } bool hasNext() { return cur &lt; ans.size() ? true:false; } }; /** * Your NestedIterator object will be instantiated and called as such: * NestedIterator i(nestedList); * while (i.hasNext()) cout &lt;&lt; i.next(); */ Solution: /** * Definition for singly-linked list. * struct ListNode { * int val; * ListNode *next; * ListNode() : val(0), next(nullptr) {} * ListNode(int x) : val(x), next(nullptr) {} * ListNode(int x, ListNode *next) : val(x), next(next) {} * }; */ class Solution { public: int pairSum(ListNode* head) { ListNode* slow = head, *fast = head; ListNode* pre = nullptr ,*cur = nullptr, *nxt = nullptr; int ans = 0; while(fast != nullptr){ fast = fast-&gt;next; if(fast != nullptr){ fast = fast-&gt;next; } //reverse the head list cur = slow; nxt = slow-&gt;next; cur-&gt;next = pre; pre = cur; slow = nxt; } ListNode* left = pre,*right = slow; while(left != nullptr &amp;&amp; right != nullptr){ ans = max(ans , left-&gt;val + right-&gt;val); left = left-&gt;next; right = right-&gt;next; } return ans; } }; </content>
-  </entry>
-  
-  <entry>
-    <title>[Anouncement] All everything in the blog will be only in english from now on</title>
-    <url>http://localhost:1313/post/new-anouncement/</url>
-    <categories>
-      <category>anouncement</category>
-    </categories>
-    <tags>
-      
-      <tag>anouncement</tag>
-      
-    </tags>
-    <content type="html"> Dear all readers,
-Hi, as my English ability is not good enough. I&rsquo;ve decided to pratice more in English, especially in writing , reading and speaking. Writing an article in Enlgish is a good way for me to pratice.
-Here, I apologize to all readers who can only read in Chinese. I realize that i need to take time to learn English. I hope that all of you can understand me.
-best regards
-Jakson.tmm
-</content>
   </entry>
   
   <entry>

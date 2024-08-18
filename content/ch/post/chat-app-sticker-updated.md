@@ -1,5 +1,5 @@
 ---
-title: "[Development Diary] Real Time Communication APP - Sicker Updated(I)"
+title: "[開發者日記] 聊天通訊APP - 貼圖更新(I)"
 date: 2023-05-24T21:32:47+08:00
 draft: false
 categories:
@@ -9,8 +9,8 @@ tags:
     - side-project  
 ---
 
-## Intro
-I won't mention much about the project again, if you're interested in what is the project about, please check out my previous posts. In the previous posts, i've introduced the project in detail.  
+## 簡介
+關於這個專案我就不多說了，如果你對這個專案有興趣的話，請看我之前的貼文。在之前的文章中，我已經詳細介紹了這個專案。
 [ChatApp(I)](/post/chat-app-init/)  
 [ChatApp(II)](/post/chat-app-demo/)  
 [ChatApp(III)](/post/chat-app-update/)  
@@ -19,20 +19,18 @@ I won't mention much about the project again, if you're interested in what is th
 
 <video src="/videos/chat-app/sticker-demo.mp4" controls="controls" width="500"></video> 
 
-In the demonstration video, you can see that the sticker feature is similar to any other Real-time communication app on the internet. User be able to access all available stickers that we are provided and send it to another user or group. But the problem is how can we provide sticker resources to user and where are the sticker come from?
+在demo影片中，您可以看到貼圖功能與網路上任何其他即時通訊應用程式類似。用戶能夠存取我們提供的所有可用貼圖並將其發送給其他用戶或群組。但問題是我們如何提供使用者貼圖資源，貼圖從哪裡來呢？  
+為了解決第一個問題，我們可以透過在客戶端或使用者能夠存取它之前將所有必要的圖像上傳到伺服器來建立貼圖資源。每個建立的貼圖資源都會被分配一個唯一的ID作為其貼圖ID。與相同貼圖ID相關的所有資源都將以標準化格式重新命名，以便於存取。 `stickerID_index.format`。
 
-To solve the first problem, we can create a sticker resource by uploading all the necessary image to the server before client or user be able to access it. Each created sticker resources will be assigned a unique identifier as its stickerID. All resources releated to a same sticker id will be renamed in a standardized format for easy access. `stickerID_index.format`.
 
-I designed 2 apis for creating and fetching sticker.  
-> POST /api/v1/sticker  -> To create a group of sticker and upload all related sticker to the server
-> GET /api/v1/sticker/:id -> To obtain a related sticker resources with a given id
+我設計了 2 個用於創建和獲取貼圖的api。  
+> POST /api/v1/sticker -> 建立一組貼圖並將所有相關貼圖上傳到伺服器
+> GET /api/v1/sticker/:id -> 取得給定id的相關貼圖資源
 
-To solve the second problem, for now i just simply download the sticker form Line by Web crawler **(there is illegal problem if the app is published xD)**. So the sticker is just for testing!
+為了解決第二個問題，現在我只是簡單地透過網路爬蟲下載了Line的貼圖**如果應用程式發布則存在非法問題xD**。所以貼圖只是為了測試！
 
-## summary
-A sticker is an image in png format. To implement the sticker feature ,we just need to obtain a sticker's path and send it to the recevier,similar to sending a normal image. However, there is no need to upload the image to server because the sticker resources are already saved on server.
+## 總結
+貼圖是png格式的圖像。要實現貼圖功能，我們只需要獲取貼紙的路徑並將其發送給接收者，類似於發送普通圖像。不過，不需要將圖片上傳到伺服器，因為貼圖資源已經保存在伺服器上。
 
-That is all what i want to share today!
-
-*Sorry about my bad english - I'am still improving my english! ^^*
+這就是我今天要分享的全部內容！  
 

@@ -228,7 +228,7 @@
  | 
 <i class="fa fa-file-word-o fa-fw"></i>
 <span class="post-meta-item-text">Words:</span>
-<span class="leancloud-world-count">819 words</span>
+<span class="leancloud-world-count">832 words</span>
 </span>
        <span>
  | 
@@ -276,7 +276,7 @@ For each client will establish <code>n-1</code> connection with other <code>n-1<
 <h5 id="what-is-the-different-between-mesh-sfu-mcu">What is the different between Mesh, SFU, MCU?</h5>
 <blockquote>
 <p>Mesh<br>
-The simple way to understand SFU is that a client will create a connection to the server for upstreaming and n-1 connections for downstreaming. The server uses it to receive upstream data from the client and broadcast it to other clients. So the role of the server is as a broadcaster.</p>
+Each client will establish a p2p connection with other users in the network and communicate through this connection. That is, each single client needs to manage n-1 connections and upload its own audio and video signals to n-1 users. This is acceptable when there are only a few people, but it is a challenge for the uploader&rsquo;s upload bandwidth when there are many people.</p>
 </blockquote>
 <blockquote>
 <p>SFU<br>
@@ -808,10 +808,14 @@ $(function() {
       },
       
       "model": [
-      "/model/umaru/model.json",
-        
-        
-        "/model/chino/model.json"],
+        "/model/umaru/model.json",
+        "/model/tororo/tororo.model.json",
+        "/model/HN/nepmaid/model.json",
+        "/model/HN/nepgearswim/model.json",
+        "/model/HN/neptune_santa/model.json",
+        "/model/HN/blanc_swimwear/model.json",
+        "/model/HN/noireswim/model.json",
+      ],
         touch: ["不可以這樣欺負我啦><"]
   })
 

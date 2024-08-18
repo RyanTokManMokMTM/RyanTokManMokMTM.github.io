@@ -4,12 +4,12 @@
 <meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta http-equiv=content-security-policy content="upgrade-insecure-requests">
-<title> [Development Diary] Real Time Communication APP - Story Updated(I) - Jackson.tmm </title><meta name=keywords content="博客,工程師,程序員,學習,筆記,技術,分析,後端,生活">
+<title> [開發者日記] 聊天通訊APP - 限時動態更新(I) - Jackson.tmm </title><meta name=keywords content="博客,工程師,程序員,學習,筆記,技術,分析,後端,生活">
 <meta name=author content="jackson.tmm">
-<meta property="og:title" content="[Development Diary] Real Time Communication APP - Story Updated(I)">
+<meta property="og:title" content="[開發者日記] 聊天通訊APP - 限時動態更新(I)">
 <meta property="og:site_name" content="Jackson.tmm">
 <meta property="og:image" content="/images/favicon.png">
-<meta name=title content="[Development Diary] Real Time Communication APP - Story Updated(I) - Jackson.tmm">
+<meta name=title content="[開發者日記] 聊天通訊APP - 限時動態更新(I) - Jackson.tmm">
 <meta name=description content="歡迎來的Jackson.tmm的空間站。個人主要專注於Web開發，程序開發，以及學習上。">
 <link rel="shortcut icon" href=/images/favicon.png>
 <link rel=apple-touch-icon href=/images/avatar.jpg>
@@ -96,7 +96,7 @@
 <header class=post-header>
 <h1 class=post-title itemprop="name headline">
 <a class=post-title-link href=https://ryantokmanmokmtm.github.io/post/chat-app-story-alignment-updated/ itemprop=url>
-[Development Diary] Real Time Communication APP - Story Updated(I)
+[開發者日記] 聊天通訊APP - 限時動態更新(I)
 </a>
 </h1><div class=post-meta>
 <span class=post-time>
@@ -127,29 +127,28 @@
 |
 <i class="fa fa-file-word-o fa-fw"></i>
 <span class=post-meta-item-text>字數：</span>
-<span class=leancloud-world-count>866 字</span>
+<span class=leancloud-world-count>1054 字</span>
 </span>
 <span>
 |
 <i class="fa fa-eye fa-fw"></i>
 <span class=post-meta-item-text>閱讀：</span>
-<span class=leancloud-view-count>5分鐘</span>
+<span class=leancloud-view-count>3分鐘</span>
 </span>
-<span id=/post/chat-app-story-alignment-updated/ class=leancloud_visitors data-flag-title="[Development Diary] Real Time Communication APP - Story Updated(I)">
+<span id=/post/chat-app-story-alignment-updated/ class=leancloud_visitors data-flag-title="[開發者日記] 聊天通訊APP - 限時動態更新(I)">
 |
 <i class="fa fa-binoculars fa-fw"></i>
 <span class=post-meta-item-text>閱讀次數：</span>
 <span class=leancloud-visitors-count></span>
 </span>
 </div></header><div class=post-body itemprop=articleBody>
-<h2 id=intro>Intro</h2><p>If you want to checkout what is this project about, please go through articles below.<br>
+<h2 id=簡介>簡介</h2><p>如果您想了解該項目的內容，請閱讀以下文章。<br>
 <a href=/post/chat-app-init/>ChatApp(I)</a><br>
 <a href=/post/chat-app-demo/>ChatApp(II)</a><br>
 <a href=/post/chat-app-update/>ChatApp(III)</a><br>
 <a href=/post/chat-app-final/>ChatApp(IV)</a><br>
 <a href=/post/chat-app-voice-chat/>ChatApp(V)</a><br>
-<a href=/post/chat-app-sticker-updated/>ChatApp(VI)</a></p><h2 id=demo-video>Demo Video</h2><p><video src=/videos/chat-app/instance-story-alignment.mp4 controls width=500></video></p><h2 id=todo>TODO</h2><p>In the previous version, it did allow users to add multiple <code>texts</code> to their <code>instance story</code>. But it’s hard to align all the text items without barely using their eyes to do so. So, in this version, I decided to add an alignment tool to help them, which is similar to the <code>Instagram</code> alignment tool.</p><h2 id=how>HOW</h2><p>To implement this feature, we need to know the <code>width</code> and <code>height</code> of the item the user wants to align first. Due to the item&rsquo;s able to <code>scale</code> and <code>rotate</code>, the <code>width</code> and the <code>height</code> will be different than the original size, so we need to get the correct <code>size</code> before we can start to align.</p><p>You may wonder how we can get the correct size after <code>scaling</code> and <code>rotation</code>. For&rsquo;scaling&rsquo;, which is a bit easier than <code>roatation</code>, we just need to multiply the size by the scale factor, and then we can get the correct scaled size. But for calculating the size after <code>rotation</code>, we need some math to help us, which we learned from high school, which is <code>trigonometric functions</code>. Applying this math, we can calculate the <code>width</code> and <code>height</code> easily.<br>
-<img src=/images/chat-app/triangle-math.png alt=math></p><p>After we get the correct size, we can start to align the item. Alignment functions are just a simple calculation, so I&rsquo;m not going to share the details here, but I will provide all those functions here for your reference!</p><blockquote>
+<a href=/post/chat-app-sticker-updated/>ChatApp(VI)</a></p><h2 id=demo>Demo</h2><p><video src=/videos/chat-app/instance-story-alignment.mp4 controls width=500></video></p><h2 id=todo>TODO</h2><p>在先前的版本中，它確實允許用戶將多個<code>文本</code>添加到他們的<code>限時動態</code>中。但如果不使用眼睛就很難對齊所有文字項目。因此，在這個版本中，我決定添加一個對齊工具來幫助他們，這類似於「Instagram」對齊工具。</p><h2 id=如何實作>如何實作</h2><p>為了實現這個功能，我們首先需要知道使用者想要對齊的項目的「寬度」和「高度」。由於項目可以<code>縮放</code>和<code>旋轉</code>，因此<code>寬度</code>和<code>高度</code>會與原始尺寸不同，因此我們需要先獲得正確的<code>尺寸</code>，然後才能開始對齊。</p><p>你可能想知道在<code>縮放</code>和<code>旋轉</code>之後我們如何才能得到正確的尺寸。對於<code>縮放</code>來說，它比<code>旋轉</code>要容易一些，我們只需要把尺寸乘以比例的factor，就可以得到正確的縮放尺寸。但是要計算<code>旋轉</code>後的大小，我們需要一些數學來幫助我們，這是我們在高中學過的，那就是「三角函數」。應用這個數學，我們可以輕鬆計算<code>寬度</code>和<code>高度</code>。</p><p><img src=/images/chat-app/triangle-math.png alt=math></p><p>獲得正確的尺寸後，我們可以開始對齊項目。對齊函數只是一個簡單的計算，所以我不會在這裡分享細節，但我會在這裡提供所有這些函數供您參考！</p><blockquote>
 <p>To calculate the size</p></blockquote><div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-swift data-lang=swift><span style=display:flex><span>GeometryReader{ proxy -&gt; Color <span style=color:#a2f;font-weight:700>in</span>
 </span></span><span style=display:flex><span>    DispatchQueue.main.async {
 </span></span><span style=display:flex><span>        <span style=color:#a2f;font-weight:700>self</span>.currentItemSize = proxy.size
@@ -316,14 +315,14 @@
 </span></span><span style=display:flex><span>        }
 </span></span><span style=display:flex><span>        <span style=color:#a2f;font-weight:700>return</span> location
 </span></span><span style=display:flex><span>    }
-</span></span></code></pre></div><p>That the ends of my sharing, thanks you for your reading time ^^, see ya!</p></div><footer class=post-footer>
+</span></span></code></pre></div><p>我的分享到此結束，感謝您的閱讀^^，再見！</p></div><footer class=post-footer>
 <div class=post-tags>
 <a href=/tags/side-project rel=tag title=side-project>#side-project#</a>
 </div><div class=post-nav>
 <div class=article-copyright>
 <div class=article-copyright-info>
 <p>
-<span>文章聲明：</span>[Development Diary] Real Time Communication APP - Story Updated(I)
+<span>文章聲明：</span>[開發者日記] 聊天通訊APP - 限時動態更新(I)
 </p><p>
 <span>文章連接：</span>https://ryantokmanmokmtm.github.io/post/chat-app-story-alignment-updated/
 </p><p>
@@ -332,12 +331,12 @@
 <span>文章聲明： </span>本博客文章除特別聲明外，均采用 <a href=https://creativecommons.org/licenses/by-nc-sa/3.0/ target=_blank style=text-decoration:underline>CC BY-NC-SA 3.0</a>許可協議，轉載請注明出處！
 </p></div></div><div class=clear></div></div><div class=post-nav>
 <div class="post-nav-next post-nav-item">
-<a href=https://ryantokmanmokmtm.github.io/post/chat-app-story-multiple-img-updated/ rel=next title="[Development Diary] Real Time Communication APP - Story Updated(II)">
-<i class="fa fa-chevron-left"></i> [Development Diary] Real Time Communication APP - Story Updated(II)
+<a href=https://ryantokmanmokmtm.github.io/post/chat-app-story-multiple-img-updated/ rel=next title="[[開發者日記] 聊天通訊APP - 限時動態更新(II)">
+<i class="fa fa-chevron-left"></i> [[開發者日記] 聊天通訊APP - 限時動態更新(II)
 </a>
 </div><div class="post-nav-prev post-nav-item">
-<a href=https://ryantokmanmokmtm.github.io/post/my-first-full-time-week1/ rel=prev title="My First Full Time as Swe">
-My First Full Time as Swe
+<a href=https://ryantokmanmokmtm.github.io/post/chat-app-sticker-updated/ rel=prev title="[開發者日記] 聊天通訊APP - 貼圖更新(I)">
+[開發者日記] 聊天通訊APP - 貼圖更新(I)
 <i class="fa fa-chevron-right"></i>
 </a>
 </div></div></footer></article></section></div></div><div class=sidebar-toggle>
@@ -355,17 +354,17 @@ My First Full Time as Swe
 </p></div><nav class="site-state motion-element">
 <div class="site-state-item site-state-posts">
 <a href=/post/>
-<span class=site-state-item-count>32</span>
+<span class=site-state-item-count>30</span>
 <span class=site-state-item-name>日誌</span>
 </a>
 </div><div class="site-state-item site-state-categories">
 <a href=/categories/>
-<span class=site-state-item-count>31</span>
+<span class=site-state-item-count>29</span>
 <span class=site-state-item-name>分類</span>
 </a>
 </div><div class="site-state-item site-state-tags">
 <a href=/tags/>
-<span class=site-state-item-count>59 </span>
+<span class=site-state-item-count>58 </span>
 <span class=site-state-item-name>標籤</span>
 </a>
 </div></nav><div class="links-of-author motion-element">
@@ -453,5 +452,5 @@ Theme by - <a class=powered-link href=//github.com/elkan1788/hugo-theme-next tar
 <script>(function(){var e=document.createElement("script"),t,n=window.location.protocol.split(":")[0];n==="https"?e.src="https://zz.bdstatic.com/linksubmit/push.js":e.src="http://push.zhanzhang.baidu.com/push.js",t=document.getElementsByTagName("script")[0],t.parentNode.insertBefore(e,t)})()</script>
 <script src=/js/l2d.js></script>
 <script src=/js/pio.js></script>
-<script>var pio=new Paul_Pio({mode:"draggable",hidden:!0,content:{welcome:["歡迎來到Jackson的小宇宙！","今天天氣不錯，一起来玩吧！","博主有空的話，會寫一寫博客記錄一下!"],custom:[{selector:".home-social a:last-child",text:"在這里可以了解博主的日常噢~"},{selector:".post-item a",type:"read"},{selector:".post-content a, .page-content a",type:"link"}]},model:["/model/umaru/model.json","/model/HN/blanc_swimwear/model.json","/model/HN/nepgear_extra/model.json","/model/HN/noireswim/model.json","/model/HN/nepgearswim/model.json","/model/chino/model.json"],touch:["不可以這樣欺負我啦><"]})</script>
+<script>var pio=new Paul_Pio({mode:"draggable",hidden:!0,content:{welcome:["歡迎來到Jackson的小宇宙！","今天天氣不錯，一起来玩吧！","博主有空的話，會寫一寫博客記錄一下!"],custom:[{selector:".home-social a:last-child",text:"在這里可以了解博主的日常噢~"},{selector:".post-item a",type:"read"},{selector:".post-content a, .page-content a",type:"link"}]},model:["/model/umaru/model.json","/model/tororo/tororo.model.json","/model/HN/nepmaid/model.json","/model/HN/nepgearswim/model.json","/model/HN/neptune_santa/model.json","/model/HN/blanc_swimwear/model.json","/model/HN/noireswim/model.json"],touch:["不可以這樣欺負我啦><"]})</script>
 </body></html>

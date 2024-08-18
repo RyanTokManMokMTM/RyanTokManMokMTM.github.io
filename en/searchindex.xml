@@ -32,7 +32,7 @@ Here is the architecture of the problem I described above - Mesh.
 For each client will establish n-1 connection with other n-1 user in the network for upstreaming and downstreaming the media track.
 Solution After a few months of researching this issue, I found a suitable solution for this project. It is called SFU(Selective Forwording Unit)', and there is another solution called MCU(Multipoint Control Unit). Because I used SFUto develop the streaming feature, I'll focus onSFUas well. If you are interested inSFUandMCU`, you can read this article for more information.
 SFU(Selective Forwording Unit) MCU(Multipoint Control Unit) What is the different between Mesh, SFU, MCU? Mesh
-The simple way to understand SFU is that a client will create a connection to the server for upstreaming and n-1 connections for downstreaming. The server uses it to receive upstream data from the client and broadcast it to other clients. So the role of the server is as a broadcaster.
+Each client will establish a p2p connection with other users in the network and communicate through this connection. That is, each single client needs to manage n-1 connections and upload its own audio and video signals to n-1 users. This is acceptable when there are only a few people, but it is a challenge for the uploader&rsquo;s upload bandwidth when there are many people.
 SFU
 The simple way to understand SFU is that a client will create a connection to the server for upstreaming and n-1 connections for downstreaming. The server uses it to receive upstream data from the client and broadcast it to other clients. So the role of the server is as a broadcaster.
 MCU
@@ -98,7 +98,8 @@ ChatApp(V)
 ChatApp(VI)
 Here is the demonstration video about the story feature, is similar to instagram(I took the reference from instagram for the UI xD).
 What i have done for this feature?
-Allowed user to add text or image to his story. For making story editor more flexible, added a item alignment system and item scaling, rotation and movable. Baisc attribute for the item, for example: Text - (text color, bold,background etc), image(border) Allowed friends to like the story by pressing the like button. summary</content></entry><entry><title>[Development Diary] Real Time Communication APP - Story Updated(I)</title><url>https://ryantokmanmokmtm.github.io/en/post/chat-app-story-alignment-updated/</url><categories><category>dev-diary</category><category>side-project</category></categories><tags><tag>side-project</tag></tags><content type="html"> Intro If you want to checkout what is this project about, please go through articles below.
+Allowed user to add text or image to his story. For making story editor more flexible, added a item alignment system and item scaling, rotation and movable. Baisc attribute for the item, for example: Text - (text color, bold,background etc), image(border) Allowed friends to like the story by pressing the like button. In this article, it is just a simple record of what I have updated in this version.
+That the ends of my sharing, thanks you for your reading time ^^, see ya!</content></entry><entry><title>[Development Diary] Real Time Communication APP - Story Updated(I)</title><url>https://ryantokmanmokmtm.github.io/en/post/chat-app-story-alignment-updated/</url><categories><category>dev-diary</category><category>side-project</category></categories><tags><tag>side-project</tag></tags><content type="html"> Intro If you want to checkout what is this project about, please go through articles below.
 ChatApp(I)
 ChatApp(II)
 ChatApp(III)

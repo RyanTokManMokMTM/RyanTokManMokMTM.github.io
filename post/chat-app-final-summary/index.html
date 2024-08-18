@@ -4,12 +4,12 @@
 <meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta http-equiv=content-security-policy content="upgrade-insecure-requests">
-<title> [Development Diary] Real Time Communication APP(Ended) - Final & Summary - Jackson.tmm </title><meta name=keywords content="博客,工程師,程序員,學習,筆記,技術,分析,後端,生活">
+<title> [開發者日記] 聊天通訊APP(完結) - 總結 - Jackson.tmm </title><meta name=keywords content="博客,工程師,程序員,學習,筆記,技術,分析,後端,生活">
 <meta name=author content="jackson.tmm">
-<meta property="og:title" content="[Development Diary] Real Time Communication APP(Ended) - Final & Summary">
+<meta property="og:title" content="[開發者日記] 聊天通訊APP(完結) - 總結">
 <meta property="og:site_name" content="Jackson.tmm">
 <meta property="og:image" content="/images/favicon.png">
-<meta name=title content="[Development Diary] Real Time Communication APP(Ended) - Final & Summary - Jackson.tmm">
+<meta name=title content="[開發者日記] 聊天通訊APP(完結) - 總結 - Jackson.tmm">
 <meta name=description content="歡迎來的Jackson.tmm的空間站。個人主要專注於Web開發，程序開發，以及學習上。">
 <link rel="shortcut icon" href=/images/favicon.png>
 <link rel=apple-touch-icon href=/images/avatar.jpg>
@@ -96,7 +96,7 @@
 <header class=post-header>
 <h1 class=post-title itemprop="name headline">
 <a class=post-title-link href=https://ryantokmanmokmtm.github.io/post/chat-app-final-summary/ itemprop=url>
-[Development Diary] Real Time Communication APP(Ended) - Final & Summary
+[開發者日記] 聊天通訊APP(完結) - 總結
 </a>
 </h1><div class=post-meta>
 <span class=post-time>
@@ -127,23 +127,24 @@
 |
 <i class="fa fa-file-word-o fa-fw"></i>
 <span class=post-meta-item-text>字數：</span>
-<span class=leancloud-world-count>819 字</span>
+<span class=leancloud-world-count>1528 字</span>
 </span>
 <span>
 |
 <i class="fa fa-eye fa-fw"></i>
 <span class=post-meta-item-text>閱讀：</span>
-<span class=leancloud-view-count>2分鐘</span>
+<span class=leancloud-view-count>4分鐘</span>
 </span>
-<span id=/post/chat-app-final-summary/ class=leancloud_visitors data-flag-title="[Development Diary] Real Time Communication APP(Ended) - Final & Summary">
+<span id=/post/chat-app-final-summary/ class=leancloud_visitors data-flag-title="[開發者日記] 聊天通訊APP(完結) - 總結">
 |
 <i class="fa fa-binoculars fa-fw"></i>
 <span class=post-meta-item-text>閱讀次數：</span>
 <span class=leancloud-visitors-count></span>
 </span>
 </div></header><div class=post-body itemprop=articleBody>
-<h2 id=intro>Intro</h2><p>Hello, it was a long time not updating my blogger because of doing some research of a issue about multiple user streaming feature. The article is to share about what have I achived about the multiple user streming and summrise this side project! Which means this project finllay over! It took a year to finish QQ.<br>
-Alough the project has done, but still has some issue on it. If i have the ablility to fix it on the future, I&rsquo;ll come back and fix it. All those issues are making the streaming not stable, but we can still play around!</p><p>Before I jump into today topic, If you don&rsquo;t remember what the project about, please check all the articles list below to get more information.<br>
+<h2 id=簡介>簡介</h2><p>Hi, 已經有一段時間沒有更新了，因為最近在研究多人串流的問題。這篇文章主要是分享我做了些什麼以及對這個project做個總結，這裡的意思就是這個project終於完成了！！花了我近1年的時間呢。<br>
+雖然這個project已完成，但是依然還有些問題，如果我們之後還有這個能力在修復～ 這些問題使得串流沒有這麼的穩定，但還是可以玩的呢！<br>
+在進入今天主題之前，如果你不記得或不知道這個project關於什麼的話，可以回去閱讀這幾篇文章：<br>
 <a href=/post/chat-app-init/>ChatApp(I)</a><br>
 <a href=/post/chat-app-demo/>ChatApp(II)</a><br>
 <a href=/post/chat-app-update/>ChatApp(III)</a><br>
@@ -152,22 +153,22 @@ Alough the project has done, but still has some issue on it. If i have the ablil
 <a href=/post/chat-app-sticker-updated/>ChatApp(VI)</a><br>
 <a href=/post/chat-app-story-alignment-updated/>ChatApp(Ⅶ)</a><br>
 <a href=/post/chat-app-story-multiple-img-updated/>ChatApp(Ⅷ)</a><br>
-<a href=/post/chat-app-sticker-shop-updated/>ChatApp(IX)</a></p><p>Here is the latest screen capture of the app:<br>
-<img src=/images/chat-app/2024-04-20-final.png alt=final-app></p><h5 id=issue-description>Issue description</h5><p>I developed an audio streaming call and a video streaming call for user-to-user chatting. Therefore, I wanted to develop these two features for group/multiple chats too. At the moment, I have encountered a problem. Person-to-person streaming is based on P2P. If I use the same way to develop the streaming feature for group chat, it&rsquo;ll have a huge cost on the client side when they communicate with more and more clients, especially upstreaming. For upstreaming, a client needs to upstream its media track to <code>n-1</code> clients, which costs their bandwidth a huge amount(You can imagine we are uploading the same video to server <code>n-1</code> times at the same time).We are not only upstreaming but also downsteaming from other client. So, I need to find a better solution before develop it.</p><p>Here is the architecture of the problem I described above - <code>Mesh</code>.<br>
+<a href=/post/chat-app-sticker-shop-updated/>ChatApp(IX)</a></p><p>這裡是App的最新截圖：
+<img src=/images/chat-app/2024-04-20-final.png alt=final-app></p><h5 id=問題描述>問題描述</h5><p>我之前開發了一對一的音視頻通話，所以也想把多對多的音視頻通話也用出來。在這個時候，我遇到到了問題就是一對一的通話是通過P2P進行傳輸的，但是如果使用相同的方式來實作多對多音視頻傳流的話，在多人的時候會導致upstreaming有過高的網絡成本，使得效能下降。客戶端需要上傳他的音視頻數據給<code>n-1</code>個客戶端。這裡不單單只有upstreaming，還是downstraming，所以需要找到一個方法解決這個問題。</p><p>這裡是我上面所講訴的問題的網絡拓墣 - <code>Mesh</code>.<br>
 <img src=/images/hepler/mesh.png alt=mesh><br>
-For each client will establish <code>n-1</code> connection with other <code>n-1</code> user in the network for upstreaming and downstreaming the media track.</p><h5 id=solution>Solution</h5><p>After a few months of researching this issue, I found a suitable solution for this project. It is called  <code>SFU(Selective Forwording Unit)', and there is another solution called </code>MCU(Multipoint Control Unit)<code>. Because I used </code>SFU<code>to develop the streaming feature, I'll focus on</code>SFU<code>as well. If you are interested in</code>SFU<code>and</code>MCU`, you can read this <a href=https://getstream.io/blog/what-is-a-selective-forwarding-unit-in-webrtc/>article</a> for more information.</p><p><code>SFU(Selective Forwording Unit)</code>
+每個在網絡中的user需要與其餘<code>n-1</code>個user建立連線用於上傳和下載多媒體數據</p><h5 id=解決方案>解決方案</h5><p>經過數月的研究，我找到了一個合適的解決方案。這個解決方案的名稱為SFU(Selective Forwording Unit)以及另外一個解決方案為MCU(Multipoint Control Unit)。這裡我選擇使用了SFU解決方案來解決上訴的問題。如果你對SFU和MCU有興趣，可以閱讀<a href=https://getstream.io/blog/what-is-a-selective-forwarding-unit-in-webrtc/>這篇文章</a>以獲得更多的資訊</p><p><code>SFU(Selective Forwording Unit)</code>
 <img src=/images/hepler/sfu.png alt=SFU></p><p><code>MCU(Multipoint Control Unit)</code>
-<img src=/images/hepler/mcu.png alt=MCU></p><h5 id=what-is-the-different-between-mesh-sfu-mcu>What is the different between Mesh, SFU, MCU?</h5><blockquote>
+<img src=/images/hepler/mcu.png alt=MCU></p><h5 id=mesh-vs-sfu-vs-mch>Mesh vs SFU vs MCH</h5><blockquote>
 <p>Mesh<br>
-The simple way to understand SFU is that a client will create a connection to the server for upstreaming and n-1 connections for downstreaming. The server uses it to receive upstream data from the client and broadcast it to other clients. So the role of the server is as a broadcaster.</p></blockquote><blockquote>
+每個客戶端會與其他在網絡中的user建立p2p連結，並透過此連結進行通訊。也就是每單一個客戶端需要管理<code>n-1</code>個連結以及需要上傳自己的音視頻訊號給<code>n-1</code>個用戶，在少人的情況下還可以接受，但是在多人的情況下對於上傳者的上傳band-width而言是一項挑戰</p></blockquote><blockquote>
 <p>SFU<br>
-The simple way to understand SFU is that a client will create a connection to the server for upstreaming and n-1 connections for downstreaming. The server uses it to receive upstream data from the client and broadcast it to other clients. So the role of the server is as a broadcaster.</p></blockquote><blockquote>
+理解SFU的簡單方法是客戶端將建立一個到伺服器的連線用於up-steaming，並建立<code>n-1</code>個連線用於down-streaming。Server使用它從客戶端接接收up-straming的資料並將其廣播給其他user。所以server的角色就是作為廣播者。</p></blockquote><blockquote>
 <p>MCU<br>
-A client in MCU will only have 1 connection for upstreaming and downstreaming, and the server will mix and transcode all received client&rsquo;s media into one media and transfer that media to all clients via the connection. But the performance depends on the server hardware.</p></blockquote><h5 id=solution-in-this-project----sfu-architechture-to-solve-this-issue>Solution in this project - SFU architechture to solve this issue.</h5><p><code>Def Role: Producer & Consumer</code><br>
-All client can be a <code>Producer</code> and <code>Consumer</code>, but each client will only have one connection for producing their meida to the server.</p><p><strong>SFU work-flow in the project</strong><br>
-Creating/Joining Room(Session)</p><ol>
-<li>Client creating a new rooms if not exist or joining the existing room</li><li>Client creating a connection and transfer their media tracks via the connection</li><li>Server saving the client track&rsquo;s data</li><li>Wating Consumer to consume the tracks&mldr;</li></ol><p>Consming a producer tracks in the same room</p><ol>
-<li>Client creating a new connection to server, but not receving any media tracks via this connection</li><li>Adding the producer tracks,which producer is consuming into the connection</li><li>Client side received the tracks and display the tracks.</li></ol><p>It just a roughly work-flow, in the implementation will be more complicated. lol</p><h2 id=summary>Summary</h2><p>Alough I spent a year finishing the project, and it wasn&rsquo;t running perfectly, and it still has some issues. But during this development time, I have learned a lot, not only about the programming skill but also about skill-solving and problem-researching. The most important thing is being persistent and focusing on one thing!</p><p>Thanks for all of you following me from 0 to 1 of the project, hope all of you enjoy my development journey! <strong>Before the next interesting project, I&rsquo;ll leave for a while to take a break. I&rsquo;ll be back soon</strong>! ^^</p><h4 id=reference>Reference</h4><p><a href=https://getstream.io/blog/what-is-a-selective-forwarding-unit-in-webrtc/>SFU, MCU, or P2P: What’s the Difference Between These WebRTC Architectures?</a><br>
+MCU 中的用戶端只有1個用於up-streaming和down-streaming的connection，server會將所有接收到的user媒體混合併轉碼為另一種媒體，並透過該連接將該媒體傳輸到所有user。但效能取決於server的硬體。</p></blockquote><h5 id=問題的解決方案---sfu>問題的解決方案 - SFU</h5><p><code>Def Role: Producer & Consumer</code><br>
+所有client都可以是<code>生產者</code>和<code>消費者</code>，但每個client只有一個連接來產生其meida到server。</p><p><strong>Project中SFU的工作流程</strong><br>
+建立/加入房間(Session)</p><ol>
+<li>用戶端檢查房間是否存在，如果不存在則建立一個新房間，若存在則加入現有房間。</li><li>客戶端建立連線並透過該連線傳輸其媒體軌道</li><li>伺服器保存客戶端的軌道資料</li><li>等待消費者消費這些軌道&mldr;</li></ol><p>在同一房間消費生產者的軌道</p><ol>
+<li>客戶端建立一個新的連接到伺服器，但不透過該連接接收任何媒體軌道。</li><li>將生產者正在消費的軌道加入該連結</li><li>客戶端接收軌道並顯示這些軌道</li></ol><p>這只是一個大概的工作流程，實作上會比較複雜. lol</p><h2 id=總結>總結</h2><p>雖然我花了一年的時間完成了這個項目，但它運作得併不完美，而且仍然存在一些問題。但在這段時間的開發過程中，我學到了很多，不僅是程式技巧，還有解決問題和研究問題的技巧。最重要的是堅持並專注於一件事！</p><p>感謝大家從0到1的關注我的項目，祝大家享受我的開發之旅！ <strong>在下一個有趣的項目之前，我會離開一段時間休息一下。我很快就會回來</strong>！ ^^</p><h4 id=reference>Reference</h4><p><a href=https://getstream.io/blog/what-is-a-selective-forwarding-unit-in-webrtc/>SFU, MCU, or P2P: What’s the Difference Between These WebRTC Architectures?</a><br>
 <a href=https://getstream.io/blog/what-is-a-selective-forwarding-unit-in-webrtc/>WebRTC Architechtrue的認知 Mesh, MCU, SFU</a></p></div><footer class=post-footer>
 <div class=post-tags>
 <a href=/tags/side-project rel=tag title=side-project>#side-project#</a>
@@ -175,7 +176,7 @@ Creating/Joining Room(Session)</p><ol>
 <div class=article-copyright>
 <div class=article-copyright-info>
 <p>
-<span>文章聲明：</span>[Development Diary] Real Time Communication APP(Ended) - Final & Summary
+<span>文章聲明：</span>[開發者日記] 聊天通訊APP(完結) - 總結
 </p><p>
 <span>文章連接：</span>https://ryantokmanmokmtm.github.io/post/chat-app-final-summary/
 </p><p>
@@ -185,8 +186,8 @@ Creating/Joining Room(Session)</p><ol>
 </p></div></div><div class=clear></div></div><div class=post-nav>
 <div class="post-nav-next post-nav-item">
 </div><div class="post-nav-prev post-nav-item">
-<a href=https://ryantokmanmokmtm.github.io/post/chat-app-sticker-shop-updated/ rel=prev title="[Development Diary] Real Time Communication APP - Sicker Updated(III)">
-[Development Diary] Real Time Communication APP - Sicker Updated(III)
+<a href=https://ryantokmanmokmtm.github.io/post/chat-app-sticker-shop-updated/ rel=prev title="[開發者日記] 聊天通訊APP - 貼圖更新(III)">
+[開發者日記] 聊天通訊APP - 貼圖更新(III)
 <i class="fa fa-chevron-right"></i>
 </a>
 </div></div></footer></article></section></div></div><div class=sidebar-toggle>
@@ -204,17 +205,17 @@ Creating/Joining Room(Session)</p><ol>
 </p></div><nav class="site-state motion-element">
 <div class="site-state-item site-state-posts">
 <a href=/post/>
-<span class=site-state-item-count>32</span>
+<span class=site-state-item-count>30</span>
 <span class=site-state-item-name>日誌</span>
 </a>
 </div><div class="site-state-item site-state-categories">
 <a href=/categories/>
-<span class=site-state-item-count>31</span>
+<span class=site-state-item-count>29</span>
 <span class=site-state-item-name>分類</span>
 </a>
 </div><div class="site-state-item site-state-tags">
 <a href=/tags/>
-<span class=site-state-item-count>59 </span>
+<span class=site-state-item-count>58 </span>
 <span class=site-state-item-name>標籤</span>
 </a>
 </div></nav><div class="links-of-author motion-element">
@@ -302,5 +303,5 @@ Theme by - <a class=powered-link href=//github.com/elkan1788/hugo-theme-next tar
 <script>(function(){var e=document.createElement("script"),t,n=window.location.protocol.split(":")[0];n==="https"?e.src="https://zz.bdstatic.com/linksubmit/push.js":e.src="http://push.zhanzhang.baidu.com/push.js",t=document.getElementsByTagName("script")[0],t.parentNode.insertBefore(e,t)})()</script>
 <script src=/js/l2d.js></script>
 <script src=/js/pio.js></script>
-<script>var pio=new Paul_Pio({mode:"draggable",hidden:!0,content:{welcome:["歡迎來到Jackson的小宇宙！","今天天氣不錯，一起来玩吧！","博主有空的話，會寫一寫博客記錄一下!"],custom:[{selector:".home-social a:last-child",text:"在這里可以了解博主的日常噢~"},{selector:".post-item a",type:"read"},{selector:".post-content a, .page-content a",type:"link"}]},model:["/model/umaru/model.json","/model/HN/blanc_swimwear/model.json","/model/HN/nepgear_extra/model.json","/model/HN/noireswim/model.json","/model/HN/nepgearswim/model.json","/model/chino/model.json"],touch:["不可以這樣欺負我啦><"]})</script>
+<script>var pio=new Paul_Pio({mode:"draggable",hidden:!0,content:{welcome:["歡迎來到Jackson的小宇宙！","今天天氣不錯，一起来玩吧！","博主有空的話，會寫一寫博客記錄一下!"],custom:[{selector:".home-social a:last-child",text:"在這里可以了解博主的日常噢~"},{selector:".post-item a",type:"read"},{selector:".post-content a, .page-content a",type:"link"}]},model:["/model/umaru/model.json","/model/tororo/tororo.model.json","/model/HN/nepmaid/model.json","/model/HN/nepgearswim/model.json","/model/HN/neptune_santa/model.json","/model/HN/blanc_swimwear/model.json","/model/HN/noireswim/model.json"],touch:["不可以這樣欺負我啦><"]})</script>
 </body></html>

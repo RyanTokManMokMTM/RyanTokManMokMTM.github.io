@@ -4,12 +4,12 @@
 <meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta http-equiv=content-security-policy content="upgrade-insecure-requests">
-<title> [Development Diary] Real Time Communication APP - Sicker Updated(I) - Jackson.tmm </title><meta name=keywords content="博客,工程師,程序員,學習,筆記,技術,分析,後端,生活">
+<title> [開發者日記] 聊天通訊APP - 貼圖更新(I) - Jackson.tmm </title><meta name=keywords content="博客,工程師,程序員,學習,筆記,技術,分析,後端,生活">
 <meta name=author content="jackson.tmm">
-<meta property="og:title" content="[Development Diary] Real Time Communication APP - Sicker Updated(I)">
+<meta property="og:title" content="[開發者日記] 聊天通訊APP - 貼圖更新(I)">
 <meta property="og:site_name" content="Jackson.tmm">
 <meta property="og:image" content="/images/favicon.png">
-<meta name=title content="[Development Diary] Real Time Communication APP - Sicker Updated(I) - Jackson.tmm">
+<meta name=title content="[開發者日記] 聊天通訊APP - 貼圖更新(I) - Jackson.tmm">
 <meta name=description content="歡迎來的Jackson.tmm的空間站。個人主要專注於Web開發，程序開發，以及學習上。">
 <link rel="shortcut icon" href=/images/favicon.png>
 <link rel=apple-touch-icon href=/images/avatar.jpg>
@@ -96,7 +96,7 @@
 <header class=post-header>
 <h1 class=post-title itemprop="name headline">
 <a class=post-title-link href=https://ryantokmanmokmtm.github.io/post/chat-app-sticker-updated/ itemprop=url>
-[Development Diary] Real Time Communication APP - Sicker Updated(I)
+[開發者日記] 聊天通訊APP - 貼圖更新(I)
 </a>
 </h1><div class=post-meta>
 <span class=post-time>
@@ -127,7 +127,7 @@
 |
 <i class="fa fa-file-word-o fa-fw"></i>
 <span class=post-meta-item-text>字數：</span>
-<span class=leancloud-world-count>309 字</span>
+<span class=leancloud-world-count>519 字</span>
 </span>
 <span>
 |
@@ -135,28 +135,29 @@
 <span class=post-meta-item-text>閱讀：</span>
 <span class=leancloud-view-count>2分鐘</span>
 </span>
-<span id=/post/chat-app-sticker-updated/ class=leancloud_visitors data-flag-title="[Development Diary] Real Time Communication APP - Sicker Updated(I)">
+<span id=/post/chat-app-sticker-updated/ class=leancloud_visitors data-flag-title="[開發者日記] 聊天通訊APP - 貼圖更新(I)">
 |
 <i class="fa fa-binoculars fa-fw"></i>
 <span class=post-meta-item-text>閱讀次數：</span>
 <span class=leancloud-visitors-count></span>
 </span>
 </div></header><div class=post-body itemprop=articleBody>
-<h2 id=intro>Intro</h2><p>I won&rsquo;t mention much about the project again, if you&rsquo;re interested in what is the project about, please check out my previous posts. In the previous posts, i&rsquo;ve introduced the project in detail.<br>
+<h2 id=簡介>簡介</h2><p>關於這個專案我就不多說了，如果你對這個專案有興趣的話，請看我之前的貼文。在之前的文章中，我已經詳細介紹了這個專案。
 <a href=/post/chat-app-init/>ChatApp(I)</a><br>
 <a href=/post/chat-app-demo/>ChatApp(II)</a><br>
 <a href=/post/chat-app-update/>ChatApp(III)</a><br>
 <a href=/post/chat-app-final/>ChatApp(IV)</a><br>
-<a href=/post/chat-app-voice-chat/>ChatApp(V)</a></p><p><video src=/videos/chat-app/sticker-demo.mp4 controls width=500></video></p><p>In the demonstration video, you can see that the sticker feature is similar to any other Real-time communication app on the internet. User be able to access all available stickers that we are provided and send it to another user or group. But the problem is how can we provide sticker resources to user and where are the sticker come from?</p><p>To solve the first problem, we can create a sticker resource by uploading all the necessary image to the server before client or user be able to access it. Each created sticker resources will be assigned a unique identifier as its stickerID. All resources releated to a same sticker id will be renamed in a standardized format for easy access. <code>stickerID_index.format</code>.</p><p>I designed 2 apis for creating and fetching sticker.</p><blockquote>
-<p>POST /api/v1/sticker -> To create a group of sticker and upload all related sticker to the server
-GET /api/v1/sticker/:id -> To obtain a related sticker resources with a given id</p></blockquote><p>To solve the second problem, for now i just simply download the sticker form Line by Web crawler <strong>(there is illegal problem if the app is published xD)</strong>. So the sticker is just for testing!</p><h2 id=summary>summary</h2><p>A sticker is an image in png format. To implement the sticker feature ,we just need to obtain a sticker&rsquo;s path and send it to the recevier,similar to sending a normal image. However, there is no need to upload the image to server because the sticker resources are already saved on server.</p><p>That is all what i want to share today!</p><p><em>Sorry about my bad english - I&rsquo;am still improving my english! ^^</em></p></div><footer class=post-footer>
+<a href=/post/chat-app-voice-chat/>ChatApp(V)</a></p><p><video src=/videos/chat-app/sticker-demo.mp4 controls width=500></video></p><p>在demo影片中，您可以看到貼圖功能與網路上任何其他即時通訊應用程式類似。用戶能夠存取我們提供的所有可用貼圖並將其發送給其他用戶或群組。但問題是我們如何提供使用者貼圖資源，貼圖從哪裡來呢？<br>
+為了解決第一個問題，我們可以透過在客戶端或使用者能夠存取它之前將所有必要的圖像上傳到伺服器來建立貼圖資源。每個建立的貼圖資源都會被分配一個唯一的ID作為其貼圖ID。與相同貼圖ID相關的所有資源都將以標準化格式重新命名，以便於存取。 <code>stickerID_index.format</code>。</p><p>我設計了 2 個用於創建和獲取貼圖的api。</p><blockquote>
+<p>POST /api/v1/sticker -> 建立一組貼圖並將所有相關貼圖上傳到伺服器
+GET /api/v1/sticker/:id -> 取得給定id的相關貼圖資源</p></blockquote><p>為了解決第二個問題，現在我只是簡單地透過網路爬蟲下載了Line的貼圖<strong>如果應用程式發布則存在非法問題xD</strong>。所以貼圖只是為了測試！</p><h2 id=總結>總結</h2><p>貼圖是png格式的圖像。要實現貼圖功能，我們只需要獲取貼紙的路徑並將其發送給接收者，類似於發送普通圖像。不過，不需要將圖片上傳到伺服器，因為貼圖資源已經保存在伺服器上。</p><p>這就是我今天要分享的全部內容！</p></div><footer class=post-footer>
 <div class=post-tags>
 <a href=/tags/side-project rel=tag title=side-project>#side-project#</a>
 </div><div class=post-nav>
 <div class=article-copyright>
 <div class=article-copyright-info>
 <p>
-<span>文章聲明：</span>[Development Diary] Real Time Communication APP - Sicker Updated(I)
+<span>文章聲明：</span>[開發者日記] 聊天通訊APP - 貼圖更新(I)
 </p><p>
 <span>文章連接：</span>https://ryantokmanmokmtm.github.io/post/chat-app-sticker-updated/
 </p><p>
@@ -165,12 +166,12 @@ GET /api/v1/sticker/:id -> To obtain a related sticker resources with a given id
 <span>文章聲明： </span>本博客文章除特別聲明外，均采用 <a href=https://creativecommons.org/licenses/by-nc-sa/3.0/ target=_blank style=text-decoration:underline>CC BY-NC-SA 3.0</a>許可協議，轉載請注明出處！
 </p></div></div><div class=clear></div></div><div class=post-nav>
 <div class="post-nav-next post-nav-item">
-<a href=https://ryantokmanmokmtm.github.io/post/my-first-full-time-week1/ rel=next title="My First Full Time as Swe">
-<i class="fa fa-chevron-left"></i> My First Full Time as Swe
+<a href=https://ryantokmanmokmtm.github.io/post/chat-app-story-alignment-updated/ rel=next title="[開發者日記] 聊天通訊APP - 限時動態更新(I)">
+<i class="fa fa-chevron-left"></i> [開發者日記] 聊天通訊APP - 限時動態更新(I)
 </a>
 </div><div class="post-nav-prev post-nav-item">
-<a href=https://ryantokmanmokmtm.github.io/post/new-anouncement/ rel=prev title="[Anouncement] All everything in the blog will be only in english from now on">
-[Anouncement] All everything in the blog will be only in english from now on
+<a href=https://ryantokmanmokmtm.github.io/post/chat-app-voice-chat/ rel=prev title="[開發者日記] 聊天通訊APP - RTC小更新">
+[開發者日記] 聊天通訊APP - RTC小更新
 <i class="fa fa-chevron-right"></i>
 </a>
 </div></div></footer></article></section></div></div><div class=sidebar-toggle>
@@ -188,17 +189,17 @@ GET /api/v1/sticker/:id -> To obtain a related sticker resources with a given id
 </p></div><nav class="site-state motion-element">
 <div class="site-state-item site-state-posts">
 <a href=/post/>
-<span class=site-state-item-count>32</span>
+<span class=site-state-item-count>30</span>
 <span class=site-state-item-name>日誌</span>
 </a>
 </div><div class="site-state-item site-state-categories">
 <a href=/categories/>
-<span class=site-state-item-count>31</span>
+<span class=site-state-item-count>29</span>
 <span class=site-state-item-name>分類</span>
 </a>
 </div><div class="site-state-item site-state-tags">
 <a href=/tags/>
-<span class=site-state-item-count>59 </span>
+<span class=site-state-item-count>58 </span>
 <span class=site-state-item-name>標籤</span>
 </a>
 </div></nav><div class="links-of-author motion-element">
@@ -286,5 +287,5 @@ Theme by - <a class=powered-link href=//github.com/elkan1788/hugo-theme-next tar
 <script>(function(){var e=document.createElement("script"),t,n=window.location.protocol.split(":")[0];n==="https"?e.src="https://zz.bdstatic.com/linksubmit/push.js":e.src="http://push.zhanzhang.baidu.com/push.js",t=document.getElementsByTagName("script")[0],t.parentNode.insertBefore(e,t)})()</script>
 <script src=/js/l2d.js></script>
 <script src=/js/pio.js></script>
-<script>var pio=new Paul_Pio({mode:"draggable",hidden:!0,content:{welcome:["歡迎來到Jackson的小宇宙！","今天天氣不錯，一起来玩吧！","博主有空的話，會寫一寫博客記錄一下!"],custom:[{selector:".home-social a:last-child",text:"在這里可以了解博主的日常噢~"},{selector:".post-item a",type:"read"},{selector:".post-content a, .page-content a",type:"link"}]},model:["/model/umaru/model.json","/model/HN/blanc_swimwear/model.json","/model/HN/nepgear_extra/model.json","/model/HN/noireswim/model.json","/model/HN/nepgearswim/model.json","/model/chino/model.json"],touch:["不可以這樣欺負我啦><"]})</script>
+<script>var pio=new Paul_Pio({mode:"draggable",hidden:!0,content:{welcome:["歡迎來到Jackson的小宇宙！","今天天氣不錯，一起来玩吧！","博主有空的話，會寫一寫博客記錄一下!"],custom:[{selector:".home-social a:last-child",text:"在這里可以了解博主的日常噢~"},{selector:".post-item a",type:"read"},{selector:".post-content a, .page-content a",type:"link"}]},model:["/model/umaru/model.json","/model/tororo/tororo.model.json","/model/HN/nepmaid/model.json","/model/HN/nepgearswim/model.json","/model/HN/neptune_santa/model.json","/model/HN/blanc_swimwear/model.json","/model/HN/noireswim/model.json"],touch:["不可以這樣欺負我啦><"]})</script>
 </body></html>

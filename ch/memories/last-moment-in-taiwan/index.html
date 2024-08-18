@@ -1,0 +1,803 @@
+<!DOCTYPE HTML>
+<html lang="zh-tw" dir="zh">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  <title> 🇹🇼倒數 - Jackson.tmm </title>
+  
+  <meta name="keywords" content="博客, 工程師, 程序員, 學習, 筆記, 技術, 分析, 後端, 生活">
+  
+  
+  <meta name="author" content="jackson.tmm">
+  
+  <meta property="og:title" content="🇹🇼倒數"/>
+  <meta property="og:site_name" content="Jackson.tmm">
+  <meta property="og:image" content="/images/favicon.png"> 
+  <meta name="title" content="🇹🇼倒數 - Jackson.tmm" />
+  
+  <meta name="description" content="歡迎來的Jackson.tmm的空間站。個人主要專注於Web開發，程序開發，以及學習上。">
+   
+  <link rel="shortcut icon" href="/images/favicon.png" />
+  <link rel="apple-touch-icon" href="/images/avatar.jpg" />
+  <link rel="apple-touch-icon-precomposed" href="/images/favicon.png" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  
+  <link href="//cdn.bootcdn.net/ajax/libs/imageviewer/0.1.0/viewer.min.css" rel="stylesheet"/>
+  
+  <link href="/css/main.css" rel="stylesheet" type="text/css" />
+  <link href="/css/syntax.css" rel="stylesheet" type="text/css" />    
+  
+  
+  
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js">
+  </script> <script>mermaid.initialize({ startOnLoad: true, securityLevel: 'loose'});</script>
+</head>
+
+<link href='/css/pio.css' rel='stylesheet' type='text/css'/>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-container">
+<div class="site-nav-toggle">
+  <div class="toggle" role="button" style="opacity: 1; top: 0px;">
+      <span class="toggle-line"></span>
+      <span class="toggle-line"></span>
+      <span class="toggle-line"></span>
+  </div>
+</div>
+<div class="site-meta ">
+  <div class="multi-lang-switch"> 
+    <i class="fa fa-fw fa-language" style="margin-right: 5px;"></i>
+    
+    
+    
+    
+        
+        
+            
+        
+            
+        
+                          
+              
+                 <a class="lang-link" id="zh-tw" href="#">中文</a>
+              
+               
+              <span class="lang-line"> / </span> 
+              
+            
+        
+    
+  </div>
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Jackson.tmm</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">每天都開開心心的生活</p>
+</div>
+
+<div class="site-nav-right">
+    <div class="toggle popup-trigger" style="opacity: 1; top: 0px;">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />Home
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/about.html" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />About
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/post" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />Posts
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/memories" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-star"></i> <br />Memories
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/leetcodes" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-code"></i> <br />Leetcodes 
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/project" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-tasks"></i> <br />Projects
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/achievement" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-trophy"></i> <br />achievement
+          </a>
+        </li>
+      
+      
+      
+        <li class="menu-item ">
+          <a href="/resources" rel="section" >
+              <i class="menu-item-icon fa fa-fw fa-file"></i> <br />resources
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> </a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon"><i class="fa fa-search"></i> </span>
+    <span class="popup-btn-close"><i class="fa fa-times-circle"></i></span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索關鍵字..." spellcheck="false" type="text" id="local-search-input" autocapitalize="none" autocorrect="off">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://localhost:1313/ch/memories/last-moment-in-taiwan/" itemprop="url">
+        🇹🇼倒數
+        </a>
+      </h1>
+      
+      <div class="post-meta">
+      <span class="post-time">
+<i class="fa fa-calendar-o fa-fw"></i>
+<span class="post-meta-item-text">時間：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2023-04-05">
+    2023-04-05
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  
+  <i class="fa fa-folder-o fa-fw"></i>
+  
+  <span class="post-meta-item-text">分類：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="/categories/taiwan" itemprop="url" rel="index" style="text-decoration: underline">
+        <span itemprop="name">taiwan</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+ | 
+<i class="fa fa-file-word-o fa-fw"></i>
+<span class="post-meta-item-text">字數：</span>
+<span class="leancloud-world-count">4023 字</span>
+</span>
+       <span>
+ | 
+<i class="fa fa-eye fa-fw"></i>
+<span class="post-meta-item-text">閱讀：</span>
+<span class="leancloud-view-count">9分鐘</span>
+</span>
+      <span id="/ch/memories/last-moment-in-taiwan/" class="leancloud_visitors" data-flag-title="🇹🇼倒數">
+ | 
+<i class="fa fa-binoculars fa-fw"></i>
+<span class="post-meta-item-text">閱讀次數：</span>
+<span class="leancloud-visitors-count"></span>
+</span>
+      </div>
+     
+    </header>
+  
+    <div class="post-body" itemprop="articleBody">
+    <p>在2023年1月的時候，因為已經快3年沒有回家了，所以勢必要回去一趟。所以在1月10號的時候買了回去的票。其實這次回去只要還是想看看香港的環境如何。在這個月裡面跟高中同學吃飯也了解到了許多資訊,開始考慮是否可以回來找工作，畢竟台灣找工作還是有一點難度，工作環境好像也沒有很優。除此之外，去年也有在考慮到澳洲讀研究生，如果在台灣工作可能很難達到這個目標，所以決定回來找工作，回來就只是為了存錢，沒有別的。</p>
+<p>哪為什麼是4月份才要離開呢？因為租房子那邊，如果要不繼續租的話，需要提前一個月告知。其實離開這個決定是在回來台灣的時候思考的，也就是2月10號。考慮了大概半個月，並下定決心。因此需要在多租一個月的時間，大概就是4月初的時候離開。在離開前，我想在最後的這段時間好好享受。嗚嗚嗚</p>
+<h3 id="2月份">2月份</h3>
+<p>寒假過後，2月10日回來，在這之前已經決定要去台南找莉淇姐姐，雖然只去1天一夜。那就回來當天就收拾好東西，另外一天早上8點鐘就出發！根據網絡上的數據，我本來以為搭客運到台南只要4個多小時，沒想到啊，最後花了快6個小時，嗚嗚嗚。到了台南後，莉淇姐姐就開機車來載我（第一次被女生載&gt;&lt;, 沒想到載我的會是莉淇姐姐!）。而這天的行程就是去KTV唱歌，晚上就去喝牛肉湯，順便到附近走走。吃完飯過後，就先去青年旅社check in。但是過後不知道能幹嘛，哈哈哈。最後決定到附近的桌遊店玩！玩到了關店！開勳。<br>
+另外一天，中午就去吃了壽司，這也是我第一次在台灣吃壽司欸！不錯不錯！雖然等了一段時間吃吃得到，嗚嗚嗚。過後，因為的票是下午5點鐘的車，離5點還有一點時間，所以就跟莉淇姐姐找了個咖啡廳聊天～讚！到了差不多的時間，就載我去車站離開了！回程的時間也差不多快6個小時，幹！台南很棒，下次不去了，嗚嗚嗚。</p>
+<p><img alt="tainan" src="/images/tw/CC264750-E965-4592-B0ED-C7DD7CE07B29.JPEG"></p>
+<h3 id="3月份">3月份</h3>
+<p>而這個月開始也是我決定好要離開的最後一個月了，而這個月主要的行程就是約人見面和吃飯！這個月我約了很多人，我也去了好幾個地方。</p>
+<h4 id="跟朋友們吃飯室友同學學長們">跟朋友們吃飯,室友，同學，學長們</h4>
+<p>都是某人約我去的，我就順便去了，我壓根不知道會有這麽多人😏！
+<img alt="Event1" src="/images/tw/C2B9E56C-274F-4036-9E19-36925391EAF5.JPEG">
+<img alt="Event2" src="/images/tw/B5725FC7-21EC-4006-9B6D-1F470DED974A.JPEG"></p>
+<h4 id="跟ellie吃飯聊天的一天">跟Ellie吃飯聊天的一天</h4>
+<p>其實我們已經好久沒有講過話，上次認真講話已經是大一的時候的事了，當時我也只是問問他要不要一起出來吃飯(應該會被拒絕的吧？)，沒有想到她居然答應了，嗚嗚嗚🥹，好開心，居然還能約出來。我們就去了那個大稻埕吃晚餐，還被要求拍照了。在吃飯的時候，聊天聊了很多東西，還是很快樂的🥹，畢竟我已經很久沒跟她聊過天了。再晚飯後，我們就跑去了西門町，她說要玩玩看<code>拍貼機</code>。我那時候也很疑惑，<code>拍貼機</code>到底是個啥東西。到了以後才發現原來個照相的機器，而且還能自由拿各種道具，超好玩的。可惜的是<code>拍貼機</code>的機制計時太快了啦，下次得提前想好動作，嗚嗚嗚。這張照片真得很值得留念，非常感謝她願意跟我拍照和吃飯🥺。我們一定會再見的。
+<img alt="Event3" src="/images/tw/36AA20BE-2D8C-46B1-B3C8-AB4A0988DD93.JPEG"></p>
+<h4 id="跟妹吃飯聊天的一天">跟妹吃飯聊天的一天</h4>
+<p>嗚嗚嗚，事隔3年我們終於見面了。事情是這樣子的，妹原本是我的直屬，但是到後面就突然要轉學，就是要轉學了的前一刻才跟我說，她就這麽默默的離開了。而我們其實也相識不到半年，我記得第一次跟她見面是在新生座談會，當時害羞的樣子，好口愛，我還記得！然後一起在宿營玩(雖然我是宿營幹部)。在宿營的時候啊，我印象很深刻，那個時候正在進行一個活動，好像是夜教，她害怕不敢玩(好像有嚇到哭哭🥹？)，還怕到不敢一個上廁所，哈哈哈哈，超級可愛。然後，最後一個活動的時候，好像是丟水器，我第一個丟的就是她，哈哈哈哈，然後她反丟我一個，這應該是我們第一次互動！而我們第二次見面是我給她家書的那個晚上，我記得那個晚上我要回家把書拿回宿舍給她(有夠重)，還一起聊天，並沒有尬聊，這應該是我們熟悉的開始了吧！隨後，我們偶爾會互相買吃的，直到2020年的聖誕節，她居然送了我聖誕節禮物(第一次收到聖誕節禮物)。然而這是我直到這一次最後一次見她🥹。在2020年上半年，我因為疫情的關係被關在了香港沒有機會見到她，直到我大二暑假，升大三的那一年，本來以為隔離完的新學期可以再次見到她的時候，她突然發訊息跟我說要轉學了，嗚嗚嗚。就這樣我們只大概只相處了半年左右。<br>
+我以為沒有機會見面的了，就算見面了也沒有很多話題，就很尷尬的那種情況(雖然我們偶爾會再網路上聊天)。沒想到2023年3月25日這天，居然真有機會再次跟她見面！哪就在離開前見一下她。見到她的時候。她變了好多變得很漂亮欸(´∀`)，我差點沒認出來捏！讓我很意外的是我們居然還有話題可以聊，還聊了很久，從7:30聊到9:00，我飯都還沒吃超過一半，哈哈哈。沒有想到啊，事隔3年，我們的感情還在欸！！！！真的超級意外的！她還請我吃飯(欸？😳我也沒有想到，很貴捏)。吃完以後，我們還在邊走邊聊，有鏡子的地方就拍一下照(笑鼠)。最後我們就去找<code>拍貼機</code>繼續拍照！經過上次的經驗，這次學乖了，先想動作，最後發現還是不夠快，嗚嗚嗚。雖然沒有拍很好，但是沒有關係就留個紀念！在離開前，我把在迪士尼買的禮物送給她，沒想到她這麽開勳🥰！嘿嘿嘿，她開心就好！下次回來台灣我可能真的是為了跟她見面欸，跟她一起有種說不出來的感覺🥺🥺。
+<img alt="Event4" src="/images/tw/4697947C-0189-4BE3-B86D-83C55F5FEC23.JPEG"></p>
+<p>其他合影<br>
+<img alt="Event4-1" src="/images/tw/45F77609-C696-47D8-8EF4-A42112FE46FE.JPEG">
+<img alt="Event4-2" src="/images/tw/E8121859-E7A4-4996-87C0-09AA72C626B2.JPEG">
+<img alt="Event4-2" src="/images/tw/71210194-E7B8-44F0-8441-BCD7D5B7EC1F.JPEG">
+<img alt="Event4-3" src="/images/tw/0748E3D1-38E1-4EDC-A36A-0FFAB8745CCF.JPEG"></p>
+<h4 id="跟清大直屬吃飯的一天">跟清大直屬吃飯的一天</h4>
+<p>在離開之前想見見我的直屬，畢竟跟他已經快2年沒見了，為什麼是2年呢？因為我上次見到她是大三上，大三下又因為遠距，她就這樣默默的畢業了。而這次前往清大，也是第一次去新竹，完全不知道怎麼去，哈哈哈。就搭客運就對了吧！！果然客運直接到清大門口。到了清大門口怎麼說呢，就很偏僻，嗯。確實很偏僻，哈哈哈。因為離約定的時間還有很久，所以打算在清大走走。不走不知道，一走嚇一跳啊，大到這樣，不看地圖肯定會迷路！我害怕迷路只能繞著外圍走。在清大裡面有很多貓咪突然出沒，好可愛欸&gt;&lt;!。我還偷偷跑去摸了一下！然後祂就跑走了，哭哭。如果有機會，我一定要去北京清華看看做個比較！</p>
+<p>到了約定的時間，我們可算見面，我直屬事隔2年果然沒怎麼變，還是那個樣子😂。吃飯的時候還是聊著有的沒的，本來想說這頓要AA的，結果他說不要，又是請我吃飯的節奏。他還給了我一點零食，好久沒有收到過直屬給的禮物了，好感動🥹。對上一次收到好像是大二的時候！這次因為時間有限，不能待太久，要搭車回台北，大概在18:40分的時候離開了！希望一次還有機會再約！
+<img alt="Event5" src="/images/tw/DE8DF3BC-1C58-4A9B-AF67-CDE02215AD31.JPEG"></p>
+<h4 id="去張美啊嘛農場">去張美啊嘛農場</h4>
+<p>這裡是我一直很想去的地方，但是她在宜蘭，但是宜蘭我也才去過一次，還是有人載我去的。這次我只能靠自己，就上網找資料，就按照查到的路線走。先到台北轉運站搭1917客運到羅東轉運站，然後在轉運站轉公車1794到富興站。然而那天天氣不好，我到了的時候突然下起了大雨，可惡。說實話，這裡真的很鄉下沒什麼車，也都是山和田。然後，我便進去農場跟動物們玩！一開始看到了羊駝和鹿，羊駝的毛真好摸，軟軟的～還有隻臉黑到看到長什麼樣子，好好笑！在這裡我們可以喂他們草吃，這裡有3個關卡，我在第二關就已經把草喂光光了。本來以為後面不能再拿，沒想到只要打卡就可以拿！我在第三關那邊待比較久，因為這裡很多袋鼠，鹿和水豚。有一隻鹿看到我手上有吃的就一隻跟著我走，超可愛&gt;&lt;。那邊還可以拿假的橘子🍊放到水豚的腦袋上，好好玩！</p>
+<p>本來打算要離開的時候，1794居然剛好在我旁邊路過！我就馬上跑去公車站看時間表，不看不知道一看嚇一跳，下一班要下午5點，現在3點多欸&hellip;哪沒有辦法了我只能沿著這條路往回走，順便享受這段幽靜的時段，就享受吧😎。大概走到了5點，就在那個站等(其實已經走了7-8個站了)，等了大概半個小時，終於有車來了！讚！差點以為回不了家，嗚嗚嗚。
+<img alt="Event6" src="/images/tw/4D1554D4-200D-49E1-8DF0-8590EA465EE5.JPEG"></p>
+<h3 id="4月份離開前">4月份離開前</h3>
+<p>因為4月1日晚上就要離開，想自己一個默默回去，就好好享受的。所以呢，在3月31號當天，早上就先跟政大的同學吃了個午餐，然後跟某人跑去動物園走最後一次。晚上的時候本來就打算在信義商區，聽聽別人唱歌，吃個晚餐就回去洗澡睡覺了。結果咧，但我回去的途中，Ellie問我還在不在那邊，而他們剛好要去那邊，我就想反正都最後一天，就陪他們瘋一下，今天打算不睡覺了！那我就坐最後一班的捷運再去到市政府跟他們去夜店Ruff(這也是我第一次去夜店，畢竟我是社恐)。就體驗了一次夜店，也是第一次喝酒（還是很難喝🤮，哈哈哈）。大家在夜店都在那邊要搖(有夠擠)，而我咧，就在那邊聽說唱flow和數拍子，笑鼠😆。我們在夜店大概到凌晨3點半左右就離開了，離開的時候剛好在下雨，然後我們就去買吃的，吃飯後就回家了🥹🥹🥹，居然在最後一天體驗了一波。</p>
+<p>而早上跟會長約了吃永和豆漿(在大二的時候本來就很想吃，結果到最後一天才要吃，哈哈哈)，所以只能睡一下下，基本上等於沒睡！吃早餐的時候，看到菜單上有一個鹹豆漿，就很好奇，所以點了一個，結果不太好吃，哈哈哈🙃。</p>
+<p>因為今天要退房，所以不能吃太久，只能吃一小時左右，就要回去整理行李出發去機場😞。其實還是有點不捨得😞。但還是得要離開QQ。但是在離開前，我還是想要再喝一次<strong>五十嵐的一號 無糖去冰</strong>！超好喝。在去機場前買了一杯去機場邊吃飯邊喝，很讚欸！🥹</p>
+<p>因為今天機場特別的多人，所以花了一點時間check in，最後一步就是等我妹來(他剛好在桃園)，我真的沒有想到第一次在🇹🇼送我機的會是她😍，也沒有想到還能再見他一次🥹🥹。但是人比較多，只能跟妹告別一下下就得離開了，分別真的有夠傷心🥺。</p>
+<p><img alt="Event5" src="/images/tw/50425C6E-1786-428B-AAE4-A5AD464530E1.JPEG"></p>
+<p>跟妹坐最後的告別🥹🥹，謝謝她來送我，已經哭了，嗚嗚嗚。</p>
+<p><video src="/videos/tw/IMG_2758.MOV" controls="controls" width="500" height="300"></video>
+<video src="/videos/tw/IMG_2759.MOV" controls="controls" width="500" height="300"></video></p>
+<h3 id="感言">感言</h3>
+<p>雖然我最後決定要離開台灣，我也很感謝各位願意跟我出來玩,吃飯和聊天，沒有嫌棄我，嗚嗚嗚，也感謝當初的自己有選擇來台灣讀書，才能有機會認識到他們🥹🥹🥹。在這二個月裡，看似好像都在玩，但確實是在玩，哈哈哈。雖然我來台灣已經有快5年的時候，而這段時間內，我真的沒有怎麼去玩過，想趁著還有時間來段玩耍的時間🥹🥹🥹。還好我有跟各位約和到處玩，真沒有什麼遺憾了！感謝各位出現在了我的生命裡，如果沒有了你們，就不會有現在的我🥹🥹。我們有緣再會！</p>
+
+    </div>
+          
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+    
+    <a href="/tags/taiwan" rel="tag" title="taiwan">#taiwan#</a>
+    
+</div>
+
+
+
+     
+     <div class="post-nav">
+<div class="article-copyright">
+    
+    <div class="article-copyright-info">
+        <p> 
+            <span>文章聲明：</span>🇹🇼倒數
+        </p>
+        <p> 
+            <span>文章連接：</span>http://localhost:1313/ch/memories/last-moment-in-taiwan/
+        </p>
+        <p> 
+            <span>作者：</span>jackson.tmm
+        </p>
+        <p> 
+            <span>文章聲明： </span>本博客文章除特別聲明外，均采用 <a href='https://creativecommons.org/licenses/by-nc-sa/3.0/' target='_blank' style='text-decoration: underline;'>CC BY-NC-SA 3.0</a>許可協議，轉載請注明出處！
+        </p>
+    </div>
+</div>
+<div class="clear"></div>
+</div>
+     
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="http://localhost:1313/ch/post/chat-app-init/" rel="next" title="[開發日記] 聊天通訊APP(一) - 序章">
+        <i class="fa fa-chevron-left"></i> [開發日記] 聊天通訊APP(一) - 序章
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="http://localhost:1313/ch/post/note-linkedlist/" rel="prev" title="[筆記] Linked List 資料結構">
+        [筆記] Linked List 資料結構 
+        <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>  
+     
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="/images/avatar.jpg"
+        alt="jackson.tmm" />
+    <p class="site-author-name" itemprop="name">jackson.tmm</p>
+    <p class="site-description motion-element" itemprop="description"> 
+      
+        尋找人生的意義
+      
+    </p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="/post/">
+        <span class="site-state-item-count">40</span>
+        <span class="site-state-item-name">日誌</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="/categories/">      
+         
+        <span class="site-state-item-count">34</span>
+        
+        <span class="site-state-item-name">分類</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="/tags/">
+         
+        <span class="site-state-item-count">62 </span>
+        
+        <span class="site-state-item-name">標籤</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/RyanTokManMokMTM" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="https://www.facebook.com/karot.ka.7505/" target="_blank" title="Facebook">
+            <i class="fa fa-fw fa-facebook"></i>
+            Facebook
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="https://www.instagram.com/tm_m.0418/" target="_blank" title="Instagram">
+            <i class="fa fa-fw fa-instagram"></i>
+            Instagram
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/jackson-moktokman/" target="_blank" title="Linkedin">
+            <i class="fa fa-fw fa-linkedin"></i>
+            Linkedin
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      
+    <div class="tagcloud-of-blogroll motion-element tagcloud-of-blogroll-inline">
+    <div class="tagcloud-of-blogroll-title">
+        <i class="fa fa-fw fa-tags"></i>
+        標籤雲
+    </div>
+    <ul class="tagcloud-of-blogroll-list">
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/array">Array</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/side-project">Side project</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/string">String</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/binary-tree">Binary tree</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/dynamic-programming">Dynamic programming</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/recursion">Recursion</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/learning">Learning</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/recursive">Recursive</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/stack">Stack</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/creational">Creational</a>
+        </li>
+        
+    </ul>
+    </div>
+
+
+      
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span class="copyright-year">  
+    &copy; 2022 - 2024
+  </span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="copyright-author">Jackson.tmm</span>
+</div>
+<div class="powered-info">
+  <span class="powered-by">
+    Powered by - <a class="powered-link" href="//gohugo.io" target="_blank" title="hugo" >Hugo v0.125.2</a>
+  </span>
+  <span class="separator-line">/</span>
+  <span class="theme-info">
+    Theme by - <a class="powered-link" href="//github.com/elkan1788/hugo-theme-next" target="_blank"> NexT
+    </a>
+  </span>
+</div>
+<div class="vistor-info">
+
+
+</div>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.0.min.js"></script>
+<div class="pio-container right">
+  <div class="pio-action"></div>
+  <canvas id="pio" width="200" height="400"></canvas>
+</div>
+
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="/js/search.js"></script>
+<script type="text/javascript" src="/js/affix.js"></script>
+<script type="text/javascript" src="/js/scrollspy.js"></script> 
+
+<script type="text/javascript">
+
+  function detectIE() {
+    var ua = window.navigator.userAgent;
+
+    var msie = ua.indexOf('MSIE ');
+    var trident = ua.indexOf('Trident/');
+    var edge = ua.indexOf('Edge/');
+
+    if (msie>0 || trident>0 || edge>0) {
+      return -1;
+    }
+
+    return 1;
+  }
+
+
+  function getCntViewHeight() {
+    var docHeight = $('#content').height(),
+        winHeight = $(window).height(),
+        cntViewHeight = (docHeight > winHeight) ? (docHeight - winHeight) : ($(document).height() - winHeight);
+    return cntViewHeight;
+  }
+
+  function getScrollbarWidth() {
+    var $div = $('<div />').addClass('scrollbar-measure').prependTo('body');
+    var div = $div[0];
+    var scrollbarWidth = div.offsetWidth - div.clientWidth;
+
+    $div.remove();
+
+    return scrollbarWidth;
+  }
+
+  function registerBackTop() {
+    var THRESHOLD = 50;
+    var $top = $('.back-to-top');
+
+    $(window).on('scroll', function () {
+      $top.toggleClass('back-to-top-on', window.pageYOffset > THRESHOLD);
+
+      var scrollTop = $(window).scrollTop();
+      var cntViewHeight = getCntViewHeight();
+      var scrollPercent = (scrollTop) / (cntViewHeight);
+      var scrollPercentRounded = Math.round(scrollPercent*100);
+      var scrollPercentMaxed = (scrollPercentRounded > 100) ? 100 : scrollPercentRounded;
+      $('#scrollpercent>span').html(scrollPercentMaxed);
+    });
+
+    $top.on('click', function () {
+      $("html,body").animate({
+                 scrollTop: 0,
+                 screenLeft: 0,
+                 }, 800);
+    });
+  }
+
+  function initScrollSpy () {
+    var tocSelector = '.post-toc';
+    var $tocElement = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocElement
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+      })
+      .on('clear.bs.scrollspy', removeCurrentActiveClass);
+
+    $('body').scrollspy({ target: tocSelector });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+  }
+
+  function initAffix () {
+    var headerHeight = $('.header-inner').height();
+    var footerOffset = parseInt($('.main').css('padding-bottom'), 10);
+    var sidebarTop = headerHeight + 10;
+
+    $('.sidebar-inner').affix({
+      offset: {
+        top: sidebarTop,
+        bottom: footerOffset
+      }
+    });
+
+    $(document)
+      .on('affixed.bs.affix', function () {
+        updateTOCHeight(document.body.clientHeight - 100);
+      });
+  }
+
+  function initTOCDimension () {
+    var updateTOCHeightTimer;
+
+    $(window).on('resize', function () {
+      updateTOCHeightTimer && clearTimeout(updateTOCHeightTimer);
+
+      updateTOCHeightTimer = setTimeout(function () {
+        var tocWrapperHeight = document.body.clientHeight - 100;
+
+        updateTOCHeight(tocWrapperHeight);
+      }, 0);
+    });
+
+    
+    updateTOCHeight(document.body.clientHeight - 100);
+
+    
+    var scrollbarWidth = getScrollbarWidth();
+    $('.post-toc').css('width', 'calc(100% + ' + scrollbarWidth + 'px)');
+  }
+
+  function updateTOCHeight (height) {
+    height = height || 'auto';
+    $('.post-toc').css('max-height', height);
+  }
+
+$(function() {
+
+  var sidebarTop = $('.header-inner').height() + 10;
+  $('#sidebar').css({ 'margin-top': sidebarTop }).show(); 
+
+  
+  var sidebarMt = parseInt($('#sidebar').css('margin-top'));
+  var sidebarInHeight = parseInt($('.sidebar-inner').css('height'));
+  var sideHeight = sidebarMt + sidebarInHeight;
+  var contentHeight = $('.content-wrap').height();
+
+  if (contentHeight < sideHeight) {
+    $('.content-wrap').css('min-height', sideHeight);
+  }
+  
+  
+  $('.site-nav-toggle').on('click', function () {
+    var $siteNav = $('.site-nav');
+    var $toggleLine = $('.toggle');
+    var ON_CLASS_NAME = 'site-nav-on';
+    var CLOSE_CLASS_NAME = 'toggle-close';
+    var isSiteNavOn = $siteNav.hasClass(ON_CLASS_NAME);
+    var animateAction = isSiteNavOn ? 'slideUp' : 'slideDown';
+    var animateCallback = isSiteNavOn ? 'removeClass' : 'addClass';
+
+    $siteNav.stop()[animateAction]('normal', function () {
+      $siteNav[animateCallback](ON_CLASS_NAME);
+      $toggleLine[animateCallback](CLOSE_CLASS_NAME);
+    });
+
+  });
+
+  registerBackTop();
+  initScrollSpy();
+  initAffix();
+  initTOCDimension();
+
+  $('.sidebar-nav-toc').click(function(){
+    $(this).addClass('sidebar-nav-active');
+    $(this).next().removeClass('sidebar-nav-active');      
+    $('.'+$(this).next().attr('data-target')).toggle(500);
+    $('.'+$(this).attr('data-target')).toggle(500);
+  });
+
+  $('.sidebar-nav-overview').click(function(){
+    $(this).addClass('sidebar-nav-active');
+    $(this).prev().removeClass('sidebar-nav-active');      
+    $('.'+$(this).prev().attr('data-target')).toggle(500);
+    $('.'+$(this).attr('data-target')).toggle(500);
+  });
+});  
+
+</script>
+
+
+
+
+
+<script src="//cdn.bootcdn.net/ajax/libs/imageviewer/0.1.0/viewer.min.js"></script>
+<script type="text/javascript">
+$(function() {
+  $('.post-body').viewer(); 
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+
+
+<script src='/js/l2d.js'></script>
+
+<script src='/js/pio.js'></script>
+
+<script>
+  var pio = new Paul_Pio({
+      "mode": "draggable",
+      "hidden": true,
+      "content": {
+          "welcome": ["歡迎來到Jackson的小宇宙！", "今天天氣不錯，一起来玩吧！", "博主有空的話，會寫一寫博客記錄一下!"],
+          "custom": [
+              
+              {"selector": ".home-social a:last-child", "text": "在這里可以了解博主的日常噢~"},
+              {"selector": ".post-item a", "type": "read"},
+              {"selector": ".post-content a, .page-content a", "type": "link"}
+          ]
+      },
+      
+      "model": [
+      "/model/umaru/model.json",
+        "/model/HN/blanc_normal/model.json",
+        "/model/HN/blanc_classic/model.json",
+        "/model/chino/model.json"],
+        touch: ["不可以這樣欺負我啦><"]
+  })
+
+</script>
+</body>
+</html>

@@ -9,7 +9,7 @@
   <link href='/css/pio.css' rel='stylesheet' type='text/css'/>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
   
-
+  <div id="aplayer"></div>
   <title> [Development Diary] Real Time Communication APP(IV) - Final - Jackson.tmm </title>
   
   <meta name="keywords" content="Blogger, Enginner, Programmer, Learning, Note, Tech, Backend, Life">
@@ -42,6 +42,7 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
   <div class="container one-collumn sidebar-position-left page-home  ">
+    <div id="aplayer"></div>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"> <div class="site-brand-container">
 <div class="site-nav-toggle">
@@ -848,7 +849,6 @@ In this app, I used Redis to implement this solution because when users receive 
   <div class="pio-action"></div>
   <canvas id="pio" width="300" height="500" style="margin: 100;"></canvas>
 </div>
-<div id="aplayer"></div>
 
 
 
@@ -1195,12 +1195,7 @@ $(function() {
         url: '/music/src/music1.mp3',
         cover: '/images/music/thum/music1.jpg',
     },
-    {
-        name: '赤伶『台下人走過不見舊顏色，台上人唱著心碎離別歌。』',
-        artist: '李玉剛',
-        url: '/music/src/music2.mp3',
-        cover: '/images/music/thum/music2.jpg'
-    },]
+    ]
 });
 
 </script>

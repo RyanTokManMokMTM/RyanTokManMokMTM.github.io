@@ -9,7 +9,7 @@
   <link href='/css/pio.css' rel='stylesheet' type='text/css'/>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
   
-
+  <div id="aplayer"></div>
   <title> 🇹🇼倒數 - Jackson.tmm </title>
   
   <meta name="keywords" content="博客, 工程師, 程序員, 學習, 筆記, 技術, 分析, 後端, 生活">
@@ -42,6 +42,7 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
   <div class="container one-collumn sidebar-position-left page-home  ">
+    <div id="aplayer"></div>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"> <div class="site-brand-container">
 <div class="site-nav-toggle">
@@ -589,7 +590,6 @@
   <div class="pio-action"></div>
   <canvas id="pio" width="300" height="500" style="margin: 100;"></canvas>
 </div>
-<div id="aplayer"></div>
 
 
 
@@ -936,12 +936,7 @@ $(function() {
         url: '/music/src/music1.mp3',
         cover: '/images/music/thum/music1.jpg',
     },
-    {
-        name: '赤伶『台下人走過不見舊顏色，台上人唱著心碎離別歌。』',
-        artist: '李玉剛',
-        url: '/music/src/music2.mp3',
-        cover: '/images/music/thum/music2.jpg'
-    },]
+    ]
 });
 
 </script>

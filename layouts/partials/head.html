@@ -10,7 +10,7 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
   <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
-
+  <div id="aplayer"></div>
   <title>{{if .IsHome }} {{ .Site.Title}} {{ else }} {{ .Title }} - {{ .Site.Title }} {{ end }}</title>
   {{ if .Keywords }}
   <meta name="keywords" content="{{ range .Keywords }}{{ . }},{{ end }}">

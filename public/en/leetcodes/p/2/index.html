@@ -723,7 +723,7 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.0.min.js"></script>
 <div class="pio-container right">
   <div class="pio-action"></div>
-  <canvas id="pio" width="250" height="250"></canvas>
+  <canvas id="pio" width="300" height="500"></canvas>
 </div>
 
 
@@ -948,32 +948,7 @@ $(function() {
 
 <script src='/js/pio.js'></script>
 
-<script>
-  var pio = new Paul_Pio({
-      "mode": "draggable",
-      "hidden": true,
-      "content": {
-          "welcome": ["歡迎來到Jackson的小宇宙！", "今天天氣不錯，一起来玩吧！", "博主有空的話，會寫一寫博客記錄一下!"],
-          "custom": [
-              
-              {"selector": ".home-social a:last-child", "text": "在這里可以了解博主的日常噢~"},
-              {"selector": ".post-item a", "type": "read"},
-              {"selector": ".post-content a, .page-content a", "type": "link"}
-          ]
-      },
-      
-      "model": [
-        "/model/umaru/model.json",
-        "/model/tororo/tororo.model.json",
-        "/model/HN/nepmaid/model.json",
-        "/model/HN/nepgearswim/model.json",
-        "/model/HN/neptune_santa/model.json",
-        "/model/HN/blanc_swimwear/model.json",
-        "/model/HN/noireswim/model.json",
-      ],
-        touch: ["不可以這樣欺負我啦><"]
-  })
-
 </script>
+
 </body>
 </html>

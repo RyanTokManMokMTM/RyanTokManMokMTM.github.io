@@ -1,5 +1,5 @@
 ---
-title: "[[開發者日記] 聊天通訊APP - 限時動態更新(II)"
+title: "[開發者日記] 聊天通訊APP - 限時動態更新(II)"
 date: 2023-09-10T12:49:44+08:00
 draft: false
 categories:

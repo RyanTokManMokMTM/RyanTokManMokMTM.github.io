@@ -4,6 +4,9 @@
 <meta http-equiv=x-ua-compatible content="IE=edge,chrome=1">
 <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
 <meta http-equiv=content-security-policy content="upgrade-insecure-requests">
+<link rel=stylesheet href=/css/APlayer.min.css>
+<link href=/css/pio.css rel=stylesheet type=text/css>
+<script type=text/javascript src=https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js></script>
 <title> english - Jackson.tmm </title><meta name=keywords content="Blogger,Enginner,Programmer,Learning,Note,Tech,Backend,Life">
 <meta name=author content="jackson.tmm">
 <meta property="og:title" content="english">
@@ -18,10 +21,9 @@
 <link href=/css/main.css rel=stylesheet type=text/css>
 <link href=/css/syntax.css rel=stylesheet type=text/css>
 <script src=https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js></script> <script>mermaid.initialize({startOnLoad:!0,securityLevel:"loose"})</script>
-</head><link href=/css/pio.css rel=stylesheet type=text/css>
-<body itemscope itemtype=http://schema.org/WebPage lang=zh-hans>
+</head><body itemscope itemtype=http://schema.org/WebPage lang=zh-hans>
 <div class="container one-collumn sidebar-position-left">
-<div class=headband></div><header id=header class=header itemscope itemtype=http://schema.org/WPHeader>
+<header id=header class=header itemscope itemtype=http://schema.org/WPHeader>
 <div class=header-inner> <div class=site-brand-container>
 <div class=site-nav-toggle>
 <div class=toggle role=button style=opacity:1;top:0>
@@ -43,7 +45,7 @@
 </div><p class=site-subtitle>Having a happy life every single day</p></div><div class=site-nav-right>
 <div class="toggle popup-trigger" style=opacity:1;top:0>
 <i class="fa fa-search fa-fw fa-lg"></i>
-</div></div></div><nav class=site-nav>
+</div></div></div><nav class=site-nav id=container>
 <ul id=menu class=menu>
 <li class=menu-item>
 <a href=/en rel=section>
@@ -218,8 +220,8 @@ Theme by - <a class=powered-link href=//github.com/elkan1788/hugo-theme-next tar
 </div><script type=text/javascript src=https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js></script>
 <script type=text/javascript src=https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.0.min.js></script>
 <div class="pio-container right">
-<div class=pio-action></div><canvas id=pio width=300 height=500></canvas>
-</div></div></footer><div class=back-to-top>
+<div class=pio-action></div><canvas id=pio width=300 height=500 style=margin:100></canvas>
+</div><div id=aplayer></div></div></footer><div class=back-to-top>
 <i class="fa fa-arrow-up"></i>
 <span id=scrollpercent><span>0</span>%</span>
 </div></div><script type=text/javascript src=https://code.jquery.com/jquery-2.2.4.min.js></script>
@@ -230,5 +232,8 @@ Theme by - <a class=powered-link href=//github.com/elkan1788/hugo-theme-next tar
 <script>(function(){var e=document.createElement("script"),t,n=window.location.protocol.split(":")[0];n==="https"?e.src="https://zz.bdstatic.com/linksubmit/push.js":e.src="http://push.zhanzhang.baidu.com/push.js",t=document.getElementsByTagName("script")[0],t.parentNode.insertBefore(e,t)})()</script>
 <script src=/js/l2d.js></script>
 <script src=/js/pio.js></script>
+<script src=/js/APlayer.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/1.9.6/jquery.pjax.min.js></script>
+<script>const ap=new APlayer({container:document.getElementById("aplayer"),fixed:!0,autoplay:!1,theme:"#b7daff",loop:"all",order:"list",preload:"auto",volume:.7,mutex:!0,listFolded:!1,listMaxHeight:"200px",lrcType:0,audio:[{name:"グランドエスケープ",artist:"三浦透子",url:"/music/src/music1.mp3",cover:"/images/music/thum/music1.jpg"}]})</script>
 <script>var pio=new Paul_Pio({mode:"draggable",hidden:!0,content:{welcome:["歡迎來到Jackson的小宇宙！","今天天氣不錯，一起来玩吧！","博主有空的話，會寫一寫博客記錄一下!"],custom:[{selector:".home-social a:last-child",text:"在這里可以了解博主的日常噢~"},{selector:".post-item a",type:"read"},{selector:".post-content a, .page-content a",type:"link"}]},model:["/model/umaru/model.json","/model/tororo/tororo.model.json","/model/HN/nepmaid/model.json","/model/HN/nepgearswim/model.json","/model/HN/neptune_santa/model.json","/model/other/rem/model.json","/model/other/mei/model.json","/model/other/liang/2.json","/model/HN/noir_santa/model.json","/model/HN/noireswim/model.json","/model/other/blanc_normal/index.json","/model/other/88type_1809/normal/model.json","/model/other/88type_1809/destroy/model.json","/model/other/dsr50_1801/normal/model.json","/model/other/dsr50_1801/destroy/model.json","/model/other/g36c_1202/normal/model.json","/model/other/g36c_1202/destroy/model.json","/model/other/kp31_310/normal/model.json","/model/other/kp31_310/destroy/model.json","/model/other/kp31_1103/normal/model.json","/model/other/kp31_1103/destroy/model.json"],touch:["不可以這樣欺負我啦><"]})</script>
 </body></html>

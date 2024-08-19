@@ -362,96 +362,6 @@
                 href="http://localhost:1313/post/chat-app-story-alignment-updated/"
                 />
   </url><url>
-    <loc>http://localhost:1313/categories/job-diary/</loc>
-    <lastmod>2023-06-02T22:40:55+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/categories/job-diary/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="http://localhost:1313/categories/job-diary/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/post/my-first-full-time-week1/</loc>
-    <lastmod>2023-06-02T22:40:55+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/post/my-first-full-time-week1/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="http://localhost:1313/post/my-first-full-time-week1/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/post/Google-Cybersecurity-Professional-Certificate-course1-w2/</loc>
-    <lastmod>2023-05-27T13:48:22+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/post/Google-Cybersecurity-Professional-Certificate-course1-w2/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="http://localhost:1313/post/Google-Cybersecurity-Professional-Certificate-course1-w2/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/categories/course/</loc>
-    <lastmod>2023-05-27T13:48:22+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/categories/course/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="http://localhost:1313/categories/course/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/categories/coursera/</loc>
-    <lastmod>2023-05-27T13:48:22+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/categories/coursera/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="http://localhost:1313/categories/coursera/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/tags/Google-Cybersecurity-Professional-Certificate/</loc>
-    <lastmod>2023-05-27T13:48:22+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/tags/Google-Cybersecurity-Professional-Certificate/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="http://localhost:1313/tags/Google-Cybersecurity-Professional-Certificate/"
-                />
-  </url><url>
     <loc>http://localhost:1313/post/chat-app-sticker-updated/</loc>
     <lastmod>2023-05-24T21:32:47+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -541,21 +451,6 @@
                 hreflang="zh-tw"
                 href="http://localhost:1313/tags/two-pointer/"
                 />
-  </url><url>
-    <loc>http://localhost:1313/post/new-anouncement/</loc>
-    <lastmod>2023-05-18T12:18:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/tags/anouncement/</loc>
-    <lastmod>2023-05-18T12:18:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/categories/anouncement/</loc>
-    <lastmod>2023-05-18T12:18:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>http://localhost:1313/project/chat-app/</loc>
     <lastmod>2023-05-15T13:49:17+08:00</lastmod>

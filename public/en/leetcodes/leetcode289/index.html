@@ -388,6 +388,18 @@
     </div>
 </div>  
      
+
+
+
+
+<div id="wcomments"></div>
+
+
+
+
+
+
+
     </footer>
   </article>
 </section>
@@ -527,6 +539,46 @@
             <a href="/en/tags/jp">Jp</a>
         </li>
         
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/priority-queue">Priority queue</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/app-dev">App dev</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/dfs">Dfs</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/dp">Dp</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/hash-map">Hash map</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/heap">Heap</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/ios-app">Ios app</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/map">Map</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/two-pointer">Two pointer</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/en/tags/2023">2023rd</a>
+        </li>
+        
     </ul>
     </div>
 
@@ -568,7 +620,7 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.0.min.js"></script>
 <div class="pio-container right">
   <div class="pio-action"></div>
-  <canvas id="pio" width="200" height="400"></canvas>
+  <canvas id="pio" width="250" height="250"></canvas>
 </div>
 
 
@@ -781,6 +833,80 @@ $(function() {
 
 
 
+<script type="text/javascript">
+  
+  var locale = {}
+  if("en" == 'zh-tw'){
+    locale = {
+      optional:"可選", 
+      nick: '名字',
+      mail: '郵箱',
+      mailError: '郵箱錯誤',
+      link: '網站',
+      placeholder: '歡迎評論',
+      sofa: '留下你寶貴的留言',
+      submit: '提交',
+      reply: '回覆',
+      cancelReply: '取消回覆',
+      comment: '評論',
+      more: '更多...',
+      preview: '預覽',
+      emoji: '表情',
+      expand: '顯示更多...',
+      seconds: '秒前',
+      minutes: '分鐘前',
+      hours: '小時前',
+      days: '天前',
+      now: '剛剛',
+      uploading: '正在上傳',
+      login: '登入',
+      logout: '登出',
+      admin: '博主',
+      word: '字',
+      wordHint: '評論字數應在 $0 到 $1 子之間！\n当前字數：$2',
+    };
+  
+  }
+
+  $(function(){
+    if (detectIE()>0) {
+      $.getScript(document.location.protocol+'//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js', function(){
+         new Waline({
+          el: '#wcomments', 
+          visitor: true, 
+          emoji: [
+            'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw-emoji'
+          ],
+          avatar:'monsterid', 
+          avatarCDN:'https://sdn.geekzu.org/avatar/', 
+          avatarForce:!1, 
+          wordLimit: '5000', 
+          placeholder: ' Just do what you want leave here, and don\u0027t forget give your email to make exchange. ^_^ ', 
+          requiredFields: ['nick'], 
+          serverURL: "https:\/\/blogger-chat-server.vercel.app\/", 
+          lang: "en",
+          highlighter: (code, lang) => {
+            if (!window.Prism.languages[lang]) {
+              window.Prism.plugins.autoloader.loadLanguages(lang);
+            }
+
+            return window.Prism.highlight(
+              code,
+              window.Prism.languages[lang] || window.Prism.languages.text,
+              lang,
+            );
+          },
+          locale
+        });
+      });      
+    } else {
+      $('#wcomments').html('Sorry, Waline plugin doesn\u0027t support IE or Edge, Please swithc to Chrome browser.');
+    }
+  });
+</script>
+
+
+
 
 
 
@@ -836,11 +962,13 @@ $(function() {
       
       "model": [
         "/model/umaru/model.json",
-        "/model/HN/blanc_swimwear/model.json",
-        "/model/HN/nepgear_extra/model.json",
-        "/model/HN/noireswim/model.json",
+        "/model/tororo/tororo.model.json",
+        "/model/HN/nepmaid/model.json",
         "/model/HN/nepgearswim/model.json",
-        "/model/chino/model.json"],
+        "/model/HN/neptune_santa/model.json",
+        "/model/HN/blanc_swimwear/model.json",
+        "/model/HN/noireswim/model.json",
+      ],
         touch: ["不可以這樣欺負我啦><"]
   })
 

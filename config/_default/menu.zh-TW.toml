@@ -11,7 +11,7 @@
    Weight = 2
   
 [[Main]]
-  Name = "貼文"
+  Name = "歸檔"
   Pre = "archive"
   URL = "post"
   Weight = 3

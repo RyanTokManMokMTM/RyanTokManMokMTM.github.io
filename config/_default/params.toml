@@ -1,26 +1,26 @@
 [TagsCloud]
   Enable = true
-  Limit = 10
+  Limit = 20
 
 [Share]
   Enable = false
   AddthisId = "Your AddthisId"
 
 [Comment]
-  Enable = false
+  Enable = true
   Module = "Waline"
-  LiveReId = "Your LiveReId"
-  WalineSerURL = "Your WalineSerURL"
+  LiveReId = "jackson.tmm"
+  WalineSerURL = "https://blogger-chat-server.vercel.app/"
 
   # If Module is "Utterances",see https://utteranc.es/
   UtterancesRepo = "owner/repo"
   UtterancesTheme = "github-light"
   UtterancesTitle = "pathname"
 
-#[LeanCloud]
-#  AppId = "Your LCAppId"
-#  AppKey = "Your LCAppKey"
-#  ServerURL = "Your LCServer"
+[LeanCloud]
+ AppId = "JyrUwPHC7QNF67JQSvMaF3Dv-MdYXbMMI"
+ AppKey = "Uub02Q0GnVDepc8vmgqRavmr"
+ ServerURL = "https://blogger-chat-server.vercel.app/"
 
 [Statis]
   BusuanziCounter = false
@@ -30,7 +30,7 @@
 
 [OnlineIM]
   Enable = false
-#  DaoVoiceId = "Your DaoVoiceId"
+  DaoVoiceId = "Your DaoVoiceId"
 
 [Others]
 #  RevolverMapId = "Your RevolverMapId"

@@ -366,91 +366,31 @@
     <lastmod>2023-06-02T22:40:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="http://localhost:1313/categories/job-diary/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/categories/job-diary/"
-                />
   </url><url>
     <loc>http://localhost:1313/en/post/my-first-full-time-week1/</loc>
     <lastmod>2023-06-02T22:40:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="http://localhost:1313/post/my-first-full-time-week1/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/post/my-first-full-time-week1/"
-                />
   </url><url>
     <loc>http://localhost:1313/en/post/Google-Cybersecurity-Professional-Certificate-course1-w2/</loc>
     <lastmod>2023-05-27T13:48:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="http://localhost:1313/post/Google-Cybersecurity-Professional-Certificate-course1-w2/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/post/Google-Cybersecurity-Professional-Certificate-course1-w2/"
-                />
   </url><url>
     <loc>http://localhost:1313/en/categories/course/</loc>
     <lastmod>2023-05-27T13:48:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="http://localhost:1313/categories/course/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/categories/course/"
-                />
   </url><url>
     <loc>http://localhost:1313/en/categories/coursera/</loc>
     <lastmod>2023-05-27T13:48:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="http://localhost:1313/categories/coursera/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/categories/coursera/"
-                />
   </url><url>
     <loc>http://localhost:1313/en/tags/Google-Cybersecurity-Professional-Certificate/</loc>
     <lastmod>2023-05-27T13:48:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="http://localhost:1313/tags/Google-Cybersecurity-Professional-Certificate/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/tags/Google-Cybersecurity-Professional-Certificate/"
-                />
   </url><url>
     <loc>http://localhost:1313/en/post/chat-app-sticker-updated/</loc>
     <lastmod>2023-05-24T21:32:47+08:00</lastmod>

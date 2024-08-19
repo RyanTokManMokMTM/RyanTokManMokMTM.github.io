@@ -111,7 +111,7 @@
       
         <li class="menu-item ">
           <a href="/post" rel="section" >
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />貼文
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />歸檔
           </a>
         </li>
       
@@ -360,6 +360,18 @@
     </div>
 </div>  
      
+
+
+
+
+<div id="wcomments"></div>
+
+
+
+
+
+
+
     </footer>
   </article>
 </section>
@@ -499,6 +511,46 @@
             <a href="/tags/creational">Creational</a>
         </li>
         
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/japen">Japen</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/jp">Jp</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/note">Note</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/priority-queue">Priority queue</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/algorithm">Algorithm</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/app-dev">App dev</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/design">Design</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/dfs">Dfs</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/dp">Dp</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/hash-map">Hash map</a>
+        </li>
+        
     </ul>
     </div>
 
@@ -540,7 +592,7 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.0.min.js"></script>
 <div class="pio-container right">
   <div class="pio-action"></div>
-  <canvas id="pio" width="200" height="400"></canvas>
+  <canvas id="pio" width="250" height="250"></canvas>
 </div>
 
 
@@ -750,6 +802,80 @@ $(function() {
 
 
 
+
+
+
+<script type="text/javascript">
+  
+  var locale = {}
+  if("zh-tw" == 'zh-tw'){
+    locale = {
+      optional:"可選", 
+      nick: '名字',
+      mail: '郵箱',
+      mailError: '郵箱錯誤',
+      link: '網站',
+      placeholder: '歡迎評論',
+      sofa: '留下你寶貴的留言',
+      submit: '提交',
+      reply: '回覆',
+      cancelReply: '取消回覆',
+      comment: '評論',
+      more: '更多...',
+      preview: '預覽',
+      emoji: '表情',
+      expand: '顯示更多...',
+      seconds: '秒前',
+      minutes: '分鐘前',
+      hours: '小時前',
+      days: '天前',
+      now: '剛剛',
+      uploading: '正在上傳',
+      login: '登入',
+      logout: '登出',
+      admin: '博主',
+      word: '字',
+      wordHint: '評論字數應在 $0 到 $1 子之間！\n当前字數：$2',
+    };
+  
+  }
+
+  $(function(){
+    if (detectIE()>0) {
+      $.getScript(document.location.protocol+'//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js', function(){
+         new Waline({
+          el: '#wcomments', 
+          visitor: true, 
+          emoji: [
+            'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw-emoji'
+          ],
+          avatar:'monsterid', 
+          avatarCDN:'https://sdn.geekzu.org/avatar/', 
+          avatarForce:!1, 
+          wordLimit: '5000', 
+          placeholder: ' 歡迎留下你寶貴的意見，請您填寫名字和郵箱以便後續交流. ^_^ ', 
+          requiredFields: ['nick'], 
+          serverURL: "https:\/\/blogger-chat-server.vercel.app\/", 
+          lang: "zh-tw",
+          highlighter: (code, lang) => {
+            if (!window.Prism.languages[lang]) {
+              window.Prism.plugins.autoloader.loadLanguages(lang);
+            }
+
+            return window.Prism.highlight(
+              code,
+              window.Prism.languages[lang] || window.Prism.languages.text,
+              lang,
+            );
+          },
+          locale
+        });
+      });      
+    } else {
+      $('#wcomments').html('抱歉，Waline插件不支持IE或Edge，建議使用Chrome Browser。');
+    }
+  });
+</script>
 
 
 

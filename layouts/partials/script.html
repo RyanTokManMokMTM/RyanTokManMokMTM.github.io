@@ -483,7 +483,33 @@ $(function() {
 <script src='/js/l2d.js'></script>
 <!-- 引用看板娘交互组件 -->
 <script src='/js/pio.js'></script>
+<script src="/js/APlayer.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
 
+<script>
+  const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+    fixed: true,
+    autoplay: false,
+    theme: '#b7daff',
+    loop: 'all',
+    order: 'list',
+    preload: 'auto',
+    volume: 0.7,
+    mutex: true,
+    listFolded: false,
+    listMaxHeight: '200px',
+    lrcType: 0,
+    audio: [{
+        name: 'グランドエスケープ',
+        artist: '三浦透子',
+        url: '/music/src/music1.mp3',
+        cover: '/images/music/thum/music1.jpg',
+    },
+    ]
+});
+
+</script>
 <script>
   var pio = new Paul_Pio({
       "mode": "draggable",

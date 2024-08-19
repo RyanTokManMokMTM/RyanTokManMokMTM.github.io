@@ -44,8 +44,9 @@
     </div>
   </div>
 </div>
-
-<nav class="site-nav">
+<!-- <link rel="stylesheet" href="/css/APlayer.min.css">
+<div id="aplayer"></div> -->
+<nav class="site-nav" id="container">
     <ul id="menu" class="menu">
       {{ $curPage := . }}
       {{ range .Site.Menus.main }}
@@ -61,8 +62,8 @@
         <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> {{ i18n "Search" }}</a>
       </li>
     </ul>
+    
     <div class="site-search">
       {{ partial "widgets/search.html" .}}
     </div>
 </nav>
-

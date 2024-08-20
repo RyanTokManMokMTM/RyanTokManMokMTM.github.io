@@ -644,8 +644,10 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.0.min.js"></script>
 <div class="pio-container right">
   <div class="pio-action"></div>
-  <canvas id="pio" width="300" height="500" style="margin: 100;"></canvas>
+  <canvas id="pio" width="200" height="400" style="margin: 100;"></canvas>
 </div>
+<div class="elfsight-app-b04b61d3-ff26-4d9d-a289-163c1b59bd32" data-elfsight-app-lazy></div>
+
 
 
 
@@ -1012,34 +1014,8 @@ $(function() {
 <script src='/js/l2d.js'></script>
 
 <script src='/js/pio.js'></script>
-<script src="/js/APlayer.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
 <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
 
-<script>
-  const ap = new APlayer({
-    container: document.getElementById('aplayer'),
-    fixed: true,
-    autoplay: false,
-    theme: '#b7daff',
-    loop: 'all',
-    order: 'list',
-    preload: 'auto',
-    volume: 0.7,
-    mutex: true,
-    listFolded: false,
-    listMaxHeight: '200px',
-    lrcType: 0,
-    audio: [{
-        name: 'グランドエスケープ',
-        artist: '三浦透子',
-        url: '/music/src/music1.mp3',
-        cover: '/images/music/thum/music1.jpg',
-    },
-    ]
-});
-
-</script>
 <script>
   var pio = new Paul_Pio({
       "mode": "draggable",
@@ -1082,6 +1058,6 @@ $(function() {
 
 </script>
 
-  <div class="elfsight-app-b04b61d3-ff26-4d9d-a289-163c1b59bd32" data-elfsight-app-lazy></div>
+  
 </body>
 </html>

@@ -366,29 +366,19 @@
     <lastmod>2023-06-02T22:40:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-tw"
+                href="http://localhost:1313/categories/job-diary/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/categories/job-diary/"
+                />
   </url><url>
     <loc>http://localhost:1313/en/post/my-first-full-time-week1/</loc>
     <lastmod>2023-06-02T22:40:55+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/en/post/Google-Cybersecurity-Professional-Certificate-course1-w2/</loc>
-    <lastmod>2023-05-27T13:48:22+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/en/categories/course/</loc>
-    <lastmod>2023-05-27T13:48:22+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/en/categories/coursera/</loc>
-    <lastmod>2023-05-27T13:48:22+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/en/tags/Google-Cybersecurity-Professional-Certificate/</loc>
-    <lastmod>2023-05-27T13:48:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -1487,36 +1477,6 @@
                 href="http://localhost:1313/en/tags/TrieTree/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/leetcodes/leetcode1268/</loc>
-    <lastmod>2022-06-19T12:45:24+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="http://localhost:1313/leetcodes/leetcode1268/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/leetcodes/leetcode1268/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/en/tags/trie-tree/</loc>
-    <lastmod>2022-06-19T12:45:24+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="http://localhost:1313/tags/trie-tree/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/tags/trie-tree/"
-                />
-  </url><url>
     <loc>http://localhost:1313/en/leetcodes/leetcode5/</loc>
     <lastmod>2022-06-16T14:09:50+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1530,36 +1490,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="http://localhost:1313/en/leetcodes/leetcode5/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/en/leetcodes/leetcode583/</loc>
-    <lastmod>2022-06-14T13:37:49+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="http://localhost:1313/leetcodes/leetcode583/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/leetcodes/leetcode583/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/en/tags/LCM/</loc>
-    <lastmod>2022-06-14T13:37:49+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="http://localhost:1313/tags/LCM/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/tags/LCM/"
                 />
   </url><url>
     <loc>http://localhost:1313/en/leetcodes/leetcode216/</loc>

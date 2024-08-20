@@ -18,9 +18,9 @@
   UtterancesTitle = "pathname"
 
 [LeanCloud]
- AppId = "JyrUwPHC7QNF67JQSvMaF3Dv-MdYXbMMI"
- AppKey = "Uub02Q0GnVDepc8vmgqRavmr"
- ServerURL = "https://blogger-chat-server.vercel.app/"
+#  AppId = "JyrUwPHC7QNF67JQSvMaF3Dv-MdYXbMMI"
+#  AppKey = "Uub02Q0GnVDepc8vmgqRavmr"
+#  ServerURL = "https://blogger-chat-server.vercel.app/"
 
 [Statis]
   BusuanziCounter = false

@@ -1,7 +1,7 @@
 {{ partial "head.html" . }}
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
   <div class="container one-collumn sidebar-position-left {{ block "main_class" .}}{{end}}  ">
-    <div id="aplayer"></div>
+    <!-- <div id="aplayer"></div> -->
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"> {{ partial "header.html" . }} </div>
     </header>
@@ -30,5 +30,6 @@
   </div>
 
   {{ partial "script.html" .}}
+  <div class="elfsight-app-b04b61d3-ff26-4d9d-a289-163c1b59bd32" data-elfsight-app-lazy></div>
 </body>
 </html>

@@ -7,9 +7,8 @@
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <link rel="stylesheet" href="/css/APlayer.min.css">
   <link href='/css/pio.css' rel='stylesheet' type='text/css'/>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
   
-  <div id="aplayer"></div>
   <title> [Note]Design Pattern Princeple - Jackson.tmm </title>
   
   <meta name="keywords" content="博客, 工程師, 程序員, 學習, 筆記, 技術, 分析, 後端, 生活">
@@ -42,7 +41,7 @@
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
   <div class="container one-collumn sidebar-position-left page-home  ">
-    <div id="aplayer"></div>
+    
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"> <div class="site-brand-container">
 <div class="site-nav-toggle">
@@ -402,11 +401,11 @@
 
 
 
-<div id="wcomments"></div>
 
 
 
 
+<div id="ucomments"></div>
 
 
 
@@ -441,14 +440,14 @@
       <nav class="site-state motion-element">
     <div class="site-state-item site-state-posts">
       <a href="/post/">
-        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-count">30</span>
         <span class="site-state-item-name">日誌</span>
       </a>
     </div>
     <div class="site-state-item site-state-categories">    
         <a href="/categories/">      
          
-        <span class="site-state-item-count">30</span>
+        <span class="site-state-item-count">29</span>
         
         <span class="site-state-item-name">分類</span>
         
@@ -458,7 +457,7 @@
     <div class="site-state-item site-state-tags">
         <a href="/tags/">
          
-        <span class="site-state-item-count">60 </span>
+        <span class="site-state-item-count">56 </span>
         
         <span class="site-state-item-name">標籤</span>
         </a>
@@ -526,11 +525,11 @@
         </li>
         
         <li  class="tagcloud-of-blogroll-item">
-            <a href="/tags/dynamic-programming">Dynamic programming</a>
+            <a href="/tags/recursion">Recursion</a>
         </li>
         
         <li  class="tagcloud-of-blogroll-item">
-            <a href="/tags/recursion">Recursion</a>
+            <a href="/tags/dynamic-programming">Dynamic programming</a>
         </li>
         
         <li  class="tagcloud-of-blogroll-item">
@@ -558,23 +557,11 @@
         </li>
         
         <li  class="tagcloud-of-blogroll-item">
-            <a href="/tags/note">Note</a>
-        </li>
-        
-        <li  class="tagcloud-of-blogroll-item">
             <a href="/tags/priority-queue">Priority queue</a>
         </li>
         
         <li  class="tagcloud-of-blogroll-item">
-            <a href="/tags/algorithm">Algorithm</a>
-        </li>
-        
-        <li  class="tagcloud-of-blogroll-item">
             <a href="/tags/app-dev">App dev</a>
-        </li>
-        
-        <li  class="tagcloud-of-blogroll-item">
-            <a href="/tags/design">Design</a>
         </li>
         
         <li  class="tagcloud-of-blogroll-item">
@@ -587,6 +574,18 @@
         
         <li  class="tagcloud-of-blogroll-item">
             <a href="/tags/hash-map">Hash map</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/heap">Heap</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/ios-app">Ios app</a>
+        </li>
+        
+        <li  class="tagcloud-of-blogroll-item">
+            <a href="/tags/map">Map</a>
         </li>
         
     </ul>
@@ -843,76 +842,106 @@ $(function() {
 
 
 
+
+
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage@4.6.1/dist/av-min.js"></script>
 <script type="text/javascript">
-  
-  var locale = {}
-  if("zh-tw" == 'zh-tw'){
-    locale = {
-      optional:"可選", 
-      nick: '名字',
-      mail: '郵箱',
-      mailError: '郵箱錯誤',
-      link: '網站',
-      placeholder: '歡迎評論',
-      sofa: '留下你寶貴的留言',
-      submit: '提交',
-      reply: '回覆',
-      cancelReply: '取消回覆',
-      comment: '評論',
-      more: '更多...',
-      preview: '預覽',
-      emoji: '表情',
-      expand: '顯示更多...',
-      seconds: '秒前',
-      minutes: '分鐘前',
-      hours: '小時前',
-      days: '天前',
-      now: '剛剛',
-      uploading: '正在上傳',
-      login: '登入',
-      logout: '登出',
-      admin: '博主',
-      word: '字',
-      wordHint: '評論字數應在 $0 到 $1 子之間！\n当前字數：$2',
-    };
-  
-  }
-
-  $(function(){
-    if (detectIE()>0) {
-      $.getScript(document.location.protocol+'//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js', function(){
-         new Waline({
-          el: '#wcomments', 
-          visitor: true, 
-          emoji: [
-            'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw-emoji'
-          ],
-          avatar:'monsterid', 
-          avatarCDN:'https://sdn.geekzu.org/avatar/', 
-          avatarForce:!1, 
-          wordLimit: '5000', 
-          placeholder: ' 歡迎留下你寶貴的意見，請您填寫名字和郵箱以便後續交流. ^_^ ', 
-          requiredFields: ['nick'], 
-          serverURL: "https:\/\/blogger-chat-server.vercel.app\/", 
-          lang: "zh-tw",
-          highlighter: (code, lang) => {
-            if (!window.Prism.languages[lang]) {
-              window.Prism.plugins.autoloader.loadLanguages(lang);
-            }
-
-            return window.Prism.highlight(
-              code,
-              window.Prism.languages[lang] || window.Prism.languages.text,
-              lang,
-            );
-          },
-          locale
-        });
-      });      
-    } else {
-      $('#wcomments').html('抱歉，Waline插件不支持IE或Edge，建議使用Chrome Browser。');
-    }
+  function showTime(Counter) {
+  var query = new AV.Query(Counter);
+  var entries = [];
+  var $visitors = $(".leancloud_visitors");
+ 
+  $visitors.each(function () {
+    entries.push( $(this).attr("id").trim() );
   });
+
+  query.containedIn('url', entries);
+  query.find()
+    .then((results) => {
+      var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+      if (results.length == 0) {
+        $visitors.find(COUNT_CONTAINER_REF).text(0);
+        return;
+      }
+
+      for (var i = 0; i < results.length; i++) {
+        var item = results[i];
+        var url = item.get('url');
+        var time = item.get('time');
+        var element = document.getElementById(url);
+
+        $(element).find(COUNT_CONTAINER_REF).text(time);
+      }
+      for(var i = 0; i < entries.length; i++) {
+        var url = entries[i];
+        var element = document.getElementById(url);
+        var countSpan = $(element).find(COUNT_CONTAINER_REF);
+        if( countSpan.text() == '') {
+          countSpan.text(0);
+        }
+      }
+    }, (error) => {
+      console.log('Query vistors failed: '+error);
+    });
+}
+
+function addCount(Counter) {
+  var $visitors = $(".leancloud_visitors");
+  var url = $visitors.attr('id').trim();
+  var title = $visitors.attr('data-flag-title').trim();
+  var query = new AV.Query('Counter');
+  query.equalTo("url", url);
+  query.find().then((results) => {
+    if (results.length > 0) {
+      var counter = results[0];
+      counter.increment('time', 1);
+      counter.save(null, {
+        query: new AV.Query('Counter').equalTo('url', url),
+        fetchWhenSave: true
+      }).then((counter) => {
+        var $element = $(document.getElementById(url));
+        $element.find('.leancloud-visitors-count').text(counter.get('time'));        
+      }, (error) => {
+        console.log('Update vistor failed: '+error);
+      });
+    } else {      
+      var acl = new AV.ACL();
+      acl.setPublicReadAccess(true);
+      acl.setPublicWriteAccess(true);
+     
+      var newCounter = new Counter();
+      newCounter.set("title", title);
+      newCounter.set("url", url);
+      newCounter.set("time", 1);
+
+      newCounter.setACL(acl);
+      newCounter.save().then((counter) => {
+        
+      var $element = $(document.getElementById(url));
+      $element.find('.leancloud-visitors-count').text(newCounter.get('time'));
+    }, (error) => {
+      console.log("Save new vistor failed: "+error);
+    });
+  }}); 
+}
+
+$(function() {
+
+  AV.init({
+    appId: "JyrUwPHC7QNF67JQSvMaF3Dv-MdYXbMMI",
+    appKey: "Uub02Q0GnVDepc8vmgqRavmr",
+    serverURL: "https:\/\/blogger-chat-server.vercel.app\/"
+  });  
+
+  const Counter = AV.Object.extend("Counter");
+
+  if ($('.leancloud_visitors').length == 1) {
+    addCount(Counter);
+  } else if ($('.post-title-link').length > 1) {
+    showTime(Counter);
+  }
+});
 </script>
 
 
@@ -920,6 +949,19 @@ $(function() {
 
 
 
+<script type="text/javascript">
+  (function() {
+      var utterances = document.createElement('script');
+      utterances.type = 'text/javascript';
+      utterances.async = true;
+      utterances.setAttribute('issue-term',"pathname")
+      utterances.setAttribute('theme',"github-light")
+      utterances.setAttribute('repo',"RyanTokManMokMTM\/RyanTokManMokMTM.github.io")
+      utterances.crossorigin = 'anonymous';
+      utterances.src = 'https://utteranc.es/client.js';
+      document.getElementById('ucomments').appendChild(utterances);
+  })();
+</script>
 
 
 
@@ -957,6 +999,7 @@ $(function() {
 <script src='/js/pio.js'></script>
 <script src="/js/APlayer.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
+<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
 
 <script>
   const ap = new APlayer({
@@ -1024,5 +1067,6 @@ $(function() {
 
 </script>
 
+  <div class="elfsight-app-b04b61d3-ff26-4d9d-a289-163c1b59bd32" data-elfsight-app-lazy></div>
 </body>
 </html>

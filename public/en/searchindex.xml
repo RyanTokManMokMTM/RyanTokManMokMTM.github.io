@@ -315,40 +315,6 @@ By a unreconcilied person
   </entry>
   
   <entry>
-    <title>[Google Cybersecurity Professional Certificate] Foundations of Cybersecurity - Week 2 note</title>
-    <url>http://localhost:1313/en/post/Google-Cybersecurity-Professional-Certificate-course1-w2/</url>
-    <categories>
-      <category>course</category><category>coursera</category>
-    </categories>
-    <tags>
-      
-      <tag>Google Cybersecurity Professional Certificate</tag>
-      
-    </tags>
-    <content type="html"> Google Cybersecurity Professional Certificate Course
-Week 1 course is talking about what is cybersecurity and the introducation of how can we learn the course and some learning tool we can use to help us dring the learning period in coursera. So, i&rsquo;m not written a post about week 1. XD
-note and basic concept This week is learning about the history of Cybersecurity and some basic concept in Cybersecurity field. So this post&rsquo;ll records all the concept i&rsquo;ve learned from this week.
-Basic Concept:
-Malware A software designed to harm devices or network.
-Virus A malware program that modifies other computer program by inserting its own code to damage and destory data.
-Worm Malware that self-replicates, spreading across the network and infecting computers
-Ransomware A malware attack during which threat actors encrypt an organization&rsquo;s data and demand payment to restore access.
-Spyware Malicious software installed on a user&rsquo;s computer without their permission, which is used to spy on and steal user data.
-Phishing The use of digital communication to trick people into revealing sensitive data or deploying malicious software.
-Spear phishing A malicious email attack targetting a specific user or group of users that appears to originate from a trusted source.
-Whaling A form of spear phishing during which threat actors target executives in order to gain access to sensitive data
-Business email compromise (BEC) An attack in which a threat actor impersonate a known source to obtain a financial advantage
-Vishing The exploitation of electronic voice communication to obtain sensitive information or to impersonate a known source.
-Social engineering A manipulate technique that exploits huamn error to gain unauthorized access to sensitive, private or valuable data.
-Social media phishing An attack in which a threat actor collects detailed information about their target on social media sites before initiating an attack
-Watering hole attack An attack in which a threat actor compromises a website frequently vistied by a sepcific group of users.
-Physical social engineering An attack in which a threat actor impersonates an employee, customer, or vendor to obtain unauthorized access to a physical location
-USB baiting An attack in which a threat actor strategically leaves a malware usb stick for an employee to find and unknowingly infect a network.
-Attacks example
-</content>
-  </entry>
-  
-  <entry>
     <title>[Development Diary] Real Time Communication APP - Sicker Updated(I)</title>
     <url>http://localhost:1313/en/post/chat-app-sticker-updated/</url>
     <categories>
@@ -1144,28 +1110,6 @@ class TrieNode{ public: TrieNode(){ node = vector&lt;TrieNode*&gt;(26); } vector
   </entry>
   
   <entry>
-    <title>[Leetcode] Search Suggestions System[Medium]</title>
-    <url>http://localhost:1313/en/leetcodes/leetcode1268/</url>
-    <categories>
-      <category>leetcode</category>
-    </categories>
-    <tags>
-      
-      <tag>string</tag>
-      
-      <tag>trie tree</tag>
-      
-    </tags>
-    <content type="html"> LeetCode 1268 - Search Suggestions System You are given an array of strings products and a string searchWord.
-Design a system that suggests at most three product names from products after each character of searchWord is typed. Suggested products should have common prefix with searchWord. If there are more than three products with a common prefix return the three lexicographically minimums products.
-Return a list of lists of the suggested products after each character of searchWord is typed. example:
-Input: products = [&#34;mobile&#34;,&#34;mouse&#34;,&#34;moneypot&#34;,&#34;monitor&#34;,&#34;mousepad&#34;], searchWord = &#34;mouse&#34; Output: [ [&#34;mobile&#34;,&#34;moneypot&#34;,&#34;monitor&#34;], [&#34;mobile&#34;,&#34;moneypot&#34;,&#34;monitor&#34;], [&#34;mouse&#34;,&#34;mousepad&#34;], [&#34;mouse&#34;,&#34;mousepad&#34;], [&#34;mouse&#34;,&#34;mousepad&#34;] ] Explanation: products sorted lexicographically = [&#34;mobile&#34;,&#34;moneypot&#34;,&#34;monitor&#34;,&#34;mouse&#34;,&#34;mousepad&#34;] After typing m and mo all products match and we show user [&#34;mobile&#34;,&#34;moneypot&#34;,&#34;monitor&#34;] After typing mou, mous and mouse the system suggests [&#34;mouse&#34;,&#34;mousepad&#34;] Input: products = [&#34;havana&#34;], searchWord = &#34;havana&#34; Output: [[&#34;havana&#34;],[&#34;havana&#34;],[&#34;havana&#34;],[&#34;havana&#34;],[&#34;havana&#34;],[&#34;havana&#34;]] Input: products = [&#34;bags&#34;,&#34;baggage&#34;,&#34;banner&#34;,&#34;box&#34;,&#34;cloths&#34;], searchWord = &#34;bags&#34; Output: [[&#34;baggage&#34;,&#34;bags&#34;,&#34;banner&#34;],[&#34;baggage&#34;,&#34;bags&#34;,&#34;banner&#34;],[&#34;baggage&#34;,&#34;bags&#34;],[&#34;bags&#34;]] How can we solve this problem? 這題要我們解決的問題是在給定的products中,給輸入關鍵字/搜尋關鍵字(searchWord)返回建議的product，也就是說只要searchWord與products中的某些product的前綴(prefix)一致,返回所有包含這個前綴(prefix)就可以了。 因為這題會架設一個一個字的輸入,所以結果會是searchWord的長度哪麼多個List。
-因為這題有關於字串前綴(Suffix),我們可以直接透過來解。我們只需為透過Products來建構Trie Tree,並加入到Tree Node的List中即可(題目說到最多3個，所以List最多保存3個)。
-因題目要求，結果需為按字典排序(lexicographically order),所有要先對products進行排序。
-Solution: class TrieNode{ //every node have at most 26 trie node (a to z) public: TrieNode(){ node = vector&lt;TrieNode*&gt;(26); } vector&lt;TrieNode*&gt; node; vector&lt;string&gt; w; static void addWords(TrieNode* root ,string str){ for(int i = 0;i&lt;str.length();i++){ //check product[i] exists in trie tree or not if(root-&gt;node[str[i] - &#39;a&#39;] == nullptr) root-&gt;node[str[i] - &#39;a&#39;] = new TrieNode(); root = root-&gt;node[str[i] - &#39;a&#39;]; //moving to the tree node //append the words if(root-&gt;w.size() &lt; 3) { root-&gt;w.push_back(str); } } } static vector&lt;vector&lt;string&gt;&gt; getWords(TrieNode* root,string prefix){ vector&lt;vector&lt;string&gt;&gt; res(prefix.length()); for(int i = 0;i&lt;prefix.length();i++){ root = root-&gt;node[prefix[i] - &#39;a&#39;]; if(root == nullptr) return res; for(auto str : root-&gt;w) res[i].push_back(str); } return res; } }; class Solution { public: vector&lt;vector&lt;string&gt;&gt; suggestedProducts(vector&lt;string&gt;&amp; products, string searchWord) { vector&lt;vector&lt;string&gt;&gt; res; sort(products.begin(),products.end());// n log n TrieNode* root = new TrieNode(); for(auto product : products) TrieNode::addWords(root,product); return TrieNode::getWords(root,searchWord); } }; </content>
-  </entry>
-  
-  <entry>
     <title>[Leetcode] Longest Palindromic Substring(Medium)</title>
     <url>http://localhost:1313/en/leetcodes/leetcode5/</url>
     <categories>
@@ -1182,27 +1126,6 @@ Solution: class TrieNode{ //every node have at most 26 trie node (a to z) public
 example
 Input: s = &#34;babad&#34; Output: &#34;bab&#34; Explanation: &#34;aba&#34; is also a valid answer. Input: s = &#34;cbbd&#34; Output: &#34;bb&#34; How can we solve this problem? 要解決這題，我們必須要先知道什麼是Palindrome。可以參考這篇文章Palindromic string迴文。而這題要我們找出在給定string中,找到最長的Palindrome。我們可以透過以每個單一字元(index i)以及倆個字元(index i,index i+1)為中心點，並擴展left,right找出他們的局部的最長Palindrome為多少，然後根據這個長度計算starting point i以及記錄長度len,最後以starting point和len得出字串中str[startingPoint,len]為解。
 Solution: class Solution { public: string longestPalindrome(string s) { /* Using an easy solution &#34;babad&#34; finding all posible palindrome string starting at index i(mid point) odd case: i-1 i i+1 ? Palindrome i-2 i-1 i i+1 i+2 ?Palindrome what about even case.We&#39;re simply starting at index i and i+1 i-1 [i,i+1] i+2 ?Palindrome */ int n = s.length(); int len = 0; int startPoint = 0; //O(n * n(finding Palindrome)) for(int i = 0;i&lt;n;i++){ int cur = max(getLen(s,i,i,n),getLen(s,i,i+1,n)); // which one is longest? odd or even if(cur &gt; len){ //update our len and starting point len = cur; startPoint = i - (len-1)/2; //(len-1) for even case //suppose the len is 3 and the index is 1 ,then the starting point will be 1 - (3-1)/2 =&gt; 0-&gt; len str[0...2] //suppose the len is 4 and the index is 1 ,then the starting point will be 1 - (4-1)/2 =&gt; 0-&gt; len str[0...2] } } return s.substr(startPoint,len); } //str[i..j] is our middle point of Palindrome int getLen(string&amp;str,int i,int j,int n){ //left(i) right(j) while(i&gt;=0 &amp;&amp; j&lt;n &amp;&amp; str[i] == str[j]){ i--; j++; } //string at i+1 and getting //|y|x2|x1|x|x1|x2|y| =&gt; the length of this string is l - r + 1 -(out of bounds of both i and j =&gt; 2) =&gt; l-r-1 return j-i-1; //string at i+1(is decreased from the loop),total } }; </content>
-  </entry>
-  
-  <entry>
-    <title>[Leetcode] Delete Operation for Two Strings(Medium)</title>
-    <url>http://localhost:1313/en/leetcodes/leetcode583/</url>
-    <categories>
-      <category>leetcode</category>
-    </categories>
-    <tags>
-      
-      <tag>dynamic programming</tag>
-      
-      <tag>LCM</tag>
-      
-    </tags>
-    <content type="html"> LeetCode 583 - Delete Operation for Two Strings Given two strings word1 and word2, return the minimum number of steps required to make word1 and word2 the same.
-In one step, you can delete exactly one character in either string example
-Input: word1 = &#34;sea&#34;, word2 = &#34;eat&#34; Output: 2 Explanation: You need one step to make &#34;sea&#34; to &#34;ea&#34; and another step to make &#34;eat&#34; to &#34;ea&#34;. Input: word1 = &#34;leetcode&#34;, word2 = &#34;etco&#34; Output: 4 How can we solve this problem? 這題要我們解決的問題是給定2個字串Word1和Word2,每次從Word1或者Word2中移除1個Character，問我們最少需要多少步使得2個string一樣。
-首先,我們需要先知道這2個Word有哪些Character的是一致的。為了能獲得他們之間的最長共同子字串，我們可以透過Longest Commond Substring來得到他們之間共同子字串的長度，只要每個字串的長度減去LCM的長度，就可以知道各自需要多少步。最後相加起來即可。
-Longest Commond Substring Template
-Solution: class Solution { public: int minDistance(string word1, string word2) { int size = longestCommonSubStr(word1,word2); int n = word1.length(); int m = word2.length(); //now we know the longest common substr size //we can use this information to calculate total step to remove character //n - LCM size =&gt; total character we need to remove for string A to get the common sub string //m - LCM size =&gt; total character we need to remove for string B to get the common sub string return (n - size) + (m - size); } int longestCommonSubStr(string &amp;s1, string &amp;s2){ /* How it work Compare both 2 string to get the longest command sub string for example: &#34;sea&#34;, word2 = &#34;eat&#34; starting compare with string 2 suppose i index for string 1 suppose j index for string 2 find what is the logest command substring within 0...i and 0...j i=2 -&gt; 0...2 =&gt; sea j=1 -&gt; 0...1 =&gt; ea the longest command substring is 2, &#34;ea&#34; detail define a memo or dp to record each local ans dp[i for string a][j for string b] dp[1][1] = &#34;s&#34;,&#34;e&#34; LCS is? 0 dp[1][2] = &#34;s&#34;,&#34;ea&#34; LCS is? 0 dp[1][3] = &#34;s&#34;,&#34;eat&#34; LCS is? 0 dp[2][1] = &#34;se&#34; , &#34;e&#34; = 1 dp[2][2] = &#34;se&#34; , &#34;ea&#34; = 1 dp[2][3] = &#34;se&#34; , &#34;eat&#34; = 1 dp[3][1] = &#34;sea&#34; , &#34;e&#34; = 1 from dp[2][1]=1 | dp[3][0]=0 dp[3][2] = &#34;sea&#34; , &#34;ea&#34; = 2 from dp[2][1] +1 =&gt; a must be inside the LCS = 1 + the previous step i-1,j-1 dp[3][3] = &#34;sea&#34; , &#34;eat&#34; = 2 from dp[2][3] = 1| dp[3][2] = 2 the ans of &#34;sea&#34;, &#34;eat&#34; is 2 */ int n = s1.length(); int m = s2.length(); //init dp //str:0,str:0 -&gt; LCS still 0 vector&lt;vector&lt;int&gt;&gt; dp(n+1,vector&lt;int&gt;(m+1,0)); //calculating LCM for(int i = 1;i&lt;=n;i++){ for(int j = 1;j&lt;=m;j++){ if(s1[i-1] == s2[j-1]) dp[i][j] = 1 + dp[i-1][j-1]; //the LCM of previous size else //strA[0..i-2] str[0...j-1] or strA[0..i-1] str[0...j-2] check which one have the longest LCM dp[i][j] = max(dp[i-1][j],dp[i][j-1]); } } return dp[n][m]; } }; </content>
   </entry>
   
   <entry>

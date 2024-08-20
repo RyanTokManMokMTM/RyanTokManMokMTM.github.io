@@ -8,12 +8,12 @@
 
 [Comment]
   Enable = true
-  Module = "Waline"
+  Module = "Utterances"
   LiveReId = "jackson.tmm"
   WalineSerURL = "https://blogger-chat-server.vercel.app/"
 
   # If Module is "Utterances",see https://utteranc.es/
-  UtterancesRepo = "owner/repo"
+  UtterancesRepo = "RyanTokManMokMTM/RyanTokManMokMTM.github.io"
   UtterancesTheme = "github-light"
   UtterancesTitle = "pathname"
 

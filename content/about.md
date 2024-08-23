@@ -1,5 +1,5 @@
 +++
-title = "About me"
+title = "About me 關於我"
 description = "About me"
 date = "2020-03-29"
 author = "jackson.tmm"
@@ -7,14 +7,11 @@ url = "about.html"
 type = "about"
 +++
 
-<!-- 
-**Sorry about my bad English :(**   -->
-#### ~~[個人簡歷(中)](/cv/2023/MOKTOKMAN_Resume(CH).pdf)~~
-#### [Resume(EN)](/cv/2023/MOKTOKMAN_Resume(EN)-v2.pdf)
 ### Introduction  
 你好~ 歡迎來到我的網站!  
 我是Jackson.tmm, 是一個從香港來到台灣讀大學的四年級學生。~~目前就讀於**長庚大學-資訊工程學系(Computer Science And Information Engineering)**~~。目前已經畢業了。我目前主要是研究學習**後端開發**的技術。  
 
+[Resume(EN)](/cv/2024/MOKTOKMAN_Resume_version1.pdf)
 <!-- 
 ### More About me
 我超喜歡TFBoy的，是**TFBoys的忠實粉絲**,特別是易烊千璽(Jackson yee)！！！我叫Jackson也是這個原因，想跟千璽一樣強！哈哈哈。從他們出道開始就開始喜歡他們了(應該快9年了)。  

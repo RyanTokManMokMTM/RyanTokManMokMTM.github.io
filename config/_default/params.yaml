@@ -195,10 +195,10 @@ linksSets:
   # Fontawsome图标名称
   # Icon name in Font Awesome
   # See: https://fontawesome.com/
-  icon: fa fa-globe
+  icon: fa-solid fa-person-praying
   # 显示标题
   # Show title
-  title: 友情链接
+  title: 友情鏈接
   # 可选值： block | inline
   # Available values: block | inline
   layout: inline
@@ -207,10 +207,8 @@ linksSets:
 # 用法： `Key: 显示名称 || 链接地址`
 # Links of your friends
 # Usage: `Key: name || permalink`
-# links: 
-#   link0: Hugo-NexT || https://gitee.com/hugo-next/hugo-theme-next
-#   link1: 凡梦星尘空间站 || https://lisenhui.cn
-
+links: 
+  CWKSC: CWKSC 一個什麼都學得會的人 || https://cwksc.github.io/
 # 文章目录显示
 # Table of Contents in the Sidebar
 # Front-matter variable (nonsupport wrap expand_all).

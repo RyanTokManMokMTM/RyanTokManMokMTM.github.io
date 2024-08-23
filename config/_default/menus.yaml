@@ -17,42 +17,42 @@
 # -------------------------------------
 main:
   - identifier: home
-    name: 首頁
+    name: Home 首頁
     pageref: /
     pre: home
     weight: 1
   - identifier: about
-    name: 關於
+    name: About 關於
     pageref: /about.html
     pre: user
     weight: 2
   - identifier: post
-    name: 歸檔
+    name: Archive 歸檔
     pageref: /post
     pre: archive
     weight: 3
   - identifier: memories
-    name: 回憶
+    name: Memories 回憶
     url: /memories
     pre: star
     weight: 4
   - identifier: leetcodes
-    name: Leetcodes
+    name: Leetcodes 力扣
     url: /leetcodes
     pre: code
     weight: 5
   - identifier: project
-    name: 專案
+    name: Project 專案
     url: /project
     pre: tasks
     weight: 6
   - identifier: achievement
-    name: 成就
+    name: Achievement 成就
     url: /achievement
     pre: trophy
     weight: 6
   - identifier: resources
-    name: 資源
+    name: Resources 資源
     url: /resources
     pre: file
     weight: 6

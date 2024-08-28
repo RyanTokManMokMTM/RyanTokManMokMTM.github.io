@@ -3,7 +3,7 @@ title: "2023年度總結(2023 annual summary)"
 date: 2024-01-01T19:43:15+08:00
 draft: false
 categaries:
-    - Summary
+    - annual summary
 tags:
     - 2023
 ---

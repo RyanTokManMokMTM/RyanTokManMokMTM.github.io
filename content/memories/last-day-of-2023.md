@@ -7,8 +7,6 @@ tags:
     - 2023
     - disney
 categaries:
-    - last-day-of-years
-    - 2023
     - menories
 ---
 

@@ -2,8 +2,7 @@
 title: "6月份的日本"
 date: 2024-07-13T23:44:29+08:00
 draft: false
-ategories:
-    - trip
+categories:
     - trval
 tags:
     - jp

@@ -2,7 +2,7 @@
 title: "🇹🇼倒數"
 date: 2023-04-05T13:22:03+08:00
 draft: false
-categories:
+categaries:
     - taiwan
 tags:
     - taiwan

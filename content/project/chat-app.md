@@ -7,9 +7,7 @@ tags:
     - ios-app
     - app-dev
 categories: 
-    - development
     - project
-    - apple
 author: jackson.tmm
 ---
 

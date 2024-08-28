@@ -2,8 +2,9 @@
 title: "簡歷模板 Resume Template"
 date: 2022-12-24T16:58:43+08:00
 draft: false
-categories:
+tags:
     - resume
+categories:
     - resources
 ---
 

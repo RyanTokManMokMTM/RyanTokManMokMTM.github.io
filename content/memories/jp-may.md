@@ -2,8 +2,7 @@
 title: "5月份的日本"
 date: 2024-06-09T01:59:34+09:00
 draft: false
-ategories:
-    - trip
+categories:
     - trval
 tags:
     - jp

@@ -21,31 +21,36 @@ main:
     pageref: /
     pre: home
     weight: 1
+  - identifier: categories
+    name: Menu 目錄
+    pageref: /categories
+    pre: list
+    weight: 2
   - identifier: about
     name: About 關於
     pageref: /about.html
     pre: user
-    weight: 2
+    weight: 3
   - identifier: post
     name: Archive 歸檔
     pageref: /post
     pre: archive
-    weight: 3
+    weight: 4
   - identifier: memories
     name: Memories 回憶
     url: /memories
     pre: star
-    weight: 4
+    weight: 5
   - identifier: leetcodes
     name: Leetcodes 力扣
     url: /leetcodes
     pre: code
-    weight: 5
+    weight: 6
   - identifier: project
     name: Project 專案
     url: /project
     pre: tasks
-    weight: 6
+    weight: 7
   - identifier: achievement
     name: Achievement 成就
     url: /achievement
@@ -55,4 +60,4 @@ main:
     name: Resources 資源
     url: /resources
     pre: file
-    weight: 6
+    weight: 8

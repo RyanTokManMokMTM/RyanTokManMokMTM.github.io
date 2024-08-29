@@ -33,6 +33,7 @@
             {{ $secondaryCategories := slice }}
             {{ $pages := $.Scratch.Get "pages" }}
             {{ range where $pages "Params.categories" "intersect" (slice $primaryCategory) }}
+              {{ printf "%#v"  $pages }}
               {{ if eq (index .Params.categories 0) $primaryCategory }}
                 {{ $primaryCount = add $primaryCount 1 }}
                 {{/** if and (isset .Params.categories 1) (not (in $secondaryCategories (index .Params.categories 1))) **/}}

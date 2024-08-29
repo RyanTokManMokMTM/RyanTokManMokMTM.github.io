@@ -3,8 +3,7 @@ title: "7月份的日本 - 結束"
 date: 2024-07-14T16:46:54+08:00
 draft: false
 ategories:
-    - trip
-    - trval
+    - travel
 tags:
     - jp
     - japen

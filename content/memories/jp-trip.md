@@ -3,7 +3,7 @@ title: "71天的日本之旅"
 date: 2024-07-14T16:46:58+08:00
 draft: false
 categories:
-    - trval
+    - travel
 tags:
     - jp
     - japen

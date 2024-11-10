@@ -1,4 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>71天的日本之旅</title><url>/memories/jp-trip/</url><categories><category>travel</category></categories><tags><tag>jp</tag><tag>japen</tag></tags><content type="html"> 71天 - 日本體驗生活📝 2024年5月1日 ～ 2024年7月10日 行程 東京✓ 新宿 ✓ 原宿 ✓ 澀谷 ✓ 下北澤 ✓ 吉祥寺 ✓ 中野 ✓ 上野 ✓ 熱海 - 海上花火大會✓ 鐮倉 ✓ 江之島 ✓ 台場 ✓ 舞濱/迪士尼 ✓ 橫濱 ✓ 銀座 ✓ 池袋 ✓ 秋葉原 ✓ 春日部 ✓ 淺草 ✓ 豐島園 - 東京哈利波特影城 ✓ 東京車站 ✓ 阿佐谷 ✓ 高圓寺 ✓ 日本橋 ✓ 大阪✓ 難波 ✓ 櫻川 ✓ 心齋橋 ✓ 櫻島 - 日本環球影城 ✓ 大阪城 ✓ 梅田 ✓ 恵美須町 - 通天閣 ✓ 奈良 - 奈良公園 ✓ 京都✓ 京都車站 ✓ 清水寺 ✓ 金閣寺 ✓ 八板神社 ✓ 春日大社 ✓ 平安神宮 ✓ 伏見稻荷大社 ✓ 御法神社 ✓ 京都國立博物館 ✓ 錦市場 ✓ 嵐山 名古屋✓ 名古屋城 ✓ 名古屋站 ✓ 名古屋港水族館 ✓ 感想 日本街道很乾淨 食物有點鹹和沒什麼蔬菜卻還不錯吃 東京JR很方便但線路很多有點麻煩 食物種類不算很多 夏天很熱切很乾燥 女生都會化妝、包包會掛娃娃和鞋子都很高 日本人都很有禮貌 電車裡面很安靜 新幹線有bug，出了新幹線的站但還在JR站，如果去了其他地方原本的車票就出不去，要去工作人員那邊補錢 如果同一站出入必須去工作人員哪裡 垃圾分類還挺麻煩的 國內飛機航班比新幹線還便宜 巴士都是先讓乘客下車，才到其他乘客上車 巴士是後面上車，前門下車且下車在付款 巴士的車費不論哪裡上車/下車都是同一車費 東京都是坐電車、京都卻是巴士比較方便 日本用英文不太能溝通 整體感受 整體來說這趟路程雖然花了1,200,000+日幣，但是我覺得值得花這麼多錢去換來這麼一個體驗！如果下次還有機會，還是會繼續體驗的😁！</content></entry><entry><title>7月份的日本 - 結束</title><url>/memories/jp-july/</url><categories><category>travel</category></categories><tags><tag>jp</tag><tag>japen</tag></tags><content type="html"> 7月份在日本體驗生活的日記 2024年7月1日～2024年7月10日 行程 這是這趟旅程的最後的10天了，但是實際遊玩時間就只有9天而已。剩下的這9天也沒有浪費，也有去不同的地方看看。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>2024年軟體工程師(Software engineer)面試總結</title><url>/post/share/2024-swe-interview-summary/</url><categories><category>summary</category></categories><tags><tag>interview</tag></tags><content type="html"> 簡介 Intro 在過去的幾個月裡一直在找新的工作機會，從2024/8/27起開始在各大招聘平台投遞履歷以及約面談。這篇文章主要是想分享這段時間面試經歷以及復盤面試！
+履歷投遞數：79個 收到回覆(作業/面試)：4個(作業) + 4個(面試) + 1個面試邀約(已拒) + 1個有發消息但miss掉了 + 1個有聯繫我但沒有後續的 = 11個 獲得offer數：4個 復盤 Review 接下來這裡會詳細的紀錄一下各面試/作業的詳細：
+D : Day
+D + 0 : 投遞CV日
+收到寫assignment機會，但沒後續機會 第一家： Sandbox VR(HK) - Software Engineer
+D+0: 投遞履歷(08/27)
+D+3: 收到Assignment 邀請
+D+11: 提交Assignment
+D+19: 收到拒信
+這裡的Assignment是實作一個Wordle game, 一共有4個Task:
+(必須實作): 基本的Wordl game的邏輯。✓ (選做) 根據第一個task 1實作Server/Client 遊玩。✓ (選做) 根據第一個task 1實作Host 作弊機制，也就是回傳結果一樣，但是用戶不會知道Host有根據結果過濾掉list中的其他*比較高分(對比結果算出來比較高分的字)*的字。✓ (選做) 根據第一個task 1實作類似task 2的玩法，不過這次除了Server/Client也需要實作多人遊玩。✓ 以上這幾個task皆完成，但是還是收到了拒信，可能是因為寫的不太好吧。又或者使用的tech stack 不是他們期待的吧。 這邊附上我的實作code :
+第二家: HSBC Group - Full Stack Engineer, WSB IT - Hang Seng Bank (HK)
+D+0: 投遞履歷(08/27)
+D+7: 收到assignment邀請
+無聲卡
+這裡的assignment並不是關於coding方面的，而是比較像是「適應能力」的測試題，是多選題。這邊就不詳細說了。
+第三家: WeLab Bank - Fullstack Developer
+D+0: 投遞履歷(08/28)
+D+15: 收到HR回覆，並詢問寫Written test的意願
+D+17: 收到Written test邀請
+D+19: 完 …</content></entry><entry><title>說明</title><url>/english/init/</url><categories><category>english</category></categories><tags/><content type="html"> 簡介 開啟此分類的主要目的是想要學習英文這們語言。深知自己的英文能力沒有到很好，甚至是很爛。因此想要開啟一個分類來紀錄學習英文的過程。
+方法 主要是會透過閱讀文章的方式來學習，從各個文章中學習不同的句子和單字。 但不會限制在於文章可能會出現不同形式來學習</content></entry><entry><title>71天的日本之旅</title><url>/memories/jp-trip/</url><categories><category>travel</category></categories><tags><tag>jp</tag><tag>japen</tag></tags><content type="html"> 71天 - 日本體驗生活📝 2024年5月1日 ～ 2024年7月10日 行程 東京✓ 新宿 ✓ 原宿 ✓ 澀谷 ✓ 下北澤 ✓ 吉祥寺 ✓ 中野 ✓ 上野 ✓ 熱海 - 海上花火大會✓ 鐮倉 ✓ 江之島 ✓ 台場 ✓ 舞濱/迪士尼 ✓ 橫濱 ✓ 銀座 ✓ 池袋 ✓ 秋葉原 ✓ 春日部 ✓ 淺草 ✓ 豐島園 - 東京哈利波特影城 ✓ 東京車站 ✓ 阿佐谷 ✓ 高圓寺 ✓ 日本橋 ✓ 大阪✓ 難波 ✓ 櫻川 ✓ 心齋橋 ✓ 櫻島 - 日本環球影城 ✓ 大阪城 ✓ 梅田 ✓ 恵美須町 - 通天閣 ✓ 奈良 - 奈良公園 ✓ 京都✓ 京都車站 ✓ 清水寺 ✓ 金閣寺 ✓ 八板神社 ✓ 春日大社 ✓ 平安神宮 ✓ 伏見稻荷大社 ✓ 御法神社 ✓ 京都國立博物館 ✓ 錦市場 ✓ 嵐山 名古屋✓ 名古屋城 ✓ 名古屋站 ✓ 名古屋港水族館 ✓ 感想 日本街道很乾淨 食物有點鹹和沒什麼蔬菜卻還不錯吃 東京JR很方便但線路很多有點麻煩 食物種類不算很多 夏天很熱切很乾燥 女生都會化妝、包包會掛娃娃和鞋子都很高 日本人都很有禮貌 電車裡面很安靜 新幹線有bug，出了新幹線的站但還在JR站，如果去了其他地方原本的車票就出不去，要去工作人員那邊補錢 如果同一站出入必須去工作人員哪裡 垃圾分類還挺麻煩的 國內飛機航班比新幹線還便宜 巴士都是先讓乘客下車，才到其他乘客上車 巴士是後面上車，前門下車且下車在付款 巴士的車費不論哪裡上車/下車都是同一車費 東京都是坐電車、京都卻是巴士比較方便 日本用英文不太能溝通 整體感受 整體來說這趟路程雖然花了1,200,000+日幣，但是我覺得值得花這麼多錢去換來這麼一個體驗！如果下次還有機會，還是會繼續體驗的😁！</content></entry><entry><title>7月份的日本 - 結束</title><url>/memories/jp-july/</url><categories><category>travel</category></categories><tags><tag>jp</tag><tag>japen</tag></tags><content type="html"> 7月份在日本體驗生活的日記 2024年7月1日～2024年7月10日 行程 這是這趟旅程的最後的10天了，但是實際遊玩時間就只有9天而已。剩下的這9天也沒有浪費，也有去不同的地方看看。
 7/1再一次前往「東京哈利波特影城」，這次恰好碰到「一週年活動」，也買到了1週年的限定物品，有夠幸運的！
 7/3就到了名古屋快閃一天，體驗了一回晚上搭夜光巴士前往另外一個城市，雖然坐得很累，但是有體驗到當地人凌晨搭車前往別的城市！因為只有一天，行程沒有去到很多地方～
 7/5是從名古屋回到東京，當天下午就去了參觀「吉卜力公園」，看到了很多宮崎駿的作品，《龍貓》、《千與千尋》等等，還不錯！

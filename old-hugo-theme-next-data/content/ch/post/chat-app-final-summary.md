@@ -31,7 +31,7 @@ Hi, 已經有一段時間沒有更新了，因為最近在研究多人串流的�
 
 
 這裡是我上面所講訴的問題的網絡拓墣 - `Mesh`.  
-![mesh](/images/hepler/mesh.png)  
+![mesh](/images/helper/mesh.png)  
 每個在網絡中的user需要與其餘`n-1`個user建立連線用於上傳和下載多媒體數據
 
 ##### 解決方案
@@ -39,11 +39,11 @@ Hi, 已經有一段時間沒有更新了，因為最近在研究多人串流的�
 
 
 `SFU(Selective Forwording Unit)`
-![SFU](/images/hepler/sfu.png)
+![SFU](/images/helper/sfu.png)
 
 
 `MCU(Multipoint Control Unit)`
-![MCU](/images/hepler/mcu.png)
+![MCU](/images/helper/mcu.png)
 
 ##### Mesh vs SFU vs MCH
 > Mesh   

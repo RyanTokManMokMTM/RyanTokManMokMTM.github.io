@@ -51,6 +51,11 @@ main:
     url: /project
     pre: tasks
     weight: 7
+  - identifier: english
+    name: English 英文
+    url: /english
+    pre: language
+    weight: 7
   - identifier: achievement
     name: Achievement 成就
     url: /achievement

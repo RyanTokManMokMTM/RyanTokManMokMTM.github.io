@@ -31,7 +31,7 @@ Here is the latest screen capture of the app:
 I developed an audio streaming call and a video streaming call for user-to-user chatting. Therefore, I wanted to develop these two features for group/multiple chats too. At the moment, I have encountered a problem. Person-to-person streaming is based on P2P. If I use the same way to develop the streaming feature for group chat, it'll have a huge cost on the client side when they communicate with more and more clients, especially upstreaming. For upstreaming, a client needs to upstream its media track to `n-1` clients, which costs their bandwidth a huge amount(You can imagine we are uploading the same video to server `n-1` times at the same time).We are not only upstreaming but also downsteaming from other client. So, I need to find a better solution before develop it.  
 
 Here is the architecture of the problem I described above - `Mesh`.  
-![mesh](/images/hepler/mesh.png)  
+![mesh](/images/helper/mesh.png)  
 For each client will establish `n-1` connection with other `n-1` user in the network for upstreaming and downstreaming the media track.
 
 ##### Solution
@@ -39,11 +39,11 @@ After a few months of researching this issue, I found a suitable solution for th
 If you are interested in `SFU` and `MCU`, you can read this [article](https://getstream.io/blog/what-is-a-selective-forwarding-unit-in-webrtc/) for more information.
 
 `SFU(Selective Forwording Unit)`
-![SFU](/images/hepler/sfu.png)
+![SFU](/images/helper/sfu.png)
 
 
 `MCU(Multipoint Control Unit)`
-![MCU](/images/hepler/mcu.png)
+![MCU](/images/helper/mcu.png)
 
 ##### What is the different between Mesh, SFU, MCU?
 > Mesh   

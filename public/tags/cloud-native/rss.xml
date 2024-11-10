@@ -1,1 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cloud Native on Jackson.tmm</title><link>http://localhost:1414/tags/cloud-native/</link><description>Recent content in Cloud Native on Jackson.tmm</description><generator>Hugo 0.125.2</generator><language>zh-TW</language><lastBuildDate>Fri, 23 Dec 2022 14:39:46 +0800</lastBuildDate><atom:link href="http://localhost:1414/tags/cloud-native/rss.xml" rel="self" type="application/rss+xml"/><item><title>透過Kops工具在AWS中部署K8S集群</title><link>http://localhost:1414/post/coding/kuberneters-on-aws/</link><pubDate>Fri, 23 Dec 2022 14:39:46 +0800</pubDate><guid>http://localhost:1414/post/coding/kuberneters-on-aws/</guid><description>這篇文章主要是講述如何在AWS雲服務中部署Kubernetes集群 首先，我們需要準備使用一下工具進行設置 KOps - 一個能讓我們輕鬆無痛部署Kube</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cloud Native on Jackson.tmm</title><link>http://localhost:1313/tags/cloud-native/</link><description>Recent content in Cloud Native on Jackson.tmm</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Fri, 23 Dec 2022 14:39:46 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/cloud-native/rss.xml" rel="self" type="application/rss+xml"/><item><title>透過Kops工具在AWS中部署K8S集群</title><link>http://localhost:1313/post/coding/kuberneters-on-aws/</link><pubDate>Fri, 23 Dec 2022 14:39:46 +0800</pubDate><guid>http://localhost:1313/post/coding/kuberneters-on-aws/</guid><description>&lt;h2 id="這篇文章主要是講述如何在aws雲服務中部署kubernetes集群">這篇文章主要是講述如何在AWS雲服務中部署Kubernetes集群
+&lt;a class="header-anchor" href="#%e9%80%99%e7%af%87%e6%96%87%e7%ab%a0%e4%b8%bb%e8%a6%81%e6%98%af%e8%ac%9b%e8%bf%b0%e5%a6%82%e4%bd%95%e5%9c%a8aws%e9%9b%b2%e6%9c%8d%e5%8b%99%e4%b8%ad%e9%83%a8%e7%bd%b2kubernetes%e9%9b%86%e7%be%a4">&lt;/a>
+&lt;/h2>&lt;p>首先，我們需要準備使用一下工具進行設置&lt;/p>
+&lt;ul>
+&lt;li>KOps - 一個能讓我們輕鬆無痛部署Kubernetes到任何雲服務的工具，可以想象為集群的kubectl&lt;/li>
+&lt;li>AWS IAM - 申請一個能讓Kops存取權限的賬號&lt;/li>
+&lt;li>AWS S3 Bucket - 用來作為存取Kubernets資料的資料庫&lt;/li>
+&lt;li>AWS Route53 - 用於使用自定義Domain Name 並連接到Master Node中&lt;/li>
+&lt;li>GoDady - 作為DNS 服務供應商&lt;/li>
+&lt;/ul>
+&lt;h4 id="前置工作">前置工作
+&lt;a class="header-anchor" href="#%e5%89%8d%e7%bd%ae%e5%b7%a5%e4%bd%9c">&lt;/a>
+&lt;/h4>&lt;h5 id="在電腦中安裝kops工具用於幫助我們部署集群">在電腦中安裝&lt;code>KOps&lt;/code>工具用於幫助我們部署集群
+&lt;a class="header-anchor" href="#%e5%9c%a8%e9%9b%bb%e8%85%a6%e4%b8%ad%e5%ae%89%e8%a3%9dkops%e5%b7%a5%e5%85%b7%e7%94%a8%e6%96%bc%e5%b9%ab%e5%8a%a9%e6%88%91%e5%80%91%e9%83%a8%e7%bd%b2%e9%9b%86%e7%be%a4">&lt;/a>
+&lt;/h5>&lt;blockquote>
+&lt;p>想要了解更多關於KOps的讀者，可以參閱
+&lt;a href="https://kops.sigs.k8s.io/" title="kOps-Kubernetes Operations" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+ kOps-Kubernetes Operations
+ 
+ &lt;i class="fa fa-external-link-alt">&lt;/i>
+ 
+&lt;/a>&lt;/p></description></item></channel></rss>

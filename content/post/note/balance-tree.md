@@ -5,13 +5,11 @@ keywords: "balance, tree"
 draft: true
 date: 2024-10-31T15:28:20+08:00
 lastmod: 2024-10-31T15:28:20+08:00
-
 categories:
-  -
+  - note
 tags:
-  -
-  -
-
+  - data structure
+toc: true
 # 原文作者
 # Post's origin author name
 #author:
@@ -62,7 +60,7 @@ expand: false
 這樣我們查詢的效率從O(n)減少到了O(logn)。  
 接下來會簡單介紹幾個比較常見的平衡樹
 
-#### AVL 樹(AVL Tree) - self balanced binary search tree
+### AVL 樹(AVL Tree) - self balanced binary search tree
 AVL樹又稱平衡二元樹，透過節點旋轉的方式使得子樹的高度差介於1之間，也就是說最深的子樹和最淺的子樹之間的高度不會大於1層。  
 AVL樹有以下特點：   
 1. 基於二元樹(BST)數據結構 
@@ -100,7 +98,7 @@ AVL樹有以下特點：
 1. 數據多時，自旋處理多
 2. 數據多時，樹高度越來越高，影響查詢效率
 
-#### 紅黑樹(Red-black Tree)
+### 紅黑樹(Red-black Tree)
 紅黑色也就是字面上的意思，樹上只有黑色和紅色2種節點。其他紅色和黑色節點不能相鄰，要麼就是紅黑或者黑紅，不能是紅紅或者黑黑。而紅黑書有一下特點：1
 1. 優化AVL tree旋轉多的問題，通過2次旋轉就能達到平衡
 2. 分為紅色和黑色節點
@@ -108,10 +106,12 @@ AVL樹有以下特點：
 
 **紅黑樹的操作**
 
-#### B 樹(B Tree)
+### B樹(B Tree)家族
+#### B 樹
+#### B+ 樹
+#### B- 樹
 
-#### B+ 樹(B+ Tree)
-
+## 總結 summary
 <!-- 
 ### 為什麼需要平衡樹
 

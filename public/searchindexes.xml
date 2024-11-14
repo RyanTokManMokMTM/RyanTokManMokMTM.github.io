@@ -2,23 +2,20 @@
 履歷投遞數：79個 收到回覆(作業/面試)：4個(作業) + 4個(面試) + 1個面試邀約(已拒) + 1個有發消息但miss掉了 + 1個有聯繫我但沒有後續的 = 11個 獲得offer數：4個 復盤 Review 接下來這裡會詳細的紀錄一下各面試/作業的詳細：
 D : Day
 D + 0 : 投遞CV日
-收到寫assignment機會，但沒後續機會 第一家： Sandbox VR(HK) - Software Engineer
-D+0: 投遞履歷(08/27)
+收到寫assignment機會，但沒後續機會 第一家： Sandbox VR(HK) - Software Engineer D+0: 投遞履歷(08/27)
 D+3: 收到Assignment 邀請
 D+11: 提交Assignment
 D+19: 收到拒信
 這裡的Assignment是實作一個Wordle game, 一共有4個Task:
 (必須實作): 基本的Wordl game的邏輯。✓ (選做) 根據第一個task 1實作Server/Client 遊玩。✓ (選做) 根據第一個task 1實作Host 作弊機制，也就是回傳結果一樣，但是用戶不會知道Host有根據結果過濾掉list中的其他*比較高分(對比結果算出來比較高分的字)*的字。✓ (選做) 根據第一個task 1實作類似task 2的玩法，不過這次除了Server/Client也需要實作多人遊玩。✓ 以上這幾個task皆完成，但是還是收到了拒信，可能是因為寫的不太好吧。又或者使用的tech stack 不是他們期待的吧。 這邊附上我的實作code :
-第二家: HSBC Group - Full Stack Engineer, WSB IT - Hang Seng Bank (HK)
-D+0: 投遞履歷(08/27)
+第二家: HSBC Group - Full Stack Engineer, WSB IT - Hang Seng Bank (HK) D+0: 投遞履歷(08/27)
 D+7: 收到assignment邀請
 無聲卡
 這裡的assignment並不是關於coding方面的，而是比較像是「適應能力」的測試題，是多選題。這邊就不詳細說了。
-第三家: WeLab Bank - Fullstack Developer
-D+0: 投遞履歷(08/28)
+第三家: WeLab Bank - Fullstack Developer D+0: 投遞履歷(08/28)
 D+15: 收到HR回覆，並詢問寫Written test的意願
 D+17: 收到Written test邀請
-D+19: 完 …  </content></entry><entry><title>[筆記] 平衡樹 Balance Tree</title><url>/post/note/balance-tree/</url><categories><category><no value=/></categories><tags><tag><no value=/><tag><no value=/></tags><content type="html">  簡介 在講述Balance Tree之前，我們先來看一種情況。現在我們根據數據來建立一棵Binary Tree，譬如說以下的數據 : [4,5,6,7,8,9,10], 我們就會建立出以下這顆Binary Tree:
+D+19: 完 …  </content></entry><entry><title>[筆記] 平衡樹 Balance Tree</title><url>/post/note/balance-tree/</url><categories><category>note</category></categories><tags><tag>data structure</tag></tags><content type="html">  簡介 在講述Balance Tree之前，我們先來看一種情況。現在我們根據數據來建立一棵Binary Tree，譬如說以下的數據 : [4,5,6,7,8,9,10], 我們就會建立出以下這顆Binary Tree:
 從這顆樹上我們會發現它其實就只是一個Linked List，查詢/插入效率還是一樣是O(n)，為了解決這個問題這裡需要平衡樹來幫忙解決。
 什麼是平衡樹 從上述可見，查詢的效率是取決於樹的深度，那是不是可以將過深的分支平均到其他分支，使得每顆子樹的深度都差不多，是不是就可以大大提高查詢效率了呢？因此，平衡樹(Balance tree)就是為了解決這個問題而誕生的！ 將上述例子轉換成平衡樹的話，會變成這個樣子： 這樣我們查詢的效率從O(n)減少到了O(logn)。
 接下來會簡單介紹幾個比較常見的平衡樹

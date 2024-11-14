@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dynamic-Programming on Jackson.tmm</title><link>http://localhost:1313/tags/dynamic-programming/</link><description>Recent content in Dynamic-Programming on Jackson.tmm</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Fri, 16 Sep 2022 20:42:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/dynamic-programming/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Maximum Score from Performing Multiplication Operations(Medium)</title><link>http://localhost:1313/leetcodes/leetcode1770/</link><pubDate>Fri, 16 Sep 2022 20:42:00 +0800</pubDate><guid>http://localhost:1313/leetcodes/leetcode1770/</guid><description>&lt;h2 id="leetcode-1770---maximum-score-from-performing-multiplication-operations">LeetCode 1770 - Maximum Score from Performing Multiplication Operations
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dynamic-Programming on Jackson.tmm</title><link>http://localhost:58072/tags/dynamic-programming/</link><description>Recent content in Dynamic-Programming on Jackson.tmm</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Fri, 16 Sep 2022 20:42:00 +0800</lastBuildDate><atom:link href="http://localhost:58072/tags/dynamic-programming/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Maximum Score from Performing Multiplication Operations(Medium)</title><link>http://localhost:58072/leetcodes/leetcode1770/</link><pubDate>Fri, 16 Sep 2022 20:42:00 +0800</pubDate><guid>http://localhost:58072/leetcodes/leetcode1770/</guid><description>&lt;h2 id="leetcode-1770---maximum-score-from-performing-multiplication-operations">LeetCode 1770 - Maximum Score from Performing Multiplication Operations
 &lt;a class="header-anchor" href="#leetcode-1770---maximum-score-from-performing-multiplication-operations">&lt;/a>
 &lt;/h2>&lt;p>You are given two integer arrays &lt;code>nums&lt;/code> and &lt;code>multipliers&lt;/code> of size &lt;code>n&lt;/code> and &lt;code>m&lt;/code> respectively, where &lt;code>n &amp;gt;= m&lt;/code>. The arrays are &lt;strong>1-indexed&lt;/strong>.&lt;/p>
 &lt;p>You begin with a score of &lt;code>0&lt;/code>. You want to perform &lt;strong>exactly&lt;/strong> &lt;code>m&lt;/code> operations. On the &lt;code>ith&lt;/code> operation (&lt;strong>1-indexed&lt;/strong>), you will:&lt;/p>
@@ -27,7 +27,7 @@ example&lt;/li>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>The total score is 50 + 15 - 9 + 4 + 42 = 102.
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
-&lt;/h2>&lt;p>這題最主要的重點是對於每個&lt;code>multipliers[i]&lt;/code>,它只能挑選最左邊或者最右邊的值。所有，我們需要知道&lt;code>multipliers[i]&lt;/code>拿最左邊的值最後的結果比較大，還是拿最右邊後的結果比較大。為了避免重複計算而超時，所以我們需要使用&lt;code>dp&lt;/code>來幫助我們記錄當前最優解。&lt;code>注:因multipliers最多為m個，所有最多只能從nums拿m個數字&lt;/code>&lt;/p></description></item><item><title>[Leetcode DP] Counting Bits(Easy)</title><link>http://localhost:1313/leetcodes/leetcodes338/</link><pubDate>Thu, 23 Jun 2022 11:33:51 +0800</pubDate><guid>http://localhost:1313/leetcodes/leetcodes338/</guid><description>&lt;h2 id="leetcode-338---counting-bits">LeetCode 338 - Counting Bits
+&lt;/h2>&lt;p>這題最主要的重點是對於每個&lt;code>multipliers[i]&lt;/code>,它只能挑選最左邊或者最右邊的值。所有，我們需要知道&lt;code>multipliers[i]&lt;/code>拿最左邊的值最後的結果比較大，還是拿最右邊後的結果比較大。為了避免重複計算而超時，所以我們需要使用&lt;code>dp&lt;/code>來幫助我們記錄當前最優解。&lt;code>注:因multipliers最多為m個，所有最多只能從nums拿m個數字&lt;/code>&lt;/p></description></item><item><title>[Leetcode DP] Counting Bits(Easy)</title><link>http://localhost:58072/leetcodes/leetcodes338/</link><pubDate>Thu, 23 Jun 2022 11:33:51 +0800</pubDate><guid>http://localhost:58072/leetcodes/leetcodes338/</guid><description>&lt;h2 id="leetcode-338---counting-bits">LeetCode 338 - Counting Bits
 &lt;a class="header-anchor" href="#leetcode-338---counting-bits">&lt;/a>
 &lt;/h2>&lt;p>Given an integer &lt;code>n&lt;/code>, return an &lt;em>array &lt;code>ans&lt;/code> of length &lt;code>n + 1&lt;/code> such that for each &lt;code>i&lt;/code> (&lt;code>0 &amp;lt;= i &amp;lt;= n&lt;/code>), &lt;code>ans[i]&lt;/code> is the &lt;strong>number&lt;/strong> of &lt;code>1&lt;/code>&amp;rsquo;s in the binary representation of &lt;code>i&lt;/code>.&lt;/em>&lt;/p>
 &lt;p>example:&lt;/p>
@@ -48,7 +48,7 @@ example&lt;/li>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>5 --&amp;gt; 101
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
-&lt;/h2>&lt;p>這題要我們解決的問題是給定一個數字&lt;code>n&lt;/code>,回傳&lt;code>0 - n&lt;/code>中每個數字包含了多少個為1的&lt;code>bits&lt;/code>。例如: &lt;code>n=2 =&amp;gt; 00,01,10&lt;/code>,回傳的結果便會是&lt;code>[0,1,1]&lt;/code>。&lt;/p></description></item><item><title>[Leetcode] Longest Palindromic Substring(Medium)</title><link>http://localhost:1313/leetcodes/leetcode5/</link><pubDate>Thu, 16 Jun 2022 14:09:50 +0800</pubDate><guid>http://localhost:1313/leetcodes/leetcode5/</guid><description>&lt;h2 id="leetcode-5---longest-palindromic-substring">LeetCode 5 - Longest Palindromic Substring
+&lt;/h2>&lt;p>這題要我們解決的問題是給定一個數字&lt;code>n&lt;/code>,回傳&lt;code>0 - n&lt;/code>中每個數字包含了多少個為1的&lt;code>bits&lt;/code>。例如: &lt;code>n=2 =&amp;gt; 00,01,10&lt;/code>,回傳的結果便會是&lt;code>[0,1,1]&lt;/code>。&lt;/p></description></item><item><title>[Leetcode] Longest Palindromic Substring(Medium)</title><link>http://localhost:58072/leetcodes/leetcode5/</link><pubDate>Thu, 16 Jun 2022 14:09:50 +0800</pubDate><guid>http://localhost:58072/leetcodes/leetcode5/</guid><description>&lt;h2 id="leetcode-5---longest-palindromic-substring">LeetCode 5 - Longest Palindromic Substring
 &lt;a class="header-anchor" href="#leetcode-5---longest-palindromic-substring">&lt;/a>
 &lt;/h2>&lt;p>Given a string s, return the longest palindromic substring in s.&lt;/p>
 &lt;p>example&lt;/p>
@@ -60,10 +60,10 @@ example&lt;/li>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
 &lt;/h2>&lt;p>要解決這題，我們必須要先知道什麼是Palindrome。可以參考這篇文章
-&lt;a href="http://localhost:1313/leetcodenotes/palindromicstring" title="Palindromic string迴文" >
+&lt;a href="http://localhost:58072/leetcodenotes/palindromicstring" title="Palindromic string迴文" >
  Palindromic string迴文
  
-&lt;/a>。而這題要我們找出在給定string中,找到最長的Palindrome。我們可以透過以每個單一字元(&lt;code>index i&lt;/code>)以及倆個字元(&lt;code>index i&lt;/code>,&lt;code>index i+1&lt;/code>)為中心點，並擴展&lt;code>left,right&lt;/code>找出他們的局部的最長Palindrome為多少，然後根據這個長度計算&lt;code>starting point i&lt;/code>以及記錄長度&lt;code>len&lt;/code>,最後以&lt;code>starting point&lt;/code>和&lt;code>len&lt;/code>得出字串中&lt;code>str[startingPoint,len]&lt;/code>為解。&lt;/p></description></item><item><title>[筆記]Palindromic String(迴文字串)</title><link>http://localhost:1313/post/note/palindromicstring/</link><pubDate>Thu, 16 Jun 2022 12:26:03 +0800</pubDate><guid>http://localhost:1313/post/note/palindromicstring/</guid><description>&lt;h1 id="introduction">Introduction
+&lt;/a>。而這題要我們找出在給定string中,找到最長的Palindrome。我們可以透過以每個單一字元(&lt;code>index i&lt;/code>)以及倆個字元(&lt;code>index i&lt;/code>,&lt;code>index i+1&lt;/code>)為中心點，並擴展&lt;code>left,right&lt;/code>找出他們的局部的最長Palindrome為多少，然後根據這個長度計算&lt;code>starting point i&lt;/code>以及記錄長度&lt;code>len&lt;/code>,最後以&lt;code>starting point&lt;/code>和&lt;code>len&lt;/code>得出字串中&lt;code>str[startingPoint,len]&lt;/code>為解。&lt;/p></description></item><item><title>[筆記]Palindromic String(迴文字串)</title><link>http://localhost:58072/post/note/palindromicstring/</link><pubDate>Thu, 16 Jun 2022 12:26:03 +0800</pubDate><guid>http://localhost:58072/post/note/palindromicstring/</guid><description>&lt;h1 id="introduction">Introduction
 &lt;a class="header-anchor" href="#introduction">&lt;/a>
 &lt;/h1>&lt;h2 id="什麼是palindromic-string-迴文字串">什麼是Palindromic String 迴文字串
 &lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%afpalindromic-string-%e8%bf%b4%e6%96%87%e5%ad%97%e4%b8%b2">&lt;/a>
@@ -72,7 +72,7 @@ example&lt;/li>
 &lt;code>abcdcba&lt;/code> 以&lt;code>d&lt;/code>為中心的左跟右的字元一樣。&lt;br>
 &lt;code>cdc&lt;/code>左跟右都為&lt;code>c&lt;/code>&lt;br>
 &lt;code>bcdcb&lt;/code> 左跟右都為&lt;code>b&lt;/code>&lt;br>
-&lt;code>abcdcba&lt;/code> 左跟右都為&lt;code>a&lt;/code>&lt;/p></description></item><item><title>[Leetcode] Delete Operation for Two Strings(Medium)</title><link>http://localhost:1313/leetcodes/leetcode583/</link><pubDate>Tue, 14 Jun 2022 13:37:49 +0800</pubDate><guid>http://localhost:1313/leetcodes/leetcode583/</guid><description>&lt;h2 id="leetcode-583---delete-operation-for-two-strings">LeetCode 583 - Delete Operation for Two Strings
+&lt;code>abcdcba&lt;/code> 左跟右都為&lt;code>a&lt;/code>&lt;/p></description></item><item><title>[Leetcode] Delete Operation for Two Strings(Medium)</title><link>http://localhost:58072/leetcodes/leetcode583/</link><pubDate>Tue, 14 Jun 2022 13:37:49 +0800</pubDate><guid>http://localhost:58072/leetcodes/leetcode583/</guid><description>&lt;h2 id="leetcode-583---delete-operation-for-two-strings">LeetCode 583 - Delete Operation for Two Strings
 &lt;a class="header-anchor" href="#leetcode-583---delete-operation-for-two-strings">&lt;/a>
 &lt;/h2>&lt;p>Given two strings &lt;code>word1&lt;/code> and &lt;code>word2&lt;/code>, return the minimum number of steps required to make &lt;code>word1&lt;/code> and &lt;code>word2&lt;/code> the same.&lt;/p>
 &lt;p>In one &lt;code>step&lt;/code>, you can delete exactly one character in either string
@@ -87,10 +87,10 @@ example&lt;/p>
 &lt;/h2>&lt;p>這題要我們解決的問題是給定2個字串&lt;code>Word1&lt;/code>和&lt;code>Word2&lt;/code>,每次從&lt;code>Word1&lt;/code>或者&lt;code>Word2&lt;/code>中移除1個Character，問我們最少需要多少步使得2個string一樣。&lt;br>
 首先,我們需要先知道這2個&lt;code>Word&lt;/code>有哪些Character的是一致的。為了能獲得他們之間的最長共同子字串，我們可以透過&lt;code>Longest Commond Substring&lt;/code>來得到他們之間共同子字串的長度，只要每個字串的長度減去LCM的長度，就可以知道各自需要多少步。最後相加起來即可。&lt;br>
 
-&lt;a href="http://localhost:1313/leetcodenotes/lcm" title="Longest Commond Substring Template" >
+&lt;a href="http://localhost:58072/leetcodenotes/lcm" title="Longest Commond Substring Template" >
  Longest Commond Substring Template
  
-&lt;/a>&lt;/p></description></item><item><title>[筆記]Longest Common SubString(最長公共子序列)</title><link>http://localhost:1313/post/coding/lcm/</link><pubDate>Tue, 14 Jun 2022 13:11:28 +0800</pubDate><guid>http://localhost:1313/post/coding/lcm/</guid><description>&lt;h1 id="introduction">Introduction
+&lt;/a>&lt;/p></description></item><item><title>[筆記]Longest Common SubString(最長公共子序列)</title><link>http://localhost:58072/post/coding/lcm/</link><pubDate>Tue, 14 Jun 2022 13:11:28 +0800</pubDate><guid>http://localhost:58072/post/coding/lcm/</guid><description>&lt;h1 id="introduction">Introduction
 &lt;a class="header-anchor" href="#introduction">&lt;/a>
 &lt;/h1>&lt;h2 id="什麼是最長公共子序列">什麼是最長公共子序列?
 &lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%af%e6%9c%80%e9%95%b7%e5%85%ac%e5%85%b1%e5%ad%90%e5%ba%8f%e5%88%97">&lt;/a>
@@ -106,4 +106,4 @@ example&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="要怎麼找到最長公共子序列lcm呢">要怎麼找到最長公共子序列LCM呢?
 &lt;a class="header-anchor" href="#%e8%a6%81%e6%80%8e%e9%ba%bc%e6%89%be%e5%88%b0%e6%9c%80%e9%95%b7%e5%85%ac%e5%85%b1%e5%ad%90%e5%ba%8f%e5%88%97lcm%e5%91%a2">&lt;/a>
 &lt;/h2>&lt;p>我們需要定義一個數組用於保存當前情況下的最優解,也就是使用&lt;code>DP&lt;/code>的方式。我們需要以每個字符最為考量,並一一匹配，最後得出整體最優解。
-&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/imgs/leetcodesHelper/lcm.png" alt="LCM" />&lt;/p></description></item></channel></rss>
+&lt;img src="http://localhost:58072/imgs/img-lazy-loading.gif" data-src="http://localhost:58072/imgs/leetcodesHelper/lcm.png" alt="LCM" />&lt;/p></description></item></channel></rss>

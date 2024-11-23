@@ -4,7 +4,7 @@ description: "balance tree"
 keywords: "balance, tree"
 draft: false
 date: 2024-10-31T15:28:20+08:00
-lastmod: 2024-10-31T15:28:20+08:00
+lastmod: 2024-11-23T15:28:20+08:00
 categories:
   - note
 tags:

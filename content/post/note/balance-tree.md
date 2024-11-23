@@ -46,7 +46,7 @@ math: mathjax
 #mermaid: true
 ---
 ## 簡介
-在講述Balance Tree之前，我們先來看一種情況。現在我們根據數據來建立一棵Binary Search Tree，譬如說以下的數據 : [4,5,6,7,8,9,10], 我們就會建立出以下這顆 Binary Tree:  
+在講述Balance Tree之前，我們先來看一種情況。現在我們根據數據來建立一棵Binary Search Tree，譬如說以下的數據 : [4,5,6,7,8,9,10], 我們就會建立出以下這顆 Binary Search Tree:  
 ![unbalance-tree](/imgs/helper/balance-tree/unblanceTree.png)
 
 從這顆樹上我們會發現它其實就只是一個Linked List，查詢/插入效率還是一樣是O(n)，為了解決這個問題這裡需要**平衡樹**來幫忙解決。 

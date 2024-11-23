@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jackson.tmm</title><link>http://localhost:1313/</link><description>Recent content on Jackson.tmm</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Sun, 10 Nov 2024 15:29:39 +0800</lastBuildDate><atom:link href="http://localhost:1313/rss.xml" rel="self" type="application/rss+xml"/><item><title>2024年軟體工程師(Software engineer)面試總結</title><link>http://localhost:1313/post/share/2024-swe-interview-summary/</link><pubDate>Sun, 10 Nov 2024 15:29:39 +0800</pubDate><guid>http://localhost:1313/post/share/2024-swe-interview-summary/</guid><description>&lt;h2 id="簡介-intro">簡介 Intro
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jackson.tmm</title><link>http://localhost:1313/</link><description>Recent content on Jackson.tmm</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Sat, 23 Nov 2024 17:50:28 +0800</lastBuildDate><atom:link href="http://localhost:1313/rss.xml" rel="self" type="application/rss+xml"/><item><title>說明</title><link>http://localhost:1313/books/readme/</link><pubDate>Sat, 23 Nov 2024 17:50:28 +0800</pubDate><guid>http://localhost:1313/books/readme/</guid><description>&lt;h3 id="簡介">簡介
+&lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
+&lt;/h3>&lt;p>這邊會分享我閱讀過的書籍並跟大家分享我的讀後感或者是書本有趣的地方。&lt;/p></description></item><item><title>2024年軟體工程師(Software engineer)面試總結</title><link>http://localhost:1313/post/share/2024-swe-interview-summary/</link><pubDate>Sun, 10 Nov 2024 15:29:39 +0800</pubDate><guid>http://localhost:1313/post/share/2024-swe-interview-summary/</guid><description>&lt;h2 id="簡介-intro">簡介 Intro
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b-intro">&lt;/a>
 &lt;/h2>&lt;p>在過去的幾個月裡一直在找新的工作機會，從2024/8/27起開始在各大招聘平台投遞履歷以及約面談。這篇文章主要是想分享這段時間面試經歷以及復盤面試！&lt;/p></description></item><item><title>[筆記] 平衡樹 Balance Tree</title><link>http://localhost:1313/post/note/balance-tree/</link><pubDate>Thu, 31 Oct 2024 15:28:20 +0800</pubDate><guid>http://localhost:1313/post/note/balance-tree/</guid><description>&lt;h2 id="簡介">簡介
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
@@ -40,7 +42,7 @@ B+ 樹是一種平衡樹(Balance Tree)，而B+ 樹可以包含二個或以上的
 &lt;/ol>
 &lt;h3 id="參考">參考
 &lt;a class="header-anchor" href="#%e5%8f%83%e8%80%83">&lt;/a>
-&lt;/h3></description></item><item><title>說明</title><link>http://localhost:1313/english/init/</link><pubDate>Sat, 28 Sep 2024 21:51:01 +0800</pubDate><guid>http://localhost:1313/english/init/</guid><description>&lt;h3 id="簡介">簡介
+&lt;/h3></description></item><item><title>說明</title><link>http://localhost:1313/english/readme/</link><pubDate>Sat, 28 Sep 2024 21:51:01 +0800</pubDate><guid>http://localhost:1313/english/readme/</guid><description>&lt;h3 id="簡介">簡介
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
 &lt;/h3>&lt;p>開啟此分類的主要目的是想要學習英文這們語言。深知自己的英文能力沒有到很好，甚至是很爛。因此想要開啟一個分類來紀錄學習英文的過程。&lt;/p>
 &lt;h3 id="方法">方法

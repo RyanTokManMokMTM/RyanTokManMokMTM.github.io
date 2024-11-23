@@ -56,13 +56,18 @@ main:
     url: /english
     pre: language
     weight: 7
+  - identifier: books
+    name: Reading 閱讀區
+    url: /books
+    pre: book
+    weight: 8
   - identifier: achievement
     name: Achievement 成就
     url: /achievement
     pre: trophy
-    weight: 6
+    weight: 9
   - identifier: resources
     name: Resources 資源
     url: /resources
     pre: file
-    weight: 8
+    weight: 10

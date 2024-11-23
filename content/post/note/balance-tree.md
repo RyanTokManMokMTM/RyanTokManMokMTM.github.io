@@ -2,7 +2,7 @@
 title: "[筆記] 平衡樹 Balance Tree"
 description: "balance tree"
 keywords: "balance, tree"
-draft: true
+draft: false
 date: 2024-10-31T15:28:20+08:00
 lastmod: 2024-10-31T15:28:20+08:00
 categories:

@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Data Structure on Jackson.tmm</title><link>http://localhost:58072/tags/data-structure/</link><description>Recent content in Data Structure on Jackson.tmm</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Mon, 28 Oct 2024 12:23:11 +0800</lastBuildDate><atom:link href="http://localhost:58072/tags/data-structure/rss.xml" rel="self" type="application/rss+xml"/><item><title>[筆記] B+ Tree</title><link>http://localhost:58072/post/note/b+_tree/</link><pubDate>Mon, 28 Oct 2024 12:23:11 +0800</pubDate><guid>http://localhost:58072/post/note/b+_tree/</guid><description>&lt;h3 id="什麼是b-樹">什麼是B+ 樹
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Data Structure on Jackson.tmm</title><link>http://localhost:1313/tags/data-structure/</link><description>Recent content in Data Structure on Jackson.tmm</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Thu, 31 Oct 2024 15:28:20 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/data-structure/rss.xml" rel="self" type="application/rss+xml"/><item><title>[筆記] 平衡樹 Balance Tree</title><link>http://localhost:1313/post/note/balance-tree/</link><pubDate>Thu, 31 Oct 2024 15:28:20 +0800</pubDate><guid>http://localhost:1313/post/note/balance-tree/</guid><description>&lt;h2 id="簡介">簡介
+&lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
+&lt;/h2>&lt;p>在講述Balance Tree之前，我們先來看一種情況。現在我們根據數據來建立一棵Binary Search Tree，譬如說以下的數據 : [4,5,6,7,8,9,10], 我們就會建立出以下這顆 Binary Tree:&lt;br>
+&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/imgs/helper/balance-tree/unblanceTree.png" alt="unbalance-tree" />&lt;/p></description></item><item><title>[筆記] B+ Tree</title><link>http://localhost:1313/post/note/b+_tree/</link><pubDate>Mon, 28 Oct 2024 12:23:11 +0800</pubDate><guid>http://localhost:1313/post/note/b+_tree/</guid><description>&lt;h3 id="什麼是b-樹">什麼是B+ 樹
 &lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%afb-%e6%a8%b9">&lt;/a>
 &lt;/h3>&lt;p>我們先看看B+ tree的定義，再來看看他長什麼樣子：&lt;br>
 **定義: **
@@ -25,7 +28,7 @@ B+ 樹是一種平衡樹(Balance Tree)，而B+ 樹可以包含二個或以上的
 &lt;/ol>
 &lt;h3 id="參考">參考
 &lt;a class="header-anchor" href="#%e5%8f%83%e8%80%83">&lt;/a>
-&lt;/h3></description></item><item><title>[筆記]TrieTree(前綴樹/字典樹)</title><link>http://localhost:58072/post/note/trietree/</link><pubDate>Tue, 21 Jun 2022 11:19:28 +0800</pubDate><guid>http://localhost:58072/post/note/trietree/</guid><description>&lt;h1 id="introduction">Introduction
+&lt;/h3></description></item><item><title>[筆記]TrieTree(前綴樹/字典樹)</title><link>http://localhost:1313/post/note/trietree/</link><pubDate>Tue, 21 Jun 2022 11:19:28 +0800</pubDate><guid>http://localhost:1313/post/note/trietree/</guid><description>&lt;h1 id="introduction">Introduction
 &lt;a class="header-anchor" href="#introduction">&lt;/a>
 &lt;/h1>&lt;h2 id="什麼是trietree">什麼是TrieTree?
 &lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%aftrietree">&lt;/a>

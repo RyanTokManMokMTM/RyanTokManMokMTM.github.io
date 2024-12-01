@@ -1,5 +1,5 @@
 ---
-title: "[筆記] 淺談資料庫事務(Transcation) Transaction"
+title: "[筆記] 淺談資料庫事務(Transcation)"
 description: "database-transcation"
 keywords: "database,transcation"
 draft: false

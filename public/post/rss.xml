@@ -1,46 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Jackson.tmm</title><link>http://localhost:1313/post/</link><description>Recent content in Posts on Jackson.tmm</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Sun, 10 Nov 2024 15:29:39 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/rss.xml" rel="self" type="application/rss+xml"/><item><title>2024年軟體工程師(Software engineer)面試總結</title><link>http://localhost:1313/post/share/2024-swe-interview-summary/</link><pubDate>Sun, 10 Nov 2024 15:29:39 +0800</pubDate><guid>http://localhost:1313/post/share/2024-swe-interview-summary/</guid><description>&lt;h2 id="簡介-intro">簡介 Intro
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Jackson.tmm</title><link>http://localhost:1313/post/</link><description>Recent content in Posts on Jackson.tmm</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Sat, 23 Nov 2024 22:11:45 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/rss.xml" rel="self" type="application/rss+xml"/><item><title>[筆記]資料庫 - 事務(Transcation) Transaction</title><link>http://localhost:1313/post/note/database-transcation/</link><pubDate>Sat, 23 Nov 2024 22:11:45 +0800</pubDate><guid>http://localhost:1313/post/note/database-transcation/</guid><description>&lt;h2 id="簡介">簡介
+&lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
+&lt;/h2>&lt;p>這篇文章主要是想要討論一下資料庫筆一個重要的概念&lt;strong>事務(Transcation)(Transcation)&lt;/strong>。接下來的文章主要會分成一下幾個部分繼續討論：&lt;/p>
+&lt;ol>
+&lt;li>什麼是資料庫的事務(Transcation)(Transaction)&lt;/li>
+&lt;li>事務(Transcation)的4大特性為何&lt;/li>
+&lt;li>隔離性(ioslation)的探討&lt;/li>
+&lt;li>MVCC和鎖的簡單介紹&lt;/li>
+&lt;/ol>
+&lt;h2 id="什麼是事務(Transcation)">什麼是事務(Transcation)
+&lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%af%e4%ba%8b%e5%8b%99">&lt;/a>
+&lt;/h2>&lt;p>在資料庫系統中，我們都會對數據進行讀寫操作，但是如果我們要對數據做一系列的操作(2個或以上的操作)，正在被操作的數據我們不希望能被其他人修改從而影響了結果，而且即便途中操作失敗，也希望他能回到原本的狀態。而資料庫為我們提供一個這樣的方法使得數據的操作要麼是&lt;strong>全部都成功，要麼全部都是失敗&lt;/strong>，這就是事務(Transcation)(Transcation)，也可以稱之為「交易」。&lt;/p></description></item><item><title>2024年軟體工程師(Software engineer)面試總結</title><link>http://localhost:1313/post/share/2024-swe-interview-summary/</link><pubDate>Sun, 10 Nov 2024 15:29:39 +0800</pubDate><guid>http://localhost:1313/post/share/2024-swe-interview-summary/</guid><description>&lt;h2 id="簡介-intro">簡介 Intro
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b-intro">&lt;/a>
 &lt;/h2>&lt;p>在過去的幾個月裡一直在找新的工作機會，從2024/8/27起開始在各大招聘平台投遞履歷以及約面談。這篇文章主要是想分享這段時間面試經歷以及復盤面試！&lt;/p></description></item><item><title>[筆記] 平衡樹 Balance Tree</title><link>http://localhost:1313/post/note/balance-tree/</link><pubDate>Thu, 31 Oct 2024 15:28:20 +0800</pubDate><guid>http://localhost:1313/post/note/balance-tree/</guid><description>&lt;h2 id="簡介">簡介
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
-&lt;/h2>&lt;p>在講述Balance Tree之前，我們先來看一種情況。現在我們根據數據來建立一棵Binary Search Tree，譬如說以下的數據 : [4,5,6,7,8,9,10], 我們就會建立出以下這顆 Binary Tree:&lt;br>
-&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/imgs/helper/balance-tree/unblanceTree.png" alt="unbalance-tree" />&lt;/p></description></item><item><title>[筆記] Mysql 事務</title><link>http://localhost:1313/post/note/mysql_transcation/</link><pubDate>Mon, 28 Oct 2024 12:23:35 +0800</pubDate><guid>http://localhost:1313/post/note/mysql_transcation/</guid><description>&lt;h3 id="什麼是事務">什麼是事務
-&lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%af%e4%ba%8b%e5%8b%99">&lt;/a>
-&lt;/h3>&lt;h3 id="鎖和mvcc">鎖和MVCC
-&lt;a class="header-anchor" href="#%e9%8e%96%e5%92%8cmvcc">&lt;/a>
-&lt;/h3></description></item><item><title>[筆記]MySQL 索引</title><link>http://localhost:1313/post/note/mysql_index/</link><pubDate>Mon, 28 Oct 2024 12:23:28 +0800</pubDate><guid>http://localhost:1313/post/note/mysql_index/</guid><description>&lt;h3 id="什麼是索引">什麼是索引
-&lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%af%e7%b4%a2%e5%bc%95">&lt;/a>
-&lt;/h3>&lt;h3 id="mysql中如何使用索引">MySQL中如何使用索引
-&lt;a class="header-anchor" href="#mysql%e4%b8%ad%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8%e7%b4%a2%e5%bc%95">&lt;/a>
-&lt;/h3>&lt;h3 id="索引如何在查詢中快速搜尋">索引如何在查詢中快速搜尋
-&lt;a class="header-anchor" href="#%e7%b4%a2%e5%bc%95%e5%a6%82%e4%bd%95%e5%9c%a8%e6%9f%a5%e8%a9%a2%e4%b8%ad%e5%bf%ab%e9%80%9f%e6%90%9c%e5%b0%8b">&lt;/a>
-&lt;/h3></description></item><item><title>[筆記] B+ Tree</title><link>http://localhost:1313/post/note/b+_tree/</link><pubDate>Mon, 28 Oct 2024 12:23:11 +0800</pubDate><guid>http://localhost:1313/post/note/b+_tree/</guid><description>&lt;h3 id="什麼是b-樹">什麼是B+ 樹
-&lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%afb-%e6%a8%b9">&lt;/a>
-&lt;/h3>&lt;p>我們先看看B+ tree的定義，再來看看他長什麼樣子：&lt;br>
-**定義: **
-B+ 樹是一種平衡樹(Balance Tree)，而B+ 樹可以包含二個或以上的子節點，所以是N元平衡樹。 B+ 樹的特點如下：&lt;/p>
-&lt;ol>
-&lt;li>子節點且非葉子節點中包含n個key，其n個key對應一棵n元樹&lt;/li>
-&lt;li>葉子節點包含了key的全部的數據，數據只有在葉子節點中命中&lt;/li>
-&lt;li>子節點包含了其子樹節點的最小/最大的key&lt;/li>
-&lt;li>對於一棵m元的B+樹，每個子節點最多為m-1個key，也就是最多保存m-1筆紀錄。&lt;/li>
-&lt;li>相連葉子節點通過pointer連結&lt;/li>
-&lt;li>節點的元素key的左子樹都是小於這個key，右子樹都是大於或者等於它。&lt;/li>
-&lt;li>子節點/葉子階段都是有序的&lt;/li>
-&lt;/ol>
-&lt;h3 id="b-樹操作">B+ 樹操作
-&lt;a class="header-anchor" href="#b-%e6%a8%b9%e6%93%8d%e4%bd%9c">&lt;/a>
-&lt;/h3>&lt;p>我們知道了B+ 樹有序的了，現在對它進行操作：&lt;/p>
-&lt;ol>
-&lt;li>查詢&lt;/li>
-&lt;li>根據Key來對B+ tree進行Binary Search來查找。不論找到或者找不到，都會從Root到葉子走出一條路徑。&lt;/li>
-&lt;li>從Root開始隨機查詢。&lt;/li>
-&lt;li>插入
-這裡會有不同的情況:&lt;/li>
-&lt;li>移除&lt;/li>
-&lt;/ol>
-&lt;h3 id="參考">參考
-&lt;a class="header-anchor" href="#%e5%8f%83%e8%80%83">&lt;/a>
-&lt;/h3></description></item><item><title>[開發者日記] 聊天通訊APP(完結) - 總結</title><link>http://localhost:1313/post/project/chat-app-final-summary/</link><pubDate>Sun, 21 Apr 2024 23:12:11 +0800</pubDate><guid>http://localhost:1313/post/project/chat-app-final-summary/</guid><description>&lt;h2 id="簡介">簡介
+&lt;/h2>&lt;p>在講述Balance Tree之前，我們先來看一種情況。現在我們根據數據來建立一棵Binary Search Tree，譬如說以下的數據 : [4,5,6,7,8,9,10], 我們就會建立出以下這顆 Binary Search Tree:&lt;br>
+&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/imgs/helper/balance-tree/unblanceTree.png" alt="unbalance-tree" />&lt;/p></description></item><item><title>[開發者日記] 聊天通訊APP(完結) - 總結</title><link>http://localhost:1313/post/project/chat-app-final-summary/</link><pubDate>Sun, 21 Apr 2024 23:12:11 +0800</pubDate><guid>http://localhost:1313/post/project/chat-app-final-summary/</guid><description>&lt;h2 id="簡介">簡介
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
 &lt;/h2>&lt;p>Hi, 已經有一段時間沒有更新了，因為最近在研究多人串流的問題。這篇文章主要是分享我做了些什麼以及對這個project做個總結，這裡的意思就是這個project終於完成了！！花了我近1年的時間呢。&lt;br>
 雖然這個project已完成，但是依然還有些問題，如果我們之後還有這個能力在修復～ 這些問題使得串流沒有這麼的穩定，但還是可以玩的呢！&lt;br>

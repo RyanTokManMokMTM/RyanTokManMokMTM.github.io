@@ -1,4 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>說明</title><url>/books/readme/</url><categories><category>books</category></categories><tags/><content type="html">  簡介 這邊會分享我閱讀過的書籍並跟大家分享我的讀後感或者是書本有趣的地方。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>[筆記] 淺談資料庫事務(Transcation) Transaction</title><url>/post/note/database-transcation/</url><categories><category>note</category></categories><tags><tag>database</tag></tags><content type="html">  簡介 這篇文章主要是想要討論一下資料庫筆一個重要的概念事務(Transcation)(Transcation)。接下來的文章主要會分成一下幾個部分繼續討論：
+什麼是資料庫的事務(Transcation)(Transaction) 事務(Transcation)((Transcation))的4大特性為何 一致性問題和解決方法 MVCC和鎖的簡單介紹 什麼是事務(Transcation) 在資料庫系統中，我們都會對數據進行讀寫操作，但是如果我們要對數據做一系列的操作(2個或以上的操作)，正在被操作的數據我們不希望能被其他人修改從而影響了結果，而且即便途中操作失敗，也希望他能回到原本的狀態。而資料庫為我們提供一個這樣的方法使得數據的操作要麼是全部都成功，要麼全部都是失敗，這就是事務(Transcation)(Transcation)，也可以稱之為「交易」。
+一個很經典的例子「銀行轉帳」，小明給小黃轉100塊。我們期待的操作如下：
+小明帳戶減少100塊 小黃帳戶增加100塊 這2部的操作都應該要成功執行才對，不可能小明的帳戶減少了錢，小黃的帳戶沒有增加錢或者小明的帳戶根本就沒錢，還能成功的吧？所以事務(Transcation)(Transaction)就是確保整個交易能夠都完成，或者都是失敗的情況並rollback會到原本的狀態。
+事務(Transcation)(Tranaction)的4大特性 我們可能經常聽到資料庫的ACID，那ACID到底是什麼？能吃的嗎xD？
+ACID 是原子性(Automicity)、一致性(Consistency)、隔離性(Isolatio)以及永續性(Durablity)的簡寫。所有資料庫的事務(Transcation)(Transcation)的操作都需要符合這4個特性，這也稱之為資料庫的ACID特性。
+原子性(Automicity)
+什麼是原子性呢？簡單的來說就是整個事務(Transcation)的操作要麼就是全部被成功操作，要麼就是全部都操作失敗，不存在一部分成功一部分失敗的情況。 一致性(Consistency)
+什麼是一致性呢？就是修改的數據必須符合定義好的資料庫規則。例如資料欄位型態、外鍵等。 隔離性(Isolation)
+什麼是隔離性？每個獨立的事務(Transcation)是互相獨立的，不應該受到其他事 …  </content></entry><entry><title>說明</title><url>/books/readme/</url><categories><category>books</category></categories><tags/><content type="html">  簡介 這邊會分享我閱讀過的書籍並跟大家分享我的讀後感或者是書本有趣的地方。
   </content></entry><entry><title>2024年軟體工程師(Software engineer)面試總結</title><url>/post/share/2024-swe-interview-summary/</url><categories><category>summary</category></categories><tags><tag>interview</tag></tags><content type="html">  簡介 Intro 在過去的幾個月裡一直在找新的工作機會，從2024/8/27起開始在各大招聘平台投遞履歷以及約面談。這篇文章主要是想分享這段時間面試經歷以及復盤面試！
 履歷投遞數：79個 收到回覆(作業/面試)：4個(作業) + 4個(面試) + 1個面試邀約(已拒) + 1個有發消息但miss掉了 + 1個有聯繫我但沒有後續的 = 11個 獲得offer數：4個 復盤 Review 接下來這裡會詳細的紀錄一下各面試/作業的詳細：
 D : Day
@@ -16,7 +25,7 @@ D+7: 收到assignment邀請
 第三家: WeLab Bank - Fullstack Developer D+0: 投遞履歷(08/28)
 D+15: 收到HR回覆，並詢問寫Written test的意願
 D+17: 收到Written test邀請
-D+19: 完 …  </content></entry><entry><title>[筆記] 平衡樹 Balance Tree</title><url>/post/note/balance-tree/</url><categories><category>note</category></categories><tags><tag>data structure</tag></tags><content type="html">  簡介 在講述Balance Tree之前，我們先來看一種情況。現在我們根據數據來建立一棵Binary Search Tree，譬如說以下的數據 : [4,5,6,7,8,9,10], 我們就會建立出以下這顆 Binary Tree:
+D+19: 完 …  </content></entry><entry><title>[筆記] 平衡樹 Balance Tree</title><url>/post/note/balance-tree/</url><categories><category>note</category></categories><tags><tag>data structure</tag></tags><content type="html">  簡介 在講述Balance Tree之前，我們先來看一種情況。現在我們根據數據來建立一棵Binary Search Tree，譬如說以下的數據 : [4,5,6,7,8,9,10], 我們就會建立出以下這顆 Binary Search Tree:
 從這顆樹上我們會發現它其實就只是一個Linked List，查詢/插入效率還是一樣是O(n)，為了解決這個問題這裡需要平衡樹來幫忙解決。
 什麼是平衡樹 從上述可見，查詢的效率是取決於樹的深度，那是不是可以將過深的分支平均到其他分支，使得每顆子樹的深度都差不多，是不是就可以大大提高查詢效率了呢？因此，平衡樹(Balance tree)就是為了解決這個問題而誕生的！ 將上述例子轉換成平衡樹的話，會變成這個樣子： 這樣我們查詢的效率從O(n)減少到了O(logn)。
 接下來會簡單介紹幾個比較常見的平衡樹
@@ -25,10 +34,7 @@ AVL樹有以下特點：
 基於二元樹(BST)數據結構 通過自旋的方式建構平衡樹 每個節點保存1筆數據 左右子樹是一棵平衡樹 子節點保存1份數據 自旋方式 找到不平衡tree的根(root)節點對該節點做旋轉，也就是最近的一個祖先(ancestor)。 對不平衡樹的root的3個節點做旋轉，其他節點旋時暫時無視，旋轉過後再處理(放到合理的位置)
 左子樹不平衡
 左左旋轉 - LL rotation 就是左子樹的左邊跟右子樹不平衡，這個選擇比較簡單： 對不平衡樹的根節點做右旋轉就可以了。 在fig 2中，對A節點做了旋轉後，BR節點會變成了A節點的左子樹，因為BR節點在原本的樹中為右子樹，所以永遠都會在B節點的右邊且比A小。 左右旋轉 - LR rotation 對不平衡樹的左子樹節點做左旋，再對根節點做右旋 右子樹不平衡 - 跟上面差不多，只是做反方向
-右右不平衡 - RR rotation 對不平衡的根節點做左旋轉 在fig 2中，對A節點做了旋轉後，BL節點會變成了A節點的右子樹，因為BRL節點在原本的樹中為左子樹，所以永遠都會在B節點的左邊且比A大。 右左不平衡 - RL rotation 對不平衡樹的左子樹節點做右 …  </content></entry><entry><title>[筆記] Mysql 事務</title><url>/post/note/mysql_transcation/</url><categories><category>note</category></categories><tags><tag>mysql</tag><tag><no value=/></tags><content type="html">  什麼是事務 鎖和MVCC   </content></entry><entry><title>[筆記]MySQL 索引</title><url>/post/note/mysql_index/</url><categories><category>note</category></categories><tags><tag>mysql</tag><tag><no value=/></tags><content type="html">  什麼是索引 MySQL中如何使用索引 索引如何在查詢中快速搜尋   </content></entry><entry><title>[筆記] B+ Tree</title><url>/post/note/b+_tree/</url><categories><category>note</category></categories><tags><tag>data structure</tag></tags><content type="html">  什麼是B+ 樹 我們先看看B+ tree的定義，再來看看他長什麼樣子：
-**定義: ** B+ 樹是一種平衡樹(Balance Tree)，而B+ 樹可以包含二個或以上的子節點，所以是N元平衡樹。 B+ 樹的特點如下：
-子節點且非葉子節點中包含n個key，其n個key對應一棵n元樹 葉子節點包含了key的全部的數據，數據只有在葉子節點中命中 子節點包含了其子樹節點的最小/最大的key 對於一棵m元的B+樹，每個子節點最多為m-1個key，也就是最多保存m-1筆紀錄。 相連葉子節點通過pointer連結 節點的元素key的左子樹都是小於這個key，右子樹都是大於或者等於它。 子節點/葉子階段都是有序的 B+ 樹操作 我們知道了B+ 樹有序的了，現在對它進行操作：
-查詢 根據Key來對B+ tree進行Binary Search來查找。不論找到或者找不到，都會從Root到葉子走出一條路徑。 從Root開始隨機查詢。 插入 這裡會有不同的情況: 移除 參考   </content></entry><entry><title>說明</title><url>/english/readme/</url><categories><category>english</category></categories><tags/><content type="html">  簡介 開啟此分類的主要目的是想要學習英文這們語言。深知自己的英文能力沒有到很好，甚至是很爛。因此想要開啟一個分類來紀錄學習英文的過程。
+右右不平衡 - RR rotation 對不平衡的根節點做左旋轉 在fig 2中，對A節點做了旋轉後，BL節點會變成了A節點的右子樹，因為BRL節點在原本的樹中為左子樹，所以永遠都會在B節點的左邊且比A大。 右左不平衡 - RL rotation 對不平衡樹的左 …  </content></entry><entry><title>說明</title><url>/english/readme/</url><categories><category>english</category></categories><tags/><content type="html">  簡介 開啟此分類的主要目的是想要學習英文這們語言。深知自己的英文能力沒有到很好，甚至是很爛。因此想要開啟一個分類來紀錄學習英文的過程。
 方法 主要是會透過閱讀文章的方式來學習，從各個文章中學習不同的句子和單字。 但不會限制在於文章可能會出現不同形式來學習
   </content></entry><entry><title>71天的日本之旅</title><url>/memories/jp-trip/</url><categories><category>travel</category></categories><tags><tag>jp</tag><tag>japen</tag></tags><content type="html">  71天 - 日本體驗生活📝 2024年5月1日 ～ 2024年7月10日 行程 東京✓ 新宿 ✓ 原宿 ✓ 澀谷 ✓ 下北澤 ✓ 吉祥寺 ✓ 中野 ✓ 上野 ✓ 熱海 - 海上花火大會✓ 鐮倉 ✓ 江之島 ✓ 台場 ✓ 舞濱/迪士尼 ✓ 橫濱 ✓ 銀座 ✓ 池袋 ✓ 秋葉原 ✓ 春日部 ✓ 淺草 ✓ 豐島園 - 東京哈利波特影城 ✓ 東京車站 ✓ 阿佐谷 ✓ 高圓寺 ✓ 日本橋 ✓ 大阪✓ 難波 ✓ 櫻川 ✓ 心齋橋 ✓ 櫻島 - 日本環球影城 ✓ 大阪城 ✓ 梅田 ✓ 恵美須町 - 通天閣 ✓ 奈良 - 奈良公園 ✓ 京都✓ 京都車站 ✓ 清水寺 ✓ 金閣寺 ✓ 八板神社 ✓ 春日大社 ✓ 平安神宮 ✓ 伏見稻荷大社 ✓ 御法神社 ✓ 京都國立博物館 ✓ 錦市場 ✓ 嵐山 名古屋✓ 名古屋城 ✓ 名古屋站 ✓ 名古屋港水族館 ✓ 感想 日本街道很乾淨 食物有點鹹和沒什麼蔬菜卻還不錯吃 東京JR很方便但線路很多有點麻煩 食物種類不算很多 夏天很熱切很乾燥 女生都會化妝、包包會掛娃娃和鞋子都很高 日本人都很有禮貌 電車裡面很安靜 新幹線有bug，出了新幹線的站但還在JR站，如果去了其他地方原本的車票就出不去，要去工作人員那邊補錢 如果同一站出入必須去工作人員哪裡 垃圾分類還挺麻煩的 國內飛機航班比新幹線還便宜 巴士都是先讓乘客下車，才到其他乘客上車 巴士是後面上車，前門下車且下車在付款 巴士的車費不論哪裡上車/下車都是同一車費 東京都是坐電車、京都卻是巴士比較方便 日本用英文不太能溝通 整體感受 整體來說這趟路程雖然花了1,200,000+日幣，但是我覺得值得花這麼多錢去換來這麼一個體驗！如果下次還有機會，還是會繼續體驗的😁！
   </content></entry><entry><title>7月份的日本 - 結束</title><url>/memories/jp-july/</url><categories><category>travel</category></categories><tags><tag>jp</tag><tag>japen</tag></tags><content type="html">  7月份在日本體驗生活的日記 2024年7月1日～2024年7月10日 行程 這是這趟旅程的最後的10天了，但是實際遊玩時間就只有9天而已。剩下的這9天也沒有浪費，也有去不同的地方看看。

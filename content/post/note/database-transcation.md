@@ -62,7 +62,7 @@ toc: true
 
 這2部的操作都應該要成功執行才對，不可能小明的帳戶減少了錢，小黃的帳戶沒有增加錢或者小明的帳戶根本就沒錢，還能成功的吧？所以事務(Transcation)(Transaction)就是確保整個交易能夠都完成，或者都是失敗的情況並rollback會到原本的狀態。
 
-## 事務(Transcation)(Tranaction)的4大特性
+## 事務(Transcation)的4大特性
 我們可能經常聽到資料庫的ACID，那ACID到底是什麼？能吃的嗎xD？  
 ACID 是原子性(Automicity)、一致性(Consistency)、隔離性(Isolatio)以及永續性(Durablity)的簡寫。所有資料庫的事務(Transcation)(Transcation)的操作都需要符合這4個特性，這也稱之為資料庫的ACID特性。
 

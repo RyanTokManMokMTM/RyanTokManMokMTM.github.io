@@ -1,6 +1,187 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jackson.tmm</title><link>http://localhost:1313/</link><description>Recent content on Jackson.tmm</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Sun, 01 Dec 2024 22:25:45 +0800</lastBuildDate><atom:link href="http://localhost:1313/rss.xml" rel="self" type="application/rss+xml"/><item><title>[筆記] 淺談資料庫事務(Transcation) Transaction</title><link>http://localhost:1313/post/note/database-transcation/</link><pubDate>Sat, 23 Nov 2024 22:11:45 +0800</pubDate><guid>http://localhost:1313/post/note/database-transcation/</guid><description>&lt;h2 id="簡介">簡介
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jackson.tmm</title><link>http://localhost:1313/</link><description>Recent content on Jackson.tmm</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Mon, 02 Dec 2024 23:31:33 +0800</lastBuildDate><atom:link href="http://localhost:1313/rss.xml" rel="self" type="application/rss+xml"/><item><title>[筆記] 資料庫索引(index)</title><link>http://localhost:1313/post/note/database-index/</link><pubDate>Mon, 02 Dec 2024 23:31:33 +0800</pubDate><guid>http://localhost:1313/post/note/database-index/</guid><description>&lt;h2 id="前言">前言
+&lt;a class="header-anchor" href="#%e5%89%8d%e8%a8%80">&lt;/a>
+&lt;/h2>&lt;p>之前的文章中，我們有簡單探討過事務相關的課題，而在這篇文章就主要討論 Index 索引相關的課題！ 而索引也跟B+ tree 相關，如果不了解B+ tree的同學可以去參考之前討論平衡樹的文章。&lt;/p>
+&lt;h2 id="簡介">簡介
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
-&lt;/h2>&lt;p>這篇文章主要是想要討論一下資料庫筆一個重要的概念&lt;strong>事務(Transcation)&lt;/strong>。接下來的文章主要會分成一下幾個部分繼續討論：&lt;/p></description></item><item><title>說明</title><link>http://localhost:1313/books/readme/</link><pubDate>Sat, 23 Nov 2024 17:50:28 +0800</pubDate><guid>http://localhost:1313/books/readme/</guid><description>&lt;h3 id="簡介">簡介
+&lt;/h2>&lt;p>不知道大家有沒有在學習或者在網上在找資料優惠資料庫查詢效率的時候大部分的答案都是說「&lt;strong>加索引&lt;/strong>」，在這篇文章中就會對「索引」進行簡單的探討。
+在開始之前想先給讀者一些問題進行思考，並在閱讀本文過後再給出回答：&lt;/p>
+&lt;ol>
+&lt;li>什麼是索引？&lt;/li>
+&lt;li>為什麼加了「索引」可以提高查詢效率？&lt;/li>
+&lt;li>加索引是否就能提高效率，會造成其他問題嗎？&lt;/li>
+&lt;/ol>
+&lt;h2 id="索引index">索引(Index)
+&lt;a class="header-anchor" href="#%e7%b4%a2%e5%bc%95index">&lt;/a>
+&lt;/h2>&lt;h4 id="什麼是索引">什麼是索引
+&lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%af%e7%b4%a2%e5%bc%95">&lt;/a>
+&lt;/h4>&lt;p>相信大家都有看過書對吧？沒看過也沒有關係，這邊就簡單介紹一下索引的概念吧！&lt;br>
+如果大家在要幾百頁的書本裡面找到某一個特定的資料，那我們是不是會選擇到書本目錄中尋找呢？而這一頁也就是所謂的「目錄/索引頁(Index)」，透過查閱索引頁就能很快的找到&lt;/p>
+&lt;p>&lt;strong>書本目錄為例：&lt;/strong>&lt;br>
+&lt;strong>Harry Potter And The Chamber Of Secrets 的目錄頁：&lt;/strong>&lt;br>
+&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/imgs/helper/sql-index/harry-potter-index.png" alt="book-index" />&lt;/p>
+&lt;p>如果我們要看&lt;em>Ch.9&lt;/em>，透過查看目錄就可以知道它在書本的 page 148，直接跳到148頁就好了。&lt;/p>
+&lt;p>在資料庫的層面上，也是一樣的情況，我們可以直接透過索引來快速的找到資料。那資料庫的索引到底長什麼樣子呢？&lt;br>
+假設我們有以下情境：
+&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/imgs/helper/sql-index/data.png" alt="data" />&lt;/p>
+&lt;p>現在從圖中我們可以看得出來，數據頁1因滿了，插入新數據後就會被分成兩頁了，這樣如果我們要查詢數據的時候要怎麼知道數據都放在了那一頁上呢？&lt;br>
+這裡我們是不是就需要一個新的數據頁來保存那些數據在那一頁，而這個用來保存數據的頁就叫做&lt;strong>索引頁&lt;/strong>。
+&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/imgs/helper/sql-index/index-page.png" alt="index-page" />&lt;/p>
+&lt;p>隨著數據的增加，索引頁也會增加，也就變成我們我們熟悉的「B+ Tree」，所以索引樹也就是B+ Tree。
+&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/imgs/helper/sql-index/B&amp;#43;index-tree.png" alt="B&amp;#43;index-page" />&lt;/p>
+&lt;h4 id="資料庫索引的種類">資料庫索引的種類
+&lt;a class="header-anchor" href="#%e8%b3%87%e6%96%99%e5%ba%ab%e7%b4%a2%e5%bc%95%e7%9a%84%e7%a8%ae%e9%a1%9e">&lt;/a>
+&lt;/h4>&lt;ol>
+&lt;li>Primary key index(主鍵索引/聚簇索引)&lt;/li>
+&lt;li>Secondary Index (普通索引 / 二級索引)&lt;/li>
+&lt;li>Composite Index (複合索引 / 聯合索引)&lt;/li>
+&lt;/ol>
+&lt;h5 id="primary-key-index主鍵索引聚簇索引">Primary key index(主鍵索引/聚簇索引)
+&lt;a class="header-anchor" href="#primary-key-index%e4%b8%bb%e9%8d%b5%e7%b4%a2%e5%bc%95%e8%81%9a%e7%b0%87%e7%b4%a2%e5%bc%95">&lt;/a>
+&lt;/h5>&lt;p>主鍵索引是一種唯一的索引，由InnnoDB自己生成的index。
+主鍵索引有以下特點：&lt;/p>
+&lt;ol>
+&lt;li>主鍵索引樹中的非葉子節點用單鏈表連接。&lt;/li>
+&lt;li>主鍵索引樹中的葉子節點中包含了完整的資料&lt;/li>
+&lt;/ol>
+&lt;h5 id="secondary-index-普通索引--二級索引">Secondary Index (普通索引 / 二級索引)
+&lt;a class="header-anchor" href="#secondary-index-%e6%99%ae%e9%80%9a%e7%b4%a2%e5%bc%95--%e4%ba%8c%e7%b4%9a%e7%b4%a2%e5%bc%95">&lt;/a>
+&lt;/h5>&lt;p>主鍵索引只有在查詢條件包含主鍵時，才會生效。如果要查詢的條件不包含主鍵，那麼就不會生效。怎麼辦呢？ 若要加快其他條件的查詢效率，我們可以為條件添加一個索引。&lt;strong>添加索引後，會為該條件建立一顆新的索引頁&lt;/strong>。 也就是主建索引頁跟二級索引頁是分開的。&lt;br>
+為&lt;code>age&lt;/code>這個欄位了一個index，就會建立一個新的索引頁。而這個二級索引頁跟主鍵索引頁的區別是：&lt;/p>
+&lt;ol>
+&lt;li>二級索引頁除了包含主鍵ID外，還包含了age這個欄位的值。&lt;/li>
+&lt;li>二級索引頁中的葉子節點不包含全部的數據。&lt;/li>
+&lt;li>二級索引頁排序根據age欄位的值。&lt;/li>
+&lt;/ol>
+&lt;h5 id="composite-index-複合索引--聯合索引">Composite Index (複合索引 / 聯合索引)
+&lt;a class="header-anchor" href="#composite-index-%e8%a4%87%e5%90%88%e7%b4%a2%e5%bc%95--%e8%81%af%e5%90%88%e7%b4%a2%e5%bc%95">&lt;/a>
+&lt;/h5>&lt;p>複合索引（Composite Index）是指在一個資料表中同時使用多個欄位來建立索引的情況。這邊跟普通索引的差不多的，只是建立的索引會包含多個不同的欄位。
+例如為&lt;code>age&lt;/code>和&lt;code>name&lt;/code>這兩個欄位建立一個複合索引。不過這裡值得注意的是,&lt;strong>建立(&lt;code>age&lt;/code>,&lt;code>namge&lt;/code>)以及建立(&lt;code>name&lt;/code>,&lt;code>age&lt;/code>)是不一樣的，他們會建立不同索引樹！&lt;/strong>
+這邊先不說這兩個索引樹的差別，先賣個關子xD。
+而這個複合索引頁跟二級索引的區別是：&lt;/p>
+&lt;ol>
+&lt;li>複合索引除了主鍵ID外，還包含了多個欄位的數據。&lt;/li>
+&lt;li>其他的二級索引無疑&lt;/li>
+&lt;/ol>
+&lt;p>在討論其他課題前，在這邊有一條問題要大家思考：&lt;br>
+Q: &lt;strong>除了主鍵索引樹外，主建ID在這邊的作用會是什麼呢？ 這裡交給讀者思考一下，哈哈哈。&lt;/strong>&lt;/p>
+&lt;h4 id="innodb索引規則">InnoDB索引規則
+&lt;a class="header-anchor" href="#innodb%e7%b4%a2%e5%bc%95%e8%a6%8f%e5%89%87">&lt;/a>
+&lt;/h4>&lt;p>在討論添加索引的規則之前，我們先來看看一句查詢是如何透過索引來找到資料的。
+假設我們現在有如下這個資料庫表：
+&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/imgs/helper/sql-index/example-index-user.png" alt="user-example" />
+&lt;em>這邊只是簡單的示範一下，圖中只包含前幾筆資料用作演示&lt;/em>&lt;/p>
+&lt;h5 id="查詢條件包含主鍵">查詢條件包含主鍵
+&lt;a class="header-anchor" href="#%e6%9f%a5%e8%a9%a2%e6%a2%9d%e4%bb%b6%e5%8c%85%e5%90%ab%e4%b8%bb%e9%8d%b5">&lt;/a>
+&lt;/h5>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2;">&lt;code class="language-sql" data-lang="sql">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">select&lt;/span> &lt;span style="color:#f92672">*&lt;/span> &lt;span style="color:#66d9ef">from&lt;/span> &lt;span style="color:#66d9ef">user&lt;/span> &lt;span style="color:#66d9ef">where&lt;/span> id &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">12&lt;/span>;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>因為我們的User表格包含了主鍵索引樹，對主鍵索引樹進行Binary search就很快的找到了，id = 12的資料。
+&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/imgs/helper/sql-index/pk-index-search.png" alt="pk-index-search" />
+&lt;em>查詢路徑為橘色路徑&lt;/em>
+最後得出結果為:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;id&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">12&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;Jonna&amp;#34;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;age&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">18&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>從上面的圖中可以看到,查詢條件包含了主鍵的情況下，透過索引就很快的找到資料。&lt;/p>
+&lt;h5 id="查詢條件不包含主鍵">查詢條件不包含主鍵
+&lt;a class="header-anchor" href="#%e6%9f%a5%e8%a9%a2%e6%a2%9d%e4%bb%b6%e4%b8%8d%e5%8c%85%e5%90%ab%e4%b8%bb%e9%8d%b5">&lt;/a>
+&lt;/h5>&lt;p>現在為User表格添加二級以及聯合索引,索引分別為一下：&lt;/p>
+&lt;p>二級索引： &lt;code>age&lt;/code>, 並生成一些索引樹(index), 這邊我們簡稱為「Age 二級索引樹」。
+&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/imgs/helper/sql-index/2nd-index-tree.png" alt="age-2nd-index" />&lt;/p>
+&lt;p>聯合索引： （&lt;code>age&lt;/code>,&lt;code>name&lt;/code>） 並生成一些索引樹(index), 這邊我們簡稱為「Age&amp;amp;Name 聯合索引樹」。&lt;br>
+&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/imgs/helper/sql-index/composite-index-tree.png" alt="composite-index" />&lt;/p>
+&lt;p>從上面圖可以看得出來 &lt;em>「二級索引」&lt;/em> 以及 &lt;em>「聯合索引」&lt;/em> 的主要區別是:&lt;/p>
+&lt;ul>
+&lt;li>聯合索引會包含1個或者多個非唯一欄位的數據&lt;/li>
+&lt;li>二級索引會包含1個唯一欄位的數據&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;p>現在來模擬包含「二級索引」以及「聯合索引」的查詢情境：&lt;/p>
+&lt;ol>
+&lt;li>查詢「二級索引」的查詢語句&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2;">&lt;code class="language-sql" data-lang="sql">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">select&lt;/span> &lt;span style="color:#f92672">`&lt;/span>id&lt;span style="color:#f92672">`&lt;/span>,&lt;span style="color:#f92672">`&lt;/span>age&lt;span style="color:#f92672">`&lt;/span> &lt;span style="color:#66d9ef">from&lt;/span> &lt;span style="color:#66d9ef">user&lt;/span> &lt;span style="color:#66d9ef">where&lt;/span> age &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">18&lt;/span>;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>這裡的查詢語句包含了 &lt;code>where age = 18&lt;/code> 這個查詢條件，而且我們也為&lt;code>age&lt;/code>這個欄位建立了索引，所以直接透過「Age 二級索引樹」查詢資料，以下為查詢路徑:
+&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/imgs/helper/sql-index/2nd-index-search.png" alt="age-2nd-index-search" />&lt;/p>
+&lt;p>從圖中可以清晰看到，透過Binary Search 很快就能找到&lt;code>age = 18&lt;/code>的資料。而在葉子節點中，也包含了查詢的資料 (select &lt;code>id&lt;/code>,&lt;code>age&lt;/code>)，因此直接返回就好了。
+最終結果為：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;id&amp;#34;&lt;/span> : &lt;span style="color:#ae81ff">54&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;age&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">18&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
+&lt;li>查詢「聯合索引」的查詢語句&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2;">&lt;code class="language-sql" data-lang="sql">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">select&lt;/span> &lt;span style="color:#f92672">`&lt;/span>id&lt;span style="color:#f92672">`&lt;/span>, &lt;span style="color:#f92672">`&lt;/span>age&lt;span style="color:#f92672">`&lt;/span>, &lt;span style="color:#f92672">`&lt;/span>name&lt;span style="color:#f92672">`&lt;/span> &lt;span style="color:#66d9ef">from&lt;/span> &lt;span style="color:#66d9ef">user&lt;/span> &lt;span style="color:#66d9ef">where&lt;/span> age &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">89&lt;/span> &lt;span style="color:#66d9ef">and&lt;/span> name &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;Ken&amp;#34;&lt;/span>;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>這裡的查詢語句包含了 &lt;code>where age = 89 and name = &amp;quot;Ken&amp;quot;&lt;/code> 這個查詢條件，而且我們也為&lt;code>age&lt;/code>和&lt;code>name&lt;/code>欄位建立了聯合索引，所以直接透過「Age&amp;amp;Name 聯合索引樹」查詢資料，以下為查詢路徑:
+&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/imgs/helper/sql-index/composite-index-search.png" alt="composite-index-search" />
+從圖中可以清晰看到，透過Binary Search 很快就能找到&lt;code>age = 89&lt;/code>和&lt;code>name = &amp;quot;Ken&amp;quot;&lt;/code>的資料。而在葉子節點中，也包含了查詢的資料 (select &lt;code>id&lt;/code>,&lt;code>age&lt;/code>,&lt;code>name&lt;/code>)，因此直接返回就好了。
+最終結果為：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2;">&lt;code class="language-json" data-lang="json">&lt;span style="display:flex;">&lt;span>[
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;id&amp;#34;&lt;/span> : &lt;span style="color:#ae81ff">44&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;age&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">89&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;Ken&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> },
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;id&amp;#34;&lt;/span> : &lt;span style="color:#ae81ff">77&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;age&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">89&lt;/span>,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f92672">&amp;#34;name&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;Ken&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>有人可能會問：&lt;strong>「上面兩個查詢語句都包含了查詢『索引樹的數據』，但如果要獲取其他數據怎麼辦？」&lt;/strong>&lt;br>
+還記得上面有問過讀者一個問題嗎？&lt;strong>「ID在除了主建索引樹外的索引中的作用會是什麼呢？」&lt;/strong>。這裡就可以回答以上的這個問題了，哈哈哈！&lt;br>
+我們有了這個主鍵ID，是不是就拿著這個ID回到主鍵索引樹就可以獲取完整的數據了(主鍵索引樹葉子包含了完整的數據)! 這個透過其他索引樹拿取ID再回到主鍵索引樹獲取數據的方式就是 &lt;strong>「回表 (Back to the table)」&lt;/strong>。&lt;/p>
+&lt;p>但是除了回表外，這裡的ID還有另外的作用。就是當數據都一樣的情況下，怎麼排序？因為主鍵是唯一的，是不是就可以透過ID來排序了！&lt;br>
+&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/imgs/helper/sql-index/duplicate-data-sorting-by-id.png" alt="duplicated-data-sorting" />&lt;/p>
+&lt;h4 id="運用索引">運用索引
+&lt;a class="header-anchor" href="#%e9%81%8b%e7%94%a8%e7%b4%a2%e5%bc%95">&lt;/a>
+&lt;/h4>&lt;p>從上面的介紹過後，我們都對「索引是什麼」以及「索引如何加快查詢」有個基本的理解，但是在運用上，我們要如何運用索引提高查詢效率呢？接下來給大家介紹一下。&lt;br>
+其實要進一步提高索引的效率，就是減少「回表」這個動作。&lt;/p>
+&lt;p>為什麼要減少回表或者避免回表呢？&lt;br>
+假設現在我們獲取到了查詢數據的ID，需要透過查詢主鍵索引樹來獲取完整的數據，主鍵索引樹數據如果沒有在記憶體中，是不是就是需要從硬碟從讀取出來，然後再將這些數據回到記憶體中，這樣的話就是一個回表的動作，這樣的話對查詢效率來說是不好的。 所以能避免IO就避免IO的操作！&lt;/p>
+&lt;p>以下介紹的方法都是減少回表的方法，這些方法都是在查詢的時候透過索引來獲取數據的。&lt;/p>
+&lt;h5 id="索引覆蓋index-cover">索引覆蓋(Index Cover)
+&lt;a class="header-anchor" href="#%e7%b4%a2%e5%bc%95%e8%a6%86%e8%93%8bindex-cover">&lt;/a>
+&lt;/h5>&lt;p>其實上面的例子就有出現過索引覆蓋的方法，簡單來說就是查詢的數據在索引樹中已經包含了，也就沒有必要再透過回表的方式來獲取數據了。&lt;br>
+例如上述的&lt;code>select age from user where age = 18&lt;/code> 這個查詢語句中，查詢的數據在二級索引樹中已經包含了，所以就不用再透過回表的方式來獲取數據了，直接返回就好了。&lt;/p>
+&lt;h5 id="索引下推index-pushdown">索引下推(Index Pushdown)
+&lt;a class="header-anchor" href="#%e7%b4%a2%e5%bc%95%e4%b8%8b%e6%8e%a8index-pushdown">&lt;/a>
+&lt;/h5>&lt;h4 id="索引失效">索引失效
+&lt;a class="header-anchor" href="#%e7%b4%a2%e5%bc%95%e5%a4%b1%e6%95%88">&lt;/a>
+&lt;/h4>&lt;p>有些情況下索引會失效，譬如說使用了一些函數、比較運算子等等。但這邊就先不討論這些情況，就討論一下最左匹配原則。&lt;/p>
+&lt;h6 id="最左匹配原則leftmost-match">最左匹配原則(Leftmost Match)
+&lt;a class="header-anchor" href="#%e6%9c%80%e5%b7%a6%e5%8c%b9%e9%85%8d%e5%8e%9f%e5%89%87leftmost-match">&lt;/a>
+&lt;/h6>&lt;p>什麼是最左匹配原則呢？我們建立聯合索引的時候，會根據從左至右的順序來建立索引樹，例如(A,B,C)這個索引樹的規則就是這樣的:
+如果數據A欄位的數據相同，就會根據B的數據來進行比較，如果B欄位的數據也相同，就會根據C欄位的數據來進行比較。最後葉子節點的排序就是根據這個索引(A,B,C)。&lt;/p>
+&lt;p>&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/imgs/helper/sql-index/leftmost-match.png" alt="leftmost-match" />
+從圖中先根據&lt;code>age&lt;/code>欄位進行了排序，同樣為&lt;code>age = 1&lt;/code>的，則根據&lt;code>name&lt;/code>繼續排序，最後再根據&lt;code>code&lt;/code>進行排序，若都一樣則會用ID作為最後排序。&lt;br>
+若符合最左匹配原則的話，就可以透過這顆索引樹來獲取數據，而不需要全表掃描。什麼情況是符合最左匹配原則呢？很簡單，只要查詢順序根據建立索引時候的順序來進行查詢就好了。&lt;/p>
+&lt;p>我們的索引是: (&lt;code>age&lt;/code>,&lt;code>name&lt;/code>,&lt;code>code&lt;/code>),以下情況都可以走這個索引&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2;">&lt;code class="language-sql" data-lang="sql">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">select&lt;/span> &lt;span style="color:#f92672">`&lt;/span>id&lt;span style="color:#f92672">`&lt;/span>, &lt;span style="color:#f92672">`&lt;/span>age&lt;span style="color:#f92672">`&lt;/span> &lt;span style="color:#66d9ef">from&lt;/span> &lt;span style="color:#66d9ef">user&lt;/span> &lt;span style="color:#66d9ef">where&lt;/span> age &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">18&lt;/span>;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>因為&lt;code>age&lt;/code>是在最左邊，所以符合最左匹配原則。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2;">&lt;code class="language-sql" data-lang="sql">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">select&lt;/span> &lt;span style="color:#f92672">`&lt;/span>id&lt;span style="color:#f92672">`&lt;/span>, &lt;span style="color:#f92672">`&lt;/span>age&lt;span style="color:#f92672">`&lt;/span> &lt;span style="color:#66d9ef">from&lt;/span> &lt;span style="color:#66d9ef">user&lt;/span> &lt;span style="color:#66d9ef">where&lt;/span> age &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">18&lt;/span> &lt;span style="color:#66d9ef">and&lt;/span> name &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#e6db74">&amp;#34;Jonna&amp;#34;&lt;/span>;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>這裡也可以的，因為(&lt;code>age&lt;/code>,&lt;code>name&lt;/code>) 都符合了這個規則，所以可以走這個索引。&lt;/p>
+&lt;p>但如果是這種情況就會失效&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2;">&lt;code class="language-sql" data-lang="sql">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">select&lt;/span> &lt;span style="color:#f92672">`&lt;/span>id&lt;span style="color:#f92672">`&lt;/span>, &lt;span style="color:#f92672">`&lt;/span>age&lt;span style="color:#f92672">`&lt;/span> &lt;span style="color:#66d9ef">from&lt;/span> &lt;span style="color:#66d9ef">user&lt;/span> &lt;span style="color:#66d9ef">where&lt;/span> name &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#f92672">`&lt;/span>Andy&lt;span style="color:#f92672">`&lt;/span>;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>因為我們的索引是是先更具&lt;code>age&lt;/code>來進行排序的，如果要先找&lt;code>name&lt;/code>這筆數據的話，而&lt;code>name&lt;/code>沒有&lt;code>age&lt;/code>過濾的情況下尋找，就跟全表掃描一樣的效果。因為只看&lt;code>name&lt;/code>的數據在這個索引樹中是沒有排序可言的，可能&lt;code>Andy&lt;/code>在最前面，另外一個&lt;code>Andy&lt;/code>在最後面，都不知道哪個在前面，所以就是全表掃描的效果。&lt;/p>
+&lt;p>所以一句話概況就是最左的一樣要有,才能走這顆索引樹。&lt;/p>
+&lt;h2 id="總結">總結
+&lt;a class="header-anchor" href="#%e7%b8%bd%e7%b5%90">&lt;/a>
+&lt;/h2>&lt;h2 id="參考資料">參考資料
+&lt;a class="header-anchor" href="#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99">&lt;/a>
+&lt;/h2></description></item><item><title>[筆記] 淺談資料庫事務(Transcation)</title><link>http://localhost:1313/post/note/database-transaction/</link><pubDate>Sat, 23 Nov 2024 22:11:45 +0800</pubDate><guid>http://localhost:1313/post/note/database-transaction/</guid><description>&lt;h2 id="簡介">簡介
+&lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
+&lt;/h2>&lt;p>這篇文章主要是想要討論一下資料庫筆一個重要的概念&lt;strong>事務(Transcation)&lt;/strong>。接下來的文章主要會分成一下幾個部分繼續討論：&lt;/p>
+&lt;ol>
+&lt;li>什麼是資料庫的事務(Transcation)&lt;/li>
+&lt;li>事務(Transcation)的4大特性為何&lt;/li>
+&lt;li>一致性問題和解決方法&lt;/li>
+&lt;li>MVCC和鎖的簡單介紹&lt;/li>
+&lt;/ol>
+&lt;h2 id="什麼是事務transcation">什麼是事務(Transcation)
+&lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%af%e4%ba%8b%e5%8b%99transcation">&lt;/a>
+&lt;/h2>&lt;p>在資料庫系統中，我們都會對數據進行讀寫操作，但是如果我們要對數據做一系列的操作(2個或以上的操作)，正在被操作的數據我們不希望能被其他人修改從而影響了結果，而且即便途中操作失敗，也希望他能回到原本的狀態。而資料庫為我們提供一個這樣的方法使得數據的操作要麼是&lt;strong>全部都成功，要麼全部都是失敗&lt;/strong>，這就是事務(Transcation)，也可以稱之為「交易」。&lt;/p></description></item><item><title>說明</title><link>http://localhost:1313/books/readme/</link><pubDate>Sat, 23 Nov 2024 17:50:28 +0800</pubDate><guid>http://localhost:1313/books/readme/</guid><description>&lt;h3 id="簡介">簡介
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
 &lt;/h3>&lt;p>這邊會分享我閱讀過的書籍並跟大家分享我的讀後感或者是書本有趣的地方。&lt;/p></description></item><item><title>2024年軟體工程師(Software engineer)面試總結</title><link>http://localhost:1313/post/share/2024-swe-interview-summary/</link><pubDate>Sun, 10 Nov 2024 15:29:39 +0800</pubDate><guid>http://localhost:1313/post/share/2024-swe-interview-summary/</guid><description>&lt;h2 id="簡介-intro">簡介 Intro
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b-intro">&lt;/a>

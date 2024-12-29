@@ -97,9 +97,9 @@ toc: true
 
 聚簇索引只有在查詢條件包含主鍵時，才會生效。如果要查詢的條件不包含主鍵，那麼就不會生效。怎麼辦呢？ 若要加快其他條件的查詢效率，我們可以為條件添加一個索引。**添加索引後，會為該條件建立一顆新的索引頁**。  也就是主建索引頁跟二級索引頁是分開的。  
 為`age`這個欄位了一個index，就會建立一個新的索引頁。而這個二級索引頁跟聚簇索引頁的區別是：
-1. 二級索引頁除了包含主鍵ID外，還包含了age這個欄位的值。
+1. 二級索引頁除了包含主鍵ID外，還包含了 `age` 這個欄位的值。
 2. 二級索引頁中的葉子節點不包含全部的數據。
-3. 二級索引頁排序根據age欄位的值。
+3. 二級索引頁排序根據 `age` 欄位的值。
 
 #### Composite Index (複合索引 / 聯合索引) 
 
@@ -292,7 +292,6 @@ select `id`, `age` from user where name = `Andy`;
 希望這篇文章讓大家對索引有更深入的了解，謝謝大家！  
 如果有任何補充或者錯誤，歡迎在留言區留言喔!
 
-
 ## 參考資料
-[聊一聊怎么用好MySQL索引这件事儿](https://juejin.cn/post/7075528696748048420#heading-13)
-[MySQL 系列文 - 索引的相關知識(5) - 何謂 ICP (Index Condition Pushdown)](https://ithelp.ithome.com.tw/articles/10230362)
+[聊一聊怎么用好MySQL索引这件事儿](https://juejin.cn/post/7075528696748048420#heading-13)  
+[MySQL 系列文 - 索引的相關知識(5) - 何謂 ICP (Index Condition Pushdown)](https://ithelp.ithome.com.tw/articles/10230362)  

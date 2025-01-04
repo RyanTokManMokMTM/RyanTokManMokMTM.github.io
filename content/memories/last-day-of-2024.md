@@ -5,12 +5,12 @@ keywords: "last,day,of,2024"
 
 date: 2025-01-04T17:56:18+08:00
 lastmod: 2025-01-04T17:56:18+08:00
-
-categories:
-  -
 tags:
-  -
-  -
+  - memories
+  - 2023
+  - disney
+categaries:
+  - menories
 
 # 原文作者
 # Post's origin author name
@@ -23,7 +23,7 @@ tags:
 #imgs:
 # 在首页展开内容
 # Expand content on the home page
-#expand: true
+# expand: false
 # 外部链接地址，访问时直接跳转
 # It's means that will redirecting to external links
 #extlink:

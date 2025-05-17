@@ -51,16 +51,16 @@ main:
     url: /project
     pre: tasks
     weight: 7
-  - identifier: english
-    name: English 英文
-    url: /english
-    pre: language
-    weight: 7
-  - identifier: books
-    name: Reading 閱讀區
-    url: /books
-    pre: book
-    weight: 8
+  # - identifier: english
+  #   name: English 英文
+  #   url: /english
+  #   pre: language
+  #   weight: 7
+  # - identifier: books
+  #   name: Reading 閱讀區
+  #   url: /books
+  #   pre: book
+  #   weight: 8
   - identifier: achievement
     name: Achievement 成就
     url: /achievement

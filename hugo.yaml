@@ -225,7 +225,7 @@ menus:
       url: /memories
       pre: star
       weight: 5
-    - identifier: leetcodes
+    - identifier:  
       name: Leetcodes 力扣
       url: /leetcodes
       pre: code
@@ -265,7 +265,8 @@ params:
   # 需要显示文章的部分，即content目录下的文件夹名称
   # Sections for show in home & archive page 
   # and it's folder name which under content
-  mainSections: ["posts"]
+  badgeSection: ["posts"]
+  mainSections: ["posts", "memories","leetcodes","project","memories"]
   # 年，月，日及时间的格式化样式
   # Format style for year,month,date & time
   yearFormat: "2006"

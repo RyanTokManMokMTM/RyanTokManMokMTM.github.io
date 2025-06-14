@@ -215,9 +215,9 @@ menus:
       pageRef: /about.html
       pre: user
       weight: 3
-    - identifier: archives
+    - identifier: posts
       name: Archives 歸檔
-      pageRef: /archives
+      pageRef: /posts
       pre: archive
       weight: 4
     - identifier: memories

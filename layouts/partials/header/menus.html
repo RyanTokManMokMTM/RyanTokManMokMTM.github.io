@@ -9,7 +9,7 @@
         {{ if $ms.icons }}<i class="fa fa-{{ .Pre }} hvr-icon"></i>{{ end }}{{ .Name }}
         {{ if .HasChildren }}<span class="menu-item-shrink-icon"><i class="fa fa-angle-right"></i></span>{{ end }}
         {{ if and $ms.badges (eq .Identifier "posts") }}
-          <span class="badge">{{ $.Scratch.Get "postsCount" }}</span>
+          <span class="badge">{{ $.Scratch.Get "badgePage" }}</span>
         {{ end }}
       </a>
       {{ if .HasChildren }}

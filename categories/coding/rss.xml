@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Coding on Jackson.tmm</title><link>https://ryantokmanmokmtm.github.io/categories/coding/</link><description>Recent content in Coding on Jackson.tmm</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Fri, 23 Dec 2022 14:39:46 +0800</lastBuildDate><atom:link href="https://ryantokmanmokmtm.github.io/categories/coding/rss.xml" rel="self" type="application/rss+xml"/><item><title>透過Kops工具在AWS中部署K8S集群</title><link>https://ryantokmanmokmtm.github.io/post/coding/kuberneters-on-aws/</link><pubDate>Fri, 23 Dec 2022 14:39:46 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/post/coding/kuberneters-on-aws/</guid><description>&lt;h2 id="這篇文章主要是講述如何在aws雲服務中部署kubernetes集群">這篇文章主要是講述如何在AWS雲服務中部署Kubernetes集群
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Coding on Jackson.tmm</title><link>https://ryantokmanmokmtm.github.io/categories/coding/</link><description>Recent content in Coding on Jackson.tmm</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Fri, 23 Dec 2022 14:39:46 +0800</lastBuildDate><atom:link href="https://ryantokmanmokmtm.github.io/categories/coding/rss.xml" rel="self" type="application/rss+xml"/><item><title>透過Kops工具在AWS中部署K8S集群</title><link>https://ryantokmanmokmtm.github.io/archive/coding/kuberneters-on-aws/</link><pubDate>Fri, 23 Dec 2022 14:39:46 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archive/coding/kuberneters-on-aws/</guid><description>&lt;h2 id="這篇文章主要是講述如何在aws雲服務中部署kubernetes集群">這篇文章主要是講述如何在AWS雲服務中部署Kubernetes集群
 &lt;a class="header-anchor" href="#%e9%80%99%e7%af%87%e6%96%87%e7%ab%a0%e4%b8%bb%e8%a6%81%e6%98%af%e8%ac%9b%e8%bf%b0%e5%a6%82%e4%bd%95%e5%9c%a8aws%e9%9b%b2%e6%9c%8d%e5%8b%99%e4%b8%ad%e9%83%a8%e7%bd%b2kubernetes%e9%9b%86%e7%be%a4">&lt;/a>
 &lt;/h2>&lt;p>首先，我們需要準備使用一下工具進行設置&lt;/p>
 &lt;ul>
@@ -20,7 +20,7 @@
  
  &lt;i class="fa fa-external-link-alt">&lt;/i>
  
-&lt;/a>&lt;/p></description></item><item><title>[總結]Leetcode 週賽第319場復盤總結</title><link>https://ryantokmanmokmtm.github.io/post/coding/leetcode-contest319/</link><pubDate>Sun, 13 Nov 2022 11:45:46 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/post/coding/leetcode-contest319/</guid><description>&lt;h1 id="今日為2022年11月13日週日---leetcode-週賽第319場">今日為2022年11月13日(週日) - Leetcode 週賽第319場
+&lt;/a>&lt;/p></description></item><item><title>[總結]Leetcode 週賽第319場復盤總結</title><link>https://ryantokmanmokmtm.github.io/archive/coding/leetcode-contest319/</link><pubDate>Sun, 13 Nov 2022 11:45:46 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archive/coding/leetcode-contest319/</guid><description>&lt;h1 id="今日為2022年11月13日週日---leetcode-週賽第319場">今日為2022年11月13日(週日) - Leetcode 週賽第319場
 &lt;a class="header-anchor" href="#%e4%bb%8a%e6%97%a5%e7%82%ba2022%e5%b9%b411%e6%9c%8813%e6%97%a5%e9%80%b1%e6%97%a5---leetcode-%e9%80%b1%e8%b3%bd%e7%ac%ac319%e5%a0%b4">&lt;/a>
 &lt;/h1>
  &lt;blockquote>
@@ -35,7 +35,7 @@
 &lt;/ol>
 &lt;h3 id="convert-the-temperature---easy">Convert the Temperature - Easy
 &lt;a class="header-anchor" href="#convert-the-temperature---easy">&lt;/a>
-&lt;/h3>&lt;p>You are given a non-negative floating point number rounded to two decimal places &lt;code>celsius&lt;/code>, that denotes &lt;strong>the temperature in Celsius&lt;/strong>.&lt;/p></description></item><item><title>Leetcode Weekly Contest 331(第一次參加競賽)</title><link>https://ryantokmanmokmtm.github.io/post/coding/leetcodeweeklycontest331/</link><pubDate>Sun, 18 Sep 2022 16:32:34 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/post/coding/leetcodeweeklycontest331/</guid><description>&lt;blockquote>
+&lt;/h3>&lt;p>You are given a non-negative floating point number rounded to two decimal places &lt;code>celsius&lt;/code>, that denotes &lt;strong>the temperature in Celsius&lt;/strong>.&lt;/p></description></item><item><title>Leetcode Weekly Contest 331(第一次參加競賽)</title><link>https://ryantokmanmokmtm.github.io/archive/coding/leetcodeweeklycontest331/</link><pubDate>Sun, 18 Sep 2022 16:32:34 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archive/coding/leetcodeweeklycontest331/</guid><description>&lt;blockquote>
  &lt;p>今天是我第一次參加&lt;strong>Leetcode 雙週賽&lt;/strong>，所以想記錄一下今天的競賽題目。希望能透過博客來記錄自己的競賽狀況。&lt;/p>
  &lt;/blockquote>
 &lt;p>&lt;strong>本週AC題數為:4/4&lt;/strong>&lt;/p>
@@ -43,7 +43,7 @@
 &lt;a class="header-anchor" href="#%e9%a1%8c%e7%9b%ae">&lt;/a>
 &lt;/h2>&lt;h3 id="2413-smallest-even-multipleeasy---ac">2413. Smallest Even Multiple(EASY) - AC
 &lt;a class="header-anchor" href="#2413-smallest-even-multipleeasy---ac">&lt;/a>
-&lt;/h3>&lt;p>Given a positive integer &lt;code>n&lt;/code>, return the smallest positive integer that is a multiple of both &lt;code>2&lt;/code> and &lt;code>n&lt;/code>.&lt;/p></description></item><item><title>[筆記]Longest Common SubString(最長公共子序列)</title><link>https://ryantokmanmokmtm.github.io/post/coding/lcm/</link><pubDate>Tue, 14 Jun 2022 13:11:28 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/post/coding/lcm/</guid><description>&lt;h1 id="introduction">Introduction
+&lt;/h3>&lt;p>Given a positive integer &lt;code>n&lt;/code>, return the smallest positive integer that is a multiple of both &lt;code>2&lt;/code> and &lt;code>n&lt;/code>.&lt;/p></description></item><item><title>[筆記]Longest Common SubString(最長公共子序列)</title><link>https://ryantokmanmokmtm.github.io/archive/coding/lcm/</link><pubDate>Tue, 14 Jun 2022 13:11:28 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archive/coding/lcm/</guid><description>&lt;h1 id="introduction">Introduction
 &lt;a class="header-anchor" href="#introduction">&lt;/a>
 &lt;/h1>&lt;h2 id="什麼是最長公共子序列">什麼是最長公共子序列?
 &lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%af%e6%9c%80%e9%95%b7%e5%85%ac%e5%85%b1%e5%ad%90%e5%ba%8f%e5%88%97">&lt;/a>

@@ -14,7 +14,7 @@ author: jackson.tmm
 [**Movie App - Frontend**](https://github.com/RyanTokManMokMTM/MovieAppSwiftUI.git)   
 [**Movie App - Backend**](https://github.com/RyanTokManMokMTM/movie-server)
 
-![client](/imgs/ott_app/movie-app/AppImg.png)
+![client](/imgs-custom/ott_app/movie-app/AppImg.png)
 
 ### 簡介
 開發這個App的目的主要是為了解決在搜尋電影OTT資源以及電影內容討論分散在多個不同平台等問題，如:搜尋到的資源是無效/不合法的，花費大量時間在搜尋上等等...。因此這個App主要分成2個組成部分，分別是電影資訊搜尋獲取OTT資源，並整合不同OTT平台的電影資源，供用戶選擇合法資源，並過濾無效資源以及電影分享社群，供用戶在觀看完電影後，直接在App中發佈相關文章以分享給其他用戶，而無需在不同平台發佈。

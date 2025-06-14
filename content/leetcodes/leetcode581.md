@@ -54,7 +54,7 @@ Output: 0
 ```
 
 另外一種解法是通過`Two-pointer approach`來解。我們先要找到左手邊有問題的地方的最小值(`1,4,7,5,3,6 最小值為3`)以及右手邊有問題的地方的最大值(`1,4,7,5,3,6 最大值為7`)。然後,要找出左手邊第一個被影響的`index`(`nums[index] > 最小值`)。同理也要找出右手邊第一個被影響的最`index`(`nums[index] < 最大值`)。這樣我們就能找出有問題的區間`[left,right]`，在根據`left`,`right`得出最終結果。
-![581-helper](/imgs/leetcodesHelper/581-helper.png)
+![581-helper](/imgs-custom/leetcodesHelper/581-helper.png)
 
 #### Solution:
 **解法二:**

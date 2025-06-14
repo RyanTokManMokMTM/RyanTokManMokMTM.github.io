@@ -96,7 +96,7 @@ ACID 是原子性(Automicity)、一致性(Consistency)、隔離性(Isolatio)以�
 
 這種在同一個transaction內查詢返回數據數量不一致的情況，我們就叫它**幻讀(Phantom read)**,就像是出現了幻覺一樣。
 
-![phantom-read](/imgs/helper/transactions/phantom-read.png)  
+![phantom-read](/imgs-custom/helper/transactions/phantom-read.png)  
 
 #### 不可重複讀(non-repeated read)
 現在有個情境就是T1和T2都對數據表`user_record`進行操作。
@@ -106,7 +106,7 @@ ACID 是原子性(Automicity)、一致性(Consistency)、隔離性(Isolatio)以�
 
 這種在同一個transaction內查詢返回的數據不一致的情況，我們就叫它**不可重複讀(non-repeated read)**。
 
-![non-repeated-read](/imgs/helper/transactions/non-repeated-read.png)  
+![non-repeated-read](/imgs-custom/helper/transactions/non-repeated-read.png)  
 
 #### 髒讀(dirty read)
 現在有個情境就是T1和T2都對數據表`user_record`進行操作。
@@ -116,7 +116,7 @@ ACID 是原子性(Automicity)、一致性(Consistency)、隔離性(Isolatio)以�
 
 這種在同一個transaction內讀取到另一個transactio還沒被提交的數據，我們就叫它**髒讀(dirty read)**。
 
-![dirty-read](/imgs/helper/transactions/dirty-read.png)
+![dirty-read](/imgs-custom/helper/transactions/dirty-read.png)
 
 
 **總結以上這幾個一致性問題**
@@ -135,7 +135,7 @@ ACID 是原子性(Automicity)、一致性(Consistency)、隔離性(Isolatio)以�
 不過在討論MVCC之前，先來討論一下什麼是**根據不同的情況來讀取不同版本的數據**。
 從上面的描述我們知道了，在併發讀取的時候有可能會發生幻讀、不可重複讀、髒讀這幾種情況，這幾種情況也是有影響嚴重性之分的：
 
-![read-consistency](/imgs/helper/transactions/read-consistency.png)
+![read-consistency](/imgs-custom/helper/transactions/read-consistency.png)
 
 不過這3個一致性問題也只是理論上的知識，所以database會根據隔離級別的定義實作自己的db來解決這些問題。
 **4種隔離級別:**
@@ -145,7 +145,7 @@ ACID 是原子性(Automicity)、一致性(Consistency)、隔離性(Isolatio)以�
 4. Read-Uncommitted 讀未提交
 
 這幾個隔離級別都分別可以解決不同的一致性問題。
-![isolation-level](/imgs/helper/transactions/isolation-level.png)
+![isolation-level](/imgs-custom/helper/transactions/isolation-level.png)
 
 現在對這張圖進行說明：
 - **Read-Uncommitted** 這個隔離強度是最低的，可見他完全沒有解決幻讀、不可重複讀、髒讀這幾種一致性問題。
@@ -160,7 +160,7 @@ MVCC就可以根據這幾種隔離級別來解決一致性問題。
 MVCC的概念就是在讀取數據的時候，不是直接讀取資料庫最新的數據，而是讀取最近一次讀取的數據的數據版本，就像是對數據進行Git的版本控制一樣，通過欄位進行判斷來獲取不同版本的數據。
 
 為了更好的進行說明在這邊就先簡單的說一下MySQL保存日誌的格式:  
-![data-field](/imgs/helper/transactions/data-field.png)
+![data-field](/imgs-custom/helper/transactions/data-field.png)
 - RoolPointer : 等下就會知道他的作用了xD
 - TrxId : 這是一個事務(Transcation)的ID，如果沒分配的話就是0
 - OtherInfos : 其他的信息
@@ -168,7 +168,7 @@ MVCC的概念就是在讀取數據的時候，不是直接讀取資料庫最新�
 
 ##### 版本鏈 Version Chain
 若一筆數據被操作的次數多了，就會通過日誌來記錄每一次的操作資訊並透過`RollPointer`來連接起來,形成一條單向鏈。
-![version-chain](/imgs/helper/transactions/version-chain.png)
+![version-chain](/imgs-custom/helper/transactions/version-chain.png)
 這邊先從事務(Transcation)100開始進行更新操作，接著就是事務(Transcation)200連續更新了2次，最後再是事務(Transcation)300更新了一次，這樣就形成了一條版本鏈。 資料庫通過版本鏈來控制不同事物訪問對相同數據，這就是MVCC的基本概念。
 
 ##### 各隔離級別如何透過版本鏈解決問題
@@ -199,7 +199,7 @@ MVCC的概念就是在讀取數據的時候，不是直接讀取資料庫最新�
 **Read-Committed**
 現在我們有3個事務(Transcation)分別為T1, T2 和 T3，他們都會分別對數據表`user_record`進行操作，我們來看看他在隔離級別下的行為會怎麼樣的。
 > ！InnoDB預設的隔離級別為repeatable-Read，所以這裡要先設置為read-committed  
-![mvcc-example3-read-commited-1](/imgs/helper/transactions/mvcc-example1.png)  
+![mvcc-example3-read-commited-1](/imgs-custom/helper/transactions/mvcc-example1.png)  
 
 1. T1更新了資料庫中id為1的user數據2次但還沒有commit
 2. T2對其他數據表進行了其他操作
@@ -216,7 +216,7 @@ MVCC的概念就是在讀取數據的時候，不是直接讀取資料庫最新�
 所以，最後返回的數據是` { id : 1, name : 'UserA', gender: 'M' }` ，而不是未提交的最新數據 ` { id : 1, name : 'user_u', gender: 'M' }`。是不是很神奇！！
 
 接下來我們再做進一步的操作，看看會傳回什麼數據。
-![mvcc-example3-read-commited-2](/imgs/helper/transactions/mvcc-example2.png)  
+![mvcc-example3-read-commited-2](/imgs-custom/helper/transactions/mvcc-example2.png)  
 
 1. T1 提交了剛才的更新操作
 2. T2 更新了數據表2次且還沒提交
@@ -234,7 +234,7 @@ MVCC的概念就是在讀取數據的時候，不是直接讀取資料庫最新�
 
 **Repeatable-Read**
 其實運作流程跟Read-Committed這個隔離級別很像的，只不過生成RV的時機是只有第一次查詢的時候。我們就拿上面的例子來說一下。
-![mvcc-example3-repeated-read-1](/imgs/helper/transactions/mvcc-example1.png)  
+![mvcc-example3-repeated-read-1](/imgs-custom/helper/transactions/mvcc-example1.png)  
 
 1. T1更新了資料庫中id為1的user數據2次但還沒有commit
 2. T2對其他數據表進行了其他操作
@@ -246,7 +246,7 @@ MVCC的概念就是在讀取數據的時候，不是直接讀取資料庫最新�
 1. T1 提交了剛才的更新操作
 2. T2 更新了數據表2次且還沒提交
 3. T3 再次查詢id 為1的數據且還沒commit  
-![mvcc-example3-repeated-read-2](/imgs/helper/transactions/mvcc-example3.png)
+![mvcc-example3-repeated-read-2](/imgs-custom/helper/transactions/mvcc-example3.png)
 
 可以看到Read View 的內容是跟第一次查詢的是一樣的, 接著我們再按照流程走走看，會發生什麼。  
 1. `trx_id`為200且`min_trx_id`和`max_trx_id`之間，且在`m_ids`中存在，所以不能訪問。我們沿著鏈往下走

@@ -14,7 +14,7 @@ author: jackson.tmm
 ~~[**OTT Movies recommender system-IOS Client**](https://github.com/RyanTokManMokMTM/MovieAppSwiftUI.git)~~
 Project have been changed/updated
 
-![client](/imgs/iosClient.png)
+![client](/imgs-custom/iosClient.png)
 
 ### Frontend
 * SwiftUI apple framework

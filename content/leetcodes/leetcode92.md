@@ -29,7 +29,7 @@ Output: [5]
 這一題的問題非常的簡單,就是要讓我們在給定的一個`list`中翻轉(Reverse)`[left,right]`之間的Node,並返回結果。這題跟**Reverse Linked List I**解法類似,不同的是多了個翻轉範圍。  
 首先，我們要做的是在的翻轉的開始的位置。然後再透過recursive來翻轉List,最後返回的`node/head`再由`left`位置的Node的前一個`Node`接起來(如有)就可以了~
 
-![LeetCode92](/imgs/leetcodesHelper/92-helper.png)
+![LeetCode92](/imgs-custom/leetcodesHelper/92-helper.png)
 #### Solution:
 
 ```c++

@@ -30,7 +30,7 @@ tags:
 
 **視頻通訊 - Video Chat** 這邊就不拍Demo視頻了🤣
 
-![VideoChat](/imgs/chat-app/video-chat.jpg)
+![VideoChat](/imgs-custom/chat-app/video-chat.jpg)
 - 支援Mic/Speaker/Video開啟與關閉，鏡頭與切換
 
 其實視訊的部分也只是Voice Chat開啟了視訊數據傳輸而已啦，哈哈哈！其他部分都一樣的呢。這邊就不多說了。

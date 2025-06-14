@@ -27,19 +27,19 @@ author: jackson.tmm
 
 Step 1:  
 進入**Reallusion Character Creator**製作角色(以博主自定義的角色為例)，如下圖:
-![Reallusion Character Creator](/imgs/metahumanCC/cc4.png)
+![Reallusion Character Creator](/imgs-custom/metahumanCC/cc4.png)
 
 Step 2:  
 將剛才在**CC(Character Creator)** 製作的角色匯入到**IClone**中,如下圖:  
 *Character Creator中: File->Export->Send to IClone*
-![Reallusion Character Creator](/imgs/metahumanCC/ic1.png)
+![Reallusion Character Creator](/imgs-custom/metahumanCC/ic1.png)
 
 匯入音頻文件   
 *Modify->Facial->Create Script->Audio File*
-![Reallusion Character Creator](/imgs/metahumanCC/ic2.png)
+![Reallusion Character Creator](/imgs-custom/metahumanCC/ic2.png)
 
 預覽動畫結果，並渲染動畫
-![Reallusion Character Creator](/imgs/metahumanCC/ic3.png)
+![Reallusion Character Creator](/imgs-custom/metahumanCC/ic3.png)
 
 
 ## Demo展示
@@ -52,7 +52,7 @@ Step 2:
 ## 結論
 有沒有發現很簡單又很好玩呢!我們透過**Reallusion**工具讓我們能在很短的時間內就可以完成一個屬於自己的MetaHuman。除此之外**Reallusion**還提供很多很強大的功能，例如:**圖片生成3D角色模型,手機臉部動作捕捉,與Unreal Engine 5的MetaHuman工具連動**等等，有機會的話再跟大家分享。
 <!-- 最後給大家分享一張虛擬網美照><
-![Reallusion Character Creator](/imgs/metahumanCC/pose.png) -->
+![Reallusion Character Creator](/imgs-custom/metahumanCC/pose.png) -->
 
 **參考資料:**  
 [Reallusion](www.reallusion.com)  

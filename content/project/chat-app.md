@@ -14,7 +14,7 @@ author: jackson.tmm
 [**Chat App - Frontend**](https://github.com/RyanTokManMokMTM/swiftui-chat-app)   
 [**Chat App - Backend**](https://github.com/RyanTokManMokMTM/chat-app-server)
 
-![new-ver](/imgs/chat-app/2024-04-20-final.png)
+![new-ver](/imgs-custom/chat-app/2024-04-20-final.png)
 
 ### 簡介
 因為之前的`OTT電影社群APP`中有包含通訊的功能，但是那個App所實現的功能就只是簡單的存文字聊天而已，而那個app主要的focus點並不在通訊上，所以只有簡簡單單的實作了通訊，沒有到完整的通訊，例如：發送文字，發送圖片，發送文件等等的通訊功能。所以這次的side project所實作的app則主要focus在**通訊**這個點上。

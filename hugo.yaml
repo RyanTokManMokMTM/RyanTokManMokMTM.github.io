@@ -12,99 +12,99 @@
 
 # 站点域名，比如： https://hugo-next.eu.org
 # Website domain, eg: https://hugo-next.eu.org
-baseURL: /
+baseURL: https://ryantokmanmokmtm.github.io
 # 站点标题
 # Website title
-title: Hugo NexT
+title: Jackson.tmm
 # 主题名称
 # Theme name
 # theme: hugo-theme-next  # 已改用 module 方式，不需要這一行
 # 站点默认的语言和代码
 # Default language & code for website
-defaultContentLanguage: zh-cn
-languageCode: zh-CN
+defaultContentLanguage: zh-TW
+languageCode: zh-tw
 # 多语言配置
 # Multi-language settings
 languages:
-  zh-cn:
-    languageCode: zh-CN
+  zh-tw:
+    languageCode: zh-tw
     languageDirection: ltr
-    languageName: "简体中文"
+    languageName: "繁體中文"
     weight: 1    
-  en-us:
-    languageCode: en-US
-    languageDirection: ltr
-    languageName: English
-    weight: 2
-    menus:
-      main:
-        - identifier: home
-          name: Home
-          pageRef: /
-          pre: home
-          weight: 1
-        - identifier: about
-          name: About
-          pageRef: /about.html
-          pre: user
-          weight: 2
-        - identifier: flinks
-          name: Friend's Links
-          pageRef: /flinks.html
-          pre: thumbs-up
-          weight: 3
-        - identifier: example
-          name: Example
-          pre: angles-down
-          weight: 4
-        - identifier: syntax
-          name: Syntax Highlighting
-          pageRef: /post/09-syntax-highlighting
-          weight: 1   
-          parent: example
-        - identifier: math
-          name: Math Formula
-          pageRef: /post/10-math-formula
-          weight: 2   
-          parent: example
-        - identifier: flow-charts
-          name: Flow Charts
-          pageRef: /post/11-mermaid-charts
-          weight: 3
-          parent: example
-        - identifier: archives
-          name: Archives
-          pageRef: /archives
-          pre: archive
-          weight: 5
-        - identifier: commonweal
-          name: Commonweal404
-          pageRef: /404.html
-          pre: heartbeat
-          weight: 6
-    params:
-      yearFormat: "2006"
-      monthFormat: "01/02"
-      dateFormat: "2006/01/02"
-      timeFormat: "2006/01/02 15:04:05 -07:00"
+  # en-us:
+  #   languageCode: en-US
+  #   languageDirection: ltr
+  #   languageName: English
+  #   weight: 2
+  #   menus:
+  #     main:
+  #       - identifier: home
+  #         name: Home
+  #         pageRef: /
+  #         pre: home
+  #         weight: 1
+  #       - identifier: about
+  #         name: About
+  #         pageRef: /about.html
+  #         pre: user
+  #         weight: 2
+  #       - identifier: flinks
+  #         name: Friend's Links
+  #         pageRef: /flinks.html
+  #         pre: thumbs-up
+  #         weight: 3
+  #       - identifier: example
+  #         name: Example
+  #         pre: angles-down
+  #         weight: 4
+  #       - identifier: syntax
+  #         name: Syntax Highlighting
+  #         pageRef: /post/09-syntax-highlighting
+  #         weight: 1   
+  #         parent: example
+  #       - identifier: math
+  #         name: Math Formula
+  #         pageRef: /post/10-math-formula
+  #         weight: 2   
+  #         parent: example
+  #       - identifier: flow-charts
+  #         name: Flow Charts
+  #         pageRef: /post/11-mermaid-charts
+  #         weight: 3
+  #         parent: example
+  #       - identifier: archives
+  #         name: Archives
+  #         pageRef: /archives
+  #         pre: archive
+  #         weight: 5
+  #       - identifier: commonweal
+  #         name: Commonweal404
+  #         pageRef: /404.html
+  #         pre: heartbeat
+  #         weight: 6
+    # params:
+    #   yearFormat: "2006"
+    #   monthFormat: "01/02"
+    #   dateFormat: "2006/01/02"
+    #   timeFormat: "2006/01/02 15:04:05 -07:00"
 
-      author: NexT Theme
-      subtitle: Build for Hugo Theme
-      description: Keep it simple, keep it powerful.
-      keywords: Hugo,NexT,theme,simple,powerful
+    #   author: NexT Theme
+    #   subtitle: Build for Hugo Theme
+    #   description: Keep it simple, keep it powerful.
+    #   keywords: Hugo,NexT,theme,simple,powerful
 
-      linksSets:
-        title: Links
+    #   linksSets:
+    #     title: Links
       
-      footer:
-        beian:
-          enable: false
+    #   footer:
+    #     beian:
+    #       enable: false
       
-      postFooter:
-        endLineTip: "~ End Line ~"
+    #   postFooter:
+    #     endLineTip: "~ End Line ~"
       
-      rewardSets:
-        comment: '<i class="fa-solid fa-mug-hot"></i>  How about you buy me a coffee?ヾ(^▽^*)))'
+    #   rewardSets:
+    #     comment: '<i class="fa-solid fa-mug-hot"></i>  How about you buy me a coffee?ヾ(^▽^*)))'
 
 # 是否包含中文，日语，韩文
 # Whether contains Chinese, Japanese and Korean
@@ -201,51 +201,60 @@ minify:
 menus:
   main:
     - identifier: home
-      name: 首页
+      name: Home 首頁
       pageRef: /
       pre: home
       weight: 1
-    - identifier: about
-      name: 关于
-      pageRef: /about
-      pre: user
+    - identifier: categories
+      name: Menu 目錄
+      pageRef: /categories
+      pre: list
       weight: 2
-    - identifier: flinks
-      name: 友情链接
-      pageRef: /flinks
-      pre: thumbs-up
+    - identifier: about
+      name: About 關於
+      pageRef: /about.html
+      pre: user
       weight: 3
-    - identifier: example
-      name: 语法示例
-      pre: angles-down
-      weight: 4
-    - identifier: syntax
-      name: 语法高亮
-      pageRef: /post/09-syntax-highlighting
-      weight: 1
-      parent: example
-    
-    - identifier: math
-      name: 数学公式
-      pageRef: /post/10-math-formula
-      weight: 2 
-      parent: example
-    - identifier: flow-charts
-      name: 流程图
-      pageRef: /post/11-mermaid-charts
-      weight: 3
-      parent: example
-    - identifier: archives
-      name: 归档
-      pageRef: /archives
+    - identifier: post
+      name: Archive 歸檔
+      pageRef: /post
       pre: archive
+      weight: 4
+    - identifier: memories
+      name: Memories 回憶
+      url: /memories
+      pre: star
       weight: 5
-    - identifier: commonweal
-      name: 公益 404
-      pageRef: /404.html
-      pre: heartbeat
+    - identifier: leetcodes
+      name: Leetcodes 力扣
+      url: /leetcodes
+      pre: code
       weight: 6
-
+    - identifier: project
+      name: Project 專案
+      url: /project
+      pre: tasks
+      weight: 7
+    # - identifier: english
+    #   name: English 英文
+    #   url: /english
+    #   pre: language
+    #   weight: 7
+    # - identifier: books
+    #   name: Reading 閱讀區
+    #   url: /books
+    #   pre: book
+    #   weight: 8
+    - identifier: achievement
+      name: Achievement 成就
+      url: /achievement
+      pre: trophy
+      weight: 9
+    - identifier: resources
+      name: Resources 資源
+      url: /resources
+      pre: file
+      weight: 10
 #-----------------------------------------
 # Hugo NexT 主题参数配置
 # Configure Settings for Hugo NexT theme
@@ -264,10 +273,10 @@ params:
 
   # 页面模式
   # Schemes
-  #scheme: Muse
-  #scheme: Mist
-  #scheme: Pisces
-  scheme: Gemini
+  # scheme: Muse
+  scheme: Mist
+  # scheme: Pisces
+  # scheme: Gemini
 
   # 开启暗模式
   # Dark Mode
@@ -276,22 +285,22 @@ params:
 
   # 站点基本信息
   # Site Information Settings
-  author: NexT 主题
-  subtitle: 为 Hugo 打造的主题
-  description: 保持简单的易用性和强大的功能。
-  keywords: Hugo,NexT,主题,简单,强大
+  author: Jackson.tmm
+  subtitle: Loving life and dreams.
+  description: 簡單紀錄生活和筆記
+  keywords: 博客,blogger,dev,jackson,note,learning,developer,development
 
   # 不同尺寸站点图标
   # Different size of favicon
   favicon:
-    icon: /imgs/icons/favicon.ico
-    small: /imgs/icons/favicon_16x16_next.png
-    medium: /imgs/icons/favicon_32_32_next.png
-    appleTouchIcon: /imgs/icons/apple_touch_icon_next.png
+    icon: /imgs-custom/customIcon/favicon.ico
+    small: /imgs-custom/customIcon/favicon_16x16.png
+    medium: /imgs-custom/customIcon/favicon_32_32.png
+    appleTouchIcon: /imgs-custom/icons/apple_touch_icon_next.png
 
   # 自定义 Logo （目前只支持 Mist 页面模式）
   # Custom Logo (Warning: Only support scheme Mist)
-  customLogo: #/imgs/hugo_next_logo.png
+  customLogo: #/imgs-custom/hugo_next_logo.png
 
   # 用户自定义文件配置
   # Define custom file paths.
@@ -328,7 +337,7 @@ params:
   # OG SEO 配置
   # Open graph settings
   openGraph:
-    enable: true
+    enable: false
     #twitter:
      #creator: <twitter:creator>
      #image: <twitter:image>
@@ -389,7 +398,7 @@ params:
   avatar:
     # 设置显示头像的相对路径
     # Replace the default image and set the url here.
-    url: /imgs/hugo_next_avatar.png
+    url: /imgs-custom/customIcon/avatar.jpg
     # 开启头像的圆形显示效果
     # If true, the avatar will be displayed in circle.
     rounded: true
@@ -417,17 +426,18 @@ params:
   # Key is the link label order.
   # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
   socials: 
-    social0: Github || https://github.com/elkan1788 || fab fa-github
+    social0: Github || https://github.com/RyanTokManMokMTM || fab fa-github
+    social1: LinkedIn || https://www.linkedin.com/in/jackson-moktokman/ || fab fa-linkedin
     #social1: E-Mail || mailto:yourname@gmail.com || fa fa-envelope
-    social2: 知乎 || https://www.zhihu.com/people/lisenhui || fa fa-book
+    # social2: 知乎 || https://www.zhihu.com/people/lisenhui || fa fa-book
     #Google: https://plus.google.com/yourname || fab fa-google
     #Twitter: https://twitter.com/yourname || fab fa-twitter
-    #FB Page: https://www.facebook.com/yourname || fab fa-facebook
+    FB Page: Facebook || https://www.facebook.com/karot.ka.7505/ || fab fa-facebook
     #StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow
     #YouTube: https://youtube.com/yourname || fab fa-youtube
-    #Instagram: https://instagram.com/yourname || fab fa-instagram
+    Instagram: IG || https://www.instagram.com/tm_m.0418 || fab fa-instagram
     #Skype: skype:yourname?call|chat || fab fa-skype
-
+    
   # 社交链接图标设置
   # Social icon setting
   socialIcons:
@@ -460,8 +470,7 @@ params:
   # Links of your friends
   # Usage: `Key: name || permalink`
   links: 
-    link0: Hugo-NexT || https://gitee.com/hugo-next/hugo-theme-next
-    link1: 凡梦星尘空间站 || https://lisenhui.cn
+    CWKSC: CWKSC 一個什麼都學得會的人 || https://cwksc.github.io/ 
 
   # 文章目录显示
   # Table of Contents in the Sidebar
@@ -492,7 +501,7 @@ params:
     # 站点开始年份，默认为当下时间的年份
     # Specify the year when the site was setup. 
     # If not defined, current year will be used.
-    since: 2010
+    since: 2022
 
     # 年份和版权信息之间的图标
     # Icon between year and copyright info.
@@ -513,13 +522,13 @@ params:
 
     # 显示 Hugo 和 NexT 支持
     # Powered by Hugo & NexT
-    powered: true
+    powered: false
 
     # 国内 ICP 备案和公安网备信息
     # Beian ICP and gongan information for Chinese users. 
     # See: https://beian.miit.gov.cn, http://www.beian.gov.cn
     beian:
-      enable: true
+      enable: false
       # ICP 备案的具体信息
       icp: 粤ICP备 18047355-1 号
       # 公安网备的省份简称
@@ -530,7 +539,7 @@ params:
     # 站点支持供应商列表
     # Vendors list who support website. 
     vendors:
-      enable: true
+      enable: false
       # 支持说明
       # Some support information description.
       title: 提供CDN/云资源支持
@@ -539,18 +548,18 @@ params:
       list:
         - name: Vercel
           image: 
-            url: /imgs/vendors/vercel.svg
+            url: /imgs-custom/vendors/vercel.svg
             width: 50
           link: https://vercel.com
         - name: 又拍云
           image: 
-            url: /imgs/vendors/upyun.png
+            url: /imgs-custom/vendors/upyun.png
             width: 43
           link: https://upyun.com
         - name: Github
           link: https://github.com
           image:
-            url: /imgs/vendors/github.svg
+            url: /imgs-custom/vendors/github.svg
             width: 14
 
 
@@ -603,28 +612,28 @@ params:
 
   # 文章内容中的提示信息设置
   # Alert settings in post content
-  postAlerts:
-    info:
-      icon: "circle-info"
-      color: "#4A90E2"
-    note:
-      icon: "bell"
-      color: "#17A2B8"
-    help:
-      icon: "circle-question"
-      color: "#967ADC"
-    error:
-      icon: "circle-xmark"
-      color: "#DC3545"
-    warning:
-      icon: "triangle-exclamation"
-      color: "#F39C12"
-    success:
-      icon: "circle-check"
-      color: "#32CD32"
-    important:
-      icon: "circle-plus"
-      color: "#007BFF"
+  # postAlerts:
+  #   info:
+  #     icon: "circle-info"
+  #     color: "#4A90E2"
+  #   note:
+  #     icon: "bell"
+  #     color: "#17A2B8"
+  #   help:
+  #     icon: "circle-question"
+  #     color: "#967ADC"
+  #   error:
+  #     icon: "circle-xmark"
+  #     color: "#DC3545"
+  #   warning:
+  #     icon: "triangle-exclamation"
+  #     color: "#F39C12"
+  #   success:
+  #     icon: "circle-check"
+  #     color: "#32CD32"
+  #   important:
+  #     icon: "circle-plus"
+  #     color: "#007BFF"
 
   # 文章底部的设置
   # Post footer settings
@@ -643,7 +652,7 @@ params:
     # 是否开启捐赠按钮，开启后将在每个文章页面底部显示
     # If true, a donate button will be displayed 
     # in every article by default.
-    enable: true
+    enable: false
     # 是否开启捐赠方式的动画效果
     # If true, the donate type title will with animation.
     animation: true
@@ -655,8 +664,8 @@ params:
     # Donate type
     # Usage: `name:image url`
     reward:
-      wechatpay: /imgs/wechat-pay.png
-      alipay: /imgs/ali-pay.png
+      wechatpay: /imgs-custom/wechat-pay.png
+      alipay: /imgs-custom/ali-pay.png
       #paypal: /images/paypal.png
       #bitcoin: /images/bitcoin.png
 
@@ -665,16 +674,18 @@ params:
   # Subscribe through Telegram Channel, Twitter, etc.
   # Usage: `Key: name || permalink || icon` (Font Awesome)
   followMe:
-    #channel0: Twitter || https://twitter.com/username || fab fa-twitter
-    #channel1: Telegram || https://t.me/channel_name || fab fa-telegram
-    channel2: WeChat || /images/wechat_channel.jpg || fab fa-weixin
-    channel3: RSS || /rss.xml || fa fa-rss
+    channel0: Instagram || https://www.instagram.com/tm_m.0418/ || fab fa-instagram
+    channel1:  LinkedIn || https://www.linkedin.com/in/jackson-moktokman || fab fa-linkedin
+    # channel1: Telegram || https://t.me/channel_name || fab fa-telegram
+    # channel2: WeChat || /imgs-custom/wechat_channel.jpg || fab fa-weixin
+    # channel3: RSS || /atom.xml || fa fa-rss
+
 
   # 文章的在线编辑
   # Post edit
   # Easily browse and edit blog source code online.
   postEdit:
-    enable: true
+    enable: false
     url: https://github.com/user-name/repo-name/tree/branch-name/subdirectory-name/
 
 
@@ -776,7 +787,7 @@ params:
     enable: true
     # 你的 Github 仓库地址
     # Your repository url on Github.
-    permalink: https://github.com/hugo-next
+    permalink: https://github.com/RyanTokManMokMTM
     # 关注说明
     # Show this title when cursor move on.
     title: Follow me on GitHub
@@ -800,7 +811,7 @@ params:
     enable: true
 
     # Uri of fonts host, e.g. https://fonts.googleapis.com (Default).
-    host:
+    # host: https://fonts.googleapis.com
 
     # Font options:
     # `external: true` will load this font family from `host` above.
@@ -928,32 +939,32 @@ params:
   comments:
     # 开启评论组件
     # If true, will show comment component in post end.
-    enable: false   
+    enable: true   
     # 设置默认使用的评论插件
     # 可选值：livere | waline | utterances | artalk | giscus
     # Choose a comment system to be displayed by default.
     # Available values: livere | waline | utterances | artalk | giscus 
-    active: waline
+    active: utterances
     # 让用户自己选择使用评论插件留言
     # 如果设置为 false，将采用 active 参数的那个插件
     # Setting `true` means remembering the comment system selected by 
     # the visitor, otherwise use the `active` setting comment system.
-    storage: true
+    storage: false
     # TODO
     # Lazyload all comment systems.
     # lazyload: false
     # 设置你要显示的2个评论插件，`weight` 数字越小越靠前
     # `name` 参数名可选值：livere | waline | waline3 | utterances | artalk | giscus
     # Modify texts or order for any naves, here are some examples.
-    # nav:
-    #   - name: waline
-    #     title: Waline
-    #     color: "#27ae60"
-    #     weight: 1
-    #   - name: giscus
-    #     title: Giscus
-    #     color: "#886ce4"
-    #     weight: 2
+    nav:
+      - name: waline
+        title: Waline
+        color: "#27ae60"
+        weight: 2
+      - name: giscus
+        title: Giscus
+        color: "#886ce4"
+        weight: 1
 
   # Waline 评论插件
   # 更多配置信息请参考：https://waline.js.org/
@@ -969,7 +980,7 @@ params:
     reaction: true
     reactionText: [ '点赞', '踩一下', '得意', '不屑', '尴尬', '睡觉']
     reactionTitle: "你认为这篇文章怎么样？"
-    serverURL: #<your waline server url>
+    serverURL: https://walinejs.comment.lithub.cc
   # Waline(2) 与 Waline3 无法兼容只能是二选一
   # Waline3 采用的是ES模块开发，需要更高版本的浏览器才能支持，如考虑兼容性建议可优先选用Waline2
   # waline3:
@@ -1005,54 +1016,55 @@ params:
   # 更多配置信息请参考：https://utteranc.es
   # Utterances comments system
   # For more information: https://utteranc.es
-  # utterances:
-  #   # Github 仓库地址，格式：用户名/仓库名称
-  #   # Github repository owner and name
-  #   repo: username/repo-name
-  #   # 问题标题的模式，可选值：pathname | url | title | og:title
-  #   # Available values: pathname | url | title | og:title
-  #   issueTerm: pathname
-  #   # 问题的标签分类
-  #   # Label flag for Github issues
-  #   label: comments
-  #   # 主题可选值： github-light | github-dark | preferred-color-scheme | github-dark-orange | icy-dark | dark-blue | photon-dark | boxy-light
-  #   # Available values: github-light | github-dark | preferred-color-scheme | github-dark-orange | icy-dark | dark-blue | photon-dark | boxy-light
-  #   theme: preferred-color-scheme
+  utterances:
+    # Github 仓库地址，格式：用户名/仓库名称
+    # Github repository owner and name
+    repo: RyanTokManMokMTM/RyanTokManMokMTM.github.io
+    # 问题标题的模式，可选值：pathname | url | title | og:title
+    # Available values: pathname | url | title | og:title
+    issueTerm: pathname
+    # 问题的标签分类
+    # Label flag for Github issues
+    label: comments
+    # 主题可选值： github-light | github-dark | preferred-color-scheme | github-dark-orange | icy-dark | dark-blue | photon-dark | boxy-light
+    # Available values: github-light | github-dark | preferred-color-scheme | github-dark-orange | icy-dark | dark-blue | photon-dark | boxy-light
+    theme: github-light
 
   # Giscus 评论插件
   # 更多配置信息请参考：https://giscus.app
   # Giscus comments system
   # For more information: https://giscus.app
-  # giscus:
-  #   # Github 仓库地址，格式：用户名/仓库名称
-  #   # Github repository owner and name
-  #   repo: username/repo-name
-  #   # Giscus 生成的仓库 Id
-  #   # Generate repository Id from Giscus
-  #   repoId: #<repo-id>
-  #   # 讨论区的分类名称
-  #   # Github discussions category
-  #   category: Comments
-  #   # 讨论区分类 ID
-  #   # Generate category Id from Giscus
-  #   categoryId: #<category-id>
-  #   # 帖子上的反应将会显示在评论前
-  #   # The reactions for post will be shown before the comments
-  #   reactions: false
-  #   # 将元数据定期被发送到父页面（被嵌入的页面或控制台，用于调试）
-  #   # Metadata will be sent periodically to the parent window
-  #   emit: false
-  #   # 评论输入框的位置，可选值： top | bottom
-  #   # Aavilable value: top | bottom
-  #   # 讨论区帖子标题，可选值： pathname | url | title | og:title | 自定义
-  #   # Available values: pathname | url | title | og:title | custom
-  #   mapping: title
-  #   # 评论输入框的位置，可选值： top | bottom
-  #   # Aavilable value: top | bottom
-  #   inputPosition: top
-  #   # 主题可选值： light | light_high_contrast | light_protanopia | light_tritanopia | dark | dark_high_contrast | dark_protanopia | dark_tritanopia | dark_dimmed | transparent_dark | preferred_color_scheme
-  #   # Available values: light | light_high_contrast | light_protanopia | light_tritanopia | dark | dark_high_contrast | dark_protanopia | dark_tritanopia | dark_dimmed | transparent_dark | preferred_color_scheme
-  #   theme: preferred_color_scheme
+  giscus:
+    # Github 仓库地址，格式：用户名/仓库名称
+    # Github repository owner and name
+    repo: username/repo-name
+    # Giscus 生成的仓库 Id
+    # Generate repository Id from Giscus
+    repoId: #<repo-id>
+    # 讨论区的分类名称
+    # Github discussions category
+    category: Comments
+    # 讨论区分类 ID
+    # Generate category Id from Giscus
+    categoryId: #<category-id>
+    # 帖子上的反应将会显示在评论前
+    # The reactions for post will be shown before the comments
+    reactions: false
+    # 将元数据定期被发送到父页面（被嵌入的页面或控制台，用于调试）
+    # Metadata will be sent periodically to the parent window
+    emit: false
+    # 评论输入框的位置，可选值： top | bottom
+    # Aavilable value: top | bottom
+    # 讨论区帖子标题，可选值： pathname | url | title | og:title | 自定义
+    # Available values: pathname | url | title | og:title | custom
+    mapping: title
+    # 评论输入框的位置，可选值： top | bottom
+    # Aavilable value: top | bottom
+    inputPosition: top
+    # 主题可选值： light | light_high_contrast | light_protanopia | light_tritanopia | dark | dark_high_contrast | dark_protanopia | dark_tritanopia | dark_dimmed | transparent_dark | preferred_color_scheme
+    # Available values: light | light_high_contrast | light_protanopia | light_tritanopia | dark | dark_high_contrast | dark_protanopia | dark_tritanopia | dark_dimmed | transparent_dark | preferred_color_scheme
+    theme: preferred_color_scheme
+
 
   # # twikoo 评论插件
   # # 更多配置信息请参考：https://twikoo.js.org
@@ -1083,7 +1095,7 @@ params:
 
   # 文章分享功能
   share:
-    enable: true
+    enable: false
     # 更多信息与配置，请参考：https://sharethis.com
     # For more information and configuration, please refer to:https://sharethis.com
     # sharethis:

@@ -1,6 +1,6 @@
 +++
 title = "About me 關於我"
-description = "About me"
+description = "This is all about me!"
 date = "2020-03-29"
 author = "jackson.tmm"
 url = "about.html"
@@ -25,50 +25,50 @@ type = "about"
 上大學以後，也是正式開始學習程式設計的開始。可能是以前有自學過一段時間C++，學起來比較輕鬆一點。大二下的時候，很不辛*COVIN-19*疫情爆發，不能會台灣只能留在香港上網絡課程，因此，便開始了我的自學之路。由於有了學習C++的經驗以及程式語言的基礎，**便開始自我探索模式，嘗試接觸不同的領域。了解過網頁設計,後端開發,數據庫設計,Apple App開發,ML/TensorFlow基礎,甚至是其他領域的探索如遊戲開發，美術設計，3D建模等等**...這段自學探索的旅程,**貌似看上去毫無意義**(**也就是啥都學，沒有一個是精的**)。但是，**對我來說有巨大的意義**，能夠讓我更認識自己，知道自己喜歡的東西，不喜歡的東西，甚至是知道哪些學習方法是適合自己。雖然很想什麼都想要會，但是也**決定了只做自己感興趣的事情**。以下是我在這段時間所做的東西(你們應該不會嫌棄吧><)   -->
 
 **2020年 - 基於IOS的微博UI Clone**
-![netfilx](/imgs/weiboClone.jpg)
+![netfilx](/imgs-custom/weiboClone.jpg)
 
 **2020年 -第一次學習IOS開發的Demo**
-![ios-demo](/imgs/ios-learn.PNG)
+![ios-demo](/imgs-custom/ios-learn.PNG)
 
 **2020年 - 基於IOS的Netfilx UI Clone**
-![netfilx](/imgs/netfilxClone.jpg)
+![netfilx](/imgs-custom/netfilxClone.jpg)
 
 **2020年 - 第一次嘗試自學建模的作品 - 雷神之錘**
-![shield](/imgs/hammer.jpg)
+![shield](/imgs-custom/hammer.jpg)
 
 **2020年 - 第二次嘗試自學建模的作品 - 美國隊長盾**
-![shield](/imgs/shield.jpg)
-![shield2](/imgs/shield2.jpg)
+![shield](/imgs-custom/shield.jpg)
+![shield2](/imgs-custom/shield2.jpg)
 
 **2020年 - 送給自己20歲的生日禮物的一顆排球模型** 
-![volleyball](/imgs/20-birth.jpg)
+![volleyball](/imgs-custom/20-birth.jpg)
 
 **2020年 - 香港霓虹燈** 
-![volleyball](/imgs/hongkong-light.jpg)
+![volleyball](/imgs-custom/hongkong-light.jpg)
 
 **2020年 - 模擬水還是很好玩的(渲染了12小時 (◑‿◐) )**
-![liquid-sim](/imgs/liquid.jpg)
+![liquid-sim](/imgs-custom/liquid.jpg)
 
 **2020年 - 燈籠魚(Lophiiformes)作品**
-![Lophiiformes](/imgs/Lophiiformes.jpg)
+![Lophiiformes](/imgs-custom/Lophiiformes.jpg)
 
 **2020年 - 第一次學遊戲開發的作品**
-![game](/imgs/game.jpg)
+![game](/imgs-custom/game.jpg)
 
 **2021年 - 第一次網絡課學習建模的作業**
-![game axe](/imgs/axe.png)
+![game axe](/imgs-custom/axe.png)
 
 **2021年 - 第一次網絡課學習建模的結課作品(還沒上貼圖><,有空就上)**
-![human](/imgs/final-model.jpg)
+![human](/imgs-custom/final-model.jpg)
 
 **2022年 - 電影資源社群平台App**
-![IOS_APP](/imgs/ott_app/movie-app/AppImg.png)
+![IOS_APP](/imgs-custom/ott_app/movie-app/AppImg.png)
 
 **2023/2024年 - 通訊軟體App**
-![Chat_APP](/imgs/chat-app/2024-04-20-final.png)
+![Chat_APP](/imgs-custom/chat-app/2024-04-20-final.png)
 
 **2024年 - 日本71天自由行**
-![trip-jp](/imgs/jp/full-jp.png)
+![trip-jp](/imgs-custom/jp/full-jp.png)
 
 
 ### Interest

@@ -15,7 +15,7 @@ categories:
 > * 後續遍歷(Postorder) - Rule: left-child -> right-child -> Visit(self)
 
 舉個例子:  
-![tree](/imgs/note/tree-example.png)
+![tree](/imgs-custom/note/tree-example.png)
 **Preorder Traversal(VLR)**
 1. 查看當前node的val
 2. 移動到Left-child

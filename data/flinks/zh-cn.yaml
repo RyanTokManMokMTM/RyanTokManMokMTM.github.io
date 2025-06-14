@@ -13,14 +13,14 @@
 
     - name: Hugo-NexT
       desc: Hugo NexT 官方预览网站。
-      avatar: https://hugo-next.eu.org/imgs/hugo_next_avatar.png
+      avatar: https://hugo-next.eu.org/imgs-custom/hugo_next_avatar.png
       link: https://hugo-next.eu.org
       timeout: 2
       visible: true
 
     - name: 凡梦星尘空间站
       desc: 再平凡的人也有属于他的梦想！
-      avatar: https://elkan1788.github.io/imgs/avatar.png
+      avatar: https://elkan1788.github.io/imgs-custom/avatar.png
       link: https://lisenhui.cn
       timeout: 2
       visible: true
@@ -31,7 +31,7 @@
   FLinksList:
     - name: 阿哈吉
       desc: 全网首个 Hugo NexT 忠实粉丝用户
-      avatar: https://a.happy2008.top/imgs/stayhome-small.png
+      avatar: https://a.happy2008.top/imgs-custom/stayhome-small.png
       link: https://a.happy2008.top/
       timeout: 2
       visible: true

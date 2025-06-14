@@ -32,7 +32,7 @@ tags:
 * 好友動態回覆
 
 ### app 截圖
-![chat-app-screen](/imgs/chat-app/screenshot.png)
+![chat-app-screen](/imgs-custom/chat-app/screenshot.png)
 
 ### 階段性Demo
 <video src="/videos/chat-app/demo.mp4" controls="controls" width="500" height="300"></video> 

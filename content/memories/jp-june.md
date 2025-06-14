@@ -10,7 +10,7 @@ tags:
 ---
 ## 6月份在日本體驗生活的日記
 **2024年6月1日 ～ 2024年6月30日**
-![June](/imgs/jp/june.png)
+![June](/imgs-custom/jp/june.png)
 
 ## 行程
 

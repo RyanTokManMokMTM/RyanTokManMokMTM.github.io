@@ -65,20 +65,20 @@ toc: true
 
 **書本目錄為例：**  
 **Harry Potter And The Chamber Of Secrets 的目錄頁：**  
-![book-index](/imgs/helper/sql-index/harry-potter-index.png)
+![book-index](/imgs-custom/helper/sql-index/harry-potter-index.png)
 
 如果我們要看*Ch.9*，透過查看目錄就可以知道它在書本的 page 148，直接跳到148頁就好了。  
 
 在資料庫的層面上，也是一樣的情況，我們可以直接透過索引來快速的找到資料。那資料庫的索引到底長什麼樣子呢？  
 假設我們有以下情境：
-![data](/imgs/helper/sql-index/data.png)
+![data](/imgs-custom/helper/sql-index/data.png)
 
 現在從圖中我們可以看得出來，數據頁1因滿了，插入新數據後就會被分成兩頁了，這樣如果我們要查詢數據的時候要怎麼知道數據都放在了那一頁上呢？  
 這裡我們是不是就需要一個新的數據頁來保存那些數據在那一頁，而這個用來保存數據的頁就叫做**索引頁**。
-![index-page](/imgs/helper/sql-index/index-page.png)
+![index-page](/imgs-custom/helper/sql-index/index-page.png)
 
 隨著數據的增加，索引頁也會增加，也就變成我們我們熟悉的「B+ Tree」，所以索引樹也就是B+ Tree。
-![B+index-page](/imgs/helper/sql-index/B+index-tree.png)
+![B+index-page](/imgs-custom/helper/sql-index/B+index-tree.png)
 
 ### 資料庫索引的種類
 
@@ -116,7 +116,7 @@ Q: **除了聚簇索引樹外，主建ID在這邊的作用會是什麼呢？ 這
 ### InnoDB索引規則
 在討論添加索引的規則之前，我們先來看看一句查詢是如何透過索引來找到資料的。
 假設我們現在有如下這個資料庫表：
-![user-example](/imgs/helper/sql-index/example-index-user.png)
+![user-example](/imgs-custom/helper/sql-index/example-index-user.png)
 *這邊只是簡單的示範一下，圖中只包含前幾筆資料用作演示*
 
 #### 查詢條件包含主鍵 
@@ -124,7 +124,7 @@ Q: **除了聚簇索引樹外，主建ID在這邊的作用會是什麼呢？ 這
 select * from user where id = 12;
 ```
 因為我們的User表格包含了聚簇索引樹，對聚簇索引樹進行Binary search就很快的找到了，id = 12的資料。
-![pk-index-search](/imgs/helper/sql-index/pk-index-search.png)
+![pk-index-search](/imgs-custom/helper/sql-index/pk-index-search.png)
 *查詢路徑為橘色路徑*
 最後得出結果為:
 ```json
@@ -141,10 +141,10 @@ select * from user where id = 12;
 現在為User表格添加二級以及聯合索引,索引分別為一下：  
 
 二級索引： `age`, 並生成一些索引樹(index), 這邊我們簡稱為「Age 二級索引樹」。
-![age-2nd-index](/imgs/helper/sql-index/2nd-index-tree.png)
+![age-2nd-index](/imgs-custom/helper/sql-index/2nd-index-tree.png)
 
 聯合索引： （`age`,`name`） 並生成一些索引樹(index), 這邊我們簡稱為「Age&Name 聯合索引樹」。  
-![composite-index](/imgs/helper/sql-index/composite-index-tree.png)
+![composite-index](/imgs-custom/helper/sql-index/composite-index-tree.png)
 
 從上面圖可以看得出來 *「二級索引」* 以及 *「聯合索引」* 的主要區別是: 
 - 聯合索引會包含1個或者多個非唯一欄位的數據
@@ -159,7 +159,7 @@ select `id`,`age` from user where age = 18;
 ```
 
 這裡的查詢語句包含了 `where age = 18` 這個查詢條件，而且我們也為`age`這個欄位建立了索引，所以直接透過「Age 二級索引樹」查詢資料，以下為查詢路徑:
-![age-2nd-index-search](/imgs/helper/sql-index/2nd-index-search.png)
+![age-2nd-index-search](/imgs-custom/helper/sql-index/2nd-index-search.png)
 
 從圖中可以清晰看到，透過Binary Search 很快就能找到`age = 18`的資料。而在葉子節點中，也包含了查詢的資料 (select `id`,`age`)，因此直接返回就好了。
 最終結果為：
@@ -177,7 +177,7 @@ select `id`, `age`, `name` from user where age = 89 and name = "Ken";
 ```
 
 這裡的查詢語句包含了 `where age = 89 and name = "Ken"` 這個查詢條件，而且我們也為`age`和`name`欄位建立了聯合索引，所以直接透過「Age&Name 聯合索引樹」查詢資料，以下為查詢路徑:
-![composite-index-search](/imgs/helper/sql-index/composite-index-search.png)
+![composite-index-search](/imgs-custom/helper/sql-index/composite-index-search.png)
 從圖中可以清晰看到，透過Binary Search 很快就能找到`age = 89`和`name = "Ken"`的資料。而在葉子節點中，也包含了查詢的資料 (select `id`,`age`,`name`)，因此直接返回就好了。
 最終結果為：
 ```json
@@ -200,7 +200,7 @@ select `id`, `age`, `name` from user where age = 89 and name = "Ken";
 我們有了這個主鍵ID，是不是就拿著這個ID回到聚簇索引樹就可以獲取完整的數據了(聚簇索引樹葉子包含了完整的數據)! 這個透過其他索引樹拿取ID再回到聚簇索引樹獲取數據的方式就是 **「回表 (Back to the table)」**。
 
 但是除了回表外，這裡的ID還有另外的作用。就是當數據都一樣的情況下，怎麼排序？因為主鍵是唯一的，是不是就可以透過ID來排序了！  
-![duplicated-data-sorting](/imgs/helper/sql-index/duplicate-data-sorting-by-id.png)
+![duplicated-data-sorting](/imgs-custom/helper/sql-index/duplicate-data-sorting-by-id.png)
 
 #### 進一步提高索引查詢效率
 從上面的介紹過後，我們都對 **「索引是什麼」** 以及 **「索引如何加快查詢」**有個基本的理解，但是在運用上，我們要如何運用索引提高查詢效率呢？接下來給大家介紹一下。   
@@ -241,7 +241,7 @@ select `id`, `age`, `name` from user where age = 89 and name like "%en";
 什麼是最左匹配原則呢？我們建立聯合索引的時候，會根據從左至右的順序來建立索引樹，例如(A,B,C)這個索引樹的規則就是這樣的:  
 如果數據A欄位的數據相同，就會根據B的數據來進行比較，如果B欄位的數據也相同，就會根據C欄位的數據來進行比較。最後葉子節點的排序就是根據這個索引(A,B,C)。  
 
-![leftmost-match](/imgs/helper/sql-index/leftmost-match.png)
+![leftmost-match](/imgs-custom/helper/sql-index/leftmost-match.png)
 從圖中先根據`age`欄位進行了排序，同樣為`age = 1`的，則根據`name`繼續排序，最後再根據`code`進行排序，若都一樣則會用ID作為最後排序。  
 若符合最左匹配原則的話，就可以透過這顆索引樹來獲取數據，而不需要全表掃描。什麼情況是符合最左匹配原則呢？很簡單，只要查詢順序根據建立索引時候的順序來進行查詢就好了。  
 

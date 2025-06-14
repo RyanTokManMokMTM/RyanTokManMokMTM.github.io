@@ -36,7 +36,7 @@ Explanation: s becomes "c" while t becomes "b".
 這題有2種解法:  
 1. 要使用到額外的空間，保存2個移除字符後的String再進行比較。
 2. 透過pointer`r`的方式來決定哪個位置是要被移除的，然後將之後的字符將其進行取代，最後在比較倆者在`r`長度內的字符是否相同，即可。可見下圖為例:
-![844-help](/imgs/leetcodesHelper/844-helper.png)
+![844-help](/imgs-custom/leetcodesHelper/844-helper.png)
 
 
 <!-- ## The solving steps:

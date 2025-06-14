@@ -49,5 +49,5 @@ tags:
 ---
 
 #### 享受快樂的時光❤️❤️❤️❤️
-![trip-view](/imgs/trips/2025/shanghai/trip-food.png)
-![trip-view](/imgs/trips/2025/shanghai/trip-view.png)
+![trip-view](/imgs-custom/trips/2025/shanghai/trip-food.png)
+![trip-view](/imgs-custom/trips/2025/shanghai/trip-view.png)

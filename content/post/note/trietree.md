@@ -17,7 +17,7 @@ categories:
     * 搜索關鍵字時,返回前綴最相似的可能結果
 
 ## Trie Tree 結構圖  
-![TrieTree](/imgs/note/trieTree.png)
+![TrieTree](/imgs-custom/note/trieTree.png)
 
 # Trie Tree Template
 ```c++

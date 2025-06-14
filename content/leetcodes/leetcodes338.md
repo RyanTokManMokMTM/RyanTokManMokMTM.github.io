@@ -68,11 +68,11 @@ public:
 
 ### Dynamic Programming approach
 我們可以先觀察一下每個數字的**Binary**,以`n=8`為例:
-![BITS](/imgs/leetcodesHelper/338-helper-1.png) 
+![BITS](/imgs-custom/leetcodesHelper/338-helper-1.png) 
 
 從圖中我們可以看得到只有1個`bit`為1的數字都是**2<sup>i</sup>**,而我們所需要計算的[**2<sup>i</sup>** , **2<sup>i+1</sup>-1**]之間的數字的數目即可。  但是,我們要怎麼計算呢?  
 首先,我們需要知道怎麼計算[**2<sup>i</sup>** , **2<sup>i+1</sup>-1**]裡面的`bits`的數目,然後我們在觀察一下**Binary**: 如下圖:
-![BITS](/imgs/leetcodesHelper/338-helper-2.png)
+![BITS](/imgs-custom/leetcodesHelper/338-helper-2.png)
 我們可以發現[**2<sup>i</sup>** , **2<sup>i+1</sup>-1**]都會想相隔**2<sup>i</sup>-1**個，也就是說我們只需要定義一個變數`j`作為*offset* 就可以移動到需要計算數字的位置( 0 <= j <= **2<sup>i</sup>-1** )。例如: `i=2`(**2<sup>2</sup>** = 4),`2+0(2)`,`2+1(3)`。
 
 接下來,我們可以透過**DP**來幫助我們計算。  

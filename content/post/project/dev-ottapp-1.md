@@ -16,7 +16,7 @@ categories:
 
 #### 前端UI:
 ##### 主界面
-![main](/imgs/ott_app/home_img/main.png)
+![main](/imgs-custom/ott_app/home_img/main.png)
 > 包含APP4個主要得核心功能 
 > 1. 電影預覽與電影搜尋 - 提供了以電影類別預覽以及根據電影情況的預覽。如熱門電影,最受歡迎等...
 > 2. 用戶電影評論與影評分享 - 可允許用戶在觀看完電影後，寫下觀後感與他人分享
@@ -24,7 +24,7 @@ categories:
 > 4. 用戶個人頁 - 包含了用戶基本訊息,發佈的文章,喜歡的電影以及收藏的電影
 
 ##### 電影搜尋/預覽界面
-![search](/imgs/ott_app/home_img/searchAndDiscover.png)
+![search](/imgs-custom/ott_app/home_img/searchAndDiscover.png)
 > 功能如下：  
 > 讓用戶以文字的方式進行電影的查詢  
 > 讓用戶按著電影類別來預覽不同的電影
@@ -33,7 +33,7 @@ categories:
 > 1. 刷新以及獲取更多資料
 
 ##### 電影資訊界面
-![detail](/imgs/ott_app/home_img/movieDetail.png)
+![detail](/imgs-custom/ott_app/home_img/movieDetail.png)
 > 功能如下：  
 > 1. 提供電影基本以及詳細資訊(包含電影說明,演員,成員,宣傳影片等)
 > 2. 為用戶提供OTT資源(如有串流平台提供資源)，並直連至該平台進行觀看
@@ -44,7 +44,7 @@ categories:
 > 1. 刷新以及獲取更多資料
 
 ##### 用戶社群與文章發佈界面
-![social](/imgs/ott_app/home_img/social.png)
+![social](/imgs-custom/ott_app/home_img/social.png)
 > 功能如下：  
 > 1. 為用戶推送最新的電影評論文章
 > 2. 為用戶推送關注用戶的最新評論文章
@@ -57,7 +57,7 @@ categories:
 > 2. 刷新以及獲取更多資料
 
 ##### 聊天與通知界面
-![chat](/imgs/ott_app/home_img/chatAndNotification.png)
+![chat](/imgs-custom/ott_app/home_img/chatAndNotification.png)
 > 這部分的界面目前只使用了假數據進行UI設計，還沒設計對應的API  
 > 這部分會使用到Websocket 技術的幫助(還在研究當中QQ)
 
@@ -68,7 +68,7 @@ categories:
 > 4. 刷新以及獲取更多資料
 
 ##### 個人與他人資訊界面
-![profile](/imgs/ott_app/home_img/profile.png)
+![profile](/imgs-custom/ott_app/home_img/profile.png)
 > 功能如下：  
 > 1. 用戶可以編輯更新個人資訊
 > 2. 用戶可以觀看用戶發表文章
@@ -85,34 +85,34 @@ categories:
 #### 已完成
 
 #### SERVER HEALTH
-![server_health](/imgs/ott_app/backend/health_api.png)
+![server_health](/imgs-custom/ott_app/backend/health_api.png)
 
 #### USER API
-![user_api](/imgs/ott_app/backend/user_api.png)
+![user_api](/imgs-custom/ott_app/backend/user_api.png)
 
 #### USER GENRE API
-![user_genre_api](/imgs/ott_app/backend/user_genre_api.png)
+![user_genre_api](/imgs-custom/ott_app/backend/user_genre_api.png)
 
 #### MOVIE API
-![user_genre_api](/imgs/ott_app/backend/movie_api.png)
+![user_genre_api](/imgs-custom/ott_app/backend/movie_api.png)
 
 #### USER GENRE API
-![custom_list](/imgs/ott_app/backend/custom_list_api.png)
+![custom_list](/imgs-custom/ott_app/backend/custom_list_api.png)
 
 #### POST LIKES API
-![custom_list](/imgs/ott_app/backend/post_like_api.png)
+![custom_list](/imgs-custom/ott_app/backend/post_like_api.png)
 
 #### LIKED MOVIE API
-![custom_list](/imgs/ott_app/backend/like_movie_api.png)
+![custom_list](/imgs-custom/ott_app/backend/like_movie_api.png)
 
 #### COMMENT LIKES API
-![custom_list](/imgs/ott_app/backend/comment_like_api.png)
+![custom_list](/imgs-custom/ott_app/backend/comment_like_api.png)
 
 #### FRIEND API
-![custom_list](/imgs/ott_app/backend/friend_api.png)
+![custom_list](/imgs-custom/ott_app/backend/friend_api.png)
 
 #### COMMENT API
-![custom_list](/imgs/ott_app/backend/comment_api.png)
+![custom_list](/imgs-custom/ott_app/backend/comment_api.png)
 
 #### 待完成
 * Websocket

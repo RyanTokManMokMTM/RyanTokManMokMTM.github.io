@@ -70,7 +70,7 @@ D+19: 收到拒信
 
 以上這幾個task皆完成，但是還是收到了拒信，可能是因為寫的不太好吧。又或者使用的tech stack 不是他們期待的吧。[這邊附上我的實作code](https://github.com/RyanTokManMokMTM/wordle-game):
 
-![sandboxVR-rejected](/imgs/helper/interview-2024/SandboxVR-rejected-2024.png)
+![sandboxVR-rejected](/imgs-custom/helper/interview-2024/SandboxVR-rejected-2024.png)
 
 #### 第二家: *HSBC Group - Full Stack Engineer, WSB IT - Hang Seng Bank (HK)*  
 D+0: 投遞履歷(08/27)  
@@ -359,7 +359,7 @@ vector<string> getRequestStatus(vector<string> requests) {
 }
 ```
 但是不知道為何test case只過了一半😭。要再加把勁刷多一些題目，希望下次還有機會再做IBM code assignment的時候，可以寫出來！  
-![IBM-rejected](/imgs/helper/interview-2024/IBM-rejected-2024.png)
+![IBM-rejected](/imgs-custom/helper/interview-2024/IBM-rejected-2024.png)
 
 ### 收到面試/面談機會  
 #### 第一家： *BII Transit Systems(HK)Company Limited - Software Engineer/ Assistant Software Engineer*  
@@ -514,4 +514,4 @@ Recruiter phone interview:
 最後接受的Offer雖然沒有說到很好，但是卻是在這段找工作中，給我的感覺，工作內容是這些機會裡面是最好的了，希望這接下來的這一份工作能順順利利且收穫滿滿！！
 
 接下來的日子，我也是**SHOPLINERs**! 嘿嘿！加油～～～
-![shopliner](/imgs/helper/shopliner.jpg)
+![shopliner](/imgs-custom/helper/shopliner.jpg)

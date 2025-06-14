@@ -11,4 +11,4 @@ categories:
 ---
 
 ## 直接上圖!
-![head](/imgs/design/head-train.jpg)
+![head](/imgs-custom/design/head-train.jpg)

@@ -50,10 +50,10 @@ categaries:
 
 因為2023年年末的時候有去來過香港迪士尼跨年，2024年在迪士尼開始，就在讓他在迪士尼結束吧！哈哈哈
 
-![ticket](/imgs/2024-disney/ticket.png)
+![ticket](/imgs-custom/2024-disney/ticket.png)
 
 #### 享受快樂的時光❤️❤️❤️❤️
-![happy-hour](/imgs/2024-disney/happy-hour.png)
+![happy-hour](/imgs-custom/2024-disney/happy-hour.png)
 
 
 <!--more-->

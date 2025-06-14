@@ -117,7 +117,7 @@ aaaaaaac (j = 7)
 **根據不同的字符會轉移到不同的位置**，這個有沒有很像[FSM(Finite State Machine/ Finite State automaton) 有限狀態機/有限狀態自動機](https://en.wikipedia.org/wiki/Finite-state_machine)呢？  
 
 舉個例子：pattern : ABABC 的FSM如下：  
-![FSM](/imgs/fsm-kmp1.png)
+![FSM](/imgs-custom/fsm-kmp1.png)
 
 我們可以看到以上的FSM會按照不同匹配到的字符會轉到不用的State！**這個FSM便是KMP算法的重點部分**！
 

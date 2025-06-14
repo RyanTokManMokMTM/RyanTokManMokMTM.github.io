@@ -1,0 +1,311 @@
+<!doctype html><html lang=zh-TW data-theme=dark><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset=UTF-8><meta name=viewport content="width=device-width"><meta name=theme-color content="#222" media="(prefers-color-scheme: dark)"><meta name=generator content="Hugo 0.134.2"><link rel="shortcut icon" type=image/x-icon href=/imgs-custom/customIcon/favicon.ico><link rel=icon type=image/x-icon href=/imgs-custom/customIcon/favicon.ico><link rel=icon type=image/png sizes=16x16 href=/imgs-custom/customIcon/favicon_16x16.png><link rel=icon type=image/png sizes=32x32 href=/imgs-custom/customIcon/favicon_32_32.png><link rel=apple-touch-icon sizes=180x180 href=/imgs-custom/icons/apple_touch_icon_next.png><meta itemprop=name content="Leetcodes"><meta itemprop=description content="簡單紀錄生活和筆記"><meta name=description content="簡單紀錄生活和筆記"><meta itemprop=image content="http://localhost:1313/imgs-custom/customIcon/avatar.jpg"><meta itemprop=keywords content="博客,blogger,dev,jackson,note,learning,developer,development"><link href=/css/pio.css rel=stylesheet type=text/css><link type=text/css rel=stylesheet href=http://localhost:1313/3rd/font-awesome/6.6.0/css/all.min.css><link type=text/css rel=stylesheet href=http://localhost:1313/3rd/animate.css/4.1.1/animate.min.css><link type=text/css rel=stylesheet href=http://localhost:1313/3rd/viewerjs/1.11.6/viewer.min.css><link rel=stylesheet href=/css/main.css><style type=text/css>.post-footer,.flinks-list-footer hr:after{content:"~ 我可是有底线的哟 ~"}</style><script type=text/javascript>(function(){localDB={set:function(e,t,n){if(n===0)return;const s=new Date,o=n*864e5,i={value:t,expiry:s.getTime()+o};localStorage.setItem(e,JSON.stringify(i))},get:function(e){const t=localStorage.getItem(e);if(!t)return void 0;const n=JSON.parse(t),s=new Date;return s.getTime()>n.expiry?(localStorage.removeItem(e),void 0):n.value}},theme={active:function(){const e=localDB.get("theme");if(e==null)return;theme.toggle(e),window.matchMedia("(prefers-color-scheme: dark)").addListener(function(e){theme.toggle(e.matches?"dark":"light")})},toggle:function(e){document.documentElement.setAttribute("data-theme",e),localDB.set("theme",e,2);const t=document.querySelector("iframe.giscus-frame");if(t){const n={setConfig:{theme:e}};t.contentWindow.postMessage({giscus:n},"https://giscus.app")}}},theme.active()})(window)</script><script class=next-config data-name=page type=application/json>{"comments":true,"isHome":false,"isPage":false,"path":"leetcodes","permalink":"http://localhost:1313/leetcodes/","title":"Leetcodes","waline":{"js":[{"alias":"@waline/client","alias_name":"waline","file":"dist/pageview.js","name":"pageview","version":"2.15.8"},{"alias":"@waline/client","alias_name":"waline","file":"dist/comment.js","name":"comment","version":"2.15.8"}]}}</script><script type=text/javascript>document.addEventListener("DOMContentLoaded",()=>{var e=document.createElement("script");e.charset="UTF-8",e.id="LA_COLLECT",e.src="https://sdk.51.la/js-sdk-pro.min.js",e.async="true",e.onload=function(){LA.init({id:"JiZkaipzkPyiCL8x",ck:"JiZkaipzkPyiCL8x",autoTrack:!0})},document.head.appendChild(e)})</script><script type=text/javascript>document.addEventListener("DOMContentLoaded",()=>{var e=document.createElement("script");e.charset="UTF-8",e.src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js",e.async=!1,e.defer=!0,document.head.appendChild(e),e.onload=function(){NexT.utils.fmtBusuanzi()}})</script><title>leetcodes - Jackson.tmm</title><noscript><link rel=stylesheet href=/css/noscript.css></noscript></head><body itemscope itemtype=http://schema.org/WebPage class=use-motion><div class=headband></div><main class=main><header class=header itemscope itemtype=http://schema.org/WPHeader><div class=header-inner><div class=site-brand-container><div class=site-nav-toggle><div class=toggle aria-label role=button><span class=toggle-line></span>
+<span class=toggle-line></span>
+<span class=toggle-line></span></div></div><div class=site-meta><a href=/ class=brand rel=start><i class=logo-line></i><h1 class=site-title>Jackson.tmm</h1><i class=logo-line></i></a><p class=site-subtitle itemprop=description>Loving life and dreams.</p></div><div class=site-nav-right><div class="toggle popup-trigger"><i class="fa fa-search fa-fw fa-lg"></i></div></div></div><nav class=site-nav><ul class="main-menu menu"><li class="menu-item menu-item-home"><a href=/ class=hvr-icon-pulse rel=section><i class="fa fa-home hvr-icon"></i>Home 首頁</a></li><li class="menu-item menu-item-categories"><a href=/categories/ class=hvr-icon-pulse rel=section><i class="fa fa-list hvr-icon"></i>Menu 目錄</a></li><li class="menu-item menu-item-about"><a href=/about.html class=hvr-icon-pulse rel=section><i class="fa fa-user hvr-icon"></i>About 關於</a></li><li class="menu-item menu-item-post"><a href=/post/ class=hvr-icon-pulse rel=section><i class="fa fa-archive hvr-icon"></i>Archive 歸檔</a></li><li class="menu-item menu-item-memories"><a href=/memories class=hvr-icon-pulse rel=section><i class="fa fa-star hvr-icon"></i>Memories 回憶</a></li><li class="menu-item menu-item-leetcodes"><a href=/leetcodes class=hvr-icon-pulse rel=section><i class="fa fa-code hvr-icon"></i>Leetcodes 力扣</a></li><li class="menu-item menu-item-project"><a href=/project class=hvr-icon-pulse rel=section><i class="fa fa-tasks hvr-icon"></i>Project 專案</a></li><li class="menu-item menu-item-achievement"><a href=/achievement class=hvr-icon-pulse rel=section><i class="fa fa-trophy hvr-icon"></i>Achievement 成就</a></li><li class="menu-item menu-item-resources"><a href=/resources class=hvr-icon-pulse rel=section><i class="fa fa-file hvr-icon"></i>Resources 資源</a></li><li class="menu-item menu-item-search"><a role=button class="popup-trigger hvr-icon-pulse"><i class="fa fa-search fa-fw hvr-icon"></i>搜索</a></li></ul></nav><div class=search-pop-overlay><div class="popup search-popup"><div class=search-header><span class=search-icon><i class="fa fa-search"></i></span><div class=search-input-container><input autocomplete=off autocapitalize=off maxlength=80 placeholder=搜索... spellcheck=false type=search class=search-input></div><span class=popup-btn-close role=button><i class="fa fa-times-circle"></i></span></div><div class="search-result-container no-result"><div class=search-result-icon><i class="fa fa-spinner fa-pulse fa-5x"></i></div></div></div></div></div><div class="toggle sidebar-toggle" role=button><span class=toggle-line></span>
+<span class=toggle-line></span>
+<span class=toggle-line></span></div><aside class=sidebar><div class="sidebar-inner sidebar-overview-active"><ul class=sidebar-nav><li class=sidebar-nav-toc>文章目錄</li><li class=sidebar-nav-overview>站點概覽</li></ul><div class=sidebar-panel-container><div class="post-toc-wrap sidebar-panel"><div class="post-toc animated"><nav id=TableOfContents></nav></div></div><div class="site-overview-wrap sidebar-panel"><div class="site-author site-overview-item animated" itemprop=author itemscope itemtype=http://schema.org/Person><img class=site-author-image itemprop=image alt=Jackson.tmm src=/imgs-custom/img-lazy-loading.gif data-src=/imgs-custom/customIcon/avatar.jpg><p class=site-author-name itemprop=name>Jackson.tmm</p><div class=site-description itemprop=description>簡單紀錄生活和筆記</div></div><div class="site-state-wrap site-overview-item animated"><nav class=site-state><div class="site-state-item site-state-posts"><a href=/post/><span class=site-state-item-count>37</span>
+<span class=site-state-item-name>日誌</span></a></div><div class="site-state-item site-state-categories"><a href=/categories/><span class=site-state-item-count>14</span>
+<span class=site-state-item-name>分類</span></a></div><div class="site-state-item site-state-tags"><a href=/tags/><span class=site-state-item-count>62</span>
+<span class=site-state-item-name>標籤</span></a></div></nav></div><div class="links-of-social site-overview-item animated"><span class=links-of-social-item><a href=https://www.facebook.com/karot.ka.7505/ title="Facebook → https://www.facebook.com/karot.ka.7505/" rel=noopener class=hvr-icon-pulse target=_blank><i class="fab fa-facebook fa-fw hvr-icon"></i>
+Facebook
+</a></span><span class=links-of-social-item><a href=https://www.instagram.com/tm_m.0418 title="IG → https://www.instagram.com/tm_m.0418" rel=noopener class=hvr-icon-pulse target=_blank><i class="fab fa-instagram fa-fw hvr-icon"></i>
+IG
+</a></span><span class=links-of-social-item><a href=https://github.com/RyanTokManMokMTM title="Github → https://github.com/RyanTokManMokMTM" rel=noopener class=hvr-icon-pulse target=_blank><i class="fab fa-github fa-fw hvr-icon"></i>
+Github
+</a></span><span class=links-of-social-item><a href=https://www.linkedin.com/in/jackson-moktokman/ title="LinkedIn → https://www.linkedin.com/in/jackson-moktokman/" rel=noopener class=hvr-icon-pulse target=_blank><i class="fab fa-linkedin fa-fw hvr-icon"></i>
+LinkedIn</a></span></div><div class="cc-license animated" itemprop=license><a href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh class=cc-opacity rel=noopener target=_blank title=共享知識><img src=/imgs-custom/img-lazy-loading.gif data-src=/imgs-custom/cc/big/by_nc_sa.svg alt=共享知識></a></div><div class="links-of-blogroll site-overview-item animated"><div class=links-of-blogroll-title><i class="fa-solid fa-person-praying fa-fw"></i>
+友情鏈接</div><ul class=links-of-blogroll-list><li class=links-of-blogroll-item><a href=https://cwksc.github.io/ title=https://cwksc.github.io/ target=_blank>CWKSC 一個什麼都學得會的人</a></li></ul></div></div></div></div><div id=siteinfo-card-widget class=sidebar-card-widget><div class=item-headline><i class="fas fa-chart-line"></i>
+<span>網站資訊</span></div><div class=siteinfo><div class=siteinfo-item><div class=item-name><i class="fa-solid fa-calendar-check"></i>已運行：</div><div class=item-count id=runTimes data-publishdate=2022-03-24T13:52:49+08:00></div></div><div id=la-siteinfo-widget style=display:none></div><div class=siteinfo-item><div class=item-name><i class="fa fa-user-plus"></i>今日訪問：</div><div class=item-count id=today_site_pv><i class="fa fa-sync fa-spin"></i></div></div><div class=siteinfo-item><div class=item-name><i class="fa fa-user-clock"></i>昨日訪問：</div><div class=item-count id=yesterday_site_pv><i class="fa fa-sync fa-spin"></i></div></div><div class=siteinfo-item><div class=item-name><i class="fa fa-arrows-down-to-people"></i>本月訪問：</div><div class=item-count id=month_site_pv><i class="fa fa-sync fa-spin"></i></div></div><div class=siteinfo-item><div class=item-name><i class="fa fa-users"></i>總訪問量：</div><div class=item-count id=total_site_pv><i class="fa fa-sync fa-spin"></i></div></div><div class=siteinfo-item><div class=item-name><i class="fa fa-font"></i>總字數：</div><div class=item-count id=wordsCount data-count=54765></div></div><div class=siteinfo-item><div class=item-name><i class="fa fa-mug-hot"></i>閱讀約：</div><div class=item-count id=readTimes data-times=131></div></div><div class=siteinfo-item><div class=item-name><i class="fa fa-clock-rotate-left"></i>最後更新於：</div><div class=item-count id=last-push-date data-lastpushdate=2024-12-02T23:31:33+08:00></div></div></div></div></aside><div class=sidebar-dimmer></div></header><div class=tool-buttons><div id=goto-comments class="button goto-comments" title=直達評論><i class="fas fa-comments"></i></div><div id=toggle-theme class=button title=深淺模式切換><i class="fas fa-adjust"></i></div><div class=back-to-top role=button title=返回頂部><i class="fa fa-arrow-up"></i>
+<span>0%</span></div></div><div class=reading-progress-bar></div><a role=button class="book-mark-link book-mark-link-fixed"></a><a href=https://github.com/RyanTokManMokMTM rel="noopener external nofollow noreferrer" target=_blank title="Follow me on GitHub" class="exturl github-corner"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0 0 115 115h15l12 27L250 250V0z"/><path d="M128.3 109C113.8 99.7 119 89.6 119 89.6 122 82.7 120.5 78.6 120.5 78.6 119.2 72 123.4 76.3 123.4 76.3 127.3 80.9 125.5 87.3 125.5 87.3 122.9 97.6 130.6 101.9 134.4 103.2" fill="currentcolor" style="transform-origin:130px 106px" class="octo-arm"/><path d="M115 115C114.9 115.1 118.7 116.5 119.8 115.4l13.9-13.8C136.9 99.2 139.9 98.4 142.2 98.6 133.8 88 127.5 74.4 143.8 58 148.5 53.4 154 51.2 159.7 51 160.3 49.4 163.2 43.6 171.4 40.1 171.4 40.1 176.1 42.5 178.8 56.2 183.1 58.6 187.2 61.8 190.9 65.4 194.5 69 197.7 73.2 200.1 77.6 213.8 80.2 216.3 84.9 216.3 84.9 212.7 93.1 206.9 96 205.4 96.6 205.1 102.4 203 107.8 198.3 112.5 181.9 128.9 168.3 122.5 157.7 114.1 157.9 116.9 156.7 120.9 152.7 124.9L141 136.5C139.8 137.7 141.6 141.9 141.8 141.8z" fill="currentcolor" class="octo-body"/></svg></a><noscript><div class=noscript-warning>Theme NexT works best with JavaScript enabled</div></noscript><div class="main-inner index posts-expand"><div class=post-block><article itemscope itemtype=http://schema.org/Article class=post-content lang><link itemprop=mainEntityOfPage href=http://localhost:1313/leetcodes/leetcode948/><span hidden itemprop=author itemscope itemtype=http://schema.org/Person><meta itemprop=image content="/imgs-custom/customIcon/avatar.jpg"><meta itemprop=name content="Jackson.tmm"></span><span hidden itemprop=publisher itemscope itemtype=http://schema.org/Organization><meta itemprop=name content="Jackson.tmm"><meta itemprop=description content="簡單紀錄生活和筆記"></span><span hidden itemprop=post itemscope itemtype=http://schema.org/CreativeWork><meta itemprop=name content="[Leetcode] Bag of Tokens(Medium)"><meta itemprop=description content="LeetCode 948 - Bag of Tokens
+
+You have an initial power of power, an initial score of 0, and a bag of tokens where tokens[i] is the value of the ith token (0-indexed).
+Your goal is to maximize your total score by potentially playing each token in one of two ways:
+
+If your current power is at least tokens[i], you may play the ith token face up, losing tokens[i]power and gaining 1a score.
+If your current score is at least 1, you may play the ith token face down, gaining tokens[i] power and losing 1 score.
+Each token may be played at most once and in any order. You do not have to play all the tokens.
+
+Return the largest possible score you can achieve after playing any number of tokens."></span><header class=post-header><h2 class=post-title itemprop="name headline"><a href=/leetcodes/leetcode948/ itemprop=url class=post-title-link>[Leetcode] Bag of Tokens(Medium)</a></h2><div class=post-meta-container><div class=post-meta-items><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-calendar"></i>
+</span><span class=post-meta-item-text title=發表於>發表於：
+</span><time title="創建時間：2022-09-12 18:01:44 +0800 HKT" itemprop="dateCreated datePublished" datetime="2022-09-12 18:01:44 +0800 HKT">2022-09-12
+</time></span><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-folder-open"></i>
+</span><span class=post-meta-item-text title=分類於>分類於：
+</span><span itemprop=about itemscope itemtype=http://schema.org/Thing><a href=/categories/leetcode itemprop=url rel=index><span itemprop=name>leetcode</span></a></span></span></div></div></header><div class=post-body itemprop=articleBody><h2 id=leetcode-948---bag-of-tokens>LeetCode 948 - Bag of Tokens
+<a class=header-anchor href=#leetcode-948---bag-of-tokens></a></h2><p>You have an initial <strong>power</strong> of <code>power</code>, an initial <strong>score</strong> of <code>0</code>, and a bag of <code>tokens</code> where <code>tokens[i]</code> is the value of the i<sup>th</sup> token (0-indexed).</p><p>Your goal is to maximize your total <strong>score</strong> by potentially playing each token in one of two ways:</p><ul><li>If your current <strong>power</strong> is at least <code>tokens[i]</code>, you may play the i<sup>th</sup> token face up, losing <code>tokens[i]</code><strong>power</strong> and gaining <code>1</code>a score.</li><li>If your current <strong>score</strong> is at least <code>1</code>, you may play the i<sup>th</sup> token face down, gaining <code>tokens[i]</code> <strong>power</strong> and losing <code>1</code> <strong>score</strong>.
+Each token may be played <strong>at most</strong> once and <strong>in any order</strong>. You do <strong>not</strong> have to play all the tokens.</li></ul><p>Return <em>the largest possible <strong>score</strong> you can achieve after playing any number of tokens</em>.</p></div><footer class=post-footer><div class=post-button><a class=btn href=/leetcodes/leetcode948/#more rel=contents>閱讀全文 &#187;</a></div><div class=post-eof></div></footer></article></div><div class=post-block><article itemscope itemtype=http://schema.org/Article class=post-content lang><link itemprop=mainEntityOfPage href=http://localhost:1313/leetcodes/leetcode1996/><span hidden itemprop=author itemscope itemtype=http://schema.org/Person><meta itemprop=image content="/imgs-custom/customIcon/avatar.jpg"><meta itemprop=name content="Jackson.tmm"></span><span hidden itemprop=publisher itemscope itemtype=http://schema.org/Organization><meta itemprop=name content="Jackson.tmm"><meta itemprop=description content="簡單紀錄生活和筆記"></span><span hidden itemprop=post itemscope itemtype=http://schema.org/CreativeWork><meta itemprop=name content="[Leetcode] The Number of Weak Characters in the Game(Medium)"><meta itemprop=description content="LeetCode 1996 - The Number of Weak Characters in the Game
+
+You are playing a game that contains multiple characters, and each of the characters has two main properties: attack and defense. You are given a 2D integer array properties where properties[i] = [attacki, defensei] represents the properties of the ith character in the game.
+A character is said to be weak if any other character has both attack and defense levels strictly greater than this character&rsquo;s attack and defense levels. More formally, a character i is said to be weak if there exists another character j where attackj attacki and defensej > defensei."></span><header class=post-header><h2 class=post-title itemprop="name headline"><a href=/leetcodes/leetcode1996/ itemprop=url class=post-title-link>[Leetcode] The Number of Weak Characters in the Game(Medium)</a></h2><div class=post-meta-container><div class=post-meta-items><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-calendar"></i>
+</span><span class=post-meta-item-text title=發表於>發表於：
+</span><time title="創建時間：2022-09-09 23:36:50 +0800 HKT" itemprop="dateCreated datePublished" datetime="2022-09-09 23:36:50 +0800 HKT">2022-09-09
+</time></span><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-folder-open"></i>
+</span><span class=post-meta-item-text title=分類於>分類於：
+</span><span itemprop=about itemscope itemtype=http://schema.org/Thing><a href=/categories/leetcode itemprop=url rel=index><span itemprop=name>leetcode</span></a></span></span></div></div></header><div class=post-body itemprop=articleBody><h2 id=leetcode-1996---the-number-of-weak-characters-in-the-game>LeetCode 1996 - The Number of Weak Characters in the Game
+<a class=header-anchor href=#leetcode-1996---the-number-of-weak-characters-in-the-game></a></h2><p>You are playing a game that contains multiple characters, and each of the characters has <strong>two</strong> main properties: <strong>attack</strong> and <strong>defense</strong>. You are given a 2D integer array <code>properties</code> where <code>properties[i] = [attacki, defensei]</code> represents the properties of the i<sup>th</sup> character in the game.</p><p>A character is said to be <strong>weak</strong> if any other character has <strong>both</strong> attack and defense levels <strong>strictly greater</strong> than this character&rsquo;s attack and defense levels. More formally, a character <code>i</code> is said to be <strong>weak</strong> if there exists another character <code>j</code> where attack<sub>j</sub> attack<sub>i</sub> and defense<sub>j</sub> > defense<sub>i</sub>.</p></div><footer class=post-footer><div class=post-button><a class=btn href=/leetcodes/leetcode1996/#more rel=contents>閱讀全文 &#187;</a></div><div class=post-eof></div></footer></article></div><div class=post-block><article itemscope itemtype=http://schema.org/Article class=post-content lang><link itemprop=mainEntityOfPage href=http://localhost:1313/leetcodes/leetcode94/><span hidden itemprop=author itemscope itemtype=http://schema.org/Person><meta itemprop=image content="/imgs-custom/customIcon/avatar.jpg"><meta itemprop=name content="Jackson.tmm"></span><span hidden itemprop=publisher itemscope itemtype=http://schema.org/Organization><meta itemprop=name content="Jackson.tmm"><meta itemprop=description content="簡單紀錄生活和筆記"></span><span hidden itemprop=post itemscope itemtype=http://schema.org/CreativeWork><meta itemprop=name content="[Leetcode] Binary Tree Inorder Traversal(Easy)"><meta itemprop=description content="LeetCode 94 - Binary Tree Inorder Traversal
+
+Given the root of a binary tree, return the inorder traversal of its nodes&rsquo; values.
+example
+Input: root = [1,null,2,3]
+Output: [1,3,2]
+Input: root = []
+Output: []
+Input: root = [1]
+Output: [1]
+How can we solve this problem?
+
+這題很簡單,只要使用中序遍歷即可。
+Solution:
+
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    vector<int> inorderTraversal(TreeNode* root) {
+
+        vector<int> res;
+        inorder(root,res);
+        return res;
+    }
+    
+    void inorder(TreeNode* root,vector<int>& res){
+        if(!root) return;
+        
+        inorder(root->left,res);
+        res.emplace_back(root->val);
+        inorder(root->right,res);
+    }
+};
+"></span><header class=post-header><h2 class=post-title itemprop="name headline"><a href=/leetcodes/leetcode94/ itemprop=url class=post-title-link>[Leetcode] Binary Tree Inorder Traversal(Easy)</a></h2><div class=post-meta-container><div class=post-meta-items><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-calendar"></i>
+</span><span class=post-meta-item-text title=發表於>發表於：
+</span><time title="創建時間：2022-09-08 20:22:06 +0800 HKT" itemprop="dateCreated datePublished" datetime="2022-09-08 20:22:06 +0800 HKT">2022-09-08
+</time></span><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-folder-open"></i>
+</span><span class=post-meta-item-text title=分類於>分類於：
+</span><span itemprop=about itemscope itemtype=http://schema.org/Thing><a href=/categories/leetcode itemprop=url rel=index><span itemprop=name>leetcode</span></a></span></span></div></div></header><div class=post-body itemprop=articleBody><h2 id=leetcode-94---binary-tree-inorder-traversal>LeetCode 94 - Binary Tree Inorder Traversal
+<a class=header-anchor href=#leetcode-94---binary-tree-inorder-traversal></a></h2><p>Given the <code>root</code> of a binary tree, return <em>the inorder traversal of its nodes&rsquo; values.</em></p><p>example</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-fallback data-lang=fallback><span style=display:flex><span>Input: root = [1,null,2,3]
+</span></span><span style=display:flex><span>Output: [1,3,2]
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-fallback data-lang=fallback><span style=display:flex><span>Input: root = []
+</span></span><span style=display:flex><span>Output: []
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-fallback data-lang=fallback><span style=display:flex><span>Input: root = [1]
+</span></span><span style=display:flex><span>Output: [1]
+</span></span></code></pre></div><h2 id=how-can-we-solve-this-problem>How can we solve this problem?
+<a class=header-anchor href=#how-can-we-solve-this-problem></a></h2><p>這題很簡單,只要使用中序遍歷即可。</p><h4 id=solution>Solution:
+<a class=header-anchor href=#solution></a></h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-c++ data-lang=c++><span style=display:flex><span><span style=color:#75715e>/**
+</span></span></span><span style=display:flex><span><span style=color:#75715e> * Definition for a binary tree node.
+</span></span></span><span style=display:flex><span><span style=color:#75715e> * struct TreeNode {
+</span></span></span><span style=display:flex><span><span style=color:#75715e> *     int val;
+</span></span></span><span style=display:flex><span><span style=color:#75715e> *     TreeNode *left;
+</span></span></span><span style=display:flex><span><span style=color:#75715e> *     TreeNode *right;
+</span></span></span><span style=display:flex><span><span style=color:#75715e> *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+</span></span></span><span style=display:flex><span><span style=color:#75715e> *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+</span></span></span><span style=display:flex><span><span style=color:#75715e> *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+</span></span></span><span style=display:flex><span><span style=color:#75715e> * };
+</span></span></span><span style=display:flex><span><span style=color:#75715e> */</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Solution</span> {
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>    vector<span style=color:#f92672>&lt;</span><span style=color:#66d9ef>int</span><span style=color:#f92672>&gt;</span> inorderTraversal(TreeNode<span style=color:#f92672>*</span> root) {
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        vector<span style=color:#f92672>&lt;</span><span style=color:#66d9ef>int</span><span style=color:#f92672>&gt;</span> res;
+</span></span><span style=display:flex><span>        inorder(root,res);
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> res;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>inorder</span>(TreeNode<span style=color:#f92672>*</span> root,vector<span style=color:#f92672>&lt;</span><span style=color:#66d9ef>int</span><span style=color:#f92672>&gt;&amp;</span> res){
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span>(<span style=color:#f92672>!</span>root) <span style=color:#66d9ef>return</span>;
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        inorder(root<span style=color:#f92672>-&gt;</span>left,res);
+</span></span><span style=display:flex><span>        res.emplace_back(root<span style=color:#f92672>-&gt;</span>val);
+</span></span><span style=display:flex><span>        inorder(root<span style=color:#f92672>-&gt;</span>right,res);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>};
+</span></span></code></pre></div></div><footer class=post-footer><div class=post-button><a class=btn href=/leetcodes/leetcode94/#more rel=contents>閱讀全文 &#187;</a></div><div class=post-eof></div></footer></article></div><div class=post-block><article itemscope itemtype=http://schema.org/Article class=post-content lang><link itemprop=mainEntityOfPage href=http://localhost:1313/leetcodes/leetcode606/><span hidden itemprop=author itemscope itemtype=http://schema.org/Person><meta itemprop=image content="/imgs-custom/customIcon/avatar.jpg"><meta itemprop=name content="Jackson.tmm"></span><span hidden itemprop=publisher itemscope itemtype=http://schema.org/Organization><meta itemprop=name content="Jackson.tmm"><meta itemprop=description content="簡單紀錄生活和筆記"></span><span hidden itemprop=post itemscope itemtype=http://schema.org/CreativeWork><meta itemprop=name content="[Leetcode] Construct String from Binary Tree(Easy)"><meta itemprop=description content='LeetCode 606 - Construct String from Binary Tree
+
+Given the root of a binary tree, construct a string consisting of parenthesis and integers from a binary tree with the preorder traversal way, and return it.
+Omit all the empty parenthesis pairs that do not affect the one-to-one mapping relationship between the string and the original binary tree.
+example
+Input: root = [1,2,3,4]
+Output: "1(2(4))(3)"
+Explanation: Originally, it needs to be "1(2(4)())(3()())", but you need to omit all the unnecessary empty parenthesis pairs. And it will be "1(2(4))(3)"
+Input: root = [1,2,3,null,4]
+Output: "1(2()(4))(3)"
+Explanation: Almost the same as the first example, except we cannot omit the first parenthesis pair to break the one-to-one mapping relationship between the input and the output
+How can we solve this problem?
+
+這題就是要讓我們講以string的方式輸出Binary Tree。只要注意他的規則就可以解決這題。'></span><header class=post-header><h2 class=post-title itemprop="name headline"><a href=/leetcodes/leetcode606/ itemprop=url class=post-title-link>[Leetcode] Construct String from Binary Tree(Easy)</a></h2><div class=post-meta-container><div class=post-meta-items><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-calendar"></i>
+</span><span class=post-meta-item-text title=發表於>發表於：
+</span><time title="創建時間：2022-09-07 10:12:28 +0800 HKT" itemprop="dateCreated datePublished" datetime="2022-09-07 10:12:28 +0800 HKT">2022-09-07
+</time></span><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-folder-open"></i>
+</span><span class=post-meta-item-text title=分類於>分類於：
+</span><span itemprop=about itemscope itemtype=http://schema.org/Thing><a href=/categories/leetcode itemprop=url rel=index><span itemprop=name>leetcode</span></a></span></span></div></div></header><div class=post-body itemprop=articleBody><h2 id=leetcode-606---construct-string-from-binary-tree>LeetCode 606 - Construct String from Binary Tree
+<a class=header-anchor href=#leetcode-606---construct-string-from-binary-tree></a></h2><p>Given the <code>root</code> of a binary tree, construct a string consisting of parenthesis and integers from a binary tree with the preorder traversal way, and return it.</p><p>Omit all the empty parenthesis pairs that do not affect the one-to-one mapping relationship between the string and the original binary tree.
+example</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-fallback data-lang=fallback><span style=display:flex><span>Input: root = [1,2,3,4]
+</span></span><span style=display:flex><span>Output: &#34;1(2(4))(3)&#34;
+</span></span><span style=display:flex><span>Explanation: Originally, it needs to be &#34;1(2(4)())(3()())&#34;, but you need to omit all the unnecessary empty parenthesis pairs. And it will be &#34;1(2(4))(3)&#34;
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-fallback data-lang=fallback><span style=display:flex><span>Input: root = [1,2,3,null,4]
+</span></span><span style=display:flex><span>Output: &#34;1(2()(4))(3)&#34;
+</span></span><span style=display:flex><span>Explanation: Almost the same as the first example, except we cannot omit the first parenthesis pair to break the one-to-one mapping relationship between the input and the output
+</span></span></code></pre></div><h2 id=how-can-we-solve-this-problem>How can we solve this problem?
+<a class=header-anchor href=#how-can-we-solve-this-problem></a></h2><p>這題就是要讓我們講以<code>string</code>的方式輸出<strong>Binary Tree</strong>。只要注意他的規則就可以解決這題。</p></div><footer class=post-footer><div class=post-button><a class=btn href=/leetcodes/leetcode606/#more rel=contents>閱讀全文 &#187;</a></div><div class=post-eof></div></footer></article></div><div class=post-block><article itemscope itemtype=http://schema.org/Article class=post-content lang><link itemprop=mainEntityOfPage href=http://localhost:1313/leetcodes/leetcode442/><span hidden itemprop=author itemscope itemtype=http://schema.org/Person><meta itemprop=image content="/imgs-custom/customIcon/avatar.jpg"><meta itemprop=name content="Jackson.tmm"></span><span hidden itemprop=publisher itemscope itemtype=http://schema.org/Organization><meta itemprop=name content="Jackson.tmm"><meta itemprop=description content="簡單紀錄生活和筆記"></span><span hidden itemprop=post itemscope itemtype=http://schema.org/CreativeWork><meta itemprop=name content="[Leetcode] Create Binary Tree From Descriptions(Medium)"><meta itemprop=description content="LeetCode 442 - Find All Duplicates in an Array
+
+Given an integer array nums of length n where all the integers of nums are in the range [1, n] and each integer appears once or twice, return an array of all the integers that appears twice.
+You must write an algorithm that runs in O(n) time and uses only constant extra space.
+example
+Input: nums = [4,3,2,7,8,2,3,1]
+Output: [2,3]
+Input: nums = [1]
+Output: []
+How can we solve this problem?
+
+這題要我們找出所有在Array裡重複出現2次的數字。解法也很簡單, 因為題目也說了數字會出現1次或者2次,哪我們可以透過Map來計數,但當前數字已經出現過1次,也就代表當前數字是重複了2次,加入到結果即可。"></span><header class=post-header><h2 class=post-title itemprop="name headline"><a href=/leetcodes/leetcode442/ itemprop=url class=post-title-link>[Leetcode] Create Binary Tree From Descriptions(Medium)</a></h2><div class=post-meta-container><div class=post-meta-items><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-calendar"></i>
+</span><span class=post-meta-item-text title=發表於>發表於：
+</span><time title="創建時間：2022-09-06 22:02:11 +0800 HKT" itemprop="dateCreated datePublished" datetime="2022-09-06 22:02:11 +0800 HKT">2022-09-06
+</time></span><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-folder-open"></i>
+</span><span class=post-meta-item-text title=分類於>分類於：
+</span><span itemprop=about itemscope itemtype=http://schema.org/Thing><a href=/categories/leetcode itemprop=url rel=index><span itemprop=name>leetcode</span></a></span></span></div></div></header><div class=post-body itemprop=articleBody><h2 id=leetcode-442---find-all-duplicates-in-an-array>LeetCode 442 - Find All Duplicates in an Array
+<a class=header-anchor href=#leetcode-442---find-all-duplicates-in-an-array></a></h2><p>Given an integer array <code>nums</code> of length <code>n</code> where all the integers of <code>nums</code> are in the range <code>[1, n]</code> and each integer appears <strong>once</strong> or <strong>twice</strong>, return an array of all the integers that appears <strong>twice</strong>.</p><p>You must write an algorithm that runs in <code>O(n)</code> time and uses only constant extra space.
+example</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-fallback data-lang=fallback><span style=display:flex><span>Input: nums = [4,3,2,7,8,2,3,1]
+</span></span><span style=display:flex><span>Output: [2,3]
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-fallback data-lang=fallback><span style=display:flex><span>Input: nums = [1]
+</span></span><span style=display:flex><span>Output: []
+</span></span></code></pre></div><h2 id=how-can-we-solve-this-problem>How can we solve this problem?
+<a class=header-anchor href=#how-can-we-solve-this-problem></a></h2><p>這題要我們找出所有在Array裡重複出現2次的數字。解法也很簡單, 因為題目也說了數字會出現1次或者2次,哪我們可以透過<code>Map</code>來計數,但當前數字已經出現過1次,也就代表當前數字是重複了2次,加入到結果即可。</p></div><footer class=post-footer><div class=post-button><a class=btn href=/leetcodes/leetcode442/#more rel=contents>閱讀全文 &#187;</a></div><div class=post-eof></div></footer></article></div><div class=post-block><article itemscope itemtype=http://schema.org/Article class=post-content lang><link itemprop=mainEntityOfPage href=http://localhost:1313/leetcodes/leetcode2196/><span hidden itemprop=author itemscope itemtype=http://schema.org/Person><meta itemprop=image content="/imgs-custom/customIcon/avatar.jpg"><meta itemprop=name content="Jackson.tmm"></span><span hidden itemprop=publisher itemscope itemtype=http://schema.org/Organization><meta itemprop=name content="Jackson.tmm"><meta itemprop=description content="簡單紀錄生活和筆記"></span><span hidden itemprop=post itemscope itemtype=http://schema.org/CreativeWork><meta itemprop=name content="[Leetcode] Create Binary Tree From Descriptions(Medium)"><meta itemprop=description content="LeetCode 2196 - Create Binary Tree From Descriptions
+
+You are given a 2D integer array descriptions where descriptions[i] = [parenti, childi, isLefti] indicates that parenti is the parent of childi in a binary tree of unique values. Furthermore,
+
+If isLefti == 1, then childi is the left child of parenti.
+If isLefti == 0, then childi is the right child of parenti.
+Construct the binary tree described by descriptions and return its root.
+
+The test cases will be generated such that the binary tree is valid.
+example"></span><header class=post-header><h2 class=post-title itemprop="name headline"><a href=/leetcodes/leetcode2196/ itemprop=url class=post-title-link>[Leetcode] Create Binary Tree From Descriptions(Medium)</a></h2><div class=post-meta-container><div class=post-meta-items><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-calendar"></i>
+</span><span class=post-meta-item-text title=發表於>發表於：
+</span><time title="創建時間：2022-09-06 21:45:02 +0800 HKT" itemprop="dateCreated datePublished" datetime="2022-09-06 21:45:02 +0800 HKT">2022-09-06
+</time></span><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-folder-open"></i>
+</span><span class=post-meta-item-text title=分類於>分類於：
+</span><span itemprop=about itemscope itemtype=http://schema.org/Thing><a href=/categories/leetcode itemprop=url rel=index><span itemprop=name>leetcode</span></a></span></span></div></div></header><div class=post-body itemprop=articleBody><h2 id=leetcode-2196---create-binary-tree-from-descriptions>LeetCode 2196 - Create Binary Tree From Descriptions
+<a class=header-anchor href=#leetcode-2196---create-binary-tree-from-descriptions></a></h2><p>You are given a 2D integer array <code>descriptions</code> where <code>descriptions[i] = [parenti, childi, isLefti]</code> indicates that parenti is the <strong>parent</strong> of childi in a <strong>binary</strong> tree of <strong>unique</strong> values. Furthermore,</p><ul><li>If <code>isLefti == 1</code>, then <strong>child<sub>i</sub></strong> is the left child of <strong>parent<sub>i</sub></strong>.</li><li>If <code>isLefti == 0</code>, then <strong>child<sub>i</sub></strong> is the right child of <strong>parent<sub>i</sub></strong>.
+Construct the binary tree described by <code>descriptions</code> and return <em>its <strong>root</strong></em>.</li></ul><p>The test cases will be generated such that the binary tree is <strong>valid</strong>.
+example</p></div><footer class=post-footer><div class=post-button><a class=btn href=/leetcodes/leetcode2196/#more rel=contents>閱讀全文 &#187;</a></div><div class=post-eof></div></footer></article></div><div class=post-block><article itemscope itemtype=http://schema.org/Article class=post-content lang><link itemprop=mainEntityOfPage href=http://localhost:1313/leetcodes/leetcode814/><span hidden itemprop=author itemscope itemtype=http://schema.org/Person><meta itemprop=image content="/imgs-custom/customIcon/avatar.jpg"><meta itemprop=name content="Jackson.tmm"></span><span hidden itemprop=publisher itemscope itemtype=http://schema.org/Organization><meta itemprop=name content="Jackson.tmm"><meta itemprop=description content="簡單紀錄生活和筆記"></span><span hidden itemprop=post itemscope itemtype=http://schema.org/CreativeWork><meta itemprop=name content="[Leetcode] Binary Tree Pruning(Medium)"><meta itemprop=description content='LeetCode 814 - Binary Tree Pruning
+
+Given the root of a binary tree, return the same tree where every subtree (of the given tree) not containing a 1 has been removed.
+A subtree of a node node is node plus every node that is a descendant of node.
+example
+Input: root = [1,null,0,0,1]
+Output: [1,null,0,null,1]
+Explanation: 
+Only the red nodes satisfy the property "every subtree not containing a 1".
+The diagram on the right represents the answer.
+Input: root = [1,0,1,0,0,0,1]
+Output: [1,null,1,null,1]
+How can we solve this problem?
+
+這題是要讓我們移除所有不包含1的sub-tree。所以，我們只要透過DFS判斷一下node的left-sub tree 以及 right-sub tree 是否都不包含1:
+1. 如果左右子樹都不包含1且當前node為0, 直接返回nullptr
+2. 若當前節點為1就返回自身
+2. 左子樹不包含1, 當前node的左子樹設成nullptr;同理右子樹不包含1,當前node 的右子數設為nullptr'></span><header class=post-header><h2 class=post-title itemprop="name headline"><a href=/leetcodes/leetcode814/ itemprop=url class=post-title-link>[Leetcode] Binary Tree Pruning(Medium)</a></h2><div class=post-meta-container><div class=post-meta-items><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-calendar"></i>
+</span><span class=post-meta-item-text title=發表於>發表於：
+</span><time title="創建時間：2022-09-06 21:30:56 +0800 HKT" itemprop="dateCreated datePublished" datetime="2022-09-06 21:30:56 +0800 HKT">2022-09-06
+</time></span><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-folder-open"></i>
+</span><span class=post-meta-item-text title=分類於>分類於：
+</span><span itemprop=about itemscope itemtype=http://schema.org/Thing><a href=/categories/leetcode itemprop=url rel=index><span itemprop=name>leetcode</span></a></span></span></div></div></header><div class=post-body itemprop=articleBody><h2 id=leetcode-814---binary-tree-pruning>LeetCode 814 - Binary Tree Pruning
+<a class=header-anchor href=#leetcode-814---binary-tree-pruning></a></h2><p>Given the <code>root</code> of a binary tree, return the same tree where every subtree (of the given tree) not containing a <code>1</code> has been removed.</p><p>A subtree of a node <code>node</code> is node plus every node that is a descendant of <code>node</code>.</p><p>example</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-fallback data-lang=fallback><span style=display:flex><span>Input: root = [1,null,0,0,1]
+</span></span><span style=display:flex><span>Output: [1,null,0,null,1]
+</span></span><span style=display:flex><span>Explanation: 
+</span></span><span style=display:flex><span>Only the red nodes satisfy the property &#34;every subtree not containing a 1&#34;.
+</span></span><span style=display:flex><span>The diagram on the right represents the answer.
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-fallback data-lang=fallback><span style=display:flex><span>Input: root = [1,0,1,0,0,0,1]
+</span></span><span style=display:flex><span>Output: [1,null,1,null,1]
+</span></span></code></pre></div><h2 id=how-can-we-solve-this-problem>How can we solve this problem?
+<a class=header-anchor href=#how-can-we-solve-this-problem></a></h2><p>這題是要讓我們移除所有不包含<code>1</code>的<code>sub-tree</code>。所以，我們只要透過<code>DFS</code>判斷一下<code>node</code>的<code>left-sub tree</code> 以及 <code>right-sub tree</code> 是否都不包含<code>1</code>:
+1. 如果左右子樹都不包含<code>1</code>且當前<code>node</code>為0, 直接返回<code>nullptr</code>
+2. 若當前節點為<code>1</code>就返回自身
+2. 左子樹不包含<code>1</code>, 當前<code>node</code>的左子樹設成<code>nullptr</code>;同理右子樹不包含<code>1</code>,當前<code>node</code> 的右子數設為<code>nullptr</code></p></div><footer class=post-footer><div class=post-button><a class=btn href=/leetcodes/leetcode814/#more rel=contents>閱讀全文 &#187;</a></div><div class=post-eof></div></footer></article></div><div class=post-block><article itemscope itemtype=http://schema.org/Article class=post-content lang><link itemprop=mainEntityOfPage href=http://localhost:1313/leetcodes/leetcode92/><span hidden itemprop=author itemscope itemtype=http://schema.org/Person><meta itemprop=image content="/imgs-custom/customIcon/avatar.jpg"><meta itemprop=name content="Jackson.tmm"></span><span hidden itemprop=publisher itemscope itemtype=http://schema.org/Organization><meta itemprop=name content="Jackson.tmm"><meta itemprop=description content="簡單紀錄生活和筆記"></span><span hidden itemprop=post itemscope itemtype=http://schema.org/CreativeWork><meta itemprop=name content="[Leetcode] Reverse Linked List II(Medium)"><meta itemprop=description content="LeetCode 92 -  Reverse Linked List II
+
+Given the head of a singly linked list and two integers left and right where left <= right, reverse the nodes of the list from position left to position right, and return the reversed list.
+example
+Input: head = [1,2,3,4,5], left = 2, right = 4
+Output: [1,4,3,2,5]
+Input: head = [5], left = 1, right = 1
+Output: [5]
+How can we solve this problem?
+
+這一題的問題非常的簡單,就是要讓我們在給定的一個list中翻轉(Reverse)[left,right]之間的Node,並返回結果。這題跟Reverse Linked List I解法類似,不同的是多了個翻轉範圍。
+首先，我們要做的是在的翻轉的開始的位置。然後再透過recursive來翻轉List,最後返回的node/head再由left位置的Node的前一個Node接起來(如有)就可以了~"></span><header class=post-header><h2 class=post-title itemprop="name headline"><a href=/leetcodes/leetcode92/ itemprop=url class=post-title-link>[Leetcode] Reverse Linked List II(Medium)</a></h2><div class=post-meta-container><div class=post-meta-items><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-calendar"></i>
+</span><span class=post-meta-item-text title=發表於>發表於：
+</span><time title="創建時間：2022-07-21 11:09:21 +0800 HKT" itemprop="dateCreated datePublished" datetime="2022-07-21 11:09:21 +0800 HKT">2022-07-21
+</time></span><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-folder-open"></i>
+</span><span class=post-meta-item-text title=分類於>分類於：
+</span><span itemprop=about itemscope itemtype=http://schema.org/Thing><a href=/categories/leetcode itemprop=url rel=index><span itemprop=name>leetcode</span></a></span></span></div></div></header><div class=post-body itemprop=articleBody><h2 id=leetcode-92----reverse-linked-list-ii>LeetCode 92 - Reverse Linked List II
+<a class=header-anchor href=#leetcode-92----reverse-linked-list-ii></a></h2><p>Given the <code>head</code> of a singly linked list and two integers <code>left</code> and <code>right</code> where <code>left &lt;= right</code>, reverse the nodes of the list from position <code>left</code> to position <code>right</code>, and return the <em>reversed list</em>.</p><p>example</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-fallback data-lang=fallback><span style=display:flex><span>Input: head = [1,2,3,4,5], left = 2, right = 4
+</span></span><span style=display:flex><span>Output: [1,4,3,2,5]
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-fallback data-lang=fallback><span style=display:flex><span>Input: head = [5], left = 1, right = 1
+</span></span><span style=display:flex><span>Output: [5]
+</span></span></code></pre></div><h2 id=how-can-we-solve-this-problem>How can we solve this problem?
+<a class=header-anchor href=#how-can-we-solve-this-problem></a></h2><p>這一題的問題非常的簡單,就是要讓我們在給定的一個<code>list</code>中翻轉(Reverse)<code>[left,right]</code>之間的Node,並返回結果。這題跟<strong>Reverse Linked List I</strong>解法類似,不同的是多了個翻轉範圍。<br>首先，我們要做的是在的翻轉的開始的位置。然後再透過recursive來翻轉List,最後返回的<code>node/head</code>再由<code>left</code>位置的Node的前一個<code>Node</code>接起來(如有)就可以了~</p></div><footer class=post-footer><div class=post-button><a class=btn href=/leetcodes/leetcode92/#more rel=contents>閱讀全文 &#187;</a></div><div class=post-eof></div></footer></article></div><div class=post-block><article itemscope itemtype=http://schema.org/Article class=post-content lang><link itemprop=mainEntityOfPage href=http://localhost:1313/leetcodes/leetcode629/><span hidden itemprop=author itemscope itemtype=http://schema.org/Person><meta itemprop=image content="/imgs-custom/customIcon/avatar.jpg"><meta itemprop=name content="Jackson.tmm"></span><span hidden itemprop=publisher itemscope itemtype=http://schema.org/Organization><meta itemprop=name content="Jackson.tmm"><meta itemprop=description content="簡單紀錄生活和筆記"></span><span hidden itemprop=post itemscope itemtype=http://schema.org/CreativeWork><meta itemprop=name content="[Leetcode DP] K Inverse Pairs Array(Hard)"><meta itemprop=description content="這題主要是學習DP思想，做個小記錄
+LeetCode 629 - K Inverse Pairs Array
+
+For an integer array nums, an inverse pair is a pair of integers [i, j] where 0 <= i < j < nums.length and nums[i] > nums[j].
+Given two integersn and k, return the number of different arrays consist of numbers from 1 to n such that there are exactly k inverse pairs. Since the answer can be huge, return it modulo 109 + 7."></span><header class=post-header><h2 class=post-title itemprop="name headline"><a href=/leetcodes/leetcode629/ itemprop=url class=post-title-link>[Leetcode DP] K Inverse Pairs Array(Hard)</a></h2><div class=post-meta-container><div class=post-meta-items><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-calendar"></i>
+</span><span class=post-meta-item-text title=發表於>發表於：
+</span><time title="創建時間：2022-07-17 11:55:10 +0800 HKT" itemprop="dateCreated datePublished" datetime="2022-07-17 11:55:10 +0800 HKT">2022-07-17</time></span></div></div></header><div class=post-body itemprop=articleBody><p><em>這題主要是學習DP思想，做個小記錄</em></p><h2 id=leetcode-629---k-inverse-pairs-array>LeetCode 629 - K Inverse Pairs Array
+<a class=header-anchor href=#leetcode-629---k-inverse-pairs-array></a></h2><p>For an integer array nums, an <strong>inverse pair</strong> is a pair of integers <code>[i, j]</code> where <code>0 &lt;= i &lt; j &lt; nums.length</code> and <code>nums[i] > nums[j]</code>.</p><p>Given two integers<code>n</code> and <code>k</code>, return the number of different arrays consist of numbers from 1 to n such that there are exactly <code>k</code> <strong>inverse pairs</strong>. Since the answer can be huge, return it <strong>modulo</strong> <code>109 + 7</code>.</p></div><footer class=post-footer><div class=post-button><a class=btn href=/leetcodes/leetcode629/#more rel=contents>閱讀全文 &#187;</a></div><div class=post-eof></div></footer></article></div><div class=post-block><article itemscope itemtype=http://schema.org/Article class=post-content lang><link itemprop=mainEntityOfPage href=http://localhost:1313/leetcodes/leetcodes338/><span hidden itemprop=author itemscope itemtype=http://schema.org/Person><meta itemprop=image content="/imgs-custom/customIcon/avatar.jpg"><meta itemprop=name content="Jackson.tmm"></span><span hidden itemprop=publisher itemscope itemtype=http://schema.org/Organization><meta itemprop=name content="Jackson.tmm"><meta itemprop=description content="簡單紀錄生活和筆記"></span><span hidden itemprop=post itemscope itemtype=http://schema.org/CreativeWork><meta itemprop=name content="[Leetcode DP] Counting Bits(Easy)"><meta itemprop=description content="LeetCode 338 - Counting Bits
+
+Given an integer n, return an array ans of length n + 1 such that for each i (0 <= i <= n), ans[i] is the number of 1&rsquo;s in the binary representation of i.
+example:
+Input: n = 2
+Output: [0,1,1]
+Explanation:
+0 --> 0
+1 --> 1
+2 --> 10
+Input: n = 5
+Output: [0,1,1,2,1,2]
+Explanation:
+0 --> 0
+1 --> 1
+2 --> 10
+3 --> 11
+4 --> 100
+5 --> 101
+How can we solve this problem?
+
+這題要我們解決的問題是給定一個數字n,回傳0 - n中每個數字包含了多少個為1的bits。例如: n=2 => 00,01,10,回傳的結果便會是[0,1,1]。"></span><header class=post-header><h2 class=post-title itemprop="name headline"><a href=/leetcodes/leetcodes338/ itemprop=url class=post-title-link>[Leetcode DP] Counting Bits(Easy)</a></h2><div class=post-meta-container><div class=post-meta-items><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-calendar"></i>
+</span><span class=post-meta-item-text title=發表於>發表於：
+</span><time title="創建時間：2022-06-23 11:33:51 +0800 HKT" itemprop="dateCreated datePublished" datetime="2022-06-23 11:33:51 +0800 HKT">2022-06-23
+</time></span><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-folder-open"></i>
+</span><span class=post-meta-item-text title=分類於>分類於：
+</span><span itemprop=about itemscope itemtype=http://schema.org/Thing><a href=/categories/leetcode itemprop=url rel=index><span itemprop=name>leetcode</span></a></span></span></div></div></header><div class=post-body itemprop=articleBody><h2 id=leetcode-338---counting-bits>LeetCode 338 - Counting Bits
+<a class=header-anchor href=#leetcode-338---counting-bits></a></h2><p>Given an integer <code>n</code>, return an <em>array <code>ans</code> of length <code>n + 1</code> such that for each <code>i</code> (<code>0 &lt;= i &lt;= n</code>), <code>ans[i]</code> is the <strong>number</strong> of <code>1</code>&rsquo;s in the binary representation of <code>i</code>.</em></p><p>example:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-fallback data-lang=fallback><span style=display:flex><span>Input: n = 2
+</span></span><span style=display:flex><span>Output: [0,1,1]
+</span></span><span style=display:flex><span>Explanation:
+</span></span><span style=display:flex><span>0 --&gt; 0
+</span></span><span style=display:flex><span>1 --&gt; 1
+</span></span><span style=display:flex><span>2 --&gt; 10
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:2;-o-tab-size:2;tab-size:2><code class=language-fallback data-lang=fallback><span style=display:flex><span>Input: n = 5
+</span></span><span style=display:flex><span>Output: [0,1,1,2,1,2]
+</span></span><span style=display:flex><span>Explanation:
+</span></span><span style=display:flex><span>0 --&gt; 0
+</span></span><span style=display:flex><span>1 --&gt; 1
+</span></span><span style=display:flex><span>2 --&gt; 10
+</span></span><span style=display:flex><span>3 --&gt; 11
+</span></span><span style=display:flex><span>4 --&gt; 100
+</span></span><span style=display:flex><span>5 --&gt; 101
+</span></span></code></pre></div><h2 id=how-can-we-solve-this-problem>How can we solve this problem?
+<a class=header-anchor href=#how-can-we-solve-this-problem></a></h2><p>這題要我們解決的問題是給定一個數字<code>n</code>,回傳<code>0 - n</code>中每個數字包含了多少個為1的<code>bits</code>。例如: <code>n=2 => 00,01,10</code>,回傳的結果便會是<code>[0,1,1]</code>。</p></div><footer class=post-footer><div class=post-button><a class=btn href=/leetcodes/leetcodes338/#more rel=contents>閱讀全文 &#187;</a></div><div class=post-eof></div></footer></article></div><nav class=pagination><a class="extend prev" rel=prev href=/leetcodes/><i class="fa fa-angle-left"></i>
+</a><a class=page-number href=/leetcodes/>1</a>
+<span class="page-number current">2</span>
+<a class=page-number href=/leetcodes/page/3/>3</a>
+<a class=page-number href=/leetcodes/page/4/>4</a>
+<a class=page-number href=/leetcodes/page/5/>5</a>
+<a class="extend next" rel=next href=/leetcodes/page/3/><i class="fa fa-angle-right"></i></a></nav></div></main><footer class=footer><div class=footer-inner><div class=copyright>&copy;
+<span itemprop=copyrightYear>2022 - 2025
+</span><span class=with-love><i class="fa fa-heart"></i>
+</span><span class=author itemprop=copyrightHolder>Jackson.tmm</span></div><div class=vendors-list><a target=_blank href=https://github.com title=Github><img src=/imgs-custom/img-lazy-loading.gif data-src=/imgs-custom/vendors/github.svg alt=Github>
+</a><span>提供CDN/雲資源支持</span></div><script type=text/javascript src=https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.0.min.js></script><div class="pio-container left"><div class=pio-action></div><canvas id=pio width=300 height=500></canvas></div></div><div class=elfsight-app-b04b61d3-ff26-4d9d-a289-163c1b59bd32 data-elfsight-app-lazy></div></div></footer><script type=text/javascript src=http://localhost:1313/3rd/animejs/3.2.2/anime.min.js crossorigin=anonymous defer></script><script type=text/javascript src=http://localhost:1313/3rd/viewerjs/1.11.6/viewer.min.js crossorigin=anonymous defer></script><script class=next-config data-name=main type=application/json>{"bookmark":{"color":"#333","enable":true,"save":"manual"},"copybtn":true,"darkmode":true,"giscus":{"cfg":{"category":"Comments","categoryid":null,"emit":false,"inputposition":"top","mapping":"title","reactions":false,"repo":"username/repo-name","repoid":null,"theme":"preferred_color_scheme"},"js":"https://giscus.app/client.js"},"hostname":"http://localhost:1313/","i18n":{"ds_day":" 天前","ds_days":" 天 ","ds_hour":" 小時前","ds_hours":" 小時 ","ds_just":"剛剛","ds_min":" 分鐘前","ds_mins":" 分鐘","ds_month":" 個月前","ds_years":" 年 ","empty":"沒有找到任何搜索結果：${query}","hits":"找到 ${hits} 個搜索結果","hits_time":"找到 ${hits} 個搜索結果（用時 ${time} 毫秒）","placeholder":"搜索..."},"lang":"zh-TW","lawidget":{"id":"JiZkaipzkPyiCL8x","js":"https://v6-widget.51.la/v6/laId/quote.js?theme=0\u0026col=true\u0026f=12\u0026display=0,0,0,1,0,1,1,1"},"lazyload":false,"localSearch":{"enable":true,"limit":1e3,"path":"/searchindexes.xml","preload":false,"topnperarticle":-1,"trigger":"auto","unescape":false},"motion":{"async":true,"enable":true,"transition":{"collheader":"fadeInLeft","postblock":"fadeIn","postbody":"fadeInDown","postheader":"fadeInDown","sidebar":"fadeInUp"}},"postmeta":{"comments":{"enable":false,"plugin":"waline"},"views":{"enable":true,"plugin":"busuanzi"}},"root":"/","scheme":"Gemini","sidebar":{"display":"post","offset":12,"padding":18,"position":"left","width":256},"utterances":{"cfg":{"issueterm":"pathname","label":"comments","repo":"RyanTokManMokMTM/RyanTokManMokMTM.github.io","theme":"github-light"},"js":"https://utteranc.es/client.js"},"vendor":{"plugins":"local","router":{"name":"local","type":"modern","url":"http://localhost:1313/3rd"}},"version":"4.6.3","waline":{"cfg":{"emoji":false,"imguploader":false,"placeholder":"请文明发言哟 ヾ(≧▽≦*)o \n\n可用快捷键选取表情符号：😀😄😁🥳👻👽👀🚄\n(Window系统：Win+.，Mac系统：Control+Command+Space)","reaction":true,"reactiontext":["点赞","踩一下","得意","不屑","尴尬","睡觉"],"reactiontitle":"你认为这篇文章怎么样？","requiredmeta":["nick","mail"],"serverurl":"https://walinejs.comment.lithub.cc","sofa":"快来发表你的意见吧 (≧∀≦)ゞ","wordlimit":200},"css":{"alias":"@waline/client","file":"dist/waline.css","name":"waline","version":"2.15.8"},"js":{"alias":"@waline/client","file":"dist/waline.js","name":"waline","version":"2.15.8"}}}</script><script type=text/javascript src=/js/main.js defer></script><script src=https://static.elfsight.com/platform/platform.js data-use-service-core defer></script><script src=/js/l2d.js></script><script src=/js/pio.js></script><script>var pio=new Paul_Pio({mode:"draggable",hidden:!0,content:{welcome:["歡迎來到Jackson的小宇宙！","今天天氣不錯，一起来玩吧！","博主有空的話，會寫一寫博客記錄一下!"],custom:[{selector:".home-social a:last-child",text:"在這里可以了解博主的日常噢~"},{selector:".post-item a",type:"read"},{selector:".post-content a, .page-content a",type:"link"}]},model:["/model/umaru/model.json","/model/tororo/tororo.model.json","/model/HN/nepmaid/model.json","/model/HN/nepgearswim/model.json","/model/HN/neptune_santa/model.json","/model/other/rem/model.json","/model/other/mei/model.json","/model/other/liang/2.json","/model/HN/noir_santa/model.json","/model/HN/noireswim/model.json","/model/other/blanc_normal/index.json","/model/other/88type_1809/normal/model.json","/model/other/88type_1809/destroy/model.json","/model/other/dsr50_1801/normal/model.json","/model/other/dsr50_1801/destroy/model.json","/model/other/g36c_1202/normal/model.json","/model/other/g36c_1202/destroy/model.json","/model/other/kp31_310/normal/model.json","/model/other/kp31_310/destroy/model.json","/model/other/kp31_1103/normal/model.json","/model/other/kp31_1103/destroy/model.json"],touch:["不可以這樣欺負我啦><"]})</script></body></html>

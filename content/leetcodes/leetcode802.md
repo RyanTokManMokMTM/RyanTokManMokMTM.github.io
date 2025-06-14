@@ -86,7 +86,7 @@ public:
     }
 };
 ```
-![TireTree](/imgs/leetcodesHelper/leetcode802.png)
+![TireTree](/imgs-custom/leetcodesHelper/leetcode802.png)
 
 
 另外一種解法是我們只需要知道哪些`words[j]`跟`words[i]`有共同的`suffix`且符合條件。

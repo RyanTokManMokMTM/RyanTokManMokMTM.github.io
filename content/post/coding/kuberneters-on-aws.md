@@ -54,10 +54,10 @@ brew update && brew install kops
 *透過UI設置*
 1. 搜尋`IAM`,在`Access management`中選擇`Users`。 
 如下圖所示
-![IAM-USERS](/imgs/kops/IAM-Users.png)
+![IAM-USERS](/imgs-custom/kops/IAM-Users.png)
 
 2. 新增用戶`Add users`,輸入使用者賬號並選擇`Access key - Programmatic access`。如下圖所示
-![IAM-ADD-USERS1](/imgs/kops/IAM-AddUser1.png)
+![IAM-ADD-USERS1](/imgs-custom/kops/IAM-AddUser1.png)
 
 3.選擇`Attact existing policies directly`並選擇以下的`Policies`
 * AmazonEC2FullAccess
@@ -69,15 +69,15 @@ brew update && brew install kops
 * AmazonEventBridgeFullAccess
 
 4. 新增使用者
-![IAM-ADD-USERS1](/imgs/kops/IAM-Done.png)
+![IAM-ADD-USERS1](/imgs-custom/kops/IAM-Done.png)
 
 5. 記錄`Access key ID`和`Secret access key`
-![IAM-ADD-USERS1](/imgs/kops/IAM-DoneKey.png)
+![IAM-ADD-USERS1](/imgs-custom/kops/IAM-DoneKey.png)
 
 6. 打開`Terminal`設置AWS Cli的`Configure`中的存取賬號(KOps 會使用這組Token操作AWS)
 > aws configure
 
-![AWS Cli](/imgs/kops/AWSCLI-Setting.png)
+![AWS Cli](/imgs-custom/kops/AWSCLI-Setting.png)
 
 1. 輸入剛才申請賬號的`Access key ID`(因我已經設置過了，就不重複設置了)
 2. 輸入剛才申請賬號的`Secret access key`(因我已經設置過了，就不重複設置了)
@@ -110,13 +110,13 @@ aws iam create-access-key --user-name kops
 *透過UI建立aws route53*
 1. 搜尋`Route53`
 2. 新增`Domain Name` - **注意:Domain Name 必須要跟註冊的一樣！**
-![AWS Route53](/imgs/kops/Route53-creation.png)
+![AWS Route53](/imgs-custom/kops/Route53-creation.png)
 
 3. 進入到建立好的`Host`,將裡面的`Name Server(NS)`到DNS 服務商中設定(以`GoDady為例`)
-![route53-DNS](/imgs/kops/route53-ns.png)
+![route53-DNS](/imgs-custom/kops/route53-ns.png)
     > Godady DNS設置跟Route53 NS一樣
 
-![godadydns](/imgs/kops/godady-dns.png)
+![godadydns](/imgs-custom/kops/godady-dns.png)
 
 *透過Terminal建立 aws route53*  
 **注意:Domain Name 必須要跟註冊的一樣！**
@@ -171,7 +171,7 @@ kops create cluster \
 * state - 存放S3的Bucket
 
 以上指令運行完後的結果如下:  
-![kops-create](/imgs/kops/kops-create.png)
+![kops-create](/imgs-custom/kops/kops-create.png)
 > 如果設置完，需要修改可以使用 kops edit
 ##### 建立Cluster
 如果設定都沒有問題，就可以開始建立咯~ (有點久就是了 哈哈哈哈哈)
@@ -187,20 +187,20 @@ kops update cluster --name projectdomaindns.com --yes --admin --state=s3://k8s-b
 ```
 
 完成部署後，會顯示`ready`的狀態  
-![ready-state](/imgs/kops/kops-ready.png)
+![ready-state](/imgs-custom/kops/kops-ready.png)
 
 透過`kubectl get nodes`也可以看到3個`nodes`,他們的`Name`就會是`AWS EC2`主機的名字咯~
-![get-nodes](/imgs/kops/get-nodes.png)
+![get-nodes](/imgs-custom/kops/get-nodes.png)
 
 如果我們會看一下`AWS`上面的狀態，會發現EC2多了3台運行中的機器
-![ec2](/imgs/kops/ec2-state.png)
+![ec2](/imgs-custom/kops/ec2-state.png)
 
 `Route53`以及`S3`中也會有新的資料哦~
-![Route53](/imgs/kops/after-deploy-route53.png)
+![Route53](/imgs-custom/kops/after-deploy-route53.png)
 > 如果讀書讀者的話,會發現`api.projectdomaindns.com`所導向的IP正是`Master Node`的public IP! 也就是說我們可以透過這個url直接存取`Master Node`！
 
 `AWS S3`中也多出了Cluster的資料呢~
-![S3](/imgs/kops/after-deploy-s3.png)
+![S3](/imgs-custom/kops/after-deploy-s3.png)
 
 ##### 使用Cluster
 現在我們嘗試一下部署簡單的應用到這集群上看看能不能成功運行！
@@ -239,10 +239,10 @@ kubectl create -f deploy.yaml
 ```
 
 透過``kubectl get pods``指令會發現有3個`pod`正在運行
-![pods](/imgs/kops/pod.png)
+![pods](/imgs-custom/kops/pod.png)
 
 透過``kubectl get deploy``指令會發現有一個`deployment`，也就是我們剛才所建立的`deployment 物件`
-![pods](/imgs/kops/deploy.png)
+![pods](/imgs-custom/kops/deploy.png)
 
 **我們是沒有辦法直接存取Cluster內部的Pod的，所以必須先透過Service 物件來幫助我們，將他們expose出來，才能存取**
 
@@ -252,7 +252,7 @@ kubectl expose deploy demo-deploy --name=deploy-svc --type=NodePort --port=8080
 ```
 
 執行`kubectl get service`會發現多了一個`service`的`Name`為`deploy-svc`，也就是我們剛才所建立的！
-![svc](/imgs/kops/service.png)
+![svc](/imgs-custom/kops/service.png)
 
 現在我們只需要透過expose 的port,**port:31176**,就可以存取了！ 
 
@@ -261,7 +261,7 @@ kubectl expose deploy demo-deploy --name=deploy-svc --type=NodePort --port=8080
 打開瀏覽器輸入`http://13.212.80.234:31176/ping`,就會看到`pong`回傳回來!  
 > 13.212.80.234為Master node 的public ip
 
-![response](/imgs/kops/response.png)
+![response](/imgs-custom/kops/response.png)
 
 **太棒了！恭喜我們成功上雲٩(˃̶͈̀௰˂̶͈́)و**
 

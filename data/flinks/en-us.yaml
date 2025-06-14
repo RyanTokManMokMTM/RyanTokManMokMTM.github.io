@@ -13,14 +13,14 @@
 
     - name: Hugo-NexT
       desc: Hugo NexT Official Site
-      avatar: https://hugo-next.eu.org/imgs/hugo_next_avatar.png
+      avatar: https://hugo-next.eu.org/imgs-custom/hugo_next_avatar.png
       link: https://hugo-next.eu.org
       timeout: 2
       visible: true
 
     - name: Fanmeng Star Dust Space Station
       desc: Even ordinary people have their own dreams!
-      avatar: https://elkan1788.github.io/imgs/avatar.png
+      avatar: https://elkan1788.github.io/imgs-custom/avatar.png
       link: https://lisenhui.cn
       timeout: 2
       visible: true
@@ -31,7 +31,7 @@
   FLinksList:
     - name: Ahaji
       desc: The first Hugo NexT loyal fan user on the entire network!
-      avatar: https://a.happy2008.top/imgs/stayhome-small.png
+      avatar: https://a.happy2008.top/imgs-custom/stayhome-small.png
       link: https://a.happy2008.top/
       timeout: 2
       visible: true

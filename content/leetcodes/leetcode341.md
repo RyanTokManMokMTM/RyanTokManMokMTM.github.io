@@ -43,7 +43,7 @@ Explanation: By calling next repeatedly until hasNext returns false, the order o
 ## How can we solve this problem?
 這一題就是一題設計的題目,可以想象成是一個`FileSystem`，裡面可能存的是文件(`Integer`)或者是文件夾(`List`)。因此，我們可以發現他就是一顆`Tree`。所以，我們只要從左到右拿到`Integer`,並順序輸出即可。  
 如圖:  
-![helper](/imgs/leetcodesHelper/341-helper.png)
+![helper](/imgs-custom/leetcodesHelper/341-helper.png)
 
 #### Solution(Recursion):
 我們可以在`initial`透過Recursive Function來遍歷`Input`,並把所有`Integer`先Push到Array/List裡面。然後在定義一個pointer用於存取`Next`的值即可。

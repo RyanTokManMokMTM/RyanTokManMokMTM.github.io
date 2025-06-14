@@ -22,7 +22,7 @@ String B 包含了 ec_od => ecod
 ```
 ## 要怎麼找到最長公共子序列LCM呢?
 我們需要定義一個數組用於保存當前情況下的最優解,也就是使用`DP`的方式。我們需要以每個字符最為考量,並一一匹配，最後得出整體最優解。
-![LCM](/imgs/leetcodesHelper/lcm.png)
+![LCM](/imgs-custom/leetcodesHelper/lcm.png)
 
 # LCM Code Template 
 ```c++

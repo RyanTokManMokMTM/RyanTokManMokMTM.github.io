@@ -1,1 +1,49 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>XOR on Jackson.tmm</title><link>https://ryantokmanmokmtm.github.io/tags/xor/</link><description>Recent content in XOR on Jackson.tmm</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Wed, 14 Sep 2022 15:27:08 +0800</lastBuildDate><atom:link href="https://ryantokmanmokmtm.github.io/tags/xor/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Pseudo-Palindromic Paths in a Binary Tree(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode1457/</link><pubDate>Wed, 14 Sep 2022 15:27:08 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode1457/</guid><description>LeetCode 1457 - Pseudo-Palindromic Paths in a Binary Tree Given a binary tree where node values are digits from 1 to 9. A path in the binary tree is said to be pseudo-palindromic if at least one permutation of the node values in the path is a palindrome. Return the number of pseudo-palindromic paths going from the root node to leaf nodes. example Input: root = [2,3,1,3,1,null,1] Output: 2 Explanation:</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>XOR on Jackson.tmm</title><link>https://ryantokmanmokmtm.github.io/tags/xor/</link><description>Recent content in XOR on Jackson.tmm</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Wed, 14 Sep 2022 15:27:08 +0800</lastBuildDate><atom:link href="https://ryantokmanmokmtm.github.io/tags/xor/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Pseudo-Palindromic Paths in a Binary Tree(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode1457/</link><pubDate>Wed, 14 Sep 2022 15:27:08 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode1457/</guid><description>&lt;h2 id="leetcode-1457---pseudo-palindromic-paths-in-a-binary-tree">LeetCode 1457 - Pseudo-Palindromic Paths in a Binary Tree
+&lt;a class="header-anchor" href="#leetcode-1457---pseudo-palindromic-paths-in-a-binary-tree">&lt;/a>
+&lt;/h2>&lt;p>Given a binary tree where node values are digits from 1 to 9. A path in the binary tree is said to be &lt;strong>pseudo-palindromic&lt;/strong> if at least one permutation of the node values in the path is a palindrome.&lt;/p>
+&lt;p>&lt;em>Return the number of &lt;strong>pseudo-palindromic&lt;/strong> paths going from the root node to leaf nodes.&lt;/em>
+example&lt;/p>
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-0-1">&lt;a class="lnlinks" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-2">&lt;a class="lnlinks" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-3">&lt;a class="lnlinks" href="#hl-0-3">3&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: root = [2,3,1,3,1,null,1]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: 2 
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: The figure above represents the given binary tree. There are three paths going from the root node to leaf nodes: the red path [2,3,3], the green path [2,1,1], and the path [2,3,1]. Among these paths only red path and green path are pseudo-palindromic paths since the red path [2,3,3] can be rearranged in [3,2,3] (palindrome) and the green path [2,1,1] can be rearranged in [1,2,1] (palindrome).&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-1-1">&lt;a class="lnlinks" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-2">&lt;a class="lnlinks" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-3">&lt;a class="lnlinks" href="#hl-1-3">3&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: root = [2,1,1,1,3,null,null,null,null,null,1]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: 1 
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: The figure above represents the given binary tree. There are three paths going from the root node to leaf nodes: the green path [2,1,1], the path [2,1,3,1], and the path [2,1]. Among these paths only the green path is pseudo-palindromic since [2,1,1] can be rearranged in [1,2,1] (palindrome).&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-2-1">&lt;a class="lnlinks" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-2-2">&lt;a class="lnlinks" href="#hl-2-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: root = [9]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: 1&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+&lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
+&lt;/h2>&lt;p>這一題簡單的來說就是讓我們從&lt;strong>Binary Tree&lt;/strong>中找到有幾條&lt;code>path&lt;/code>是一個&lt;em>Palindromic(Pseudo-Palindromic)偽迴文串&lt;/em>。
+也就是說從&lt;code>root到leaft&lt;/code>的&lt;code>path&lt;/code>是一個&lt;strong>Palindromic&lt;/strong>。 (我們只需要知道path是否能組成&lt;em>Palindromic&lt;/em>即可)&lt;/p></description></item></channel></rss>

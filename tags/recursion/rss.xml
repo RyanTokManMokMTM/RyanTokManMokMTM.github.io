@@ -1,1 +1,214 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Recursion on Jackson.tmm</title><link>https://ryantokmanmokmtm.github.io/tags/recursion/</link><description>Recent content in Recursion on Jackson.tmm</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Fri, 16 Sep 2022 20:42:00 +0800</lastBuildDate><atom:link href="https://ryantokmanmokmtm.github.io/tags/recursion/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Maximum Score from Performing Multiplication Operations(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode1770/</link><pubDate>Fri, 16 Sep 2022 20:42:00 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode1770/</guid><description>LeetCode 1770 - Maximum Score from Performing Multiplication Operations You are given two integer arrays nums and multipliers of size n and m respectively, where n &amp;gt;= m. The arrays are 1-indexed. You begin with a score of 0. You want to perform exactly m operations. On the ith operation (1-indexed), you will: Choose one integer x from either the start or the end of the array nums. Add multipliers[i]</description></item><item><title>[Leetcode] Combination Sum III(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode216/</link><pubDate>Tue, 10 May 2022 11:41:43 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode216/</guid><description>LeetCode 216 - Combination Sum III Find all valid combinations of k numbers that sum up to n such that the following conditions are true: Only numbers 1 through 9 are used. Each number is used at most once. Return a list of all possible valid combinations. The list must not contain the same combination twice, and the combinations may be returned in any order. example Input: k = 3,</description></item><item><title>[Leetcode] Letter Combinations of a Phone Number(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode17/</link><pubDate>Mon, 09 May 2022 21:50:34 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode17/</guid><description>LeetCode 17 - Letter Combinations of a Phone Number Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. Return the answer in any order. A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters. example Input: digits = &amp;#34;23&amp;#34; Output: [&amp;#34;ad&amp;#34;,&amp;#34;ae&amp;#34;,&amp;#34;af&amp;#34;,&amp;#34;bd&amp;#34;,&amp;#34;be&amp;#34;,&amp;#34;bf&amp;#34;,&amp;#34;cd&amp;#34;,&amp;#34;ce&amp;#34;,&amp;#34;cf&amp;#34;] Input: digits = &amp;#34;&amp;#34; Output: []</description></item><item><title>[Leetcode] Flatten Nested List Iterator(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode341/</link><pubDate>Sun, 08 May 2022 06:30:23 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode341/</guid><description>LeetCode 341 - Flatten Nested List Iterator You are given a nested list of integers nestedList. Each element is either an integer or a list whose elements may also be integers or other lists. Implement an iterator to flatten it. Implement the NestedIterator class: NestedIterator(List&amp;lt;NestedInteger&amp;gt; nestedList) Initializes the iterator with the nested list nestedList. int next() Returns the next integer in the nested list. boolean hasNext() Returns true if there</description></item><item><title>[Leetcode] Trim a Binary Search Tree(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode669/</link><pubDate>Fri, 15 Apr 2022 18:29:14 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode669/</guid><description>LeetCode 669 - Trim a Binary Search Tree Given the root of a binary search tree and the lowest and highest boundaries as low and high, trim the tree so that all its elements lies in [low, high]. Trimming the tree should not change the relative structure of the elements that will remain in the tree (i.e., any node&amp;rsquo;s descendant should remain a descendant). It can be proven that there</description></item><item><title>[Leetcode] Search in a Binary Search Tree(Easy)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode700/</link><pubDate>Thu, 14 Apr 2022 15:05:44 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode700/</guid><description>LeetCode 700 - Search in a Binary Search Tree You are given the root of a binary search tree (BST) and an integer val. Find the node in the BST that the node&amp;rsquo;s value equals val and return the subtree rooted with that node. If such a node does not exist, return null. example Input: root = [4,2,7,1,3], val = 2 Output: [2,1,3] Input: root = [4,2,7,1,3], val = 5</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Recursion on Jackson.tmm</title><link>https://ryantokmanmokmtm.github.io/tags/recursion/</link><description>Recent content in Recursion on Jackson.tmm</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Fri, 16 Sep 2022 20:42:00 +0800</lastBuildDate><atom:link href="https://ryantokmanmokmtm.github.io/tags/recursion/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Maximum Score from Performing Multiplication Operations(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode1770/</link><pubDate>Fri, 16 Sep 2022 20:42:00 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode1770/</guid><description>&lt;h2 id="leetcode-1770---maximum-score-from-performing-multiplication-operations">LeetCode 1770 - Maximum Score from Performing Multiplication Operations
+&lt;a class="header-anchor" href="#leetcode-1770---maximum-score-from-performing-multiplication-operations">&lt;/a>
+&lt;/h2>&lt;p>You are given two integer arrays &lt;code>nums&lt;/code> and &lt;code>multipliers&lt;/code> of size &lt;code>n&lt;/code> and &lt;code>m&lt;/code> respectively, where &lt;code>n &amp;gt;= m&lt;/code>. The arrays are &lt;strong>1-indexed&lt;/strong>.&lt;/p>
+&lt;p>You begin with a score of &lt;code>0&lt;/code>. You want to perform &lt;strong>exactly&lt;/strong> &lt;code>m&lt;/code> operations. On the &lt;code>ith&lt;/code> operation (&lt;strong>1-indexed&lt;/strong>), you will:&lt;/p>
+&lt;ul>
+&lt;li>Choose one integer &lt;code>x&lt;/code> from &lt;strong>either the start or the end&lt;/strong> of the array &lt;code>nums&lt;/code>.&lt;/li>
+&lt;li>Add &lt;code>multipliers[i] * &lt;/code>x` to your score.&lt;/li>
+&lt;li>Remove x from the array &lt;code>nums&lt;/code>.
+Return the maximum score after performing m operations.
+example&lt;/li>
+&lt;/ul>
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-0-1">&lt;a class="lnlinks" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-2">&lt;a class="lnlinks" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-3">&lt;a class="lnlinks" href="#hl-0-3">3&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-4">&lt;a class="lnlinks" href="#hl-0-4">4&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-5">&lt;a class="lnlinks" href="#hl-0-5">5&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-6">&lt;a class="lnlinks" href="#hl-0-6">6&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-7">&lt;a class="lnlinks" href="#hl-0-7">7&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: nums = [1,2,3], multipliers = [3,2,1]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: 14
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: An optimal solution is as follows:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Choose from the end, [1,2,3], adding 3 * 3 = 9 to the score.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Choose from the end, [1,2], adding 2 * 2 = 4 to the score.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Choose from the end, [1], adding 1 * 1 = 1 to the score.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">The total score is 9 + 4 + 1 = 14.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-1-1">&lt;a class="lnlinks" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-2">&lt;a class="lnlinks" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-3">&lt;a class="lnlinks" href="#hl-1-3">3&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-4">&lt;a class="lnlinks" href="#hl-1-4">4&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-5">&lt;a class="lnlinks" href="#hl-1-5">5&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-6">&lt;a class="lnlinks" href="#hl-1-6">6&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-7">&lt;a class="lnlinks" href="#hl-1-7">7&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-8">&lt;a class="lnlinks" href="#hl-1-8">8&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-9">&lt;a class="lnlinks" href="#hl-1-9">9&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: nums = [-5,-3,-3,-2,7,1], multipliers = [-10,-5,3,4,6]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: 102
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: An optimal solution is as follows:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Choose from the start, [-5,-3,-3,-2,7,1], adding -5 * -10 = 50 to the score.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Choose from the start, [-3,-3,-2,7,1], adding -3 * -5 = 15 to the score.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Choose from the start, [-3,-2,7,1], adding -3 * 3 = -9 to the score.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Choose from the end, [-2,7,1], adding 1 * 4 = 4 to the score.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Choose from the end, [-2,7], adding 7 * 6 = 42 to the score. 
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">The total score is 50 + 15 - 9 + 4 + 42 = 102.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+&lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
+&lt;/h2>&lt;p>這題最主要的重點是對於每個&lt;code>multipliers[i]&lt;/code>,它只能挑選最左邊或者最右邊的值。所有，我們需要知道&lt;code>multipliers[i]&lt;/code>拿最左邊的值最後的結果比較大，還是拿最右邊後的結果比較大。為了避免重複計算而超時，所以我們需要使用&lt;code>dp&lt;/code>來幫助我們記錄當前最優解。&lt;code>注:因multipliers最多為m個，所有最多只能從nums拿m個數字&lt;/code>&lt;/p></description></item><item><title>[Leetcode] Combination Sum III(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode216/</link><pubDate>Tue, 10 May 2022 11:41:43 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode216/</guid><description>&lt;h2 id="leetcode-216---combination-sum-iii">LeetCode 216 - Combination Sum III
+&lt;a class="header-anchor" href="#leetcode-216---combination-sum-iii">&lt;/a>
+&lt;/h2>&lt;p>Find all valid combinations of &lt;code>k&lt;/code> numbers that sum up to &lt;code>n&lt;/code> such that the following conditions are true:&lt;/p>
+&lt;ul>
+&lt;li>Only numbers 1 through 9 are used.&lt;/li>
+&lt;li>Each number is used &lt;strong>at most once&lt;/strong>.
+Return a &lt;em>list of all possible valid combinations&lt;/em>. The list must not contain the same combination twice, and the combinations may be returned in any order.&lt;/li>
+&lt;/ul>
+&lt;p>example&lt;/p>
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-0-1">&lt;a class="lnlinks" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-2">&lt;a class="lnlinks" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-3">&lt;a class="lnlinks" href="#hl-0-3">3&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-4">&lt;a class="lnlinks" href="#hl-0-4">4&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-5">&lt;a class="lnlinks" href="#hl-0-5">5&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: k = 3, n = 7
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [[1,2,4]]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1 + 2 + 4 = 7
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">There are no other valid combinations.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-1-1">&lt;a class="lnlinks" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-2">&lt;a class="lnlinks" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-3">&lt;a class="lnlinks" href="#hl-1-3">3&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-4">&lt;a class="lnlinks" href="#hl-1-4">4&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-5">&lt;a class="lnlinks" href="#hl-1-5">5&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-6">&lt;a class="lnlinks" href="#hl-1-6">6&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-7">&lt;a class="lnlinks" href="#hl-1-7">7&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: k = 3, n = 9
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [[1,2,6],[1,3,5],[2,3,4]]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1 + 2 + 6 = 9
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1 + 3 + 5 = 9
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2 + 3 + 4 = 9
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">There are no other valid combinations.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-2-1">&lt;a class="lnlinks" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-2-2">&lt;a class="lnlinks" href="#hl-2-2">2&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-2-3">&lt;a class="lnlinks" href="#hl-2-3">3&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-2-4">&lt;a class="lnlinks" href="#hl-2-4">4&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: k = 4, n = 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: []
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: There are no valid combinations.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Using 4 different numbers in the range [1,9], the smallest sum we can get is 1+2+3+4 = 10 and since 10 &amp;gt; 1, there are no valid combination.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+&lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
+&lt;/h2>&lt;p>這題主要關注的點是數字範圍為&lt;code>[1,9]&lt;/code>，每個結果中，數字只能使用一次，而且數字必須是順序排列。例如:&lt;code>2,3,4&lt;/code>,&lt;code>1,2,5&lt;/code>。解決這題我們可以用&lt;strong>back-traking&lt;/strong>大法。只要我們當前的&lt;code>Sum&lt;/code>大於&lt;code>n&lt;/code>我們就直接退回back track回上一步,因為數值只會越來越大，並不是我們想要的。如果&lt;em>Ans&lt;/em>我們所需的&lt;code>k&lt;/code>個就直接判斷是否等於&lt;code>n&lt;/code>，如果是就直接加入到我們的&lt;em>result&lt;/em>即可。&lt;/p></description></item><item><title>[Leetcode] Letter Combinations of a Phone Number(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode17/</link><pubDate>Mon, 09 May 2022 21:50:34 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode17/</guid><description>&lt;h2 id="leetcode-17---letter-combinations-of-a-phone-number">LeetCode 17 - Letter Combinations of a Phone Number
+&lt;a class="header-anchor" href="#leetcode-17---letter-combinations-of-a-phone-number">&lt;/a>
+&lt;/h2>&lt;p>Given a string containing digits from &lt;code>2-9&lt;/code> inclusive, return all possible letter combinations that the number could represent. Return the answer in &lt;strong>any order&lt;/strong>.&lt;/p>
+&lt;p>A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.&lt;/p>
+&lt;p>example&lt;/p>
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-0-1">&lt;a class="lnlinks" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-2">&lt;a class="lnlinks" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: digits = &amp;#34;23&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [&amp;#34;ad&amp;#34;,&amp;#34;ae&amp;#34;,&amp;#34;af&amp;#34;,&amp;#34;bd&amp;#34;,&amp;#34;be&amp;#34;,&amp;#34;bf&amp;#34;,&amp;#34;cd&amp;#34;,&amp;#34;ce&amp;#34;,&amp;#34;cf&amp;#34;]&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-1-1">&lt;a class="lnlinks" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-2">&lt;a class="lnlinks" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: digits = &amp;#34;&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: []&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-2-1">&lt;a class="lnlinks" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-2-2">&lt;a class="lnlinks" href="#hl-2-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: digits = &amp;#34;2&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [&amp;#34;a&amp;#34;,&amp;#34;b&amp;#34;,&amp;#34;c&amp;#34;]&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+&lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
+&lt;/h2>&lt;p>這題是要我們拿到&lt;code>Input&lt;/code>的數字所能組合出所有字串。解法也很簡單，我們可以透過&lt;code>Map&lt;/code>記錄每個數字代表來那些字符，然後再透過&lt;strong>Back-tracking&lt;/strong>技巧來幫助我們組合字串。你有可能會問什麼是&lt;strong>Back-tracking&lt;/strong>。簡單來說就是一個&lt;strong>Recursive Function&lt;/strong>,但他會迴避一些不正常的數值。比如:&amp;ldquo;abc&amp;rdquo;,而&amp;quot;abc&amp;quot;可能不是我們要的。因此退回上一步的&amp;quot;ab&amp;quot;,並嘗試其他數值/結果。&lt;/p></description></item><item><title>[Leetcode] Flatten Nested List Iterator(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode341/</link><pubDate>Sun, 08 May 2022 06:30:23 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode341/</guid><description>&lt;h2 id="leetcode-341---flatten-nested-list-iterator">LeetCode 341 - Flatten Nested List Iterator
+&lt;a class="header-anchor" href="#leetcode-341---flatten-nested-list-iterator">&lt;/a>
+&lt;/h2>&lt;p>You are given a nested list of integers &lt;code>nestedList&lt;/code>. Each element is either an integer or a list whose elements may also be integers or other lists. Implement an iterator to flatten it.&lt;/p>
+&lt;p>Implement the NestedIterator &lt;code>class&lt;/code>:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>NestedIterator(List&amp;lt;NestedInteger&amp;gt; nestedList)&lt;/code> Initializes the iterator with the nested list &lt;code>nestedList&lt;/code>.&lt;/li>
+&lt;li>&lt;code>int next()&lt;/code> Returns the next integer in the nested list.&lt;/li>
+&lt;li>&lt;code>boolean hasNext()&lt;/code> Returns &lt;code>true&lt;/code> if there are still some integers in the nested list and false otherwise.&lt;/li>
+&lt;/ul>
+&lt;p>Your code will be tested with the following pseudocode:&lt;/p></description></item><item><title>[Leetcode] Trim a Binary Search Tree(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode669/</link><pubDate>Fri, 15 Apr 2022 18:29:14 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode669/</guid><description>&lt;h2 id="leetcode-669---trim-a-binary-search-tree">LeetCode 669 - Trim a Binary Search Tree
+&lt;a class="header-anchor" href="#leetcode-669---trim-a-binary-search-tree">&lt;/a>
+&lt;/h2>&lt;p>Given the root of a binary search tree and the lowest and highest boundaries as &lt;code>low&lt;/code> and &lt;code>high&lt;/code>, trim the tree so that all its elements lies in &lt;code>[low, high]&lt;/code>. Trimming the tree should not change the relative structure of the elements that will remain in the tree (i.e., any node&amp;rsquo;s descendant should remain a descendant). It can be proven that there is a &lt;strong>unique answer&lt;/strong>.&lt;/p></description></item><item><title>[Leetcode] Search in a Binary Search Tree(Easy)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode700/</link><pubDate>Thu, 14 Apr 2022 15:05:44 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode700/</guid><description>&lt;h2 id="leetcode-700---search-in-a-binary-search-tree">LeetCode 700 - Search in a Binary Search Tree
+&lt;a class="header-anchor" href="#leetcode-700---search-in-a-binary-search-tree">&lt;/a>
+&lt;/h2>&lt;p>You are given the root of a binary search tree (BST) and an integer val.&lt;/p>
+&lt;p>Find the node in the BST that the node&amp;rsquo;s value equals val and return the subtree rooted with that node. If such a node does not exist, return null.&lt;/p>
+&lt;p>example&lt;/p>
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-0-1">&lt;a class="lnlinks" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-2">&lt;a class="lnlinks" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: root = [4,2,7,1,3], val = 2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [2,1,3]&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-1-1">&lt;a class="lnlinks" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-2">&lt;a class="lnlinks" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: root = [4,2,7,1,3], val = 5
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: []&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+&lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
+&lt;/h2>&lt;p>在解決問題之前，我們需要知道什麼是&lt;code>Binary Search Tree&lt;/code>。根據&lt;code>BST&lt;/code>的定義:&lt;/p></description></item></channel></rss>

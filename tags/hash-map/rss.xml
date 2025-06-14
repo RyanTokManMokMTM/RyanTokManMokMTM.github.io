@@ -1,1 +1,45 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hash Map on Jackson.tmm</title><link>https://ryantokmanmokmtm.github.io/tags/hash-map/</link><description>Recent content in Hash Map on Jackson.tmm</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Thu, 15 Sep 2022 00:21:27 +0800</lastBuildDate><atom:link href="https://ryantokmanmokmtm.github.io/tags/hash-map/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Find Original Array From Doubled Array(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode2007/</link><pubDate>Thu, 15 Sep 2022 00:21:27 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode2007/</guid><description>LeetCode 2007 - Find Original Array From Doubled Array An integer array original is transformed into a doubled array changed by appending twice the value of every element in original, and then randomly shuffling the resulting array. Given an array changed, return original if changed is a doubled array. If changed is not a doubled array, return an empty array. The elements in original may be returned in any order.</description></item><item><title>[Leetcode] Create Binary Tree From Descriptions(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode442/</link><pubDate>Tue, 06 Sep 2022 22:02:11 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode442/</guid><description>LeetCode 442 - Find All Duplicates in an Array Given an integer array nums of length n where all the integers of nums are in the range [1, n] and each integer appears once or twice, return an array of all the integers that appears twice. You must write an algorithm that runs in O(n) time and uses only constant extra space. example Input: nums = [4,3,2,7,8,2,3,1] Output: [2,3] Input:</description></item><item><title>[Leetcode] Create Binary Tree From Descriptions(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode2196/</link><pubDate>Tue, 06 Sep 2022 21:45:02 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode2196/</guid><description>LeetCode 2196 - Create Binary Tree From Descriptions You are given a 2D integer array descriptions where descriptions[i] = [parenti, childi, isLefti] indicates that parenti is the parent of childi in a binary tree of unique values. Furthermore, If isLefti == 1, then childi is the left child of parenti. If isLefti == 0, then childi is the right child of parenti. Construct the binary tree described by descriptions and</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hash Map on Jackson.tmm</title><link>https://ryantokmanmokmtm.github.io/tags/hash-map/</link><description>Recent content in Hash Map on Jackson.tmm</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Thu, 15 Sep 2022 00:21:27 +0800</lastBuildDate><atom:link href="https://ryantokmanmokmtm.github.io/tags/hash-map/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Find Original Array From Doubled Array(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode2007/</link><pubDate>Thu, 15 Sep 2022 00:21:27 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode2007/</guid><description>&lt;h2 id="leetcode-2007---find-original-array-from-doubled-array">LeetCode 2007 - Find Original Array From Doubled Array
+&lt;a class="header-anchor" href="#leetcode-2007---find-original-array-from-doubled-array">&lt;/a>
+&lt;/h2>&lt;p>An integer array &lt;code>original&lt;/code> is transformed into a &lt;strong>doubled&lt;/strong> array changed by appending &lt;strong>twice the value&lt;/strong> of every element in original, and then randomly &lt;strong>shuffling&lt;/strong> the resulting array.&lt;/p>
+&lt;p>Given an array &lt;code>changed&lt;/code>, return &lt;code>original&lt;/code> if &lt;code>changed&lt;/code> is a &lt;strong>doubled&lt;/strong> array. If &lt;code>changed&lt;/code> is not a &lt;strong>doubled&lt;/strong> array, &lt;em>return an empty array. The elements in &lt;code>original&lt;/code> may be returned in any order&lt;/em>.
+example&lt;/p></description></item><item><title>[Leetcode] Create Binary Tree From Descriptions(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode442/</link><pubDate>Tue, 06 Sep 2022 22:02:11 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode442/</guid><description>&lt;h2 id="leetcode-442---find-all-duplicates-in-an-array">LeetCode 442 - Find All Duplicates in an Array
+&lt;a class="header-anchor" href="#leetcode-442---find-all-duplicates-in-an-array">&lt;/a>
+&lt;/h2>&lt;p>Given an integer array &lt;code>nums&lt;/code> of length &lt;code>n&lt;/code> where all the integers of &lt;code>nums&lt;/code> are in the range &lt;code>[1, n]&lt;/code> and each integer appears &lt;strong>once&lt;/strong> or &lt;strong>twice&lt;/strong>, return an array of all the integers that appears &lt;strong>twice&lt;/strong>.&lt;/p>
+&lt;p>You must write an algorithm that runs in &lt;code>O(n)&lt;/code> time and uses only constant extra space.
+example&lt;/p>
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-0-1">&lt;a class="lnlinks" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-2">&lt;a class="lnlinks" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: nums = [4,3,2,7,8,2,3,1]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [2,3]&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-1-1">&lt;a class="lnlinks" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-2">&lt;a class="lnlinks" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: nums = [1]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: []&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+&lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
+&lt;/h2>&lt;p>這題要我們找出所有在Array裡重複出現2次的數字。解法也很簡單, 因為題目也說了數字會出現1次或者2次,哪我們可以透過&lt;code>Map&lt;/code>來計數,但當前數字已經出現過1次,也就代表當前數字是重複了2次,加入到結果即可。&lt;/p></description></item><item><title>[Leetcode] Create Binary Tree From Descriptions(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode2196/</link><pubDate>Tue, 06 Sep 2022 21:45:02 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode2196/</guid><description>&lt;h2 id="leetcode-2196---create-binary-tree-from-descriptions">LeetCode 2196 - Create Binary Tree From Descriptions
+&lt;a class="header-anchor" href="#leetcode-2196---create-binary-tree-from-descriptions">&lt;/a>
+&lt;/h2>&lt;p>You are given a 2D integer array &lt;code>descriptions&lt;/code> where &lt;code>descriptions[i] = [parenti, childi, isLefti]&lt;/code> indicates that parenti is the &lt;strong>parent&lt;/strong> of childi in a &lt;strong>binary&lt;/strong> tree of &lt;strong>unique&lt;/strong> values. Furthermore,&lt;/p>
+&lt;ul>
+&lt;li>If &lt;code>isLefti == 1&lt;/code>, then &lt;strong>child&lt;sub>i&lt;/sub>&lt;/strong> is the left child of &lt;strong>parent&lt;sub>i&lt;/sub>&lt;/strong>.&lt;/li>
+&lt;li>If &lt;code>isLefti == 0&lt;/code>, then &lt;strong>child&lt;sub>i&lt;/sub>&lt;/strong> is the right child of &lt;strong>parent&lt;sub>i&lt;/sub>&lt;/strong>.
+Construct the binary tree described by &lt;code>descriptions&lt;/code> and return &lt;em>its &lt;strong>root&lt;/strong>&lt;/em>.&lt;/li>
+&lt;/ul>
+&lt;p>The test cases will be generated such that the binary tree is &lt;strong>valid&lt;/strong>.
+example&lt;/p></description></item></channel></rss>

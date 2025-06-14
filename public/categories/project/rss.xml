@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Project on Jackson.tmm</title><link>http://localhost:1313/categories/project/</link><description>Recent content in Project on Jackson.tmm</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Mon, 15 May 2023 13:49:17 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/project/rss.xml" rel="self" type="application/rss+xml"/><item><title>[DONE] Chat App - 2024/04/20</title><link>http://localhost:1313/project/chat-app/</link><pubDate>Mon, 15 May 2023 13:49:17 +0800</pubDate><guid>http://localhost:1313/project/chat-app/</guid><description>&lt;p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Project on Hugo NexT</title><link>//localhost:1414/categories/project/</link><description>Recent content in Project on Hugo NexT</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Mon, 15 May 2023 13:49:17 +0800</lastBuildDate><atom:link href="//localhost:1414/categories/project/rss.xml" rel="self" type="application/rss+xml"/><item><title>[DONE] Chat App - 2024/04/20</title><link>//localhost:1414/project/chat-app/</link><pubDate>Mon, 15 May 2023 13:49:17 +0800</pubDate><guid>//localhost:1414/project/chat-app/</guid><description>&lt;p>
 &lt;a href="https://github.com/RyanTokManMokMTM/swiftui-chat-app" title="Chat App - Frontend" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
  &lt;strong>Chat App - Frontend&lt;/strong>
  
@@ -12,10 +12,10 @@
  &lt;i class="fa fa-external-link-alt">&lt;/i>
  
 &lt;/a>&lt;/p>
-&lt;p>&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/imgs/chat-app/2024-04-20-final.png" alt="new-ver" />&lt;/p>
+&lt;p>&lt;img src="//localhost:1414/imgs/img-lazy-loading.gif" data-src="//localhost:1414/imgs/chat-app/2024-04-20-final.png" alt="new-ver" />&lt;/p>
 &lt;h3 id="簡介">簡介
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
-&lt;/h3>&lt;p>因為之前的&lt;code>OTT電影社群APP&lt;/code>中有包含通訊的功能，但是那個App所實現的功能就只是簡單的存文字聊天而已，而那個app主要的focus點並不在通訊上，所以只有簡簡單單的實作了通訊，沒有到完整的通訊，例如：發送文字，發送圖片，發送文件等等的通訊功能。所以這次的side project所實作的app則主要focus在&lt;strong>通訊&lt;/strong>這個點上。&lt;/p></description></item><item><title>[Side-Project] Movie App</title><link>http://localhost:1313/project/movie-app/</link><pubDate>Sat, 10 Dec 2022 15:45:56 +0800</pubDate><guid>http://localhost:1313/project/movie-app/</guid><description>&lt;p>
+&lt;/h3>&lt;p>因為之前的&lt;code>OTT電影社群APP&lt;/code>中有包含通訊的功能，但是那個App所實現的功能就只是簡單的存文字聊天而已，而那個app主要的focus點並不在通訊上，所以只有簡簡單單的實作了通訊，沒有到完整的通訊，例如：發送文字，發送圖片，發送文件等等的通訊功能。所以這次的side project所實作的app則主要focus在&lt;strong>通訊&lt;/strong>這個點上。&lt;/p></description></item><item><title>[Side-Project] Movie App</title><link>//localhost:1414/project/movie-app/</link><pubDate>Sat, 10 Dec 2022 15:45:56 +0800</pubDate><guid>//localhost:1414/project/movie-app/</guid><description>&lt;p>
 &lt;a href="https://github.com/RyanTokManMokMTM/MovieAppSwiftUI.git" title="Movie App - Frontend" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
  &lt;strong>Movie App - Frontend&lt;/strong>
  
@@ -29,10 +29,10 @@
  &lt;i class="fa fa-external-link-alt">&lt;/i>
  
 &lt;/a>&lt;/p>
-&lt;p>&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/imgs/ott_app/movie-app/AppImg.png" alt="client" />&lt;/p>
+&lt;p>&lt;img src="//localhost:1414/imgs/img-lazy-loading.gif" data-src="//localhost:1414/imgs/ott_app/movie-app/AppImg.png" alt="client" />&lt;/p>
 &lt;h3 id="簡介">簡介
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
-&lt;/h3>&lt;p>開發這個App的目的主要是為了解決在搜尋電影OTT資源以及電影內容討論分散在多個不同平台等問題，如:搜尋到的資源是無效/不合法的，花費大量時間在搜尋上等等&amp;hellip;。因此這個App主要分成2個組成部分，分別是電影資訊搜尋獲取OTT資源，並整合不同OTT平台的電影資源，供用戶選擇合法資源，並過濾無效資源以及電影分享社群，供用戶在觀看完電影後，直接在App中發佈相關文章以分享給其他用戶，而無需在不同平台發佈。&lt;/p></description></item><item><title>[CGU]Graduation Project</title><link>http://localhost:1313/project/final-project/</link><pubDate>Fri, 31 Dec 2021 20:22:11 +0800</pubDate><guid>http://localhost:1313/project/final-project/</guid><description>&lt;p>&lt;del>
+&lt;/h3>&lt;p>開發這個App的目的主要是為了解決在搜尋電影OTT資源以及電影內容討論分散在多個不同平台等問題，如:搜尋到的資源是無效/不合法的，花費大量時間在搜尋上等等&amp;hellip;。因此這個App主要分成2個組成部分，分別是電影資訊搜尋獲取OTT資源，並整合不同OTT平台的電影資源，供用戶選擇合法資源，並過濾無效資源以及電影分享社群，供用戶在觀看完電影後，直接在App中發佈相關文章以分享給其他用戶，而無需在不同平台發佈。&lt;/p></description></item><item><title>[CGU]Graduation Project</title><link>//localhost:1414/project/final-project/</link><pubDate>Fri, 31 Dec 2021 20:22:11 +0800</pubDate><guid>//localhost:1414/project/final-project/</guid><description>&lt;p>&lt;del>
 &lt;a href="https://github.com/RyanTokManMokMTM/MovieAppSwiftUI.git" title="OTT Movies recommender system-IOS Client" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
  &lt;strong>OTT Movies recommender system-IOS Client&lt;/strong>
  
@@ -40,7 +40,7 @@
  
 &lt;/a>&lt;/del>
 Project have been changed/updated&lt;/p>
-&lt;p>&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/imgs/iosClient.png" alt="client" />&lt;/p>
+&lt;p>&lt;img src="//localhost:1414/imgs/img-lazy-loading.gif" data-src="//localhost:1414/imgs/iosClient.png" alt="client" />&lt;/p>
 &lt;h3 id="frontend">Frontend
 &lt;a class="header-anchor" href="#frontend">&lt;/a>
 &lt;/h3>&lt;ul>
@@ -59,6 +59,6 @@ Project have been changed/updated&lt;/p>
 &lt;/ul>
 &lt;h3 id="demo-video">Demo Video
 &lt;a class="header-anchor" href="#demo-video">&lt;/a>
-&lt;/h3>&lt;p>&lt;video src="http://localhost:1313/videos/final.MP4" controls="controls" width="500" height="300">&lt;/video>&lt;/p>
+&lt;/h3>&lt;p>&lt;video src="//localhost:1414/videos/final.MP4" controls="controls" width="500" height="300">&lt;/video>&lt;/p>
 &lt;!-- ### Updated Video
-&lt;video src="http://localhost:1313/videos/ott-app.mov" controls="controls" width="500" height="300">&lt;/video> --></description></item></channel></rss>
+&lt;video src="//localhost:1414/videos/ott-app.mov" controls="controls" width="500" height="300">&lt;/video> --></description></item></channel></rss>

@@ -1,257 +1,257 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Chat-App on Jackson.tmm</title><link>http://localhost:1313/tags/chat-app/</link><description>Recent content in Chat-App on Jackson.tmm</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Sun, 21 Apr 2024 23:12:11 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/chat-app/rss.xml" rel="self" type="application/rss+xml"/><item><title>[開發者日記] 聊天通訊APP(完結) - 總結</title><link>http://localhost:1313/post/project/chat-app-final-summary/</link><pubDate>Sun, 21 Apr 2024 23:12:11 +0800</pubDate><guid>http://localhost:1313/post/project/chat-app-final-summary/</guid><description>&lt;h2 id="簡介">簡介
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Chat-App on Hugo NexT</title><link>//localhost:1414/tags/chat-app/</link><description>Recent content in Chat-App on Hugo NexT</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Sun, 21 Apr 2024 23:12:11 +0800</lastBuildDate><atom:link href="//localhost:1414/tags/chat-app/rss.xml" rel="self" type="application/rss+xml"/><item><title>[開發者日記] 聊天通訊APP(完結) - 總結</title><link>//localhost:1414/post/project/chat-app-final-summary/</link><pubDate>Sun, 21 Apr 2024 23:12:11 +0800</pubDate><guid>//localhost:1414/post/project/chat-app-final-summary/</guid><description>&lt;h2 id="簡介">簡介
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
 &lt;/h2>&lt;p>Hi, 已經有一段時間沒有更新了，因為最近在研究多人串流的問題。這篇文章主要是分享我做了些什麼以及對這個project做個總結，這裡的意思就是這個project終於完成了！！花了我近1年的時間呢。&lt;br>
 雖然這個project已完成，但是依然還有些問題，如果我們之後還有這個能力在修復～ 這些問題使得串流沒有這麼的穩定，但還是可以玩的呢！&lt;br>
 在進入今天主題之前，如果你不記得或不知道這個project關於什麼的話，可以回去閱讀這幾篇文章：&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-init/" title="ChatApp(I)" >
+&lt;a href="//localhost:1414/post/chat-app-init/" title="ChatApp(I)" >
  ChatApp(I)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-demo/" title="ChatApp(II)" >
+&lt;a href="//localhost:1414/post/chat-app-demo/" title="ChatApp(II)" >
  ChatApp(II)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-update/" title="ChatApp(III)" >
+&lt;a href="//localhost:1414/post/chat-app-update/" title="ChatApp(III)" >
  ChatApp(III)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-final/" title="ChatApp(IV)" >
+&lt;a href="//localhost:1414/post/chat-app-final/" title="ChatApp(IV)" >
  ChatApp(IV)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-voice-chat/" title="ChatApp(V)" >
+&lt;a href="//localhost:1414/post/chat-app-voice-chat/" title="ChatApp(V)" >
  ChatApp(V)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-sticker-updated/" title="ChatApp(VI)" >
+&lt;a href="//localhost:1414/post/chat-app-sticker-updated/" title="ChatApp(VI)" >
  ChatApp(VI)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-story-alignment-updated/" title="ChatApp(Ⅶ)" >
+&lt;a href="//localhost:1414/post/chat-app-story-alignment-updated/" title="ChatApp(Ⅶ)" >
  ChatApp(Ⅶ)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-story-multiple-img-updated/" title="ChatApp(Ⅷ)" >
+&lt;a href="//localhost:1414/post/chat-app-story-multiple-img-updated/" title="ChatApp(Ⅷ)" >
  ChatApp(Ⅷ)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-sticker-shop-updated/" title="ChatApp(IX)" >
+&lt;a href="//localhost:1414/post/chat-app-sticker-shop-updated/" title="ChatApp(IX)" >
  ChatApp(IX)
  
-&lt;/a>&lt;/p></description></item><item><title>[開發者日記] 聊天通訊APP - 貼圖更新(III)</title><link>http://localhost:1313/post/project/chat-app-sticker-shop-updated/</link><pubDate>Sat, 11 Nov 2023 11:08:40 +0800</pubDate><guid>http://localhost:1313/post/project/chat-app-sticker-shop-updated/</guid><description>&lt;h2 id="簡介">簡介
+&lt;/a>&lt;/p></description></item><item><title>[開發者日記] 聊天通訊APP - 貼圖更新(III)</title><link>//localhost:1414/post/project/chat-app-sticker-shop-updated/</link><pubDate>Sat, 11 Nov 2023 11:08:40 +0800</pubDate><guid>//localhost:1414/post/project/chat-app-sticker-shop-updated/</guid><description>&lt;h2 id="簡介">簡介
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
 &lt;/h2>&lt;p>如果您想了解該項目的內容，請閱讀以下文章&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-init/" title="ChatApp(I)" >
+&lt;a href="//localhost:1414/post/chat-app-init/" title="ChatApp(I)" >
  ChatApp(I)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-demo/" title="ChatApp(II)" >
+&lt;a href="//localhost:1414/post/chat-app-demo/" title="ChatApp(II)" >
  ChatApp(II)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-update/" title="ChatApp(III)" >
+&lt;a href="//localhost:1414/post/chat-app-update/" title="ChatApp(III)" >
  ChatApp(III)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-final/" title="ChatApp(IV)" >
+&lt;a href="//localhost:1414/post/chat-app-final/" title="ChatApp(IV)" >
  ChatApp(IV)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-voice-chat/" title="ChatApp(V)" >
+&lt;a href="//localhost:1414/post/chat-app-voice-chat/" title="ChatApp(V)" >
  ChatApp(V)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-sticker-updated/" title="ChatApp(VI)" >
+&lt;a href="//localhost:1414/post/chat-app-sticker-updated/" title="ChatApp(VI)" >
  ChatApp(VI)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-story-alignment-updated/" title="ChatApp(Ⅶ)" >
+&lt;a href="//localhost:1414/post/chat-app-story-alignment-updated/" title="ChatApp(Ⅶ)" >
  ChatApp(Ⅶ)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-story-multiple-img-updated/" title="ChatApp(Ⅷ)" >
+&lt;a href="//localhost:1414/post/chat-app-story-multiple-img-updated/" title="ChatApp(Ⅷ)" >
  ChatApp(Ⅷ)
  
 &lt;/a>&lt;/p>
 &lt;h2 id="demo">Demo
 &lt;a class="header-anchor" href="#demo">&lt;/a>
-&lt;/h2>&lt;p>&lt;video src="http://localhost:1313/videos/chat-app/sticker-shop.mp4" controls="controls" width="500">&lt;/video>&lt;/p>
+&lt;/h2>&lt;p>&lt;video src="//localhost:1414/videos/chat-app/sticker-shop.mp4" controls="controls" width="500">&lt;/video>&lt;/p>
 &lt;h2 id="簡介-1">簡介
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b-1">&lt;/a>
 &lt;/h2>&lt;p>正如我在
-&lt;a href="http://localhost:1313/post/chat-app-sticker-updated/" title="這篇文章" >
+&lt;a href="//localhost:1414/post/chat-app-sticker-updated/" title="這篇文章" >
  這篇文章
  
-&lt;/a>中提到的，我添加了一個關於貼紙的新功能，它可以在聊天中使用提供的貼圖資源。但這還不夠，對用戶來說也不靈活。因此，我開發了更多關於貼紙功能的內容。&lt;/p></description></item><item><title>[開發者日記] 聊天通訊APP - 限時動態更新(III)</title><link>http://localhost:1313/post/project/chat-app-story-view-updated/</link><pubDate>Thu, 09 Nov 2023 20:23:44 +0800</pubDate><guid>http://localhost:1313/post/project/chat-app-story-view-updated/</guid><description>&lt;h2 id="簡介">簡介
+&lt;/a>中提到的，我添加了一個關於貼紙的新功能，它可以在聊天中使用提供的貼圖資源。但這還不夠，對用戶來說也不靈活。因此，我開發了更多關於貼紙功能的內容。&lt;/p></description></item><item><title>[開發者日記] 聊天通訊APP - 限時動態更新(III)</title><link>//localhost:1414/post/project/chat-app-story-view-updated/</link><pubDate>Thu, 09 Nov 2023 20:23:44 +0800</pubDate><guid>//localhost:1414/post/project/chat-app-story-view-updated/</guid><description>&lt;h2 id="簡介">簡介
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
 &lt;/h2>&lt;p>如果您想了解該項目的內容，請閱讀以下文章。
 
-&lt;a href="http://localhost:1313/post/chat-app-init/" title="ChatApp(I)" >
+&lt;a href="//localhost:1414/post/chat-app-init/" title="ChatApp(I)" >
  ChatApp(I)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-demo/" title="ChatApp(II)" >
+&lt;a href="//localhost:1414/post/chat-app-demo/" title="ChatApp(II)" >
  ChatApp(II)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-update/" title="ChatApp(III)" >
+&lt;a href="//localhost:1414/post/chat-app-update/" title="ChatApp(III)" >
  ChatApp(III)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-final/" title="ChatApp(IV)" >
+&lt;a href="//localhost:1414/post/chat-app-final/" title="ChatApp(IV)" >
  ChatApp(IV)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-voice-chat/" title="ChatApp(V)" >
+&lt;a href="//localhost:1414/post/chat-app-voice-chat/" title="ChatApp(V)" >
  ChatApp(V)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-sticker-updated/" title="ChatApp(VI)" >
+&lt;a href="//localhost:1414/post/chat-app-sticker-updated/" title="ChatApp(VI)" >
  ChatApp(VI)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-story-alignment-updated/" title="ChatApp(Ⅶ)" >
+&lt;a href="//localhost:1414/post/chat-app-story-alignment-updated/" title="ChatApp(Ⅶ)" >
  ChatApp(Ⅶ)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-story-multiple-img-updated/" title="ChatApp(Ⅷ)" >
+&lt;a href="//localhost:1414/post/chat-app-story-multiple-img-updated/" title="ChatApp(Ⅷ)" >
  ChatApp(Ⅷ)
  
 &lt;/a>&lt;/p>
 &lt;h2 id="demo">Demo
 &lt;a class="header-anchor" href="#demo">&lt;/a>
-&lt;/h2>&lt;p>&lt;video src="http://localhost:1313/videos/chat-app/instance-story-view.mp4" controls="controls" width="500">&lt;/video>&lt;/p>
+&lt;/h2>&lt;p>&lt;video src="//localhost:1414/videos/chat-app/instance-story-view.mp4" controls="controls" width="500">&lt;/video>&lt;/p>
 &lt;h2 id="描述">描述
 &lt;a class="header-anchor" href="#%e6%8f%8f%e8%bf%b0">&lt;/a>
-&lt;/h2>&lt;p>在先前的版本中，用戶只能查看好友的故事並回覆該限時動態。它除了回覆故事之外不能和朋友有任何互動，所以在這個版本中，我打算為它添加更多的互動功能。&lt;/p></description></item><item><title>[開發者日記] 聊天通訊APP - 限時動態更新(II)</title><link>http://localhost:1313/post/project/chat-app-story-multiple-img-updated/</link><pubDate>Sun, 10 Sep 2023 12:49:44 +0800</pubDate><guid>http://localhost:1313/post/project/chat-app-story-multiple-img-updated/</guid><description>&lt;h2 id="簡介">簡介
+&lt;/h2>&lt;p>在先前的版本中，用戶只能查看好友的故事並回覆該限時動態。它除了回覆故事之外不能和朋友有任何互動，所以在這個版本中，我打算為它添加更多的互動功能。&lt;/p></description></item><item><title>[開發者日記] 聊天通訊APP - 限時動態更新(II)</title><link>//localhost:1414/post/project/chat-app-story-multiple-img-updated/</link><pubDate>Sun, 10 Sep 2023 12:49:44 +0800</pubDate><guid>//localhost:1414/post/project/chat-app-story-multiple-img-updated/</guid><description>&lt;h2 id="簡介">簡介
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
 &lt;/h2>&lt;p>如果您想了解該項目的內容，請閱讀以下文章。
 
-&lt;a href="http://localhost:1313/post/chat-app-init/" title="ChatApp(I)" >
+&lt;a href="//localhost:1414/post/chat-app-init/" title="ChatApp(I)" >
  ChatApp(I)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-demo/" title="ChatApp(II)" >
+&lt;a href="//localhost:1414/post/chat-app-demo/" title="ChatApp(II)" >
  ChatApp(II)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-update/" title="ChatApp(III)" >
+&lt;a href="//localhost:1414/post/chat-app-update/" title="ChatApp(III)" >
  ChatApp(III)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-final/" title="ChatApp(IV)" >
+&lt;a href="//localhost:1414/post/chat-app-final/" title="ChatApp(IV)" >
  ChatApp(IV)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-voice-chat/" title="ChatApp(V)" >
+&lt;a href="//localhost:1414/post/chat-app-voice-chat/" title="ChatApp(V)" >
  ChatApp(V)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-sticker-updated/" title="ChatApp(VI)" >
+&lt;a href="//localhost:1414/post/chat-app-sticker-updated/" title="ChatApp(VI)" >
  ChatApp(VI)
  
 &lt;/a>&lt;/p>
-&lt;p>這是關於限時動態功能的demo，類似於instagram（我的UI參考來自instagram xD）。&lt;/p></description></item><item><title>[開發者日記] 聊天通訊APP - 限時動態更新(I)</title><link>http://localhost:1313/post/project/chat-app-story-alignment-updated/</link><pubDate>Tue, 05 Sep 2023 20:19:33 +0800</pubDate><guid>http://localhost:1313/post/project/chat-app-story-alignment-updated/</guid><description>&lt;h2 id="簡介">簡介
+&lt;p>這是關於限時動態功能的demo，類似於instagram（我的UI參考來自instagram xD）。&lt;/p></description></item><item><title>[開發者日記] 聊天通訊APP - 限時動態更新(I)</title><link>//localhost:1414/post/project/chat-app-story-alignment-updated/</link><pubDate>Tue, 05 Sep 2023 20:19:33 +0800</pubDate><guid>//localhost:1414/post/project/chat-app-story-alignment-updated/</guid><description>&lt;h2 id="簡介">簡介
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
 &lt;/h2>&lt;p>如果您想了解該項目的內容，請閱讀以下文章。&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-init/" title="ChatApp(I)" >
+&lt;a href="//localhost:1414/post/chat-app-init/" title="ChatApp(I)" >
  ChatApp(I)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-demo/" title="ChatApp(II)" >
+&lt;a href="//localhost:1414/post/chat-app-demo/" title="ChatApp(II)" >
  ChatApp(II)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-update/" title="ChatApp(III)" >
+&lt;a href="//localhost:1414/post/chat-app-update/" title="ChatApp(III)" >
  ChatApp(III)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-final/" title="ChatApp(IV)" >
+&lt;a href="//localhost:1414/post/chat-app-final/" title="ChatApp(IV)" >
  ChatApp(IV)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-voice-chat/" title="ChatApp(V)" >
+&lt;a href="//localhost:1414/post/chat-app-voice-chat/" title="ChatApp(V)" >
  ChatApp(V)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-sticker-updated/" title="ChatApp(VI)" >
+&lt;a href="//localhost:1414/post/chat-app-sticker-updated/" title="ChatApp(VI)" >
  ChatApp(VI)
  
 &lt;/a>&lt;/p>
 &lt;h2 id="demo">Demo
 &lt;a class="header-anchor" href="#demo">&lt;/a>
-&lt;/h2>&lt;p>&lt;video src="http://localhost:1313/videos/chat-app/instance-story-alignment.mp4" controls="controls" width="500">&lt;/video>&lt;/p>
+&lt;/h2>&lt;p>&lt;video src="//localhost:1414/videos/chat-app/instance-story-alignment.mp4" controls="controls" width="500">&lt;/video>&lt;/p>
 &lt;h2 id="todo">TODO
 &lt;a class="header-anchor" href="#todo">&lt;/a>
-&lt;/h2>&lt;p>在先前的版本中，它確實允許用戶將多個&lt;code>文本&lt;/code>添加到他們的&lt;code>限時動態&lt;/code>中。但如果不使用眼睛就很難對齊所有文字項目。因此，在這個版本中，我決定添加一個對齊工具來幫助他們，這類似於「Instagram」對齊工具。&lt;/p></description></item><item><title>[開發者日記] 聊天通訊APP - 貼圖更新(I)</title><link>http://localhost:1313/post/project/chat-app-sticker-updated/</link><pubDate>Wed, 24 May 2023 21:32:47 +0800</pubDate><guid>http://localhost:1313/post/project/chat-app-sticker-updated/</guid><description>&lt;h2 id="簡介">簡介
+&lt;/h2>&lt;p>在先前的版本中，它確實允許用戶將多個&lt;code>文本&lt;/code>添加到他們的&lt;code>限時動態&lt;/code>中。但如果不使用眼睛就很難對齊所有文字項目。因此，在這個版本中，我決定添加一個對齊工具來幫助他們，這類似於「Instagram」對齊工具。&lt;/p></description></item><item><title>[開發者日記] 聊天通訊APP - 貼圖更新(I)</title><link>//localhost:1414/post/project/chat-app-sticker-updated/</link><pubDate>Wed, 24 May 2023 21:32:47 +0800</pubDate><guid>//localhost:1414/post/project/chat-app-sticker-updated/</guid><description>&lt;h2 id="簡介">簡介
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
 &lt;/h2>&lt;p>關於這個專案我就不多說了，如果你對這個專案有興趣的話，請看我之前的貼文。在之前的文章中，我已經詳細介紹了這個專案。
 
-&lt;a href="http://localhost:1313/post/chat-app-init/" title="ChatApp(I)" >
+&lt;a href="//localhost:1414/post/chat-app-init/" title="ChatApp(I)" >
  ChatApp(I)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-demo/" title="ChatApp(II)" >
+&lt;a href="//localhost:1414/post/chat-app-demo/" title="ChatApp(II)" >
  ChatApp(II)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-update/" title="ChatApp(III)" >
+&lt;a href="//localhost:1414/post/chat-app-update/" title="ChatApp(III)" >
  ChatApp(III)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-final/" title="ChatApp(IV)" >
+&lt;a href="//localhost:1414/post/chat-app-final/" title="ChatApp(IV)" >
  ChatApp(IV)
  
 &lt;/a>&lt;br>
 
-&lt;a href="http://localhost:1313/post/chat-app-voice-chat/" title="ChatApp(V)" >
+&lt;a href="//localhost:1414/post/chat-app-voice-chat/" title="ChatApp(V)" >
  ChatApp(V)
  
 &lt;/a>&lt;/p>
-&lt;p>&lt;video src="http://localhost:1313/videos/chat-app/sticker-demo.mp4" controls="controls" width="500">&lt;/video>&lt;/p>
+&lt;p>&lt;video src="//localhost:1414/videos/chat-app/sticker-demo.mp4" controls="controls" width="500">&lt;/video>&lt;/p>
 &lt;p>在demo影片中，您可以看到貼圖功能與網路上任何其他即時通訊應用程式類似。用戶能夠存取我們提供的所有可用貼圖並將其發送給其他用戶或群組。但問題是我們如何提供使用者貼圖資源，貼圖從哪裡來呢？&lt;br>
-為了解決第一個問題，我們可以透過在客戶端或使用者能夠存取它之前將所有必要的圖像上傳到伺服器來建立貼圖資源。每個建立的貼圖資源都會被分配一個唯一的ID作為其貼圖ID。與相同貼圖ID相關的所有資源都將以標準化格式重新命名，以便於存取。 &lt;code>stickerID_index.format&lt;/code>。&lt;/p></description></item><item><title>[開發者日記] 聊天通訊APP - RTC小更新</title><link>http://localhost:1313/post/project/chat-app-voice-chat/</link><pubDate>Sat, 13 May 2023 23:58:58 +0800</pubDate><guid>http://localhost:1313/post/project/chat-app-voice-chat/</guid><description>&lt;h4 id="簡介">簡介
+為了解決第一個問題，我們可以透過在客戶端或使用者能夠存取它之前將所有必要的圖像上傳到伺服器來建立貼圖資源。每個建立的貼圖資源都會被分配一個唯一的ID作為其貼圖ID。與相同貼圖ID相關的所有資源都將以標準化格式重新命名，以便於存取。 &lt;code>stickerID_index.format&lt;/code>。&lt;/p></description></item><item><title>[開發者日記] 聊天通訊APP - RTC小更新</title><link>//localhost:1414/post/project/chat-app-voice-chat/</link><pubDate>Sat, 13 May 2023 23:58:58 +0800</pubDate><guid>//localhost:1414/post/project/chat-app-voice-chat/</guid><description>&lt;h4 id="簡介">簡介
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
 &lt;/h4>&lt;p>我在
-&lt;a href="http://localhost:1313/post/chat-app-init" title="[開發者日記] 聊天通訊APP(一)" >
+&lt;a href="//localhost:1414/post/chat-app-init" title="[開發者日記] 聊天通訊APP(一)" >
  [開發者日記] 聊天通訊APP(一)
  
 &lt;/a>中有提及過這app會有&lt;/p>
@@ -260,30 +260,30 @@
 &lt;li>視頻通訊&lt;/li>
 &lt;/ul>
 &lt;p>這次他們真的來了！！廢話少說先看視頻&lt;br>
-&lt;video src="http://localhost:1313/videos/chat-app/voice-chat.mp4" controls="controls" width="500" height="300">&lt;/video>&lt;/p>
+&lt;video src="//localhost:1414/videos/chat-app/voice-chat.mp4" controls="controls" width="500" height="300">&lt;/video>&lt;/p>
 &lt;h4 id="說明">說明
 &lt;a class="header-anchor" href="#%e8%aa%aa%e6%98%8e">&lt;/a>
-&lt;/h4>&lt;p>雖然現在只有展示了語音通訊(Voice-chat),但是他們的工作原理其實是差不多的，就差在有沒有傳送視頻數據而已。老實說，這個功能其實言研究了2個月都不知道要從何入手，而github上的simple-demo又是UIKit的版本，所以就一直拖，一直研究。知道最近就想試試也無妨，最多也就不成功，萬一它成功了呢！於是我便開始寫，寫了1-2天，發現失敗了，哈哈哈。然後debug了一下，發現好像是沒有連接上的問題，於是又花了一整天來測試是否有成功連接，當成功連接上且文字數據傳送成功的那一刻，那個激動的心啊❤️！！！然後打開視訊，還真的成功了！！！！好開心！&lt;/p></description></item><item><title>[開發者日記] 聊天通訊APP(四) - 最終章</title><link>http://localhost:1313/post/project/chat-app-final/</link><pubDate>Mon, 01 May 2023 19:25:38 +0800</pubDate><guid>http://localhost:1313/post/project/chat-app-final/</guid><description>&lt;h3 id="簡介">簡介
+&lt;/h4>&lt;p>雖然現在只有展示了語音通訊(Voice-chat),但是他們的工作原理其實是差不多的，就差在有沒有傳送視頻數據而已。老實說，這個功能其實言研究了2個月都不知道要從何入手，而github上的simple-demo又是UIKit的版本，所以就一直拖，一直研究。知道最近就想試試也無妨，最多也就不成功，萬一它成功了呢！於是我便開始寫，寫了1-2天，發現失敗了，哈哈哈。然後debug了一下，發現好像是沒有連接上的問題，於是又花了一整天來測試是否有成功連接，當成功連接上且文字數據傳送成功的那一刻，那個激動的心啊❤️！！！然後打開視訊，還真的成功了！！！！好開心！&lt;/p></description></item><item><title>[開發者日記] 聊天通訊APP(四) - 最終章</title><link>//localhost:1414/post/project/chat-app-final/</link><pubDate>Mon, 01 May 2023 19:25:38 +0800</pubDate><guid>//localhost:1414/post/project/chat-app-final/</guid><description>&lt;h3 id="簡介">簡介
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
 &lt;/h3>&lt;p>在之前
-&lt;a href="http://localhost:1313/post/chat-app-init" title="序章" >
+&lt;a href="//localhost:1414/post/chat-app-init" title="序章" >
  序章
  
 &lt;/a>中，雖然已經大概介紹過這個app在幹嘛。但是因為這次是&lt;strong>最終章&lt;/strong>的成品展示(或許有些部分沒實現😂)，所以就允許我囉嗦得再說一次吧！&lt;/p>
-&lt;p>這個app主要是focus在Websocket，也就是實時通訊上。雖然但是HTTP的部分還是不能少的🤣，哈哈哈。所以這個App的Server-side包含了HTTP和Websocket 2個部分。HTTP的部分主要是用作CURD,而Websocket的部分則是用於個人通訊和群組通訊。&lt;/p></description></item><item><title>[開發者日記] 聊天通訊APP(三) - 聊天小更新</title><link>http://localhost:1313/post/project/chat-app-update/</link><pubDate>Sat, 29 Apr 2023 20:17:18 +0800</pubDate><guid>http://localhost:1313/post/project/chat-app-update/</guid><description>&lt;p>廢話少說直接上影片&lt;/p>
-&lt;p>&lt;video src="http://localhost:1313/videos/chat-app/message-update1.mp4" controls="controls" width="500">&lt;/video>&lt;/p>
+&lt;p>這個app主要是focus在Websocket，也就是實時通訊上。雖然但是HTTP的部分還是不能少的🤣，哈哈哈。所以這個App的Server-side包含了HTTP和Websocket 2個部分。HTTP的部分主要是用作CURD,而Websocket的部分則是用於個人通訊和群組通訊。&lt;/p></description></item><item><title>[開發者日記] 聊天通訊APP(三) - 聊天小更新</title><link>//localhost:1414/post/project/chat-app-update/</link><pubDate>Sat, 29 Apr 2023 20:17:18 +0800</pubDate><guid>//localhost:1414/post/project/chat-app-update/</guid><description>&lt;p>廢話少說直接上影片&lt;/p>
+&lt;p>&lt;video src="//localhost:1414/videos/chat-app/message-update1.mp4" controls="controls" width="500">&lt;/video>&lt;/p>
 &lt;p>對上一次的
-&lt;a href="http://localhost:1313/post/chat-app-demo/" title="demo" >
+&lt;a href="//localhost:1414/post/chat-app-demo/" title="demo" >
  demo
  
 &lt;/a>中，雖然也包含了個人聊天和群組聊天的部分，但是只支援普通文本和圖片的傳送，而這次修復了文件發送，音頻發送已經視頻發送的部分。而音頻可以直接聆聽接收到的音頻，而視頻則可以直接觀看。&lt;br>
-除此之外還添加了系統資訊，例如：群組的建立，群組加入，群組退出並通知群組人員。&lt;/p></description></item><item><title>[開發者日記] 聊天通訊APP(二) - Demo</title><link>http://localhost:1313/post/project/chat-app-demo/</link><pubDate>Mon, 24 Apr 2023 12:24:38 +0800</pubDate><guid>http://localhost:1313/post/project/chat-app-demo/</guid><description>&lt;p>這篇文章主要是展示一下整個App的Demo，廢話不多說，先上視頻:&lt;br>
-&lt;video src="http://localhost:1313/videos/chat-app/full-demo-1.mp4" controls="controls" width="500" height="300">&lt;/video>&lt;/p>
+除此之外還添加了系統資訊，例如：群組的建立，群組加入，群組退出並通知群組人員。&lt;/p></description></item><item><title>[開發者日記] 聊天通訊APP(二) - Demo</title><link>//localhost:1414/post/project/chat-app-demo/</link><pubDate>Mon, 24 Apr 2023 12:24:38 +0800</pubDate><guid>//localhost:1414/post/project/chat-app-demo/</guid><description>&lt;p>這篇文章主要是展示一下整個App的Demo，廢話不多說，先上視頻:&lt;br>
+&lt;video src="//localhost:1414/videos/chat-app/full-demo-1.mp4" controls="controls" width="500" height="300">&lt;/video>&lt;/p>
 &lt;h3 id="demo說明">Demo說明
 &lt;a class="header-anchor" href="#demo%e8%aa%aa%e6%98%8e">&lt;/a>
 &lt;/h3>&lt;p>這個App的詳細介紹在
-&lt;a href="http://localhost:1313/post/chat-app-init" title="[開發者日記] 聊天通訊APP(一)" >
+&lt;a href="//localhost:1414/post/chat-app-init" title="[開發者日記] 聊天通訊APP(一)" >
  [開發者日記] 聊天通訊APP(一)
  
 &lt;/a>中已經有基本的介紹，這裡就不作過多的介紹了。&lt;br>
-這裡主要是說明一下以上Demo中所展示的內容：&lt;/p></description></item><item><title>[開發日記] 聊天通訊APP(一) - 序章</title><link>http://localhost:1313/post/project/chat-app-init/</link><pubDate>Wed, 19 Apr 2023 17:08:14 +0800</pubDate><guid>http://localhost:1313/post/project/chat-app-init/</guid><description>&lt;p>因為之前的&lt;code>OTT電影社群APP&lt;/code>中有包含通訊的功能，但是那個App所實現的功能就只是簡單的存文字聊天而已，而那個app主要的focus點並不在通訊上，所以只有簡簡單單的實作了通訊，沒有到完整的通訊，例如：發送文字，發送圖片，發送文件等等的通訊功能。所以這次的side project所實作的app則主要focus在&lt;strong>通訊&lt;/strong>這個點上。&lt;/p></description></item></channel></rss>
+這裡主要是說明一下以上Demo中所展示的內容：&lt;/p></description></item><item><title>[開發日記] 聊天通訊APP(一) - 序章</title><link>//localhost:1414/post/project/chat-app-init/</link><pubDate>Wed, 19 Apr 2023 17:08:14 +0800</pubDate><guid>//localhost:1414/post/project/chat-app-init/</guid><description>&lt;p>因為之前的&lt;code>OTT電影社群APP&lt;/code>中有包含通訊的功能，但是那個App所實現的功能就只是簡單的存文字聊天而已，而那個app主要的focus點並不在通訊上，所以只有簡簡單單的實作了通訊，沒有到完整的通訊，例如：發送文字，發送圖片，發送文件等等的通訊功能。所以這次的side project所實作的app則主要focus在&lt;strong>通訊&lt;/strong>這個點上。&lt;/p></description></item></channel></rss>

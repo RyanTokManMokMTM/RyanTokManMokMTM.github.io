@@ -2,7 +2,7 @@
 # 本地快速启动脚本
 # Quick start in local.
 
-next_boot() {
+next() {
     cat << EOT
 ========================================
   ███╗   ██╗███████╗██╗  ██╗████████╗
@@ -18,6 +18,6 @@ Documentation: https://hugo-next.eu.org
 EOT
 }
 
-next_boot `cat themes/hugo-theme-next/VERSION`
+next `cat ../VERSION`
 
-hugo server --port 1414
+hugo server -t ../.. --port 1414 --panicOnWarning --config hugo.yaml

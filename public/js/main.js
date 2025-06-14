@@ -123,15 +123,50 @@ HTMLElement.prototype.wrap = function (wrapper) {
 };
 
 NexT.utils = {
-  registerMenuClick: function() {
+  registerAPlayer: function () {
+    this.getStyle(
+      NexT.utils.getCDNResource(NexT.CONFIG.page.music.css)
+    );
+    
+    NexT.CONFIG.page.music.js.forEach(function(js) {
+      NexT.utils.getScript(NexT.utils.getCDNResource(js), true);
+    });
+    
+  },
+  calPostExpiredDate: function() {
+    const postMetaDom = document.querySelector('.post-meta-container');
+    let postTime = postMetaDom.querySelector('time[itemprop="dateCreated datePublished"]').getAttribute("datetime");
+    let postLastmodTime = postMetaDom.querySelector('time[itemprop="dateModified dateLastmod"]');
+
+    if (postLastmodTime != null) postTime = postLastmodTime.getAttribute("datetime");
+
+    let expiredTip = '';
+    const expireCfg = NexT.CONFIG.page.expiredTips;
+    let expiredTime = this.diffDate(postTime, 2);
+
+    if (expiredTime.indexOf(NexT.CONFIG.i18n.ds_years) > -1) {
+      expiredTip = expireCfg.warn.split('#');
+    } else {
+      let days = parseInt(expiredTime.replace(NexT.CONFIG.i18n.ds_days, '').trim(), 10);
+      if (days < 180)  return; 
+      expiredTip = expireCfg.info.split('#');
+    }
+
+    let expiredTipPre = expiredTip[0];
+    let expiredTipSuf = expiredTip[1];
+    expiredTip = expiredTipPre + '<span class="post-expired-times">' + expiredTime + '</span>' + expiredTipSuf;
+    document.getElementById('post-expired-content').innerHTML = expiredTip;
+    this.domAddClass('#post-expired-tip', 'show');
+  },
+  registerMenuClick: function () {
     const pMenus = document.querySelectorAll('.main-menu > li > a.menus-parent');
-    pMenus.forEach(function(item) {
+    pMenus.forEach(function (item) {
       const icon = item.querySelector('span > i');
-      var ul = item.nextElementSibling;  
-      
-      item.addEventListener('click', function(e) {
+      var ul = item.nextElementSibling;
+
+      item.addEventListener('click', function (e) {
         e.preventDefault();
-        
+
         ul.classList.toggle('expand');
         if (ul.classList.contains('expand')) {
           icon.className = 'fa fa-angle-down';
@@ -146,9 +181,9 @@ NexT.utils = {
       }
     });
   },
-  registerImageLoadEvent: function() {
+  registerImageLoadEvent: function () {
     const images = document.querySelectorAll('.sidebar img, .post-block img, .vendors-list img');
-			
+
     const callback = (entries) => {
       entries.forEach(item => {
         if (item.intersectionRatio > 0) {
@@ -156,7 +191,7 @@ NexT.utils = {
           let imgSrc = ele.getAttribute('data-src');
           if (imgSrc) {
             let img = new Image();
-            img.addEventListener('load', function() {
+            img.addEventListener('load', function () {
               ele.src = imgSrc;
             }, false);
             ele.src = imgSrc;
@@ -166,23 +201,23 @@ NexT.utils = {
         }
       })
     };
-      
+
     const observer = new IntersectionObserver(callback);
     images.forEach(img => {
       observer.observe(img);
     });
   },
 
-  registerImageViewer: function() {
+  registerImageViewer: function () {
     const post_body = document.querySelector('.post-body');
     if (post_body) {
-      new Viewer(post_body,{ navbar:2, toolbar:2 });
+      new Viewer(post_body, { navbar: 2, toolbar: 2 });
     }
   },
 
   registerToolButtons: function () {
     const buttons = document.querySelector('.tool-buttons');
-    
+
     const scrollbar_buttons = buttons.querySelectorAll('div:not(#toggle-theme)');
     scrollbar_buttons.forEach(button => {
       let targetId = button.id;
@@ -202,12 +237,12 @@ NexT.utils = {
 
   slidScrollBarAnime: function (targetId, easing = 'linear', duration = 500) {
     const targetObj = document.getElementById(targetId);
-   
+
     window.anime({
       targets: document.scrollingElement,
       duration: duration,
       easing: easing,
-      scrollTop:  targetId == '' || !targetObj ? 0 : targetObj.getBoundingClientRect().top + window.scrollY
+      scrollTop: targetId == '' || !targetObj ? 0 : targetObj.getBoundingClientRect().top + window.scrollY
     });
   },
 
@@ -263,8 +298,8 @@ NexT.utils = {
     }
   },
 
-  fmtLaWidget: function(){
-    setTimeout(function(){
+  fmtLaWidget: function () {
+    setTimeout(function () {
       const laWidget = document.querySelectorAll('#la-siteinfo-widget span');
       if (laWidget.length > 0) {
         const valIds = [0, 2, 4, 6];
@@ -278,8 +313,8 @@ NexT.utils = {
   },
 
   fmtBusuanzi: function () {
-    setTimeout(function(){
-      const bszUV = document.getElementById('busuanzi_value_site_uv');    
+    setTimeout(function () {
+      const bszUV = document.getElementById('busuanzi_value_site_uv');
       if (bszUV) {
         bszUV.innerText = NexT.utils.numberFormat(bszUV.innerText);
       }
@@ -287,7 +322,7 @@ NexT.utils = {
       if (bszPV) {
         bszPV.innerText = NexT.utils.numberFormat(bszPV.innerText);
       }
-    }, 800);  
+    }, 800);
   },
 
   numberFormat: function (number) {
@@ -360,15 +395,15 @@ NexT.utils = {
 
     let router = NexT.CONFIG.vendor.router;
     let { name, version, file, alias, alias_name } = res;
-   
+
     let res_src = '';
-  
+
     switch (router.type) {
       case "modern":
         if (alias_name) name = alias_name;
         let alias_file = file.replace(/^(dist|lib|source|\/js|)\/(browser\/|)/, '');
-        if (alias_file.indexOf('min') == -1) {          
-          alias_file = alias_file.replace(/\.js$/, '.min.js');
+        if (alias_file.indexOf('min') == -1) {
+          alias_file = alias_file.replace(/\.(js|css)$/, '.min.$1');
         }
         res_src = `${router.url}/${name}/${version}/${alias_file}`;
         break;
@@ -379,56 +414,6 @@ NexT.utils = {
     }
 
     return res_src;
-  },
-
-  /**
-   * One-click copy code support.
-   */
-  registerCopyCode: function () {
-    if (!NexT.CONFIG.copybtn) return;
-
-    let figure = document.querySelectorAll('.highlight pre');
-    if (figure.length === 0 || !NexT.CONFIG.copybtn) return;
-    figure.forEach(element => {
-      let cn = element.querySelector('code').className;
-      // TODO seems hard code need find other ways fixed it.
-      if (cn == '') return;
-      element.insertAdjacentHTML('beforeend', '<div class="copy-btn"><i class="fa fa-copy fa-fw"></i></div>');
-      const button = element.querySelector('.copy-btn');
-      button.addEventListener('click', () => {
-        const lines = element.querySelector('.code') || element.querySelector('code');
-        const code = lines.innerText.replace(/(\n{2,})/g, '\n');
-        if (navigator.clipboard) {
-          // https://caniuse.com/mdn-api_clipboard_writetext
-          navigator.clipboard.writeText(code).then(() => {
-            button.querySelector('i').className = 'fa fa-check-circle fa-fw';
-          }, () => {
-            button.querySelector('i').className = 'fa fa-times-circle fa-fw';
-          });
-        } else {
-          const ta = document.createElement('textarea');
-          ta.style.top = window.scrollY + 'px'; // Prevent page scrolling
-          ta.style.position = 'absolute';
-          ta.style.opacity = '0';
-          ta.readOnly = true;
-          ta.value = code;
-          document.body.append(ta);
-          ta.select();
-          ta.setSelectionRange(0, code.length);
-          ta.readOnly = false;
-          const result = document.execCommand('copy');
-          button.querySelector('i').className = result ? 'fa fa-check-circle fa-fw' : 'fa fa-times-circle fa-fw';
-          ta.blur(); // For iOS
-          button.blur();
-          document.body.removeChild(ta);
-        }
-      });
-      element.addEventListener('mouseleave', () => {
-        setTimeout(() => {
-          button.querySelector('i').className = 'fa fa-copy fa-fw';
-        }, 300);
-      });
-    });
   },
 
   wrapTableWithBox: function () {
@@ -548,22 +533,58 @@ NexT.utils = {
       const isSubPath = !NexT.CONFIG.root.startsWith(target.pathname) && location.pathname.startsWith(target.pathname);
       target.classList.toggle('menu-item-active', target.hostname === location.hostname && (isSamePath || isSubPath));
     });
-  },
+  },*/
 	
   registerLangSelect: function() {
-    const selects = document.querySelectorAll('.lang-select');
-    selects.forEach(sel => {
-      sel.value = NexT.CONFIG.page.lang;
-      sel.addEventListener('change', () => {
-        const target = sel.options[sel.selectedIndex];
-        document.querySelectorAll('.lang-select-label span').forEach(span => {
-          span.innerText = target.text;
-        });
-        // Disable Pjax to force refresh translation of menu item
-        window.location.href = target.dataset.href;
+    let selects = document.getElementById('lang-select');
+    if (!selects) return;
+
+    let selected = selects.querySelector('#lang-selected');
+    let selectedVal = selected.querySelectorAll('span');
+    let flagIcon = selectedVal[0];
+    let langName = selectedVal[1];
+    let selectIcon = selected.querySelector('i');
+   
+
+    let options = selects.querySelectorAll('#lang-options>div');
+    let optionsDom = options[0].parentNode;
+    options.forEach(option => {
+      option.addEventListener('click', () => {
+        let langCode = option.getAttribute('lang-code');
+        flagIcon.className = 'flag-icon flag-icon-'+langCode;
+        langName.innerHTML = option.getAttribute('lang-name');
+        selectIcon.className = 'fa fa-chevron-down';
+        optionsDom.style.opacity = '0';
+        optionsDom.style.transform = 'translateY(-10px)';
+
+        let url = option.getAttribute('lang-url');
+        
+        setTimeout(() => {
+          optionsDom.style.display = 'none';
+          window.location.href = url;
+        }, 300);
       });
+    }); 
+
+    selected.addEventListener('mouseenter', function() {
+      selectIcon.className = 'fa fa-chevron-up';
+      optionsDom.style.display = 'block';
+      optionsDom.style.opacity = '1';
+      optionsDom.style.transform = 'translateY(0)';
+      
     });
-  },*/
+
+    optionsDom.addEventListener('mouseleave', function() {
+      selectIcon.className = 'fa fa-chevron-down';
+      optionsDom.style.opacity = '0';
+      optionsDom.style.transform = 'translateY(-10px)';
+      
+      setTimeout(() => {
+        optionsDom.style.display = 'none';
+      }, 300);
+    });
+    
+  },
 
   registerSidebarTOC: function () {
     const toc = document.getElementById('TableOfContents');
@@ -623,13 +644,6 @@ NexT.utils = {
         }
       });
     });
-  },
-
-  hideComments: function () {
-    let postComments = document.querySelector('.post-comments');
-    if (postComments !== null) {
-        postComments.style.display = 'none';
-    }
   },
 
   hiddeLodingCmp: function (selector) {
@@ -703,7 +717,7 @@ NexT.utils = {
     });
   },
 
-  getStyle: function (src, position='after', parent) {
+  getStyle: function (src, position = 'after', parent) {
     const link = document.createElement('link');
     link.setAttribute('rel', 'stylesheet');
     link.setAttribute('type', 'text/css');
@@ -723,8 +737,11 @@ NexT.utils = {
         condition: legacyCondition
       }).then(options);
     }
+
     const {
       condition = false,
+      module = false,
+      textContent = undefined,
       attributes: {
         id = '',
         async = false,
@@ -744,6 +761,8 @@ NexT.utils = {
 
         if (id) script.id = id;
         if (crossOrigin) script.crossOrigin = crossOrigin;
+        if (module) script.type = 'module';
+        if (textContent != undefined) script.textContent = textContent;
         script.async = async;
         script.defer = defer;
         Object.assign(script.dataset, dataset);
@@ -754,22 +773,25 @@ NexT.utils = {
         script.onload = resolve;
         script.onerror = reject;
 
-        if (typeof src === 'object') {
-          const { url, integrity } = src;
-          script.src = url;
-          if (integrity) {
-            script.integrity = integrity;
-            script.crossOrigin = 'anonymous';
+        if (src != null && src != undefined) {
+          if (typeof src === 'object') {
+            const { url, integrity } = src;
+            script.src = url;
+            if (integrity) {
+              script.integrity = integrity;
+              script.crossOrigin = 'anonymous';
+            }
+          } else {
+            script.src = src;
           }
-        } else {
-          script.src = src;
         }
+
         (parentNode || document.head).appendChild(script);
       }
     });
   },
 
-  lazyLoadComponent: function(selector, legacyCallback) {
+  lazyLoadComponent: function (selector, legacyCallback) {
     if (legacyCallback) {
       return this.lazyLoadComponent(selector).then(legacyCallback);
     }
@@ -792,7 +814,7 @@ NexT.utils = {
 };
 
 ;
-/* boot starup */
+/* boot startup */
 
 (function () {
   const onPageLoaded = () => document.dispatchEvent(
@@ -854,20 +876,28 @@ NexT.boot.registerEvents = function() {
 NexT.boot.refresh = function() {
 
   NexT.utils.fmtSiteInfo();
+  NexT.utils.wrapTableWithBox();
+
+  if (NexT.CONFIG.isMultiLang) {
+    NexT.utils.registerLangSelect();
+  }
 
   if (!NexT.CONFIG.page.isPage) return;
  
-  NexT.utils.registerSidebarTOC();
-  NexT.utils.registerCopyCode();
+  if (NexT.CONFIG.page.toc) NexT.utils.registerSidebarTOC();
+  if (NexT.CONFIG.page.expired) NexT.utils.calPostExpiredDate();
+  if (NexT.CONFIG.page.music) NexT.utils.registerAPlayer();
+
+  NexT.utils.registerImageViewer();
   NexT.utils.registerPostReward();
+
   if(NexT.CONFIG.page.comments) {    
     NexT.utils.initCommontesDispaly();
     NexT.utils.registerCommonSwitch();
-    NexT.utils.domAddClass('#goto-comments', 'goto-comments-on');
+    NexT.utils.domAddClass('#goto-comments', 'show');
   } else {
-    NexT.utils.hideComments();
+    NexT.utils.domAddClass('#goto-comments', 'hidden');
   }
-  NexT.utils.registerImageViewer();
 
   //TODO
    /**
@@ -882,8 +912,8 @@ NexT.boot.refresh = function() {
   // NexT.CONFIG.pangu && window.pangu.spacingPage();
   /*NexT.utils.registerTabsTag();
   NexT.utils.registerActiveMenuItem();
-  NexT.utils.registerLangSelect();*/
-  /*NexT.utils.wrapTableWithBox();
+  NexT.utils.registerLangSelect();
+  NexT.utils.wrapTableWithBox();
   NexT.utils.registerVideoIframe();*/
 
 };
@@ -1005,10 +1035,10 @@ NexT.motion.middleWares = {
       });
     }
 
-    animate(postblock, '.post-block,.flinks-block, .pagination, .post-comments');
+    animate(postblock, '.post-block, .flinks-block, .pagination, .post-comments');
     animate(collheader, '.collection-header');
-    animate(postheader, '.post-header');
-    animate(postbody, '.post-body');
+    animate(postheader, '.post-header, .flinks-header');
+    animate(postbody, '.post-body, .flinks-body');
 
     return sequence;
   },
@@ -1093,20 +1123,28 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 ;
-/* AddThis share plugin */
-NexT.plugins.share.addthis = function() {
-  const element = '.addthis_inline_share_toolbox';
-  if (!NexT.CONFIG.addthis || !NexT.utils.checkDOMExist(element)) return; 
+/* Addtoany share plugin */
+NexT.plugins.share.addtoany = function() {
+  const element = '.a2a_kit';
+  if (!NexT.CONFIG.share.enable || !NexT.utils.checkDOMExist(element)) return; 
 
-  const addthis_js = NexT.CONFIG.addthis.js + '?pubid=' + NexT.CONFIG.addthis.cfg.pubid;
+  const addtoany = NexT.CONFIG.share.addtoany;
+
+  if (!addtoany) return;
 
   NexT.utils.lazyLoadComponent(element, function() {
-    NexT.utils.getScript(addthis_js, {
-      attributes: {
-        async: false
-      },
-      parentNode: document.querySelector(element)
-    });
+    let addtoany_cfg = `
+      var a2a_config = a2a_config || {};
+      a2a_config.onclick = 1;
+      a2a_config.locale = "${addtoany.locale}";
+      a2a_config.num_services = ${addtoany.num};
+    `;
+
+    NexT.utils.getScript(null, {
+      textContent: addtoany_cfg
+    });   
+    
+    NexT.utils.getScript(addtoany.js, () => { NexT.utils.hiddeLodingCmp(element); });
   });
 }
 ;
@@ -1117,10 +1155,8 @@ NexT.plugins.comments.waline = function() {
     || !NexT.utils.checkDOMExist(element)) return; 
   
   const {
-    comment,
     emoji, 
     imguploader, 
-    pageview, 
     placeholder, 
     sofa,
     requiredmeta, 
@@ -1151,8 +1187,6 @@ NexT.plugins.comments.waline = function() {
       Waline.init({
         locale,
         el            : element,
-        pageview      : pageview,
-        comment       : comment,
         emoji         : emoji,
         imageUploader : imguploader,
         wordLimit     : wordlimit,
@@ -1169,109 +1203,99 @@ NexT.plugins.comments.waline = function() {
 }
 ;
 /* Page's view & comment counter plugin */
-NexT.plugins.others.counter = function() {
-    let pageview_js = undefined;
-    let comment_js = undefined;
+NexT.plugins.others.counter = function () {
+  let pageview_js = undefined;
+  let comment_js = undefined;
 
-    const post_meta = NexT.CONFIG.postmeta;
+  const post_meta = NexT.CONFIG.postmeta;
 
-    const views = post_meta.views;
-    if(views != undefined && views.enable) {
-      if (views.plugin == 'waline') {
-        pageview_js = NexT.utils.getCDNResource(NexT.CONFIG.page.waline.js[0]);
-        NexT.utils.getScript(pageview_js, function(){
+  const views = post_meta.views;
+  if (views != undefined && views.enable) {
+    let pageview_el = '#pageview-count';
+
+    switch (views.plugin) {
+      case 'waline':
+        pageview_js = NexT.utils.getCDNResource(NexT.CONFIG.page.waline.pagecnt);
+        NexT.utils.getScript(pageview_js, function () {
           Waline.pageviewCount({
+            selector : pageview_el,
             serverURL: NexT.CONFIG.waline.cfg.serverurl
           });
         });
-      }
+        break;
+      case 'waline3':
+        pageview_js = NexT.utils.getCDNResource(NexT.CONFIG.page.waline3.pagecnt);
+
+        let pageview_script = `
+          import('${pageview_js}').then((Waline) => {
+            Waline.pageviewCount({             
+              selector : '${pageview_el}',
+              serverURL: '${NexT.CONFIG.waline3.cfg.serverurl}'
+            })
+          });
+          `;
+        NexT.utils.getScript(null, { module: true, textContent: pageview_script });
+        break;
     }
 
-    const comments = post_meta.comments;
-    if (comments != undefined && comments.enable) {
-      if (comments.plugin == 'waline') {
-        comment_js = NexT.utils.getCDNResource(NexT.CONFIG.page.waline.js[1]);
-        NexT.utils.getScript(comment_js, function(){
+  }
+
+  const comments = post_meta.comments;
+  if (comments != undefined && comments.enable) {
+    let comments_el = '#comments-count';
+    switch (comments.plugin) {
+      case 'waline':
+        comment_js = NexT.utils.getCDNResource(NexT.CONFIG.page.waline.commentcnt);
+        NexT.utils.getScript(comment_js, function () {
           Waline.commentCount({
+            selector : comments_el,
             serverURL: NexT.CONFIG.waline.cfg.serverurl
           });
         });
-      }
+        break;
+      case 'waline3':
+        comment_js = NexT.utils.getCDNResource(NexT.CONFIG.page.waline3.commentcnt);
+        let comment_script = `
+          import('${comment_js}').then((Waline) => {
+            Waline.commentCount({             
+              selector : '${comments_el}',
+              serverURL: '${NexT.CONFIG.waline3.cfg.serverurl}'
+            })
+          });
+          `;
+        NexT.utils.getScript(null, { module: true, textContent: comment_script });
+        break;
+      case 'twikoo':
+        comment_js = NexT.utils.getCDNResource(NexT.CONFIG.twikoo.js);
+        NexT.utils.lazyLoadComponent("#twikoo", function () {
+          NexT.utils.getScript(comment_js, function () {
+            ele_list = document.querySelectorAll(comments_el);
+            let paths = [];
+            ele_list.forEach(ele => {
+              paths.push(ele.getAttribute('data-path'));
+            });
+            twikoo.getCommentsCount({
+              envId: NexT.CONFIG.twikoo.cfg.envid,
+              region: NexT.CONFIG.twikoo.cfg.region ? NexT.CONFIG.twikoo.cfg.region : 'ap-shanghai',
+              urls: paths,
+              includeReply: true,
+            }).then(function (res) {
+              let count_map = {};
+              res.forEach(item => {
+                count_map[item.url] = item.count;
+              });
+              ele_list.forEach(ele => {
+                ele.innerHTML = count_map[ele.getAttribute('data-path')];
+              });
+            }).catch(function (err) {
+              console.error(err);
+            });;
+          });
+        });
+        break;
     }
+  }
 }
-;
-/* Giscus comment plugin */
-NexT.plugins.comments.giscus = function() {
-  const element = '.giscus-container';
-  if (!NexT.CONFIG.page.comments 
-    || !NexT.CONFIG.giscus
-    || !NexT.utils.checkDOMExist(element)) return;
-
-  const { 
-    category, 
-    categoryid, 
-    emit, 
-    inputposition, 
-    mapping, 
-    reactions, 
-    repo, 
-    repoid, 
-    theme } = NexT.CONFIG.giscus.cfg;
-
-
-  NexT.utils.lazyLoadComponent(element, function() {
-    NexT.utils.getScript(NexT.CONFIG.giscus.js, {
-      attributes: {
-        'async'                  : true,
-        'crossorigin'            : 'anonymous',
-        'data-repo'              : repo,
-        'data-repo-id'           : repoid,
-        'data-category'          : category,
-        'data-category-id'       : categoryid,
-        'data-mapping'           : mapping,
-        'data-reactions-enabled' : reactions ? 1:0,
-        'data-emit-metadata'     : emit ? 1:0,
-        'data-input-position'    : inputposition,
-        'data-theme'             : theme,
-        'data-lang'              : NexT.CONFIG.lang,
-        'data-loading'           : 'lazy'
-      },
-      parentNode: document.querySelector(element)
-    });   
-    
-    NexT.utils.hiddeLodingCmp(element);
-  });      
-}
-;
-/* Utterances comment plugin */
-NexT.plugins.comments.utterances = function() {
-  const element = '.utterances-container';
-  if (!NexT.CONFIG.utterances
-    || !NexT.utils.checkDOMExist(element)) return;
-
-  const { 
-    repo, 
-    issueterm, 
-    label, 
-    theme } = NexT.CONFIG.utterances.cfg;
-
-  NexT.utils.lazyLoadComponent(element, function() {
-    NexT.utils.getScript(NexT.CONFIG.utterances.js, {
-      attributes: {
-        'async'       : true,
-        'crossorigin' : 'anonymous',
-        'repo'        : repo,
-        'issue-term'  : issueterm,
-        'label'       : label,
-        'theme'       : theme
-      },
-      parentNode: document.querySelector(element)
-    });
-
-    NexT.utils.hiddeLodingCmp(element);
-  }); 
-}
-
 ;
 /* LocalSearch engine */
 class LocalSearch {
@@ -1546,7 +1570,46 @@ NexT.plugins.search.localsearch = function() {
       container.classList.remove('no-result');
       container.innerHTML = `<div class="search-stats">${stats}</div>
         <hr>
-        <ul class="search-result-list">${resultItems.map(result => result.item).join('')}</ul>`;
+        <ul class="search-result-list"></ul>`;
+      (function () {
+        const ul = container.querySelector('.search-result-list');
+        const itemLimit = 1;
+        const subitemLimit = 20;
+        const appendItem = () => {
+          let count = 0;
+          for (const result of resultItems.splice(0, itemLimit)) {
+            const div = document.createElement('div');
+            div.innerHTML = result.item;
+            const li = div.firstElementChild;
+            // Should the title be considered a subitem? Perhaps it should.
+            // count += Math.max(1, li.childElementCount - 1);
+            count += li.childElementCount;
+            ul.append(li);
+          };
+          return count;
+        };
+        // Count subitems instead of items.
+        const appendItems = () => {
+          let count = 0;
+          while (count < subitemLimit && resultItems.length > 0) {
+            const incr = appendItem();
+            if (!incr) {
+              console.log('local.js: cannot push items to the result list.')
+              break;
+            }
+            count += incr;
+          }
+        };
+        appendItems();
+        // Use onscroll instead of addEventListener('scroll', ...),
+        // and let the new event handler replace the old one.
+        container.onscroll = () => {
+          const scrollBottom = container.scrollTop + container.clientHeight;
+          if (container.scrollHeight - scrollBottom < 50) {
+            appendItems();
+          }
+        };
+      })();
       if (typeof pjax === 'object') pjax.refresh(container);
     }
   };
@@ -1597,24 +1660,5 @@ NexT.plugins.search.localsearch = function() {
     if (event.key === 'Escape') {
       onPopupClose();
     }
-  });
-}
-
-;
-/* 51La sidebar data widget */
-NexT.plugins.others.lawidget = function() {
-  const element = '#siteinfo-card-widget';
-  const lawt_js = NexT.CONFIG.lawidget.js.replace('laId', NexT.CONFIG.lawidget.id);
-  
-  NexT.utils.lazyLoadComponent(element, function () {    
-    NexT.utils.getScript(lawt_js,{
-      attributes: {
-        id: 'LA-DATA-WIDGET',
-        crossorigin: 'anonymous',
-        charset: 'UTF-8',
-        defer: true
-      },
-      parentNode: document.getElementById('la-siteinfo-widget')
-    }, NexT.utils.fmtLaWidget());
   });
 }

@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Resources on Jackson.tmm</title><link>http://localhost:1313/categories/resources/</link><description>Recent content in Resources on Jackson.tmm</description><generator>Hugo</generator><language>zh-TW</language><lastBuildDate>Sat, 24 Dec 2022 16:58:43 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/resources/rss.xml" rel="self" type="application/rss+xml"/><item><title>簡歷模板 Resume Template</title><link>http://localhost:1313/resources/resume-template/</link><pubDate>Sat, 24 Dec 2022 16:58:43 +0800</pubDate><guid>http://localhost:1313/resources/resume-template/</guid><description>&lt;h1 id="中英文簡歷模板">中英文簡歷模板
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Resources on Hugo NexT</title><link>//localhost:1414/categories/resources/</link><description>Recent content in Resources on Hugo NexT</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Sat, 24 Dec 2022 16:58:43 +0800</lastBuildDate><atom:link href="//localhost:1414/categories/resources/rss.xml" rel="self" type="application/rss+xml"/><item><title>簡歷模板 Resume Template</title><link>//localhost:1414/resources/resume-template/</link><pubDate>Sat, 24 Dec 2022 16:58:43 +0800</pubDate><guid>//localhost:1414/resources/resume-template/</guid><description>&lt;h1 id="中英文簡歷模板">中英文簡歷模板
 &lt;a class="header-anchor" href="#%e4%b8%ad%e8%8b%b1%e6%96%87%e7%b0%a1%e6%ad%b7%e6%a8%a1%e6%9d%bf">&lt;/a>
 &lt;/h1>&lt;p>
-&lt;a href="http://localhost:1313/files/Resume-template%28en%29.docx" title="English CV Template(docx)" >
+&lt;a href="//localhost:1414/files/Resume-template%28en%29.docx" title="English CV Template(docx)" >
  English CV Template(docx)
  
 &lt;/a>
-&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/files/eng-cv.png" alt="English CV Template" />&lt;/p>
+&lt;img src="//localhost:1414/imgs/img-lazy-loading.gif" data-src="//localhost:1414/files/eng-cv.png" alt="English CV Template" />&lt;/p>
 &lt;p>
-&lt;a href="http://localhost:1313/files/Resume-template%28ch%29.docx" title="中文模板(docx)" >
+&lt;a href="//localhost:1414/files/Resume-template%28ch%29.docx" title="中文模板(docx)" >
  中文模板(docx)
  
 &lt;/a>
-&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/files/ch-cv.png" alt="chinese CV Template" />&lt;/p>
+&lt;img src="//localhost:1414/imgs/img-lazy-loading.gif" data-src="//localhost:1414/files/ch-cv.png" alt="chinese CV Template" />&lt;/p>
 &lt;h4 id="資料來源">資料來源
 &lt;a class="header-anchor" href="#%e8%b3%87%e6%96%99%e4%be%86%e6%ba%90">&lt;/a>
 &lt;/h4>&lt;ul>

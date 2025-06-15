@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Priority Queue on Jackson.tmm</title><link>https://ryantokmanmokmtm.github.io/tags/priority-queue/</link><description>Recent content in Priority Queue on Jackson.tmm</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Wed, 22 Jun 2022 22:55:53 +0800</lastBuildDate><atom:link href="https://ryantokmanmokmtm.github.io/tags/priority-queue/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Kth Largest Element in an Array(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcodes215/</link><pubDate>Wed, 22 Jun 2022 22:55:53 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcodes215/</guid><description>&lt;h2 id="leetcode-1268---search-suggestions-system">LeetCode 1268 - Search Suggestions System
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Priority Queue on Jackson.tmm</title><link>https://ryantokmanmokmtm.github.io/tags/priority-queue/</link><description>Recent content in Priority Queue on Jackson.tmm</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Wed, 22 Jun 2022 22:55:53 +0800</lastBuildDate><atom:link href="https://ryantokmanmokmtm.github.io/tags/priority-queue/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Kth Largest Element in an Array(Medium)</title><link>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcodes215/</link><pubDate>Wed, 22 Jun 2022 22:55:53 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcodes215/</guid><description>&lt;h2 id="leetcode-1268---search-suggestions-system">LeetCode 1268 - Search Suggestions System
 &lt;a class="header-anchor" href="#leetcode-1268---search-suggestions-system">&lt;/a>
 &lt;/h2>&lt;p>Given an integer array &lt;code>nums&lt;/code> and an integer &lt;code>k&lt;/code>, return the &lt;code>kth&lt;/code> &lt;em>largest element in the array&lt;/em>.&lt;/p>
 &lt;p>Note that it is the &lt;code>kth&lt;/code> largest element in the sorted order, not the &lt;code>kth&lt;/code> distinct element.&lt;/p>
@@ -29,7 +29,38 @@
 
 &lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
-&lt;/h2>&lt;p>這題要我們解決的問題是回傳在&lt;code>sorted array&lt;/code>(&lt;em>Input Array沒有排序&lt;/em>)中第&lt;code>kth&lt;/code>大的元素。最簡單的解法是直接排序,然後回傳&lt;code>kth&lt;/code>元素即可。但是, 這裡我們也可以使用&lt;code>Priority Queue(Heap)&lt;/code>來幫我們解決這個問題。因為&lt;code>Priority Queue&lt;/code>的特性,越大的值(&lt;code>MaxHeap&lt;/code>)/越小的值(&lt;code>MinHeap&lt;/code>)會越接近&lt;code>root&lt;/code>,也就是說最大值(&lt;code>MaxHeap&lt;/code>)/最小值(&lt;code>MinHeap&lt;/code>)會在&lt;code>root&lt;/code>。所以我們可以運用&lt;code>MinHeap&lt;/code>來幫助的我們解決這個問題,只要&lt;code>Priority Queue&lt;/code>裡面的元素多於&lt;code>K&lt;/code>個我們就會把&lt;code>top&lt;/code>的值移除，因更小的值會在前面,每次&lt;code>pop&lt;/code>的值都會是當前最小的值,直到最後，省下來的值的&lt;code>root&lt;/code>/&lt;code>top&lt;/code>就會是我們的第&lt;code>K&lt;/code>個最大的值，而&lt;code>priority queue&lt;/code>中最後一個值便會是&lt;code>Input&lt;/code>中最大的值。&lt;/p></description></item><item><title>[Leetcode] Furthest Building You Can Reach(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcodes1642/</link><pubDate>Tue, 21 Jun 2022 22:55:43 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcodes1642/</guid><description>&lt;h2 id="leetcode-1642---furthest-building-you-can-reach">LeetCode 1642 - Furthest Building You Can Reach
+&lt;/h2>&lt;p>這題要我們解決的問題是回傳在&lt;code>sorted array&lt;/code>(&lt;em>Input Array沒有排序&lt;/em>)中第&lt;code>kth&lt;/code>大的元素。最簡單的解法是直接排序,然後回傳&lt;code>kth&lt;/code>元素即可。但是, 這裡我們也可以使用&lt;code>Priority Queue(Heap)&lt;/code>來幫我們解決這個問題。因為&lt;code>Priority Queue&lt;/code>的特性,越大的值(&lt;code>MaxHeap&lt;/code>)/越小的值(&lt;code>MinHeap&lt;/code>)會越接近&lt;code>root&lt;/code>,也就是說最大值(&lt;code>MaxHeap&lt;/code>)/最小值(&lt;code>MinHeap&lt;/code>)會在&lt;code>root&lt;/code>。所以我們可以運用&lt;code>MinHeap&lt;/code>來幫助的我們解決這個問題,只要&lt;code>Priority Queue&lt;/code>裡面的元素多於&lt;code>K&lt;/code>個我們就會把&lt;code>top&lt;/code>的值移除，因更小的值會在前面,每次&lt;code>pop&lt;/code>的值都會是當前最小的值,直到最後，省下來的值的&lt;code>root&lt;/code>/&lt;code>top&lt;/code>就會是我們的第&lt;code>K&lt;/code>個最大的值，而&lt;code>priority queue&lt;/code>中最後一個值便會是&lt;code>Input&lt;/code>中最大的值。&lt;/p></description></item><item><title>[Leetcode] Kth Largest Element in an Array(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcodes215/</link><pubDate>Wed, 22 Jun 2022 22:55:53 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcodes215/</guid><description>&lt;h2 id="leetcode-1268---search-suggestions-system">LeetCode 1268 - Search Suggestions System
+&lt;a class="header-anchor" href="#leetcode-1268---search-suggestions-system">&lt;/a>
+&lt;/h2>&lt;p>Given an integer array &lt;code>nums&lt;/code> and an integer &lt;code>k&lt;/code>, return the &lt;code>kth&lt;/code> &lt;em>largest element in the array&lt;/em>.&lt;/p>
+&lt;p>Note that it is the &lt;code>kth&lt;/code> largest element in the sorted order, not the &lt;code>kth&lt;/code> distinct element.&lt;/p>
+&lt;p>example:&lt;/p>
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-0-1">&lt;a class="lnlinks" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-2">&lt;a class="lnlinks" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: nums = [3,2,1,5,6,4], k = 2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: 5&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-1-1">&lt;a class="lnlinks" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-2">&lt;a class="lnlinks" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: nums = [3,2,3,1,2,4,5,5,6], k = 4
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: 4&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+&lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
+&lt;/h2>&lt;p>這題要我們解決的問題是回傳在&lt;code>sorted array&lt;/code>(&lt;em>Input Array沒有排序&lt;/em>)中第&lt;code>kth&lt;/code>大的元素。最簡單的解法是直接排序,然後回傳&lt;code>kth&lt;/code>元素即可。但是, 這裡我們也可以使用&lt;code>Priority Queue(Heap)&lt;/code>來幫我們解決這個問題。因為&lt;code>Priority Queue&lt;/code>的特性,越大的值(&lt;code>MaxHeap&lt;/code>)/越小的值(&lt;code>MinHeap&lt;/code>)會越接近&lt;code>root&lt;/code>,也就是說最大值(&lt;code>MaxHeap&lt;/code>)/最小值(&lt;code>MinHeap&lt;/code>)會在&lt;code>root&lt;/code>。所以我們可以運用&lt;code>MinHeap&lt;/code>來幫助的我們解決這個問題,只要&lt;code>Priority Queue&lt;/code>裡面的元素多於&lt;code>K&lt;/code>個我們就會把&lt;code>top&lt;/code>的值移除，因更小的值會在前面,每次&lt;code>pop&lt;/code>的值都會是當前最小的值,直到最後，省下來的值的&lt;code>root&lt;/code>/&lt;code>top&lt;/code>就會是我們的第&lt;code>K&lt;/code>個最大的值，而&lt;code>priority queue&lt;/code>中最後一個值便會是&lt;code>Input&lt;/code>中最大的值。&lt;/p></description></item><item><title>[Leetcode] Furthest Building You Can Reach(Medium)</title><link>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcodes1642/</link><pubDate>Tue, 21 Jun 2022 22:55:43 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcodes1642/</guid><description>&lt;h2 id="leetcode-1642---furthest-building-you-can-reach">LeetCode 1642 - Furthest Building You Can Reach
 &lt;a class="header-anchor" href="#leetcode-1642---furthest-building-you-can-reach">&lt;/a>
 &lt;/h2>&lt;p>You are given an integer array &lt;code>heights&lt;/code> representing the heights of buildings, some &lt;code>bricks&lt;/code>, and some &lt;code>ladders&lt;/code>.&lt;/p>
 &lt;p>You start your journey from building &lt;code>0&lt;/code> and move to the next building by possibly using bricks or ladders.&lt;/p>
@@ -39,7 +70,17 @@
 &lt;li>If the current building&amp;rsquo;s height is &lt;strong>less than&lt;/strong> the next building&amp;rsquo;s height, you can either use one ladder or &lt;code>(h[i+1] - h[i])&lt;/code> bricks.
 &lt;em>Return the furthest building index (0-indexed) you can reach if you use the given ladders and bricks optimally.&lt;/em>&lt;/li>
 &lt;/ul>
-&lt;p>example:&lt;/p></description></item><item><title>[Leetcode] Top K Frequent Elements(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode347/</link><pubDate>Sat, 09 Apr 2022 06:22:34 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode347/</guid><description>&lt;h2 id="leetcode-347---top-k-frequent-elements">LeetCode 347 - Top K Frequent Elements
+&lt;p>example:&lt;/p></description></item><item><title>[Leetcode] Furthest Building You Can Reach(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcodes1642/</link><pubDate>Tue, 21 Jun 2022 22:55:43 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcodes1642/</guid><description>&lt;h2 id="leetcode-1642---furthest-building-you-can-reach">LeetCode 1642 - Furthest Building You Can Reach
+&lt;a class="header-anchor" href="#leetcode-1642---furthest-building-you-can-reach">&lt;/a>
+&lt;/h2>&lt;p>You are given an integer array &lt;code>heights&lt;/code> representing the heights of buildings, some &lt;code>bricks&lt;/code>, and some &lt;code>ladders&lt;/code>.&lt;/p>
+&lt;p>You start your journey from building &lt;code>0&lt;/code> and move to the next building by possibly using bricks or ladders.&lt;/p>
+&lt;p>While moving from building &lt;code>i&lt;/code> to building &lt;code>i+1&lt;/code> (&lt;strong>0-indexed&lt;/strong>),&lt;/p>
+&lt;ul>
+&lt;li>If the current building&amp;rsquo;s height is &lt;strong>greater than or equal&lt;/strong> to the next building&amp;rsquo;s height, you do not need a ladder or bricks.&lt;/li>
+&lt;li>If the current building&amp;rsquo;s height is &lt;strong>less than&lt;/strong> the next building&amp;rsquo;s height, you can either use one ladder or &lt;code>(h[i+1] - h[i])&lt;/code> bricks.
+&lt;em>Return the furthest building index (0-indexed) you can reach if you use the given ladders and bricks optimally.&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;p>example:&lt;/p></description></item><item><title>[Leetcode] Top K Frequent Elements(Medium)</title><link>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode347/</link><pubDate>Sat, 09 Apr 2022 06:22:34 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode347/</guid><description>&lt;h2 id="leetcode-347---top-k-frequent-elements">LeetCode 347 - Top K Frequent Elements
 &lt;a class="header-anchor" href="#leetcode-347---top-k-frequent-elements">&lt;/a>
 &lt;/h2>&lt;p>Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.&lt;/p>
 &lt;p>example&lt;/p>
@@ -69,7 +110,45 @@
 
 &lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
-&lt;/h2>&lt;p>這一題需要我們返回K個數量最多的element。所以，我們可以使用&lt;code>map&lt;/code>記錄我們array中element的個數，然後在把他們以&lt;code>&amp;lt;frequency,element&amp;gt;&lt;/code>存到&lt;code>priority queue/max queue&lt;/code>，最後只要返回&lt;code>priority queue&lt;/code>中的&lt;code>k&lt;/code>個element即可。&lt;/p></description></item><item><title>[Leetcode] Kth Largest Element in a Stream(Easy)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode703/</link><pubDate>Fri, 08 Apr 2022 20:21:39 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode703/</guid><description>&lt;h2 id="leetcode-703---kth-largest-element-in-a-stream">LeetCode 703 - Kth Largest Element in a Stream
+&lt;/h2>&lt;p>這一題需要我們返回K個數量最多的element。所以，我們可以使用&lt;code>map&lt;/code>記錄我們array中element的個數，然後在把他們以&lt;code>&amp;lt;frequency,element&amp;gt;&lt;/code>存到&lt;code>priority queue/max queue&lt;/code>，最後只要返回&lt;code>priority queue&lt;/code>中的&lt;code>k&lt;/code>個element即可。&lt;/p></description></item><item><title>[Leetcode] Top K Frequent Elements(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode347/</link><pubDate>Sat, 09 Apr 2022 06:22:34 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode347/</guid><description>&lt;h2 id="leetcode-347---top-k-frequent-elements">LeetCode 347 - Top K Frequent Elements
+&lt;a class="header-anchor" href="#leetcode-347---top-k-frequent-elements">&lt;/a>
+&lt;/h2>&lt;p>Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.&lt;/p>
+&lt;p>example&lt;/p>
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-0-1">&lt;a class="lnlinks" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-2">&lt;a class="lnlinks" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: nums = [1,1,1,2,2,3], k = 2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [1,2]&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-1-1">&lt;a class="lnlinks" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-2">&lt;a class="lnlinks" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: nums = [1], k = 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [1]&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+&lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
+&lt;/h2>&lt;p>這一題需要我們返回K個數量最多的element。所以，我們可以使用&lt;code>map&lt;/code>記錄我們array中element的個數，然後在把他們以&lt;code>&amp;lt;frequency,element&amp;gt;&lt;/code>存到&lt;code>priority queue/max queue&lt;/code>，最後只要返回&lt;code>priority queue&lt;/code>中的&lt;code>k&lt;/code>個element即可。&lt;/p></description></item><item><title>[Leetcode] Kth Largest Element in a Stream(Easy)</title><link>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode703/</link><pubDate>Fri, 08 Apr 2022 20:21:39 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode703/</guid><description>&lt;h2 id="leetcode-703---kth-largest-element-in-a-stream">LeetCode 703 - Kth Largest Element in a Stream
+&lt;a class="header-anchor" href="#leetcode-703---kth-largest-element-in-a-stream">&lt;/a>
+&lt;/h2>&lt;p>Design a class to find the kth largest element in a stream. Note that it is the kth largest element in the sorted order, not the kth distinct element.&lt;/p>
+&lt;p>Implement KthLargest class:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>KthLargest(int k, int[] nums)&lt;/code> Initializes the object with the integer &lt;code>k&lt;/code> and the stream of integers nums.&lt;/li>
+&lt;li>&lt;code>int add(int val)&lt;/code> Appends the integer val to the stream and returns the element representing the kth largest element in the stream.&lt;/li>
+&lt;/ul>
+&lt;p>example:&lt;/p></description></item><item><title>[Leetcode] Kth Largest Element in a Stream(Easy)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode703/</link><pubDate>Fri, 08 Apr 2022 20:21:39 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode703/</guid><description>&lt;h2 id="leetcode-703---kth-largest-element-in-a-stream">LeetCode 703 - Kth Largest Element in a Stream
 &lt;a class="header-anchor" href="#leetcode-703---kth-largest-element-in-a-stream">&lt;/a>
 &lt;/h2>&lt;p>Design a class to find the kth largest element in a stream. Note that it is the kth largest element in the sorted order, not the kth distinct element.&lt;/p>
 &lt;p>Implement KthLargest class:&lt;/p>

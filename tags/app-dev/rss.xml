@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>App-Dev on Jackson.tmm</title><link>https://ryantokmanmokmtm.github.io/tags/app-dev/</link><description>Recent content in App-Dev on Jackson.tmm</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Mon, 15 May 2023 13:49:17 +0800</lastBuildDate><atom:link href="https://ryantokmanmokmtm.github.io/tags/app-dev/rss.xml" rel="self" type="application/rss+xml"/><item><title>[DONE] Chat App - 2024/04/20</title><link>https://ryantokmanmokmtm.github.io/project/chat-app/</link><pubDate>Mon, 15 May 2023 13:49:17 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/project/chat-app/</guid><description>&lt;p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>App-Dev on Jackson.tmm</title><link>https://ryantokmanmokmtm.github.io/tags/app-dev/</link><description>Recent content in App-Dev on Jackson.tmm</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Mon, 15 May 2023 13:49:17 +0800</lastBuildDate><atom:link href="https://ryantokmanmokmtm.github.io/tags/app-dev/rss.xml" rel="self" type="application/rss+xml"/><item><title>[DONE] Chat App - 2024/04/20</title><link>https://ryantokmanmokmtm.github.io/archives/project-summary/chat-app/</link><pubDate>Mon, 15 May 2023 13:49:17 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/project-summary/chat-app/</guid><description>&lt;p>
 &lt;a href="https://github.com/RyanTokManMokMTM/swiftui-chat-app" title="Chat App - Frontend" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
  &lt;strong>Chat App - Frontend&lt;/strong>
  
@@ -15,7 +15,24 @@
 &lt;p>&lt;img src="https://ryantokmanmokmtm.github.io/imgs/img-lazy-loading.gif" data-src="https://ryantokmanmokmtm.github.io/imgs-custom/chat-app/2024-04-20-final.png" alt="new-ver" />&lt;/p>
 &lt;h3 id="簡介">簡介
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
-&lt;/h3>&lt;p>因為之前的&lt;code>OTT電影社群APP&lt;/code>中有包含通訊的功能，但是那個App所實現的功能就只是簡單的存文字聊天而已，而那個app主要的focus點並不在通訊上，所以只有簡簡單單的實作了通訊，沒有到完整的通訊，例如：發送文字，發送圖片，發送文件等等的通訊功能。所以這次的side project所實作的app則主要focus在&lt;strong>通訊&lt;/strong>這個點上。&lt;/p></description></item><item><title>[Side-Project] Movie App</title><link>https://ryantokmanmokmtm.github.io/project/movie-app/</link><pubDate>Sat, 10 Dec 2022 15:45:56 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/project/movie-app/</guid><description>&lt;p>
+&lt;/h3>&lt;p>因為之前的&lt;code>OTT電影社群APP&lt;/code>中有包含通訊的功能，但是那個App所實現的功能就只是簡單的存文字聊天而已，而那個app主要的focus點並不在通訊上，所以只有簡簡單單的實作了通訊，沒有到完整的通訊，例如：發送文字，發送圖片，發送文件等等的通訊功能。所以這次的side project所實作的app則主要focus在&lt;strong>通訊&lt;/strong>這個點上。&lt;/p></description></item><item><title>[DONE] Chat App - 2024/04/20</title><link>https://ryantokmanmokmtm.github.io/project/chat-app/</link><pubDate>Mon, 15 May 2023 13:49:17 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/project/chat-app/</guid><description>&lt;p>
+&lt;a href="https://github.com/RyanTokManMokMTM/swiftui-chat-app" title="Chat App - Frontend" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+ &lt;strong>Chat App - Frontend&lt;/strong>
+ 
+ &lt;i class="fa fa-external-link-alt">&lt;/i>
+ 
+&lt;/a>&lt;br>
+
+&lt;a href="https://github.com/RyanTokManMokMTM/chat-app-server" title="Chat App - Backend" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+ &lt;strong>Chat App - Backend&lt;/strong>
+ 
+ &lt;i class="fa fa-external-link-alt">&lt;/i>
+ 
+&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://ryantokmanmokmtm.github.io/imgs/img-lazy-loading.gif" data-src="https://ryantokmanmokmtm.github.io/imgs-custom/chat-app/2024-04-20-final.png" alt="new-ver" />&lt;/p>
+&lt;h3 id="簡介">簡介
+&lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
+&lt;/h3>&lt;p>因為之前的&lt;code>OTT電影社群APP&lt;/code>中有包含通訊的功能，但是那個App所實現的功能就只是簡單的存文字聊天而已，而那個app主要的focus點並不在通訊上，所以只有簡簡單單的實作了通訊，沒有到完整的通訊，例如：發送文字，發送圖片，發送文件等等的通訊功能。所以這次的side project所實作的app則主要focus在&lt;strong>通訊&lt;/strong>這個點上。&lt;/p></description></item><item><title>[Side-Project] Movie App</title><link>https://ryantokmanmokmtm.github.io/archives/project-summary/movie-app/</link><pubDate>Sat, 10 Dec 2022 15:45:56 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/project-summary/movie-app/</guid><description>&lt;p>
 &lt;a href="https://github.com/RyanTokManMokMTM/MovieAppSwiftUI.git" title="Movie App - Frontend" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
  &lt;strong>Movie App - Frontend&lt;/strong>
  
@@ -32,7 +49,53 @@
 &lt;p>&lt;img src="https://ryantokmanmokmtm.github.io/imgs/img-lazy-loading.gif" data-src="https://ryantokmanmokmtm.github.io/imgs-custom/ott_app/movie-app/AppImg.png" alt="client" />&lt;/p>
 &lt;h3 id="簡介">簡介
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
-&lt;/h3>&lt;p>開發這個App的目的主要是為了解決在搜尋電影OTT資源以及電影內容討論分散在多個不同平台等問題，如:搜尋到的資源是無效/不合法的，花費大量時間在搜尋上等等&amp;hellip;。因此這個App主要分成2個組成部分，分別是電影資訊搜尋獲取OTT資源，並整合不同OTT平台的電影資源，供用戶選擇合法資源，並過濾無效資源以及電影分享社群，供用戶在觀看完電影後，直接在App中發佈相關文章以分享給其他用戶，而無需在不同平台發佈。&lt;/p></description></item><item><title>[CGU]Graduation Project</title><link>https://ryantokmanmokmtm.github.io/project/final-project/</link><pubDate>Fri, 31 Dec 2021 20:22:11 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/project/final-project/</guid><description>&lt;p>&lt;del>
+&lt;/h3>&lt;p>開發這個App的目的主要是為了解決在搜尋電影OTT資源以及電影內容討論分散在多個不同平台等問題，如:搜尋到的資源是無效/不合法的，花費大量時間在搜尋上等等&amp;hellip;。因此這個App主要分成2個組成部分，分別是電影資訊搜尋獲取OTT資源，並整合不同OTT平台的電影資源，供用戶選擇合法資源，並過濾無效資源以及電影分享社群，供用戶在觀看完電影後，直接在App中發佈相關文章以分享給其他用戶，而無需在不同平台發佈。&lt;/p></description></item><item><title>[Side-Project] Movie App</title><link>https://ryantokmanmokmtm.github.io/project/movie-app/</link><pubDate>Sat, 10 Dec 2022 15:45:56 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/project/movie-app/</guid><description>&lt;p>
+&lt;a href="https://github.com/RyanTokManMokMTM/MovieAppSwiftUI.git" title="Movie App - Frontend" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+ &lt;strong>Movie App - Frontend&lt;/strong>
+ 
+ &lt;i class="fa fa-external-link-alt">&lt;/i>
+ 
+&lt;/a>&lt;br>
+
+&lt;a href="https://github.com/RyanTokManMokMTM/movie-server" title="Movie App - Backend" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+ &lt;strong>Movie App - Backend&lt;/strong>
+ 
+ &lt;i class="fa fa-external-link-alt">&lt;/i>
+ 
+&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://ryantokmanmokmtm.github.io/imgs/img-lazy-loading.gif" data-src="https://ryantokmanmokmtm.github.io/imgs-custom/ott_app/movie-app/AppImg.png" alt="client" />&lt;/p>
+&lt;h3 id="簡介">簡介
+&lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
+&lt;/h3>&lt;p>開發這個App的目的主要是為了解決在搜尋電影OTT資源以及電影內容討論分散在多個不同平台等問題，如:搜尋到的資源是無效/不合法的，花費大量時間在搜尋上等等&amp;hellip;。因此這個App主要分成2個組成部分，分別是電影資訊搜尋獲取OTT資源，並整合不同OTT平台的電影資源，供用戶選擇合法資源，並過濾無效資源以及電影分享社群，供用戶在觀看完電影後，直接在App中發佈相關文章以分享給其他用戶，而無需在不同平台發佈。&lt;/p></description></item><item><title>[CGU]Graduation Project</title><link>https://ryantokmanmokmtm.github.io/archives/project-summary/final-project/</link><pubDate>Fri, 31 Dec 2021 20:22:11 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/project-summary/final-project/</guid><description>&lt;p>&lt;del>
+&lt;a href="https://github.com/RyanTokManMokMTM/MovieAppSwiftUI.git" title="OTT Movies recommender system-IOS Client" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+ &lt;strong>OTT Movies recommender system-IOS Client&lt;/strong>
+ 
+ &lt;i class="fa fa-external-link-alt">&lt;/i>
+ 
+&lt;/a>&lt;/del>
+Project have been changed/updated&lt;/p>
+&lt;p>&lt;img src="https://ryantokmanmokmtm.github.io/imgs/img-lazy-loading.gif" data-src="https://ryantokmanmokmtm.github.io/imgs-custom/iosClient.png" alt="client" />&lt;/p>
+&lt;h3 id="frontend">Frontend
+&lt;a class="header-anchor" href="#frontend">&lt;/a>
+&lt;/h3>&lt;ul>
+&lt;li>SwiftUI apple framework&lt;/li>
+&lt;li>UIKit apple framework&lt;/li>
+&lt;/ul>
+&lt;h4 id="backend">Backend
+&lt;a class="header-anchor" href="#backend">&lt;/a>
+&lt;/h4>&lt;ul>
+&lt;li>Vapor Swift Backend framework&lt;/li>
+&lt;/ul>
+&lt;h4 id="database">Database:
+&lt;a class="header-anchor" href="#database">&lt;/a>
+&lt;/h4>&lt;ul>
+&lt;li>PostgresSQL Database&lt;/li>
+&lt;/ul>
+&lt;h3 id="demo-video">Demo Video
+&lt;a class="header-anchor" href="#demo-video">&lt;/a>
+&lt;/h3>&lt;p>&lt;video src="https://ryantokmanmokmtm.github.io/videos/final.MP4" controls="controls" width="500" height="300">&lt;/video>&lt;/p>
+&lt;!-- ### Updated Video
+&lt;video src="https://ryantokmanmokmtm.github.io/videos/ott-app.mov" controls="controls" width="500" height="300">&lt;/video> --></description></item><item><title>[CGU]Graduation Project</title><link>https://ryantokmanmokmtm.github.io/project/final-project/</link><pubDate>Fri, 31 Dec 2021 20:22:11 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/project/final-project/</guid><description>&lt;p>&lt;del>
 &lt;a href="https://github.com/RyanTokManMokMTM/MovieAppSwiftUI.git" title="OTT Movies recommender system-IOS Client" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
  &lt;strong>OTT Movies recommender system-IOS Client&lt;/strong>
  

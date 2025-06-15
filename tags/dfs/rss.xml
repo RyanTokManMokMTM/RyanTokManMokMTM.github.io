@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dfs on Jackson.tmm</title><link>https://ryantokmanmokmtm.github.io/tags/dfs/</link><description>Recent content in Dfs on Jackson.tmm</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Wed, 14 Sep 2022 15:27:08 +0800</lastBuildDate><atom:link href="https://ryantokmanmokmtm.github.io/tags/dfs/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Pseudo-Palindromic Paths in a Binary Tree(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode1457/</link><pubDate>Wed, 14 Sep 2022 15:27:08 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode1457/</guid><description>&lt;h2 id="leetcode-1457---pseudo-palindromic-paths-in-a-binary-tree">LeetCode 1457 - Pseudo-Palindromic Paths in a Binary Tree
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dfs on Jackson.tmm</title><link>https://ryantokmanmokmtm.github.io/tags/dfs/</link><description>Recent content in Dfs on Jackson.tmm</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Wed, 14 Sep 2022 15:27:08 +0800</lastBuildDate><atom:link href="https://ryantokmanmokmtm.github.io/tags/dfs/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Pseudo-Palindromic Paths in a Binary Tree(Medium)</title><link>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode1457/</link><pubDate>Wed, 14 Sep 2022 15:27:08 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode1457/</guid><description>&lt;h2 id="leetcode-1457---pseudo-palindromic-paths-in-a-binary-tree">LeetCode 1457 - Pseudo-Palindromic Paths in a Binary Tree
 &lt;a class="header-anchor" href="#leetcode-1457---pseudo-palindromic-paths-in-a-binary-tree">&lt;/a>
 &lt;/h2>&lt;p>Given a binary tree where node values are digits from 1 to 9. A path in the binary tree is said to be &lt;strong>pseudo-palindromic&lt;/strong> if at least one permutation of the node values in the path is a palindrome.&lt;/p>
 &lt;p>&lt;em>Return the number of &lt;strong>pseudo-palindromic&lt;/strong> paths going from the root node to leaf nodes.&lt;/em>
@@ -46,7 +46,55 @@ example&lt;/p>
 &lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
 &lt;/h2>&lt;p>這一題簡單的來說就是讓我們從&lt;strong>Binary Tree&lt;/strong>中找到有幾條&lt;code>path&lt;/code>是一個&lt;em>Palindromic(Pseudo-Palindromic)偽迴文串&lt;/em>。
-也就是說從&lt;code>root到leaft&lt;/code>的&lt;code>path&lt;/code>是一個&lt;strong>Palindromic&lt;/strong>。 (我們只需要知道path是否能組成&lt;em>Palindromic&lt;/em>即可)&lt;/p></description></item><item><title>[Leetcode] Binary Tree Inorder Traversal(Easy)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode94/</link><pubDate>Thu, 08 Sep 2022 20:22:06 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode94/</guid><description>&lt;h2 id="leetcode-94---binary-tree-inorder-traversal">LeetCode 94 - Binary Tree Inorder Traversal
+也就是說從&lt;code>root到leaft&lt;/code>的&lt;code>path&lt;/code>是一個&lt;strong>Palindromic&lt;/strong>。 (我們只需要知道path是否能組成&lt;em>Palindromic&lt;/em>即可)&lt;/p></description></item><item><title>[Leetcode] Pseudo-Palindromic Paths in a Binary Tree(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode1457/</link><pubDate>Wed, 14 Sep 2022 15:27:08 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode1457/</guid><description>&lt;h2 id="leetcode-1457---pseudo-palindromic-paths-in-a-binary-tree">LeetCode 1457 - Pseudo-Palindromic Paths in a Binary Tree
+&lt;a class="header-anchor" href="#leetcode-1457---pseudo-palindromic-paths-in-a-binary-tree">&lt;/a>
+&lt;/h2>&lt;p>Given a binary tree where node values are digits from 1 to 9. A path in the binary tree is said to be &lt;strong>pseudo-palindromic&lt;/strong> if at least one permutation of the node values in the path is a palindrome.&lt;/p>
+&lt;p>&lt;em>Return the number of &lt;strong>pseudo-palindromic&lt;/strong> paths going from the root node to leaf nodes.&lt;/em>
+example&lt;/p>
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-0-1">&lt;a class="lnlinks" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-2">&lt;a class="lnlinks" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-3">&lt;a class="lnlinks" href="#hl-0-3">3&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: root = [2,3,1,3,1,null,1]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: 2 
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: The figure above represents the given binary tree. There are three paths going from the root node to leaf nodes: the red path [2,3,3], the green path [2,1,1], and the path [2,3,1]. Among these paths only red path and green path are pseudo-palindromic paths since the red path [2,3,3] can be rearranged in [3,2,3] (palindrome) and the green path [2,1,1] can be rearranged in [1,2,1] (palindrome).&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-1-1">&lt;a class="lnlinks" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-2">&lt;a class="lnlinks" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-3">&lt;a class="lnlinks" href="#hl-1-3">3&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: root = [2,1,1,1,3,null,null,null,null,null,1]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: 1 
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: The figure above represents the given binary tree. There are three paths going from the root node to leaf nodes: the green path [2,1,1], the path [2,1,3,1], and the path [2,1]. Among these paths only the green path is pseudo-palindromic since [2,1,1] can be rearranged in [1,2,1] (palindrome).&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-2-1">&lt;a class="lnlinks" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-2-2">&lt;a class="lnlinks" href="#hl-2-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: root = [9]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: 1&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+&lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
+&lt;/h2>&lt;p>這一題簡單的來說就是讓我們從&lt;strong>Binary Tree&lt;/strong>中找到有幾條&lt;code>path&lt;/code>是一個&lt;em>Palindromic(Pseudo-Palindromic)偽迴文串&lt;/em>。
+也就是說從&lt;code>root到leaft&lt;/code>的&lt;code>path&lt;/code>是一個&lt;strong>Palindromic&lt;/strong>。 (我們只需要知道path是否能組成&lt;em>Palindromic&lt;/em>即可)&lt;/p></description></item><item><title>[Leetcode] Binary Tree Inorder Traversal(Easy)</title><link>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode94/</link><pubDate>Thu, 08 Sep 2022 20:22:06 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode94/</guid><description>&lt;h2 id="leetcode-94---binary-tree-inorder-traversal">LeetCode 94 - Binary Tree Inorder Traversal
 &lt;a class="header-anchor" href="#leetcode-94---binary-tree-inorder-traversal">&lt;/a>
 &lt;/h2>&lt;p>Given the &lt;code>root&lt;/code> of a binary tree, return &lt;em>the inorder traversal of its nodes&amp;rsquo; values.&lt;/em>&lt;/p>
 &lt;p>example&lt;/p>
@@ -153,7 +201,154 @@ example&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>[Leetcode] Binary Tree Pruning(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode814/</link><pubDate>Tue, 06 Sep 2022 21:30:56 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode814/</guid><description>&lt;h2 id="leetcode-814---binary-tree-pruning">LeetCode 814 - Binary Tree Pruning
+&lt;/div></description></item><item><title>[Leetcode] Binary Tree Inorder Traversal(Easy)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode94/</link><pubDate>Thu, 08 Sep 2022 20:22:06 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode94/</guid><description>&lt;h2 id="leetcode-94---binary-tree-inorder-traversal">LeetCode 94 - Binary Tree Inorder Traversal
+&lt;a class="header-anchor" href="#leetcode-94---binary-tree-inorder-traversal">&lt;/a>
+&lt;/h2>&lt;p>Given the &lt;code>root&lt;/code> of a binary tree, return &lt;em>the inorder traversal of its nodes&amp;rsquo; values.&lt;/em>&lt;/p>
+&lt;p>example&lt;/p>
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-0-1">&lt;a class="lnlinks" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-2">&lt;a class="lnlinks" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: root = [1,null,2,3]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [1,3,2]&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-1-1">&lt;a class="lnlinks" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-2">&lt;a class="lnlinks" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: root = []
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: []&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-2-1">&lt;a class="lnlinks" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-2-2">&lt;a class="lnlinks" href="#hl-2-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: root = [1]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [1]&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+&lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
+&lt;/h2>&lt;p>這題很簡單,只要使用中序遍歷即可。&lt;/p>
+&lt;h4 id="solution">Solution:
+&lt;a class="header-anchor" href="#solution">&lt;/a>
+&lt;/h4>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-3-1">&lt;a class="lnlinks" href="#hl-3-1"> 1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-3-2">&lt;a class="lnlinks" href="#hl-3-2"> 2&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-3-3">&lt;a class="lnlinks" href="#hl-3-3"> 3&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-3-4">&lt;a class="lnlinks" href="#hl-3-4"> 4&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-3-5">&lt;a class="lnlinks" href="#hl-3-5"> 5&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-3-6">&lt;a class="lnlinks" href="#hl-3-6"> 6&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-3-7">&lt;a class="lnlinks" href="#hl-3-7"> 7&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-3-8">&lt;a class="lnlinks" href="#hl-3-8"> 8&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-3-9">&lt;a class="lnlinks" href="#hl-3-9"> 9&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-3-10">&lt;a class="lnlinks" href="#hl-3-10">10&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-3-11">&lt;a class="lnlinks" href="#hl-3-11">11&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-3-12">&lt;a class="lnlinks" href="#hl-3-12">12&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-3-13">&lt;a class="lnlinks" href="#hl-3-13">13&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-3-14">&lt;a class="lnlinks" href="#hl-3-14">14&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-3-15">&lt;a class="lnlinks" href="#hl-3-15">15&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-3-16">&lt;a class="lnlinks" href="#hl-3-16">16&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-3-17">&lt;a class="lnlinks" href="#hl-3-17">17&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-3-18">&lt;a class="lnlinks" href="#hl-3-18">18&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-3-19">&lt;a class="lnlinks" href="#hl-3-19">19&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-3-20">&lt;a class="lnlinks" href="#hl-3-20">20&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-3-21">&lt;a class="lnlinks" href="#hl-3-21">21&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-3-22">&lt;a class="lnlinks" href="#hl-3-22">22&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-3-23">&lt;a class="lnlinks" href="#hl-3-23">23&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-3-24">&lt;a class="lnlinks" href="#hl-3-24">24&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-3-25">&lt;a class="lnlinks" href="#hl-3-25">25&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-3-26">&lt;a class="lnlinks" href="#hl-3-26">26&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-3-27">&lt;a class="lnlinks" href="#hl-3-27">27&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-3-28">&lt;a class="lnlinks" href="#hl-3-28">28&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c++" data-lang="c++">&lt;span class="line">&lt;span class="cl">&lt;span class="cm">/**
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * Definition for a binary tree node.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * struct TreeNode {
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * int val;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * TreeNode *left;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * TreeNode *right;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * TreeNode() : val(0), left(nullptr), right(nullptr) {}
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> * };
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">class&lt;/span> &lt;span class="nc">Solution&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">public&lt;/span>&lt;span class="o">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">vector&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">inorderTraversal&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">TreeNode&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="n">root&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">vector&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">res&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">inorder&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">root&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">res&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">res&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">void&lt;/span> &lt;span class="nf">inorder&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">TreeNode&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="n">root&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">vector&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="o">&amp;gt;&amp;amp;&lt;/span> &lt;span class="n">res&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="n">root&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="k">return&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">inorder&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">root&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="n">left&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">res&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">res&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">emplace_back&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">root&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="n">val&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">inorder&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">root&lt;/span>&lt;span class="o">-&amp;gt;&lt;/span>&lt;span class="n">right&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">res&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">};&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>[Leetcode] Binary Tree Pruning(Medium)</title><link>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode814/</link><pubDate>Tue, 06 Sep 2022 21:30:56 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode814/</guid><description>&lt;h2 id="leetcode-814---binary-tree-pruning">LeetCode 814 - Binary Tree Pruning
+&lt;a class="header-anchor" href="#leetcode-814---binary-tree-pruning">&lt;/a>
+&lt;/h2>&lt;p>Given the &lt;code>root&lt;/code> of a binary tree, return the same tree where every subtree (of the given tree) not containing a &lt;code>1&lt;/code> has been removed.&lt;/p>
+&lt;p>A subtree of a node &lt;code>node&lt;/code> is node plus every node that is a descendant of &lt;code>node&lt;/code>.&lt;/p>
+&lt;p>example&lt;/p>
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-0-1">&lt;a class="lnlinks" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-2">&lt;a class="lnlinks" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-3">&lt;a class="lnlinks" href="#hl-0-3">3&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-4">&lt;a class="lnlinks" href="#hl-0-4">4&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-5">&lt;a class="lnlinks" href="#hl-0-5">5&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: root = [1,null,0,0,1]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [1,null,0,null,1]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: 
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Only the red nodes satisfy the property &amp;#34;every subtree not containing a 1&amp;#34;.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">The diagram on the right represents the answer.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-1-1">&lt;a class="lnlinks" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-2">&lt;a class="lnlinks" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: root = [1,0,1,0,0,0,1]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [1,null,1,null,1]&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+&lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
+&lt;/h2>&lt;p>這題是要讓我們移除所有不包含&lt;code>1&lt;/code>的&lt;code>sub-tree&lt;/code>。所以，我們只要透過&lt;code>DFS&lt;/code>判斷一下&lt;code>node&lt;/code>的&lt;code>left-sub tree&lt;/code> 以及 &lt;code>right-sub tree&lt;/code> 是否都不包含&lt;code>1&lt;/code>:
+1. 如果左右子樹都不包含&lt;code>1&lt;/code>且當前&lt;code>node&lt;/code>為0, 直接返回&lt;code>nullptr&lt;/code>
+2. 若當前節點為&lt;code>1&lt;/code>就返回自身
+2. 左子樹不包含&lt;code>1&lt;/code>, 當前&lt;code>node&lt;/code>的左子樹設成&lt;code>nullptr&lt;/code>;同理右子樹不包含&lt;code>1&lt;/code>,當前&lt;code>node&lt;/code> 的右子數設為&lt;code>nullptr&lt;/code>&lt;/p></description></item><item><title>[Leetcode] Binary Tree Pruning(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode814/</link><pubDate>Tue, 06 Sep 2022 21:30:56 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode814/</guid><description>&lt;h2 id="leetcode-814---binary-tree-pruning">LeetCode 814 - Binary Tree Pruning
 &lt;a class="header-anchor" href="#leetcode-814---binary-tree-pruning">&lt;/a>
 &lt;/h2>&lt;p>Given the &lt;code>root&lt;/code> of a binary tree, return the same tree where every subtree (of the given tree) not containing a &lt;code>1&lt;/code> has been removed.&lt;/p>
 &lt;p>A subtree of a node &lt;code>node&lt;/code> is node plus every node that is a descendant of &lt;code>node&lt;/code>.&lt;/p>

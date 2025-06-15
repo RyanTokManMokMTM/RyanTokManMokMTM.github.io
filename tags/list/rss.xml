@@ -1,9 +1,45 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>List on Jackson.tmm</title><link>https://ryantokmanmokmtm.github.io/tags/list/</link><description>Recent content in List on Jackson.tmm</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Thu, 18 May 2023 15:44:17 +0800</lastBuildDate><atom:link href="https://ryantokmanmokmtm.github.io/tags/list/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Maximum Twin Sum of a Linked List(M)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode2130/</link><pubDate>Thu, 18 May 2023 15:44:17 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode2130/</guid><description>&lt;h2 id="leetcode-2130---maximum-twin-sum-of-a-linked-list">LeetCode 2130 - Maximum Twin Sum of a Linked List
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>List on Jackson.tmm</title><link>https://ryantokmanmokmtm.github.io/tags/list/</link><description>Recent content in List on Jackson.tmm</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Thu, 18 May 2023 15:44:17 +0800</lastBuildDate><atom:link href="https://ryantokmanmokmtm.github.io/tags/list/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Maximum Twin Sum of a Linked List(M)</title><link>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode2130/</link><pubDate>Thu, 18 May 2023 15:44:17 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode2130/</guid><description>&lt;h2 id="leetcode-2130---maximum-twin-sum-of-a-linked-list">LeetCode 2130 - Maximum Twin Sum of a Linked List
 &lt;a class="header-anchor" href="#leetcode-2130---maximum-twin-sum-of-a-linked-list">&lt;/a>
 &lt;/h2>&lt;p>In a linked list of size n, where n is even, the ith node (0-indexed) of the linked list is known as the twin of the (n-1-i)th node, if 0 &amp;lt;= i &amp;lt;= (n / 2) - 1.&lt;/p>
 &lt;p>For example, if n = 4, then node 0 is the twin of node 3, and node 1 is the twin of node 2. These are the only nodes with twins for n = 4.
 The twin sum is defined as the sum of a node and its twin.
-Given the head of a linked list with even length, return the maximum twin sum of the linked list.&lt;/p></description></item><item><title>[Leetcode] Reverse Linked List II(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode92/</link><pubDate>Thu, 21 Jul 2022 11:09:21 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode92/</guid><description>&lt;h2 id="leetcode-92----reverse-linked-list-ii">LeetCode 92 - Reverse Linked List II
+Given the head of a linked list with even length, return the maximum twin sum of the linked list.&lt;/p></description></item><item><title>[Leetcode] Maximum Twin Sum of a Linked List(M)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode2130/</link><pubDate>Thu, 18 May 2023 15:44:17 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode2130/</guid><description>&lt;h2 id="leetcode-2130---maximum-twin-sum-of-a-linked-list">LeetCode 2130 - Maximum Twin Sum of a Linked List
+&lt;a class="header-anchor" href="#leetcode-2130---maximum-twin-sum-of-a-linked-list">&lt;/a>
+&lt;/h2>&lt;p>In a linked list of size n, where n is even, the ith node (0-indexed) of the linked list is known as the twin of the (n-1-i)th node, if 0 &amp;lt;= i &amp;lt;= (n / 2) - 1.&lt;/p>
+&lt;p>For example, if n = 4, then node 0 is the twin of node 3, and node 1 is the twin of node 2. These are the only nodes with twins for n = 4.
+The twin sum is defined as the sum of a node and its twin.
+Given the head of a linked list with even length, return the maximum twin sum of the linked list.&lt;/p></description></item><item><title>[Leetcode] Reverse Linked List II(Medium)</title><link>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode92/</link><pubDate>Thu, 21 Jul 2022 11:09:21 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode92/</guid><description>&lt;h2 id="leetcode-92----reverse-linked-list-ii">LeetCode 92 - Reverse Linked List II
+&lt;a class="header-anchor" href="#leetcode-92----reverse-linked-list-ii">&lt;/a>
+&lt;/h2>&lt;p>Given the &lt;code>head&lt;/code> of a singly linked list and two integers &lt;code>left&lt;/code> and &lt;code>right&lt;/code> where &lt;code>left &amp;lt;= right&lt;/code>, reverse the nodes of the list from position &lt;code>left&lt;/code> to position &lt;code>right&lt;/code>, and return the &lt;em>reversed list&lt;/em>.&lt;/p>
+&lt;p>example&lt;/p>
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-0-1">&lt;a class="lnlinks" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-2">&lt;a class="lnlinks" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: head = [1,2,3,4,5], left = 2, right = 4
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [1,4,3,2,5]&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-1-1">&lt;a class="lnlinks" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-2">&lt;a class="lnlinks" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: head = [5], left = 1, right = 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [5]&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+&lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
+&lt;/h2>&lt;p>這一題的問題非常的簡單,就是要讓我們在給定的一個&lt;code>list&lt;/code>中翻轉(Reverse)&lt;code>[left,right]&lt;/code>之間的Node,並返回結果。這題跟&lt;strong>Reverse Linked List I&lt;/strong>解法類似,不同的是多了個翻轉範圍。&lt;br>
+首先，我們要做的是在的翻轉的開始的位置。然後再透過recursive來翻轉List,最後返回的&lt;code>node/head&lt;/code>再由&lt;code>left&lt;/code>位置的Node的前一個&lt;code>Node&lt;/code>接起來(如有)就可以了~&lt;/p></description></item><item><title>[Leetcode] Reverse Linked List II(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode92/</link><pubDate>Thu, 21 Jul 2022 11:09:21 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode92/</guid><description>&lt;h2 id="leetcode-92----reverse-linked-list-ii">LeetCode 92 - Reverse Linked List II
 &lt;a class="header-anchor" href="#leetcode-92----reverse-linked-list-ii">&lt;/a>
 &lt;/h2>&lt;p>Given the &lt;code>head&lt;/code> of a singly linked list and two integers &lt;code>left&lt;/code> and &lt;code>right&lt;/code> where &lt;code>left &amp;lt;= right&lt;/code>, reverse the nodes of the list from position &lt;code>left&lt;/code> to position &lt;code>right&lt;/code>, and return the &lt;em>reversed list&lt;/em>.&lt;/p>
 &lt;p>example&lt;/p>

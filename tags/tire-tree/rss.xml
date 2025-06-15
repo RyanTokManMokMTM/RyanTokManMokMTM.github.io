@@ -1,4 +1,38 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tire Tree on Jackson.tmm</title><link>https://ryantokmanmokmtm.github.io/tags/tire-tree/</link><description>Recent content in Tire Tree on Jackson.tmm</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Sat, 17 Sep 2022 20:41:48 +0800</lastBuildDate><atom:link href="https://ryantokmanmokmtm.github.io/tags/tire-tree/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Palindrome Pairs(Hard)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode336/</link><pubDate>Sat, 17 Sep 2022 20:41:48 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode336/</guid><description>&lt;h2 id="leetcode-336---palindrome-pairs">LeetCode 336 - Palindrome Pairs
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tire Tree on Jackson.tmm</title><link>https://ryantokmanmokmtm.github.io/tags/tire-tree/</link><description>Recent content in Tire Tree on Jackson.tmm</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Sat, 17 Sep 2022 20:41:48 +0800</lastBuildDate><atom:link href="https://ryantokmanmokmtm.github.io/tags/tire-tree/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Palindrome Pairs(Hard)</title><link>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode336/</link><pubDate>Sat, 17 Sep 2022 20:41:48 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode336/</guid><description>&lt;h2 id="leetcode-336---palindrome-pairs">LeetCode 336 - Palindrome Pairs
+&lt;a class="header-anchor" href="#leetcode-336---palindrome-pairs">&lt;/a>
+&lt;/h2>&lt;p>Given a list of &lt;strong>unique&lt;/strong> words, return all the pairs of the &lt;em>&lt;strong>distinct&lt;/strong>&lt;/em> indices &lt;code>(i, j)&lt;/code> in the given list, so that the concatenation of the two words &lt;code>words[i] + words[j]&lt;/code> is a palindrome.&lt;/p>
+&lt;p>example&lt;/p>
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-0-1">&lt;a class="lnlinks" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-2">&lt;a class="lnlinks" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-3">&lt;a class="lnlinks" href="#hl-0-3">3&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: words = [&amp;#34;abcd&amp;#34;,&amp;#34;dcba&amp;#34;,&amp;#34;lls&amp;#34;,&amp;#34;s&amp;#34;,&amp;#34;sssll&amp;#34;]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [[0,1],[1,0],[3,2],[2,4]]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: The palindromes are [&amp;#34;dcbaabcd&amp;#34;,&amp;#34;abcddcba&amp;#34;,&amp;#34;slls&amp;#34;,&amp;#34;llssssll&amp;#34;]&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-1-1">&lt;a class="lnlinks" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-2">&lt;a class="lnlinks" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-3">&lt;a class="lnlinks" href="#hl-1-3">3&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: words = [&amp;#34;bat&amp;#34;,&amp;#34;tab&amp;#34;,&amp;#34;cat&amp;#34;]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [[0,1],[1,0]]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: The palindromes are [&amp;#34;battab&amp;#34;,&amp;#34;tabbat&amp;#34;]&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+&lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
+&lt;/h2>&lt;p>在解這題之前我們先要知道有哪些情況是成立Palindrome。&lt;/p></description></item><item><title>[Leetcode] Palindrome Pairs(Hard)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode336/</link><pubDate>Sat, 17 Sep 2022 20:41:48 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode336/</guid><description>&lt;h2 id="leetcode-336---palindrome-pairs">LeetCode 336 - Palindrome Pairs
 &lt;a class="header-anchor" href="#leetcode-336---palindrome-pairs">&lt;/a>
 &lt;/h2>&lt;p>Given a list of &lt;strong>unique&lt;/strong> words, return all the pairs of the &lt;em>&lt;strong>distinct&lt;/strong>&lt;/em> indices &lt;code>(i, j)&lt;/code> in the given list, so that the concatenation of the two words &lt;code>words[i] + words[j]&lt;/code> is a palindrome.&lt;/p>
 &lt;p>example&lt;/p>

@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Map on Jackson.tmm</title><link>https://ryantokmanmokmtm.github.io/tags/map/</link><description>Recent content in Map on Jackson.tmm</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Mon, 19 Sep 2022 14:41:56 +0800</lastBuildDate><atom:link href="https://ryantokmanmokmtm.github.io/tags/map/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Find Duplicate File in System(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode609/</link><pubDate>Mon, 19 Sep 2022 14:41:56 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode609/</guid><description>&lt;h2 id="leetcode-42---trapping-rain-water">LeetCode 42 - Trapping Rain Water
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Map on Jackson.tmm</title><link>https://ryantokmanmokmtm.github.io/tags/map/</link><description>Recent content in Map on Jackson.tmm</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Mon, 19 Sep 2022 14:41:56 +0800</lastBuildDate><atom:link href="https://ryantokmanmokmtm.github.io/tags/map/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Find Duplicate File in System(Medium)</title><link>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode609/</link><pubDate>Mon, 19 Sep 2022 14:41:56 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode609/</guid><description>&lt;h2 id="leetcode-42---trapping-rain-water">LeetCode 42 - Trapping Rain Water
 &lt;a class="header-anchor" href="#leetcode-42---trapping-rain-water">&lt;/a>
 &lt;/h2>&lt;p>Given a list &lt;code>paths&lt;/code> of directory info, including the directory path, and all the files with contents in this directory, return &lt;em>all the duplicate files in the file system in terms of their paths&lt;/em>. You may return the answer in &lt;strong>any order&lt;/strong>.&lt;/p>
 &lt;p>A group of duplicate files consists of at least two files that have the same content.&lt;/p>
-&lt;p>A single directory info string in the input list has the following format:&lt;/p></description></item><item><title>[Leetcode] Max Number of K-Sum Pairs(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode1679/</link><pubDate>Wed, 04 May 2022 20:11:43 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode1679/</guid><description>&lt;h2 id="leetcode-1679---max-number-of-k-sum-pairs">LeetCode 1679 - Max Number of K-Sum Pairs
+&lt;p>A single directory info string in the input list has the following format:&lt;/p></description></item><item><title>[Leetcode] Find Duplicate File in System(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode609/</link><pubDate>Mon, 19 Sep 2022 14:41:56 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode609/</guid><description>&lt;h2 id="leetcode-42---trapping-rain-water">LeetCode 42 - Trapping Rain Water
+&lt;a class="header-anchor" href="#leetcode-42---trapping-rain-water">&lt;/a>
+&lt;/h2>&lt;p>Given a list &lt;code>paths&lt;/code> of directory info, including the directory path, and all the files with contents in this directory, return &lt;em>all the duplicate files in the file system in terms of their paths&lt;/em>. You may return the answer in &lt;strong>any order&lt;/strong>.&lt;/p>
+&lt;p>A group of duplicate files consists of at least two files that have the same content.&lt;/p>
+&lt;p>A single directory info string in the input list has the following format:&lt;/p></description></item><item><title>[Leetcode] Max Number of K-Sum Pairs(Medium)</title><link>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode1679/</link><pubDate>Wed, 04 May 2022 20:11:43 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode1679/</guid><description>&lt;h2 id="leetcode-1679---max-number-of-k-sum-pairs">LeetCode 1679 - Max Number of K-Sum Pairs
 &lt;a class="header-anchor" href="#leetcode-1679---max-number-of-k-sum-pairs">&lt;/a>
 &lt;/h2>&lt;p>You are given an integer array &lt;code>nums&lt;/code> and an integer &lt;code>k&lt;/code>.&lt;/p>
 &lt;p>In one operation, you can pick two numbers from the array whose sum equals &lt;code>k&lt;/code> and remove them from the array.&lt;/p>
@@ -49,7 +53,84 @@
 &lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
 &lt;/h2>&lt;p>這題就是要移除&lt;code>Array&lt;/code>中2個elements加起來等於&lt;code>k&lt;/code>的操作有幾次。&lt;br>
-第一個解法，我們可以使用&lt;code>sorting&lt;/code>以及&lt;code>two-pointer approach&lt;/code>來解決。先將&lt;code>array&lt;/code>排序，然後設置&lt;code>i&lt;/code>為0,&lt;code>j&lt;/code>為&lt;code>n-1&lt;/code>,直接使用iteration找出&lt;code>nums[i]+nums[j] = k&lt;/code>的數，然後&lt;code>answer+1&lt;/code>即可。&lt;/p></description></item><item><title>[Leetcode] Top K Frequent Elements(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode347/</link><pubDate>Sat, 09 Apr 2022 06:22:34 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode347/</guid><description>&lt;h2 id="leetcode-347---top-k-frequent-elements">LeetCode 347 - Top K Frequent Elements
+第一個解法，我們可以使用&lt;code>sorting&lt;/code>以及&lt;code>two-pointer approach&lt;/code>來解決。先將&lt;code>array&lt;/code>排序，然後設置&lt;code>i&lt;/code>為0,&lt;code>j&lt;/code>為&lt;code>n-1&lt;/code>,直接使用iteration找出&lt;code>nums[i]+nums[j] = k&lt;/code>的數，然後&lt;code>answer+1&lt;/code>即可。&lt;/p></description></item><item><title>[Leetcode] Max Number of K-Sum Pairs(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode1679/</link><pubDate>Wed, 04 May 2022 20:11:43 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode1679/</guid><description>&lt;h2 id="leetcode-1679---max-number-of-k-sum-pairs">LeetCode 1679 - Max Number of K-Sum Pairs
+&lt;a class="header-anchor" href="#leetcode-1679---max-number-of-k-sum-pairs">&lt;/a>
+&lt;/h2>&lt;p>You are given an integer array &lt;code>nums&lt;/code> and an integer &lt;code>k&lt;/code>.&lt;/p>
+&lt;p>In one operation, you can pick two numbers from the array whose sum equals &lt;code>k&lt;/code> and remove them from the array.&lt;/p>
+&lt;p>Return &lt;code>the maximum number of operations you can perform on the array&lt;/code>.&lt;/p>
+&lt;p>example&lt;/p>
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-0-1">&lt;a class="lnlinks" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-2">&lt;a class="lnlinks" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-3">&lt;a class="lnlinks" href="#hl-0-3">3&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-4">&lt;a class="lnlinks" href="#hl-0-4">4&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-5">&lt;a class="lnlinks" href="#hl-0-5">5&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-6">&lt;a class="lnlinks" href="#hl-0-6">6&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: nums = [1,2,3,4], k = 5
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: 2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: Starting with nums = [1,2,3,4]:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Remove numbers 1 and 4, then nums = [2,3]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Remove numbers 2 and 3, then nums = []
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">There are no more pairs that sum up to 5, hence a total of 2 operations.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-1-1">&lt;a class="lnlinks" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-2">&lt;a class="lnlinks" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-3">&lt;a class="lnlinks" href="#hl-1-3">3&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-4">&lt;a class="lnlinks" href="#hl-1-4">4&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-5">&lt;a class="lnlinks" href="#hl-1-5">5&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: nums = [3,1,3,4,3], k = 6
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: Starting with nums = [3,1,3,4,3]:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Remove the first two 3&amp;#39;s, then nums = [1,4,3]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">There are no more pairs that sum up to 6, hence a total of 1 operation.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+&lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
+&lt;/h2>&lt;p>這題就是要移除&lt;code>Array&lt;/code>中2個elements加起來等於&lt;code>k&lt;/code>的操作有幾次。&lt;br>
+第一個解法，我們可以使用&lt;code>sorting&lt;/code>以及&lt;code>two-pointer approach&lt;/code>來解決。先將&lt;code>array&lt;/code>排序，然後設置&lt;code>i&lt;/code>為0,&lt;code>j&lt;/code>為&lt;code>n-1&lt;/code>,直接使用iteration找出&lt;code>nums[i]+nums[j] = k&lt;/code>的數，然後&lt;code>answer+1&lt;/code>即可。&lt;/p></description></item><item><title>[Leetcode] Top K Frequent Elements(Medium)</title><link>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode347/</link><pubDate>Sat, 09 Apr 2022 06:22:34 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode347/</guid><description>&lt;h2 id="leetcode-347---top-k-frequent-elements">LeetCode 347 - Top K Frequent Elements
+&lt;a class="header-anchor" href="#leetcode-347---top-k-frequent-elements">&lt;/a>
+&lt;/h2>&lt;p>Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.&lt;/p>
+&lt;p>example&lt;/p>
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-0-1">&lt;a class="lnlinks" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-2">&lt;a class="lnlinks" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: nums = [1,1,1,2,2,3], k = 2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [1,2]&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-1-1">&lt;a class="lnlinks" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-2">&lt;a class="lnlinks" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: nums = [1], k = 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [1]&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+&lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
+&lt;/h2>&lt;p>這一題需要我們返回K個數量最多的element。所以，我們可以使用&lt;code>map&lt;/code>記錄我們array中element的個數，然後在把他們以&lt;code>&amp;lt;frequency,element&amp;gt;&lt;/code>存到&lt;code>priority queue/max queue&lt;/code>，最後只要返回&lt;code>priority queue&lt;/code>中的&lt;code>k&lt;/code>個element即可。&lt;/p></description></item><item><title>[Leetcode] Top K Frequent Elements(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode347/</link><pubDate>Sat, 09 Apr 2022 06:22:34 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode347/</guid><description>&lt;h2 id="leetcode-347---top-k-frequent-elements">LeetCode 347 - Top K Frequent Elements
 &lt;a class="header-anchor" href="#leetcode-347---top-k-frequent-elements">&lt;/a>
 &lt;/h2>&lt;p>Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.&lt;/p>
 &lt;p>example&lt;/p>

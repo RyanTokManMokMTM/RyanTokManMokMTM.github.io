@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>String on Jackson.tmm</title><link>https://ryantokmanmokmtm.github.io/tags/string/</link><description>Recent content in String on Jackson.tmm</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Mon, 19 Sep 2022 14:41:56 +0800</lastBuildDate><atom:link href="https://ryantokmanmokmtm.github.io/tags/string/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Find Duplicate File in System(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode609/</link><pubDate>Mon, 19 Sep 2022 14:41:56 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode609/</guid><description>&lt;h2 id="leetcode-42---trapping-rain-water">LeetCode 42 - Trapping Rain Water
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>String on Jackson.tmm</title><link>https://ryantokmanmokmtm.github.io/tags/string/</link><description>Recent content in String on Jackson.tmm</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Mon, 19 Sep 2022 14:41:56 +0800</lastBuildDate><atom:link href="https://ryantokmanmokmtm.github.io/tags/string/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Find Duplicate File in System(Medium)</title><link>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode609/</link><pubDate>Mon, 19 Sep 2022 14:41:56 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode609/</guid><description>&lt;h2 id="leetcode-42---trapping-rain-water">LeetCode 42 - Trapping Rain Water
 &lt;a class="header-anchor" href="#leetcode-42---trapping-rain-water">&lt;/a>
 &lt;/h2>&lt;p>Given a list &lt;code>paths&lt;/code> of directory info, including the directory path, and all the files with contents in this directory, return &lt;em>all the duplicate files in the file system in terms of their paths&lt;/em>. You may return the answer in &lt;strong>any order&lt;/strong>.&lt;/p>
 &lt;p>A group of duplicate files consists of at least two files that have the same content.&lt;/p>
-&lt;p>A single directory info string in the input list has the following format:&lt;/p></description></item><item><title>[Leetcode] Palindrome Pairs(Hard)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode336/</link><pubDate>Sat, 17 Sep 2022 20:41:48 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode336/</guid><description>&lt;h2 id="leetcode-336---palindrome-pairs">LeetCode 336 - Palindrome Pairs
+&lt;p>A single directory info string in the input list has the following format:&lt;/p></description></item><item><title>[Leetcode] Find Duplicate File in System(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode609/</link><pubDate>Mon, 19 Sep 2022 14:41:56 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode609/</guid><description>&lt;h2 id="leetcode-42---trapping-rain-water">LeetCode 42 - Trapping Rain Water
+&lt;a class="header-anchor" href="#leetcode-42---trapping-rain-water">&lt;/a>
+&lt;/h2>&lt;p>Given a list &lt;code>paths&lt;/code> of directory info, including the directory path, and all the files with contents in this directory, return &lt;em>all the duplicate files in the file system in terms of their paths&lt;/em>. You may return the answer in &lt;strong>any order&lt;/strong>.&lt;/p>
+&lt;p>A group of duplicate files consists of at least two files that have the same content.&lt;/p>
+&lt;p>A single directory info string in the input list has the following format:&lt;/p></description></item><item><title>[Leetcode] Palindrome Pairs(Hard)</title><link>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode336/</link><pubDate>Sat, 17 Sep 2022 20:41:48 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode336/</guid><description>&lt;h2 id="leetcode-336---palindrome-pairs">LeetCode 336 - Palindrome Pairs
 &lt;a class="header-anchor" href="#leetcode-336---palindrome-pairs">&lt;/a>
 &lt;/h2>&lt;p>Given a list of &lt;strong>unique&lt;/strong> words, return all the pairs of the &lt;em>&lt;strong>distinct&lt;/strong>&lt;/em> indices &lt;code>(i, j)&lt;/code> in the given list, so that the concatenation of the two words &lt;code>words[i] + words[j]&lt;/code> is a palindrome.&lt;/p>
 &lt;p>example&lt;/p>
@@ -36,7 +40,41 @@
 
 &lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
-&lt;/h2>&lt;p>在解這題之前我們先要知道有哪些情況是成立Palindrome。&lt;/p></description></item><item><title>[Leetcode] Short Encoding of Words(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode802/</link><pubDate>Mon, 20 Jun 2022 12:45:05 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode802/</guid><description>&lt;h2 id="820---short-encoding-of-words">820 - Short Encoding of Words
+&lt;/h2>&lt;p>在解這題之前我們先要知道有哪些情況是成立Palindrome。&lt;/p></description></item><item><title>[Leetcode] Palindrome Pairs(Hard)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode336/</link><pubDate>Sat, 17 Sep 2022 20:41:48 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode336/</guid><description>&lt;h2 id="leetcode-336---palindrome-pairs">LeetCode 336 - Palindrome Pairs
+&lt;a class="header-anchor" href="#leetcode-336---palindrome-pairs">&lt;/a>
+&lt;/h2>&lt;p>Given a list of &lt;strong>unique&lt;/strong> words, return all the pairs of the &lt;em>&lt;strong>distinct&lt;/strong>&lt;/em> indices &lt;code>(i, j)&lt;/code> in the given list, so that the concatenation of the two words &lt;code>words[i] + words[j]&lt;/code> is a palindrome.&lt;/p>
+&lt;p>example&lt;/p>
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-0-1">&lt;a class="lnlinks" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-2">&lt;a class="lnlinks" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-3">&lt;a class="lnlinks" href="#hl-0-3">3&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: words = [&amp;#34;abcd&amp;#34;,&amp;#34;dcba&amp;#34;,&amp;#34;lls&amp;#34;,&amp;#34;s&amp;#34;,&amp;#34;sssll&amp;#34;]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [[0,1],[1,0],[3,2],[2,4]]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: The palindromes are [&amp;#34;dcbaabcd&amp;#34;,&amp;#34;abcddcba&amp;#34;,&amp;#34;slls&amp;#34;,&amp;#34;llssssll&amp;#34;]&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-1-1">&lt;a class="lnlinks" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-2">&lt;a class="lnlinks" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-3">&lt;a class="lnlinks" href="#hl-1-3">3&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: words = [&amp;#34;bat&amp;#34;,&amp;#34;tab&amp;#34;,&amp;#34;cat&amp;#34;]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [[0,1],[1,0]]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: The palindromes are [&amp;#34;battab&amp;#34;,&amp;#34;tabbat&amp;#34;]&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+&lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
+&lt;/h2>&lt;p>在解這題之前我們先要知道有哪些情況是成立Palindrome。&lt;/p></description></item><item><title>[Leetcode] Short Encoding of Words(Medium)</title><link>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode802/</link><pubDate>Mon, 20 Jun 2022 12:45:05 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode802/</guid><description>&lt;h2 id="820---short-encoding-of-words">820 - Short Encoding of Words
 &lt;a class="header-anchor" href="#820---short-encoding-of-words">&lt;/a>
 &lt;/h2>&lt;p>A &lt;strong>valid encoding&lt;/strong> of an array of &lt;code>words&lt;/code> is any reference string s and array of indices indices such that:&lt;/p>
 &lt;ul>
@@ -44,7 +82,15 @@
 &lt;li>The reference string &lt;code>s&lt;/code> ends with the &lt;code>'#'&lt;/code> character.&lt;/li>
 &lt;li>For each index indices[i], the &lt;strong>substring&lt;/strong> of s starting from &lt;code>indices[i]&lt;/code> and up to (but not including) the next &lt;code>'#'&lt;/code> character is equal to &lt;code>words[i]&lt;/code>.&lt;/li>
 &lt;/ul>
-&lt;p>Given an array of &lt;code>words&lt;/code>, return the length of the shortest reference string &lt;code>s&lt;/code> possible of any valid encoding of &lt;code>words&lt;/code>.&lt;/p></description></item><item><title>[Leetcode] Longest Palindromic Substring(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode5/</link><pubDate>Thu, 16 Jun 2022 14:09:50 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode5/</guid><description>&lt;h2 id="leetcode-5---longest-palindromic-substring">LeetCode 5 - Longest Palindromic Substring
+&lt;p>Given an array of &lt;code>words&lt;/code>, return the length of the shortest reference string &lt;code>s&lt;/code> possible of any valid encoding of &lt;code>words&lt;/code>.&lt;/p></description></item><item><title>[Leetcode] Short Encoding of Words(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode802/</link><pubDate>Mon, 20 Jun 2022 12:45:05 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode802/</guid><description>&lt;h2 id="820---short-encoding-of-words">820 - Short Encoding of Words
+&lt;a class="header-anchor" href="#820---short-encoding-of-words">&lt;/a>
+&lt;/h2>&lt;p>A &lt;strong>valid encoding&lt;/strong> of an array of &lt;code>words&lt;/code> is any reference string s and array of indices indices such that:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>words.length&lt;/code> == &lt;code>indices.length&lt;/code>&lt;/li>
+&lt;li>The reference string &lt;code>s&lt;/code> ends with the &lt;code>'#'&lt;/code> character.&lt;/li>
+&lt;li>For each index indices[i], the &lt;strong>substring&lt;/strong> of s starting from &lt;code>indices[i]&lt;/code> and up to (but not including) the next &lt;code>'#'&lt;/code> character is equal to &lt;code>words[i]&lt;/code>.&lt;/li>
+&lt;/ul>
+&lt;p>Given an array of &lt;code>words&lt;/code>, return the length of the shortest reference string &lt;code>s&lt;/code> possible of any valid encoding of &lt;code>words&lt;/code>.&lt;/p></description></item><item><title>[Leetcode] Longest Palindromic Substring(Medium)</title><link>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode5/</link><pubDate>Thu, 16 Jun 2022 14:09:50 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode5/</guid><description>&lt;h2 id="leetcode-5---longest-palindromic-substring">LeetCode 5 - Longest Palindromic Substring
 &lt;a class="header-anchor" href="#leetcode-5---longest-palindromic-substring">&lt;/a>
 &lt;/h2>&lt;p>Given a string s, return the longest palindromic substring in s.&lt;/p>
 &lt;p>example&lt;/p>
@@ -80,7 +126,43 @@
 &lt;a href="https://ryantokmanmokmtm.github.io/leetcodenotes/palindromicstring" title="Palindromic string迴文" >
  Palindromic string迴文
  
-&lt;/a>。而這題要我們找出在給定string中,找到最長的Palindrome。我們可以透過以每個單一字元(&lt;code>index i&lt;/code>)以及倆個字元(&lt;code>index i&lt;/code>,&lt;code>index i+1&lt;/code>)為中心點，並擴展&lt;code>left,right&lt;/code>找出他們的局部的最長Palindrome為多少，然後根據這個長度計算&lt;code>starting point i&lt;/code>以及記錄長度&lt;code>len&lt;/code>,最後以&lt;code>starting point&lt;/code>和&lt;code>len&lt;/code>得出字串中&lt;code>str[startingPoint,len]&lt;/code>為解。&lt;/p></description></item><item><title>[筆記]Palindromic String(迴文字串)</title><link>https://ryantokmanmokmtm.github.io/posts/note/palindromicstring/</link><pubDate>Thu, 16 Jun 2022 12:26:03 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/posts/note/palindromicstring/</guid><description>&lt;h1 id="introduction">Introduction
+&lt;/a>。而這題要我們找出在給定string中,找到最長的Palindrome。我們可以透過以每個單一字元(&lt;code>index i&lt;/code>)以及倆個字元(&lt;code>index i&lt;/code>,&lt;code>index i+1&lt;/code>)為中心點，並擴展&lt;code>left,right&lt;/code>找出他們的局部的最長Palindrome為多少，然後根據這個長度計算&lt;code>starting point i&lt;/code>以及記錄長度&lt;code>len&lt;/code>,最後以&lt;code>starting point&lt;/code>和&lt;code>len&lt;/code>得出字串中&lt;code>str[startingPoint,len]&lt;/code>為解。&lt;/p></description></item><item><title>[Leetcode] Longest Palindromic Substring(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode5/</link><pubDate>Thu, 16 Jun 2022 14:09:50 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode5/</guid><description>&lt;h2 id="leetcode-5---longest-palindromic-substring">LeetCode 5 - Longest Palindromic Substring
+&lt;a class="header-anchor" href="#leetcode-5---longest-palindromic-substring">&lt;/a>
+&lt;/h2>&lt;p>Given a string s, return the longest palindromic substring in s.&lt;/p>
+&lt;p>example&lt;/p>
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-0-1">&lt;a class="lnlinks" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-2">&lt;a class="lnlinks" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-3">&lt;a class="lnlinks" href="#hl-0-3">3&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: s = &amp;#34;babad&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: &amp;#34;bab&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: &amp;#34;aba&amp;#34; is also a valid answer.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-1-1">&lt;a class="lnlinks" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-2">&lt;a class="lnlinks" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: s = &amp;#34;cbbd&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: &amp;#34;bb&amp;#34;&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+&lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
+&lt;/h2>&lt;p>要解決這題，我們必須要先知道什麼是Palindrome。可以參考這篇文章
+&lt;a href="https://ryantokmanmokmtm.github.io/leetcodenotes/palindromicstring" title="Palindromic string迴文" >
+ Palindromic string迴文
+ 
+&lt;/a>。而這題要我們找出在給定string中,找到最長的Palindrome。我們可以透過以每個單一字元(&lt;code>index i&lt;/code>)以及倆個字元(&lt;code>index i&lt;/code>,&lt;code>index i+1&lt;/code>)為中心點，並擴展&lt;code>left,right&lt;/code>找出他們的局部的最長Palindrome為多少，然後根據這個長度計算&lt;code>starting point i&lt;/code>以及記錄長度&lt;code>len&lt;/code>,最後以&lt;code>starting point&lt;/code>和&lt;code>len&lt;/code>得出字串中&lt;code>str[startingPoint,len]&lt;/code>為解。&lt;/p></description></item><item><title>[筆記]Palindromic String(迴文字串)</title><link>https://ryantokmanmokmtm.github.io/archives/note/palindromicstring/</link><pubDate>Thu, 16 Jun 2022 12:26:03 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/note/palindromicstring/</guid><description>&lt;h1 id="introduction">Introduction
 &lt;a class="header-anchor" href="#introduction">&lt;/a>
 &lt;/h1>&lt;h2 id="什麼是palindromic-string-迴文字串">什麼是Palindromic String 迴文字串
 &lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%afpalindromic-string-%e8%bf%b4%e6%96%87%e5%ad%97%e4%b8%b2">&lt;/a>
@@ -89,7 +171,16 @@
 &lt;code>abcdcba&lt;/code> 以&lt;code>d&lt;/code>為中心的左跟右的字元一樣。&lt;br>
 &lt;code>cdc&lt;/code>左跟右都為&lt;code>c&lt;/code>&lt;br>
 &lt;code>bcdcb&lt;/code> 左跟右都為&lt;code>b&lt;/code>&lt;br>
-&lt;code>abcdcba&lt;/code> 左跟右都為&lt;code>a&lt;/code>&lt;/p></description></item><item><title>[Leetcode] Letter Combinations of a Phone Number(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode17/</link><pubDate>Mon, 09 May 2022 21:50:34 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode17/</guid><description>&lt;h2 id="leetcode-17---letter-combinations-of-a-phone-number">LeetCode 17 - Letter Combinations of a Phone Number
+&lt;code>abcdcba&lt;/code> 左跟右都為&lt;code>a&lt;/code>&lt;/p></description></item><item><title>[筆記]Palindromic String(迴文字串)</title><link>https://ryantokmanmokmtm.github.io/techs/note/palindromicstring/</link><pubDate>Thu, 16 Jun 2022 12:26:03 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/techs/note/palindromicstring/</guid><description>&lt;h1 id="introduction">Introduction
+&lt;a class="header-anchor" href="#introduction">&lt;/a>
+&lt;/h1>&lt;h2 id="什麼是palindromic-string-迴文字串">什麼是Palindromic String 迴文字串
+&lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%afpalindromic-string-%e8%bf%b4%e6%96%87%e5%ad%97%e4%b8%b2">&lt;/a>
+&lt;/h2>&lt;p>所謂的Palindromic String(迴文字串) 就是以一個字元為中間，而它的左邊以及右邊的組成字元相同。&lt;br>
+例子:&lt;br>
+&lt;code>abcdcba&lt;/code> 以&lt;code>d&lt;/code>為中心的左跟右的字元一樣。&lt;br>
+&lt;code>cdc&lt;/code>左跟右都為&lt;code>c&lt;/code>&lt;br>
+&lt;code>bcdcb&lt;/code> 左跟右都為&lt;code>b&lt;/code>&lt;br>
+&lt;code>abcdcba&lt;/code> 左跟右都為&lt;code>a&lt;/code>&lt;/p></description></item><item><title>[Leetcode] Letter Combinations of a Phone Number(Medium)</title><link>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode17/</link><pubDate>Mon, 09 May 2022 21:50:34 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode17/</guid><description>&lt;h2 id="leetcode-17---letter-combinations-of-a-phone-number">LeetCode 17 - Letter Combinations of a Phone Number
 &lt;a class="header-anchor" href="#leetcode-17---letter-combinations-of-a-phone-number">&lt;/a>
 &lt;/h2>&lt;p>Given a string containing digits from &lt;code>2-9&lt;/code> inclusive, return all possible letter combinations that the number could represent. Return the answer in &lt;strong>any order&lt;/strong>.&lt;/p>
 &lt;p>A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.&lt;/p>
@@ -132,11 +223,108 @@
 
 &lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
-&lt;/h2>&lt;p>這題是要我們拿到&lt;code>Input&lt;/code>的數字所能組合出所有字串。解法也很簡單，我們可以透過&lt;code>Map&lt;/code>記錄每個數字代表來那些字符，然後再透過&lt;strong>Back-tracking&lt;/strong>技巧來幫助我們組合字串。你有可能會問什麼是&lt;strong>Back-tracking&lt;/strong>。簡單來說就是一個&lt;strong>Recursive Function&lt;/strong>,但他會迴避一些不正常的數值。比如:&amp;ldquo;abc&amp;rdquo;,而&amp;quot;abc&amp;quot;可能不是我們要的。因此退回上一步的&amp;quot;ab&amp;quot;,並嘗試其他數值/結果。&lt;/p></description></item><item><title>[LeetCode] Remove All Adjacent Duplicates in String II(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode1209/</link><pubDate>Fri, 06 May 2022 21:19:25 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode1209/</guid><description>&lt;h2 id="leetcode-1209---remove-all-adjacent-duplicates-in-string-ii">LeetCode 1209 - Remove All Adjacent Duplicates in String II
+&lt;/h2>&lt;p>這題是要我們拿到&lt;code>Input&lt;/code>的數字所能組合出所有字串。解法也很簡單，我們可以透過&lt;code>Map&lt;/code>記錄每個數字代表來那些字符，然後再透過&lt;strong>Back-tracking&lt;/strong>技巧來幫助我們組合字串。你有可能會問什麼是&lt;strong>Back-tracking&lt;/strong>。簡單來說就是一個&lt;strong>Recursive Function&lt;/strong>,但他會迴避一些不正常的數值。比如:&amp;ldquo;abc&amp;rdquo;,而&amp;quot;abc&amp;quot;可能不是我們要的。因此退回上一步的&amp;quot;ab&amp;quot;,並嘗試其他數值/結果。&lt;/p></description></item><item><title>[Leetcode] Letter Combinations of a Phone Number(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode17/</link><pubDate>Mon, 09 May 2022 21:50:34 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode17/</guid><description>&lt;h2 id="leetcode-17---letter-combinations-of-a-phone-number">LeetCode 17 - Letter Combinations of a Phone Number
+&lt;a class="header-anchor" href="#leetcode-17---letter-combinations-of-a-phone-number">&lt;/a>
+&lt;/h2>&lt;p>Given a string containing digits from &lt;code>2-9&lt;/code> inclusive, return all possible letter combinations that the number could represent. Return the answer in &lt;strong>any order&lt;/strong>.&lt;/p>
+&lt;p>A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.&lt;/p>
+&lt;p>example&lt;/p>
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-0-1">&lt;a class="lnlinks" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-2">&lt;a class="lnlinks" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: digits = &amp;#34;23&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [&amp;#34;ad&amp;#34;,&amp;#34;ae&amp;#34;,&amp;#34;af&amp;#34;,&amp;#34;bd&amp;#34;,&amp;#34;be&amp;#34;,&amp;#34;bf&amp;#34;,&amp;#34;cd&amp;#34;,&amp;#34;ce&amp;#34;,&amp;#34;cf&amp;#34;]&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-1-1">&lt;a class="lnlinks" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-2">&lt;a class="lnlinks" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: digits = &amp;#34;&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: []&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-2-1">&lt;a class="lnlinks" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-2-2">&lt;a class="lnlinks" href="#hl-2-2">2&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: digits = &amp;#34;2&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [&amp;#34;a&amp;#34;,&amp;#34;b&amp;#34;,&amp;#34;c&amp;#34;]&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+&lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
+&lt;/h2>&lt;p>這題是要我們拿到&lt;code>Input&lt;/code>的數字所能組合出所有字串。解法也很簡單，我們可以透過&lt;code>Map&lt;/code>記錄每個數字代表來那些字符，然後再透過&lt;strong>Back-tracking&lt;/strong>技巧來幫助我們組合字串。你有可能會問什麼是&lt;strong>Back-tracking&lt;/strong>。簡單來說就是一個&lt;strong>Recursive Function&lt;/strong>,但他會迴避一些不正常的數值。比如:&amp;ldquo;abc&amp;rdquo;,而&amp;quot;abc&amp;quot;可能不是我們要的。因此退回上一步的&amp;quot;ab&amp;quot;,並嘗試其他數值/結果。&lt;/p></description></item><item><title>[LeetCode] Remove All Adjacent Duplicates in String II(Medium)</title><link>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode1209/</link><pubDate>Fri, 06 May 2022 21:19:25 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode1209/</guid><description>&lt;h2 id="leetcode-1209---remove-all-adjacent-duplicates-in-string-ii">LeetCode 1209 - Remove All Adjacent Duplicates in String II
 &lt;a class="header-anchor" href="#leetcode-1209---remove-all-adjacent-duplicates-in-string-ii">&lt;/a>
 &lt;/h2>&lt;p>You are given a string &lt;code>s&lt;/code> and an integer &lt;code>k&lt;/code>, a &lt;code>k&lt;/code> &lt;strong>duplicate removal&lt;/strong> consists of choosing &lt;code>k&lt;/code> adjacent and equal letters from &lt;code>s&lt;/code> and removing them, causing the left and the right side of the deleted substring to concatenate together.&lt;/p>
 &lt;p>We repeatedly make &lt;code>k&lt;/code> duplicate removals on &lt;code>s&lt;/code> until we no longer can.&lt;/p>
-&lt;p>Return the final string after all such duplicate removals have been made. It is guaranteed that the answer is unique.&lt;/p></description></item><item><title>[Leetcode] Backspace String Compare(Easy)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode844/</link><pubDate>Sun, 01 May 2022 17:52:25 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode844/</guid><description>&lt;h2 id="leetcode-844---backspace-string-compare">LeetCode 844 - Backspace String Compare
+&lt;p>Return the final string after all such duplicate removals have been made. It is guaranteed that the answer is unique.&lt;/p></description></item><item><title>[LeetCode] Remove All Adjacent Duplicates in String II(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode1209/</link><pubDate>Fri, 06 May 2022 21:19:25 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode1209/</guid><description>&lt;h2 id="leetcode-1209---remove-all-adjacent-duplicates-in-string-ii">LeetCode 1209 - Remove All Adjacent Duplicates in String II
+&lt;a class="header-anchor" href="#leetcode-1209---remove-all-adjacent-duplicates-in-string-ii">&lt;/a>
+&lt;/h2>&lt;p>You are given a string &lt;code>s&lt;/code> and an integer &lt;code>k&lt;/code>, a &lt;code>k&lt;/code> &lt;strong>duplicate removal&lt;/strong> consists of choosing &lt;code>k&lt;/code> adjacent and equal letters from &lt;code>s&lt;/code> and removing them, causing the left and the right side of the deleted substring to concatenate together.&lt;/p>
+&lt;p>We repeatedly make &lt;code>k&lt;/code> duplicate removals on &lt;code>s&lt;/code> until we no longer can.&lt;/p>
+&lt;p>Return the final string after all such duplicate removals have been made. It is guaranteed that the answer is unique.&lt;/p></description></item><item><title>[Leetcode] Backspace String Compare(Easy)</title><link>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode844/</link><pubDate>Sun, 01 May 2022 17:52:25 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode844/</guid><description>&lt;h2 id="leetcode-844---backspace-string-compare">LeetCode 844 - Backspace String Compare
+&lt;a class="header-anchor" href="#leetcode-844---backspace-string-compare">&lt;/a>
+&lt;/h2>&lt;p>Given two strings s and t, return true &lt;em>if they are equal when both are typed into empty text editors&lt;/em>. &lt;code>'#'&lt;/code> means a backspace character.&lt;/p>
+&lt;p>Note that after backspacing an empty text, the text will continue empty.&lt;/p>
+&lt;p>example:&lt;/p>
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-0-1">&lt;a class="lnlinks" href="#hl-0-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-2">&lt;a class="lnlinks" href="#hl-0-2">2&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-0-3">&lt;a class="lnlinks" href="#hl-0-3">3&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: s = &amp;#34;ab#c&amp;#34;, t = &amp;#34;ad#c&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: Both s and t become &amp;#34;ac&amp;#34;.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-1-1">&lt;a class="lnlinks" href="#hl-1-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-2">&lt;a class="lnlinks" href="#hl-1-2">2&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-1-3">&lt;a class="lnlinks" href="#hl-1-3">3&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: s = &amp;#34;ab##&amp;#34;, t = &amp;#34;c#d#&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: Both s and t become &amp;#34;&amp;#34;.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-2-1">&lt;a class="lnlinks" href="#hl-2-1">1&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-2-2">&lt;a class="lnlinks" href="#hl-2-2">2&lt;/a>
+&lt;/span>&lt;span class="lnt" id="hl-2-3">&lt;a class="lnlinks" href="#hl-2-3">3&lt;/a>
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: s = &amp;#34;a#c&amp;#34;, t = &amp;#34;b&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: false
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: s becomes &amp;#34;c&amp;#34; while t becomes &amp;#34;b&amp;#34;.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>
+
+&lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
+&lt;/h2>&lt;p>這題主要要什麼比較2個String移除於&lt;code>#&lt;/code>前的字符後是否為相同的String，就相當於&lt;code>Backspace(#) 字符&lt;/code>。
+這題有2種解法:&lt;/p></description></item><item><title>[Leetcode] Backspace String Compare(Easy)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode844/</link><pubDate>Sun, 01 May 2022 17:52:25 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode844/</guid><description>&lt;h2 id="leetcode-844---backspace-string-compare">LeetCode 844 - Backspace String Compare
 &lt;a class="header-anchor" href="#leetcode-844---backspace-string-compare">&lt;/a>
 &lt;/h2>&lt;p>Given two strings s and t, return true &lt;em>if they are equal when both are typed into empty text editors&lt;/em>. &lt;code>'#'&lt;/code> means a backspace character.&lt;/p>
 &lt;p>Note that after backspacing an empty text, the text will continue empty.&lt;/p>

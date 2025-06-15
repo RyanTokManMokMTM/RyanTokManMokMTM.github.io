@@ -1,0 +1,394 @@
+<!doctype html><html lang=zh-tw data-theme=dark><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=theme-color content="#222" media="(prefers-color-scheme: dark)"><meta name=generator content="Hugo 0.147.8"><link rel="shortcut icon" type=image/x-icon href=/imgs-custom/customIcon/favicon.ico><link rel=icon type=image/x-icon href=/imgs-custom/customIcon/favicon.ico><link rel=icon type=image/png sizes=16x16 href=/imgs-custom/customIcon/favicon_16x16.png><link rel=icon type=image/png sizes=32x32 href=/imgs-custom/customIcon/favicon_32_32.png><link rel=apple-touch-icon sizes=180x180 href=/imgs-custom/icons/apple_touch_icon_next.png><meta itemprop=name content="Leetcode Weekly Contest 331(第一次參加競賽)"><meta itemprop=description content="簡單紀錄生活和筆記"><meta name=description content="簡單紀錄生活和筆記"><meta itemprop=datePublished zgotmplz><meta itemprop=dateModified zgotmplz><meta itemprop=image content="https://ryantokmanmokmtm.github.io/imgs-custom/customIcon/avatar.jpg"><meta itemprop=keywords content="leetcode-contest"><link href=/css/pio.css rel=stylesheet type=text/css><link type=text/css rel=stylesheet href=https://ryantokmanmokmtm.github.io/js/3rd/font-awesome/6.7.2/css/all.min.css><link type=text/css rel=stylesheet href=https://ryantokmanmokmtm.github.io/js/3rd/animate.css/3.1.1/animate.min.css><link type=text/css rel=stylesheet href=https://ryantokmanmokmtm.github.io/js/3rd/viewerjs/1.11.6/viewer.min.css><link rel=stylesheet href="/css/main.min.css?=1749962943"><style type=text/css>.post-footer hr:after{content:"~ 我可是有底线的哟 ~"}.flinks-list-footer hr:after{content:"~ 我可是有底线的哟 ~"}</style><link rel=stylesheet type=text/css href="/css/custom_style.css?=1749962943"><script type=text/javascript>(function(){localDB={set:function(e,t,n){if(n===0)return;const s=new Date,o=n*864e5,i={value:t,expiry:s.getTime()+o};localStorage.setItem(e,JSON.stringify(i))},get:function(e){const t=localStorage.getItem(e);if(!t)return 0[0];const n=JSON.parse(t),s=new Date;return s.getTime()>n.expiry?(localStorage.removeItem(e),0[0]):n.value}},theme={active:function(){const e=localDB.get("theme");if(e==null)return;theme.toggle(e),window.matchMedia("(prefers-color-scheme: dark)").addListener(function(e){theme.toggle(e.matches?"dark":"light")})},toggle:function(e){document.documentElement.setAttribute("data-theme",e),localDB.set("theme",e,2);const t=document.querySelector("iframe.giscus-frame");if(t){const n={setConfig:{theme:e}};t.contentWindow.postMessage({giscus:n},"https://giscus.app")}}},theme.active()})(window)</script><script type=text/javascript>document.addEventListener("DOMContentLoaded",()=>{var e=document.createElement("script");e.charset="UTF-8",e.src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js",e.async=!1,e.defer=!0,document.head.appendChild(e),e.onload=function(){NexT.utils.fmtBusuanzi()}})</script><title>Leetcode Weekly Contest 331(第一次參加競賽) - Jackson.tmm</title><noscript><link rel=stylesheet href=/css/noscript.css></noscript></head><body itemscope itemtype=http://schema.org/WebPage class=use-motion><div class=headband></div><main class=main><header class=header itemscope itemtype=http://schema.org/WPHeader><div class=header-inner><div class=site-brand-container><div class=site-nav-toggle><div class=toggle aria-label role=button><span class=toggle-line></span>
+<span class=toggle-line></span>
+<span class=toggle-line></span></div></div><div class=site-meta><a href=/ class=brand rel=start><i class=logo-line></i><h1 class=site-title>Jackson.tmm</h1><i class=logo-line></i></a><p class=site-subtitle itemprop=description>Loving life and dreams.</p></div><div class=site-nav-right><div class="toggle popup-trigger"><i class="fa fa-search fa-fw fa-lg"></i></div></div></div><nav class=site-nav><ul class="main-menu menu"><li class="menu-item menu-item-home"><a href=/ class=hvr-icon-pulse rel=section><i class="fa fa-home hvr-icon"></i>Home 首頁</a></li><li class="menu-item menu-item-categories"><a href=/categories/ class=hvr-icon-pulse rel=section><i class="fa fa-list hvr-icon"></i>Menu 目錄</a></li><li class="menu-item menu-item-about"><a href=/about.html class=hvr-icon-pulse rel=section><i class="fa fa-user hvr-icon"></i>About 關於</a></li><li class="menu-item menu-item-archives"><a href=/archives/ class=hvr-icon-pulse rel=section><i class="fa fa-archive hvr-icon"></i>Archives 歸檔
+<span class=badge>92</span></a></li><li class="menu-item menu-item-techs"><a href=/techs/ class=hvr-icon-pulse rel=section><i class="fa fa-terminal hvr-icon"></i>Technology 科技與技術</a></li><li class="menu-item menu-item-memories"><a href=/memories class=hvr-icon-pulse rel=section><i class="fa fa-star hvr-icon"></i>Memories 回憶</a></li><li class="menu-item menu-item-"><a href=/leetcodes class=hvr-icon-pulse rel=section><i class="fa fa-code hvr-icon"></i>Leetcodes 力扣</a></li><li class="menu-item menu-item-project"><a href=/project class=hvr-icon-pulse rel=section><i class="fa fa-tasks hvr-icon"></i>Project 專案</a></li><li class="menu-item menu-item-achievement"><a href=/achievement class=hvr-icon-pulse rel=section><i class="fa fa-trophy hvr-icon"></i>Achievement 成就</a></li><li class="menu-item menu-item-resources"><a href=/resources class=hvr-icon-pulse rel=section><i class="fa fa-file hvr-icon"></i>Resources 資源</a></li><li class="menu-item menu-item-search"><a role=button class="popup-trigger hvr-icon-pulse"><i class="fa fa-search fa-fw hvr-icon"></i>搜索</a></li></ul></nav><div class=search-pop-overlay><div class="popup search-popup"><div class=search-header><span class=search-icon><i class="fa fa-search"></i></span><div class=search-input-container><input autocomplete=off autocapitalize=off maxlength=80 placeholder=搜索... spellcheck=false type=search class=search-input></div><span class=popup-btn-close role=button><i class="fa fa-times-circle"></i></span></div><div class="search-result-container no-result"><div class=search-result-icon><i class="fa fa-spinner fa-pulse fa-5x"></i></div></div></div></div></div><div class="toggle sidebar-toggle" role=button><span class=toggle-line></span>
+<span class=toggle-line></span>
+<span class=toggle-line></span></div><aside class=sidebar><div class="sidebar-inner sidebar-overview-active"><ul class=sidebar-nav><li class=sidebar-nav-toc>文章目錄</li><li class=sidebar-nav-overview>站點概覽</li></ul><div class=sidebar-panel-container><div class="post-toc-wrap sidebar-panel"><div class="post-toc animated"><nav id=TableOfContents><ul><li><a href=#題目>題目</a><ul><li><a href=#2413-smallest-even-multipleeasy---ac>2413. Smallest Even Multiple(EASY) - AC</a><ul><li><a href=#example>Example</a></li><li><a href=#solution>Solution</a></li></ul></li><li><a href=#2414-length-of-the-longest-alphabetical-continuous-substringmedium---ac>2414. Length of the Longest Alphabetical Continuous Substring(Medium) - AC</a></li><li><a href=#example-1>Example</a></li><li><a href=#solution-1>Solution</a></li><li><a href=#2415-reverse-odd-levels-of-binary-treemedium---ac>2415. Reverse Odd Levels of Binary Tree(Medium) - AC</a></li><li><a href=#example-2>Example</a></li><li><a href=#solution-2>Solution</a></li><li><a href=#2416-sum-of-prefix-scores-of-stringshard---ac>2416. Sum of Prefix Scores of Strings(Hard) - AC</a></li><li><a href=#example-3>Example</a></li><li><a href=#solution-3>Solution</a></li></ul></li><li><a href=#總結>總結</a></li></ul></nav></div></div><div class="site-overview-wrap sidebar-panel"><div class="site-author site-overview-item animated" itemprop=author itemscope itemtype=http://schema.org/Person><img class=site-author-image itemprop=image alt=Jackson.tmm src=/imgs/img-lazy-loading.gif data-src=/imgs-custom/customIcon/avatar.jpg><p class=site-author-name itemprop=name>Jackson.tmm</p><div class=site-description itemprop=description>簡單紀錄生活和筆記</div></div><div class="site-state-wrap site-overview-item animated"><nav class=site-state><div class="site-state-item site-state-posts"><a href=/archives/><span class=site-state-item-count>92</span>
+<span class=site-state-item-name>日誌</span></a></div><div class="site-state-item site-state-categories"><a href=/categories/><span class=site-state-item-count>14</span>
+<span class=site-state-item-name>分類</span></a></div><div class="site-state-item site-state-tags"><a href=/tags/><span class=site-state-item-count>58</span>
+<span class=site-state-item-name>標籤</span></a></div></nav></div><div class="links-of-social site-overview-item animated"><span class=links-of-social-item><a href=https://www.facebook.com/karot.ka.7505/ title="Facebook → https://www.facebook.com/karot.ka.7505/" rel=noopener class=hvr-icon-pulse target=_blank><i class="fab fa-facebook fa-fw hvr-icon"></i>
+Facebook
+</a></span><span class=links-of-social-item><a href=https://www.instagram.com/tm_m.0418 title="IG → https://www.instagram.com/tm_m.0418" rel=noopener class=hvr-icon-pulse target=_blank><i class="fab fa-instagram fa-fw hvr-icon"></i>
+IG
+</a></span><span class=links-of-social-item><a href=https://github.com/RyanTokManMokMTM title="Github → https://github.com/RyanTokManMokMTM" rel=noopener class=hvr-icon-pulse target=_blank><i class="fab fa-github fa-fw hvr-icon"></i>
+Github
+</a></span><span class=links-of-social-item><a href=https://www.linkedin.com/in/jackson-moktokman/ title="LinkedIn → https://www.linkedin.com/in/jackson-moktokman/" rel=noopener class=hvr-icon-pulse target=_blank><i class="fab fa-linkedin fa-fw hvr-icon"></i>
+LinkedIn</a></span></div><div class="cc-license animated" itemprop=license><a href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hant class=cc-opacity rel=noopener target=_blank title=共享知識><img src=/imgs/img-lazy-loading.gif data-src=/imgs/cc/big/by_nc_sa.svg alt=共享知識></a></div><div class="links-of-blogroll site-overview-item animated"><div class=links-of-blogroll-title><i class="fa fa-globe fa-fw"></i>
+友情链接</div><ul class=links-of-blogroll-list><li class=links-of-blogroll-item><a href=https://cwksc.github.io/ title=https://cwksc.github.io/ target=_blank>CWKSC(Professor.CHU)</a></li></ul></div><div><a href=https://git.io/typing-svg><img src="https://readme-typing-svg.demolab.com?font=LXGW+WenKai+TC&duration=3000&pause=1000&color=F78D53&center=true&vCenter=true&multiline=true&width=435&height=60&lines=%E6%9C%80%E5%A5%BD%E7%9A%84%E9%8C%AF%E8%AA%A4%E8%99%95%E7%90%86%E5%B0%B1%E6%98%AF%E4%B8%8D%E8%A6%81%E8%AE%93%E9%8C%AF%E8%AA%A4%E7%99%BC%E7%94%9F%E3%80%82;Simplicity+is+the+ultimate+sophistication." alt="Typing SVG"></a></div></div></div></div><div id=siteinfo-card-widget class=sidebar-card-widget><div class=item-headline><i class="fas fa-chart-line"></i>
+<span>網站資訊</span></div><div class=siteinfo><div class=siteinfo-item><div class=item-name><i class="fa-solid fa-calendar-check"></i>已運行：</div><div class=item-count id=runTimes data-publishdate="2021-12-31 20:22:11 +0800 +0800"></div></div><div class=siteinfo-item><div class=item-name><i class="fas fa fa-user"></i>總訪客數：</div><div class=item-count id=busuanzi_value_site_uv><i class="fa fa-sync fa-spin"></i></div></div><div class=siteinfo-item><div class=item-name><i class="fas fa fa-eye"></i>頁面瀏覽：</div><div class=item-count id=busuanzi_value_site_pv><i class="fa fa-sync fa-spin"></i></div></div><div class=siteinfo-item><div class=item-name><i class="fa fa-font"></i>總字數：</div><div class=item-count id=wordsCount data-count=100302></div></div><div class=siteinfo-item><div class=item-name><i class="fa fa-mug-hot"></i>閱讀約：</div><div class=item-count id=readTimes data-times=250></div></div><div class=siteinfo-item><div class=item-name><i class="fa fa-clock-rotate-left"></i>最後更新於：</div><div class=item-count id=last-push-date data-lastpushdate="2025-05-17 14:34:24 +0800 +0800"></div></div></div></div></aside><div class=sidebar-dimmer></div></header><div class=tool-buttons><div id=goto-comments class="button goto-comments" title=直達評論><i class="fas fa-comments"></i></div><div id=toggle-theme class=button title=深淺模式切換><i class="fas fa-adjust"></i></div><div class=back-to-top role=button title=返回頂部><i class="fa fa-arrow-up"></i>
+<span>0%</span></div></div><div class=reading-progress-bar></div><a role=button class="book-mark-link book-mark-link-fixed"></a><a href=https://github.com/RyanTokManMokMTM rel="noopener external nofollow noreferrer" target=_blank title="Follow me on GitHub" class="exturl github-corner"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0 0 115 115h15l12 27L250 250V0z"/><path d="M128.3 109C113.8 99.7 119 89.6 119 89.6 122 82.7 120.5 78.6 120.5 78.6 119.2 72 123.4 76.3 123.4 76.3 127.3 80.9 125.5 87.3 125.5 87.3 122.9 97.6 130.6 101.9 134.4 103.2" fill="currentColor" style="transform-origin:130px 106px" class="octo-arm"/><path d="M115 115C114.9 115.1 118.7 116.5 119.8 115.4l13.9-13.8C136.9 99.2 139.9 98.4 142.2 98.6 133.8 88 127.5 74.4 143.8 58 148.5 53.4 154 51.2 159.7 51 160.3 49.4 163.2 43.6 171.4 40.1 171.4 40.1 176.1 42.5 178.8 56.2 183.1 58.6 187.2 61.8 190.9 65.4 194.5 69 197.7 73.2 200.1 77.6 213.8 80.2 216.3 84.9 216.3 84.9 212.7 93.1 206.9 96 205.4 96.6 205.1 102.4 203 107.8 198.3 112.5 181.9 128.9 168.3 122.5 157.7 114.1 157.9 116.9 156.7 120.9 152.7 124.9L141 136.5C139.8 137.7 141.6 141.9 141.8 141.8z" fill="currentColor" class="octo-body"/></svg></a><noscript><div class=noscript-warning>Theme NexT works best with JavaScript enabled</div></noscript><div class="main-inner post posts-expand"><div class=post-block><article itemscope itemtype=http://schema.org/Article class=post-content lang><link itemprop=mainEntityOfPage href=https://ryantokmanmokmtm.github.io/techs/coding/leetcodeweeklycontest331/><span hidden itemprop=author itemscope itemtype=http://schema.org/Person><meta itemprop=image content="/imgs-custom/customIcon/avatar.jpg"><meta itemprop=name content="Jackson.tmm"></span><span hidden itemprop=publisher itemscope itemtype=http://schema.org/Organization><meta itemprop=name content="Jackson.tmm"><meta itemprop=description content="簡單紀錄生活和筆記"></span><span hidden itemprop=post itemscope itemtype=http://schema.org/CreativeWork><meta itemprop=name content="Leetcode Weekly Contest 331(第一次參加競賽)"><meta itemprop=description content="
+    今天是我第一次參加Leetcode 雙週賽，所以想記錄一下今天的競賽題目。希望能透過博客來記錄自己的競賽狀況。
+  
+本週AC題數為:4/4
+題目
+
+2413. Smallest Even Multiple(EASY) - AC
+
+Given a positive integer n, return the smallest positive integer that is a multiple of both 2 and n."></span><header class=post-header><h1 class=post-title itemprop="name headline">Leetcode Weekly Contest 331(第一次參加競賽)</h1><div class=post-meta-container><div class=post-meta-items><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-calendar"></i>
+</span><span class=post-meta-item-text title=發表於>發表於：
+</span><time title="創建時間：2022-09-18 16:32:34 +08:00" itemprop="dateCreated datePublished" datetime="2022-09-18 16:32:34 +0800 +0800">2022-09-18
+</time></span><span class=post-meta-item><span class=post-meta-item-icon><i class="fas fa-solid fa-folder-open"></i>
+</span><span class=post-meta-item-text title=分類於>分類於：
+</span><span itemprop=about itemscope itemtype=http://schema.org/Thing><a href=/categories/coding/ itemprop=url rel=index><span itemprop=name>coding</span></a></span></span></div><div class=post-meta-items><span class=post-meta-item title=字數><span class=post-meta-item-icon><i class="fas fa-solid fa-file-word"></i>
+</span><span class=post-meta-item-text>字數：</span>
+<span>1997</span>
+</span><span class=post-meta-item title=閱讀><span class=post-meta-item-icon><i class="fas fa-solid fa-clock"></i>
+</span><span class=post-meta-item-text>閱讀：&ap;</span>
+<span>4分鐘</span>
+</span><span class=post-meta-item title=瀏覽><span class=post-meta-item-icon><i class="fas fa-solid fa-eye"></i>
+</span><span class=post-meta-item-text>瀏覽：
+</span><span id=busuanzi_value_page_pv data-path=/techs/coding/leetcodeweeklycontest331/><i class="fa fa-sync fa-spin"></i>
+</span></span><span class=post-meta-item title><span class=post-meta-item-icon><i class="fas fa-solid fa-comments"></i>
+</span><span class=post-meta-item-text title=評論>評論：
+</span><span id=comments-count class=waline-comment-count data-path=/techs/coding/leetcodeweeklycontest331/><i class="fa fa-sync fa-spin"></i></span></span></div></div></header><div class=post-body itemprop=articleBody><blockquote><p>今天是我第一次參加<strong>Leetcode 雙週賽</strong>，所以想記錄一下今天的競賽題目。希望能透過博客來記錄自己的競賽狀況。</p></blockquote><p><strong>本週AC題數為:4/4</strong></p><h2 id=題目>題目
+<a class=header-anchor href=#%e9%a1%8c%e7%9b%ae></a></h2><h3 id=2413-smallest-even-multipleeasy---ac>2413. Smallest Even Multiple(EASY) - AC
+<a class=header-anchor href=#2413-smallest-even-multipleeasy---ac></a></h3><p>Given a positive integer <code>n</code>, return the smallest positive integer that is a multiple of both <code>2</code> and <code>n</code>.</p><a id=more></a><h4 id=example>Example
+<a class=header-anchor href=#example></a></h4><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt id=hl-0-1><a class=lnlinks href=#hl-0-1>1</a>
+</span><span class=lnt id=hl-0-2><a class=lnlinks href=#hl-0-2>2</a>
+</span><span class=lnt id=hl-0-3><a class=lnlinks href=#hl-0-3>3</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>Input: n = 5
+</span></span><span class=line><span class=cl>Output: 10
+</span></span><span class=line><span class=cl>Explanation: The smallest multiple of both 5 and 2 is 10.</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt id=hl-1-1><a class=lnlinks href=#hl-1-1>1</a>
+</span><span class=lnt id=hl-1-2><a class=lnlinks href=#hl-1-2>2</a>
+</span><span class=lnt id=hl-1-3><a class=lnlinks href=#hl-1-3>3</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>Input: n = 6
+</span></span><span class=line><span class=cl>Output: 6
+</span></span><span class=line><span class=cl>Explanation: The smallest multiple of both 6 and 2 is 6. Note that a number is a multiple of itself.</span></span></code></pre></td></tr></table></div></div><h4 id=solution>Solution
+<a class=header-anchor href=#solution></a></h4><p>這題主要是讓我們返回一個最小的整數是可以同時被<code>n</code>和<code>2</code>整除。哪解這題的思路也很簡單，就是如果<code>n</code>可以被<code>2</code>整除，就直接放回<code>n</code>否者就返回<code>2 * n</code>即可。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt id=hl-2-1><a class=lnlinks href=#hl-2-1>1</a>
+</span><span class=lnt id=hl-2-2><a class=lnlinks href=#hl-2-2>2</a>
+</span><span class=lnt id=hl-2-3><a class=lnlinks href=#hl-2-3>3</a>
+</span><span class=lnt id=hl-2-4><a class=lnlinks href=#hl-2-4>4</a>
+</span><span class=lnt id=hl-2-5><a class=lnlinks href=#hl-2-5>5</a>
+</span><span class=lnt id=hl-2-6><a class=lnlinks href=#hl-2-6>6</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=line><span class=cl><span class=k>class</span> <span class=nc>Solution</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl><span class=k>public</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>smallestEvenMultiple</span><span class=p>(</span><span class=kt>int</span> <span class=n>n</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>n</span> <span class=o>%</span> <span class=mi>2</span> <span class=o>==</span> <span class=mi>0</span> <span class=o>?</span> <span class=nl>n</span> <span class=p>:</span> <span class=mi>2</span> <span class=o>*</span> <span class=n>n</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>};</span></span></span></code></pre></td></tr></table></div></div><h3 id=2414-length-of-the-longest-alphabetical-continuous-substringmedium---ac>2414. Length of the Longest Alphabetical Continuous Substring(Medium) - AC
+<a class=header-anchor href=#2414-length-of-the-longest-alphabetical-continuous-substringmedium---ac></a></h3><p>An <strong>alphabetical continuous string</strong> is a string consisting of consecutive letters in the alphabet. In other words, it is any substring of the string <code>"abcdefghijklmnopqrstuvwxyz"</code>.</p><ul><li>For example, <code>"abc"</code> is an alphabetical continuous string, while <code>"acb"</code> and <code>"za"</code> are not.
+Given a string <code>s</code> consisting of lowercase letters only, return <em>the length of the <strong>longest</strong> alphabetical continuous substring</em>.</li></ul><h3 id=example-1>Example
+<a class=header-anchor href=#example-1></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt id=hl-3-1><a class=lnlinks href=#hl-3-1>1</a>
+</span><span class=lnt id=hl-3-2><a class=lnlinks href=#hl-3-2>2</a>
+</span><span class=lnt id=hl-3-3><a class=lnlinks href=#hl-3-3>3</a>
+</span><span class=lnt id=hl-3-4><a class=lnlinks href=#hl-3-4>4</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>Input: s = &#34;abacaba&#34;
+</span></span><span class=line><span class=cl>Output: 2
+</span></span><span class=line><span class=cl>Explanation: There are 4 distinct continuous substrings: &#34;a&#34;, &#34;b&#34;, &#34;c&#34; and &#34;ab&#34;.
+</span></span><span class=line><span class=cl>&#34;ab&#34; is the longest continuous substring.</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt id=hl-4-1><a class=lnlinks href=#hl-4-1>1</a>
+</span><span class=lnt id=hl-4-2><a class=lnlinks href=#hl-4-2>2</a>
+</span><span class=lnt id=hl-4-3><a class=lnlinks href=#hl-4-3>3</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>Input: s = &#34;abcde&#34;
+</span></span><span class=line><span class=cl>Output: 5
+</span></span><span class=line><span class=cl>Explanation: &#34;abcde&#34; is the longest continuous substring.</span></span></code></pre></td></tr></table></div></div><h3 id=solution-1>Solution
+<a class=header-anchor href=#solution-1></a></h3><p>這題主要是要讓我們在給定字串找到最長的<code>按字母順序</code>的長度(<code>a</code>之後一定是<code>b</code>,<code>ac</code>並不成立<code>按字母順序</code>)。我們可以透過<code>Sliding Window</code>的方式來幫助我們找到最長的。</p><ul><li>如果當前<code>window</code> 長度為 <code>0</code>,向右滑動(往右增長)</li><li>如果當前<code>字符</code><strong>為</strong><code>前面字符</code>的<strong>ASCII CODE + 1</strong>，則符合按字母順序， 向右滑動(往右增長)。並更新最大值。</li><li>如果當前<code>字符</code><strong>不為</strong><code>前面字符</code>的<strong>ASCII CODE + 1</strong>，重置<code>Window</code>長度,並將<code>window</code>最左邊設置為當前位置。</li></ul><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt id=hl-5-1><a class=lnlinks href=#hl-5-1> 1</a>
+</span><span class=lnt id=hl-5-2><a class=lnlinks href=#hl-5-2> 2</a>
+</span><span class=lnt id=hl-5-3><a class=lnlinks href=#hl-5-3> 3</a>
+</span><span class=lnt id=hl-5-4><a class=lnlinks href=#hl-5-4> 4</a>
+</span><span class=lnt id=hl-5-5><a class=lnlinks href=#hl-5-5> 5</a>
+</span><span class=lnt id=hl-5-6><a class=lnlinks href=#hl-5-6> 6</a>
+</span><span class=lnt id=hl-5-7><a class=lnlinks href=#hl-5-7> 7</a>
+</span><span class=lnt id=hl-5-8><a class=lnlinks href=#hl-5-8> 8</a>
+</span><span class=lnt id=hl-5-9><a class=lnlinks href=#hl-5-9> 9</a>
+</span><span class=lnt id=hl-5-10><a class=lnlinks href=#hl-5-10>10</a>
+</span><span class=lnt id=hl-5-11><a class=lnlinks href=#hl-5-11>11</a>
+</span><span class=lnt id=hl-5-12><a class=lnlinks href=#hl-5-12>12</a>
+</span><span class=lnt id=hl-5-13><a class=lnlinks href=#hl-5-13>13</a>
+</span><span class=lnt id=hl-5-14><a class=lnlinks href=#hl-5-14>14</a>
+</span><span class=lnt id=hl-5-15><a class=lnlinks href=#hl-5-15>15</a>
+</span><span class=lnt id=hl-5-16><a class=lnlinks href=#hl-5-16>16</a>
+</span><span class=lnt id=hl-5-17><a class=lnlinks href=#hl-5-17>17</a>
+</span><span class=lnt id=hl-5-18><a class=lnlinks href=#hl-5-18>18</a>
+</span><span class=lnt id=hl-5-19><a class=lnlinks href=#hl-5-19>19</a>
+</span><span class=lnt id=hl-5-20><a class=lnlinks href=#hl-5-20>20</a>
+</span><span class=lnt id=hl-5-21><a class=lnlinks href=#hl-5-21>21</a>
+</span><span class=lnt id=hl-5-22><a class=lnlinks href=#hl-5-22>22</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=line><span class=cl><span class=k>class</span> <span class=nc>Solution</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl><span class=k>public</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=n>longestContinuousSubstring</span><span class=p>(</span><span class=n>string</span> <span class=n>s</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=c1>//longest continuous substring.
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=c1>//consecutive letters
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=kt>int</span> <span class=n>res</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span> <span class=c1>//at least one
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=c1>//continuous 
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=kt>int</span> <span class=n>left</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>right</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>n</span> <span class=o>=</span> <span class=n>s</span><span class=p>.</span><span class=n>length</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>        <span class=k>while</span><span class=p>(</span><span class=n>right</span> <span class=o>&lt;</span> <span class=n>n</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span><span class=p>(</span><span class=n>left</span> <span class=o>==</span> <span class=n>right</span><span class=p>)</span> <span class=n>right</span><span class=o>++</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=k>else</span> <span class=nf>if</span><span class=p>((</span><span class=n>s</span><span class=p>[</span><span class=n>right</span><span class=p>]</span> <span class=o>-</span> <span class=sc>&#39;a&#39;</span><span class=p>)</span> <span class=o>==</span> <span class=p>(</span><span class=n>s</span><span class=p>[</span><span class=n>right</span>  <span class=o>-</span> <span class=mi>1</span><span class=p>]</span> <span class=o>-</span> <span class=sc>&#39;a&#39;</span><span class=p>)</span> <span class=o>+</span> <span class=mi>1</span> <span class=p>){</span>
+</span></span><span class=line><span class=cl>                <span class=c1>//check current right and previous
+</span></span></span><span class=line><span class=cl><span class=c1></span>                <span class=n>right</span> <span class=o>++</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=n>res</span> <span class=o>=</span> <span class=n>max</span><span class=p>(</span><span class=n>res</span><span class=p>,</span><span class=n>right</span> <span class=o>-</span> <span class=n>left</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span><span class=k>else</span> <span class=n>left</span> <span class=o>=</span> <span class=n>right</span><span class=p>;</span> <span class=c1>//reset window
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>res</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>};</span></span></span></code></pre></td></tr></table></div></div><hr><h3 id=2415-reverse-odd-levels-of-binary-treemedium---ac>2415. Reverse Odd Levels of Binary Tree(Medium) - AC
+<a class=header-anchor href=#2415-reverse-odd-levels-of-binary-treemedium---ac></a></h3><p>Given the <code>root</code> of a <strong>perfect</strong> binary tree, reverse the node values at each <strong>odd</strong> level of the tree.</p><ul><li>For example, suppose the node values at level 3 are <code>[2,1,3,4,7,11,29,18]</code>, then it should become <code>[18,29,11,7,4,3,1,2]</code>.
+Return <code>the root of the reversed tree</code>.</li></ul><p>A binary tree is <strong>perfect</strong> if all parent nodes have two children and all leaves are on the same level.</p><p>The <strong>level</strong> of a node is the number of edges along the path between it and the root node.</p><h3 id=example-2>Example
+<a class=header-anchor href=#example-2></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt id=hl-6-1><a class=lnlinks href=#hl-6-1>1</a>
+</span><span class=lnt id=hl-6-2><a class=lnlinks href=#hl-6-2>2</a>
+</span><span class=lnt id=hl-6-3><a class=lnlinks href=#hl-6-3>3</a>
+</span><span class=lnt id=hl-6-4><a class=lnlinks href=#hl-6-4>4</a>
+</span><span class=lnt id=hl-6-5><a class=lnlinks href=#hl-6-5>5</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>Input: root = [2,3,5,8,13,21,34]
+</span></span><span class=line><span class=cl>Output: [2,5,3,8,13,21,34]
+</span></span><span class=line><span class=cl>Explanation: 
+</span></span><span class=line><span class=cl>The tree has only one odd level.
+</span></span><span class=line><span class=cl>The nodes at level 1 are 3, 5 respectively, which are reversed and become 5, 3.</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt id=hl-7-1><a class=lnlinks href=#hl-7-1>1</a>
+</span><span class=lnt id=hl-7-2><a class=lnlinks href=#hl-7-2>2</a>
+</span><span class=lnt id=hl-7-3><a class=lnlinks href=#hl-7-3>3</a>
+</span><span class=lnt id=hl-7-4><a class=lnlinks href=#hl-7-4>4</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>Input: root = [7,13,11]
+</span></span><span class=line><span class=cl>Output: [7,11,13]
+</span></span><span class=line><span class=cl>Explanation: 
+</span></span><span class=line><span class=cl>The nodes at level 1 are 13, 11, which are reversed and become 11, 13.</span></span></code></pre></td></tr></table></div></div><hr><h3 id=solution-2>Solution
+<a class=header-anchor href=#solution-2></a></h3><p>這道題就是要讓我們翻轉<code>Complete Binary Tree</code>中，<strong>奇數</strong>層的<code>Node</code>。我們可以透過<code>BFS</code>來解題，會比較簡單，因為<code>BFS</code>可以很清楚的知道當前遍歷的是那一層。只要層數為奇數我們就做*數值交換(Swap)*即可。</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt id=hl-8-1><a class=lnlinks href=#hl-8-1> 1</a>
+</span><span class=lnt id=hl-8-2><a class=lnlinks href=#hl-8-2> 2</a>
+</span><span class=lnt id=hl-8-3><a class=lnlinks href=#hl-8-3> 3</a>
+</span><span class=lnt id=hl-8-4><a class=lnlinks href=#hl-8-4> 4</a>
+</span><span class=lnt id=hl-8-5><a class=lnlinks href=#hl-8-5> 5</a>
+</span><span class=lnt id=hl-8-6><a class=lnlinks href=#hl-8-6> 6</a>
+</span><span class=lnt id=hl-8-7><a class=lnlinks href=#hl-8-7> 7</a>
+</span><span class=lnt id=hl-8-8><a class=lnlinks href=#hl-8-8> 8</a>
+</span><span class=lnt id=hl-8-9><a class=lnlinks href=#hl-8-9> 9</a>
+</span><span class=lnt id=hl-8-10><a class=lnlinks href=#hl-8-10>10</a>
+</span><span class=lnt id=hl-8-11><a class=lnlinks href=#hl-8-11>11</a>
+</span><span class=lnt id=hl-8-12><a class=lnlinks href=#hl-8-12>12</a>
+</span><span class=lnt id=hl-8-13><a class=lnlinks href=#hl-8-13>13</a>
+</span><span class=lnt id=hl-8-14><a class=lnlinks href=#hl-8-14>14</a>
+</span><span class=lnt id=hl-8-15><a class=lnlinks href=#hl-8-15>15</a>
+</span><span class=lnt id=hl-8-16><a class=lnlinks href=#hl-8-16>16</a>
+</span><span class=lnt id=hl-8-17><a class=lnlinks href=#hl-8-17>17</a>
+</span><span class=lnt id=hl-8-18><a class=lnlinks href=#hl-8-18>18</a>
+</span><span class=lnt id=hl-8-19><a class=lnlinks href=#hl-8-19>19</a>
+</span><span class=lnt id=hl-8-20><a class=lnlinks href=#hl-8-20>20</a>
+</span><span class=lnt id=hl-8-21><a class=lnlinks href=#hl-8-21>21</a>
+</span><span class=lnt id=hl-8-22><a class=lnlinks href=#hl-8-22>22</a>
+</span><span class=lnt id=hl-8-23><a class=lnlinks href=#hl-8-23>23</a>
+</span><span class=lnt id=hl-8-24><a class=lnlinks href=#hl-8-24>24</a>
+</span><span class=lnt id=hl-8-25><a class=lnlinks href=#hl-8-25>25</a>
+</span><span class=lnt id=hl-8-26><a class=lnlinks href=#hl-8-26>26</a>
+</span><span class=lnt id=hl-8-27><a class=lnlinks href=#hl-8-27>27</a>
+</span><span class=lnt id=hl-8-28><a class=lnlinks href=#hl-8-28>28</a>
+</span><span class=lnt id=hl-8-29><a class=lnlinks href=#hl-8-29>29</a>
+</span><span class=lnt id=hl-8-30><a class=lnlinks href=#hl-8-30>30</a>
+</span><span class=lnt id=hl-8-31><a class=lnlinks href=#hl-8-31>31</a>
+</span><span class=lnt id=hl-8-32><a class=lnlinks href=#hl-8-32>32</a>
+</span><span class=lnt id=hl-8-33><a class=lnlinks href=#hl-8-33>33</a>
+</span><span class=lnt id=hl-8-34><a class=lnlinks href=#hl-8-34>34</a>
+</span><span class=lnt id=hl-8-35><a class=lnlinks href=#hl-8-35>35</a>
+</span><span class=lnt id=hl-8-36><a class=lnlinks href=#hl-8-36>36</a>
+</span><span class=lnt id=hl-8-37><a class=lnlinks href=#hl-8-37>37</a>
+</span><span class=lnt id=hl-8-38><a class=lnlinks href=#hl-8-38>38</a>
+</span><span class=lnt id=hl-8-39><a class=lnlinks href=#hl-8-39>39</a>
+</span><span class=lnt id=hl-8-40><a class=lnlinks href=#hl-8-40>40</a>
+</span><span class=lnt id=hl-8-41><a class=lnlinks href=#hl-8-41>41</a>
+</span><span class=lnt id=hl-8-42><a class=lnlinks href=#hl-8-42>42</a>
+</span><span class=lnt id=hl-8-43><a class=lnlinks href=#hl-8-43>43</a>
+</span><span class=lnt id=hl-8-44><a class=lnlinks href=#hl-8-44>44</a>
+</span><span class=lnt id=hl-8-45><a class=lnlinks href=#hl-8-45>45</a>
+</span><span class=lnt id=hl-8-46><a class=lnlinks href=#hl-8-46>46</a>
+</span><span class=lnt id=hl-8-47><a class=lnlinks href=#hl-8-47>47</a>
+</span><span class=lnt id=hl-8-48><a class=lnlinks href=#hl-8-48>48</a>
+</span><span class=lnt id=hl-8-49><a class=lnlinks href=#hl-8-49>49</a>
+</span><span class=lnt id=hl-8-50><a class=lnlinks href=#hl-8-50>50</a>
+</span><span class=lnt id=hl-8-51><a class=lnlinks href=#hl-8-51>51</a>
+</span><span class=lnt id=hl-8-52><a class=lnlinks href=#hl-8-52>52</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=line><span class=cl><span class=cm>/**
+</span></span></span><span class=line><span class=cl><span class=cm> * Definition for a binary tree node.
+</span></span></span><span class=line><span class=cl><span class=cm> * struct TreeNode {
+</span></span></span><span class=line><span class=cl><span class=cm> *     int val;
+</span></span></span><span class=line><span class=cl><span class=cm> *     TreeNode *left;
+</span></span></span><span class=line><span class=cl><span class=cm> *     TreeNode *right;
+</span></span></span><span class=line><span class=cl><span class=cm> *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+</span></span></span><span class=line><span class=cl><span class=cm> *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+</span></span></span><span class=line><span class=cl><span class=cm> *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+</span></span></span><span class=line><span class=cl><span class=cm> * };
+</span></span></span><span class=line><span class=cl><span class=cm> */</span>
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>Solution</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl><span class=k>public</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>    <span class=n>TreeNode</span><span class=o>*</span> <span class=n>reverseOddLevels</span><span class=p>(</span><span class=n>TreeNode</span><span class=o>*</span> <span class=n>root</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span><span class=p>(</span><span class=o>!</span><span class=n>root</span><span class=p>)</span> <span class=k>return</span> <span class=k>nullptr</span><span class=p>;</span> 
+</span></span><span class=line><span class=cl>        <span class=n>queue</span><span class=o>&lt;</span><span class=n>TreeNode</span><span class=o>*&gt;</span> <span class=n>q</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>q</span><span class=p>.</span><span class=n>push</span><span class=p>(</span><span class=n>root</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>depth</span> <span class=o>=</span> <span class=o>-</span><span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=k>while</span><span class=p>(</span><span class=o>!</span><span class=n>q</span><span class=p>.</span><span class=n>empty</span><span class=p>()){</span>
+</span></span><span class=line><span class=cl>            <span class=kt>int</span> <span class=n>size</span> <span class=o>=</span> <span class=n>q</span><span class=p>.</span><span class=n>size</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>            <span class=n>depth</span><span class=o>++</span><span class=p>;</span> 
+</span></span><span class=line><span class=cl>            <span class=n>vector</span><span class=o>&lt;</span><span class=n>TreeNode</span><span class=o>*&gt;</span> <span class=n>temp</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>            <span class=k>for</span><span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span><span class=n>i</span><span class=o>&lt;</span><span class=n>size</span><span class=p>;</span><span class=n>i</span><span class=o>++</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>                <span class=k>auto</span> <span class=n>front</span> <span class=o>=</span> <span class=n>q</span><span class=p>.</span><span class=n>front</span><span class=p>();</span><span class=n>q</span><span class=p>.</span><span class=n>pop</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>                <span class=k>if</span><span class=p>(</span><span class=n>front</span><span class=o>-&gt;</span><span class=n>left</span><span class=p>)</span> <span class=n>q</span><span class=p>.</span><span class=n>push</span><span class=p>(</span><span class=n>front</span><span class=o>-&gt;</span><span class=n>left</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>                <span class=k>if</span><span class=p>(</span><span class=n>front</span><span class=o>-&gt;</span><span class=n>right</span><span class=p>)</span> <span class=n>q</span><span class=p>.</span><span class=n>push</span><span class=p>(</span><span class=n>front</span><span class=o>-&gt;</span><span class=n>right</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>                
+</span></span><span class=line><span class=cl>                <span class=k>if</span><span class=p>((</span><span class=n>depth</span> <span class=o>+</span> <span class=mi>1</span><span class=p>)</span> <span class=o>%</span> <span class=mi>2</span> <span class=o>==</span> <span class=mi>0</span><span class=p>)</span> <span class=n>temp</span><span class=p>.</span><span class=n>push_back</span><span class=p>(</span><span class=n>front</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>            
+</span></span><span class=line><span class=cl>            <span class=k>if</span><span class=p>((</span><span class=n>depth</span> <span class=o>+</span> <span class=mi>1</span><span class=p>)</span> <span class=o>%</span> <span class=mi>2</span> <span class=o>==</span> <span class=mi>0</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>                <span class=kt>int</span> <span class=n>left</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                <span class=kt>int</span> <span class=n>right</span> <span class=o>=</span> <span class=n>temp</span><span class=p>.</span><span class=n>size</span><span class=p>()</span> <span class=o>-</span> <span class=mi>1</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>                 <span class=k>while</span><span class=p>(</span><span class=n>left</span> <span class=o>&lt;</span> <span class=n>right</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>                    <span class=n>swap</span><span class=p>(</span><span class=n>temp</span><span class=p>[</span><span class=n>left</span><span class=o>++</span><span class=p>]</span><span class=o>-&gt;</span><span class=n>val</span><span class=p>,</span><span class=n>temp</span><span class=p>[</span><span class=n>right</span><span class=o>--</span><span class=p>]</span><span class=o>-&gt;</span><span class=n>val</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>                <span class=p>}</span>   
+</span></span><span class=line><span class=cl>            <span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        
+</span></span><span class=line><span class=cl>        
+</span></span><span class=line><span class=cl><span class=c1>//         for(int i = 0;i&lt;node.size();i++){
+</span></span></span><span class=line><span class=cl><span class=c1>//             int left = 0;
+</span></span></span><span class=line><span class=cl><span class=c1>//             int right = node[i].size() - 1;
+</span></span></span><span class=line><span class=cl><span class=c1>//             while(left &lt; right){
+</span></span></span><span class=line><span class=cl><span class=c1>//                 swap(node[i][left++]-&gt;val,node[i][right--]-&gt;val);
+</span></span></span><span class=line><span class=cl><span class=c1>//             }
+</span></span></span><span class=line><span class=cl><span class=c1>//         }
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=k>return</span> <span class=n>root</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>};</span></span></span></code></pre></td></tr></table></div></div><hr><h3 id=2416-sum-of-prefix-scores-of-stringshard---ac>2416. Sum of Prefix Scores of Strings(Hard) - AC
+<a class=header-anchor href=#2416-sum-of-prefix-scores-of-stringshard---ac></a></h3><p>You are given an array <code>words</code> of size <code>n</code> consisting of <strong>non-empty</strong> strings.</p><p>We define the <strong>score</strong> of a string <code>word</code> as the <strong>number</strong> of strings <code>words[i]</code> such that word is a <strong>prefix</strong> of <code>words[i]</code>.</p><ul><li>For example, if <code>words = ["a", "ab", "abc", "cab"]</code>, then the score of &ldquo;ab&rdquo; is 2, since &ldquo;ab&rdquo; is a prefix of both <code>"ab"</code> and <code>"abc"</code>.
+Return an <em>array <code>answer</code> of size <code>n</code> where <code>answer[i]</code>s is the <strong>sum</strong> of scores of every <strong>non-empty</strong> prefix of <code>words[i]</code></em>.</li></ul><p><strong>Note</strong> that a string is considered as a prefix of itself.</p><h3 id=example-3>Example
+<a class=header-anchor href=#example-3></a></h3><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt id=hl-9-1><a class=lnlinks href=#hl-9-1> 1</a>
+</span><span class=lnt id=hl-9-2><a class=lnlinks href=#hl-9-2> 2</a>
+</span><span class=lnt id=hl-9-3><a class=lnlinks href=#hl-9-3> 3</a>
+</span><span class=lnt id=hl-9-4><a class=lnlinks href=#hl-9-4> 4</a>
+</span><span class=lnt id=hl-9-5><a class=lnlinks href=#hl-9-5> 5</a>
+</span><span class=lnt id=hl-9-6><a class=lnlinks href=#hl-9-6> 6</a>
+</span><span class=lnt id=hl-9-7><a class=lnlinks href=#hl-9-7> 7</a>
+</span><span class=lnt id=hl-9-8><a class=lnlinks href=#hl-9-8> 8</a>
+</span><span class=lnt id=hl-9-9><a class=lnlinks href=#hl-9-9> 9</a>
+</span><span class=lnt id=hl-9-10><a class=lnlinks href=#hl-9-10>10</a>
+</span><span class=lnt id=hl-9-11><a class=lnlinks href=#hl-9-11>11</a>
+</span><span class=lnt id=hl-9-12><a class=lnlinks href=#hl-9-12>12</a>
+</span><span class=lnt id=hl-9-13><a class=lnlinks href=#hl-9-13>13</a>
+</span><span class=lnt id=hl-9-14><a class=lnlinks href=#hl-9-14>14</a>
+</span><span class=lnt id=hl-9-15><a class=lnlinks href=#hl-9-15>15</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>Input: words = [&#34;abc&#34;,&#34;ab&#34;,&#34;bc&#34;,&#34;b&#34;]
+</span></span><span class=line><span class=cl>Output: [5,4,3,2]
+</span></span><span class=line><span class=cl>Explanation: The answer for each string is the following:
+</span></span><span class=line><span class=cl>- &#34;abc&#34; has 3 prefixes: &#34;a&#34;, &#34;ab&#34;, and &#34;abc&#34;.
+</span></span><span class=line><span class=cl>- There are 2 strings with the prefix &#34;a&#34;, 2 strings with the prefix &#34;ab&#34;, and 1 string with the prefix &#34;abc&#34;.
+</span></span><span class=line><span class=cl>The total is answer[0] = 2 + 2 + 1 = 5.
+</span></span><span class=line><span class=cl>- &#34;ab&#34; has 2 prefixes: &#34;a&#34; and &#34;ab&#34;.
+</span></span><span class=line><span class=cl>- There are 2 strings with the prefix &#34;a&#34;, and 2 strings with the prefix &#34;ab&#34;.
+</span></span><span class=line><span class=cl>The total is answer[1] = 2 + 2 = 4.
+</span></span><span class=line><span class=cl>- &#34;bc&#34; has 2 prefixes: &#34;b&#34; and &#34;bc&#34;.
+</span></span><span class=line><span class=cl>- There are 2 strings with the prefix &#34;b&#34;, and 1 string with the prefix &#34;bc&#34;.
+</span></span><span class=line><span class=cl>The total is answer[2] = 2 + 1 = 3.
+</span></span><span class=line><span class=cl>- &#34;b&#34; has 1 prefix: &#34;b&#34;.
+</span></span><span class=line><span class=cl>- There are 2 strings with the prefix &#34;b&#34;.
+</span></span><span class=line><span class=cl>The total is answer[3] = 2.</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt id=hl-10-1><a class=lnlinks href=#hl-10-1>1</a>
+</span><span class=lnt id=hl-10-2><a class=lnlinks href=#hl-10-2>2</a>
+</span><span class=lnt id=hl-10-3><a class=lnlinks href=#hl-10-3>3</a>
+</span><span class=lnt id=hl-10-4><a class=lnlinks href=#hl-10-4>4</a>
+</span><span class=lnt id=hl-10-5><a class=lnlinks href=#hl-10-5>5</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>Input: words = [&#34;abcd&#34;]
+</span></span><span class=line><span class=cl>Output: [4]
+</span></span><span class=line><span class=cl>Explanation:
+</span></span><span class=line><span class=cl>&#34;abcd&#34; has 4 prefixes: &#34;a&#34;, &#34;ab&#34;, &#34;abc&#34;, and &#34;abcd&#34;.
+</span></span><span class=line><span class=cl>Each prefix has a score of one, so the total is answer[0] = 1 + 1 + 1 + 1 = 4.</span></span></code></pre></td></tr></table></div></div><hr><h3 id=solution-3>Solution
+<a class=header-anchor href=#solution-3></a></h3><p>這題有一點難理解，就是要我們計算以<code>words[i]</code> 為<code>prefix</code>(以<code>words[i][0...j]</code>為前綴)的字符串有多少個。例如<code>abc</code>,他的prefix會有3個<code>[a,ab,abc]</code>。我們只要知道<code>words</code>中有哪些字符串以<code>a</code>、<code>ab</code>和<code>abc</code>為prefix，他們的個數加總起來便是<code>words[i]</code>的答案。</p><p>哪我們要怎麼知道有哪些字符串包含這些前綴呢？我們可以透過<code>字典樹/前綴樹(Tire Tree)</code>。</p><ol><li>按著<code>Words</code> List 建立<code>Tire Tree</code>，並為每個<code>Node</code>設置一個<code>Counter</code>，用於計數有多少個字符有相同的prefix。</li><li>按著<code>Words</code> 遍歷<code>Tire Tree</code>並將經過的<code>Tree Node</code>的<code>Counter</code>的數值累加起來，便會得到<code>words[i]</code>的分數。</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt id=hl-11-1><a class=lnlinks href=#hl-11-1> 1</a>
+</span><span class=lnt id=hl-11-2><a class=lnlinks href=#hl-11-2> 2</a>
+</span><span class=lnt id=hl-11-3><a class=lnlinks href=#hl-11-3> 3</a>
+</span><span class=lnt id=hl-11-4><a class=lnlinks href=#hl-11-4> 4</a>
+</span><span class=lnt id=hl-11-5><a class=lnlinks href=#hl-11-5> 5</a>
+</span><span class=lnt id=hl-11-6><a class=lnlinks href=#hl-11-6> 6</a>
+</span><span class=lnt id=hl-11-7><a class=lnlinks href=#hl-11-7> 7</a>
+</span><span class=lnt id=hl-11-8><a class=lnlinks href=#hl-11-8> 8</a>
+</span><span class=lnt id=hl-11-9><a class=lnlinks href=#hl-11-9> 9</a>
+</span><span class=lnt id=hl-11-10><a class=lnlinks href=#hl-11-10>10</a>
+</span><span class=lnt id=hl-11-11><a class=lnlinks href=#hl-11-11>11</a>
+</span><span class=lnt id=hl-11-12><a class=lnlinks href=#hl-11-12>12</a>
+</span><span class=lnt id=hl-11-13><a class=lnlinks href=#hl-11-13>13</a>
+</span><span class=lnt id=hl-11-14><a class=lnlinks href=#hl-11-14>14</a>
+</span><span class=lnt id=hl-11-15><a class=lnlinks href=#hl-11-15>15</a>
+</span><span class=lnt id=hl-11-16><a class=lnlinks href=#hl-11-16>16</a>
+</span><span class=lnt id=hl-11-17><a class=lnlinks href=#hl-11-17>17</a>
+</span><span class=lnt id=hl-11-18><a class=lnlinks href=#hl-11-18>18</a>
+</span><span class=lnt id=hl-11-19><a class=lnlinks href=#hl-11-19>19</a>
+</span><span class=lnt id=hl-11-20><a class=lnlinks href=#hl-11-20>20</a>
+</span><span class=lnt id=hl-11-21><a class=lnlinks href=#hl-11-21>21</a>
+</span><span class=lnt id=hl-11-22><a class=lnlinks href=#hl-11-22>22</a>
+</span><span class=lnt id=hl-11-23><a class=lnlinks href=#hl-11-23>23</a>
+</span><span class=lnt id=hl-11-24><a class=lnlinks href=#hl-11-24>24</a>
+</span><span class=lnt id=hl-11-25><a class=lnlinks href=#hl-11-25>25</a>
+</span><span class=lnt id=hl-11-26><a class=lnlinks href=#hl-11-26>26</a>
+</span><span class=lnt id=hl-11-27><a class=lnlinks href=#hl-11-27>27</a>
+</span><span class=lnt id=hl-11-28><a class=lnlinks href=#hl-11-28>28</a>
+</span><span class=lnt id=hl-11-29><a class=lnlinks href=#hl-11-29>29</a>
+</span><span class=lnt id=hl-11-30><a class=lnlinks href=#hl-11-30>30</a>
+</span><span class=lnt id=hl-11-31><a class=lnlinks href=#hl-11-31>31</a>
+</span><span class=lnt id=hl-11-32><a class=lnlinks href=#hl-11-32>32</a>
+</span><span class=lnt id=hl-11-33><a class=lnlinks href=#hl-11-33>33</a>
+</span><span class=lnt id=hl-11-34><a class=lnlinks href=#hl-11-34>34</a>
+</span><span class=lnt id=hl-11-35><a class=lnlinks href=#hl-11-35>35</a>
+</span><span class=lnt id=hl-11-36><a class=lnlinks href=#hl-11-36>36</a>
+</span><span class=lnt id=hl-11-37><a class=lnlinks href=#hl-11-37>37</a>
+</span><span class=lnt id=hl-11-38><a class=lnlinks href=#hl-11-38>38</a>
+</span><span class=lnt id=hl-11-39><a class=lnlinks href=#hl-11-39>39</a>
+</span><span class=lnt id=hl-11-40><a class=lnlinks href=#hl-11-40>40</a>
+</span><span class=lnt id=hl-11-41><a class=lnlinks href=#hl-11-41>41</a>
+</span><span class=lnt id=hl-11-42><a class=lnlinks href=#hl-11-42>42</a>
+</span><span class=lnt id=hl-11-43><a class=lnlinks href=#hl-11-43>43</a>
+</span><span class=lnt id=hl-11-44><a class=lnlinks href=#hl-11-44>44</a>
+</span><span class=lnt id=hl-11-45><a class=lnlinks href=#hl-11-45>45</a>
+</span><span class=lnt id=hl-11-46><a class=lnlinks href=#hl-11-46>46</a>
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c++ data-lang=c++><span class=line><span class=cl><span class=k>class</span> <span class=nc>TrieTree</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=k>public</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>        <span class=n>TrieTree</span><span class=p>(){</span>
+</span></span><span class=line><span class=cl>            <span class=n>children</span> <span class=o>=</span> <span class=n>vector</span><span class=o>&lt;</span><span class=n>TrieTree</span><span class=o>*&gt;</span><span class=p>(</span><span class=mi>26</span><span class=p>,</span><span class=k>nullptr</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>samePrefixCount</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span><span class=c1>//how many string have the same prefix
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=n>vector</span><span class=o>&lt;</span><span class=n>TrieTree</span><span class=o>*&gt;</span> <span class=n>children</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl><span class=p>};</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=k>class</span> <span class=nc>Solution</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl><span class=k>public</span><span class=o>:</span>
+</span></span><span class=line><span class=cl>    <span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;</span> <span class=n>sumPrefixScores</span><span class=p>(</span><span class=n>vector</span><span class=o>&lt;</span><span class=n>string</span><span class=o>&gt;&amp;</span> <span class=n>words</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>TrieTree</span> <span class=o>*</span><span class=n>root</span> <span class=o>=</span> <span class=k>new</span> <span class=n>TrieTree</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span><span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span><span class=n>i</span><span class=o>&lt;</span><span class=n>words</span><span class=p>.</span><span class=n>size</span><span class=p>();</span><span class=n>i</span><span class=o>++</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>            <span class=n>BuildTree</span><span class=p>(</span><span class=n>words</span><span class=p>[</span><span class=n>i</span><span class=p>],</span><span class=n>root</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        
+</span></span><span class=line><span class=cl>        <span class=n>vector</span><span class=o>&lt;</span><span class=kt>int</span><span class=o>&gt;</span> <span class=n>res</span><span class=p>(</span><span class=n>words</span><span class=p>.</span><span class=n>size</span><span class=p>(),</span><span class=mi>0</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span><span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span><span class=n>i</span><span class=o>&lt;</span><span class=n>words</span><span class=p>.</span><span class=n>size</span><span class=p>();</span><span class=n>i</span><span class=o>++</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>            <span class=n>res</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>=</span> <span class=n>countPrefixSum</span><span class=p>(</span><span class=n>words</span><span class=p>[</span><span class=n>i</span><span class=p>],</span><span class=n>root</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>res</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=kt>void</span> <span class=nf>BuildTree</span><span class=p>(</span><span class=n>string</span><span class=o>&amp;</span> <span class=n>str</span><span class=p>,</span> <span class=n>TrieTree</span> <span class=o>*</span><span class=n>root</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>        <span class=n>TrieTree</span> <span class=o>*</span><span class=n>head</span> <span class=o>=</span> <span class=n>root</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span><span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span><span class=n>i</span><span class=o>&lt;</span><span class=n>str</span><span class=p>.</span><span class=n>length</span><span class=p>();</span><span class=n>i</span><span class=o>++</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span><span class=p>(</span><span class=n>head</span><span class=o>-&gt;</span><span class=n>children</span><span class=p>[</span><span class=n>str</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>-</span> <span class=sc>&#39;a&#39;</span><span class=p>]</span> <span class=o>==</span> <span class=k>nullptr</span><span class=p>)</span> <span class=n>head</span><span class=o>-&gt;</span><span class=n>children</span><span class=p>[</span><span class=n>str</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>-</span> <span class=sc>&#39;a&#39;</span><span class=p>]</span> <span class=o>=</span> <span class=k>new</span> <span class=n>TrieTree</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>            <span class=n>head</span> <span class=o>=</span> <span class=n>head</span><span class=o>-&gt;</span><span class=n>children</span><span class=p>[</span><span class=n>str</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>-</span> <span class=sc>&#39;a&#39;</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>            <span class=n>head</span><span class=o>-&gt;</span><span class=n>samePrefixCount</span><span class=o>++</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>    
+</span></span><span class=line><span class=cl>    <span class=kt>int</span> <span class=nf>countPrefixSum</span><span class=p>(</span><span class=n>string</span><span class=o>&amp;</span> <span class=n>str</span><span class=p>,</span> <span class=n>TrieTree</span> <span class=o>*</span><span class=n>root</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>count</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=n>TrieTree</span> <span class=o>*</span><span class=n>head</span> <span class=o>=</span> <span class=n>root</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span><span class=p>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span><span class=n>i</span><span class=o>&lt;</span><span class=n>str</span><span class=p>.</span><span class=n>length</span><span class=p>();</span><span class=n>i</span><span class=o>++</span><span class=p>){</span>
+</span></span><span class=line><span class=cl>            <span class=n>head</span> <span class=o>=</span> <span class=n>head</span><span class=o>-&gt;</span><span class=n>children</span><span class=p>[</span><span class=n>str</span><span class=p>[</span><span class=n>i</span><span class=p>]</span> <span class=o>-</span> <span class=sc>&#39;a&#39;</span><span class=p>];</span>
+</span></span><span class=line><span class=cl>            <span class=n>count</span> <span class=o>+=</span> <span class=n>head</span><span class=o>-&gt;</span> <span class=n>samePrefixCount</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>        <span class=p>}</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>count</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>};</span></span></span></code></pre></td></tr></table></div></div><h2 id=總結>總結
+<a class=header-anchor href=#%e7%b8%bd%e7%b5%90></a></h2><p>今天這4道題可能是比較簡單，所以才能順利的做完。接下來每週都會去參加<strong>LeetCode競賽</strong>，不論有沒有做出來都會寫一篇文章做總結。希望自己能透過競賽知道自己的不足之處！</p></div><footer class=post-footer><div class=post-tags><a href=/tags/leetcode-contest/>leetcode-contest</a></div><hr><div class=post-copyright><img src=/imgs/cc/cc.svg class=cc-icon width=75 height=75 align=right alt=共享知識 title=共享知識><ul><li class=post-copyright-title><strong>文章標題：</strong>
+Leetcode Weekly Contest 331(第一次參加競賽)</li><li class=post-copyright-author><strong>本文作者： </strong>Jackson.tmm</li><li class=post-copyright-link><strong>本文鏈接：</strong>
+<a id=post-cr-link href=https://ryantokmanmokmtm.github.io/techs/coding/leetcodeweeklycontest331/ title="Leetcode Weekly Contest 331(第一次參加競賽)">https://ryantokmanmokmtm.github.io/techs/coding/leetcodeweeklycontest331/</a></li><li class=post-copyright-license><strong>版權聲明： </strong>本作品採用 <i class="fab fa-fw fa-creative-commons"></i><a target=_blank href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hant>BY-NC-SA</a> 授權協議。轉載請註明出處！</li><li><div class=license-icons><a href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hant target=_blank><img src=/imgs/cc/big/by_nc_sa.svg alt=BY-NC-SA title=BY-NC-SA>
+</a><a href=https://notbyai.fyi target=_blank><img src=/imgs/notbyai/zh-hant/white.svg title="Not By AI"></a></div></li></ul></div><div class=followme><span>歡迎關注我的其它發布渠道</span><div class=social-list><div class=social-item><a target=_blank class=social-link href=https://www.instagram.com/tm_m.0418/><span class=icon><i class="fab fa-instagram"></i>
+</span><span class=label>Instagram</span></a></div><div class=social-item><a target=_blank class=social-link href=https://www.linkedin.com/in/jackson-moktokman><span class=icon><i class="fab fa-linkedin"></i>
+</span><span class=label>LinkedIn</span></a></div></div></div><div class=post-nav><div class="post-nav-next post-nav-item"><a href=/techs/coding/leetcode-contest319/ rel=next title="[總結]Leetcode 週賽第319場復盤總結"><i class="fa fa-chevron-left"></i> [總結]Leetcode 週賽第319場復盤總結</a></div><div class="post-nav-prev post-nav-item"><a href=/techs/project/dev-ottapp-1/ rel=prev title=[開發日記]OTT電影社群APP(一)>[開發日記]OTT電影社群APP(一)
+<i class="fa fa-chevron-right"></i></a></div></div></footer></article></div><div id=comments class=post-comments><div class=comment-head><div class=comment-headline><i class="fas fa-comments fa-fw"></i>
+<span></span></div></div><div class=comment-wrap><div><div class=comment-loading><i class="fa fa-sync fa-spin"></i></div><div class=utterances-container></div></div></div></div></div></main><footer class=footer><div class=footer-inner><div class=copyright>&copy;
+<span itemprop=copyrightYear>2022 - 2025
+</span><span class=with-love><i class="fa fa-heart"></i>
+</span><span class=author itemprop=copyrightHolder>Jackson.tmm</span></div><script type=text/javascript src=https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.min.js></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/live2d-widget@3.1.4/lib/L2Dwidget.0.min.js></script><div class="pio-container left"><div class=pio-action></div><canvas id=pio width=300 height=500></canvas></div></div><div class=elfsight-app-b04b61d3-ff26-4d9d-a289-163c1b59bd32 data-elfsight-app-lazy></div></div></footer><script class=next-config data-name=page type=application/json>{"clipboard":{"js":{"alias":"clipboard","file":"dist/clipboard.min.js","name":"clipboard.js","version":"2.0.11"}},"comments":true,"expired":false,"isHome":false,"isPage":true,"path":"leetcodeweeklycontest331","permalink":"https://ryantokmanmokmtm.github.io/techs/coding/leetcodeweeklycontest331/","title":"Leetcode Weekly Contest 331(第一次參加競賽)","toc":false,"waline":{"commentcnt":{"alias":"@waline/client","alias_name":"waline","file":"dist/comment.js","name":"comment","version":"2.15.8"}}}</script><script type=text/javascript src=https://ryantokmanmokmtm.github.io/js/3rd/animejs/3.2.2/anime.min.js crossorigin=anonymous defer></script><script type=text/javascript src=https://ryantokmanmokmtm.github.io/js/3rd/viewerjs/1.11.6/viewer.min.js crossorigin=anonymous defer></script><script class=next-config data-name=main type=application/json>{"bookmark":{"color":"#222","enable":true,"save":"manual"},"copybtn":true,"darkmode":true,"giscus":{"cfg":{"category":"Comments","categoryid":null,"emit":false,"inputposition":"top","mapping":"title","reactions":false,"repo":"username/repo-name","repoid":null,"theme":"preferred_color_scheme"},"js":"https://giscus.app/client.js"},"hostname":"https://ryantokmanmokmtm.github.io/","i18n":{"ds_day":" 天前","ds_days":" 天 ","ds_hour":" 小時前","ds_hours":" 小時 ","ds_just":"剛剛","ds_min":" 分鐘前","ds_mins":" 分鐘","ds_month":" 個月前","ds_years":" 年 ","empty":"沒有找到任何搜索結果：${query}","hits":"找到 ${hits} 個搜索結果","hits_time":"找到 ${hits} 個搜索結果（用時 ${time} 毫秒）","placeholder":"搜索..."},"isMultiLang":false,"lang":"zh-tw","lazyload":false,"localSearch":{"enable":true,"limit":1e3,"path":"/searchindexes.xml","preload":false,"topnperarticle":-1,"trigger":"auto","unescape":false},"motion":{"async":true,"enable":true,"transition":{"collheader":"slideInRight","postblock":"fadeIn","postbody":"fadeInDown","postheader":"fadeInDown","sidebar":"fadeInUp"}},"postmeta":{"comments":{"enable":true,"plugin":"waline"},"views":{"enable":true,"plugin":"busuanzi"}},"root":"/","scheme":"Gemini","share":{"addtoany":{"js":"https://static.addtoany.com/menu/page.js","locale":"zh-CN","num":8},"enable":false},"sidebar":{"display":"post","offset":12,"padding":18,"position":"left","width":256},"utterances":{"cfg":{"issueterm":"pathname","label":"comments","repo":"RyanTokManMokMTM/RyanTokManMokMTM.github.io","theme":"github-light"},"js":"https://utteranc.es/client.js"},"vendor":{"plugins":"local","router":{"name":"local","type":"modern","url":"https://ryantokmanmokmtm.github.io/js/3rd"}},"version":"4.8.3","waline":{"cfg":{"emoji":false,"imguploader":false,"placeholder":"请文明发言哟 ヾ(≧▽≦*)o","reaction":true,"reactiontext":["点赞","踩一下","得意","不屑","尴尬","睡觉"],"reactiontitle":"你认为这篇文章怎么样？","requiredmeta":["nick","mail"],"serverurl":"https://walinejs.comment.lithub.cc","sofa":"快来发表你的意见吧 (≧∀≦)ゞ","wordlimit":200},"css":{"alias":"@waline/client","file":"dist/waline.css","name":"waline","version":"2.15.8"},"js":{"alias":"@waline/client","file":"dist/waline.js","name":"waline","version":"2.15.8"}}}</script><script type=text/javascript src="/js/main.min.js?=1749962942" defer></script><script type=text/javascript src="/js/clipboard.min.js?=1749962943" defer></script><script src=https://static.elfsight.com/platform/platform.js data-use-service-core defer></script><script src=/js/l2d.js></script><script src=/js/pio.js></script><script>var pio=new Paul_Pio({mode:"draggable",hidden:!0,content:{welcome:["歡迎來到Jackson的小宇宙！","今天天氣不錯，一起来玩吧！","博主有空的話，會寫一寫博客記錄一下!"],custom:[{selector:".home-social a:last-child",text:"在這里可以了解博主的日常噢~"},{selector:".post-item a",type:"read"},{selector:".post-content a, .page-content a",type:"link"}]},model:["/model/umaru/model.json","/model/tororo/tororo.model.json","/model/HN/nepmaid/model.json","/model/HN/nepgearswim/model.json","/model/HN/neptune_santa/model.json","/model/other/rem/model.json","/model/other/mei/model.json","/model/other/liang/2.json","/model/HN/noir_santa/model.json","/model/HN/noireswim/model.json","/model/other/blanc_normal/index.json","/model/other/88type_1809/normal/model.json","/model/other/88type_1809/destroy/model.json","/model/other/dsr50_1801/normal/model.json","/model/other/dsr50_1801/destroy/model.json","/model/other/g36c_1202/normal/model.json","/model/other/g36c_1202/destroy/model.json","/model/other/kp31_310/normal/model.json","/model/other/kp31_310/destroy/model.json","/model/other/kp31_1103/normal/model.json","/model/other/kp31_1103/destroy/model.json"],touch:["不可以這樣欺負我啦><"]})</script></body></html>

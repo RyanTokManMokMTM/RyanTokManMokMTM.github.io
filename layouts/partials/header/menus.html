@@ -8,8 +8,8 @@
       <a href="{{ .URL | relLangURL }}" class="{{ if .HasChildren }}menus-parent{{ end }} hvr-icon-pulse {{if $active }} menu-item-active{{ end }}" rel="section">
         {{ if $ms.icons }}<i class="fa fa-{{ .Pre }} hvr-icon"></i>{{ end }}{{ .Name }}
         {{ if .HasChildren }}<span class="menu-item-shrink-icon"><i class="fa fa-angle-right"></i></span>{{ end }}
-        {{ if and $ms.badges (eq .Identifier "posts") }}
-          <span class="badge">{{ $.Scratch.Get "badgePage" }}</span>
+        {{ if and $ms.badges (eq .Identifier "archives") }}
+          <span class="badge">{{ $.Scratch.Get "postsCount" }}</span>
         {{ end }}
       </a>
       {{ if .HasChildren }}

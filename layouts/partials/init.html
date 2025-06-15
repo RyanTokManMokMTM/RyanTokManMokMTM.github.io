@@ -15,10 +15,8 @@
 {{ $globalVars := newScratch }}
 
 {{ $pages := (where .Page.Site.RegularPages "Section" "in" .Site.Params.mainSections) }}
-{{ $badgePage := (where .Page.Site.RegularPages "Section" "in" .Site.Params.badgeSection)}}
 {{ $globalVars.Set "pages" $pages}}
 {{ $globalVars.Set "postsCount" (len  $pages)}}
-{{ $globalVars.Set "mainPostsCount" (len  $badgePage)}}
 {{ $globalVars.Set "catsCount" (len .Site.Taxonomies.categories) }}
 {{ $globalVars.Set "tagsCount" (len .Site.Taxonomies.tags)  }}
 

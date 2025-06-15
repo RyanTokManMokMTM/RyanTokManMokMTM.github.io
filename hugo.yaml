@@ -215,26 +215,31 @@ menus:
       pageRef: /about.html
       pre: user
       weight: 3
-    - identifier: posts
-      name: Archives 歸檔
-      pageRef: /posts
+    - identifier: archives
+      name:  Archives 歸檔
+      pageRef: /archives
       pre: archive
       weight: 4
+    - identifier: techs
+      name:  Technology 科技與技術
+      pageRef: /techs
+      pre: terminal
+      weight: 5
     - identifier: memories
       name: Memories 回憶
       url: /memories
       pre: star
-      weight: 5
+      weight: 6
     - identifier:  
       name: Leetcodes 力扣
       url: /leetcodes
       pre: code
-      weight: 6
+      weight: 7
     - identifier: project
       name: Project 專案
       url: /project
       pre: tasks
-      weight: 7
+      weight: 8
 
 
     # - identifier: english
@@ -265,8 +270,7 @@ params:
   # 需要显示文章的部分，即content目录下的文件夹名称
   # Sections for show in home & archive page 
   # and it's folder name which under content
-  badgeSection: ["posts"]
-  mainSections: ["posts", "memories","leetcodes","project","memories"]
+  mainSections: ["archives"]
   # 年，月，日及时间的格式化样式
   # Format style for year,month,date & time
   yearFormat: "2006"
@@ -307,10 +311,10 @@ params:
 
   # 用户自定义文件配置
   # Define custom file paths.
-  # customFilePath:
-  #   sidebar: custom_sidebar.html
-  #   footer: custom_footer.html
-  #   style: /css/custom_style.css
+  customFilePath:
+    sidebar: custom_sidebar.html
+    footer: custom_footer.html
+    style: /css/custom_style.css
 
   # 知识共享国际许可 4.0
   # 更多信息： https://creativecommons.org/about/cclicenses/
@@ -473,13 +477,13 @@ params:
   # Links of your friends
   # Usage: `Key: name || permalink`
   links: 
-    CWKSC: CWKSC 一個什麼都學得會的人 || https://cwksc.github.io/ 
+    CWKSC: CWKSC(Professor.CHU) || https://cwksc.github.io/ 
 
   # 文章目录显示
   # Table of Contents in the Sidebar
   # Front-matter variable (nonsupport wrap expand_all).
   toc:
-    enable: true
+    enable: false
     # 自动设置列表的数字
     # Automatically add list number to toc.
     number: true

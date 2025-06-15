@@ -329,7 +329,7 @@ params:
     size: big
     # 侧边栏显示
     # Show in sidebar
-    sidebar: true
+    sidebar: false
     # 文章底部显示
     # Show in post footer
     post: true
@@ -442,7 +442,7 @@ params:
     FB Page: Facebook || https://www.facebook.com/karot.ka.7505/ || fab fa-facebook
     #StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow
     #YouTube: https://youtube.com/yourname || fab fa-youtube
-    Instagram: IG || https://www.instagram.com/tm_m.0418 || fab fa-instagram
+    Instagram: Instagram || https://www.instagram.com/tm_m.0418 || fab fa-instagram
     #Skype: skype:yourname?call|chat || fab fa-skype
     
   # 社交链接图标设置
@@ -467,7 +467,7 @@ params:
     icon: fa fa-globe
     # 显示标题
     # Show title
-    title: 友情链接
+    title: 資源連結
     # 可选值： block | inline
     # Available values: block | inline
     layout: inline
@@ -477,7 +477,8 @@ params:
   # Links of your friends
   # Usage: `Key: name || permalink`
   links: 
-    CWKSC: CWKSC(Professor.CHU) || https://cwksc.github.io/ 
+    CWKSC: CWKSC || https://cwksc.github.io/ 
+    LeetCode Guide: LeetCode Guide ||https://labuladong.online/algo/en/intro/leetcode/
 
   # 文章目录显示
   # Table of Contents in the Sidebar

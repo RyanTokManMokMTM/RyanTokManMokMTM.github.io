@@ -20,7 +20,7 @@
 過完年就回去上班，但公司缺在過年後發生了不好的事情，有員工在跟鬧事，好像是關於離職和賠款相關的事項。最後還報警處理了，不過最後也沒有發生什麼事情，也平穩的處理了。但是因為這件事我有了離職的念頭。&lt;/p></description></item><item><title>[筆記] 資料庫索引(index)</title><link>https://ryantokmanmokmtm.github.io/archives/note/database-index/</link><pubDate>Mon, 02 Dec 2024 23:31:33 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/note/database-index/</guid><description>&lt;h2 id="前言">前言
 &lt;a class="header-anchor" href="#%e5%89%8d%e8%a8%80">&lt;/a>
 &lt;/h2>&lt;p>之前的文章中，我們有簡單探討過事務相關的課題，而在這篇文章就主要討論 Index 索引相關的課題！ 而索引也跟 B+ tree 相關，如果不了解B+ tree的同學可以去參考之前討論
-&lt;a href="https://ryantokmanmokmtm.github.io/post/note/balance-tree" title="平衡樹的文章" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/note/balance-tree" title="平衡樹的文章" >
  平衡樹的文章
  
 &lt;/a>。&lt;/p></description></item><item><title>[筆記] 淺談資料庫事務(Transcation)</title><link>https://ryantokmanmokmtm.github.io/archives/note/database-transaction/</link><pubDate>Sat, 23 Nov 2024 22:11:45 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/note/database-transaction/</guid><description>&lt;h2 id="簡介">簡介
@@ -157,47 +157,47 @@
 雖然這個project已完成，但是依然還有些問題，如果我們之後還有這個能力在修復～ 這些問題使得串流沒有這麼的穩定，但還是可以玩的呢！&lt;br>
 在進入今天主題之前，如果你不記得或不知道這個project關於什麼的話，可以回去閱讀這幾篇文章：&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-init/" title="ChatApp(I)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-init/" title="ChatApp(I)" >
  ChatApp(I)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-demo/" title="ChatApp(II)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-demo/" title="ChatApp(II)" >
  ChatApp(II)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-update/" title="ChatApp(III)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-update/" title="ChatApp(III)" >
  ChatApp(III)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-final/" title="ChatApp(IV)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-final/" title="ChatApp(IV)" >
  ChatApp(IV)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-voice-chat/" title="ChatApp(V)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-voice-chat/" title="ChatApp(V)" >
  ChatApp(V)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-sticker-updated/" title="ChatApp(VI)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-sticker-updated/" title="ChatApp(VI)" >
  ChatApp(VI)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-story-alignment-updated/" title="ChatApp(Ⅶ)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-story-alignment-updated/" title="ChatApp(Ⅶ)" >
  ChatApp(Ⅶ)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-story-multiple-img-updated/" title="ChatApp(Ⅷ)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-story-multiple-img-updated/" title="ChatApp(Ⅷ)" >
  ChatApp(Ⅷ)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-sticker-shop-updated/" title="ChatApp(IX)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-sticker-shop-updated/" title="ChatApp(IX)" >
  ChatApp(IX)
  
 &lt;/a>&lt;/p></description></item><item><title>2023年度總結(2023 annual summary)</title><link>https://ryantokmanmokmtm.github.io/archives/memories/summary-of-2023/</link><pubDate>Mon, 01 Jan 2024 19:43:15 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/memories/summary-of-2023/</guid><description>&lt;h1 id="2023目標進度條目標">2023目標進度條目標：
@@ -217,42 +217,42 @@
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
 &lt;/h2>&lt;p>如果您想了解該項目的內容，請閱讀以下文章&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-init/" title="ChatApp(I)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-init/" title="ChatApp(I)" >
  ChatApp(I)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-demo/" title="ChatApp(II)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-demo/" title="ChatApp(II)" >
  ChatApp(II)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-update/" title="ChatApp(III)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-update/" title="ChatApp(III)" >
  ChatApp(III)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-final/" title="ChatApp(IV)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-final/" title="ChatApp(IV)" >
  ChatApp(IV)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-voice-chat/" title="ChatApp(V)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-voice-chat/" title="ChatApp(V)" >
  ChatApp(V)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-sticker-updated/" title="ChatApp(VI)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-sticker-updated/" title="ChatApp(VI)" >
  ChatApp(VI)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-story-alignment-updated/" title="ChatApp(Ⅶ)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-story-alignment-updated/" title="ChatApp(Ⅶ)" >
  ChatApp(Ⅶ)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-story-multiple-img-updated/" title="ChatApp(Ⅷ)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-story-multiple-img-updated/" title="ChatApp(Ⅷ)" >
  ChatApp(Ⅷ)
  
 &lt;/a>&lt;/p>
@@ -262,49 +262,49 @@
 &lt;h2 id="簡介-1">簡介
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b-1">&lt;/a>
 &lt;/h2>&lt;p>正如我在
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-sticker-updated/" title="這篇文章" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-sticker-updated/" title="這篇文章" >
  這篇文章
  
 &lt;/a>中提到的，我添加了一個關於貼紙的新功能，它可以在聊天中使用提供的貼圖資源。但這還不夠，對用戶來說也不靈活。因此，我開發了更多關於貼紙功能的內容。&lt;/p></description></item><item><title>[開發者日記] 聊天通訊APP - 限時動態更新(III)</title><link>https://ryantokmanmokmtm.github.io/archives/project/chat-app-story-view-updated/</link><pubDate>Thu, 09 Nov 2023 20:23:44 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/project/chat-app-story-view-updated/</guid><description>&lt;h2 id="簡介">簡介
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
 &lt;/h2>&lt;p>如果您想了解該項目的內容，請閱讀以下文章。
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-init/" title="ChatApp(I)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-init/" title="ChatApp(I)" >
  ChatApp(I)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-demo/" title="ChatApp(II)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-demo/" title="ChatApp(II)" >
  ChatApp(II)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-update/" title="ChatApp(III)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-update/" title="ChatApp(III)" >
  ChatApp(III)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-final/" title="ChatApp(IV)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-final/" title="ChatApp(IV)" >
  ChatApp(IV)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-voice-chat/" title="ChatApp(V)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-voice-chat/" title="ChatApp(V)" >
  ChatApp(V)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-sticker-updated/" title="ChatApp(VI)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-sticker-updated/" title="ChatApp(VI)" >
  ChatApp(VI)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-story-alignment-updated/" title="ChatApp(Ⅶ)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-story-alignment-updated/" title="ChatApp(Ⅶ)" >
  ChatApp(Ⅶ)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-story-multiple-img-updated/" title="ChatApp(Ⅷ)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-story-multiple-img-updated/" title="ChatApp(Ⅷ)" >
  ChatApp(Ⅷ)
  
 &lt;/a>&lt;/p>
@@ -317,32 +317,32 @@
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
 &lt;/h2>&lt;p>如果您想了解該項目的內容，請閱讀以下文章。
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-init/" title="ChatApp(I)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-init/" title="ChatApp(I)" >
  ChatApp(I)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-demo/" title="ChatApp(II)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-demo/" title="ChatApp(II)" >
  ChatApp(II)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-update/" title="ChatApp(III)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-update/" title="ChatApp(III)" >
  ChatApp(III)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-final/" title="ChatApp(IV)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-final/" title="ChatApp(IV)" >
  ChatApp(IV)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-voice-chat/" title="ChatApp(V)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-voice-chat/" title="ChatApp(V)" >
  ChatApp(V)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-sticker-updated/" title="ChatApp(VI)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-sticker-updated/" title="ChatApp(VI)" >
  ChatApp(VI)
  
 &lt;/a>&lt;/p>
@@ -350,32 +350,32 @@
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
 &lt;/h2>&lt;p>如果您想了解該項目的內容，請閱讀以下文章。&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-init/" title="ChatApp(I)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-init/" title="ChatApp(I)" >
  ChatApp(I)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-demo/" title="ChatApp(II)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-demo/" title="ChatApp(II)" >
  ChatApp(II)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-update/" title="ChatApp(III)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-update/" title="ChatApp(III)" >
  ChatApp(III)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-final/" title="ChatApp(IV)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-final/" title="ChatApp(IV)" >
  ChatApp(IV)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-voice-chat/" title="ChatApp(V)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-voice-chat/" title="ChatApp(V)" >
  ChatApp(V)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-sticker-updated/" title="ChatApp(VI)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-sticker-updated/" title="ChatApp(VI)" >
  ChatApp(VI)
  
 &lt;/a>&lt;/p>
@@ -388,27 +388,27 @@
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
 &lt;/h2>&lt;p>關於這個專案我就不多說了，如果你對這個專案有興趣的話，請看我之前的貼文。在之前的文章中，我已經詳細介紹了這個專案。
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-init/" title="ChatApp(I)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-init/" title="ChatApp(I)" >
  ChatApp(I)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-demo/" title="ChatApp(II)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-demo/" title="ChatApp(II)" >
  ChatApp(II)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-update/" title="ChatApp(III)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-update/" title="ChatApp(III)" >
  ChatApp(III)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-final/" title="ChatApp(IV)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-final/" title="ChatApp(IV)" >
  ChatApp(IV)
  
 &lt;/a>&lt;br>
 
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-voice-chat/" title="ChatApp(V)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-voice-chat/" title="ChatApp(V)" >
  ChatApp(V)
  
 &lt;/a>&lt;/p>
@@ -439,7 +439,7 @@ Given the head of a linked list with even length, return the maximum twin sum of
 &lt;/h3>&lt;p>因為之前的&lt;code>OTT電影社群APP&lt;/code>中有包含通訊的功能，但是那個App所實現的功能就只是簡單的存文字聊天而已，而那個app主要的focus點並不在通訊上，所以只有簡簡單單的實作了通訊，沒有到完整的通訊，例如：發送文字，發送圖片，發送文件等等的通訊功能。所以這次的side project所實作的app則主要focus在&lt;strong>通訊&lt;/strong>這個點上。&lt;/p></description></item><item><title>[開發者日記] 聊天通訊APP - RTC小更新</title><link>https://ryantokmanmokmtm.github.io/archives/project/chat-app-voice-chat/</link><pubDate>Sat, 13 May 2023 23:58:58 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/project/chat-app-voice-chat/</guid><description>&lt;h4 id="簡介">簡介
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
 &lt;/h4>&lt;p>我在
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-init" title="[開發者日記] 聊天通訊APP(一)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-init" title="[開發者日記] 聊天通訊APP(一)" >
  [開發者日記] 聊天通訊APP(一)
  
 &lt;/a>中有提及過這app會有&lt;/p>
@@ -454,14 +454,14 @@ Given the head of a linked list with even length, return the maximum twin sum of
 &lt;/h4>&lt;p>雖然現在只有展示了語音通訊(Voice-chat),但是他們的工作原理其實是差不多的，就差在有沒有傳送視頻數據而已。老實說，這個功能其實言研究了2個月都不知道要從何入手，而github上的simple-demo又是UIKit的版本，所以就一直拖，一直研究。知道最近就想試試也無妨，最多也就不成功，萬一它成功了呢！於是我便開始寫，寫了1-2天，發現失敗了，哈哈哈。然後debug了一下，發現好像是沒有連接上的問題，於是又花了一整天來測試是否有成功連接，當成功連接上且文字數據傳送成功的那一刻，那個激動的心啊❤️！！！然後打開視訊，還真的成功了！！！！好開心！&lt;/p></description></item><item><title>[開發者日記] 聊天通訊APP(四) - 最終章</title><link>https://ryantokmanmokmtm.github.io/archives/project/chat-app-final/</link><pubDate>Mon, 01 May 2023 19:25:38 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/project/chat-app-final/</guid><description>&lt;h3 id="簡介">簡介
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b">&lt;/a>
 &lt;/h3>&lt;p>在之前
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-init" title="序章" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-init" title="序章" >
  序章
  
 &lt;/a>中，雖然已經大概介紹過這個app在幹嘛。但是因為這次是&lt;strong>最終章&lt;/strong>的成品展示(或許有些部分沒實現😂)，所以就允許我囉嗦得再說一次吧！&lt;/p>
 &lt;p>這個app主要是focus在Websocket，也就是實時通訊上。雖然但是HTTP的部分還是不能少的🤣，哈哈哈。所以這個App的Server-side包含了HTTP和Websocket 2個部分。HTTP的部分主要是用作CURD,而Websocket的部分則是用於個人通訊和群組通訊。&lt;/p></description></item><item><title>[開發者日記] 聊天通訊APP(三) - 聊天小更新</title><link>https://ryantokmanmokmtm.github.io/archives/project/chat-app-update/</link><pubDate>Sat, 29 Apr 2023 20:17:18 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/project/chat-app-update/</guid><description>&lt;p>廢話少說直接上影片&lt;/p>
 &lt;p>&lt;video src="https://ryantokmanmokmtm.github.io/videos/chat-app/message-update1.mp4" controls="controls" width="500">&lt;/video>&lt;/p>
 &lt;p>對上一次的
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-demo/" title="demo" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-demo/" title="demo" >
  demo
  
 &lt;/a>中，雖然也包含了個人聊天和群組聊天的部分，但是只支援普通文本和圖片的傳送，而這次修復了文件發送，音頻發送已經視頻發送的部分。而音頻可以直接聆聽接收到的音頻，而視頻則可以直接觀看。&lt;br>
@@ -470,7 +470,7 @@ Given the head of a linked list with even length, return the maximum twin sum of
 &lt;h3 id="demo說明">Demo說明
 &lt;a class="header-anchor" href="#demo%e8%aa%aa%e6%98%8e">&lt;/a>
 &lt;/h3>&lt;p>這個App的詳細介紹在
-&lt;a href="https://ryantokmanmokmtm.github.io/post/chat-app-init" title="[開發者日記] 聊天通訊APP(一)" >
+&lt;a href="https://ryantokmanmokmtm.github.io/achievement/chat-app-init" title="[開發者日記] 聊天通訊APP(一)" >
  [開發者日記] 聊天通訊APP(一)
  
 &lt;/a>中已經有基本的介紹，這裡就不作過多的介紹了。&lt;br>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>LCM on Jackson.tmm</title><link>http://localhost:1313/tags/lcm/</link><description>Recent content in LCM on Jackson.tmm</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Tue, 14 Jun 2022 13:37:49 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/lcm/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Delete Operation for Two Strings(Medium)</title><link>http://localhost:1313/archives/leetcodes/leetcode583/</link><pubDate>Tue, 14 Jun 2022 13:37:49 +0800</pubDate><guid>http://localhost:1313/archives/leetcodes/leetcode583/</guid><description>&lt;h2 id="leetcode-583---delete-operation-for-two-strings"&gt;LeetCode 583 - Delete Operation for Two Strings
+&lt;a class="header-anchor" href="#leetcode-583---delete-operation-for-two-strings"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;Given two strings &lt;code&gt;word1&lt;/code&gt; and &lt;code&gt;word2&lt;/code&gt;, return the minimum number of steps required to make &lt;code&gt;word1&lt;/code&gt; and &lt;code&gt;word2&lt;/code&gt; the same.&lt;/p&gt;
+&lt;p&gt;In one &lt;code&gt;step&lt;/code&gt;, you can delete exactly one character in either string
+example&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-0-1"&gt;&lt;a class="lnlinks" href="#hl-0-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-2"&gt;&lt;a class="lnlinks" href="#hl-0-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-3"&gt;&lt;a class="lnlinks" href="#hl-0-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: word1 = &amp;#34;sea&amp;#34;, word2 = &amp;#34;eat&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: 2
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Explanation: You need one step to make &amp;#34;sea&amp;#34; to &amp;#34;ea&amp;#34; and another step to make &amp;#34;eat&amp;#34; to &amp;#34;ea&amp;#34;.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-1-1"&gt;&lt;a class="lnlinks" href="#hl-1-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-2"&gt;&lt;a class="lnlinks" href="#hl-1-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: word1 = &amp;#34;leetcode&amp;#34;, word2 = &amp;#34;etco&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: 4&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id="how-can-we-solve-this-problem"&gt;How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;這題要我們解決的問題是給定2個字串&lt;code&gt;Word1&lt;/code&gt;和&lt;code&gt;Word2&lt;/code&gt;,每次從&lt;code&gt;Word1&lt;/code&gt;或者&lt;code&gt;Word2&lt;/code&gt;中移除1個Character，問我們最少需要多少步使得2個string一樣。&lt;br&gt;
+首先,我們需要先知道這2個&lt;code&gt;Word&lt;/code&gt;有哪些Character的是一致的。為了能獲得他們之間的最長共同子字串，我們可以透過&lt;code&gt;Longest Commond Substring&lt;/code&gt;來得到他們之間共同子字串的長度，只要每個字串的長度減去LCM的長度，就可以知道各自需要多少步。最後相加起來即可。&lt;br&gt;
+
+&lt;a href="http://localhost:1313/leetcodenotes/lcm" title="Longest Commond Substring Template" &gt;
+ Longest Commond Substring Template
+ 
+&lt;/a&gt;&lt;/p&gt;</description></item><item><title>[Leetcode] Delete Operation for Two Strings(Medium)</title><link>http://localhost:1313/leetcodes/leetcode583/</link><pubDate>Tue, 14 Jun 2022 13:37:49 +0800</pubDate><guid>http://localhost:1313/leetcodes/leetcode583/</guid><description>&lt;h2 id="leetcode-583---delete-operation-for-two-strings"&gt;LeetCode 583 - Delete Operation for Two Strings
+&lt;a class="header-anchor" href="#leetcode-583---delete-operation-for-two-strings"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;Given two strings &lt;code&gt;word1&lt;/code&gt; and &lt;code&gt;word2&lt;/code&gt;, return the minimum number of steps required to make &lt;code&gt;word1&lt;/code&gt; and &lt;code&gt;word2&lt;/code&gt; the same.&lt;/p&gt;
+&lt;p&gt;In one &lt;code&gt;step&lt;/code&gt;, you can delete exactly one character in either string
+example&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-0-1"&gt;&lt;a class="lnlinks" href="#hl-0-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-2"&gt;&lt;a class="lnlinks" href="#hl-0-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-3"&gt;&lt;a class="lnlinks" href="#hl-0-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: word1 = &amp;#34;sea&amp;#34;, word2 = &amp;#34;eat&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: 2
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Explanation: You need one step to make &amp;#34;sea&amp;#34; to &amp;#34;ea&amp;#34; and another step to make &amp;#34;eat&amp;#34; to &amp;#34;ea&amp;#34;.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-1-1"&gt;&lt;a class="lnlinks" href="#hl-1-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-2"&gt;&lt;a class="lnlinks" href="#hl-1-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: word1 = &amp;#34;leetcode&amp;#34;, word2 = &amp;#34;etco&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: 4&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id="how-can-we-solve-this-problem"&gt;How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;這題要我們解決的問題是給定2個字串&lt;code&gt;Word1&lt;/code&gt;和&lt;code&gt;Word2&lt;/code&gt;,每次從&lt;code&gt;Word1&lt;/code&gt;或者&lt;code&gt;Word2&lt;/code&gt;中移除1個Character，問我們最少需要多少步使得2個string一樣。&lt;br&gt;
+首先,我們需要先知道這2個&lt;code&gt;Word&lt;/code&gt;有哪些Character的是一致的。為了能獲得他們之間的最長共同子字串，我們可以透過&lt;code&gt;Longest Commond Substring&lt;/code&gt;來得到他們之間共同子字串的長度，只要每個字串的長度減去LCM的長度，就可以知道各自需要多少步。最後相加起來即可。&lt;br&gt;
+
+&lt;a href="http://localhost:1313/leetcodenotes/lcm" title="Longest Commond Substring Template" &gt;
+ Longest Commond Substring Template
+ 
+&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

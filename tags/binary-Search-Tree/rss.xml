@@ -1,34 +1,67 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Binary Search Tree on Hugo NexT</title><link>//localhost:1414/tags/binary-search-tree/</link><description>Recent content in Binary Search Tree on Hugo NexT</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Fri, 15 Apr 2022 18:29:14 +0800</lastBuildDate><atom:link href="//localhost:1414/tags/binary-search-tree/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Trim a Binary Search Tree(Medium)</title><link>//localhost:1414/leetcodes/leetcode669/</link><pubDate>Fri, 15 Apr 2022 18:29:14 +0800</pubDate><guid>//localhost:1414/leetcodes/leetcode669/</guid><description>&lt;h2 id="leetcode-669---trim-a-binary-search-tree">LeetCode 669 - Trim a Binary Search Tree
-&lt;a class="header-anchor" href="#leetcode-669---trim-a-binary-search-tree">&lt;/a>
-&lt;/h2>&lt;p>Given the root of a binary search tree and the lowest and highest boundaries as &lt;code>low&lt;/code> and &lt;code>high&lt;/code>, trim the tree so that all its elements lies in &lt;code>[low, high]&lt;/code>. Trimming the tree should not change the relative structure of the elements that will remain in the tree (i.e., any node&amp;rsquo;s descendant should remain a descendant). It can be proven that there is a &lt;strong>unique answer&lt;/strong>.&lt;/p></description></item><item><title>[Leetcode] Search in a Binary Search Tree(Easy)</title><link>//localhost:1414/leetcodes/leetcode700/</link><pubDate>Thu, 14 Apr 2022 15:05:44 +0800</pubDate><guid>//localhost:1414/leetcodes/leetcode700/</guid><description>&lt;h2 id="leetcode-700---search-in-a-binary-search-tree">LeetCode 700 - Search in a Binary Search Tree
-&lt;a class="header-anchor" href="#leetcode-700---search-in-a-binary-search-tree">&lt;/a>
-&lt;/h2>&lt;p>You are given the root of a binary search tree (BST) and an integer val.&lt;/p>
-&lt;p>Find the node in the BST that the node&amp;rsquo;s value equals val and return the subtree rooted with that node. If such a node does not exist, return null.&lt;/p>
-&lt;p>example&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Binary Search Tree on Jackson.tmm</title><link>http://localhost:1313/tags/binary-search-tree/</link><description>Recent content in Binary Search Tree on Jackson.tmm</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Fri, 15 Apr 2022 18:29:14 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/binary-search-tree/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Trim a Binary Search Tree(Medium)</title><link>http://localhost:1313/archives/leetcodes/leetcode669/</link><pubDate>Fri, 15 Apr 2022 18:29:14 +0800</pubDate><guid>http://localhost:1313/archives/leetcodes/leetcode669/</guid><description>&lt;h2 id="leetcode-669---trim-a-binary-search-tree"&gt;LeetCode 669 - Trim a Binary Search Tree
+&lt;a class="header-anchor" href="#leetcode-669---trim-a-binary-search-tree"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;Given the root of a binary search tree and the lowest and highest boundaries as &lt;code&gt;low&lt;/code&gt; and &lt;code&gt;high&lt;/code&gt;, trim the tree so that all its elements lies in &lt;code&gt;[low, high]&lt;/code&gt;. Trimming the tree should not change the relative structure of the elements that will remain in the tree (i.e., any node&amp;rsquo;s descendant should remain a descendant). It can be proven that there is a &lt;strong&gt;unique answer&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>[Leetcode] Trim a Binary Search Tree(Medium)</title><link>http://localhost:1313/leetcodes/leetcode669/</link><pubDate>Fri, 15 Apr 2022 18:29:14 +0800</pubDate><guid>http://localhost:1313/leetcodes/leetcode669/</guid><description>&lt;h2 id="leetcode-669---trim-a-binary-search-tree"&gt;LeetCode 669 - Trim a Binary Search Tree
+&lt;a class="header-anchor" href="#leetcode-669---trim-a-binary-search-tree"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;Given the root of a binary search tree and the lowest and highest boundaries as &lt;code&gt;low&lt;/code&gt; and &lt;code&gt;high&lt;/code&gt;, trim the tree so that all its elements lies in &lt;code&gt;[low, high]&lt;/code&gt;. Trimming the tree should not change the relative structure of the elements that will remain in the tree (i.e., any node&amp;rsquo;s descendant should remain a descendant). It can be proven that there is a &lt;strong&gt;unique answer&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>[Leetcode] Search in a Binary Search Tree(Easy)</title><link>http://localhost:1313/archives/leetcodes/leetcode700/</link><pubDate>Thu, 14 Apr 2022 15:05:44 +0800</pubDate><guid>http://localhost:1313/archives/leetcodes/leetcode700/</guid><description>&lt;h2 id="leetcode-700---search-in-a-binary-search-tree"&gt;LeetCode 700 - Search in a Binary Search Tree
+&lt;a class="header-anchor" href="#leetcode-700---search-in-a-binary-search-tree"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;You are given the root of a binary search tree (BST) and an integer val.&lt;/p&gt;
+&lt;p&gt;Find the node in the BST that the node&amp;rsquo;s value equals val and return the subtree rooted with that node. If such a node does not exist, return null.&lt;/p&gt;
+&lt;p&gt;example&lt;/p&gt;
 
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-0-1">&lt;a class="lnlinks" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-0-2">&lt;a class="lnlinks" href="#hl-0-2">2&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: root = [4,2,7,1,3], val = 2
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [2,1,3]&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-0-1"&gt;&lt;a class="lnlinks" href="#hl-0-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-2"&gt;&lt;a class="lnlinks" href="#hl-0-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: root = [4,2,7,1,3], val = 2
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: [2,1,3]&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
 
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-1-1">&lt;a class="lnlinks" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-1-2">&lt;a class="lnlinks" href="#hl-1-2">2&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: root = [4,2,7,1,3], val = 5
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: []&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-1-1"&gt;&lt;a class="lnlinks" href="#hl-1-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-2"&gt;&lt;a class="lnlinks" href="#hl-1-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: root = [4,2,7,1,3], val = 5
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: []&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
-&lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
-&lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
-&lt;/h2>&lt;p>在解決問題之前，我們需要知道什麼是&lt;code>Binary Search Tree&lt;/code>。根據&lt;code>BST&lt;/code>的定義:&lt;/p></description></item></channel></rss>
+&lt;h2 id="how-can-we-solve-this-problem"&gt;How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;在解決問題之前，我們需要知道什麼是&lt;code&gt;Binary Search Tree&lt;/code&gt;。根據&lt;code&gt;BST&lt;/code&gt;的定義:&lt;/p&gt;</description></item><item><title>[Leetcode] Search in a Binary Search Tree(Easy)</title><link>http://localhost:1313/leetcodes/leetcode700/</link><pubDate>Thu, 14 Apr 2022 15:05:44 +0800</pubDate><guid>http://localhost:1313/leetcodes/leetcode700/</guid><description>&lt;h2 id="leetcode-700---search-in-a-binary-search-tree"&gt;LeetCode 700 - Search in a Binary Search Tree
+&lt;a class="header-anchor" href="#leetcode-700---search-in-a-binary-search-tree"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;You are given the root of a binary search tree (BST) and an integer val.&lt;/p&gt;
+&lt;p&gt;Find the node in the BST that the node&amp;rsquo;s value equals val and return the subtree rooted with that node. If such a node does not exist, return null.&lt;/p&gt;
+&lt;p&gt;example&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-0-1"&gt;&lt;a class="lnlinks" href="#hl-0-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-2"&gt;&lt;a class="lnlinks" href="#hl-0-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: root = [4,2,7,1,3], val = 2
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: [2,1,3]&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-1-1"&gt;&lt;a class="lnlinks" href="#hl-1-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-2"&gt;&lt;a class="lnlinks" href="#hl-1-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: root = [4,2,7,1,3], val = 5
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: []&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id="how-can-we-solve-this-problem"&gt;How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;在解決問題之前，我們需要知道什麼是&lt;code&gt;Binary Search Tree&lt;/code&gt;。根據&lt;code&gt;BST&lt;/code&gt;的定義:&lt;/p&gt;</description></item></channel></rss>

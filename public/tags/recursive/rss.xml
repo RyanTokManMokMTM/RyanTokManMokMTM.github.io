@@ -1,165 +1,329 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Recursive on Hugo NexT</title><link>//localhost:1414/tags/recursive/</link><description>Recent content in Recursive on Hugo NexT</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Thu, 15 Sep 2022 00:31:46 +0800</lastBuildDate><atom:link href="//localhost:1414/tags/recursive/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Pancake Sorting(Medium)</title><link>//localhost:1414/leetcodes/leetcode969/</link><pubDate>Thu, 15 Sep 2022 00:31:46 +0800</pubDate><guid>//localhost:1414/leetcodes/leetcode969/</guid><description>&lt;h2 id="leetcode-969---pancake-sorting">LeetCode 969 - Pancake Sorting
-&lt;a class="header-anchor" href="#leetcode-969---pancake-sorting">&lt;/a>
-&lt;/h2>&lt;p>Given an array of integers &lt;code>arr&lt;/code>, sort the array by performing a series of &lt;strong>pancake flips&lt;/strong>.&lt;/p>
-&lt;p>In one pancake flip we do the following steps:&lt;/p>
-&lt;ul>
-&lt;li>Choose an integer &lt;code>k&lt;/code> where &lt;code>1 &amp;lt;= k &amp;lt;= arr.length&lt;/code>.&lt;/li>
-&lt;li>Reverse the sub-array &lt;code>arr[0...k-1]&lt;/code> (&lt;strong>0-indexed&lt;/strong>).
-For example, if arr = &lt;code>[3,2,1,4]&lt;/code> and we performed a pancake flip choosing &lt;code>k = 3&lt;/code>, we reverse the sub-array &lt;code>[3,2,1]&lt;/code>, so arr = &lt;code>[1,2,3,4]&lt;/code> after the pancake flip at k = 3.&lt;/li>
-&lt;/ul>
-&lt;p>Return an array of the &lt;code>k&lt;/code>-values corresponding to a sequence of pancake flips that sort arr. Any valid answer that sorts the array within &lt;code>10 * arr.length&lt;/code> flips will be judged as correct.
-example&lt;/p></description></item><item><title>[Leetcode] Pseudo-Palindromic Paths in a Binary Tree(Medium)</title><link>//localhost:1414/leetcodes/leetcode1457/</link><pubDate>Wed, 14 Sep 2022 15:27:08 +0800</pubDate><guid>//localhost:1414/leetcodes/leetcode1457/</guid><description>&lt;h2 id="leetcode-1457---pseudo-palindromic-paths-in-a-binary-tree">LeetCode 1457 - Pseudo-Palindromic Paths in a Binary Tree
-&lt;a class="header-anchor" href="#leetcode-1457---pseudo-palindromic-paths-in-a-binary-tree">&lt;/a>
-&lt;/h2>&lt;p>Given a binary tree where node values are digits from 1 to 9. A path in the binary tree is said to be &lt;strong>pseudo-palindromic&lt;/strong> if at least one permutation of the node values in the path is a palindrome.&lt;/p>
-&lt;p>&lt;em>Return the number of &lt;strong>pseudo-palindromic&lt;/strong> paths going from the root node to leaf nodes.&lt;/em>
-example&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Recursive on Jackson.tmm</title><link>http://localhost:1313/tags/recursive/</link><description>Recent content in Recursive on Jackson.tmm</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Thu, 15 Sep 2022 00:31:46 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/recursive/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Pancake Sorting(Medium)</title><link>http://localhost:1313/archives/leetcodes/leetcode969/</link><pubDate>Thu, 15 Sep 2022 00:31:46 +0800</pubDate><guid>http://localhost:1313/archives/leetcodes/leetcode969/</guid><description>&lt;h2 id="leetcode-969---pancake-sorting"&gt;LeetCode 969 - Pancake Sorting
+&lt;a class="header-anchor" href="#leetcode-969---pancake-sorting"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;Given an array of integers &lt;code&gt;arr&lt;/code&gt;, sort the array by performing a series of &lt;strong&gt;pancake flips&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;In one pancake flip we do the following steps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Choose an integer &lt;code&gt;k&lt;/code&gt; where &lt;code&gt;1 &amp;lt;= k &amp;lt;= arr.length&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Reverse the sub-array &lt;code&gt;arr[0...k-1]&lt;/code&gt; (&lt;strong&gt;0-indexed&lt;/strong&gt;).
+For example, if arr = &lt;code&gt;[3,2,1,4]&lt;/code&gt; and we performed a pancake flip choosing &lt;code&gt;k = 3&lt;/code&gt;, we reverse the sub-array &lt;code&gt;[3,2,1]&lt;/code&gt;, so arr = &lt;code&gt;[1,2,3,4]&lt;/code&gt; after the pancake flip at k = 3.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Return an array of the &lt;code&gt;k&lt;/code&gt;-values corresponding to a sequence of pancake flips that sort arr. Any valid answer that sorts the array within &lt;code&gt;10 * arr.length&lt;/code&gt; flips will be judged as correct.
+example&lt;/p&gt;</description></item><item><title>[Leetcode] Pancake Sorting(Medium)</title><link>http://localhost:1313/leetcodes/leetcode969/</link><pubDate>Thu, 15 Sep 2022 00:31:46 +0800</pubDate><guid>http://localhost:1313/leetcodes/leetcode969/</guid><description>&lt;h2 id="leetcode-969---pancake-sorting"&gt;LeetCode 969 - Pancake Sorting
+&lt;a class="header-anchor" href="#leetcode-969---pancake-sorting"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;Given an array of integers &lt;code&gt;arr&lt;/code&gt;, sort the array by performing a series of &lt;strong&gt;pancake flips&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;In one pancake flip we do the following steps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Choose an integer &lt;code&gt;k&lt;/code&gt; where &lt;code&gt;1 &amp;lt;= k &amp;lt;= arr.length&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Reverse the sub-array &lt;code&gt;arr[0...k-1]&lt;/code&gt; (&lt;strong&gt;0-indexed&lt;/strong&gt;).
+For example, if arr = &lt;code&gt;[3,2,1,4]&lt;/code&gt; and we performed a pancake flip choosing &lt;code&gt;k = 3&lt;/code&gt;, we reverse the sub-array &lt;code&gt;[3,2,1]&lt;/code&gt;, so arr = &lt;code&gt;[1,2,3,4]&lt;/code&gt; after the pancake flip at k = 3.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Return an array of the &lt;code&gt;k&lt;/code&gt;-values corresponding to a sequence of pancake flips that sort arr. Any valid answer that sorts the array within &lt;code&gt;10 * arr.length&lt;/code&gt; flips will be judged as correct.
+example&lt;/p&gt;</description></item><item><title>[Leetcode] Pseudo-Palindromic Paths in a Binary Tree(Medium)</title><link>http://localhost:1313/archives/leetcodes/leetcode1457/</link><pubDate>Wed, 14 Sep 2022 15:27:08 +0800</pubDate><guid>http://localhost:1313/archives/leetcodes/leetcode1457/</guid><description>&lt;h2 id="leetcode-1457---pseudo-palindromic-paths-in-a-binary-tree"&gt;LeetCode 1457 - Pseudo-Palindromic Paths in a Binary Tree
+&lt;a class="header-anchor" href="#leetcode-1457---pseudo-palindromic-paths-in-a-binary-tree"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;Given a binary tree where node values are digits from 1 to 9. A path in the binary tree is said to be &lt;strong&gt;pseudo-palindromic&lt;/strong&gt; if at least one permutation of the node values in the path is a palindrome.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Return the number of &lt;strong&gt;pseudo-palindromic&lt;/strong&gt; paths going from the root node to leaf nodes.&lt;/em&gt;
+example&lt;/p&gt;
 
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-0-1">&lt;a class="lnlinks" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-0-2">&lt;a class="lnlinks" href="#hl-0-2">2&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-0-3">&lt;a class="lnlinks" href="#hl-0-3">3&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: root = [2,3,1,3,1,null,1]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: 2 
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: The figure above represents the given binary tree. There are three paths going from the root node to leaf nodes: the red path [2,3,3], the green path [2,1,1], and the path [2,3,1]. Among these paths only red path and green path are pseudo-palindromic paths since the red path [2,3,3] can be rearranged in [3,2,3] (palindrome) and the green path [2,1,1] can be rearranged in [1,2,1] (palindrome).&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>
-
-
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-1-1">&lt;a class="lnlinks" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-1-2">&lt;a class="lnlinks" href="#hl-1-2">2&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-1-3">&lt;a class="lnlinks" href="#hl-1-3">3&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: root = [2,1,1,1,3,null,null,null,null,null,1]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: 1 
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: The figure above represents the given binary tree. There are three paths going from the root node to leaf nodes: the green path [2,1,1], the path [2,1,3,1], and the path [2,1]. Among these paths only the green path is pseudo-palindromic since [2,1,1] can be rearranged in [1,2,1] (palindrome).&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-0-1"&gt;&lt;a class="lnlinks" href="#hl-0-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-2"&gt;&lt;a class="lnlinks" href="#hl-0-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-3"&gt;&lt;a class="lnlinks" href="#hl-0-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: root = [2,3,1,3,1,null,1]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: 2 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Explanation: The figure above represents the given binary tree. There are three paths going from the root node to leaf nodes: the red path [2,3,3], the green path [2,1,1], and the path [2,3,1]. Among these paths only red path and green path are pseudo-palindromic paths since the red path [2,3,3] can be rearranged in [3,2,3] (palindrome) and the green path [2,1,1] can be rearranged in [1,2,1] (palindrome).&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
 
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-2-1">&lt;a class="lnlinks" href="#hl-2-1">1&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-2-2">&lt;a class="lnlinks" href="#hl-2-2">2&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: root = [9]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: 1&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>
-
-&lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
-&lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
-&lt;/h2>&lt;p>這一題簡單的來說就是讓我們從&lt;strong>Binary Tree&lt;/strong>中找到有幾條&lt;code>path&lt;/code>是一個&lt;em>Palindromic(Pseudo-Palindromic)偽迴文串&lt;/em>。
-也就是說從&lt;code>root到leaft&lt;/code>的&lt;code>path&lt;/code>是一個&lt;strong>Palindromic&lt;/strong>。 (我們只需要知道path是否能組成&lt;em>Palindromic&lt;/em>即可)&lt;/p></description></item><item><title>[Leetcode] Construct String from Binary Tree(Easy)</title><link>//localhost:1414/leetcodes/leetcode606/</link><pubDate>Wed, 07 Sep 2022 10:12:28 +0800</pubDate><guid>//localhost:1414/leetcodes/leetcode606/</guid><description>&lt;h2 id="leetcode-606---construct-string-from-binary-tree">LeetCode 606 - Construct String from Binary Tree
-&lt;a class="header-anchor" href="#leetcode-606---construct-string-from-binary-tree">&lt;/a>
-&lt;/h2>&lt;p>Given the &lt;code>root&lt;/code> of a binary tree, construct a string consisting of parenthesis and integers from a binary tree with the preorder traversal way, and return it.&lt;/p>
-&lt;p>Omit all the empty parenthesis pairs that do not affect the one-to-one mapping relationship between the string and the original binary tree.
-example&lt;/p>
-
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-0-1">&lt;a class="lnlinks" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-0-2">&lt;a class="lnlinks" href="#hl-0-2">2&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-0-3">&lt;a class="lnlinks" href="#hl-0-3">3&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: root = [1,2,3,4]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: &amp;#34;1(2(4))(3)&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: Originally, it needs to be &amp;#34;1(2(4)())(3()())&amp;#34;, but you need to omit all the unnecessary empty parenthesis pairs. And it will be &amp;#34;1(2(4))(3)&amp;#34;&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-1-1"&gt;&lt;a class="lnlinks" href="#hl-1-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-2"&gt;&lt;a class="lnlinks" href="#hl-1-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-3"&gt;&lt;a class="lnlinks" href="#hl-1-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: root = [2,1,1,1,3,null,null,null,null,null,1]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: 1 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Explanation: The figure above represents the given binary tree. There are three paths going from the root node to leaf nodes: the green path [2,1,1], the path [2,1,3,1], and the path [2,1]. Among these paths only the green path is pseudo-palindromic since [2,1,1] can be rearranged in [1,2,1] (palindrome).&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
 
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-1-1">&lt;a class="lnlinks" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-1-2">&lt;a class="lnlinks" href="#hl-1-2">2&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-1-3">&lt;a class="lnlinks" href="#hl-1-3">3&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: root = [1,2,3,null,4]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: &amp;#34;1(2()(4))(3)&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: Almost the same as the first example, except we cannot omit the first parenthesis pair to break the one-to-one mapping relationship between the input and the output&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-2-1"&gt;&lt;a class="lnlinks" href="#hl-2-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-2"&gt;&lt;a class="lnlinks" href="#hl-2-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: root = [9]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: 1&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
-&lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
-&lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
-&lt;/h2>&lt;p>這題就是要讓我們講以&lt;code>string&lt;/code>的方式輸出&lt;strong>Binary Tree&lt;/strong>。只要注意他的規則就可以解決這題。&lt;/p></description></item><item><title>[Leetcode] Binary Tree Pruning(Medium)</title><link>//localhost:1414/leetcodes/leetcode814/</link><pubDate>Tue, 06 Sep 2022 21:30:56 +0800</pubDate><guid>//localhost:1414/leetcodes/leetcode814/</guid><description>&lt;h2 id="leetcode-814---binary-tree-pruning">LeetCode 814 - Binary Tree Pruning
-&lt;a class="header-anchor" href="#leetcode-814---binary-tree-pruning">&lt;/a>
-&lt;/h2>&lt;p>Given the &lt;code>root&lt;/code> of a binary tree, return the same tree where every subtree (of the given tree) not containing a &lt;code>1&lt;/code> has been removed.&lt;/p>
-&lt;p>A subtree of a node &lt;code>node&lt;/code> is node plus every node that is a descendant of &lt;code>node&lt;/code>.&lt;/p>
-&lt;p>example&lt;/p>
+&lt;h2 id="how-can-we-solve-this-problem"&gt;How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;這一題簡單的來說就是讓我們從&lt;strong&gt;Binary Tree&lt;/strong&gt;中找到有幾條&lt;code&gt;path&lt;/code&gt;是一個&lt;em&gt;Palindromic(Pseudo-Palindromic)偽迴文串&lt;/em&gt;。
+也就是說從&lt;code&gt;root到leaft&lt;/code&gt;的&lt;code&gt;path&lt;/code&gt;是一個&lt;strong&gt;Palindromic&lt;/strong&gt;。 (我們只需要知道path是否能組成&lt;em&gt;Palindromic&lt;/em&gt;即可)&lt;/p&gt;</description></item><item><title>[Leetcode] Pseudo-Palindromic Paths in a Binary Tree(Medium)</title><link>http://localhost:1313/leetcodes/leetcode1457/</link><pubDate>Wed, 14 Sep 2022 15:27:08 +0800</pubDate><guid>http://localhost:1313/leetcodes/leetcode1457/</guid><description>&lt;h2 id="leetcode-1457---pseudo-palindromic-paths-in-a-binary-tree"&gt;LeetCode 1457 - Pseudo-Palindromic Paths in a Binary Tree
+&lt;a class="header-anchor" href="#leetcode-1457---pseudo-palindromic-paths-in-a-binary-tree"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;Given a binary tree where node values are digits from 1 to 9. A path in the binary tree is said to be &lt;strong&gt;pseudo-palindromic&lt;/strong&gt; if at least one permutation of the node values in the path is a palindrome.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Return the number of &lt;strong&gt;pseudo-palindromic&lt;/strong&gt; paths going from the root node to leaf nodes.&lt;/em&gt;
+example&lt;/p&gt;
 
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-0-1">&lt;a class="lnlinks" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-0-2">&lt;a class="lnlinks" href="#hl-0-2">2&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-0-3">&lt;a class="lnlinks" href="#hl-0-3">3&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-0-4">&lt;a class="lnlinks" href="#hl-0-4">4&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-0-5">&lt;a class="lnlinks" href="#hl-0-5">5&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: root = [1,null,0,0,1]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [1,null,0,null,1]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: 
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Only the red nodes satisfy the property &amp;#34;every subtree not containing a 1&amp;#34;.
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">The diagram on the right represents the answer.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-0-1"&gt;&lt;a class="lnlinks" href="#hl-0-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-2"&gt;&lt;a class="lnlinks" href="#hl-0-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-3"&gt;&lt;a class="lnlinks" href="#hl-0-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: root = [2,3,1,3,1,null,1]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: 2 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Explanation: The figure above represents the given binary tree. There are three paths going from the root node to leaf nodes: the red path [2,3,3], the green path [2,1,1], and the path [2,3,1]. Among these paths only red path and green path are pseudo-palindromic paths since the red path [2,3,3] can be rearranged in [3,2,3] (palindrome) and the green path [2,1,1] can be rearranged in [1,2,1] (palindrome).&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
 
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-1-1">&lt;a class="lnlinks" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-1-2">&lt;a class="lnlinks" href="#hl-1-2">2&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: root = [1,0,1,0,0,0,1]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [1,null,1,null,1]&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>
-
-&lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
-&lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
-&lt;/h2>&lt;p>這題是要讓我們移除所有不包含&lt;code>1&lt;/code>的&lt;code>sub-tree&lt;/code>。所以，我們只要透過&lt;code>DFS&lt;/code>判斷一下&lt;code>node&lt;/code>的&lt;code>left-sub tree&lt;/code> 以及 &lt;code>right-sub tree&lt;/code> 是否都不包含&lt;code>1&lt;/code>:
-1. 如果左右子樹都不包含&lt;code>1&lt;/code>且當前&lt;code>node&lt;/code>為0, 直接返回&lt;code>nullptr&lt;/code>
-2. 若當前節點為&lt;code>1&lt;/code>就返回自身
-2. 左子樹不包含&lt;code>1&lt;/code>, 當前&lt;code>node&lt;/code>的左子樹設成&lt;code>nullptr&lt;/code>;同理右子樹不包含&lt;code>1&lt;/code>,當前&lt;code>node&lt;/code> 的右子數設為&lt;code>nullptr&lt;/code>&lt;/p></description></item><item><title>[Leetcode] Reverse Linked List II(Medium)</title><link>//localhost:1414/leetcodes/leetcode92/</link><pubDate>Thu, 21 Jul 2022 11:09:21 +0800</pubDate><guid>//localhost:1414/leetcodes/leetcode92/</guid><description>&lt;h2 id="leetcode-92----reverse-linked-list-ii">LeetCode 92 - Reverse Linked List II
-&lt;a class="header-anchor" href="#leetcode-92----reverse-linked-list-ii">&lt;/a>
-&lt;/h2>&lt;p>Given the &lt;code>head&lt;/code> of a singly linked list and two integers &lt;code>left&lt;/code> and &lt;code>right&lt;/code> where &lt;code>left &amp;lt;= right&lt;/code>, reverse the nodes of the list from position &lt;code>left&lt;/code> to position &lt;code>right&lt;/code>, and return the &lt;em>reversed list&lt;/em>.&lt;/p>
-&lt;p>example&lt;/p>
-
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-0-1">&lt;a class="lnlinks" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-0-2">&lt;a class="lnlinks" href="#hl-0-2">2&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: head = [1,2,3,4,5], left = 2, right = 4
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [1,4,3,2,5]&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-1-1"&gt;&lt;a class="lnlinks" href="#hl-1-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-2"&gt;&lt;a class="lnlinks" href="#hl-1-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-3"&gt;&lt;a class="lnlinks" href="#hl-1-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: root = [2,1,1,1,3,null,null,null,null,null,1]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: 1 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Explanation: The figure above represents the given binary tree. There are three paths going from the root node to leaf nodes: the green path [2,1,1], the path [2,1,3,1], and the path [2,1]. Among these paths only the green path is pseudo-palindromic since [2,1,1] can be rearranged in [1,2,1] (palindrome).&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
 
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-1-1">&lt;a class="lnlinks" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-1-2">&lt;a class="lnlinks" href="#hl-1-2">2&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: head = [5], left = 1, right = 1
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [5]&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-2-1"&gt;&lt;a class="lnlinks" href="#hl-2-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-2"&gt;&lt;a class="lnlinks" href="#hl-2-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: root = [9]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: 1&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
-&lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
-&lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
-&lt;/h2>&lt;p>這一題的問題非常的簡單,就是要讓我們在給定的一個&lt;code>list&lt;/code>中翻轉(Reverse)&lt;code>[left,right]&lt;/code>之間的Node,並返回結果。這題跟&lt;strong>Reverse Linked List I&lt;/strong>解法類似,不同的是多了個翻轉範圍。&lt;br>
-首先，我們要做的是在的翻轉的開始的位置。然後再透過recursive來翻轉List,最後返回的&lt;code>node/head&lt;/code>再由&lt;code>left&lt;/code>位置的Node的前一個&lt;code>Node&lt;/code>接起來(如有)就可以了~&lt;/p></description></item></channel></rss>
+&lt;h2 id="how-can-we-solve-this-problem"&gt;How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;這一題簡單的來說就是讓我們從&lt;strong&gt;Binary Tree&lt;/strong&gt;中找到有幾條&lt;code&gt;path&lt;/code&gt;是一個&lt;em&gt;Palindromic(Pseudo-Palindromic)偽迴文串&lt;/em&gt;。
+也就是說從&lt;code&gt;root到leaft&lt;/code&gt;的&lt;code&gt;path&lt;/code&gt;是一個&lt;strong&gt;Palindromic&lt;/strong&gt;。 (我們只需要知道path是否能組成&lt;em&gt;Palindromic&lt;/em&gt;即可)&lt;/p&gt;</description></item><item><title>[Leetcode] Construct String from Binary Tree(Easy)</title><link>http://localhost:1313/archives/leetcodes/leetcode606/</link><pubDate>Wed, 07 Sep 2022 10:12:28 +0800</pubDate><guid>http://localhost:1313/archives/leetcodes/leetcode606/</guid><description>&lt;h2 id="leetcode-606---construct-string-from-binary-tree"&gt;LeetCode 606 - Construct String from Binary Tree
+&lt;a class="header-anchor" href="#leetcode-606---construct-string-from-binary-tree"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;Given the &lt;code&gt;root&lt;/code&gt; of a binary tree, construct a string consisting of parenthesis and integers from a binary tree with the preorder traversal way, and return it.&lt;/p&gt;
+&lt;p&gt;Omit all the empty parenthesis pairs that do not affect the one-to-one mapping relationship between the string and the original binary tree.
+example&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-0-1"&gt;&lt;a class="lnlinks" href="#hl-0-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-2"&gt;&lt;a class="lnlinks" href="#hl-0-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-3"&gt;&lt;a class="lnlinks" href="#hl-0-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: root = [1,2,3,4]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: &amp;#34;1(2(4))(3)&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Explanation: Originally, it needs to be &amp;#34;1(2(4)())(3()())&amp;#34;, but you need to omit all the unnecessary empty parenthesis pairs. And it will be &amp;#34;1(2(4))(3)&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-1-1"&gt;&lt;a class="lnlinks" href="#hl-1-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-2"&gt;&lt;a class="lnlinks" href="#hl-1-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-3"&gt;&lt;a class="lnlinks" href="#hl-1-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: root = [1,2,3,null,4]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: &amp;#34;1(2()(4))(3)&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Explanation: Almost the same as the first example, except we cannot omit the first parenthesis pair to break the one-to-one mapping relationship between the input and the output&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id="how-can-we-solve-this-problem"&gt;How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;這題就是要讓我們講以&lt;code&gt;string&lt;/code&gt;的方式輸出&lt;strong&gt;Binary Tree&lt;/strong&gt;。只要注意他的規則就可以解決這題。&lt;/p&gt;</description></item><item><title>[Leetcode] Construct String from Binary Tree(Easy)</title><link>http://localhost:1313/leetcodes/leetcode606/</link><pubDate>Wed, 07 Sep 2022 10:12:28 +0800</pubDate><guid>http://localhost:1313/leetcodes/leetcode606/</guid><description>&lt;h2 id="leetcode-606---construct-string-from-binary-tree"&gt;LeetCode 606 - Construct String from Binary Tree
+&lt;a class="header-anchor" href="#leetcode-606---construct-string-from-binary-tree"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;Given the &lt;code&gt;root&lt;/code&gt; of a binary tree, construct a string consisting of parenthesis and integers from a binary tree with the preorder traversal way, and return it.&lt;/p&gt;
+&lt;p&gt;Omit all the empty parenthesis pairs that do not affect the one-to-one mapping relationship between the string and the original binary tree.
+example&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-0-1"&gt;&lt;a class="lnlinks" href="#hl-0-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-2"&gt;&lt;a class="lnlinks" href="#hl-0-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-3"&gt;&lt;a class="lnlinks" href="#hl-0-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: root = [1,2,3,4]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: &amp;#34;1(2(4))(3)&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Explanation: Originally, it needs to be &amp;#34;1(2(4)())(3()())&amp;#34;, but you need to omit all the unnecessary empty parenthesis pairs. And it will be &amp;#34;1(2(4))(3)&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-1-1"&gt;&lt;a class="lnlinks" href="#hl-1-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-2"&gt;&lt;a class="lnlinks" href="#hl-1-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-3"&gt;&lt;a class="lnlinks" href="#hl-1-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: root = [1,2,3,null,4]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: &amp;#34;1(2()(4))(3)&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Explanation: Almost the same as the first example, except we cannot omit the first parenthesis pair to break the one-to-one mapping relationship between the input and the output&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id="how-can-we-solve-this-problem"&gt;How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;這題就是要讓我們講以&lt;code&gt;string&lt;/code&gt;的方式輸出&lt;strong&gt;Binary Tree&lt;/strong&gt;。只要注意他的規則就可以解決這題。&lt;/p&gt;</description></item><item><title>[Leetcode] Binary Tree Pruning(Medium)</title><link>http://localhost:1313/archives/leetcodes/leetcode814/</link><pubDate>Tue, 06 Sep 2022 21:30:56 +0800</pubDate><guid>http://localhost:1313/archives/leetcodes/leetcode814/</guid><description>&lt;h2 id="leetcode-814---binary-tree-pruning"&gt;LeetCode 814 - Binary Tree Pruning
+&lt;a class="header-anchor" href="#leetcode-814---binary-tree-pruning"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;Given the &lt;code&gt;root&lt;/code&gt; of a binary tree, return the same tree where every subtree (of the given tree) not containing a &lt;code&gt;1&lt;/code&gt; has been removed.&lt;/p&gt;
+&lt;p&gt;A subtree of a node &lt;code&gt;node&lt;/code&gt; is node plus every node that is a descendant of &lt;code&gt;node&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;example&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-0-1"&gt;&lt;a class="lnlinks" href="#hl-0-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-2"&gt;&lt;a class="lnlinks" href="#hl-0-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-3"&gt;&lt;a class="lnlinks" href="#hl-0-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-4"&gt;&lt;a class="lnlinks" href="#hl-0-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-5"&gt;&lt;a class="lnlinks" href="#hl-0-5"&gt;5&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: root = [1,null,0,0,1]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: [1,null,0,null,1]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Explanation: 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Only the red nodes satisfy the property &amp;#34;every subtree not containing a 1&amp;#34;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;The diagram on the right represents the answer.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-1-1"&gt;&lt;a class="lnlinks" href="#hl-1-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-2"&gt;&lt;a class="lnlinks" href="#hl-1-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: root = [1,0,1,0,0,0,1]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: [1,null,1,null,1]&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id="how-can-we-solve-this-problem"&gt;How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;這題是要讓我們移除所有不包含&lt;code&gt;1&lt;/code&gt;的&lt;code&gt;sub-tree&lt;/code&gt;。所以，我們只要透過&lt;code&gt;DFS&lt;/code&gt;判斷一下&lt;code&gt;node&lt;/code&gt;的&lt;code&gt;left-sub tree&lt;/code&gt; 以及 &lt;code&gt;right-sub tree&lt;/code&gt; 是否都不包含&lt;code&gt;1&lt;/code&gt;:
+1. 如果左右子樹都不包含&lt;code&gt;1&lt;/code&gt;且當前&lt;code&gt;node&lt;/code&gt;為0, 直接返回&lt;code&gt;nullptr&lt;/code&gt;
+2. 若當前節點為&lt;code&gt;1&lt;/code&gt;就返回自身
+2. 左子樹不包含&lt;code&gt;1&lt;/code&gt;, 當前&lt;code&gt;node&lt;/code&gt;的左子樹設成&lt;code&gt;nullptr&lt;/code&gt;;同理右子樹不包含&lt;code&gt;1&lt;/code&gt;,當前&lt;code&gt;node&lt;/code&gt; 的右子數設為&lt;code&gt;nullptr&lt;/code&gt;&lt;/p&gt;</description></item><item><title>[Leetcode] Binary Tree Pruning(Medium)</title><link>http://localhost:1313/leetcodes/leetcode814/</link><pubDate>Tue, 06 Sep 2022 21:30:56 +0800</pubDate><guid>http://localhost:1313/leetcodes/leetcode814/</guid><description>&lt;h2 id="leetcode-814---binary-tree-pruning"&gt;LeetCode 814 - Binary Tree Pruning
+&lt;a class="header-anchor" href="#leetcode-814---binary-tree-pruning"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;Given the &lt;code&gt;root&lt;/code&gt; of a binary tree, return the same tree where every subtree (of the given tree) not containing a &lt;code&gt;1&lt;/code&gt; has been removed.&lt;/p&gt;
+&lt;p&gt;A subtree of a node &lt;code&gt;node&lt;/code&gt; is node plus every node that is a descendant of &lt;code&gt;node&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;example&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-0-1"&gt;&lt;a class="lnlinks" href="#hl-0-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-2"&gt;&lt;a class="lnlinks" href="#hl-0-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-3"&gt;&lt;a class="lnlinks" href="#hl-0-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-4"&gt;&lt;a class="lnlinks" href="#hl-0-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-5"&gt;&lt;a class="lnlinks" href="#hl-0-5"&gt;5&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: root = [1,null,0,0,1]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: [1,null,0,null,1]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Explanation: 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Only the red nodes satisfy the property &amp;#34;every subtree not containing a 1&amp;#34;.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;The diagram on the right represents the answer.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-1-1"&gt;&lt;a class="lnlinks" href="#hl-1-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-2"&gt;&lt;a class="lnlinks" href="#hl-1-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: root = [1,0,1,0,0,0,1]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: [1,null,1,null,1]&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id="how-can-we-solve-this-problem"&gt;How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;這題是要讓我們移除所有不包含&lt;code&gt;1&lt;/code&gt;的&lt;code&gt;sub-tree&lt;/code&gt;。所以，我們只要透過&lt;code&gt;DFS&lt;/code&gt;判斷一下&lt;code&gt;node&lt;/code&gt;的&lt;code&gt;left-sub tree&lt;/code&gt; 以及 &lt;code&gt;right-sub tree&lt;/code&gt; 是否都不包含&lt;code&gt;1&lt;/code&gt;:
+1. 如果左右子樹都不包含&lt;code&gt;1&lt;/code&gt;且當前&lt;code&gt;node&lt;/code&gt;為0, 直接返回&lt;code&gt;nullptr&lt;/code&gt;
+2. 若當前節點為&lt;code&gt;1&lt;/code&gt;就返回自身
+2. 左子樹不包含&lt;code&gt;1&lt;/code&gt;, 當前&lt;code&gt;node&lt;/code&gt;的左子樹設成&lt;code&gt;nullptr&lt;/code&gt;;同理右子樹不包含&lt;code&gt;1&lt;/code&gt;,當前&lt;code&gt;node&lt;/code&gt; 的右子數設為&lt;code&gt;nullptr&lt;/code&gt;&lt;/p&gt;</description></item><item><title>[Leetcode] Reverse Linked List II(Medium)</title><link>http://localhost:1313/archives/leetcodes/leetcode92/</link><pubDate>Thu, 21 Jul 2022 11:09:21 +0800</pubDate><guid>http://localhost:1313/archives/leetcodes/leetcode92/</guid><description>&lt;h2 id="leetcode-92----reverse-linked-list-ii"&gt;LeetCode 92 - Reverse Linked List II
+&lt;a class="header-anchor" href="#leetcode-92----reverse-linked-list-ii"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;Given the &lt;code&gt;head&lt;/code&gt; of a singly linked list and two integers &lt;code&gt;left&lt;/code&gt; and &lt;code&gt;right&lt;/code&gt; where &lt;code&gt;left &amp;lt;= right&lt;/code&gt;, reverse the nodes of the list from position &lt;code&gt;left&lt;/code&gt; to position &lt;code&gt;right&lt;/code&gt;, and return the &lt;em&gt;reversed list&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;example&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-0-1"&gt;&lt;a class="lnlinks" href="#hl-0-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-2"&gt;&lt;a class="lnlinks" href="#hl-0-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: head = [1,2,3,4,5], left = 2, right = 4
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: [1,4,3,2,5]&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-1-1"&gt;&lt;a class="lnlinks" href="#hl-1-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-2"&gt;&lt;a class="lnlinks" href="#hl-1-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: head = [5], left = 1, right = 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: [5]&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id="how-can-we-solve-this-problem"&gt;How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;這一題的問題非常的簡單,就是要讓我們在給定的一個&lt;code&gt;list&lt;/code&gt;中翻轉(Reverse)&lt;code&gt;[left,right]&lt;/code&gt;之間的Node,並返回結果。這題跟&lt;strong&gt;Reverse Linked List I&lt;/strong&gt;解法類似,不同的是多了個翻轉範圍。&lt;br&gt;
+首先，我們要做的是在的翻轉的開始的位置。然後再透過recursive來翻轉List,最後返回的&lt;code&gt;node/head&lt;/code&gt;再由&lt;code&gt;left&lt;/code&gt;位置的Node的前一個&lt;code&gt;Node&lt;/code&gt;接起來(如有)就可以了~&lt;/p&gt;</description></item><item><title>[Leetcode] Reverse Linked List II(Medium)</title><link>http://localhost:1313/leetcodes/leetcode92/</link><pubDate>Thu, 21 Jul 2022 11:09:21 +0800</pubDate><guid>http://localhost:1313/leetcodes/leetcode92/</guid><description>&lt;h2 id="leetcode-92----reverse-linked-list-ii"&gt;LeetCode 92 - Reverse Linked List II
+&lt;a class="header-anchor" href="#leetcode-92----reverse-linked-list-ii"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;Given the &lt;code&gt;head&lt;/code&gt; of a singly linked list and two integers &lt;code&gt;left&lt;/code&gt; and &lt;code&gt;right&lt;/code&gt; where &lt;code&gt;left &amp;lt;= right&lt;/code&gt;, reverse the nodes of the list from position &lt;code&gt;left&lt;/code&gt; to position &lt;code&gt;right&lt;/code&gt;, and return the &lt;em&gt;reversed list&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;example&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-0-1"&gt;&lt;a class="lnlinks" href="#hl-0-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-2"&gt;&lt;a class="lnlinks" href="#hl-0-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: head = [1,2,3,4,5], left = 2, right = 4
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: [1,4,3,2,5]&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-1-1"&gt;&lt;a class="lnlinks" href="#hl-1-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-2"&gt;&lt;a class="lnlinks" href="#hl-1-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: head = [5], left = 1, right = 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: [5]&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id="how-can-we-solve-this-problem"&gt;How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;這一題的問題非常的簡單,就是要讓我們在給定的一個&lt;code&gt;list&lt;/code&gt;中翻轉(Reverse)&lt;code&gt;[left,right]&lt;/code&gt;之間的Node,並返回結果。這題跟&lt;strong&gt;Reverse Linked List I&lt;/strong&gt;解法類似,不同的是多了個翻轉範圍。&lt;br&gt;
+首先，我們要做的是在的翻轉的開始的位置。然後再透過recursive來翻轉List,最後返回的&lt;code&gt;node/head&lt;/code&gt;再由&lt;code&gt;left&lt;/code&gt;位置的Node的前一個&lt;code&gt;Node&lt;/code&gt;接起來(如有)就可以了~&lt;/p&gt;</description></item></channel></rss>

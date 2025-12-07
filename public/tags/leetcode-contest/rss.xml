@@ -1,9 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Leetcode-Contest on Hugo NexT</title><link>//localhost:1414/tags/leetcode-contest/</link><description>Recent content in Leetcode-Contest on Hugo NexT</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Sun, 18 Sep 2022 16:32:34 +0800</lastBuildDate><atom:link href="//localhost:1414/tags/leetcode-contest/rss.xml" rel="self" type="application/rss+xml"/><item><title>Leetcode Weekly Contest 331(第一次參加競賽)</title><link>//localhost:1414/post/coding/leetcodeweeklycontest331/</link><pubDate>Sun, 18 Sep 2022 16:32:34 +0800</pubDate><guid>//localhost:1414/post/coding/leetcodeweeklycontest331/</guid><description>&lt;blockquote>
- &lt;p>今天是我第一次參加&lt;strong>Leetcode 雙週賽&lt;/strong>，所以想記錄一下今天的競賽題目。希望能透過博客來記錄自己的競賽狀況。&lt;/p>
- &lt;/blockquote>
-&lt;p>&lt;strong>本週AC題數為:4/4&lt;/strong>&lt;/p>
-&lt;h2 id="題目">題目
-&lt;a class="header-anchor" href="#%e9%a1%8c%e7%9b%ae">&lt;/a>
-&lt;/h2>&lt;h3 id="2413-smallest-even-multipleeasy---ac">2413. Smallest Even Multiple(EASY) - AC
-&lt;a class="header-anchor" href="#2413-smallest-even-multipleeasy---ac">&lt;/a>
-&lt;/h3>&lt;p>Given a positive integer &lt;code>n&lt;/code>, return the smallest positive integer that is a multiple of both &lt;code>2&lt;/code> and &lt;code>n&lt;/code>.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Leetcode-Contest on Jackson.tmm</title><link>http://localhost:1313/tags/leetcode-contest/</link><description>Recent content in Leetcode-Contest on Jackson.tmm</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Sun, 18 Sep 2022 16:32:34 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/leetcode-contest/rss.xml" rel="self" type="application/rss+xml"/><item><title>Leetcode Weekly Contest 331(第一次參加競賽)</title><link>http://localhost:1313/archives/coding/leetcodeweeklycontest331/</link><pubDate>Sun, 18 Sep 2022 16:32:34 +0800</pubDate><guid>http://localhost:1313/archives/coding/leetcodeweeklycontest331/</guid><description>&lt;blockquote&gt;
+ &lt;p&gt;今天是我第一次參加&lt;strong&gt;Leetcode 雙週賽&lt;/strong&gt;，所以想記錄一下今天的競賽題目。希望能透過博客來記錄自己的競賽狀況。&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;本週AC題數為:4/4&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="題目"&gt;題目
+&lt;a class="header-anchor" href="#%e9%a1%8c%e7%9b%ae"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;h3 id="2413-smallest-even-multipleeasy---ac"&gt;2413. Smallest Even Multiple(EASY) - AC
+&lt;a class="header-anchor" href="#2413-smallest-even-multipleeasy---ac"&gt;&lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;Given a positive integer &lt;code&gt;n&lt;/code&gt;, return the smallest positive integer that is a multiple of both &lt;code&gt;2&lt;/code&gt; and &lt;code&gt;n&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Leetcode Weekly Contest 331(第一次參加競賽)</title><link>http://localhost:1313/techs/coding/leetcodeweeklycontest331/</link><pubDate>Sun, 18 Sep 2022 16:32:34 +0800</pubDate><guid>http://localhost:1313/techs/coding/leetcodeweeklycontest331/</guid><description>&lt;blockquote&gt;
+ &lt;p&gt;今天是我第一次參加&lt;strong&gt;Leetcode 雙週賽&lt;/strong&gt;，所以想記錄一下今天的競賽題目。希望能透過博客來記錄自己的競賽狀況。&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;本週AC題數為:4/4&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="題目"&gt;題目
+&lt;a class="header-anchor" href="#%e9%a1%8c%e7%9b%ae"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;h3 id="2413-smallest-even-multipleeasy---ac"&gt;2413. Smallest Even Multiple(EASY) - AC
+&lt;a class="header-anchor" href="#2413-smallest-even-multipleeasy---ac"&gt;&lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;Given a positive integer &lt;code&gt;n&lt;/code&gt;, return the smallest positive integer that is a multiple of both &lt;code&gt;2&lt;/code&gt; and &lt;code&gt;n&lt;/code&gt;.&lt;/p&gt;</description></item></channel></rss>

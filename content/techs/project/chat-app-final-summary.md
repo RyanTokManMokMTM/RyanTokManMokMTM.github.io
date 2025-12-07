@@ -16,15 +16,15 @@ tags:
 Hi, 已經有一段時間沒有更新了，因為最近在研究多人串流的問題。這篇文章主要是分享我做了些什麼以及對這個project做個總結，這裡的意思就是這個project終於完成了！！花了我近1年的時間呢。  
 雖然這個project已完成，但是依然還有些問題，如果我們之後還有這個能力在修復～ 這些問題使得串流沒有這麼的穩定，但還是可以玩的呢！  
 在進入今天主題之前，如果你不記得或不知道這個project關於什麼的話，可以回去閱讀這幾篇文章：  
-[ChatApp(I)](/post/chat-app-init/)  
-[ChatApp(II)](/post/chat-app-demo/)  
-[ChatApp(III)](/post/chat-app-update/)  
-[ChatApp(IV)](/post/chat-app-final/)  
-[ChatApp(V)](/post/chat-app-voice-chat/)  
-[ChatApp(VI)](/post/chat-app-sticker-updated/)  
-[ChatApp(Ⅶ)](/post/chat-app-story-alignment-updated/)  
-[ChatApp(Ⅷ)](/post/chat-app-story-multiple-img-updated/)  
-[ChatApp(IX)](/post/chat-app-sticker-shop-updated/)
+[ChatApp(I)](/achievement/chat-app-init/)  
+[ChatApp(II)](/achievement/chat-app-demo/)  
+[ChatApp(III)](/achievement/chat-app-update/)  
+[ChatApp(IV)](/achievement/chat-app-final/)  
+[ChatApp(V)](/achievement/chat-app-voice-chat/)  
+[ChatApp(VI)](/achievement/chat-app-sticker-updated/)  
+[ChatApp(Ⅶ)](/achievement/chat-app-story-alignment-updated/)  
+[ChatApp(Ⅷ)](/achievement/chat-app-story-multiple-img-updated/)  
+[ChatApp(IX)](/achievement/chat-app-sticker-shop-updated/)
 
 這裡是App的最新截圖：
 ![final-app](/imgs-custom/chat-app/2024-04-20-final.png)

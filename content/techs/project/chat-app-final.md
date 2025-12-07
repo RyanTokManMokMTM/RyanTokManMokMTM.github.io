@@ -9,7 +9,7 @@ tags:
 ---
 
 ### 簡介
-在之前[序章](/post/chat-app-init)中，雖然已經大概介紹過這個app在幹嘛。但是因為這次是**最終章**的成品展示(或許有些部分沒實現😂)，所以就允許我囉嗦得再說一次吧！
+在之前[序章](/achievement/chat-app-init)中，雖然已經大概介紹過這個app在幹嘛。但是因為這次是**最終章**的成品展示(或許有些部分沒實現😂)，所以就允許我囉嗦得再說一次吧！
 
 這個app主要是focus在Websocket，也就是實時通訊上。雖然但是HTTP的部分還是不能少的🤣，哈哈哈。所以這個App的Server-side包含了HTTP和Websocket 2個部分。HTTP的部分主要是用作CURD,而Websocket的部分則是用於個人通訊和群組通訊。  
 

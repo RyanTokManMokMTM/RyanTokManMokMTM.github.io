@@ -1,78 +1,155 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Math on Hugo NexT</title><link>//localhost:1414/tags/math/</link><description>Recent content in Math on Hugo NexT</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Tue, 10 May 2022 11:41:43 +0800</lastBuildDate><atom:link href="//localhost:1414/tags/math/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Combination Sum III(Medium)</title><link>//localhost:1414/leetcodes/leetcode216/</link><pubDate>Tue, 10 May 2022 11:41:43 +0800</pubDate><guid>//localhost:1414/leetcodes/leetcode216/</guid><description>&lt;h2 id="leetcode-216---combination-sum-iii">LeetCode 216 - Combination Sum III
-&lt;a class="header-anchor" href="#leetcode-216---combination-sum-iii">&lt;/a>
-&lt;/h2>&lt;p>Find all valid combinations of &lt;code>k&lt;/code> numbers that sum up to &lt;code>n&lt;/code> such that the following conditions are true:&lt;/p>
-&lt;ul>
-&lt;li>Only numbers 1 through 9 are used.&lt;/li>
-&lt;li>Each number is used &lt;strong>at most once&lt;/strong>.
-Return a &lt;em>list of all possible valid combinations&lt;/em>. The list must not contain the same combination twice, and the combinations may be returned in any order.&lt;/li>
-&lt;/ul>
-&lt;p>example&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Math on Jackson.tmm</title><link>http://localhost:1313/tags/math/</link><description>Recent content in Math on Jackson.tmm</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Tue, 10 May 2022 11:41:43 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/math/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Combination Sum III(Medium)</title><link>http://localhost:1313/archives/leetcodes/leetcode216/</link><pubDate>Tue, 10 May 2022 11:41:43 +0800</pubDate><guid>http://localhost:1313/archives/leetcodes/leetcode216/</guid><description>&lt;h2 id="leetcode-216---combination-sum-iii"&gt;LeetCode 216 - Combination Sum III
+&lt;a class="header-anchor" href="#leetcode-216---combination-sum-iii"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;Find all valid combinations of &lt;code&gt;k&lt;/code&gt; numbers that sum up to &lt;code&gt;n&lt;/code&gt; such that the following conditions are true:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Only numbers 1 through 9 are used.&lt;/li&gt;
+&lt;li&gt;Each number is used &lt;strong&gt;at most once&lt;/strong&gt;.
+Return a &lt;em&gt;list of all possible valid combinations&lt;/em&gt;. The list must not contain the same combination twice, and the combinations may be returned in any order.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;example&lt;/p&gt;
 
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-0-1">&lt;a class="lnlinks" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-0-2">&lt;a class="lnlinks" href="#hl-0-2">2&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-0-3">&lt;a class="lnlinks" href="#hl-0-3">3&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-0-4">&lt;a class="lnlinks" href="#hl-0-4">4&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-0-5">&lt;a class="lnlinks" href="#hl-0-5">5&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: k = 3, n = 7
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [[1,2,4]]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1 + 2 + 4 = 7
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">There are no other valid combinations.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>
-
-
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-1-1">&lt;a class="lnlinks" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-1-2">&lt;a class="lnlinks" href="#hl-1-2">2&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-1-3">&lt;a class="lnlinks" href="#hl-1-3">3&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-1-4">&lt;a class="lnlinks" href="#hl-1-4">4&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-1-5">&lt;a class="lnlinks" href="#hl-1-5">5&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-1-6">&lt;a class="lnlinks" href="#hl-1-6">6&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-1-7">&lt;a class="lnlinks" href="#hl-1-7">7&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: k = 3, n = 9
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [[1,2,6],[1,3,5],[2,3,4]]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1 + 2 + 6 = 9
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1 + 3 + 5 = 9
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2 + 3 + 4 = 9
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">There are no other valid combinations.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-0-1"&gt;&lt;a class="lnlinks" href="#hl-0-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-2"&gt;&lt;a class="lnlinks" href="#hl-0-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-3"&gt;&lt;a class="lnlinks" href="#hl-0-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-4"&gt;&lt;a class="lnlinks" href="#hl-0-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-5"&gt;&lt;a class="lnlinks" href="#hl-0-5"&gt;5&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: k = 3, n = 7
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: [[1,2,4]]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Explanation:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1 + 2 + 4 = 7
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;There are no other valid combinations.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
 
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-2-1">&lt;a class="lnlinks" href="#hl-2-1">1&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-2-2">&lt;a class="lnlinks" href="#hl-2-2">2&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-2-3">&lt;a class="lnlinks" href="#hl-2-3">3&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-2-4">&lt;a class="lnlinks" href="#hl-2-4">4&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: k = 4, n = 1
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: []
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: There are no valid combinations.
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Using 4 different numbers in the range [1,9], the smallest sum we can get is 1+2+3+4 = 10 and since 10 &amp;gt; 1, there are no valid combination.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-1-1"&gt;&lt;a class="lnlinks" href="#hl-1-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-2"&gt;&lt;a class="lnlinks" href="#hl-1-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-3"&gt;&lt;a class="lnlinks" href="#hl-1-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-4"&gt;&lt;a class="lnlinks" href="#hl-1-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-5"&gt;&lt;a class="lnlinks" href="#hl-1-5"&gt;5&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-6"&gt;&lt;a class="lnlinks" href="#hl-1-6"&gt;6&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-7"&gt;&lt;a class="lnlinks" href="#hl-1-7"&gt;7&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: k = 3, n = 9
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: [[1,2,6],[1,3,5],[2,3,4]]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Explanation:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1 + 2 + 6 = 9
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1 + 3 + 5 = 9
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2 + 3 + 4 = 9
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;There are no other valid combinations.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
-&lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
-&lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
-&lt;/h2>&lt;p>這題主要關注的點是數字範圍為&lt;code>[1,9]&lt;/code>，每個結果中，數字只能使用一次，而且數字必須是順序排列。例如:&lt;code>2,3,4&lt;/code>,&lt;code>1,2,5&lt;/code>。解決這題我們可以用&lt;strong>back-traking&lt;/strong>大法。只要我們當前的&lt;code>Sum&lt;/code>大於&lt;code>n&lt;/code>我們就直接退回back track回上一步,因為數值只會越來越大，並不是我們想要的。如果&lt;em>Ans&lt;/em>我們所需的&lt;code>k&lt;/code>個就直接判斷是否等於&lt;code>n&lt;/code>，如果是就直接加入到我們的&lt;em>result&lt;/em>即可。&lt;/p></description></item><item><title>[Leetcode] Shift 2D Grid(Easy)</title><link>//localhost:1414/leetcodes/leetcode1260/</link><pubDate>Wed, 13 Apr 2022 19:14:44 +0800</pubDate><guid>//localhost:1414/leetcodes/leetcode1260/</guid><description>&lt;h2 id="leetcode-1260----shift-2d-grid">LeetCode 1260 - Shift 2D Grid
-&lt;a class="header-anchor" href="#leetcode-1260----shift-2d-grid">&lt;/a>
-&lt;/h2>&lt;p>Given a 2D grid of size m x n and an integer k. You need to shift the grid k times.&lt;/p>
-&lt;p>In one shift operation:&lt;/p>
-&lt;ul>
-&lt;li>Element at grid[i][j] moves to grid[i][j + 1].&lt;/li>
-&lt;li>Element at grid[i][n - 1] moves to grid[i + 1][0].&lt;/li>
-&lt;li>Element at grid[m - 1][n - 1] moves to grid[0][0].&lt;/li>
-&lt;/ul>
-&lt;p>Return the 2D grid after applying shift operation k times.&lt;/p>
-&lt;p>example&lt;/p></description></item></channel></rss>
+
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-2-1"&gt;&lt;a class="lnlinks" href="#hl-2-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-2"&gt;&lt;a class="lnlinks" href="#hl-2-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-3"&gt;&lt;a class="lnlinks" href="#hl-2-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-4"&gt;&lt;a class="lnlinks" href="#hl-2-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: k = 4, n = 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: []
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Explanation: There are no valid combinations.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Using 4 different numbers in the range [1,9], the smallest sum we can get is 1+2+3+4 = 10 and since 10 &amp;gt; 1, there are no valid combination.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id="how-can-we-solve-this-problem"&gt;How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;這題主要關注的點是數字範圍為&lt;code&gt;[1,9]&lt;/code&gt;，每個結果中，數字只能使用一次，而且數字必須是順序排列。例如:&lt;code&gt;2,3,4&lt;/code&gt;,&lt;code&gt;1,2,5&lt;/code&gt;。解決這題我們可以用&lt;strong&gt;back-traking&lt;/strong&gt;大法。只要我們當前的&lt;code&gt;Sum&lt;/code&gt;大於&lt;code&gt;n&lt;/code&gt;我們就直接退回back track回上一步,因為數值只會越來越大，並不是我們想要的。如果&lt;em&gt;Ans&lt;/em&gt;我們所需的&lt;code&gt;k&lt;/code&gt;個就直接判斷是否等於&lt;code&gt;n&lt;/code&gt;，如果是就直接加入到我們的&lt;em&gt;result&lt;/em&gt;即可。&lt;/p&gt;</description></item><item><title>[Leetcode] Combination Sum III(Medium)</title><link>http://localhost:1313/leetcodes/leetcode216/</link><pubDate>Tue, 10 May 2022 11:41:43 +0800</pubDate><guid>http://localhost:1313/leetcodes/leetcode216/</guid><description>&lt;h2 id="leetcode-216---combination-sum-iii"&gt;LeetCode 216 - Combination Sum III
+&lt;a class="header-anchor" href="#leetcode-216---combination-sum-iii"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;Find all valid combinations of &lt;code&gt;k&lt;/code&gt; numbers that sum up to &lt;code&gt;n&lt;/code&gt; such that the following conditions are true:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Only numbers 1 through 9 are used.&lt;/li&gt;
+&lt;li&gt;Each number is used &lt;strong&gt;at most once&lt;/strong&gt;.
+Return a &lt;em&gt;list of all possible valid combinations&lt;/em&gt;. The list must not contain the same combination twice, and the combinations may be returned in any order.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;example&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-0-1"&gt;&lt;a class="lnlinks" href="#hl-0-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-2"&gt;&lt;a class="lnlinks" href="#hl-0-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-3"&gt;&lt;a class="lnlinks" href="#hl-0-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-4"&gt;&lt;a class="lnlinks" href="#hl-0-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-5"&gt;&lt;a class="lnlinks" href="#hl-0-5"&gt;5&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: k = 3, n = 7
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: [[1,2,4]]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Explanation:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1 + 2 + 4 = 7
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;There are no other valid combinations.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-1-1"&gt;&lt;a class="lnlinks" href="#hl-1-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-2"&gt;&lt;a class="lnlinks" href="#hl-1-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-3"&gt;&lt;a class="lnlinks" href="#hl-1-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-4"&gt;&lt;a class="lnlinks" href="#hl-1-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-5"&gt;&lt;a class="lnlinks" href="#hl-1-5"&gt;5&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-6"&gt;&lt;a class="lnlinks" href="#hl-1-6"&gt;6&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-7"&gt;&lt;a class="lnlinks" href="#hl-1-7"&gt;7&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: k = 3, n = 9
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: [[1,2,6],[1,3,5],[2,3,4]]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Explanation:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1 + 2 + 6 = 9
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;1 + 3 + 5 = 9
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;2 + 3 + 4 = 9
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;There are no other valid combinations.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-2-1"&gt;&lt;a class="lnlinks" href="#hl-2-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-2"&gt;&lt;a class="lnlinks" href="#hl-2-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-3"&gt;&lt;a class="lnlinks" href="#hl-2-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-4"&gt;&lt;a class="lnlinks" href="#hl-2-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: k = 4, n = 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: []
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Explanation: There are no valid combinations.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Using 4 different numbers in the range [1,9], the smallest sum we can get is 1+2+3+4 = 10 and since 10 &amp;gt; 1, there are no valid combination.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id="how-can-we-solve-this-problem"&gt;How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;這題主要關注的點是數字範圍為&lt;code&gt;[1,9]&lt;/code&gt;，每個結果中，數字只能使用一次，而且數字必須是順序排列。例如:&lt;code&gt;2,3,4&lt;/code&gt;,&lt;code&gt;1,2,5&lt;/code&gt;。解決這題我們可以用&lt;strong&gt;back-traking&lt;/strong&gt;大法。只要我們當前的&lt;code&gt;Sum&lt;/code&gt;大於&lt;code&gt;n&lt;/code&gt;我們就直接退回back track回上一步,因為數值只會越來越大，並不是我們想要的。如果&lt;em&gt;Ans&lt;/em&gt;我們所需的&lt;code&gt;k&lt;/code&gt;個就直接判斷是否等於&lt;code&gt;n&lt;/code&gt;，如果是就直接加入到我們的&lt;em&gt;result&lt;/em&gt;即可。&lt;/p&gt;</description></item><item><title>[Leetcode] Shift 2D Grid(Easy)</title><link>http://localhost:1313/archives/leetcodes/leetcode1260/</link><pubDate>Wed, 13 Apr 2022 19:14:44 +0800</pubDate><guid>http://localhost:1313/archives/leetcodes/leetcode1260/</guid><description>&lt;h2 id="leetcode-1260----shift-2d-grid"&gt;LeetCode 1260 - Shift 2D Grid
+&lt;a class="header-anchor" href="#leetcode-1260----shift-2d-grid"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;Given a 2D grid of size m x n and an integer k. You need to shift the grid k times.&lt;/p&gt;
+&lt;p&gt;In one shift operation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Element at grid[i][j] moves to grid[i][j + 1].&lt;/li&gt;
+&lt;li&gt;Element at grid[i][n - 1] moves to grid[i + 1][0].&lt;/li&gt;
+&lt;li&gt;Element at grid[m - 1][n - 1] moves to grid[0][0].&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Return the 2D grid after applying shift operation k times.&lt;/p&gt;
+&lt;p&gt;example&lt;/p&gt;</description></item><item><title>[Leetcode] Shift 2D Grid(Easy)</title><link>http://localhost:1313/leetcodes/leetcode1260/</link><pubDate>Wed, 13 Apr 2022 19:14:44 +0800</pubDate><guid>http://localhost:1313/leetcodes/leetcode1260/</guid><description>&lt;h2 id="leetcode-1260----shift-2d-grid"&gt;LeetCode 1260 - Shift 2D Grid
+&lt;a class="header-anchor" href="#leetcode-1260----shift-2d-grid"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;Given a 2D grid of size m x n and an integer k. You need to shift the grid k times.&lt;/p&gt;
+&lt;p&gt;In one shift operation:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Element at grid[i][j] moves to grid[i][j + 1].&lt;/li&gt;
+&lt;li&gt;Element at grid[i][n - 1] moves to grid[i + 1][0].&lt;/li&gt;
+&lt;li&gt;Element at grid[m - 1][n - 1] moves to grid[0][0].&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Return the 2D grid after applying shift operation k times.&lt;/p&gt;
+&lt;p&gt;example&lt;/p&gt;</description></item></channel></rss>

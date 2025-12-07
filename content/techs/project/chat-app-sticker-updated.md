@@ -10,11 +10,11 @@ tags:
 
 ## 簡介
 關於這個專案我就不多說了，如果你對這個專案有興趣的話，請看我之前的貼文。在之前的文章中，我已經詳細介紹了這個專案。
-[ChatApp(I)](/post/chat-app-init/)  
-[ChatApp(II)](/post/chat-app-demo/)  
-[ChatApp(III)](/post/chat-app-update/)  
-[ChatApp(IV)](/post/chat-app-final/)  
-[ChatApp(V)](/post/chat-app-voice-chat/)  
+[ChatApp(I)](/achievement/chat-app-init/)  
+[ChatApp(II)](/achievement/chat-app-demo/)  
+[ChatApp(III)](/achievement/chat-app-update/)  
+[ChatApp(IV)](/achievement/chat-app-final/)  
+[ChatApp(V)](/achievement/chat-app-voice-chat/)  
 
 <video src="/videos/chat-app/sticker-demo.mp4" controls="controls" width="500"></video> 
 

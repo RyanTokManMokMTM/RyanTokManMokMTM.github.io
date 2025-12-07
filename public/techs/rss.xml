@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Techs on Jackson.tmm</title><link>http://localhost:1313/techs/</link><description>Recent content in Techs on Jackson.tmm</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Mon, 02 Dec 2024 23:31:33 +0800</lastBuildDate><atom:link href="http://localhost:1313/techs/rss.xml" rel="self" type="application/rss+xml"/><item><title>[筆記] 資料庫索引(index)</title><link>http://localhost:1313/techs/note/database-index/</link><pubDate>Mon, 02 Dec 2024 23:31:33 +0800</pubDate><guid>http://localhost:1313/techs/note/database-index/</guid><description>&lt;h2 id="前言"&gt;前言
+&lt;a class="header-anchor" href="#%e5%89%8d%e8%a8%80"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;之前的文章中，我們有簡單探討過事務相關的課題，而在這篇文章就主要討論 Index 索引相關的課題！ 而索引也跟 B+ tree 相關，如果不了解B+ tree的同學可以去參考之前討論
+&lt;a href="http://localhost:1313/achievement/note/balance-tree" title="平衡樹的文章" &gt;
+ 平衡樹的文章
+ 
+&lt;/a&gt;。&lt;/p&gt;</description></item><item><title>[筆記] 淺談資料庫事務(Transcation)</title><link>http://localhost:1313/techs/note/database-transaction/</link><pubDate>Sat, 23 Nov 2024 22:11:45 +0800</pubDate><guid>http://localhost:1313/techs/note/database-transaction/</guid><description>&lt;h2 id="簡介"&gt;簡介
+&lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;這篇文章主要是想要討論一下資料庫筆一個重要的概念&lt;strong&gt;事務(Transcation)&lt;/strong&gt;。接下來的文章主要會分成一下幾個部分繼續討論：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;什麼是資料庫的事務(Transcation)&lt;/li&gt;
+&lt;li&gt;事務(Transcation)的4大特性為何&lt;/li&gt;
+&lt;li&gt;一致性問題和解決方法&lt;/li&gt;
+&lt;li&gt;MVCC和鎖的簡單介紹&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="什麼是事務transcation"&gt;什麼是事務(Transcation)
+&lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%af%e4%ba%8b%e5%8b%99transcation"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;在資料庫系統中，我們都會對數據進行讀寫操作，但是如果我們要對數據做一系列的操作(2個或以上的操作)，正在被操作的數據我們不希望能被其他人修改從而影響了結果，而且即便途中操作失敗，也希望他能回到原本的狀態。而資料庫為我們提供一個這樣的方法使得數據的操作要麼是&lt;strong&gt;全部都成功，要麼全部都是失敗&lt;/strong&gt;，這就是事務(Transcation)，也可以稱之為「交易」。&lt;/p&gt;</description></item><item><title>2024年軟體工程師(Software engineer)面試總結</title><link>http://localhost:1313/techs/share/2024-swe-interview-summary/</link><pubDate>Sun, 10 Nov 2024 15:29:39 +0800</pubDate><guid>http://localhost:1313/techs/share/2024-swe-interview-summary/</guid><description>&lt;h2 id="簡介-intro"&gt;簡介 Intro
+&lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b-intro"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;在過去的幾個月裡一直在找新的工作機會，從2024/8/27起開始在各大招聘平台投遞履歷以及約面談。這篇文章主要是想分享這段時間面試經歷以及復盤面試！&lt;/p&gt;</description></item><item><title>[筆記] 平衡樹 Balance Tree</title><link>http://localhost:1313/techs/note/balance-tree/</link><pubDate>Thu, 31 Oct 2024 15:28:20 +0800</pubDate><guid>http://localhost:1313/techs/note/balance-tree/</guid><description>&lt;h2 id="簡介"&gt;簡介
+&lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;在講述Balance Tree之前，我們先來看一種情況。現在我們根據數據來建立一棵Binary Search Tree，譬如說以下的數據 : [4,5,6,7,8,9,10], 我們就會建立出以下這顆 Binary Search Tree:&lt;br&gt;
+&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/imgs-custom/helper/balance-tree/unblanceTree.png" alt="unbalance-tree" /&gt;&lt;/p&gt;</description></item><item><title>[開發者日記] 聊天通訊APP(完結) - 總結</title><link>http://localhost:1313/techs/project/chat-app-final-summary/</link><pubDate>Sun, 21 Apr 2024 23:12:11 +0800</pubDate><guid>http://localhost:1313/techs/project/chat-app-final-summary/</guid><description>&lt;h2 id="簡介"&gt;簡介
+&lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;Hi, 已經有一段時間沒有更新了，因為最近在研究多人串流的問題。這篇文章主要是分享我做了些什麼以及對這個project做個總結，這裡的意思就是這個project終於完成了！！花了我近1年的時間呢。&lt;br&gt;
+雖然這個project已完成，但是依然還有些問題，如果我們之後還有這個能力在修復～ 這些問題使得串流沒有這麼的穩定，但還是可以玩的呢！&lt;br&gt;
+在進入今天主題之前，如果你不記得或不知道這個project關於什麼的話，可以回去閱讀這幾篇文章：&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-init/" title="ChatApp(I)" &gt;
+ ChatApp(I)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-demo/" title="ChatApp(II)" &gt;
+ ChatApp(II)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-update/" title="ChatApp(III)" &gt;
+ ChatApp(III)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-final/" title="ChatApp(IV)" &gt;
+ ChatApp(IV)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-voice-chat/" title="ChatApp(V)" &gt;
+ ChatApp(V)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-sticker-updated/" title="ChatApp(VI)" &gt;
+ ChatApp(VI)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-story-alignment-updated/" title="ChatApp(Ⅶ)" &gt;
+ ChatApp(Ⅶ)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-story-multiple-img-updated/" title="ChatApp(Ⅷ)" &gt;
+ ChatApp(Ⅷ)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-sticker-shop-updated/" title="ChatApp(IX)" &gt;
+ ChatApp(IX)
+ 
+&lt;/a&gt;&lt;/p&gt;</description></item><item><title>[開發者日記] 聊天通訊APP - 貼圖更新(III)</title><link>http://localhost:1313/techs/project/chat-app-sticker-shop-updated/</link><pubDate>Sat, 11 Nov 2023 11:08:40 +0800</pubDate><guid>http://localhost:1313/techs/project/chat-app-sticker-shop-updated/</guid><description>&lt;h2 id="簡介"&gt;簡介
+&lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;如果您想了解該項目的內容，請閱讀以下文章&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-init/" title="ChatApp(I)" &gt;
+ ChatApp(I)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-demo/" title="ChatApp(II)" &gt;
+ ChatApp(II)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-update/" title="ChatApp(III)" &gt;
+ ChatApp(III)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-final/" title="ChatApp(IV)" &gt;
+ ChatApp(IV)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-voice-chat/" title="ChatApp(V)" &gt;
+ ChatApp(V)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-sticker-updated/" title="ChatApp(VI)" &gt;
+ ChatApp(VI)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-story-alignment-updated/" title="ChatApp(Ⅶ)" &gt;
+ ChatApp(Ⅶ)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-story-multiple-img-updated/" title="ChatApp(Ⅷ)" &gt;
+ ChatApp(Ⅷ)
+ 
+&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="demo"&gt;Demo
+&lt;a class="header-anchor" href="#demo"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;video src="http://localhost:1313/videos/chat-app/sticker-shop.mp4" controls="controls" width="500"&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;h2 id="簡介-1"&gt;簡介
+&lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b-1"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;正如我在
+&lt;a href="http://localhost:1313/achievement/chat-app-sticker-updated/" title="這篇文章" &gt;
+ 這篇文章
+ 
+&lt;/a&gt;中提到的，我添加了一個關於貼紙的新功能，它可以在聊天中使用提供的貼圖資源。但這還不夠，對用戶來說也不靈活。因此，我開發了更多關於貼紙功能的內容。&lt;/p&gt;</description></item><item><title>[開發者日記] 聊天通訊APP - 限時動態更新(III)</title><link>http://localhost:1313/techs/project/chat-app-story-view-updated/</link><pubDate>Thu, 09 Nov 2023 20:23:44 +0800</pubDate><guid>http://localhost:1313/techs/project/chat-app-story-view-updated/</guid><description>&lt;h2 id="簡介"&gt;簡介
+&lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;如果您想了解該項目的內容，請閱讀以下文章。
+
+&lt;a href="http://localhost:1313/achievement/chat-app-init/" title="ChatApp(I)" &gt;
+ ChatApp(I)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-demo/" title="ChatApp(II)" &gt;
+ ChatApp(II)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-update/" title="ChatApp(III)" &gt;
+ ChatApp(III)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-final/" title="ChatApp(IV)" &gt;
+ ChatApp(IV)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-voice-chat/" title="ChatApp(V)" &gt;
+ ChatApp(V)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-sticker-updated/" title="ChatApp(VI)" &gt;
+ ChatApp(VI)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-story-alignment-updated/" title="ChatApp(Ⅶ)" &gt;
+ ChatApp(Ⅶ)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-story-multiple-img-updated/" title="ChatApp(Ⅷ)" &gt;
+ ChatApp(Ⅷ)
+ 
+&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="demo"&gt;Demo
+&lt;a class="header-anchor" href="#demo"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;video src="http://localhost:1313/videos/chat-app/instance-story-view.mp4" controls="controls" width="500"&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;h2 id="描述"&gt;描述
+&lt;a class="header-anchor" href="#%e6%8f%8f%e8%bf%b0"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;在先前的版本中，用戶只能查看好友的故事並回覆該限時動態。它除了回覆故事之外不能和朋友有任何互動，所以在這個版本中，我打算為它添加更多的互動功能。&lt;/p&gt;</description></item><item><title>[開發者日記] 聊天通訊APP - 限時動態更新(II)</title><link>http://localhost:1313/techs/project/chat-app-story-multiple-img-updated/</link><pubDate>Sun, 10 Sep 2023 12:49:44 +0800</pubDate><guid>http://localhost:1313/techs/project/chat-app-story-multiple-img-updated/</guid><description>&lt;h2 id="簡介"&gt;簡介
+&lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;如果您想了解該項目的內容，請閱讀以下文章。
+
+&lt;a href="http://localhost:1313/achievement/chat-app-init/" title="ChatApp(I)" &gt;
+ ChatApp(I)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-demo/" title="ChatApp(II)" &gt;
+ ChatApp(II)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-update/" title="ChatApp(III)" &gt;
+ ChatApp(III)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-final/" title="ChatApp(IV)" &gt;
+ ChatApp(IV)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-voice-chat/" title="ChatApp(V)" &gt;
+ ChatApp(V)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-sticker-updated/" title="ChatApp(VI)" &gt;
+ ChatApp(VI)
+ 
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;這是關於限時動態功能的demo，類似於instagram（我的UI參考來自instagram xD）。&lt;/p&gt;</description></item><item><title>[開發者日記] 聊天通訊APP - 限時動態更新(I)</title><link>http://localhost:1313/techs/project/chat-app-story-alignment-updated/</link><pubDate>Tue, 05 Sep 2023 20:19:33 +0800</pubDate><guid>http://localhost:1313/techs/project/chat-app-story-alignment-updated/</guid><description>&lt;h2 id="簡介"&gt;簡介
+&lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;如果您想了解該項目的內容，請閱讀以下文章。&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-init/" title="ChatApp(I)" &gt;
+ ChatApp(I)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-demo/" title="ChatApp(II)" &gt;
+ ChatApp(II)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-update/" title="ChatApp(III)" &gt;
+ ChatApp(III)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-final/" title="ChatApp(IV)" &gt;
+ ChatApp(IV)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-voice-chat/" title="ChatApp(V)" &gt;
+ ChatApp(V)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-sticker-updated/" title="ChatApp(VI)" &gt;
+ ChatApp(VI)
+ 
+&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="demo"&gt;Demo
+&lt;a class="header-anchor" href="#demo"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;video src="http://localhost:1313/videos/chat-app/instance-story-alignment.mp4" controls="controls" width="500"&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;h2 id="todo"&gt;TODO
+&lt;a class="header-anchor" href="#todo"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;在先前的版本中，它確實允許用戶將多個&lt;code&gt;文本&lt;/code&gt;添加到他們的&lt;code&gt;限時動態&lt;/code&gt;中。但如果不使用眼睛就很難對齊所有文字項目。因此，在這個版本中，我決定添加一個對齊工具來幫助他們，這類似於「Instagram」對齊工具。&lt;/p&gt;</description></item><item><title>[開發者日記] 聊天通訊APP - 貼圖更新(I)</title><link>http://localhost:1313/techs/project/chat-app-sticker-updated/</link><pubDate>Wed, 24 May 2023 21:32:47 +0800</pubDate><guid>http://localhost:1313/techs/project/chat-app-sticker-updated/</guid><description>&lt;h2 id="簡介"&gt;簡介
+&lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;關於這個專案我就不多說了，如果你對這個專案有興趣的話，請看我之前的貼文。在之前的文章中，我已經詳細介紹了這個專案。
+
+&lt;a href="http://localhost:1313/achievement/chat-app-init/" title="ChatApp(I)" &gt;
+ ChatApp(I)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-demo/" title="ChatApp(II)" &gt;
+ ChatApp(II)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-update/" title="ChatApp(III)" &gt;
+ ChatApp(III)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-final/" title="ChatApp(IV)" &gt;
+ ChatApp(IV)
+ 
+&lt;/a&gt;&lt;br&gt;
+
+&lt;a href="http://localhost:1313/achievement/chat-app-voice-chat/" title="ChatApp(V)" &gt;
+ ChatApp(V)
+ 
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;video src="http://localhost:1313/videos/chat-app/sticker-demo.mp4" controls="controls" width="500"&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;p&gt;在demo影片中，您可以看到貼圖功能與網路上任何其他即時通訊應用程式類似。用戶能夠存取我們提供的所有可用貼圖並將其發送給其他用戶或群組。但問題是我們如何提供使用者貼圖資源，貼圖從哪裡來呢？&lt;br&gt;
+為了解決第一個問題，我們可以透過在客戶端或使用者能夠存取它之前將所有必要的圖像上傳到伺服器來建立貼圖資源。每個建立的貼圖資源都會被分配一個唯一的ID作為其貼圖ID。與相同貼圖ID相關的所有資源都將以標準化格式重新命名，以便於存取。 &lt;code&gt;stickerID_index.format&lt;/code&gt;。&lt;/p&gt;</description></item><item><title>[開發者日記] 聊天通訊APP - RTC小更新</title><link>http://localhost:1313/techs/project/chat-app-voice-chat/</link><pubDate>Sat, 13 May 2023 23:58:58 +0800</pubDate><guid>http://localhost:1313/techs/project/chat-app-voice-chat/</guid><description>&lt;h4 id="簡介"&gt;簡介
+&lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b"&gt;&lt;/a&gt;
+&lt;/h4&gt;&lt;p&gt;我在
+&lt;a href="http://localhost:1313/achievement/chat-app-init" title="[開發者日記] 聊天通訊APP(一)" &gt;
+ [開發者日記] 聊天通訊APP(一)
+ 
+&lt;/a&gt;中有提及過這app會有&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;語音通訊&lt;/li&gt;
+&lt;li&gt;視頻通訊&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;這次他們真的來了！！廢話少說先看視頻&lt;br&gt;
+&lt;video src="http://localhost:1313/videos/chat-app/voice-chat.mp4" controls="controls" width="500" height="300"&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;h4 id="說明"&gt;說明
+&lt;a class="header-anchor" href="#%e8%aa%aa%e6%98%8e"&gt;&lt;/a&gt;
+&lt;/h4&gt;&lt;p&gt;雖然現在只有展示了語音通訊(Voice-chat),但是他們的工作原理其實是差不多的，就差在有沒有傳送視頻數據而已。老實說，這個功能其實言研究了2個月都不知道要從何入手，而github上的simple-demo又是UIKit的版本，所以就一直拖，一直研究。知道最近就想試試也無妨，最多也就不成功，萬一它成功了呢！於是我便開始寫，寫了1-2天，發現失敗了，哈哈哈。然後debug了一下，發現好像是沒有連接上的問題，於是又花了一整天來測試是否有成功連接，當成功連接上且文字數據傳送成功的那一刻，那個激動的心啊❤️！！！然後打開視訊，還真的成功了！！！！好開心！&lt;/p&gt;</description></item><item><title>[開發者日記] 聊天通訊APP(四) - 最終章</title><link>http://localhost:1313/techs/project/chat-app-final/</link><pubDate>Mon, 01 May 2023 19:25:38 +0800</pubDate><guid>http://localhost:1313/techs/project/chat-app-final/</guid><description>&lt;h3 id="簡介"&gt;簡介
+&lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b"&gt;&lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;在之前
+&lt;a href="http://localhost:1313/achievement/chat-app-init" title="序章" &gt;
+ 序章
+ 
+&lt;/a&gt;中，雖然已經大概介紹過這個app在幹嘛。但是因為這次是&lt;strong&gt;最終章&lt;/strong&gt;的成品展示(或許有些部分沒實現😂)，所以就允許我囉嗦得再說一次吧！&lt;/p&gt;
+&lt;p&gt;這個app主要是focus在Websocket，也就是實時通訊上。雖然但是HTTP的部分還是不能少的🤣，哈哈哈。所以這個App的Server-side包含了HTTP和Websocket 2個部分。HTTP的部分主要是用作CURD,而Websocket的部分則是用於個人通訊和群組通訊。&lt;/p&gt;</description></item><item><title>[開發者日記] 聊天通訊APP(三) - 聊天小更新</title><link>http://localhost:1313/techs/project/chat-app-update/</link><pubDate>Sat, 29 Apr 2023 20:17:18 +0800</pubDate><guid>http://localhost:1313/techs/project/chat-app-update/</guid><description>&lt;p&gt;廢話少說直接上影片&lt;/p&gt;
+&lt;p&gt;&lt;video src="http://localhost:1313/videos/chat-app/message-update1.mp4" controls="controls" width="500"&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;p&gt;對上一次的
+&lt;a href="http://localhost:1313/achievement/chat-app-demo/" title="demo" &gt;
+ demo
+ 
+&lt;/a&gt;中，雖然也包含了個人聊天和群組聊天的部分，但是只支援普通文本和圖片的傳送，而這次修復了文件發送，音頻發送已經視頻發送的部分。而音頻可以直接聆聽接收到的音頻，而視頻則可以直接觀看。&lt;br&gt;
+除此之外還添加了系統資訊，例如：群組的建立，群組加入，群組退出並通知群組人員。&lt;/p&gt;</description></item><item><title>[開發者日記] 聊天通訊APP(二) - Demo</title><link>http://localhost:1313/techs/project/chat-app-demo/</link><pubDate>Mon, 24 Apr 2023 12:24:38 +0800</pubDate><guid>http://localhost:1313/techs/project/chat-app-demo/</guid><description>&lt;p&gt;這篇文章主要是展示一下整個App的Demo，廢話不多說，先上視頻:&lt;br&gt;
+&lt;video src="http://localhost:1313/videos/chat-app/full-demo-1.mp4" controls="controls" width="500" height="300"&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;h3 id="demo說明"&gt;Demo說明
+&lt;a class="header-anchor" href="#demo%e8%aa%aa%e6%98%8e"&gt;&lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;這個App的詳細介紹在
+&lt;a href="http://localhost:1313/achievement/chat-app-init" title="[開發者日記] 聊天通訊APP(一)" &gt;
+ [開發者日記] 聊天通訊APP(一)
+ 
+&lt;/a&gt;中已經有基本的介紹，這裡就不作過多的介紹了。&lt;br&gt;
+這裡主要是說明一下以上Demo中所展示的內容：&lt;/p&gt;</description></item><item><title>[開發日記] 聊天通訊APP(一) - 序章</title><link>http://localhost:1313/techs/project/chat-app-init/</link><pubDate>Wed, 19 Apr 2023 17:08:14 +0800</pubDate><guid>http://localhost:1313/techs/project/chat-app-init/</guid><description>&lt;p&gt;因為之前的&lt;code&gt;OTT電影社群APP&lt;/code&gt;中有包含通訊的功能，但是那個App所實現的功能就只是簡單的存文字聊天而已，而那個app主要的focus點並不在通訊上，所以只有簡簡單單的實作了通訊，沒有到完整的通訊，例如：發送文字，發送圖片，發送文件等等的通訊功能。所以這次的side project所實作的app則主要focus在&lt;strong&gt;通訊&lt;/strong&gt;這個點上。&lt;/p&gt;</description></item><item><title>[筆記] Linked List 資料結構</title><link>http://localhost:1313/techs/note/note-linkedlist/</link><pubDate>Fri, 10 Mar 2023 14:42:22 +0800</pubDate><guid>http://localhost:1313/techs/note/note-linkedlist/</guid><description>&lt;p&gt;Linked List是一個很常用的資料結構，&lt;/p&gt;
+&lt;h2 id="設計linked-list"&gt;設計Linked List
+&lt;a class="header-anchor" href="#%e8%a8%ad%e8%a8%88linked-list"&gt;&lt;/a&gt;
+&lt;/h2&gt;</description></item><item><title>[筆記] Binary Search 演算法</title><link>http://localhost:1313/techs/note/note-binarysearch/</link><pubDate>Thu, 09 Mar 2023 13:48:46 +0800</pubDate><guid>http://localhost:1313/techs/note/note-binarysearch/</guid><description>&lt;p&gt;Binary Search 演算法是用於在一個有序array中搜尋一個值的演算法 - TC:O(log n)。相較於Linear Search(線性搜尋) - TC:O(n),其效率大大提高。&lt;/p&gt;</description></item><item><title>[筆記] KMP - Knuth-Morris-Pratt 演算法</title><link>http://localhost:1313/techs/note/note-kmp/</link><pubDate>Mon, 06 Mar 2023 12:32:40 +0800</pubDate><guid>http://localhost:1313/techs/note/note-kmp/</guid><description>&lt;p&gt;KMP(Knuth-Morris-Pratt) 算法是一個用於字符串匹配的一個算法，但確實有點抽象和複雜，因此打算寫一篇筆記來紀錄一下這個算法！&lt;br&gt;
+給定一個&lt;code&gt;text&lt;/code&gt;以及&lt;code&gt;pattern&lt;/code&gt;字符串，透過KMP 算法可以在&lt;code&gt;text&lt;/code&gt;中是否存在&lt;code&gt;pattern&lt;/code&gt;這個字符串。&lt;/p&gt;</description></item><item><title>2022年LeetCode年度總結(Summary)</title><link>http://localhost:1313/techs/coding/lc-sumarry-of-2022/</link><pubDate>Sun, 01 Jan 2023 12:42:37 +0800</pubDate><guid>http://localhost:1313/techs/coding/lc-sumarry-of-2022/</guid><description>&lt;h1 id="leetcode-總結"&gt;Leetcode 總結
+&lt;a class="header-anchor" href="#leetcode-%e7%b8%bd%e7%b5%90"&gt;&lt;/a&gt;
+&lt;/h1&gt;&lt;p&gt;&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/imgs-custom/lc-2022/lc-2022.png" alt="lc-2022" /&gt;&lt;/p&gt;
+&lt;p&gt;雖然在2021年暑假的這段時間有刷過一整子大概有50道題左右，但是2021年9月到12月在忙畢業專題因此就停止了。直到我12月份去找投實習&lt;code&gt;MataApp 的全棧實習生&lt;/code&gt;時，公司給我發來了一份&lt;code&gt;OA&lt;/code&gt;或叫&lt;code&gt;面試題&lt;/code&gt;並要求在2小時內完成。當時就很激動的便開始寫了(實習問的都有多難),結果都的是算法題(當時一臉懵逼)。最後我花了將近5個小時的時間才完成(超時),收到了深深的打擊(收到了感謝信)，也下定了決心2022年好好認真刷題。&lt;/p&gt;</description></item><item><title>透過Kops工具在AWS中部署K8S集群</title><link>http://localhost:1313/techs/coding/kuberneters-on-aws/</link><pubDate>Fri, 23 Dec 2022 14:39:46 +0800</pubDate><guid>http://localhost:1313/techs/coding/kuberneters-on-aws/</guid><description>&lt;h2 id="這篇文章主要是講述如何在aws雲服務中部署kubernetes集群"&gt;這篇文章主要是講述如何在AWS雲服務中部署Kubernetes集群
+&lt;a class="header-anchor" href="#%e9%80%99%e7%af%87%e6%96%87%e7%ab%a0%e4%b8%bb%e8%a6%81%e6%98%af%e8%ac%9b%e8%bf%b0%e5%a6%82%e4%bd%95%e5%9c%a8aws%e9%9b%b2%e6%9c%8d%e5%8b%99%e4%b8%ad%e9%83%a8%e7%bd%b2kubernetes%e9%9b%86%e7%be%a4"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;首先，我們需要準備使用一下工具進行設置&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;KOps - 一個能讓我們輕鬆無痛部署Kubernetes到任何雲服務的工具，可以想象為集群的kubectl&lt;/li&gt;
+&lt;li&gt;AWS IAM - 申請一個能讓Kops存取權限的賬號&lt;/li&gt;
+&lt;li&gt;AWS S3 Bucket - 用來作為存取Kubernets資料的資料庫&lt;/li&gt;
+&lt;li&gt;AWS Route53 - 用於使用自定義Domain Name 並連接到Master Node中&lt;/li&gt;
+&lt;li&gt;GoDady - 作為DNS 服務供應商&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="前置工作"&gt;前置工作
+&lt;a class="header-anchor" href="#%e5%89%8d%e7%bd%ae%e5%b7%a5%e4%bd%9c"&gt;&lt;/a&gt;
+&lt;/h4&gt;&lt;h5 id="在電腦中安裝kops工具用於幫助我們部署集群"&gt;在電腦中安裝&lt;code&gt;KOps&lt;/code&gt;工具用於幫助我們部署集群
+&lt;a class="header-anchor" href="#%e5%9c%a8%e9%9b%bb%e8%85%a6%e4%b8%ad%e5%ae%89%e8%a3%9dkops%e5%b7%a5%e5%85%b7%e7%94%a8%e6%96%bc%e5%b9%ab%e5%8a%a9%e6%88%91%e5%80%91%e9%83%a8%e7%bd%b2%e9%9b%86%e7%be%a4"&gt;&lt;/a&gt;
+&lt;/h5&gt;
+ &lt;blockquote&gt;
+ &lt;p&gt;想要了解更多關於KOps的讀者，可以參閱
+&lt;a href="https://kops.sigs.k8s.io/" title="kOps-Kubernetes Operations" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl"&gt;
+ kOps-Kubernetes Operations
+ 
+ &lt;i class="fa fa-external-link-alt"&gt;&lt;/i&gt;
+ 
+&lt;/a&gt;&lt;/p&gt;</description></item><item><title>[總結]Leetcode 週賽第319場復盤總結</title><link>http://localhost:1313/techs/coding/leetcode-contest319/</link><pubDate>Sun, 13 Nov 2022 11:45:46 +0800</pubDate><guid>http://localhost:1313/techs/coding/leetcode-contest319/</guid><description>&lt;h1 id="今日為2022年11月13日週日---leetcode-週賽第319場"&gt;今日為2022年11月13日(週日) - Leetcode 週賽第319場
+&lt;a class="header-anchor" href="#%e4%bb%8a%e6%97%a5%e7%82%ba2022%e5%b9%b411%e6%9c%8813%e6%97%a5%e9%80%b1%e6%97%a5---leetcode-%e9%80%b1%e8%b3%bd%e7%ac%ac319%e5%a0%b4"&gt;&lt;/a&gt;
+&lt;/h1&gt;
+ &lt;blockquote&gt;
+ &lt;p&gt;目前參加週賽主要的目的是學習跟訓練，所有當前主要focus在解Easy 跟 Medium的題目，Hard的題目暫且先跳過了&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;h3 id="週賽題目如下"&gt;週賽題目如下:
+&lt;a class="header-anchor" href="#%e9%80%b1%e8%b3%bd%e9%a1%8c%e7%9b%ae%e5%a6%82%e4%b8%8b"&gt;&lt;/a&gt;
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;Convert the Temperature - &lt;strong&gt;Easy&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Number of Subarrays With LCM Equal to K - &lt;strong&gt;Medium&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Minimum Number of Operations to Sort a Binary Tree by Level - &lt;strong&gt;Medium&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="convert-the-temperature---easy"&gt;Convert the Temperature - Easy
+&lt;a class="header-anchor" href="#convert-the-temperature---easy"&gt;&lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;You are given a non-negative floating point number rounded to two decimal places &lt;code&gt;celsius&lt;/code&gt;, that denotes &lt;strong&gt;the temperature in Celsius&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>Leetcode Weekly Contest 331(第一次參加競賽)</title><link>http://localhost:1313/techs/coding/leetcodeweeklycontest331/</link><pubDate>Sun, 18 Sep 2022 16:32:34 +0800</pubDate><guid>http://localhost:1313/techs/coding/leetcodeweeklycontest331/</guid><description>&lt;blockquote&gt;
+ &lt;p&gt;今天是我第一次參加&lt;strong&gt;Leetcode 雙週賽&lt;/strong&gt;，所以想記錄一下今天的競賽題目。希望能透過博客來記錄自己的競賽狀況。&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;本週AC題數為:4/4&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="題目"&gt;題目
+&lt;a class="header-anchor" href="#%e9%a1%8c%e7%9b%ae"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;h3 id="2413-smallest-even-multipleeasy---ac"&gt;2413. Smallest Even Multiple(EASY) - AC
+&lt;a class="header-anchor" href="#2413-smallest-even-multipleeasy---ac"&gt;&lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;Given a positive integer &lt;code&gt;n&lt;/code&gt;, return the smallest positive integer that is a multiple of both &lt;code&gt;2&lt;/code&gt; and &lt;code&gt;n&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>[筆記]Traversal Graph(圖)</title><link>http://localhost:1313/techs/coding/bt-traversal/</link><pubDate>Thu, 08 Sep 2022 10:34:50 +0800</pubDate><guid>http://localhost:1313/techs/coding/bt-traversal/</guid><description>&lt;blockquote&gt;
+ &lt;p&gt;總所周知Binary Tree也是圖的一種(單向無環圖)。所以,今天這裡以Binary Tree 為例。&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;h1 id="introduction"&gt;Introduction
+&lt;a class="header-anchor" href="#introduction"&gt;&lt;/a&gt;
+&lt;/h1&gt;&lt;p&gt;如果今天我們需要以&lt;strong&gt;特定&lt;/strong&gt;的方式遍歷一棵*Binary Tree(圖的一種)*我們怎麼做呢? 我們可以透過DSF(深度優先搜尋)以及BFS(廣度優先搜尋)來幫助我們遍歷&lt;strong&gt;Binary Tree&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>[開發日記]OTT電影社群APP(一)</title><link>http://localhost:1313/techs/project/dev-ottapp-1/</link><pubDate>Tue, 06 Sep 2022 12:36:22 +0800</pubDate><guid>http://localhost:1313/techs/project/dev-ottapp-1/</guid><description>&lt;blockquote&gt;
+ &lt;p&gt;最近這2個月都沒有更新發文章，主要是因為這2個月都在專注重構畢業專題的項目，也是只OTT電影平台。&lt;br&gt;
+今天這篇文章主要是跟大家分享這2個月所開發的進度和目前開發到的階段，以此作為這個項目的開發日記。&lt;/p&gt;</description></item><item><title>[筆記]TrieTree(前綴樹/字典樹)</title><link>http://localhost:1313/techs/note/trietree/</link><pubDate>Tue, 21 Jun 2022 11:19:28 +0800</pubDate><guid>http://localhost:1313/techs/note/trietree/</guid><description>&lt;h1 id="introduction"&gt;Introduction
+&lt;a class="header-anchor" href="#introduction"&gt;&lt;/a&gt;
+&lt;/h1&gt;&lt;h2 id="什麼是trietree"&gt;什麼是TrieTree?
+&lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%aftrietree"&gt;&lt;/a&gt;
+&lt;/h2&gt;
+ &lt;blockquote&gt;
+ &lt;p&gt;Trie稱為前綴樹或字典樹,是有序樹的一種,Node的key通常為String類型。Trie Tree與Binary-Searching Tree不同的點是,Trie Tree的Key並不會直接保存在Node中,而是它在Tree中的位置所決定的。一個Node中的所有的childrens都有相同的Prefix(前綴)。假設有個Node的key 為&lt;code&gt;T&lt;/code&gt;,它的children將會是&lt;code&gt;Time&lt;/code&gt;, &lt;code&gt;Tim&lt;/code&gt;, &lt;code&gt;Test&lt;/code&gt;等,因為他們都會相同的Prefix(前綴)&lt;code&gt;T&lt;/code&gt;。&lt;/p&gt;</description></item><item><title>[雕刻日常]數位雕刻基礎-人頭骨雕刻目前最好的一次!</title><link>http://localhost:1313/techs/share/sculpturetrain1/</link><pubDate>Fri, 17 Jun 2022 23:28:22 +0800</pubDate><guid>http://localhost:1313/techs/share/sculpturetrain1/</guid><description>&lt;h2 id="直接上圖"&gt;直接上圖!
+&lt;a class="header-anchor" href="#%e7%9b%b4%e6%8e%a5%e4%b8%8a%e5%9c%96"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/imgs-custom/design/head-train.jpg" alt="head" /&gt;&lt;/p&gt;</description></item><item><title>[筆記]Palindromic String(迴文字串)</title><link>http://localhost:1313/techs/note/palindromicstring/</link><pubDate>Thu, 16 Jun 2022 12:26:03 +0800</pubDate><guid>http://localhost:1313/techs/note/palindromicstring/</guid><description>&lt;h1 id="introduction"&gt;Introduction
+&lt;a class="header-anchor" href="#introduction"&gt;&lt;/a&gt;
+&lt;/h1&gt;&lt;h2 id="什麼是palindromic-string-迴文字串"&gt;什麼是Palindromic String 迴文字串
+&lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%afpalindromic-string-%e8%bf%b4%e6%96%87%e5%ad%97%e4%b8%b2"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;所謂的Palindromic String(迴文字串) 就是以一個字元為中間，而它的左邊以及右邊的組成字元相同。&lt;br&gt;
+例子:&lt;br&gt;
+&lt;code&gt;abcdcba&lt;/code&gt; 以&lt;code&gt;d&lt;/code&gt;為中心的左跟右的字元一樣。&lt;br&gt;
+&lt;code&gt;cdc&lt;/code&gt;左跟右都為&lt;code&gt;c&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;bcdcb&lt;/code&gt; 左跟右都為&lt;code&gt;b&lt;/code&gt;&lt;br&gt;
+&lt;code&gt;abcdcba&lt;/code&gt; 左跟右都為&lt;code&gt;a&lt;/code&gt;&lt;/p&gt;</description></item><item><title>[筆記]Longest Common SubString(最長公共子序列)</title><link>http://localhost:1313/techs/coding/lcm/</link><pubDate>Tue, 14 Jun 2022 13:11:28 +0800</pubDate><guid>http://localhost:1313/techs/coding/lcm/</guid><description>&lt;h1 id="introduction"&gt;Introduction
+&lt;a class="header-anchor" href="#introduction"&gt;&lt;/a&gt;
+&lt;/h1&gt;&lt;h2 id="什麼是最長公共子序列"&gt;什麼是最長公共子序列?
+&lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%af%e6%9c%80%e9%95%b7%e5%85%ac%e5%85%b1%e5%ad%90%e5%ba%8f%e5%88%97"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;給定2個字串&lt;code&gt;string A&lt;/code&gt;和&lt;code&gt;string B&lt;/code&gt;,2個字串中所共同擁有的最長的子字串。&lt;br&gt;
+例如:&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-0-1"&gt;&lt;a class="lnlinks" href="#hl-0-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-2"&gt;&lt;a class="lnlinks" href="#hl-0-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-3"&gt;&lt;a class="lnlinks" href="#hl-0-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-4"&gt;&lt;a class="lnlinks" href="#hl-0-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-5"&gt;&lt;a class="lnlinks" href="#hl-0-5"&gt;5&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-6"&gt;&lt;a class="lnlinks" href="#hl-0-6"&gt;6&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-7"&gt;&lt;a class="lnlinks" href="#hl-0-7"&gt;7&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-mysql" data-lang="mysql"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;leetcode&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ecbod&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="err"&gt;他們的最長公共子序列便是&lt;/span&gt;&lt;span class="o"&gt;`&lt;/span&gt;&lt;span class="n"&gt;ecod&lt;/span&gt;&lt;span class="o"&gt;`&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="err"&gt;解釋&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;包含了&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;__e_cod_&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ecod&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;包含了&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ec_od&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ecod&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id="要怎麼找到最長公共子序列lcm呢"&gt;要怎麼找到最長公共子序列LCM呢?
+&lt;a class="header-anchor" href="#%e8%a6%81%e6%80%8e%e9%ba%bc%e6%89%be%e5%88%b0%e6%9c%80%e9%95%b7%e5%85%ac%e5%85%b1%e5%ad%90%e5%ba%8f%e5%88%97lcm%e5%91%a2"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;我們需要定義一個數組用於保存當前情況下的最優解,也就是使用&lt;code&gt;DP&lt;/code&gt;的方式。我們需要以每個字符最為考量,並一一匹配，最後得出整體最優解。
+&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/imgs-custom/leetcodesHelper/lcm.png" alt="LCM" /&gt;&lt;/p&gt;</description></item><item><title>MetaHuman虛擬數字人初探</title><link>http://localhost:1313/techs/share/mataverse-matahuman/</link><pubDate>Sun, 12 Jun 2022 15:01:27 +0800</pubDate><guid>http://localhost:1313/techs/share/mataverse-matahuman/</guid><description>&lt;p&gt;因為元宇宙(Metaverse)這個概念火熱,所有我就趁著這個機會了解一下在元宇宙領域中本人覺得比較有趣的東西。也就是這篇文章所要分享給各位的&lt;strong&gt;MetaHuman(虛擬數字人/虛擬數位人)&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>[Note]Creational Singleton Pattern</title><link>http://localhost:1313/techs/design-pattern/creational-singleton-pattern/</link><pubDate>Sat, 09 Apr 2022 11:19:39 +0800</pubDate><guid>http://localhost:1313/techs/design-pattern/creational-singleton-pattern/</guid><description>&lt;h2 id="什麼是singleton-pattern單例模式呢"&gt;什麼是Singleton Pattern(單例模式)呢?
+&lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%afsingleton-pattern%e5%96%ae%e4%be%8b%e6%a8%a1%e5%bc%8f%e5%91%a2"&gt;&lt;/a&gt;
+&lt;/h2&gt;
+ &lt;blockquote&gt;
+ &lt;p&gt;定義:一個Class在系統中只會存在一個實例(instance),整個系統中只提供1個可使用的instance,以確保唯一性,並節省系統資源。&lt;/p&gt;</description></item><item><title>[Note]Creational Abstract Factory</title><link>http://localhost:1313/techs/design-pattern/creational-abstract-factory/</link><pubDate>Sun, 03 Apr 2022 19:38:20 +0800</pubDate><guid>http://localhost:1313/techs/design-pattern/creational-abstract-factory/</guid><description>&lt;h2 id="什麼是abstract-factory抽象工廠呢"&gt;什麼是Abstract Factory(抽象工廠)呢?
+&lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%afabstract-factory%e6%8a%bd%e8%b1%a1%e5%b7%a5%e5%bb%a0%e5%91%a2"&gt;&lt;/a&gt;
+&lt;/h2&gt;
+ &lt;blockquote&gt;
+ &lt;p&gt;定義: 又稱為Kit模式。提供一個創建系列相關或者互相依賴的Interface，而無需指定其具體的class&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;h3 id="簡單例子"&gt;簡單例子
+&lt;a class="header-anchor" href="#%e7%b0%a1%e5%96%ae%e4%be%8b%e5%ad%90"&gt;&lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;em&gt;注: 以下程式單純用於解釋，並不能實際執行&lt;/em&gt;&lt;/p&gt;</description></item><item><title>[Note]Simple RateLimiter Example Based on IP</title><link>http://localhost:1313/techs/note/simple-ratelimiter-example-based-on-ip/</link><pubDate>Wed, 30 Mar 2022 16:05:57 +0800</pubDate><guid>http://localhost:1313/techs/note/simple-ratelimiter-example-based-on-ip/</guid><description>&lt;h3 id="基於gin實作rate-limiter"&gt;基於Gin實作Rate Limiter
+&lt;a class="header-anchor" href="#%e5%9f%ba%e6%96%bcgin%e5%af%a6%e4%bd%9crate-limiter"&gt;&lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;假設我們有2個APIs,而每個API都需要消耗1個&lt;code&gt;Tokens&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;uri&lt;/th&gt;
+ &lt;th&gt;method&lt;/th&gt;
+ &lt;th&gt;desc&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;/api/posts/{id}&lt;/td&gt;
+ &lt;td&gt;GET&lt;/td&gt;
+ &lt;td&gt;return a simple demo message&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;/ping&lt;/td&gt;
+ &lt;td&gt;GET&lt;/td&gt;
+ &lt;td&gt;return pong&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;我們先設置一下rate limiter桶子的容量只能放下一個tokens,而tokens則會每秒生產5個。存取API時,若沒有Token可以用，就需要等待token下一次生產並放到桶子裡，才能繼續進行下去。&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>[Note]Token Bucket algorithm introduction and play with golang rate Limiter</title><link>http://localhost:1313/techs/note/token-bucket-intro/</link><pubDate>Tue, 29 Mar 2022 18:33:07 +0800</pubDate><guid>http://localhost:1313/techs/note/token-bucket-intro/</guid><description>&lt;h2 id="token-bucket令牌桶算法"&gt;Token Bucket(令牌桶算法)
+&lt;a class="header-anchor" href="#token-bucket%e4%bb%a4%e7%89%8c%e6%a1%b6%e7%ae%97%e6%b3%95"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;h4 id="什麼是token-bucket-呢"&gt;什麼是Token Bucket 呢?
+&lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%aftoken-bucket-%e5%91%a2"&gt;&lt;/a&gt;
+&lt;/h4&gt;
+ &lt;blockquote&gt;
+ &lt;p&gt;簡單來說就是運用Token Bucket的系統會以一個設定的速率往桶子(Bucket)裡面丟令牌(Token)。如果請求(Request)需要被處理時，就必需得Bucket裡的Token。當桶子裡面的沒有Token可以分配/獲取時，也就是說Bucket現在是空的(Token已經被其他令牌拿完了)，系統則會拒絕這個請求的服務。&lt;/p&gt;</description></item><item><title>[Note]Creational-Factory</title><link>http://localhost:1313/techs/design-pattern/creational-factory/</link><pubDate>Sun, 27 Mar 2022 16:55:17 +0800</pubDate><guid>http://localhost:1313/techs/design-pattern/creational-factory/</guid><description>&lt;h2 id="什麼是factory工廠呢"&gt;什麼是Factory(工廠)呢?
+&lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%affactory%e5%b7%a5%e5%bb%a0%e5%91%a2"&gt;&lt;/a&gt;
+&lt;/h2&gt;
+ &lt;blockquote&gt;
+ &lt;p&gt;定義:建立一個接口,讓子類自己決定實現哪一個Factory,其&lt;strong&gt;重點是繼承了Simple Factory Patterns的優點,同時解決了它的問題&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>[Note]Creational-Simple Factory</title><link>http://localhost:1313/techs/design-pattern/creational-simple-factory/</link><pubDate>Sun, 27 Mar 2022 16:42:45 +0800</pubDate><guid>http://localhost:1313/techs/design-pattern/creational-simple-factory/</guid><description>&lt;h2 id="什麼是simple-factory簡單工廠呢"&gt;什麼是Simple Factory(簡單工廠)呢?
+&lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%afsimple-factory%e7%b0%a1%e5%96%ae%e5%b7%a5%e5%bb%a0%e5%91%a2"&gt;&lt;/a&gt;
+&lt;/h2&gt;
+ &lt;blockquote&gt;
+ &lt;p&gt;簡單而言就是: 由一個工廠來生產全部產品
+定義:建立一個接口,讓子類自己決定實現哪一個Factory,重點在於工廠，透過工廠的Static method 進行生成的Object&lt;/p&gt;</description></item><item><title>[Note]Design Pattern Princeple</title><link>http://localhost:1313/techs/design-pattern/design-pattern-princeple/</link><pubDate>Sun, 27 Mar 2022 16:18:55 +0800</pubDate><guid>http://localhost:1313/techs/design-pattern/design-pattern-princeple/</guid><description>&lt;h2 id="什麼是design-pattern設計模式呢"&gt;什麼是Design Pattern(設計模式)呢?
+&lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%afdesign-pattern%e8%a8%ad%e8%a8%88%e6%a8%a1%e5%bc%8f%e5%91%a2"&gt;&lt;/a&gt;
+&lt;/h2&gt;
+ &lt;blockquote&gt;
+ &lt;p&gt;設計模式(Design Pattern) 是對軟體設計中普遍存在（反覆出現）的各種問題，所提出的解決方案。用於描述在各種不同的情況下，&lt;strong&gt;如何解決問題的一種方案&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>[Note]What Is JWT(Json Web Token)-EN</title><link>http://localhost:1313/techs/note/jwt-note/</link><pubDate>Thu, 24 Mar 2022 13:52:49 +0800</pubDate><guid>http://localhost:1313/techs/note/jwt-note/</guid><description>&lt;h2 id="what-is-jwtjson-web-token"&gt;What is JWT(Json Web Token)?
+&lt;a class="header-anchor" href="#what-is-jwtjson-web-token"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;The full name of JWT is Json Web Token. Acccording to the definition, JWT is a proposed Internet standard for creating data with optinal signature and/or opntional encryption whose payload holds JSON that asserts some number of clamis.&lt;br&gt;
+It&amp;rsquo;s used for &lt;em&gt;identity authentication&lt;/em&gt; between client and the server that allows accessing resources in the server.&lt;/p&gt;
+&lt;h2 id="the-structure-of-jwt"&gt;The Structure of JWT
+&lt;a class="header-anchor" href="#the-structure-of-jwt"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;JWT consists of three parts including:&lt;/p&gt;</description></item></channel></rss>

@@ -9,7 +9,7 @@ tags:
 ---
 
 #### 簡介
-我在[[開發者日記] 聊天通訊APP(一)](/post/chat-app-init)中有提及過這app會有
+我在[[開發者日記] 聊天通訊APP(一)](/achievement/chat-app-init)中有提及過這app會有
 * 語音通訊
 * 視頻通訊
 

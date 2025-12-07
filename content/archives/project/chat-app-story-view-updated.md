@@ -10,14 +10,14 @@ tags:
 
 ## 簡介
 如果您想了解該項目的內容，請閱讀以下文章。
-[ChatApp(I)](/post/chat-app-init/)  
-[ChatApp(II)](/post/chat-app-demo/)  
-[ChatApp(III)](/post/chat-app-update/)  
-[ChatApp(IV)](/post/chat-app-final/)  
-[ChatApp(V)](/post/chat-app-voice-chat/)  
-[ChatApp(VI)](/post/chat-app-sticker-updated/)  
-[ChatApp(Ⅶ)](/post/chat-app-story-alignment-updated/)  
-[ChatApp(Ⅷ)](/post/chat-app-story-multiple-img-updated/)
+[ChatApp(I)](/achievement/chat-app-init/)  
+[ChatApp(II)](/achievement/chat-app-demo/)  
+[ChatApp(III)](/achievement/chat-app-update/)  
+[ChatApp(IV)](/achievement/chat-app-final/)  
+[ChatApp(V)](/achievement/chat-app-voice-chat/)  
+[ChatApp(VI)](/achievement/chat-app-sticker-updated/)  
+[ChatApp(Ⅶ)](/achievement/chat-app-story-alignment-updated/)  
+[ChatApp(Ⅷ)](/achievement/chat-app-story-multiple-img-updated/)
 
 ## Demo
 <video src="/videos/chat-app/instance-story-view.mp4" controls="controls" width="500"></video>   

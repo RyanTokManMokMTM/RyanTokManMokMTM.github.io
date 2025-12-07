@@ -1,62 +1,123 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Two Pointer on Hugo NexT</title><link>//localhost:1414/tags/two-pointer/</link><description>Recent content in Two Pointer on Hugo NexT</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Thu, 18 May 2023 15:44:17 +0800</lastBuildDate><atom:link href="//localhost:1414/tags/two-pointer/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Maximum Twin Sum of a Linked List(M)</title><link>//localhost:1414/leetcodes/leetcode2130/</link><pubDate>Thu, 18 May 2023 15:44:17 +0800</pubDate><guid>//localhost:1414/leetcodes/leetcode2130/</guid><description>&lt;h2 id="leetcode-2130---maximum-twin-sum-of-a-linked-list">LeetCode 2130 - Maximum Twin Sum of a Linked List
-&lt;a class="header-anchor" href="#leetcode-2130---maximum-twin-sum-of-a-linked-list">&lt;/a>
-&lt;/h2>&lt;p>In a linked list of size n, where n is even, the ith node (0-indexed) of the linked list is known as the twin of the (n-1-i)th node, if 0 &amp;lt;= i &amp;lt;= (n / 2) - 1.&lt;/p>
-&lt;p>For example, if n = 4, then node 0 is the twin of node 3, and node 1 is the twin of node 2. These are the only nodes with twins for n = 4.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Two Pointer on Jackson.tmm</title><link>http://localhost:1313/tags/two-pointer/</link><description>Recent content in Two Pointer on Jackson.tmm</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Thu, 18 May 2023 15:44:17 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/two-pointer/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Maximum Twin Sum of a Linked List(M)</title><link>http://localhost:1313/archives/leetcodes/leetcode2130/</link><pubDate>Thu, 18 May 2023 15:44:17 +0800</pubDate><guid>http://localhost:1313/archives/leetcodes/leetcode2130/</guid><description>&lt;h2 id="leetcode-2130---maximum-twin-sum-of-a-linked-list"&gt;LeetCode 2130 - Maximum Twin Sum of a Linked List
+&lt;a class="header-anchor" href="#leetcode-2130---maximum-twin-sum-of-a-linked-list"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;In a linked list of size n, where n is even, the ith node (0-indexed) of the linked list is known as the twin of the (n-1-i)th node, if 0 &amp;lt;= i &amp;lt;= (n / 2) - 1.&lt;/p&gt;
+&lt;p&gt;For example, if n = 4, then node 0 is the twin of node 3, and node 1 is the twin of node 2. These are the only nodes with twins for n = 4.
 The twin sum is defined as the sum of a node and its twin.
-Given the head of a linked list with even length, return the maximum twin sum of the linked list.&lt;/p></description></item><item><title>[Leetcode] Bag of Tokens(Medium)</title><link>//localhost:1414/leetcodes/leetcode948/</link><pubDate>Mon, 12 Sep 2022 18:01:44 +0800</pubDate><guid>//localhost:1414/leetcodes/leetcode948/</guid><description>&lt;h2 id="leetcode-948---bag-of-tokens">LeetCode 948 - Bag of Tokens
-&lt;a class="header-anchor" href="#leetcode-948---bag-of-tokens">&lt;/a>
-&lt;/h2>&lt;p>You have an initial &lt;strong>power&lt;/strong> of &lt;code>power&lt;/code>, an initial &lt;strong>score&lt;/strong> of &lt;code>0&lt;/code>, and a bag of &lt;code>tokens&lt;/code> where &lt;code>tokens[i]&lt;/code> is the value of the i&lt;sup>th&lt;/sup> token (0-indexed).&lt;/p>
-&lt;p>Your goal is to maximize your total &lt;strong>score&lt;/strong> by potentially playing each token in one of two ways:&lt;/p>
-&lt;ul>
-&lt;li>If your current &lt;strong>power&lt;/strong> is at least &lt;code>tokens[i]&lt;/code>, you may play the i&lt;sup>th&lt;/sup> token face up, losing &lt;code>tokens[i]&lt;/code>&lt;strong>power&lt;/strong> and gaining &lt;code>1&lt;/code>a score.&lt;/li>
-&lt;li>If your current &lt;strong>score&lt;/strong> is at least &lt;code>1&lt;/code>, you may play the i&lt;sup>th&lt;/sup> token face down, gaining &lt;code>tokens[i]&lt;/code> &lt;strong>power&lt;/strong> and losing &lt;code>1&lt;/code> &lt;strong>score&lt;/strong>.
-Each token may be played &lt;strong>at most&lt;/strong> once and &lt;strong>in any order&lt;/strong>. You do &lt;strong>not&lt;/strong> have to play all the tokens.&lt;/li>
-&lt;/ul>
-&lt;p>Return &lt;em>the largest possible &lt;strong>score&lt;/strong> you can achieve after playing any number of tokens&lt;/em>.&lt;/p></description></item><item><title>[Leetcode] Max Number of K-Sum Pairs(Medium)</title><link>//localhost:1414/leetcodes/leetcode1679/</link><pubDate>Wed, 04 May 2022 20:11:43 +0800</pubDate><guid>//localhost:1414/leetcodes/leetcode1679/</guid><description>&lt;h2 id="leetcode-1679---max-number-of-k-sum-pairs">LeetCode 1679 - Max Number of K-Sum Pairs
-&lt;a class="header-anchor" href="#leetcode-1679---max-number-of-k-sum-pairs">&lt;/a>
-&lt;/h2>&lt;p>You are given an integer array &lt;code>nums&lt;/code> and an integer &lt;code>k&lt;/code>.&lt;/p>
-&lt;p>In one operation, you can pick two numbers from the array whose sum equals &lt;code>k&lt;/code> and remove them from the array.&lt;/p>
-&lt;p>Return &lt;code>the maximum number of operations you can perform on the array&lt;/code>.&lt;/p>
-&lt;p>example&lt;/p>
+Given the head of a linked list with even length, return the maximum twin sum of the linked list.&lt;/p&gt;</description></item><item><title>[Leetcode] Maximum Twin Sum of a Linked List(M)</title><link>http://localhost:1313/leetcodes/leetcode2130/</link><pubDate>Thu, 18 May 2023 15:44:17 +0800</pubDate><guid>http://localhost:1313/leetcodes/leetcode2130/</guid><description>&lt;h2 id="leetcode-2130---maximum-twin-sum-of-a-linked-list"&gt;LeetCode 2130 - Maximum Twin Sum of a Linked List
+&lt;a class="header-anchor" href="#leetcode-2130---maximum-twin-sum-of-a-linked-list"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;In a linked list of size n, where n is even, the ith node (0-indexed) of the linked list is known as the twin of the (n-1-i)th node, if 0 &amp;lt;= i &amp;lt;= (n / 2) - 1.&lt;/p&gt;
+&lt;p&gt;For example, if n = 4, then node 0 is the twin of node 3, and node 1 is the twin of node 2. These are the only nodes with twins for n = 4.
+The twin sum is defined as the sum of a node and its twin.
+Given the head of a linked list with even length, return the maximum twin sum of the linked list.&lt;/p&gt;</description></item><item><title>[Leetcode] Bag of Tokens(Medium)</title><link>http://localhost:1313/archives/leetcodes/leetcode948/</link><pubDate>Mon, 12 Sep 2022 18:01:44 +0800</pubDate><guid>http://localhost:1313/archives/leetcodes/leetcode948/</guid><description>&lt;h2 id="leetcode-948---bag-of-tokens"&gt;LeetCode 948 - Bag of Tokens
+&lt;a class="header-anchor" href="#leetcode-948---bag-of-tokens"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;You have an initial &lt;strong&gt;power&lt;/strong&gt; of &lt;code&gt;power&lt;/code&gt;, an initial &lt;strong&gt;score&lt;/strong&gt; of &lt;code&gt;0&lt;/code&gt;, and a bag of &lt;code&gt;tokens&lt;/code&gt; where &lt;code&gt;tokens[i]&lt;/code&gt; is the value of the i&lt;sup&gt;th&lt;/sup&gt; token (0-indexed).&lt;/p&gt;
+&lt;p&gt;Your goal is to maximize your total &lt;strong&gt;score&lt;/strong&gt; by potentially playing each token in one of two ways:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If your current &lt;strong&gt;power&lt;/strong&gt; is at least &lt;code&gt;tokens[i]&lt;/code&gt;, you may play the i&lt;sup&gt;th&lt;/sup&gt; token face up, losing &lt;code&gt;tokens[i]&lt;/code&gt;&lt;strong&gt;power&lt;/strong&gt; and gaining &lt;code&gt;1&lt;/code&gt;a score.&lt;/li&gt;
+&lt;li&gt;If your current &lt;strong&gt;score&lt;/strong&gt; is at least &lt;code&gt;1&lt;/code&gt;, you may play the i&lt;sup&gt;th&lt;/sup&gt; token face down, gaining &lt;code&gt;tokens[i]&lt;/code&gt; &lt;strong&gt;power&lt;/strong&gt; and losing &lt;code&gt;1&lt;/code&gt; &lt;strong&gt;score&lt;/strong&gt;.
+Each token may be played &lt;strong&gt;at most&lt;/strong&gt; once and &lt;strong&gt;in any order&lt;/strong&gt;. You do &lt;strong&gt;not&lt;/strong&gt; have to play all the tokens.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Return &lt;em&gt;the largest possible &lt;strong&gt;score&lt;/strong&gt; you can achieve after playing any number of tokens&lt;/em&gt;.&lt;/p&gt;</description></item><item><title>[Leetcode] Bag of Tokens(Medium)</title><link>http://localhost:1313/leetcodes/leetcode948/</link><pubDate>Mon, 12 Sep 2022 18:01:44 +0800</pubDate><guid>http://localhost:1313/leetcodes/leetcode948/</guid><description>&lt;h2 id="leetcode-948---bag-of-tokens"&gt;LeetCode 948 - Bag of Tokens
+&lt;a class="header-anchor" href="#leetcode-948---bag-of-tokens"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;You have an initial &lt;strong&gt;power&lt;/strong&gt; of &lt;code&gt;power&lt;/code&gt;, an initial &lt;strong&gt;score&lt;/strong&gt; of &lt;code&gt;0&lt;/code&gt;, and a bag of &lt;code&gt;tokens&lt;/code&gt; where &lt;code&gt;tokens[i]&lt;/code&gt; is the value of the i&lt;sup&gt;th&lt;/sup&gt; token (0-indexed).&lt;/p&gt;
+&lt;p&gt;Your goal is to maximize your total &lt;strong&gt;score&lt;/strong&gt; by potentially playing each token in one of two ways:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If your current &lt;strong&gt;power&lt;/strong&gt; is at least &lt;code&gt;tokens[i]&lt;/code&gt;, you may play the i&lt;sup&gt;th&lt;/sup&gt; token face up, losing &lt;code&gt;tokens[i]&lt;/code&gt;&lt;strong&gt;power&lt;/strong&gt; and gaining &lt;code&gt;1&lt;/code&gt;a score.&lt;/li&gt;
+&lt;li&gt;If your current &lt;strong&gt;score&lt;/strong&gt; is at least &lt;code&gt;1&lt;/code&gt;, you may play the i&lt;sup&gt;th&lt;/sup&gt; token face down, gaining &lt;code&gt;tokens[i]&lt;/code&gt; &lt;strong&gt;power&lt;/strong&gt; and losing &lt;code&gt;1&lt;/code&gt; &lt;strong&gt;score&lt;/strong&gt;.
+Each token may be played &lt;strong&gt;at most&lt;/strong&gt; once and &lt;strong&gt;in any order&lt;/strong&gt;. You do &lt;strong&gt;not&lt;/strong&gt; have to play all the tokens.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Return &lt;em&gt;the largest possible &lt;strong&gt;score&lt;/strong&gt; you can achieve after playing any number of tokens&lt;/em&gt;.&lt;/p&gt;</description></item><item><title>[Leetcode] Max Number of K-Sum Pairs(Medium)</title><link>http://localhost:1313/archives/leetcodes/leetcode1679/</link><pubDate>Wed, 04 May 2022 20:11:43 +0800</pubDate><guid>http://localhost:1313/archives/leetcodes/leetcode1679/</guid><description>&lt;h2 id="leetcode-1679---max-number-of-k-sum-pairs"&gt;LeetCode 1679 - Max Number of K-Sum Pairs
+&lt;a class="header-anchor" href="#leetcode-1679---max-number-of-k-sum-pairs"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;You are given an integer array &lt;code&gt;nums&lt;/code&gt; and an integer &lt;code&gt;k&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;In one operation, you can pick two numbers from the array whose sum equals &lt;code&gt;k&lt;/code&gt; and remove them from the array.&lt;/p&gt;
+&lt;p&gt;Return &lt;code&gt;the maximum number of operations you can perform on the array&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;example&lt;/p&gt;
 
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-0-1">&lt;a class="lnlinks" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-0-2">&lt;a class="lnlinks" href="#hl-0-2">2&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-0-3">&lt;a class="lnlinks" href="#hl-0-3">3&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-0-4">&lt;a class="lnlinks" href="#hl-0-4">4&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-0-5">&lt;a class="lnlinks" href="#hl-0-5">5&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-0-6">&lt;a class="lnlinks" href="#hl-0-6">6&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: nums = [1,2,3,4], k = 5
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: 2
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: Starting with nums = [1,2,3,4]:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Remove numbers 1 and 4, then nums = [2,3]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Remove numbers 2 and 3, then nums = []
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">There are no more pairs that sum up to 5, hence a total of 2 operations.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-0-1"&gt;&lt;a class="lnlinks" href="#hl-0-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-2"&gt;&lt;a class="lnlinks" href="#hl-0-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-3"&gt;&lt;a class="lnlinks" href="#hl-0-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-4"&gt;&lt;a class="lnlinks" href="#hl-0-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-5"&gt;&lt;a class="lnlinks" href="#hl-0-5"&gt;5&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-6"&gt;&lt;a class="lnlinks" href="#hl-0-6"&gt;6&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: nums = [1,2,3,4], k = 5
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: 2
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Explanation: Starting with nums = [1,2,3,4]:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- Remove numbers 1 and 4, then nums = [2,3]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- Remove numbers 2 and 3, then nums = []
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;There are no more pairs that sum up to 5, hence a total of 2 operations.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
 
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-1-1">&lt;a class="lnlinks" href="#hl-1-1">1&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-1-2">&lt;a class="lnlinks" href="#hl-1-2">2&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-1-3">&lt;a class="lnlinks" href="#hl-1-3">3&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-1-4">&lt;a class="lnlinks" href="#hl-1-4">4&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-1-5">&lt;a class="lnlinks" href="#hl-1-5">5&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: nums = [3,1,3,4,3], k = 6
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: 1
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: Starting with nums = [3,1,3,4,3]:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Remove the first two 3&amp;#39;s, then nums = [1,4,3]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">There are no more pairs that sum up to 6, hence a total of 1 operation.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-1-1"&gt;&lt;a class="lnlinks" href="#hl-1-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-2"&gt;&lt;a class="lnlinks" href="#hl-1-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-3"&gt;&lt;a class="lnlinks" href="#hl-1-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-4"&gt;&lt;a class="lnlinks" href="#hl-1-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-5"&gt;&lt;a class="lnlinks" href="#hl-1-5"&gt;5&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: nums = [3,1,3,4,3], k = 6
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Explanation: Starting with nums = [3,1,3,4,3]:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- Remove the first two 3&amp;#39;s, then nums = [1,4,3]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;There are no more pairs that sum up to 6, hence a total of 1 operation.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 
-&lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
-&lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
-&lt;/h2>&lt;p>這題就是要移除&lt;code>Array&lt;/code>中2個elements加起來等於&lt;code>k&lt;/code>的操作有幾次。&lt;br>
-第一個解法，我們可以使用&lt;code>sorting&lt;/code>以及&lt;code>two-pointer approach&lt;/code>來解決。先將&lt;code>array&lt;/code>排序，然後設置&lt;code>i&lt;/code>為0,&lt;code>j&lt;/code>為&lt;code>n-1&lt;/code>,直接使用iteration找出&lt;code>nums[i]+nums[j] = k&lt;/code>的數，然後&lt;code>answer+1&lt;/code>即可。&lt;/p></description></item></channel></rss>
+&lt;h2 id="how-can-we-solve-this-problem"&gt;How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;這題就是要移除&lt;code&gt;Array&lt;/code&gt;中2個elements加起來等於&lt;code&gt;k&lt;/code&gt;的操作有幾次。&lt;br&gt;
+第一個解法，我們可以使用&lt;code&gt;sorting&lt;/code&gt;以及&lt;code&gt;two-pointer approach&lt;/code&gt;來解決。先將&lt;code&gt;array&lt;/code&gt;排序，然後設置&lt;code&gt;i&lt;/code&gt;為0,&lt;code&gt;j&lt;/code&gt;為&lt;code&gt;n-1&lt;/code&gt;,直接使用iteration找出&lt;code&gt;nums[i]+nums[j] = k&lt;/code&gt;的數，然後&lt;code&gt;answer+1&lt;/code&gt;即可。&lt;/p&gt;</description></item><item><title>[Leetcode] Max Number of K-Sum Pairs(Medium)</title><link>http://localhost:1313/leetcodes/leetcode1679/</link><pubDate>Wed, 04 May 2022 20:11:43 +0800</pubDate><guid>http://localhost:1313/leetcodes/leetcode1679/</guid><description>&lt;h2 id="leetcode-1679---max-number-of-k-sum-pairs"&gt;LeetCode 1679 - Max Number of K-Sum Pairs
+&lt;a class="header-anchor" href="#leetcode-1679---max-number-of-k-sum-pairs"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;You are given an integer array &lt;code&gt;nums&lt;/code&gt; and an integer &lt;code&gt;k&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;In one operation, you can pick two numbers from the array whose sum equals &lt;code&gt;k&lt;/code&gt; and remove them from the array.&lt;/p&gt;
+&lt;p&gt;Return &lt;code&gt;the maximum number of operations you can perform on the array&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;example&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-0-1"&gt;&lt;a class="lnlinks" href="#hl-0-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-2"&gt;&lt;a class="lnlinks" href="#hl-0-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-3"&gt;&lt;a class="lnlinks" href="#hl-0-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-4"&gt;&lt;a class="lnlinks" href="#hl-0-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-5"&gt;&lt;a class="lnlinks" href="#hl-0-5"&gt;5&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-6"&gt;&lt;a class="lnlinks" href="#hl-0-6"&gt;6&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: nums = [1,2,3,4], k = 5
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: 2
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Explanation: Starting with nums = [1,2,3,4]:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- Remove numbers 1 and 4, then nums = [2,3]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- Remove numbers 2 and 3, then nums = []
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;There are no more pairs that sum up to 5, hence a total of 2 operations.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-1-1"&gt;&lt;a class="lnlinks" href="#hl-1-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-2"&gt;&lt;a class="lnlinks" href="#hl-1-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-3"&gt;&lt;a class="lnlinks" href="#hl-1-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-4"&gt;&lt;a class="lnlinks" href="#hl-1-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-5"&gt;&lt;a class="lnlinks" href="#hl-1-5"&gt;5&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: nums = [3,1,3,4,3], k = 6
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: 1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Explanation: Starting with nums = [3,1,3,4,3]:
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- Remove the first two 3&amp;#39;s, then nums = [1,4,3]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;There are no more pairs that sum up to 6, hence a total of 1 operation.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id="how-can-we-solve-this-problem"&gt;How can we solve this problem?
+&lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;這題就是要移除&lt;code&gt;Array&lt;/code&gt;中2個elements加起來等於&lt;code&gt;k&lt;/code&gt;的操作有幾次。&lt;br&gt;
+第一個解法，我們可以使用&lt;code&gt;sorting&lt;/code&gt;以及&lt;code&gt;two-pointer approach&lt;/code&gt;來解決。先將&lt;code&gt;array&lt;/code&gt;排序，然後設置&lt;code&gt;i&lt;/code&gt;為0,&lt;code&gt;j&lt;/code&gt;為&lt;code&gt;n-1&lt;/code&gt;,直接使用iteration找出&lt;code&gt;nums[i]+nums[j] = k&lt;/code&gt;的數，然後&lt;code&gt;answer+1&lt;/code&gt;即可。&lt;/p&gt;</description></item></channel></rss>

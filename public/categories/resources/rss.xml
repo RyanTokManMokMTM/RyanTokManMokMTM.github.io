@@ -1,25 +1,49 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Resources on Hugo NexT</title><link>//localhost:1414/categories/resources/</link><description>Recent content in Resources on Hugo NexT</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Sat, 24 Dec 2022 16:58:43 +0800</lastBuildDate><atom:link href="//localhost:1414/categories/resources/rss.xml" rel="self" type="application/rss+xml"/><item><title>簡歷模板 Resume Template</title><link>//localhost:1414/resources/resume-template/</link><pubDate>Sat, 24 Dec 2022 16:58:43 +0800</pubDate><guid>//localhost:1414/resources/resume-template/</guid><description>&lt;h1 id="中英文簡歷模板">中英文簡歷模板
-&lt;a class="header-anchor" href="#%e4%b8%ad%e8%8b%b1%e6%96%87%e7%b0%a1%e6%ad%b7%e6%a8%a1%e6%9d%bf">&lt;/a>
-&lt;/h1>&lt;p>
-&lt;a href="//localhost:1414/files/Resume-template%28en%29.docx" title="English CV Template(docx)" >
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Resources on Jackson.tmm</title><link>http://localhost:1313/categories/resources/</link><description>Recent content in Resources on Jackson.tmm</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Sat, 24 Dec 2022 16:58:43 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/resources/rss.xml" rel="self" type="application/rss+xml"/><item><title>簡歷模板 Resume Template</title><link>http://localhost:1313/archives/resources/resume-template/</link><pubDate>Sat, 24 Dec 2022 16:58:43 +0800</pubDate><guid>http://localhost:1313/archives/resources/resume-template/</guid><description>&lt;h1 id="中英文簡歷模板"&gt;中英文簡歷模板
+&lt;a class="header-anchor" href="#%e4%b8%ad%e8%8b%b1%e6%96%87%e7%b0%a1%e6%ad%b7%e6%a8%a1%e6%9d%bf"&gt;&lt;/a&gt;
+&lt;/h1&gt;&lt;p&gt;
+&lt;a href="http://localhost:1313/files/Resume-template%28en%29.docx" title="English CV Template(docx)" &gt;
  English CV Template(docx)
  
-&lt;/a>
-&lt;img src="//localhost:1414/imgs/img-lazy-loading.gif" data-src="//localhost:1414/files/eng-cv.png" alt="English CV Template" />&lt;/p>
-&lt;p>
-&lt;a href="//localhost:1414/files/Resume-template%28ch%29.docx" title="中文模板(docx)" >
+&lt;/a&gt;
+&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/files/eng-cv.png" alt="English CV Template" /&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href="http://localhost:1313/files/Resume-template%28ch%29.docx" title="中文模板(docx)" &gt;
  中文模板(docx)
  
-&lt;/a>
-&lt;img src="//localhost:1414/imgs/img-lazy-loading.gif" data-src="//localhost:1414/files/ch-cv.png" alt="chinese CV Template" />&lt;/p>
-&lt;h4 id="資料來源">資料來源
-&lt;a class="header-anchor" href="#%e8%b3%87%e6%96%99%e4%be%86%e6%ba%90">&lt;/a>
-&lt;/h4>&lt;ul>
-&lt;li>
-&lt;a href="https://dreambigcareer.com/" title="DBC" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+&lt;/a&gt;
+&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/files/ch-cv.png" alt="chinese CV Template" /&gt;&lt;/p&gt;
+&lt;h4 id="資料來源"&gt;資料來源
+&lt;a class="header-anchor" href="#%e8%b3%87%e6%96%99%e4%be%86%e6%ba%90"&gt;&lt;/a&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;a href="https://dreambigcareer.com/" title="DBC" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl"&gt;
  DBC
  
- &lt;i class="fa fa-external-link-alt">&lt;/i>
+ &lt;i class="fa fa-external-link-alt"&gt;&lt;/i&gt;
  
-&lt;/a>&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>簡歷模板 Resume Template</title><link>http://localhost:1313/resources/resume-template/</link><pubDate>Sat, 24 Dec 2022 16:58:43 +0800</pubDate><guid>http://localhost:1313/resources/resume-template/</guid><description>&lt;h1 id="中英文簡歷模板"&gt;中英文簡歷模板
+&lt;a class="header-anchor" href="#%e4%b8%ad%e8%8b%b1%e6%96%87%e7%b0%a1%e6%ad%b7%e6%a8%a1%e6%9d%bf"&gt;&lt;/a&gt;
+&lt;/h1&gt;&lt;p&gt;
+&lt;a href="http://localhost:1313/files/Resume-template%28en%29.docx" title="English CV Template(docx)" &gt;
+ English CV Template(docx)
+ 
+&lt;/a&gt;
+&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/files/eng-cv.png" alt="English CV Template" /&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href="http://localhost:1313/files/Resume-template%28ch%29.docx" title="中文模板(docx)" &gt;
+ 中文模板(docx)
+ 
+&lt;/a&gt;
+&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/files/ch-cv.png" alt="chinese CV Template" /&gt;&lt;/p&gt;
+&lt;h4 id="資料來源"&gt;資料來源
+&lt;a class="header-anchor" href="#%e8%b3%87%e6%96%99%e4%be%86%e6%ba%90"&gt;&lt;/a&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;a href="https://dreambigcareer.com/" title="DBC" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl"&gt;
+ DBC
+ 
+ &lt;i class="fa fa-external-link-alt"&gt;&lt;/i&gt;
+ 
+&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

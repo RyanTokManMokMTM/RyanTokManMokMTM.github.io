@@ -1,20 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Greedy on Hugo NexT</title><link>//localhost:1414/tags/greedy/</link><description>Recent content in Greedy on Hugo NexT</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Mon, 12 Sep 2022 18:01:44 +0800</lastBuildDate><atom:link href="//localhost:1414/tags/greedy/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Bag of Tokens(Medium)</title><link>//localhost:1414/leetcodes/leetcode948/</link><pubDate>Mon, 12 Sep 2022 18:01:44 +0800</pubDate><guid>//localhost:1414/leetcodes/leetcode948/</guid><description>&lt;h2 id="leetcode-948---bag-of-tokens">LeetCode 948 - Bag of Tokens
-&lt;a class="header-anchor" href="#leetcode-948---bag-of-tokens">&lt;/a>
-&lt;/h2>&lt;p>You have an initial &lt;strong>power&lt;/strong> of &lt;code>power&lt;/code>, an initial &lt;strong>score&lt;/strong> of &lt;code>0&lt;/code>, and a bag of &lt;code>tokens&lt;/code> where &lt;code>tokens[i]&lt;/code> is the value of the i&lt;sup>th&lt;/sup> token (0-indexed).&lt;/p>
-&lt;p>Your goal is to maximize your total &lt;strong>score&lt;/strong> by potentially playing each token in one of two ways:&lt;/p>
-&lt;ul>
-&lt;li>If your current &lt;strong>power&lt;/strong> is at least &lt;code>tokens[i]&lt;/code>, you may play the i&lt;sup>th&lt;/sup> token face up, losing &lt;code>tokens[i]&lt;/code>&lt;strong>power&lt;/strong> and gaining &lt;code>1&lt;/code>a score.&lt;/li>
-&lt;li>If your current &lt;strong>score&lt;/strong> is at least &lt;code>1&lt;/code>, you may play the i&lt;sup>th&lt;/sup> token face down, gaining &lt;code>tokens[i]&lt;/code> &lt;strong>power&lt;/strong> and losing &lt;code>1&lt;/code> &lt;strong>score&lt;/strong>.
-Each token may be played &lt;strong>at most&lt;/strong> once and &lt;strong>in any order&lt;/strong>. You do &lt;strong>not&lt;/strong> have to play all the tokens.&lt;/li>
-&lt;/ul>
-&lt;p>Return &lt;em>the largest possible &lt;strong>score&lt;/strong> you can achieve after playing any number of tokens&lt;/em>.&lt;/p></description></item><item><title>[Leetcode] Furthest Building You Can Reach(Medium)</title><link>//localhost:1414/leetcodes/leetcodes1642/</link><pubDate>Tue, 21 Jun 2022 22:55:43 +0800</pubDate><guid>//localhost:1414/leetcodes/leetcodes1642/</guid><description>&lt;h2 id="leetcode-1642---furthest-building-you-can-reach">LeetCode 1642 - Furthest Building You Can Reach
-&lt;a class="header-anchor" href="#leetcode-1642---furthest-building-you-can-reach">&lt;/a>
-&lt;/h2>&lt;p>You are given an integer array &lt;code>heights&lt;/code> representing the heights of buildings, some &lt;code>bricks&lt;/code>, and some &lt;code>ladders&lt;/code>.&lt;/p>
-&lt;p>You start your journey from building &lt;code>0&lt;/code> and move to the next building by possibly using bricks or ladders.&lt;/p>
-&lt;p>While moving from building &lt;code>i&lt;/code> to building &lt;code>i+1&lt;/code> (&lt;strong>0-indexed&lt;/strong>),&lt;/p>
-&lt;ul>
-&lt;li>If the current building&amp;rsquo;s height is &lt;strong>greater than or equal&lt;/strong> to the next building&amp;rsquo;s height, you do not need a ladder or bricks.&lt;/li>
-&lt;li>If the current building&amp;rsquo;s height is &lt;strong>less than&lt;/strong> the next building&amp;rsquo;s height, you can either use one ladder or &lt;code>(h[i+1] - h[i])&lt;/code> bricks.
-&lt;em>Return the furthest building index (0-indexed) you can reach if you use the given ladders and bricks optimally.&lt;/em>&lt;/li>
-&lt;/ul>
-&lt;p>example:&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Greedy on Jackson.tmm</title><link>http://localhost:1313/tags/greedy/</link><description>Recent content in Greedy on Jackson.tmm</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Mon, 12 Sep 2022 18:01:44 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/greedy/rss.xml" rel="self" type="application/rss+xml"/><item><title>[Leetcode] Bag of Tokens(Medium)</title><link>http://localhost:1313/archives/leetcodes/leetcode948/</link><pubDate>Mon, 12 Sep 2022 18:01:44 +0800</pubDate><guid>http://localhost:1313/archives/leetcodes/leetcode948/</guid><description>&lt;h2 id="leetcode-948---bag-of-tokens"&gt;LeetCode 948 - Bag of Tokens
+&lt;a class="header-anchor" href="#leetcode-948---bag-of-tokens"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;You have an initial &lt;strong&gt;power&lt;/strong&gt; of &lt;code&gt;power&lt;/code&gt;, an initial &lt;strong&gt;score&lt;/strong&gt; of &lt;code&gt;0&lt;/code&gt;, and a bag of &lt;code&gt;tokens&lt;/code&gt; where &lt;code&gt;tokens[i]&lt;/code&gt; is the value of the i&lt;sup&gt;th&lt;/sup&gt; token (0-indexed).&lt;/p&gt;
+&lt;p&gt;Your goal is to maximize your total &lt;strong&gt;score&lt;/strong&gt; by potentially playing each token in one of two ways:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If your current &lt;strong&gt;power&lt;/strong&gt; is at least &lt;code&gt;tokens[i]&lt;/code&gt;, you may play the i&lt;sup&gt;th&lt;/sup&gt; token face up, losing &lt;code&gt;tokens[i]&lt;/code&gt;&lt;strong&gt;power&lt;/strong&gt; and gaining &lt;code&gt;1&lt;/code&gt;a score.&lt;/li&gt;
+&lt;li&gt;If your current &lt;strong&gt;score&lt;/strong&gt; is at least &lt;code&gt;1&lt;/code&gt;, you may play the i&lt;sup&gt;th&lt;/sup&gt; token face down, gaining &lt;code&gt;tokens[i]&lt;/code&gt; &lt;strong&gt;power&lt;/strong&gt; and losing &lt;code&gt;1&lt;/code&gt; &lt;strong&gt;score&lt;/strong&gt;.
+Each token may be played &lt;strong&gt;at most&lt;/strong&gt; once and &lt;strong&gt;in any order&lt;/strong&gt;. You do &lt;strong&gt;not&lt;/strong&gt; have to play all the tokens.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Return &lt;em&gt;the largest possible &lt;strong&gt;score&lt;/strong&gt; you can achieve after playing any number of tokens&lt;/em&gt;.&lt;/p&gt;</description></item><item><title>[Leetcode] Bag of Tokens(Medium)</title><link>http://localhost:1313/leetcodes/leetcode948/</link><pubDate>Mon, 12 Sep 2022 18:01:44 +0800</pubDate><guid>http://localhost:1313/leetcodes/leetcode948/</guid><description>&lt;h2 id="leetcode-948---bag-of-tokens"&gt;LeetCode 948 - Bag of Tokens
+&lt;a class="header-anchor" href="#leetcode-948---bag-of-tokens"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;You have an initial &lt;strong&gt;power&lt;/strong&gt; of &lt;code&gt;power&lt;/code&gt;, an initial &lt;strong&gt;score&lt;/strong&gt; of &lt;code&gt;0&lt;/code&gt;, and a bag of &lt;code&gt;tokens&lt;/code&gt; where &lt;code&gt;tokens[i]&lt;/code&gt; is the value of the i&lt;sup&gt;th&lt;/sup&gt; token (0-indexed).&lt;/p&gt;
+&lt;p&gt;Your goal is to maximize your total &lt;strong&gt;score&lt;/strong&gt; by potentially playing each token in one of two ways:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If your current &lt;strong&gt;power&lt;/strong&gt; is at least &lt;code&gt;tokens[i]&lt;/code&gt;, you may play the i&lt;sup&gt;th&lt;/sup&gt; token face up, losing &lt;code&gt;tokens[i]&lt;/code&gt;&lt;strong&gt;power&lt;/strong&gt; and gaining &lt;code&gt;1&lt;/code&gt;a score.&lt;/li&gt;
+&lt;li&gt;If your current &lt;strong&gt;score&lt;/strong&gt; is at least &lt;code&gt;1&lt;/code&gt;, you may play the i&lt;sup&gt;th&lt;/sup&gt; token face down, gaining &lt;code&gt;tokens[i]&lt;/code&gt; &lt;strong&gt;power&lt;/strong&gt; and losing &lt;code&gt;1&lt;/code&gt; &lt;strong&gt;score&lt;/strong&gt;.
+Each token may be played &lt;strong&gt;at most&lt;/strong&gt; once and &lt;strong&gt;in any order&lt;/strong&gt;. You do &lt;strong&gt;not&lt;/strong&gt; have to play all the tokens.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Return &lt;em&gt;the largest possible &lt;strong&gt;score&lt;/strong&gt; you can achieve after playing any number of tokens&lt;/em&gt;.&lt;/p&gt;</description></item><item><title>[Leetcode] Furthest Building You Can Reach(Medium)</title><link>http://localhost:1313/archives/leetcodes/leetcodes1642/</link><pubDate>Tue, 21 Jun 2022 22:55:43 +0800</pubDate><guid>http://localhost:1313/archives/leetcodes/leetcodes1642/</guid><description>&lt;h2 id="leetcode-1642---furthest-building-you-can-reach"&gt;LeetCode 1642 - Furthest Building You Can Reach
+&lt;a class="header-anchor" href="#leetcode-1642---furthest-building-you-can-reach"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;You are given an integer array &lt;code&gt;heights&lt;/code&gt; representing the heights of buildings, some &lt;code&gt;bricks&lt;/code&gt;, and some &lt;code&gt;ladders&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You start your journey from building &lt;code&gt;0&lt;/code&gt; and move to the next building by possibly using bricks or ladders.&lt;/p&gt;
+&lt;p&gt;While moving from building &lt;code&gt;i&lt;/code&gt; to building &lt;code&gt;i+1&lt;/code&gt; (&lt;strong&gt;0-indexed&lt;/strong&gt;),&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If the current building&amp;rsquo;s height is &lt;strong&gt;greater than or equal&lt;/strong&gt; to the next building&amp;rsquo;s height, you do not need a ladder or bricks.&lt;/li&gt;
+&lt;li&gt;If the current building&amp;rsquo;s height is &lt;strong&gt;less than&lt;/strong&gt; the next building&amp;rsquo;s height, you can either use one ladder or &lt;code&gt;(h[i+1] - h[i])&lt;/code&gt; bricks.
+&lt;em&gt;Return the furthest building index (0-indexed) you can reach if you use the given ladders and bricks optimally.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;example:&lt;/p&gt;</description></item><item><title>[Leetcode] Furthest Building You Can Reach(Medium)</title><link>http://localhost:1313/leetcodes/leetcodes1642/</link><pubDate>Tue, 21 Jun 2022 22:55:43 +0800</pubDate><guid>http://localhost:1313/leetcodes/leetcodes1642/</guid><description>&lt;h2 id="leetcode-1642---furthest-building-you-can-reach"&gt;LeetCode 1642 - Furthest Building You Can Reach
+&lt;a class="header-anchor" href="#leetcode-1642---furthest-building-you-can-reach"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;You are given an integer array &lt;code&gt;heights&lt;/code&gt; representing the heights of buildings, some &lt;code&gt;bricks&lt;/code&gt;, and some &lt;code&gt;ladders&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You start your journey from building &lt;code&gt;0&lt;/code&gt; and move to the next building by possibly using bricks or ladders.&lt;/p&gt;
+&lt;p&gt;While moving from building &lt;code&gt;i&lt;/code&gt; to building &lt;code&gt;i+1&lt;/code&gt; (&lt;strong&gt;0-indexed&lt;/strong&gt;),&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If the current building&amp;rsquo;s height is &lt;strong&gt;greater than or equal&lt;/strong&gt; to the next building&amp;rsquo;s height, you do not need a ladder or bricks.&lt;/li&gt;
+&lt;li&gt;If the current building&amp;rsquo;s height is &lt;strong&gt;less than&lt;/strong&gt; the next building&amp;rsquo;s height, you can either use one ladder or &lt;code&gt;(h[i+1] - h[i])&lt;/code&gt; bricks.
+&lt;em&gt;Return the furthest building index (0-indexed) you can reach if you use the given ladders and bricks optimally.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;example:&lt;/p&gt;</description></item></channel></rss>

@@ -1,77 +1,169 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Coding on Hugo NexT</title><link>//localhost:1414/categories/coding/</link><description>Recent content in Coding on Hugo NexT</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Fri, 23 Dec 2022 14:39:46 +0800</lastBuildDate><atom:link href="//localhost:1414/categories/coding/rss.xml" rel="self" type="application/rss+xml"/><item><title>透過Kops工具在AWS中部署K8S集群</title><link>//localhost:1414/post/coding/kuberneters-on-aws/</link><pubDate>Fri, 23 Dec 2022 14:39:46 +0800</pubDate><guid>//localhost:1414/post/coding/kuberneters-on-aws/</guid><description>&lt;h2 id="這篇文章主要是講述如何在aws雲服務中部署kubernetes集群">這篇文章主要是講述如何在AWS雲服務中部署Kubernetes集群
-&lt;a class="header-anchor" href="#%e9%80%99%e7%af%87%e6%96%87%e7%ab%a0%e4%b8%bb%e8%a6%81%e6%98%af%e8%ac%9b%e8%bf%b0%e5%a6%82%e4%bd%95%e5%9c%a8aws%e9%9b%b2%e6%9c%8d%e5%8b%99%e4%b8%ad%e9%83%a8%e7%bd%b2kubernetes%e9%9b%86%e7%be%a4">&lt;/a>
-&lt;/h2>&lt;p>首先，我們需要準備使用一下工具進行設置&lt;/p>
-&lt;ul>
-&lt;li>KOps - 一個能讓我們輕鬆無痛部署Kubernetes到任何雲服務的工具，可以想象為集群的kubectl&lt;/li>
-&lt;li>AWS IAM - 申請一個能讓Kops存取權限的賬號&lt;/li>
-&lt;li>AWS S3 Bucket - 用來作為存取Kubernets資料的資料庫&lt;/li>
-&lt;li>AWS Route53 - 用於使用自定義Domain Name 並連接到Master Node中&lt;/li>
-&lt;li>GoDady - 作為DNS 服務供應商&lt;/li>
-&lt;/ul>
-&lt;h4 id="前置工作">前置工作
-&lt;a class="header-anchor" href="#%e5%89%8d%e7%bd%ae%e5%b7%a5%e4%bd%9c">&lt;/a>
-&lt;/h4>&lt;h5 id="在電腦中安裝kops工具用於幫助我們部署集群">在電腦中安裝&lt;code>KOps&lt;/code>工具用於幫助我們部署集群
-&lt;a class="header-anchor" href="#%e5%9c%a8%e9%9b%bb%e8%85%a6%e4%b8%ad%e5%ae%89%e8%a3%9dkops%e5%b7%a5%e5%85%b7%e7%94%a8%e6%96%bc%e5%b9%ab%e5%8a%a9%e6%88%91%e5%80%91%e9%83%a8%e7%bd%b2%e9%9b%86%e7%be%a4">&lt;/a>
-&lt;/h5>
- &lt;blockquote>
- &lt;p>想要了解更多關於KOps的讀者，可以參閱
-&lt;a href="https://kops.sigs.k8s.io/" title="kOps-Kubernetes Operations" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Coding on Jackson.tmm</title><link>http://localhost:1313/categories/coding/</link><description>Recent content in Coding on Jackson.tmm</description><generator>Hugo</generator><language>zh-tw</language><lastBuildDate>Fri, 23 Dec 2022 14:39:46 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/coding/rss.xml" rel="self" type="application/rss+xml"/><item><title>透過Kops工具在AWS中部署K8S集群</title><link>http://localhost:1313/archives/coding/kuberneters-on-aws/</link><pubDate>Fri, 23 Dec 2022 14:39:46 +0800</pubDate><guid>http://localhost:1313/archives/coding/kuberneters-on-aws/</guid><description>&lt;h2 id="這篇文章主要是講述如何在aws雲服務中部署kubernetes集群"&gt;這篇文章主要是講述如何在AWS雲服務中部署Kubernetes集群
+&lt;a class="header-anchor" href="#%e9%80%99%e7%af%87%e6%96%87%e7%ab%a0%e4%b8%bb%e8%a6%81%e6%98%af%e8%ac%9b%e8%bf%b0%e5%a6%82%e4%bd%95%e5%9c%a8aws%e9%9b%b2%e6%9c%8d%e5%8b%99%e4%b8%ad%e9%83%a8%e7%bd%b2kubernetes%e9%9b%86%e7%be%a4"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;首先，我們需要準備使用一下工具進行設置&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;KOps - 一個能讓我們輕鬆無痛部署Kubernetes到任何雲服務的工具，可以想象為集群的kubectl&lt;/li&gt;
+&lt;li&gt;AWS IAM - 申請一個能讓Kops存取權限的賬號&lt;/li&gt;
+&lt;li&gt;AWS S3 Bucket - 用來作為存取Kubernets資料的資料庫&lt;/li&gt;
+&lt;li&gt;AWS Route53 - 用於使用自定義Domain Name 並連接到Master Node中&lt;/li&gt;
+&lt;li&gt;GoDady - 作為DNS 服務供應商&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="前置工作"&gt;前置工作
+&lt;a class="header-anchor" href="#%e5%89%8d%e7%bd%ae%e5%b7%a5%e4%bd%9c"&gt;&lt;/a&gt;
+&lt;/h4&gt;&lt;h5 id="在電腦中安裝kops工具用於幫助我們部署集群"&gt;在電腦中安裝&lt;code&gt;KOps&lt;/code&gt;工具用於幫助我們部署集群
+&lt;a class="header-anchor" href="#%e5%9c%a8%e9%9b%bb%e8%85%a6%e4%b8%ad%e5%ae%89%e8%a3%9dkops%e5%b7%a5%e5%85%b7%e7%94%a8%e6%96%bc%e5%b9%ab%e5%8a%a9%e6%88%91%e5%80%91%e9%83%a8%e7%bd%b2%e9%9b%86%e7%be%a4"&gt;&lt;/a&gt;
+&lt;/h5&gt;
+ &lt;blockquote&gt;
+ &lt;p&gt;想要了解更多關於KOps的讀者，可以參閱
+&lt;a href="https://kops.sigs.k8s.io/" title="kOps-Kubernetes Operations" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl"&gt;
  kOps-Kubernetes Operations
  
- &lt;i class="fa fa-external-link-alt">&lt;/i>
+ &lt;i class="fa fa-external-link-alt"&gt;&lt;/i&gt;
  
-&lt;/a>&lt;/p></description></item><item><title>[總結]Leetcode 週賽第319場復盤總結</title><link>//localhost:1414/post/coding/leetcode-contest319/</link><pubDate>Sun, 13 Nov 2022 11:45:46 +0800</pubDate><guid>//localhost:1414/post/coding/leetcode-contest319/</guid><description>&lt;h1 id="今日為2022年11月13日週日---leetcode-週賽第319場">今日為2022年11月13日(週日) - Leetcode 週賽第319場
-&lt;a class="header-anchor" href="#%e4%bb%8a%e6%97%a5%e7%82%ba2022%e5%b9%b411%e6%9c%8813%e6%97%a5%e9%80%b1%e6%97%a5---leetcode-%e9%80%b1%e8%b3%bd%e7%ac%ac319%e5%a0%b4">&lt;/a>
-&lt;/h1>
- &lt;blockquote>
- &lt;p>目前參加週賽主要的目的是學習跟訓練，所有當前主要focus在解Easy 跟 Medium的題目，Hard的題目暫且先跳過了&lt;/p>
- &lt;/blockquote>
-&lt;h3 id="週賽題目如下">週賽題目如下:
-&lt;a class="header-anchor" href="#%e9%80%b1%e8%b3%bd%e9%a1%8c%e7%9b%ae%e5%a6%82%e4%b8%8b">&lt;/a>
-&lt;/h3>&lt;ol>
-&lt;li>Convert the Temperature - &lt;strong>Easy&lt;/strong>&lt;/li>
-&lt;li>Number of Subarrays With LCM Equal to K - &lt;strong>Medium&lt;/strong>&lt;/li>
-&lt;li>Minimum Number of Operations to Sort a Binary Tree by Level - &lt;strong>Medium&lt;/strong>&lt;/li>
-&lt;/ol>
-&lt;h3 id="convert-the-temperature---easy">Convert the Temperature - Easy
-&lt;a class="header-anchor" href="#convert-the-temperature---easy">&lt;/a>
-&lt;/h3>&lt;p>You are given a non-negative floating point number rounded to two decimal places &lt;code>celsius&lt;/code>, that denotes &lt;strong>the temperature in Celsius&lt;/strong>.&lt;/p></description></item><item><title>Leetcode Weekly Contest 331(第一次參加競賽)</title><link>//localhost:1414/post/coding/leetcodeweeklycontest331/</link><pubDate>Sun, 18 Sep 2022 16:32:34 +0800</pubDate><guid>//localhost:1414/post/coding/leetcodeweeklycontest331/</guid><description>&lt;blockquote>
- &lt;p>今天是我第一次參加&lt;strong>Leetcode 雙週賽&lt;/strong>，所以想記錄一下今天的競賽題目。希望能透過博客來記錄自己的競賽狀況。&lt;/p>
- &lt;/blockquote>
-&lt;p>&lt;strong>本週AC題數為:4/4&lt;/strong>&lt;/p>
-&lt;h2 id="題目">題目
-&lt;a class="header-anchor" href="#%e9%a1%8c%e7%9b%ae">&lt;/a>
-&lt;/h2>&lt;h3 id="2413-smallest-even-multipleeasy---ac">2413. Smallest Even Multiple(EASY) - AC
-&lt;a class="header-anchor" href="#2413-smallest-even-multipleeasy---ac">&lt;/a>
-&lt;/h3>&lt;p>Given a positive integer &lt;code>n&lt;/code>, return the smallest positive integer that is a multiple of both &lt;code>2&lt;/code> and &lt;code>n&lt;/code>.&lt;/p></description></item><item><title>[筆記]Longest Common SubString(最長公共子序列)</title><link>//localhost:1414/post/coding/lcm/</link><pubDate>Tue, 14 Jun 2022 13:11:28 +0800</pubDate><guid>//localhost:1414/post/coding/lcm/</guid><description>&lt;h1 id="introduction">Introduction
-&lt;a class="header-anchor" href="#introduction">&lt;/a>
-&lt;/h1>&lt;h2 id="什麼是最長公共子序列">什麼是最長公共子序列?
-&lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%af%e6%9c%80%e9%95%b7%e5%85%ac%e5%85%b1%e5%ad%90%e5%ba%8f%e5%88%97">&lt;/a>
-&lt;/h2>&lt;p>給定2個字串&lt;code>string A&lt;/code>和&lt;code>string B&lt;/code>,2個字串中所共同擁有的最長的子字串。&lt;br>
-例如:&lt;/p>
+&lt;/a&gt;&lt;/p&gt;</description></item><item><title>透過Kops工具在AWS中部署K8S集群</title><link>http://localhost:1313/techs/coding/kuberneters-on-aws/</link><pubDate>Fri, 23 Dec 2022 14:39:46 +0800</pubDate><guid>http://localhost:1313/techs/coding/kuberneters-on-aws/</guid><description>&lt;h2 id="這篇文章主要是講述如何在aws雲服務中部署kubernetes集群"&gt;這篇文章主要是講述如何在AWS雲服務中部署Kubernetes集群
+&lt;a class="header-anchor" href="#%e9%80%99%e7%af%87%e6%96%87%e7%ab%a0%e4%b8%bb%e8%a6%81%e6%98%af%e8%ac%9b%e8%bf%b0%e5%a6%82%e4%bd%95%e5%9c%a8aws%e9%9b%b2%e6%9c%8d%e5%8b%99%e4%b8%ad%e9%83%a8%e7%bd%b2kubernetes%e9%9b%86%e7%be%a4"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;首先，我們需要準備使用一下工具進行設置&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;KOps - 一個能讓我們輕鬆無痛部署Kubernetes到任何雲服務的工具，可以想象為集群的kubectl&lt;/li&gt;
+&lt;li&gt;AWS IAM - 申請一個能讓Kops存取權限的賬號&lt;/li&gt;
+&lt;li&gt;AWS S3 Bucket - 用來作為存取Kubernets資料的資料庫&lt;/li&gt;
+&lt;li&gt;AWS Route53 - 用於使用自定義Domain Name 並連接到Master Node中&lt;/li&gt;
+&lt;li&gt;GoDady - 作為DNS 服務供應商&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="前置工作"&gt;前置工作
+&lt;a class="header-anchor" href="#%e5%89%8d%e7%bd%ae%e5%b7%a5%e4%bd%9c"&gt;&lt;/a&gt;
+&lt;/h4&gt;&lt;h5 id="在電腦中安裝kops工具用於幫助我們部署集群"&gt;在電腦中安裝&lt;code&gt;KOps&lt;/code&gt;工具用於幫助我們部署集群
+&lt;a class="header-anchor" href="#%e5%9c%a8%e9%9b%bb%e8%85%a6%e4%b8%ad%e5%ae%89%e8%a3%9dkops%e5%b7%a5%e5%85%b7%e7%94%a8%e6%96%bc%e5%b9%ab%e5%8a%a9%e6%88%91%e5%80%91%e9%83%a8%e7%bd%b2%e9%9b%86%e7%be%a4"&gt;&lt;/a&gt;
+&lt;/h5&gt;
+ &lt;blockquote&gt;
+ &lt;p&gt;想要了解更多關於KOps的讀者，可以參閱
+&lt;a href="https://kops.sigs.k8s.io/" title="kOps-Kubernetes Operations" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl"&gt;
+ kOps-Kubernetes Operations
+ 
+ &lt;i class="fa fa-external-link-alt"&gt;&lt;/i&gt;
+ 
+&lt;/a&gt;&lt;/p&gt;</description></item><item><title>[總結]Leetcode 週賽第319場復盤總結</title><link>http://localhost:1313/archives/coding/leetcode-contest319/</link><pubDate>Sun, 13 Nov 2022 11:45:46 +0800</pubDate><guid>http://localhost:1313/archives/coding/leetcode-contest319/</guid><description>&lt;h1 id="今日為2022年11月13日週日---leetcode-週賽第319場"&gt;今日為2022年11月13日(週日) - Leetcode 週賽第319場
+&lt;a class="header-anchor" href="#%e4%bb%8a%e6%97%a5%e7%82%ba2022%e5%b9%b411%e6%9c%8813%e6%97%a5%e9%80%b1%e6%97%a5---leetcode-%e9%80%b1%e8%b3%bd%e7%ac%ac319%e5%a0%b4"&gt;&lt;/a&gt;
+&lt;/h1&gt;
+ &lt;blockquote&gt;
+ &lt;p&gt;目前參加週賽主要的目的是學習跟訓練，所有當前主要focus在解Easy 跟 Medium的題目，Hard的題目暫且先跳過了&lt;/p&gt;
 
-&lt;div class="highlight">&lt;div class="chroma">
-&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt" id="hl-0-1">&lt;a class="lnlinks" href="#hl-0-1">1&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-0-2">&lt;a class="lnlinks" href="#hl-0-2">2&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-0-3">&lt;a class="lnlinks" href="#hl-0-3">3&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-0-4">&lt;a class="lnlinks" href="#hl-0-4">4&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-0-5">&lt;a class="lnlinks" href="#hl-0-5">5&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-0-6">&lt;a class="lnlinks" href="#hl-0-6">6&lt;/a>
-&lt;/span>&lt;span class="lnt" id="hl-0-7">&lt;a class="lnlinks" href="#hl-0-7">7&lt;/a>
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td class="lntd">
-&lt;pre tabindex="0" class="chroma">&lt;code class="language-mysql" data-lang="mysql">&lt;span class="line">&lt;span class="cl">&lt;span class="n">String&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">A&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">leetcode&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">B&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ecbod&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="err">他們的最長公共子序列便是&lt;/span>&lt;span class="o">`&lt;/span>&lt;span class="n">ecod&lt;/span>&lt;span class="o">`&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="err">解釋&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">A&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="err">包含了&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">__e_cod_&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ecod&lt;/span>&lt;span class="w">
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">B&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="err">包含了&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ec_od&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&amp;gt;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">ecod&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>
+ &lt;/blockquote&gt;
+&lt;h3 id="週賽題目如下"&gt;週賽題目如下:
+&lt;a class="header-anchor" href="#%e9%80%b1%e8%b3%bd%e9%a1%8c%e7%9b%ae%e5%a6%82%e4%b8%8b"&gt;&lt;/a&gt;
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;Convert the Temperature - &lt;strong&gt;Easy&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Number of Subarrays With LCM Equal to K - &lt;strong&gt;Medium&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Minimum Number of Operations to Sort a Binary Tree by Level - &lt;strong&gt;Medium&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="convert-the-temperature---easy"&gt;Convert the Temperature - Easy
+&lt;a class="header-anchor" href="#convert-the-temperature---easy"&gt;&lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;You are given a non-negative floating point number rounded to two decimal places &lt;code&gt;celsius&lt;/code&gt;, that denotes &lt;strong&gt;the temperature in Celsius&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>[總結]Leetcode 週賽第319場復盤總結</title><link>http://localhost:1313/techs/coding/leetcode-contest319/</link><pubDate>Sun, 13 Nov 2022 11:45:46 +0800</pubDate><guid>http://localhost:1313/techs/coding/leetcode-contest319/</guid><description>&lt;h1 id="今日為2022年11月13日週日---leetcode-週賽第319場"&gt;今日為2022年11月13日(週日) - Leetcode 週賽第319場
+&lt;a class="header-anchor" href="#%e4%bb%8a%e6%97%a5%e7%82%ba2022%e5%b9%b411%e6%9c%8813%e6%97%a5%e9%80%b1%e6%97%a5---leetcode-%e9%80%b1%e8%b3%bd%e7%ac%ac319%e5%a0%b4"&gt;&lt;/a&gt;
+&lt;/h1&gt;
+ &lt;blockquote&gt;
+ &lt;p&gt;目前參加週賽主要的目的是學習跟訓練，所有當前主要focus在解Easy 跟 Medium的題目，Hard的題目暫且先跳過了&lt;/p&gt;
 
-&lt;h2 id="要怎麼找到最長公共子序列lcm呢">要怎麼找到最長公共子序列LCM呢?
-&lt;a class="header-anchor" href="#%e8%a6%81%e6%80%8e%e9%ba%bc%e6%89%be%e5%88%b0%e6%9c%80%e9%95%b7%e5%85%ac%e5%85%b1%e5%ad%90%e5%ba%8f%e5%88%97lcm%e5%91%a2">&lt;/a>
-&lt;/h2>&lt;p>我們需要定義一個數組用於保存當前情況下的最優解,也就是使用&lt;code>DP&lt;/code>的方式。我們需要以每個字符最為考量,並一一匹配，最後得出整體最優解。
-&lt;img src="//localhost:1414/imgs/img-lazy-loading.gif" data-src="//localhost:1414/imgs/leetcodesHelper/lcm.png" alt="LCM" />&lt;/p></description></item></channel></rss>
+ &lt;/blockquote&gt;
+&lt;h3 id="週賽題目如下"&gt;週賽題目如下:
+&lt;a class="header-anchor" href="#%e9%80%b1%e8%b3%bd%e9%a1%8c%e7%9b%ae%e5%a6%82%e4%b8%8b"&gt;&lt;/a&gt;
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;Convert the Temperature - &lt;strong&gt;Easy&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Number of Subarrays With LCM Equal to K - &lt;strong&gt;Medium&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Minimum Number of Operations to Sort a Binary Tree by Level - &lt;strong&gt;Medium&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="convert-the-temperature---easy"&gt;Convert the Temperature - Easy
+&lt;a class="header-anchor" href="#convert-the-temperature---easy"&gt;&lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;You are given a non-negative floating point number rounded to two decimal places &lt;code&gt;celsius&lt;/code&gt;, that denotes &lt;strong&gt;the temperature in Celsius&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>Leetcode Weekly Contest 331(第一次參加競賽)</title><link>http://localhost:1313/archives/coding/leetcodeweeklycontest331/</link><pubDate>Sun, 18 Sep 2022 16:32:34 +0800</pubDate><guid>http://localhost:1313/archives/coding/leetcodeweeklycontest331/</guid><description>&lt;blockquote&gt;
+ &lt;p&gt;今天是我第一次參加&lt;strong&gt;Leetcode 雙週賽&lt;/strong&gt;，所以想記錄一下今天的競賽題目。希望能透過博客來記錄自己的競賽狀況。&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;本週AC題數為:4/4&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="題目"&gt;題目
+&lt;a class="header-anchor" href="#%e9%a1%8c%e7%9b%ae"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;h3 id="2413-smallest-even-multipleeasy---ac"&gt;2413. Smallest Even Multiple(EASY) - AC
+&lt;a class="header-anchor" href="#2413-smallest-even-multipleeasy---ac"&gt;&lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;Given a positive integer &lt;code&gt;n&lt;/code&gt;, return the smallest positive integer that is a multiple of both &lt;code&gt;2&lt;/code&gt; and &lt;code&gt;n&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Leetcode Weekly Contest 331(第一次參加競賽)</title><link>http://localhost:1313/techs/coding/leetcodeweeklycontest331/</link><pubDate>Sun, 18 Sep 2022 16:32:34 +0800</pubDate><guid>http://localhost:1313/techs/coding/leetcodeweeklycontest331/</guid><description>&lt;blockquote&gt;
+ &lt;p&gt;今天是我第一次參加&lt;strong&gt;Leetcode 雙週賽&lt;/strong&gt;，所以想記錄一下今天的競賽題目。希望能透過博客來記錄自己的競賽狀況。&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;本週AC題數為:4/4&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id="題目"&gt;題目
+&lt;a class="header-anchor" href="#%e9%a1%8c%e7%9b%ae"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;h3 id="2413-smallest-even-multipleeasy---ac"&gt;2413. Smallest Even Multiple(EASY) - AC
+&lt;a class="header-anchor" href="#2413-smallest-even-multipleeasy---ac"&gt;&lt;/a&gt;
+&lt;/h3&gt;&lt;p&gt;Given a positive integer &lt;code&gt;n&lt;/code&gt;, return the smallest positive integer that is a multiple of both &lt;code&gt;2&lt;/code&gt; and &lt;code&gt;n&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>[筆記]Traversal Graph(圖)</title><link>http://localhost:1313/archives/coding/bt-traversal/</link><pubDate>Thu, 08 Sep 2022 10:34:50 +0800</pubDate><guid>http://localhost:1313/archives/coding/bt-traversal/</guid><description>&lt;blockquote&gt;
+ &lt;p&gt;總所周知Binary Tree也是圖的一種(單向無環圖)。所以,今天這裡以Binary Tree 為例。&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;h1 id="introduction"&gt;Introduction
+&lt;a class="header-anchor" href="#introduction"&gt;&lt;/a&gt;
+&lt;/h1&gt;&lt;p&gt;如果今天我們需要以&lt;strong&gt;特定&lt;/strong&gt;的方式遍歷一棵*Binary Tree(圖的一種)*我們怎麼做呢? 我們可以透過DSF(深度優先搜尋)以及BFS(廣度優先搜尋)來幫助我們遍歷&lt;strong&gt;Binary Tree&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>[筆記]Traversal Graph(圖)</title><link>http://localhost:1313/techs/coding/bt-traversal/</link><pubDate>Thu, 08 Sep 2022 10:34:50 +0800</pubDate><guid>http://localhost:1313/techs/coding/bt-traversal/</guid><description>&lt;blockquote&gt;
+ &lt;p&gt;總所周知Binary Tree也是圖的一種(單向無環圖)。所以,今天這裡以Binary Tree 為例。&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;h1 id="introduction"&gt;Introduction
+&lt;a class="header-anchor" href="#introduction"&gt;&lt;/a&gt;
+&lt;/h1&gt;&lt;p&gt;如果今天我們需要以&lt;strong&gt;特定&lt;/strong&gt;的方式遍歷一棵*Binary Tree(圖的一種)*我們怎麼做呢? 我們可以透過DSF(深度優先搜尋)以及BFS(廣度優先搜尋)來幫助我們遍歷&lt;strong&gt;Binary Tree&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>[筆記]Longest Common SubString(最長公共子序列)</title><link>http://localhost:1313/archives/coding/lcm/</link><pubDate>Tue, 14 Jun 2022 13:11:28 +0800</pubDate><guid>http://localhost:1313/archives/coding/lcm/</guid><description>&lt;h1 id="introduction"&gt;Introduction
+&lt;a class="header-anchor" href="#introduction"&gt;&lt;/a&gt;
+&lt;/h1&gt;&lt;h2 id="什麼是最長公共子序列"&gt;什麼是最長公共子序列?
+&lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%af%e6%9c%80%e9%95%b7%e5%85%ac%e5%85%b1%e5%ad%90%e5%ba%8f%e5%88%97"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;給定2個字串&lt;code&gt;string A&lt;/code&gt;和&lt;code&gt;string B&lt;/code&gt;,2個字串中所共同擁有的最長的子字串。&lt;br&gt;
+例如:&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-0-1"&gt;&lt;a class="lnlinks" href="#hl-0-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-2"&gt;&lt;a class="lnlinks" href="#hl-0-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-3"&gt;&lt;a class="lnlinks" href="#hl-0-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-4"&gt;&lt;a class="lnlinks" href="#hl-0-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-5"&gt;&lt;a class="lnlinks" href="#hl-0-5"&gt;5&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-6"&gt;&lt;a class="lnlinks" href="#hl-0-6"&gt;6&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-7"&gt;&lt;a class="lnlinks" href="#hl-0-7"&gt;7&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-mysql" data-lang="mysql"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;leetcode&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ecbod&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="err"&gt;他們的最長公共子序列便是&lt;/span&gt;&lt;span class="o"&gt;`&lt;/span&gt;&lt;span class="n"&gt;ecod&lt;/span&gt;&lt;span class="o"&gt;`&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="err"&gt;解釋&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;包含了&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;__e_cod_&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ecod&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;包含了&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ec_od&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ecod&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id="要怎麼找到最長公共子序列lcm呢"&gt;要怎麼找到最長公共子序列LCM呢?
+&lt;a class="header-anchor" href="#%e8%a6%81%e6%80%8e%e9%ba%bc%e6%89%be%e5%88%b0%e6%9c%80%e9%95%b7%e5%85%ac%e5%85%b1%e5%ad%90%e5%ba%8f%e5%88%97lcm%e5%91%a2"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;我們需要定義一個數組用於保存當前情況下的最優解,也就是使用&lt;code&gt;DP&lt;/code&gt;的方式。我們需要以每個字符最為考量,並一一匹配，最後得出整體最優解。
+&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/imgs-custom/leetcodesHelper/lcm.png" alt="LCM" /&gt;&lt;/p&gt;</description></item><item><title>[筆記]Longest Common SubString(最長公共子序列)</title><link>http://localhost:1313/techs/coding/lcm/</link><pubDate>Tue, 14 Jun 2022 13:11:28 +0800</pubDate><guid>http://localhost:1313/techs/coding/lcm/</guid><description>&lt;h1 id="introduction"&gt;Introduction
+&lt;a class="header-anchor" href="#introduction"&gt;&lt;/a&gt;
+&lt;/h1&gt;&lt;h2 id="什麼是最長公共子序列"&gt;什麼是最長公共子序列?
+&lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%af%e6%9c%80%e9%95%b7%e5%85%ac%e5%85%b1%e5%ad%90%e5%ba%8f%e5%88%97"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;給定2個字串&lt;code&gt;string A&lt;/code&gt;和&lt;code&gt;string B&lt;/code&gt;,2個字串中所共同擁有的最長的子字串。&lt;br&gt;
+例如:&lt;/p&gt;
+
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-0-1"&gt;&lt;a class="lnlinks" href="#hl-0-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-2"&gt;&lt;a class="lnlinks" href="#hl-0-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-3"&gt;&lt;a class="lnlinks" href="#hl-0-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-4"&gt;&lt;a class="lnlinks" href="#hl-0-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-5"&gt;&lt;a class="lnlinks" href="#hl-0-5"&gt;5&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-6"&gt;&lt;a class="lnlinks" href="#hl-0-6"&gt;6&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-7"&gt;&lt;a class="lnlinks" href="#hl-0-7"&gt;7&lt;/a&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-mysql" data-lang="mysql"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;leetcode&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ecbod&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="err"&gt;他們的最長公共子序列便是&lt;/span&gt;&lt;span class="o"&gt;`&lt;/span&gt;&lt;span class="n"&gt;ecod&lt;/span&gt;&lt;span class="o"&gt;`&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="err"&gt;解釋&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;包含了&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;__e_cod_&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ecod&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;包含了&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ec_od&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ecod&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id="要怎麼找到最長公共子序列lcm呢"&gt;要怎麼找到最長公共子序列LCM呢?
+&lt;a class="header-anchor" href="#%e8%a6%81%e6%80%8e%e9%ba%bc%e6%89%be%e5%88%b0%e6%9c%80%e9%95%b7%e5%85%ac%e5%85%b1%e5%ad%90%e5%ba%8f%e5%88%97lcm%e5%91%a2"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;我們需要定義一個數組用於保存當前情況下的最優解,也就是使用&lt;code&gt;DP&lt;/code&gt;的方式。我們需要以每個字符最為考量,並一一匹配，最後得出整體最優解。
+&lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/imgs-custom/leetcodesHelper/lcm.png" alt="LCM" /&gt;&lt;/p&gt;</description></item></channel></rss>

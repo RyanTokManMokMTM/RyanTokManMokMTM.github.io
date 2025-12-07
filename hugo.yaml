@@ -59,17 +59,17 @@ languages:
   #         weight: 4
   #       - identifier: syntax
   #         name: Syntax Highlighting
-  #         pageRef: /post/09-syntax-highlighting
+  #         pageRef: /achievement/09-syntax-highlighting
   #         weight: 1   
   #         parent: example
   #       - identifier: math
   #         name: Math Formula
-  #         pageRef: /post/10-math-formula
+  #         pageRef: /achievement/10-math-formula
   #         weight: 2   
   #         parent: example
   #       - identifier: flow-charts
   #         name: Flow Charts
-  #         pageRef: /post/11-mermaid-charts
+  #         pageRef: /achievement/11-mermaid-charts
   #         weight: 3
   #         parent: example
   #       - identifier: archives

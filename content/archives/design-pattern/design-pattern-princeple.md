@@ -36,8 +36,8 @@ author: jackson.tmm
 * 行為型模式(11個)
 
 #### 創建型模式(6個)
-1. [簡單工廠模式(Simple Factory Pattern)](/post/creational-simple-factory)
-2. [工廠模式(Factory Pattern)](/post/creational-factory)
+1. [簡單工廠模式(Simple Factory Pattern)](/achievement/creational-simple-factory)
+2. [工廠模式(Factory Pattern)](/achievement/creational-factory)
 3. 抽象工廠模式(Abstract Factory Pattern)
 4. 單例模式(Singleton Pattern)
 5. 原形模式(Prototype Pattern)

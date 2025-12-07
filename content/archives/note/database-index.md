@@ -50,7 +50,7 @@ toc: true
 ---
 
 ## 前言
-之前的文章中，我們有簡單探討過事務相關的課題，而在這篇文章就主要討論 Index 索引相關的課題！ 而索引也跟 B+ tree 相關，如果不了解B+ tree的同學可以去參考之前討論[平衡樹的文章](/post/note/balance-tree)。
+之前的文章中，我們有簡單探討過事務相關的課題，而在這篇文章就主要討論 Index 索引相關的課題！ 而索引也跟 B+ tree 相關，如果不了解B+ tree的同學可以去參考之前討論[平衡樹的文章](/achievement/note/balance-tree)。
 
 ## 簡介
 不知道大家有沒有在學習或者在網上在找資料優惠資料庫查詢效率的時候大部分的答案都是說「**加索引**」，在這篇文章中就會對「索引」進行簡單的探討。 
@@ -296,5 +296,5 @@ select `id`, `age` from user where name = `Andy`;
 如果有任何補充或者錯誤，歡迎在留言區留言喔!
 
 ## 參考資料
-[聊一聊怎么用好MySQL索引这件事儿](https://juejin.cn/post/7075528696748048420#heading-13)  
+[聊一聊怎么用好MySQL索引这件事儿](https://juejin.cn/achievement/7075528696748048420#heading-13)  
 [MySQL 系列文 - 索引的相關知識(5) - 何謂 ICP (Index Condition Pushdown)](https://ithelp.ithome.com.tw/articles/10230362)  

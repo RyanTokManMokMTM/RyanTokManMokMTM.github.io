@@ -11,12 +11,12 @@ tags:
 
 ## 簡介
 如果您想了解該項目的內容，請閱讀以下文章。
-[ChatApp(I)](/post/chat-app-init/)  
-[ChatApp(II)](/post/chat-app-demo/)  
-[ChatApp(III)](/post/chat-app-update/)  
-[ChatApp(IV)](/post/chat-app-final/)  
-[ChatApp(V)](/post/chat-app-voice-chat/)  
-[ChatApp(VI)](/post/chat-app-sticker-updated/)  
+[ChatApp(I)](/achievement/chat-app-init/)  
+[ChatApp(II)](/achievement/chat-app-demo/)  
+[ChatApp(III)](/achievement/chat-app-update/)  
+[ChatApp(IV)](/achievement/chat-app-final/)  
+[ChatApp(V)](/achievement/chat-app-voice-chat/)  
+[ChatApp(VI)](/achievement/chat-app-sticker-updated/)  
 
 這是關於限時動態功能的demo，類似於instagram（我的UI參考來自instagram xD）。
 

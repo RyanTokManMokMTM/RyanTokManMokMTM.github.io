@@ -5,6 +5,7 @@ keywords: "summary,of,2025"
 
 date: 2026-01-04T23:18:28+08:00
 lastmod: 2026-01-04T23:18:28+08:00
+draft: true
 categories:
   - annual summary
 tags:

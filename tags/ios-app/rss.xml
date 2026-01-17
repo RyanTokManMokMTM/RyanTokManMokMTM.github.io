@@ -4,7 +4,7 @@
  
  &lt;i class="fa fa-external-link-alt">&lt;/i>
  
-&lt;/a>&lt;br>
+&lt;/a>
 
 &lt;a href="https://github.com/RyanTokManMokMTM/chat-app-server" title="Chat App - Backend" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
  &lt;strong>Chat App - Backend&lt;/strong>
@@ -21,7 +21,7 @@
  
  &lt;i class="fa fa-external-link-alt">&lt;/i>
  
-&lt;/a>&lt;br>
+&lt;/a>
 
 &lt;a href="https://github.com/RyanTokManMokMTM/chat-app-server" title="Chat App - Backend" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
  &lt;strong>Chat App - Backend&lt;/strong>
@@ -38,7 +38,7 @@
  
  &lt;i class="fa fa-external-link-alt">&lt;/i>
  
-&lt;/a>&lt;br>
+&lt;/a>
 
 &lt;a href="https://github.com/RyanTokManMokMTM/movie-server" title="Movie App - Backend" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
  &lt;strong>Movie App - Backend&lt;/strong>
@@ -55,7 +55,7 @@
  
  &lt;i class="fa fa-external-link-alt">&lt;/i>
  
-&lt;/a>&lt;br>
+&lt;/a>
 
 &lt;a href="https://github.com/RyanTokManMokMTM/movie-server" title="Movie App - Backend" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
  &lt;strong>Movie App - Backend&lt;/strong>
@@ -89,13 +89,13 @@ Project have been changed/updated&lt;/p>
 &lt;h4 id="database">Database:
 &lt;a class="header-anchor" href="#database">&lt;/a>
 &lt;/h4>&lt;ul>
-&lt;li>PostgresSQL Database&lt;/li>
+&lt;li>postgresql Database&lt;/li>
 &lt;/ul>
 &lt;h3 id="demo-video">Demo Video
 &lt;a class="header-anchor" href="#demo-video">&lt;/a>
-&lt;/h3>&lt;p>&lt;video src="https://ryantokmanmokmtm.github.io/videos/final.MP4" controls="controls" width="500" height="300">&lt;/video>&lt;/p>
+&lt;/h3>&lt;p>&lt;video src="https://ryantokmanmokmtm.github.io/videos/final.MP4" controls="controls" width="500" high="300">&lt;/video>&lt;/p>
 &lt;!-- ### Updated Video
-&lt;video src="https://ryantokmanmokmtm.github.io/videos/ott-app.mov" controls="controls" width="500" height="300">&lt;/video> --></description></item><item><title>[CGU]Graduation Project</title><link>https://ryantokmanmokmtm.github.io/project/final-project/</link><pubDate>Fri, 31 Dec 2021 20:22:11 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/project/final-project/</guid><description>&lt;p>&lt;del>
+&lt;video src="https://ryantokmanmokmtm.github.io/videos/ott-app.mov" controls="controls" width="500" high="300">&lt;/video> --></description></item><item><title>[CGU]Graduation Project</title><link>https://ryantokmanmokmtm.github.io/project/final-project/</link><pubDate>Fri, 31 Dec 2021 20:22:11 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/project/final-project/</guid><description>&lt;p>&lt;del>
 &lt;a href="https://github.com/RyanTokManMokMTM/MovieAppSwiftUI.git" title="OTT Movies recommender system-IOS Client" rel="noopener external nofollow noreferrer" target="_blank" class=" exturl">
  &lt;strong>OTT Movies recommender system-IOS Client&lt;/strong>
  
@@ -118,10 +118,10 @@ Project have been changed/updated&lt;/p>
 &lt;h4 id="database">Database:
 &lt;a class="header-anchor" href="#database">&lt;/a>
 &lt;/h4>&lt;ul>
-&lt;li>PostgresSQL Database&lt;/li>
+&lt;li>postgresql Database&lt;/li>
 &lt;/ul>
 &lt;h3 id="demo-video">Demo Video
 &lt;a class="header-anchor" href="#demo-video">&lt;/a>
-&lt;/h3>&lt;p>&lt;video src="https://ryantokmanmokmtm.github.io/videos/final.MP4" controls="controls" width="500" height="300">&lt;/video>&lt;/p>
+&lt;/h3>&lt;p>&lt;video src="https://ryantokmanmokmtm.github.io/videos/final.MP4" controls="controls" width="500" high="300">&lt;/video>&lt;/p>
 &lt;!-- ### Updated Video
-&lt;video src="https://ryantokmanmokmtm.github.io/videos/ott-app.mov" controls="controls" width="500" height="300">&lt;/video> --></description></item></channel></rss>
+&lt;video src="https://ryantokmanmokmtm.github.io/videos/ott-app.mov" controls="controls" width="500" high="300">&lt;/video> --></description></item></channel></rss>

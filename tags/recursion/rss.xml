@@ -52,7 +52,7 @@ example&lt;/li>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Choose from the start, [-3,-3,-2,7,1], adding -3 * -5 = 15 to the score.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Choose from the start, [-3,-2,7,1], adding -3 * 3 = -9 to the score.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Choose from the end, [-2,7,1], adding 1 * 4 = 4 to the score.
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Choose from the end, [-2,7], adding 7 * 6 = 42 to the score. 
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Choose from the end, [-2,7], adding 7 * 6 = 42 to the score.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">The total score is 50 + 15 - 9 + 4 + 42 = 102.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>
@@ -113,7 +113,7 @@ example&lt;/li>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Choose from the start, [-3,-3,-2,7,1], adding -3 * -5 = 15 to the score.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Choose from the start, [-3,-2,7,1], adding -3 * 3 = -9 to the score.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Choose from the end, [-2,7,1], adding 1 * 4 = 4 to the score.
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Choose from the end, [-2,7], adding 7 * 6 = 42 to the score. 
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Choose from the end, [-2,7], adding 7 * 6 = 42 to the score.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">The total score is 50 + 15 - 9 + 4 + 42 = 102.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>
@@ -187,7 +187,7 @@ Return a &lt;em>list of all possible valid combinations&lt;/em>. The list must n
 
 &lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
-&lt;/h2>&lt;p>這題主要關注的點是數字範圍為&lt;code>[1,9]&lt;/code>，每個結果中，數字只能使用一次，而且數字必須是順序排列。例如:&lt;code>2,3,4&lt;/code>,&lt;code>1,2,5&lt;/code>。解決這題我們可以用&lt;strong>back-traking&lt;/strong>大法。只要我們當前的&lt;code>Sum&lt;/code>大於&lt;code>n&lt;/code>我們就直接退回back track回上一步,因為數值只會越來越大，並不是我們想要的。如果&lt;em>Ans&lt;/em>我們所需的&lt;code>k&lt;/code>個就直接判斷是否等於&lt;code>n&lt;/code>，如果是就直接加入到我們的&lt;em>result&lt;/em>即可。&lt;/p></description></item><item><title>[Leetcode] Combination Sum III(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode216/</link><pubDate>Tue, 10 May 2022 11:41:43 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode216/</guid><description>&lt;h2 id="leetcode-216---combination-sum-iii">LeetCode 216 - Combination Sum III
+&lt;/h2>&lt;p>這題主要關注的點是數字範圍為&lt;code>[1,9]&lt;/code>，每個結果中，數字只能使用一次，而且數字必須是順序排列。例如:&lt;code>2,3,4&lt;/code>,&lt;code>1,2,5&lt;/code>。解決這題我們可以用&lt;strong>back-traking&lt;/strong>大法。只要我們當前的&lt;code>Sum&lt;/code>大於&lt;code>n&lt;/code>我們就直接退回back track回上一步,因為數值只會越來越大，並不是我們想要的。如果&lt;em>And&lt;/em>我們所需的&lt;code>k&lt;/code>個就直接判斷是否等於&lt;code>n&lt;/code>，如果是就直接加入到我們的&lt;em>result&lt;/em>即可。&lt;/p></description></item><item><title>[Leetcode] Combination Sum III(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode216/</link><pubDate>Tue, 10 May 2022 11:41:43 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode216/</guid><description>&lt;h2 id="leetcode-216---combination-sum-iii">LeetCode 216 - Combination Sum III
 &lt;a class="header-anchor" href="#leetcode-216---combination-sum-iii">&lt;/a>
 &lt;/h2>&lt;p>Find all valid combinations of &lt;code>k&lt;/code> numbers that sum up to &lt;code>n&lt;/code> such that the following conditions are true:&lt;/p>
 &lt;ul>
@@ -254,7 +254,7 @@ Return a &lt;em>list of all possible valid combinations&lt;/em>. The list must n
 
 &lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
-&lt;/h2>&lt;p>這題主要關注的點是數字範圍為&lt;code>[1,9]&lt;/code>，每個結果中，數字只能使用一次，而且數字必須是順序排列。例如:&lt;code>2,3,4&lt;/code>,&lt;code>1,2,5&lt;/code>。解決這題我們可以用&lt;strong>back-traking&lt;/strong>大法。只要我們當前的&lt;code>Sum&lt;/code>大於&lt;code>n&lt;/code>我們就直接退回back track回上一步,因為數值只會越來越大，並不是我們想要的。如果&lt;em>Ans&lt;/em>我們所需的&lt;code>k&lt;/code>個就直接判斷是否等於&lt;code>n&lt;/code>，如果是就直接加入到我們的&lt;em>result&lt;/em>即可。&lt;/p></description></item><item><title>[Leetcode] Letter Combinations of a Phone Number(Medium)</title><link>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode17/</link><pubDate>Mon, 09 May 2022 21:50:34 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode17/</guid><description>&lt;h2 id="leetcode-17---letter-combinations-of-a-phone-number">LeetCode 17 - Letter Combinations of a Phone Number
+&lt;/h2>&lt;p>這題主要關注的點是數字範圍為&lt;code>[1,9]&lt;/code>，每個結果中，數字只能使用一次，而且數字必須是順序排列。例如:&lt;code>2,3,4&lt;/code>,&lt;code>1,2,5&lt;/code>。解決這題我們可以用&lt;strong>back-traking&lt;/strong>大法。只要我們當前的&lt;code>Sum&lt;/code>大於&lt;code>n&lt;/code>我們就直接退回back track回上一步,因為數值只會越來越大，並不是我們想要的。如果&lt;em>And&lt;/em>我們所需的&lt;code>k&lt;/code>個就直接判斷是否等於&lt;code>n&lt;/code>，如果是就直接加入到我們的&lt;em>result&lt;/em>即可。&lt;/p></description></item><item><title>[Leetcode] Letter Combinations of a Phone Number(Medium)</title><link>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode17/</link><pubDate>Mon, 09 May 2022 21:50:34 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode17/</guid><description>&lt;h2 id="leetcode-17---letter-combinations-of-a-phone-number">LeetCode 17 - Letter Combinations of a Phone Number
 &lt;a class="header-anchor" href="#leetcode-17---letter-combinations-of-a-phone-number">&lt;/a>
 &lt;/h2>&lt;p>Given a string containing digits from &lt;code>2-9&lt;/code> inclusive, return all possible letter combinations that the number could represent. Return the answer in &lt;strong>any order&lt;/strong>.&lt;/p>
 &lt;p>A mapping of digit to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.&lt;/p>

@@ -38,7 +38,7 @@ Given the head of a linked list with even length, return the maximum twin sum of
 
 &lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
-&lt;/h2>&lt;p>這一題的問題非常的簡單,就是要讓我們在給定的一個&lt;code>list&lt;/code>中翻轉(Reverse)&lt;code>[left,right]&lt;/code>之間的Node,並返回結果。這題跟&lt;strong>Reverse Linked List I&lt;/strong>解法類似,不同的是多了個翻轉範圍。&lt;br>
+&lt;/h2>&lt;p>這一題的問題非常的簡單,就是要讓我們在給定的一個&lt;code>list&lt;/code>中翻轉(Reverse)&lt;code>[left,right]&lt;/code>之間的Node,並返回結果。這題跟&lt;strong>Reverse Linked List I&lt;/strong>解法類似,不同的是多了個翻轉範圍。
 首先，我們要做的是在的翻轉的開始的位置。然後再透過recursive來翻轉List,最後返回的&lt;code>node/head&lt;/code>再由&lt;code>left&lt;/code>位置的Node的前一個&lt;code>Node&lt;/code>接起來(如有)就可以了~&lt;/p></description></item><item><title>[Leetcode] Reverse Linked List II(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode92/</link><pubDate>Thu, 21 Jul 2022 11:09:21 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode92/</guid><description>&lt;h2 id="leetcode-92----reverse-linked-list-ii">LeetCode 92 - Reverse Linked List II
 &lt;a class="header-anchor" href="#leetcode-92----reverse-linked-list-ii">&lt;/a>
 &lt;/h2>&lt;p>Given the &lt;code>head&lt;/code> of a singly linked list and two integers &lt;code>left&lt;/code> and &lt;code>right&lt;/code> where &lt;code>left &amp;lt;= right&lt;/code>, reverse the nodes of the list from position &lt;code>left&lt;/code> to position &lt;code>right&lt;/code>, and return the &lt;em>reversed list&lt;/em>.&lt;/p>
@@ -69,5 +69,5 @@ Given the head of a linked list with even length, return the maximum twin sum of
 
 &lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
-&lt;/h2>&lt;p>這一題的問題非常的簡單,就是要讓我們在給定的一個&lt;code>list&lt;/code>中翻轉(Reverse)&lt;code>[left,right]&lt;/code>之間的Node,並返回結果。這題跟&lt;strong>Reverse Linked List I&lt;/strong>解法類似,不同的是多了個翻轉範圍。&lt;br>
+&lt;/h2>&lt;p>這一題的問題非常的簡單,就是要讓我們在給定的一個&lt;code>list&lt;/code>中翻轉(Reverse)&lt;code>[left,right]&lt;/code>之間的Node,並返回結果。這題跟&lt;strong>Reverse Linked List I&lt;/strong>解法類似,不同的是多了個翻轉範圍。
 首先，我們要做的是在的翻轉的開始的位置。然後再透過recursive來翻轉List,最後返回的&lt;code>node/head&lt;/code>再由&lt;code>left&lt;/code>位置的Node的前一個&lt;code>Node&lt;/code>接起來(如有)就可以了~&lt;/p></description></item></channel></rss>

@@ -92,7 +92,7 @@
 &lt;a class="header-anchor" href="#introduction">&lt;/a>
 &lt;/h1>&lt;h2 id="什麼是最長公共子序列">什麼是最長公共子序列?
 &lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%af%e6%9c%80%e9%95%b7%e5%85%ac%e5%85%b1%e5%ad%90%e5%ba%8f%e5%88%97">&lt;/a>
-&lt;/h2>&lt;p>給定2個字串&lt;code>string A&lt;/code>和&lt;code>string B&lt;/code>,2個字串中所共同擁有的最長的子字串。&lt;br>
+&lt;/h2>&lt;p>給定2個字串&lt;code>string A&lt;/code>和&lt;code>string B&lt;/code>,2個字串中所共同擁有的最長的子字串。
 例如:&lt;/p>
 
 &lt;div class="highlight">&lt;div class="chroma">
@@ -123,7 +123,7 @@
 &lt;a class="header-anchor" href="#introduction">&lt;/a>
 &lt;/h1>&lt;h2 id="什麼是最長公共子序列">什麼是最長公共子序列?
 &lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%af%e6%9c%80%e9%95%b7%e5%85%ac%e5%85%b1%e5%ad%90%e5%ba%8f%e5%88%97">&lt;/a>
-&lt;/h2>&lt;p>給定2個字串&lt;code>string A&lt;/code>和&lt;code>string B&lt;/code>,2個字串中所共同擁有的最長的子字串。&lt;br>
+&lt;/h2>&lt;p>給定2個字串&lt;code>string A&lt;/code>和&lt;code>string B&lt;/code>,2個字串中所共同擁有的最長的子字串。
 例如:&lt;/p>
 
 &lt;div class="highlight">&lt;div class="chroma">

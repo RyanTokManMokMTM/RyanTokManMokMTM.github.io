@@ -32,7 +32,7 @@ example&lt;/p>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: root = [2,3,1,3,1,null,1]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: 2 
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: 2
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: The figure above represents the given binary tree. There are three paths going from the root node to leaf nodes: the red path [2,3,3], the green path [2,1,1], and the path [2,3,1]. Among these paths only red path and green path are pseudo-palindromic paths since the red path [2,3,3] can be rearranged in [3,2,3] (palindrome) and the green path [2,1,1] can be rearranged in [1,2,1] (palindrome).&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>
@@ -46,7 +46,7 @@ example&lt;/p>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: root = [2,1,1,1,3,null,null,null,null,null,1]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: 1 
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: 1
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: The figure above represents the given binary tree. There are three paths going from the root node to leaf nodes: the green path [2,1,1], the path [2,1,3,1], and the path [2,1]. Among these paths only the green path is pseudo-palindromic since [2,1,1] can be rearranged in [1,2,1] (palindrome).&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>
@@ -80,7 +80,7 @@ example&lt;/p>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: root = [2,3,1,3,1,null,1]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: 2 
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: 2
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: The figure above represents the given binary tree. There are three paths going from the root node to leaf nodes: the red path [2,3,3], the green path [2,1,1], and the path [2,3,1]. Among these paths only red path and green path are pseudo-palindromic paths since the red path [2,3,3] can be rearranged in [3,2,3] (palindrome) and the green path [2,1,1] can be rearranged in [1,2,1] (palindrome).&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>
@@ -94,7 +94,7 @@ example&lt;/p>
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: root = [2,1,1,1,3,null,null,null,null,null,1]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: 1 
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: 1
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: The figure above represents the given binary tree. There are three paths going from the root node to leaf nodes: the green path [2,1,1], the path [2,1,3,1], and the path [2,1]. Among these paths only the green path is pseudo-palindromic since [2,1,1] can be rearranged in [1,2,1] (palindrome).&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>
@@ -201,7 +201,7 @@ example&lt;/p>
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: root = [1,null,0,0,1]
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [1,null,0,null,1]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: 
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation:
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Only the red nodes satisfy the property &amp;#34;every subtree not containing a 1&amp;#34;.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">The diagram on the right represents the answer.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
@@ -241,7 +241,7 @@ example&lt;/p>
 &lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Input: root = [1,null,0,0,1]
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Output: [1,null,0,null,1]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation: 
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Explanation:
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Only the red nodes satisfy the property &amp;#34;every subtree not containing a 1&amp;#34;.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">The diagram on the right represents the answer.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
@@ -294,7 +294,7 @@ example&lt;/p>
 
 &lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
-&lt;/h2>&lt;p>這一題的問題非常的簡單,就是要讓我們在給定的一個&lt;code>list&lt;/code>中翻轉(Reverse)&lt;code>[left,right]&lt;/code>之間的Node,並返回結果。這題跟&lt;strong>Reverse Linked List I&lt;/strong>解法類似,不同的是多了個翻轉範圍。&lt;br>
+&lt;/h2>&lt;p>這一題的問題非常的簡單,就是要讓我們在給定的一個&lt;code>list&lt;/code>中翻轉(Reverse)&lt;code>[left,right]&lt;/code>之間的Node,並返回結果。這題跟&lt;strong>Reverse Linked List I&lt;/strong>解法類似,不同的是多了個翻轉範圍。
 首先，我們要做的是在的翻轉的開始的位置。然後再透過recursive來翻轉List,最後返回的&lt;code>node/head&lt;/code>再由&lt;code>left&lt;/code>位置的Node的前一個&lt;code>Node&lt;/code>接起來(如有)就可以了~&lt;/p></description></item><item><title>[Leetcode] Reverse Linked List II(Medium)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcode92/</link><pubDate>Thu, 21 Jul 2022 11:09:21 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcode92/</guid><description>&lt;h2 id="leetcode-92----reverse-linked-list-ii">LeetCode 92 - Reverse Linked List II
 &lt;a class="header-anchor" href="#leetcode-92----reverse-linked-list-ii">&lt;/a>
 &lt;/h2>&lt;p>Given the &lt;code>head&lt;/code> of a singly linked list and two integers &lt;code>left&lt;/code> and &lt;code>right&lt;/code> where &lt;code>left &amp;lt;= right&lt;/code>, reverse the nodes of the list from position &lt;code>left&lt;/code> to position &lt;code>right&lt;/code>, and return the &lt;em>reversed list&lt;/em>.&lt;/p>
@@ -325,5 +325,5 @@ example&lt;/p>
 
 &lt;h2 id="how-can-we-solve-this-problem">How can we solve this problem?
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
-&lt;/h2>&lt;p>這一題的問題非常的簡單,就是要讓我們在給定的一個&lt;code>list&lt;/code>中翻轉(Reverse)&lt;code>[left,right]&lt;/code>之間的Node,並返回結果。這題跟&lt;strong>Reverse Linked List I&lt;/strong>解法類似,不同的是多了個翻轉範圍。&lt;br>
+&lt;/h2>&lt;p>這一題的問題非常的簡單,就是要讓我們在給定的一個&lt;code>list&lt;/code>中翻轉(Reverse)&lt;code>[left,right]&lt;/code>之間的Node,並返回結果。這題跟&lt;strong>Reverse Linked List I&lt;/strong>解法類似,不同的是多了個翻轉範圍。
 首先，我們要做的是在的翻轉的開始的位置。然後再透過recursive來翻轉List,最後返回的&lt;code>node/head&lt;/code>再由&lt;code>left&lt;/code>位置的Node的前一個&lt;code>Node&lt;/code>接起來(如有)就可以了~&lt;/p></description></item></channel></rss>

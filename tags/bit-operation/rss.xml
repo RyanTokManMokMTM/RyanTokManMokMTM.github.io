@@ -16,7 +16,7 @@
 &lt;/ol>
 &lt;p>This is how the UTF-8 encoding would work:&lt;/p></description></item><item><title>[Leetcode DP] Counting Bits(Easy)</title><link>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcodes338/</link><pubDate>Thu, 23 Jun 2022 11:33:51 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcodes338/</guid><description>&lt;h2 id="leetcode-338---counting-bits">LeetCode 338 - Counting Bits
 &lt;a class="header-anchor" href="#leetcode-338---counting-bits">&lt;/a>
-&lt;/h2>&lt;p>Given an integer &lt;code>n&lt;/code>, return an &lt;em>array &lt;code>ans&lt;/code> of length &lt;code>n + 1&lt;/code> such that for each &lt;code>i&lt;/code> (&lt;code>0 &amp;lt;= i &amp;lt;= n&lt;/code>), &lt;code>ans[i]&lt;/code> is the &lt;strong>number&lt;/strong> of &lt;code>1&lt;/code>&amp;rsquo;s in the binary representation of &lt;code>i&lt;/code>.&lt;/em>&lt;/p>
+&lt;/h2>&lt;p>Given an integer &lt;code>n&lt;/code>, return an &lt;em>array &lt;code>and&lt;/code> of length &lt;code>n + 1&lt;/code> such that for each &lt;code>i&lt;/code> (&lt;code>0 &amp;lt;= i &amp;lt;= n&lt;/code>), &lt;code>and[i]&lt;/code> is the &lt;strong>number&lt;/strong> of &lt;code>1&lt;/code>&amp;rsquo;s in the binary representation of &lt;code>i&lt;/code>.&lt;/em>&lt;/p>
 &lt;p>example:&lt;/p>
 
 &lt;div class="highlight">&lt;div class="chroma">
@@ -68,7 +68,7 @@
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
 &lt;/h2>&lt;p>這題要我們解決的問題是給定一個數字&lt;code>n&lt;/code>,回傳&lt;code>0 - n&lt;/code>中每個數字包含了多少個為1的&lt;code>bits&lt;/code>。例如: &lt;code>n=2 =&amp;gt; 00,01,10&lt;/code>,回傳的結果便會是&lt;code>[0,1,1]&lt;/code>。&lt;/p></description></item><item><title>[Leetcode DP] Counting Bits(Easy)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcodes338/</link><pubDate>Thu, 23 Jun 2022 11:33:51 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcodes338/</guid><description>&lt;h2 id="leetcode-338---counting-bits">LeetCode 338 - Counting Bits
 &lt;a class="header-anchor" href="#leetcode-338---counting-bits">&lt;/a>
-&lt;/h2>&lt;p>Given an integer &lt;code>n&lt;/code>, return an &lt;em>array &lt;code>ans&lt;/code> of length &lt;code>n + 1&lt;/code> such that for each &lt;code>i&lt;/code> (&lt;code>0 &amp;lt;= i &amp;lt;= n&lt;/code>), &lt;code>ans[i]&lt;/code> is the &lt;strong>number&lt;/strong> of &lt;code>1&lt;/code>&amp;rsquo;s in the binary representation of &lt;code>i&lt;/code>.&lt;/em>&lt;/p>
+&lt;/h2>&lt;p>Given an integer &lt;code>n&lt;/code>, return an &lt;em>array &lt;code>and&lt;/code> of length &lt;code>n + 1&lt;/code> such that for each &lt;code>i&lt;/code> (&lt;code>0 &amp;lt;= i &amp;lt;= n&lt;/code>), &lt;code>and[i]&lt;/code> is the &lt;strong>number&lt;/strong> of &lt;code>1&lt;/code>&amp;rsquo;s in the binary representation of &lt;code>i&lt;/code>.&lt;/em>&lt;/p>
 &lt;p>example:&lt;/p>
 
 &lt;div class="highlight">&lt;div class="chroma">

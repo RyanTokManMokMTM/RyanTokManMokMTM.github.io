@@ -166,20 +166,20 @@
 &lt;a class="header-anchor" href="#introduction">&lt;/a>
 &lt;/h1>&lt;h2 id="什麼是palindromic-string-迴文字串">什麼是Palindromic String 迴文字串
 &lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%afpalindromic-string-%e8%bf%b4%e6%96%87%e5%ad%97%e4%b8%b2">&lt;/a>
-&lt;/h2>&lt;p>所謂的Palindromic String(迴文字串) 就是以一個字元為中間，而它的左邊以及右邊的組成字元相同。&lt;br>
-例子:&lt;br>
-&lt;code>abcdcba&lt;/code> 以&lt;code>d&lt;/code>為中心的左跟右的字元一樣。&lt;br>
-&lt;code>cdc&lt;/code>左跟右都為&lt;code>c&lt;/code>&lt;br>
-&lt;code>bcdcb&lt;/code> 左跟右都為&lt;code>b&lt;/code>&lt;br>
+&lt;/h2>&lt;p>所謂的Palindromic String(迴文字串) 就是以一個字元為中間，而它的左邊以及右邊的組成字元相同。
+例子:
+&lt;code>abcdcba&lt;/code> 以&lt;code>d&lt;/code>為中心的左跟右的字元一樣。
+&lt;code>cdc&lt;/code>左跟右都為&lt;code>c&lt;/code>
+&lt;code>bcdcb&lt;/code> 左跟右都為&lt;code>b&lt;/code>
 &lt;code>abcdcba&lt;/code> 左跟右都為&lt;code>a&lt;/code>&lt;/p></description></item><item><title>[筆記]Palindromic String(迴文字串)</title><link>https://ryantokmanmokmtm.github.io/techs/note/palindromicstring/</link><pubDate>Thu, 16 Jun 2022 12:26:03 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/techs/note/palindromicstring/</guid><description>&lt;h1 id="introduction">Introduction
 &lt;a class="header-anchor" href="#introduction">&lt;/a>
 &lt;/h1>&lt;h2 id="什麼是palindromic-string-迴文字串">什麼是Palindromic String 迴文字串
 &lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%afpalindromic-string-%e8%bf%b4%e6%96%87%e5%ad%97%e4%b8%b2">&lt;/a>
-&lt;/h2>&lt;p>所謂的Palindromic String(迴文字串) 就是以一個字元為中間，而它的左邊以及右邊的組成字元相同。&lt;br>
-例子:&lt;br>
-&lt;code>abcdcba&lt;/code> 以&lt;code>d&lt;/code>為中心的左跟右的字元一樣。&lt;br>
-&lt;code>cdc&lt;/code>左跟右都為&lt;code>c&lt;/code>&lt;br>
-&lt;code>bcdcb&lt;/code> 左跟右都為&lt;code>b&lt;/code>&lt;br>
+&lt;/h2>&lt;p>所謂的Palindromic String(迴文字串) 就是以一個字元為中間，而它的左邊以及右邊的組成字元相同。
+例子:
+&lt;code>abcdcba&lt;/code> 以&lt;code>d&lt;/code>為中心的左跟右的字元一樣。
+&lt;code>cdc&lt;/code>左跟右都為&lt;code>c&lt;/code>
+&lt;code>bcdcb&lt;/code> 左跟右都為&lt;code>b&lt;/code>
 &lt;code>abcdcba&lt;/code> 左跟右都為&lt;code>a&lt;/code>&lt;/p></description></item><item><title>[Leetcode] Letter Combinations of a Phone Number(Medium)</title><link>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode17/</link><pubDate>Mon, 09 May 2022 21:50:34 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcode17/</guid><description>&lt;h2 id="leetcode-17---letter-combinations-of-a-phone-number">LeetCode 17 - Letter Combinations of a Phone Number
 &lt;a class="header-anchor" href="#leetcode-17---letter-combinations-of-a-phone-number">&lt;/a>
 &lt;/h2>&lt;p>Given a string containing digits from &lt;code>2-9&lt;/code> inclusive, return all possible letter combinations that the number could represent. Return the answer in &lt;strong>any order&lt;/strong>.&lt;/p>

@@ -52,7 +52,7 @@ example&lt;/li>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Choose from the start, [-3,-3,-2,7,1], adding -3 * -5 = 15 to the score.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Choose from the start, [-3,-2,7,1], adding -3 * 3 = -9 to the score.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Choose from the end, [-2,7,1], adding 1 * 4 = 4 to the score.
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Choose from the end, [-2,7], adding 7 * 6 = 42 to the score. 
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Choose from the end, [-2,7], adding 7 * 6 = 42 to the score.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">The total score is 50 + 15 - 9 + 4 + 42 = 102.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>
@@ -113,7 +113,7 @@ example&lt;/li>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Choose from the start, [-3,-3,-2,7,1], adding -3 * -5 = 15 to the score.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Choose from the start, [-3,-2,7,1], adding -3 * 3 = -9 to the score.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Choose from the end, [-2,7,1], adding 1 * 4 = 4 to the score.
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Choose from the end, [-2,7], adding 7 * 6 = 42 to the score. 
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">- Choose from the end, [-2,7], adding 7 * 6 = 42 to the score.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">The total score is 50 + 15 - 9 + 4 + 42 = 102.&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>
@@ -122,7 +122,7 @@ example&lt;/li>
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
 &lt;/h2>&lt;p>這題最主要的重點是對於每個&lt;code>multipliers[i]&lt;/code>,它只能挑選最左邊或者最右邊的值。所有，我們需要知道&lt;code>multipliers[i]&lt;/code>拿最左邊的值最後的結果比較大，還是拿最右邊後的結果比較大。為了避免重複計算而超時，所以我們需要使用&lt;code>dp&lt;/code>來幫助我們記錄當前最優解。&lt;code>注:因multipliers最多為m個，所有最多只能從nums拿m個數字&lt;/code>&lt;/p></description></item><item><title>[Leetcode DP] Counting Bits(Easy)</title><link>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcodes338/</link><pubDate>Thu, 23 Jun 2022 11:33:51 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/leetcodes/leetcodes338/</guid><description>&lt;h2 id="leetcode-338---counting-bits">LeetCode 338 - Counting Bits
 &lt;a class="header-anchor" href="#leetcode-338---counting-bits">&lt;/a>
-&lt;/h2>&lt;p>Given an integer &lt;code>n&lt;/code>, return an &lt;em>array &lt;code>ans&lt;/code> of length &lt;code>n + 1&lt;/code> such that for each &lt;code>i&lt;/code> (&lt;code>0 &amp;lt;= i &amp;lt;= n&lt;/code>), &lt;code>ans[i]&lt;/code> is the &lt;strong>number&lt;/strong> of &lt;code>1&lt;/code>&amp;rsquo;s in the binary representation of &lt;code>i&lt;/code>.&lt;/em>&lt;/p>
+&lt;/h2>&lt;p>Given an integer &lt;code>n&lt;/code>, return an &lt;em>array &lt;code>and&lt;/code> of length &lt;code>n + 1&lt;/code> such that for each &lt;code>i&lt;/code> (&lt;code>0 &amp;lt;= i &amp;lt;= n&lt;/code>), &lt;code>and[i]&lt;/code> is the &lt;strong>number&lt;/strong> of &lt;code>1&lt;/code>&amp;rsquo;s in the binary representation of &lt;code>i&lt;/code>.&lt;/em>&lt;/p>
 &lt;p>example:&lt;/p>
 
 &lt;div class="highlight">&lt;div class="chroma">
@@ -174,7 +174,7 @@ example&lt;/li>
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem">&lt;/a>
 &lt;/h2>&lt;p>這題要我們解決的問題是給定一個數字&lt;code>n&lt;/code>,回傳&lt;code>0 - n&lt;/code>中每個數字包含了多少個為1的&lt;code>bits&lt;/code>。例如: &lt;code>n=2 =&amp;gt; 00,01,10&lt;/code>,回傳的結果便會是&lt;code>[0,1,1]&lt;/code>。&lt;/p></description></item><item><title>[Leetcode DP] Counting Bits(Easy)</title><link>https://ryantokmanmokmtm.github.io/leetcodes/leetcodes338/</link><pubDate>Thu, 23 Jun 2022 11:33:51 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/leetcodes/leetcodes338/</guid><description>&lt;h2 id="leetcode-338---counting-bits">LeetCode 338 - Counting Bits
 &lt;a class="header-anchor" href="#leetcode-338---counting-bits">&lt;/a>
-&lt;/h2>&lt;p>Given an integer &lt;code>n&lt;/code>, return an &lt;em>array &lt;code>ans&lt;/code> of length &lt;code>n + 1&lt;/code> such that for each &lt;code>i&lt;/code> (&lt;code>0 &amp;lt;= i &amp;lt;= n&lt;/code>), &lt;code>ans[i]&lt;/code> is the &lt;strong>number&lt;/strong> of &lt;code>1&lt;/code>&amp;rsquo;s in the binary representation of &lt;code>i&lt;/code>.&lt;/em>&lt;/p>
+&lt;/h2>&lt;p>Given an integer &lt;code>n&lt;/code>, return an &lt;em>array &lt;code>and&lt;/code> of length &lt;code>n + 1&lt;/code> such that for each &lt;code>i&lt;/code> (&lt;code>0 &amp;lt;= i &amp;lt;= n&lt;/code>), &lt;code>and[i]&lt;/code> is the &lt;strong>number&lt;/strong> of &lt;code>1&lt;/code>&amp;rsquo;s in the binary representation of &lt;code>i&lt;/code>.&lt;/em>&lt;/p>
 &lt;p>example:&lt;/p>
 
 &lt;div class="highlight">&lt;div class="chroma">
@@ -300,25 +300,25 @@ example&lt;/li>
 &lt;a class="header-anchor" href="#introduction">&lt;/a>
 &lt;/h1>&lt;h2 id="什麼是palindromic-string-迴文字串">什麼是Palindromic String 迴文字串
 &lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%afpalindromic-string-%e8%bf%b4%e6%96%87%e5%ad%97%e4%b8%b2">&lt;/a>
-&lt;/h2>&lt;p>所謂的Palindromic String(迴文字串) 就是以一個字元為中間，而它的左邊以及右邊的組成字元相同。&lt;br>
-例子:&lt;br>
-&lt;code>abcdcba&lt;/code> 以&lt;code>d&lt;/code>為中心的左跟右的字元一樣。&lt;br>
-&lt;code>cdc&lt;/code>左跟右都為&lt;code>c&lt;/code>&lt;br>
-&lt;code>bcdcb&lt;/code> 左跟右都為&lt;code>b&lt;/code>&lt;br>
+&lt;/h2>&lt;p>所謂的Palindromic String(迴文字串) 就是以一個字元為中間，而它的左邊以及右邊的組成字元相同。
+例子:
+&lt;code>abcdcba&lt;/code> 以&lt;code>d&lt;/code>為中心的左跟右的字元一樣。
+&lt;code>cdc&lt;/code>左跟右都為&lt;code>c&lt;/code>
+&lt;code>bcdcb&lt;/code> 左跟右都為&lt;code>b&lt;/code>
 &lt;code>abcdcba&lt;/code> 左跟右都為&lt;code>a&lt;/code>&lt;/p></description></item><item><title>[筆記]Palindromic String(迴文字串)</title><link>https://ryantokmanmokmtm.github.io/techs/note/palindromicstring/</link><pubDate>Thu, 16 Jun 2022 12:26:03 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/techs/note/palindromicstring/</guid><description>&lt;h1 id="introduction">Introduction
 &lt;a class="header-anchor" href="#introduction">&lt;/a>
 &lt;/h1>&lt;h2 id="什麼是palindromic-string-迴文字串">什麼是Palindromic String 迴文字串
 &lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%afpalindromic-string-%e8%bf%b4%e6%96%87%e5%ad%97%e4%b8%b2">&lt;/a>
-&lt;/h2>&lt;p>所謂的Palindromic String(迴文字串) 就是以一個字元為中間，而它的左邊以及右邊的組成字元相同。&lt;br>
-例子:&lt;br>
-&lt;code>abcdcba&lt;/code> 以&lt;code>d&lt;/code>為中心的左跟右的字元一樣。&lt;br>
-&lt;code>cdc&lt;/code>左跟右都為&lt;code>c&lt;/code>&lt;br>
-&lt;code>bcdcb&lt;/code> 左跟右都為&lt;code>b&lt;/code>&lt;br>
+&lt;/h2>&lt;p>所謂的Palindromic String(迴文字串) 就是以一個字元為中間，而它的左邊以及右邊的組成字元相同。
+例子:
+&lt;code>abcdcba&lt;/code> 以&lt;code>d&lt;/code>為中心的左跟右的字元一樣。
+&lt;code>cdc&lt;/code>左跟右都為&lt;code>c&lt;/code>
+&lt;code>bcdcb&lt;/code> 左跟右都為&lt;code>b&lt;/code>
 &lt;code>abcdcba&lt;/code> 左跟右都為&lt;code>a&lt;/code>&lt;/p></description></item><item><title>[筆記]Longest Common SubString(最長公共子序列)</title><link>https://ryantokmanmokmtm.github.io/archives/coding/lcm/</link><pubDate>Tue, 14 Jun 2022 13:11:28 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/coding/lcm/</guid><description>&lt;h1 id="introduction">Introduction
 &lt;a class="header-anchor" href="#introduction">&lt;/a>
 &lt;/h1>&lt;h2 id="什麼是最長公共子序列">什麼是最長公共子序列?
 &lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%af%e6%9c%80%e9%95%b7%e5%85%ac%e5%85%b1%e5%ad%90%e5%ba%8f%e5%88%97">&lt;/a>
-&lt;/h2>&lt;p>給定2個字串&lt;code>string A&lt;/code>和&lt;code>string B&lt;/code>,2個字串中所共同擁有的最長的子字串。&lt;br>
+&lt;/h2>&lt;p>給定2個字串&lt;code>string A&lt;/code>和&lt;code>string B&lt;/code>,2個字串中所共同擁有的最長的子字串。
 例如:&lt;/p>
 
 &lt;div class="highlight">&lt;div class="chroma">
@@ -349,7 +349,7 @@ example&lt;/li>
 &lt;a class="header-anchor" href="#introduction">&lt;/a>
 &lt;/h1>&lt;h2 id="什麼是最長公共子序列">什麼是最長公共子序列?
 &lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%af%e6%9c%80%e9%95%b7%e5%85%ac%e5%85%b1%e5%ad%90%e5%ba%8f%e5%88%97">&lt;/a>
-&lt;/h2>&lt;p>給定2個字串&lt;code>string A&lt;/code>和&lt;code>string B&lt;/code>,2個字串中所共同擁有的最長的子字串。&lt;br>
+&lt;/h2>&lt;p>給定2個字串&lt;code>string A&lt;/code>和&lt;code>string B&lt;/code>,2個字串中所共同擁有的最長的子字串。
 例如:&lt;/p>
 
 &lt;div class="highlight">&lt;div class="chroma">

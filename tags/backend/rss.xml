@@ -60,13 +60,13 @@
  &lt;blockquote>
  &lt;p>簡單來說就是運用Token Bucket的系統會以一個設定的速率往桶子(Bucket)裡面丟令牌(Token)。如果請求(Request)需要被處理時，就必需得Bucket裡的Token。當桶子裡面的沒有Token可以分配/獲取時，也就是說Bucket現在是空的(Token已經被其他令牌拿完了)，系統則會拒絕這個請求的服務。&lt;/p></description></item><item><title>[Note]What Is JWT(Json Web Token)-EN</title><link>https://ryantokmanmokmtm.github.io/archives/note/jwt-note/</link><pubDate>Thu, 24 Mar 2022 13:52:49 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/archives/note/jwt-note/</guid><description>&lt;h2 id="what-is-jwtjson-web-token">What is JWT(Json Web Token)?
 &lt;a class="header-anchor" href="#what-is-jwtjson-web-token">&lt;/a>
-&lt;/h2>&lt;p>The full name of JWT is Json Web Token. Acccording to the definition, JWT is a proposed Internet standard for creating data with optinal signature and/or opntional encryption whose payload holds JSON that asserts some number of clamis.&lt;br>
+&lt;/h2>&lt;p>The full name of JWT is Json Web Token. According to the definition, JWT is a proposed Internet standard for creating data with optional signature and/or opntional encryption whose payload holds JSON that asserts some number of clamis.
 It&amp;rsquo;s used for &lt;em>identity authentication&lt;/em> between client and the server that allows accessing resources in the server.&lt;/p>
 &lt;h2 id="the-structure-of-jwt">The Structure of JWT
 &lt;a class="header-anchor" href="#the-structure-of-jwt">&lt;/a>
 &lt;/h2>&lt;p>JWT consists of three parts including:&lt;/p></description></item><item><title>[Note]What Is JWT(Json Web Token)-EN</title><link>https://ryantokmanmokmtm.github.io/techs/note/jwt-note/</link><pubDate>Thu, 24 Mar 2022 13:52:49 +0800</pubDate><guid>https://ryantokmanmokmtm.github.io/techs/note/jwt-note/</guid><description>&lt;h2 id="what-is-jwtjson-web-token">What is JWT(Json Web Token)?
 &lt;a class="header-anchor" href="#what-is-jwtjson-web-token">&lt;/a>
-&lt;/h2>&lt;p>The full name of JWT is Json Web Token. Acccording to the definition, JWT is a proposed Internet standard for creating data with optinal signature and/or opntional encryption whose payload holds JSON that asserts some number of clamis.&lt;br>
+&lt;/h2>&lt;p>The full name of JWT is Json Web Token. According to the definition, JWT is a proposed Internet standard for creating data with optional signature and/or opntional encryption whose payload holds JSON that asserts some number of clamis.
 It&amp;rsquo;s used for &lt;em>identity authentication&lt;/em> between client and the server that allows accessing resources in the server.&lt;/p>
 &lt;h2 id="the-structure-of-jwt">The Structure of JWT
 &lt;a class="header-anchor" href="#the-structure-of-jwt">&lt;/a>

@@ -23,7 +23,7 @@ Output: 6
 Explanation:
 Nodes 0 and 1 are the twins of nodes 3 and 2, respectively. All have twin sum = 6.
 There are no other nodes with twins in the linked list.
-Thus, the maximum twin sum of the linked list is 6. 
+Thus, the maximum twin sum of the linked list is 6.
 ```
 ```
 Input: head = [4,2,2,3]
@@ -32,7 +32,7 @@ Explanation:
 The nodes with twins present in this linked list are:
 - Node 0 is the twin of node 3 having a twin sum of 4 + 3 = 7.
 - Node 1 is the twin of node 2 having a twin sum of 2 + 2 = 4.
-Thus, the maximum twin sum of the linked list is max(7, 4) = 7. 
+Thus, the maximum twin sum of the linked list is max(7, 4) = 7.
 ```
 ```
 Input: head = [1,100000]
@@ -42,17 +42,17 @@ There is only one node with a twin in the linked list having twin sum of 1 + 100
 ```
 
 ## How can we solve this problem?
-The question told us the length of the given list will be even. So, We can try to use two-pointer approach to find out which node is the n/2<sup>th</sup>. After we found it out, there's a problem we are facing on, is that the twins node of the n/2<sup>th</sup> is n/2 - 1<sup>th</sup> node. Thus, we need to reverse all nodes before n/2<sup>th</sup> node. Then we can keep moving the pointer and find the maxinum twin's til the end of the list.  
+The question told us the length of the given list will be even. So, We can try to use two-pointer approach to find out which node is the n/2<sup>th</sup>. After we found it out, there's a problem we are facing on, is that the twins node of the n/2<sup>th</sup> is n/2 - 1<sup>th</sup> node. Thus, we need to reverse all nodes before n/2<sup>th</sup> node. Then we can keep moving the pointer and find the maximum twin's til the end of the list.
 
-A simple graph of this approch
+A simple graph of this approach
 ```
-Orignal List: a->b->c->d->e->f
+Original List: a->b->c->d->e->f
 the n/2th node : d
 
 reverse all nodes before b:
 a<-b<-c d->e->f
 
-both list has the same length ,the ending condtion will be either list a or list b.
+both list has the same length ,the ending condition will be either list a or list b.
 ```
 #### Solution(Recursion):
 我們可以在`initial`透過Recursive Function來遍歷`Input`,並把所有`Integer`先Push到Array/List裡面。然後在定義一個pointer用於存取`Next`的值即可。
@@ -77,12 +77,12 @@ both list has the same length ,the ending condtion will be either list a or list
 
 //calling hasNext -> next
 class NestedIterator {
-    vector<int> ans;
+    vector<int> and;
     // vector<NestedInteger> list;
     int cur = 0;
     void getValue(vector<NestedInteger>& data){
         for(int i = 0;i<data.size();i++){
-            if(data[i].isInteger()) ans.push_back(data[i].getInteger());
+            if(data[i].isInteger()) and.push_back(data[i].getInteger());
             else getValue(data[i].getList());
         }
     }
@@ -90,13 +90,13 @@ public:
     NestedIterator(vector<NestedInteger> &nestedList) {
         getValue(nestedList);
     }
-    
+
     int next() {
-        return ans[cur++];
+        return and[cur++];
     }
-    
+
     bool hasNext() {
-        return cur < ans.size() ? true:false;
+        return cur < and.size() ? true:false;
     }
 };
 
@@ -124,7 +124,7 @@ public:
     int pairSum(ListNode* head) {
         ListNode* slow = head, *fast = head;
         ListNode* pre = nullptr ,*cur = nullptr, *nxt = nullptr;
-        int ans = 0;
+        int and = 0;
         while(fast != nullptr){
             fast = fast->next;
             if(fast != nullptr){
@@ -135,18 +135,18 @@ public:
             cur = slow;
             nxt = slow->next;
             cur->next = pre;
-            pre = cur;   
+            pre = cur;
             slow = nxt;
         }
 
         ListNode* left = pre,*right = slow;
 
         while(left != nullptr && right != nullptr){
-            ans = max(ans , left->val + right->val);
+            and = max(and , left->val + right->val);
             left = left->next;
             right = right->next;
         }
-        return ans;
+        return and;
     }
 };
 ```

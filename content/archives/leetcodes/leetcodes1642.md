@@ -18,11 +18,11 @@ You start your journey from building `0` and move to the next building by possib
 
 While moving from building `i` to building `i+1` (**0-indexed**),
 
-* If the current building's height is **greater than or equal** to the next building's height, you do not need a ladder or bricks.
-* If the current building's height is **less than** the next building's height, you can either use one ladder or `(h[i+1] - h[i])` bricks.
+* If the current building's high is **greater than or equal** to the next building's high, you do not need a ladder or bricks.
+* If the current building's high is **less than** the next building's high, you can either use one ladder or `(h[i+1] - h[i])` bricks.
 *Return the furthest building index (0-indexed) you can reach if you use the given ladders and bricks optimally.*
 
-example:  
+example:
 ```
 Input: heights = [4,2,7,6,9,14,12], bricks = 5, ladders = 1
 Output: 4
@@ -43,7 +43,7 @@ Output: 3
 ```
 
 ## How can we solve this problem?
-這個要我們解決的問題是給定一定數量的磚塊`brick`和梯子`ladder`,問我們最遠能到達哪一棟建築(`array index`)。 我們主要注意的是題目給定的幾個限制條件。  
+這個要我們解決的問題是給定一定數量的磚塊`brick`和梯子`ladder`,問我們最遠能到達哪一棟建築(`array index`)。 我們主要注意的是題目給定的幾個限制條件。
 * 如果`i+1`的建築比`i`建築矮,我們可以不用任何磚塊(`bricks`)或者梯子`ladders`
 * 如果`i+1`的建築比`i`建築搞，我們必須使用一個梯子`ladders`或者`(h[i+1] - h[i])`個磚塊(`bricks`)
 
@@ -55,22 +55,22 @@ class Solution {
 public:
     int furthestBuilding(vector<int>& h, int bricks, int ladders) {
         //Using all ladders first
-        //if there is no other ladders,we try to use bricks(mininum one) instead of a ladder
-        
+        //if there is no other ladders,we try to use bricks(minimum one) instead of a ladder
+
         //if there have enough ladders
         //just return n-1(index)
         priority_queue<int, vector<int>, greater<int>> laddersUsed; //min heap
-        
+
         //O(n*log l(min Head insert))
         for(int i = 1;i<h.size();i++){
             //use all ladders
-            int climbingHeigh = h[i] - h[i-1];
-            if(climbingHeigh <= 0) continue; //we can climb it
-            laddersUsed.push(climbingHeigh);
-            
+            int climbinghigh = h[i] - h[i-1];
+            if(climbinghigh <= 0) continue; //we can climb it
+            laddersUsed.push(climbinghigh);
+
             //our ladder is enough?
             if(laddersUsed.size() <= ladders) continue;
-            
+
             //our ladder is not enough
             //try to use bricks to instead if our bricks is not enough too,return previous index(neither bricks nor ladders can reach ith building)
             bricks -= laddersUsed.top();
@@ -79,8 +79,8 @@ public:
         }
         return h.size() - 1;
     }
-    
-    
+
+
     //Time Exceed
     // int dfs(vector<int>& h,int i,int bricks, int ladders){
     //     if(bricks < 0 || ladders < 0) return i-1;
@@ -90,13 +90,12 @@ public:
     //     if(h[i] > h[i+1]) {
     //         res = solution(h,i+1,bricks,ladders);
     //     }else{
-    //         //either bricks ladders 
+    //         //either bricks ladders
     //         int bricksCase = solution(h,i+1,bricks - (h[i+1]-h[i]),ladders);
     //         int laddersCase = solution(h,i+1,bricks,ladders-1);
     //         res = max(bricksCase,laddersCase);
-    //     } 
+    //     }
     //     return res;
     // }
 };
 ```
-

@@ -35,7 +35,7 @@ categories:
 # Absolute link for visit
 #url: "readme.html"
 # 开启文章置顶，数字越小越靠前
-# Sticky post set-top in home page and the smaller nubmer will more forward.
+# Sticky post set-top in home page and the smaller number will more forward.
 #weight: 1
 # 开启数学公式渲染，可选值： mathjax, katex
 # Support Math Formulas render, options: mathjax, katex

@@ -80,7 +80,7 @@ example&lt;/p&gt;
 &lt;/span&gt;&lt;span class="lnt" id="hl-0-3"&gt;&lt;a class="lnlinks" href="#hl-0-3"&gt;3&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: height = [0,1,0,2,1,0,1,3,2,1,2,1]
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: high = [0,1,0,2,1,0,1,3,2,1,2,1]
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: 6
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Explanation: The above elevation map (black section) is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
@@ -93,7 +93,7 @@ example&lt;/p&gt;
 &lt;/span&gt;&lt;span class="lnt" id="hl-1-2"&gt;&lt;a class="lnlinks" href="#hl-1-2"&gt;2&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: height = [4,2,0,3,2,5]
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: high = [4,2,0,3,2,5]
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: 9&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -112,7 +112,7 @@ example&lt;/p&gt;
 &lt;/span&gt;&lt;span class="lnt" id="hl-0-3"&gt;&lt;a class="lnlinks" href="#hl-0-3"&gt;3&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: height = [0,1,0,2,1,0,1,3,2,1,2,1]
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: high = [0,1,0,2,1,0,1,3,2,1,2,1]
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: 6
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Explanation: The above elevation map (black section) is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
@@ -125,7 +125,7 @@ example&lt;/p&gt;
 &lt;/span&gt;&lt;span class="lnt" id="hl-1-2"&gt;&lt;a class="lnlinks" href="#hl-1-2"&gt;2&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: height = [4,2,0,3,2,5]
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Input: high = [4,2,0,3,2,5]
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;Output: 9&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -254,7 +254,7 @@ example&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- Choose from the start, [-3,-3,-2,7,1], adding -3 * -5 = 15 to the score.
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- Choose from the start, [-3,-2,7,1], adding -3 * 3 = -9 to the score.
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- Choose from the end, [-2,7,1], adding 1 * 4 = 4 to the score.
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- Choose from the end, [-2,7], adding 7 * 6 = 42 to the score. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- Choose from the end, [-2,7], adding 7 * 6 = 42 to the score.
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;The total score is 50 + 15 - 9 + 4 + 42 = 102.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -315,7 +315,7 @@ example&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- Choose from the start, [-3,-3,-2,7,1], adding -3 * -5 = 15 to the score.
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- Choose from the start, [-3,-2,7,1], adding -3 * 3 = -9 to the score.
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- Choose from the end, [-2,7,1], adding 1 * 4 = 4 to the score.
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- Choose from the end, [-2,7], adding 7 * 6 = 42 to the score. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- Choose from the end, [-2,7], adding 7 * 6 = 42 to the score.
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;The total score is 50 + 15 - 9 + 4 + 42 = 102.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -608,8 +608,8 @@ example&lt;/p&gt;</description></item><item><title>[Leetcode] Kth Largest Elemen
 &lt;p&gt;You start your journey from building &lt;code&gt;0&lt;/code&gt; and move to the next building by possibly using bricks or ladders.&lt;/p&gt;
 &lt;p&gt;While moving from building &lt;code&gt;i&lt;/code&gt; to building &lt;code&gt;i+1&lt;/code&gt; (&lt;strong&gt;0-indexed&lt;/strong&gt;),&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;If the current building&amp;rsquo;s height is &lt;strong&gt;greater than or equal&lt;/strong&gt; to the next building&amp;rsquo;s height, you do not need a ladder or bricks.&lt;/li&gt;
-&lt;li&gt;If the current building&amp;rsquo;s height is &lt;strong&gt;less than&lt;/strong&gt; the next building&amp;rsquo;s height, you can either use one ladder or &lt;code&gt;(h[i+1] - h[i])&lt;/code&gt; bricks.
+&lt;li&gt;If the current building&amp;rsquo;s high is &lt;strong&gt;greater than or equal&lt;/strong&gt; to the next building&amp;rsquo;s high, you do not need a ladder or bricks.&lt;/li&gt;
+&lt;li&gt;If the current building&amp;rsquo;s high is &lt;strong&gt;less than&lt;/strong&gt; the next building&amp;rsquo;s high, you can either use one ladder or &lt;code&gt;(h[i+1] - h[i])&lt;/code&gt; bricks.
 &lt;em&gt;Return the furthest building index (0-indexed) you can reach if you use the given ladders and bricks optimally.&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;example:&lt;/p&gt;</description></item><item><title>[Leetcode] Furthest Building You Can Reach(Medium)</title><link>http://localhost:1313/leetcodes/leetcodes1642/</link><pubDate>Tue, 21 Jun 2022 22:55:43 +0800</pubDate><guid>http://localhost:1313/leetcodes/leetcodes1642/</guid><description>&lt;h2 id="leetcode-1642---furthest-building-you-can-reach"&gt;LeetCode 1642 - Furthest Building You Can Reach
@@ -618,8 +618,8 @@ example&lt;/p&gt;</description></item><item><title>[Leetcode] Kth Largest Elemen
 &lt;p&gt;You start your journey from building &lt;code&gt;0&lt;/code&gt; and move to the next building by possibly using bricks or ladders.&lt;/p&gt;
 &lt;p&gt;While moving from building &lt;code&gt;i&lt;/code&gt; to building &lt;code&gt;i+1&lt;/code&gt; (&lt;strong&gt;0-indexed&lt;/strong&gt;),&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;If the current building&amp;rsquo;s height is &lt;strong&gt;greater than or equal&lt;/strong&gt; to the next building&amp;rsquo;s height, you do not need a ladder or bricks.&lt;/li&gt;
-&lt;li&gt;If the current building&amp;rsquo;s height is &lt;strong&gt;less than&lt;/strong&gt; the next building&amp;rsquo;s height, you can either use one ladder or &lt;code&gt;(h[i+1] - h[i])&lt;/code&gt; bricks.
+&lt;li&gt;If the current building&amp;rsquo;s high is &lt;strong&gt;greater than or equal&lt;/strong&gt; to the next building&amp;rsquo;s high, you do not need a ladder or bricks.&lt;/li&gt;
+&lt;li&gt;If the current building&amp;rsquo;s high is &lt;strong&gt;less than&lt;/strong&gt; the next building&amp;rsquo;s high, you can either use one ladder or &lt;code&gt;(h[i+1] - h[i])&lt;/code&gt; bricks.
 &lt;em&gt;Return the furthest building index (0-indexed) you can reach if you use the given ladders and bricks optimally.&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;example:&lt;/p&gt;</description></item><item><title>[Leetcode] Short Encoding of Words(Medium)</title><link>http://localhost:1313/archives/leetcodes/leetcode802/</link><pubDate>Mon, 20 Jun 2022 12:45:05 +0800</pubDate><guid>http://localhost:1313/archives/leetcodes/leetcode802/</guid><description>&lt;h2 id="820---short-encoding-of-words"&gt;820 - Short Encoding of Words
@@ -705,7 +705,7 @@ Return a &lt;em&gt;list of all possible valid combinations&lt;/em&gt;. The list 
 
 &lt;h2 id="how-can-we-solve-this-problem"&gt;How can we solve this problem?
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;這題主要關注的點是數字範圍為&lt;code&gt;[1,9]&lt;/code&gt;，每個結果中，數字只能使用一次，而且數字必須是順序排列。例如:&lt;code&gt;2,3,4&lt;/code&gt;,&lt;code&gt;1,2,5&lt;/code&gt;。解決這題我們可以用&lt;strong&gt;back-traking&lt;/strong&gt;大法。只要我們當前的&lt;code&gt;Sum&lt;/code&gt;大於&lt;code&gt;n&lt;/code&gt;我們就直接退回back track回上一步,因為數值只會越來越大，並不是我們想要的。如果&lt;em&gt;Ans&lt;/em&gt;我們所需的&lt;code&gt;k&lt;/code&gt;個就直接判斷是否等於&lt;code&gt;n&lt;/code&gt;，如果是就直接加入到我們的&lt;em&gt;result&lt;/em&gt;即可。&lt;/p&gt;</description></item><item><title>[Leetcode] Combination Sum III(Medium)</title><link>http://localhost:1313/leetcodes/leetcode216/</link><pubDate>Tue, 10 May 2022 11:41:43 +0800</pubDate><guid>http://localhost:1313/leetcodes/leetcode216/</guid><description>&lt;h2 id="leetcode-216---combination-sum-iii"&gt;LeetCode 216 - Combination Sum III
+&lt;/h2&gt;&lt;p&gt;這題主要關注的點是數字範圍為&lt;code&gt;[1,9]&lt;/code&gt;，每個結果中，數字只能使用一次，而且數字必須是順序排列。例如:&lt;code&gt;2,3,4&lt;/code&gt;,&lt;code&gt;1,2,5&lt;/code&gt;。解決這題我們可以用&lt;strong&gt;back-traking&lt;/strong&gt;大法。只要我們當前的&lt;code&gt;Sum&lt;/code&gt;大於&lt;code&gt;n&lt;/code&gt;我們就直接退回back track回上一步,因為數值只會越來越大，並不是我們想要的。如果&lt;em&gt;And&lt;/em&gt;我們所需的&lt;code&gt;k&lt;/code&gt;個就直接判斷是否等於&lt;code&gt;n&lt;/code&gt;，如果是就直接加入到我們的&lt;em&gt;result&lt;/em&gt;即可。&lt;/p&gt;</description></item><item><title>[Leetcode] Combination Sum III(Medium)</title><link>http://localhost:1313/leetcodes/leetcode216/</link><pubDate>Tue, 10 May 2022 11:41:43 +0800</pubDate><guid>http://localhost:1313/leetcodes/leetcode216/</guid><description>&lt;h2 id="leetcode-216---combination-sum-iii"&gt;LeetCode 216 - Combination Sum III
 &lt;a class="header-anchor" href="#leetcode-216---combination-sum-iii"&gt;&lt;/a&gt;
 &lt;/h2&gt;&lt;p&gt;Find all valid combinations of &lt;code&gt;k&lt;/code&gt; numbers that sum up to &lt;code&gt;n&lt;/code&gt; such that the following conditions are true:&lt;/p&gt;
 &lt;ul&gt;
@@ -772,7 +772,7 @@ Return a &lt;em&gt;list of all possible valid combinations&lt;/em&gt;. The list 
 
 &lt;h2 id="how-can-we-solve-this-problem"&gt;How can we solve this problem?
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;這題主要關注的點是數字範圍為&lt;code&gt;[1,9]&lt;/code&gt;，每個結果中，數字只能使用一次，而且數字必須是順序排列。例如:&lt;code&gt;2,3,4&lt;/code&gt;,&lt;code&gt;1,2,5&lt;/code&gt;。解決這題我們可以用&lt;strong&gt;back-traking&lt;/strong&gt;大法。只要我們當前的&lt;code&gt;Sum&lt;/code&gt;大於&lt;code&gt;n&lt;/code&gt;我們就直接退回back track回上一步,因為數值只會越來越大，並不是我們想要的。如果&lt;em&gt;Ans&lt;/em&gt;我們所需的&lt;code&gt;k&lt;/code&gt;個就直接判斷是否等於&lt;code&gt;n&lt;/code&gt;，如果是就直接加入到我們的&lt;em&gt;result&lt;/em&gt;即可。&lt;/p&gt;</description></item><item><title>[Leetcode] 132 Pattern(Medium)</title><link>http://localhost:1313/archives/leetcodes/leetcode456/</link><pubDate>Sat, 07 May 2022 06:30:23 +0800</pubDate><guid>http://localhost:1313/archives/leetcodes/leetcode456/</guid><description>&lt;h2 id="leetcode-456---132-pattern"&gt;LeetCode 456 - 132 Pattern
+&lt;/h2&gt;&lt;p&gt;這題主要關注的點是數字範圍為&lt;code&gt;[1,9]&lt;/code&gt;，每個結果中，數字只能使用一次，而且數字必須是順序排列。例如:&lt;code&gt;2,3,4&lt;/code&gt;,&lt;code&gt;1,2,5&lt;/code&gt;。解決這題我們可以用&lt;strong&gt;back-traking&lt;/strong&gt;大法。只要我們當前的&lt;code&gt;Sum&lt;/code&gt;大於&lt;code&gt;n&lt;/code&gt;我們就直接退回back track回上一步,因為數值只會越來越大，並不是我們想要的。如果&lt;em&gt;And&lt;/em&gt;我們所需的&lt;code&gt;k&lt;/code&gt;個就直接判斷是否等於&lt;code&gt;n&lt;/code&gt;，如果是就直接加入到我們的&lt;em&gt;result&lt;/em&gt;即可。&lt;/p&gt;</description></item><item><title>[Leetcode] 132 Pattern(Medium)</title><link>http://localhost:1313/archives/leetcodes/leetcode456/</link><pubDate>Sat, 07 May 2022 06:30:23 +0800</pubDate><guid>http://localhost:1313/archives/leetcodes/leetcode456/</guid><description>&lt;h2 id="leetcode-456---132-pattern"&gt;LeetCode 456 - 132 Pattern
 &lt;a class="header-anchor" href="#leetcode-456---132-pattern"&gt;&lt;/a&gt;
 &lt;/h2&gt;&lt;p&gt;Given an array of &lt;code&gt;n&lt;/code&gt; integers nums, a &lt;strong&gt;132 pattern&lt;/strong&gt; is a subsequence of three integers nums[i], nums[j] and nums[k] such that i &amp;lt; j &amp;lt; k and nums[i] &amp;lt; nums[k] &amp;lt; nums[j].&lt;/p&gt;
 &lt;p&gt;Return true &lt;em&gt;if there is a 132 pattern in nums, otherwise, return false&lt;/em&gt;.
@@ -916,7 +916,7 @@ example&lt;/p&gt;
 
 &lt;h2 id="how-can-we-solve-this-problem"&gt;How can we solve this problem?
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;這題就是要移除&lt;code&gt;Array&lt;/code&gt;中2個elements加起來等於&lt;code&gt;k&lt;/code&gt;的操作有幾次。&lt;br&gt;
+&lt;/h2&gt;&lt;p&gt;這題就是要移除&lt;code&gt;Array&lt;/code&gt;中2個elements加起來等於&lt;code&gt;k&lt;/code&gt;的操作有幾次。
 第一個解法，我們可以使用&lt;code&gt;sorting&lt;/code&gt;以及&lt;code&gt;two-pointer approach&lt;/code&gt;來解決。先將&lt;code&gt;array&lt;/code&gt;排序，然後設置&lt;code&gt;i&lt;/code&gt;為0,&lt;code&gt;j&lt;/code&gt;為&lt;code&gt;n-1&lt;/code&gt;,直接使用iteration找出&lt;code&gt;nums[i]+nums[j] = k&lt;/code&gt;的數，然後&lt;code&gt;answer+1&lt;/code&gt;即可。&lt;/p&gt;</description></item><item><title>[Leetcode] Max Number of K-Sum Pairs(Medium)</title><link>http://localhost:1313/leetcodes/leetcode1679/</link><pubDate>Wed, 04 May 2022 20:11:43 +0800</pubDate><guid>http://localhost:1313/leetcodes/leetcode1679/</guid><description>&lt;h2 id="leetcode-1679---max-number-of-k-sum-pairs"&gt;LeetCode 1679 - Max Number of K-Sum Pairs
 &lt;a class="header-anchor" href="#leetcode-1679---max-number-of-k-sum-pairs"&gt;&lt;/a&gt;
 &lt;/h2&gt;&lt;p&gt;You are given an integer array &lt;code&gt;nums&lt;/code&gt; and an integer &lt;code&gt;k&lt;/code&gt;.&lt;/p&gt;
@@ -963,7 +963,7 @@ example&lt;/p&gt;
 
 &lt;h2 id="how-can-we-solve-this-problem"&gt;How can we solve this problem?
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;這題就是要移除&lt;code&gt;Array&lt;/code&gt;中2個elements加起來等於&lt;code&gt;k&lt;/code&gt;的操作有幾次。&lt;br&gt;
+&lt;/h2&gt;&lt;p&gt;這題就是要移除&lt;code&gt;Array&lt;/code&gt;中2個elements加起來等於&lt;code&gt;k&lt;/code&gt;的操作有幾次。
 第一個解法，我們可以使用&lt;code&gt;sorting&lt;/code&gt;以及&lt;code&gt;two-pointer approach&lt;/code&gt;來解決。先將&lt;code&gt;array&lt;/code&gt;排序，然後設置&lt;code&gt;i&lt;/code&gt;為0,&lt;code&gt;j&lt;/code&gt;為&lt;code&gt;n-1&lt;/code&gt;,直接使用iteration找出&lt;code&gt;nums[i]+nums[j] = k&lt;/code&gt;的數，然後&lt;code&gt;answer+1&lt;/code&gt;即可。&lt;/p&gt;</description></item><item><title>[Leetcode] Shortest Unsorted Continuous Subarray(Medium)</title><link>http://localhost:1313/archives/leetcodes/leetcode581/</link><pubDate>Tue, 03 May 2022 18:27:24 +0800</pubDate><guid>http://localhost:1313/archives/leetcodes/leetcode581/</guid><description>&lt;h2 id="leetcode-581---shortest-unsorted-continuous-subarray"&gt;LeetCode 581 - Shortest Unsorted Continuous Subarray
 &lt;a class="header-anchor" href="#leetcode-581---shortest-unsorted-continuous-subarray"&gt;&lt;/a&gt;
 &lt;/h2&gt;&lt;p&gt;Given an integer array nums, you need to find one continuous subarray that if you only sort this subarray in ascending order, then the whole array will be sorted in ascending order.&lt;/p&gt;
@@ -1009,8 +1009,8 @@ example&lt;/p&gt;
 
 &lt;h2 id="how-can-we-solve-this-problem"&gt;How can we solve this problem?
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;這題比較難懂一點點，這裡先做一下題目的解釋。這題主要先問的是在輸入的&lt;code&gt;Array&lt;/code&gt;裡面找到一個最小需要排序的&lt;code&gt;Sub-array&lt;/code&gt;。&lt;br&gt;
-從例子&lt;code&gt;[2,6,4,8,10,9,15]&lt;/code&gt;中，我們可以很明顯的看到&lt;code&gt;[6,4,8,10,9]&lt;/code&gt;並不是ascending order(順序),而這個&lt;code&gt;sub-array&lt;/code&gt;要進行排序的話，所有elements都需要進行排序，所以，他的length是&lt;code&gt;5&lt;/code&gt;。&lt;br&gt;
+&lt;/h2&gt;&lt;p&gt;這題比較難懂一點點，這裡先做一下題目的解釋。這題主要先問的是在輸入的&lt;code&gt;Array&lt;/code&gt;裡面找到一個最小需要排序的&lt;code&gt;Sub-array&lt;/code&gt;。
+從例子&lt;code&gt;[2,6,4,8,10,9,15]&lt;/code&gt;中，我們可以很明顯的看到&lt;code&gt;[6,4,8,10,9]&lt;/code&gt;並不是ascending order(順序),而這個&lt;code&gt;sub-array&lt;/code&gt;要進行排序的話，所有elements都需要進行排序，所以，他的length是&lt;code&gt;5&lt;/code&gt;。
 再舉另外一個例子&lt;code&gt;[1,3,2,3,3]&lt;/code&gt;，這個&lt;code&gt;Array&lt;/code&gt;我們可以看到&lt;code&gt;[3,2,3,3]&lt;/code&gt;並不是順序的，但是在這個&lt;code&gt;sub-array&lt;/code&gt;裡面,只有&lt;code&gt;[3,2]&lt;/code&gt;需要排序,所以，他的結果會是&lt;code&gt;2&lt;/code&gt;。&lt;/p&gt;</description></item><item><title>[Leetcode] Shortest Unsorted Continuous Subarray(Medium)</title><link>http://localhost:1313/leetcodes/leetcode581/</link><pubDate>Tue, 03 May 2022 18:27:24 +0800</pubDate><guid>http://localhost:1313/leetcodes/leetcode581/</guid><description>&lt;h2 id="leetcode-581---shortest-unsorted-continuous-subarray"&gt;LeetCode 581 - Shortest Unsorted Continuous Subarray
 &lt;a class="header-anchor" href="#leetcode-581---shortest-unsorted-continuous-subarray"&gt;&lt;/a&gt;
 &lt;/h2&gt;&lt;p&gt;Given an integer array nums, you need to find one continuous subarray that if you only sort this subarray in ascending order, then the whole array will be sorted in ascending order.&lt;/p&gt;
@@ -1056,8 +1056,8 @@ example&lt;/p&gt;
 
 &lt;h2 id="how-can-we-solve-this-problem"&gt;How can we solve this problem?
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;這題比較難懂一點點，這裡先做一下題目的解釋。這題主要先問的是在輸入的&lt;code&gt;Array&lt;/code&gt;裡面找到一個最小需要排序的&lt;code&gt;Sub-array&lt;/code&gt;。&lt;br&gt;
-從例子&lt;code&gt;[2,6,4,8,10,9,15]&lt;/code&gt;中，我們可以很明顯的看到&lt;code&gt;[6,4,8,10,9]&lt;/code&gt;並不是ascending order(順序),而這個&lt;code&gt;sub-array&lt;/code&gt;要進行排序的話，所有elements都需要進行排序，所以，他的length是&lt;code&gt;5&lt;/code&gt;。&lt;br&gt;
+&lt;/h2&gt;&lt;p&gt;這題比較難懂一點點，這裡先做一下題目的解釋。這題主要先問的是在輸入的&lt;code&gt;Array&lt;/code&gt;裡面找到一個最小需要排序的&lt;code&gt;Sub-array&lt;/code&gt;。
+從例子&lt;code&gt;[2,6,4,8,10,9,15]&lt;/code&gt;中，我們可以很明顯的看到&lt;code&gt;[6,4,8,10,9]&lt;/code&gt;並不是ascending order(順序),而這個&lt;code&gt;sub-array&lt;/code&gt;要進行排序的話，所有elements都需要進行排序，所以，他的length是&lt;code&gt;5&lt;/code&gt;。
 再舉另外一個例子&lt;code&gt;[1,3,2,3,3]&lt;/code&gt;，這個&lt;code&gt;Array&lt;/code&gt;我們可以看到&lt;code&gt;[3,2,3,3]&lt;/code&gt;並不是順序的，但是在這個&lt;code&gt;sub-array&lt;/code&gt;裡面,只有&lt;code&gt;[3,2]&lt;/code&gt;需要排序,所以，他的結果會是&lt;code&gt;2&lt;/code&gt;。&lt;/p&gt;</description></item><item><title>[Leetcode] Sort Array By Parity(Easy)</title><link>http://localhost:1313/archives/leetcodes/leetcode905/</link><pubDate>Mon, 02 May 2022 18:19:41 +0800</pubDate><guid>http://localhost:1313/archives/leetcodes/leetcode905/</guid><description>&lt;h2 id="leetcode-905---sort-array-by-parity"&gt;LeetCode 905 - Sort Array By Parity
 &lt;a class="header-anchor" href="#leetcode-905---sort-array-by-parity"&gt;&lt;/a&gt;
 &lt;/h2&gt;&lt;p&gt;Given an integer array &lt;code&gt;nums&lt;/code&gt;, move all the even integers at the beginning of the array followed by all the odd integers.&lt;/p&gt;

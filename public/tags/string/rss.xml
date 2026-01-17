@@ -176,20 +176,20 @@ example:&lt;/p&gt;</description></item><item><title>[Leetcode] Longest Palindrom
 &lt;a class="header-anchor" href="#introduction"&gt;&lt;/a&gt;
 &lt;/h1&gt;&lt;h2 id="什麼是palindromic-string-迴文字串"&gt;什麼是Palindromic String 迴文字串
 &lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%afpalindromic-string-%e8%bf%b4%e6%96%87%e5%ad%97%e4%b8%b2"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;所謂的Palindromic String(迴文字串) 就是以一個字元為中間，而它的左邊以及右邊的組成字元相同。&lt;br&gt;
-例子:&lt;br&gt;
-&lt;code&gt;abcdcba&lt;/code&gt; 以&lt;code&gt;d&lt;/code&gt;為中心的左跟右的字元一樣。&lt;br&gt;
-&lt;code&gt;cdc&lt;/code&gt;左跟右都為&lt;code&gt;c&lt;/code&gt;&lt;br&gt;
-&lt;code&gt;bcdcb&lt;/code&gt; 左跟右都為&lt;code&gt;b&lt;/code&gt;&lt;br&gt;
+&lt;/h2&gt;&lt;p&gt;所謂的Palindromic String(迴文字串) 就是以一個字元為中間，而它的左邊以及右邊的組成字元相同。
+例子:
+&lt;code&gt;abcdcba&lt;/code&gt; 以&lt;code&gt;d&lt;/code&gt;為中心的左跟右的字元一樣。
+&lt;code&gt;cdc&lt;/code&gt;左跟右都為&lt;code&gt;c&lt;/code&gt;
+&lt;code&gt;bcdcb&lt;/code&gt; 左跟右都為&lt;code&gt;b&lt;/code&gt;
 &lt;code&gt;abcdcba&lt;/code&gt; 左跟右都為&lt;code&gt;a&lt;/code&gt;&lt;/p&gt;</description></item><item><title>[筆記]Palindromic String(迴文字串)</title><link>http://localhost:1313/techs/note/palindromicstring/</link><pubDate>Thu, 16 Jun 2022 12:26:03 +0800</pubDate><guid>http://localhost:1313/techs/note/palindromicstring/</guid><description>&lt;h1 id="introduction"&gt;Introduction
 &lt;a class="header-anchor" href="#introduction"&gt;&lt;/a&gt;
 &lt;/h1&gt;&lt;h2 id="什麼是palindromic-string-迴文字串"&gt;什麼是Palindromic String 迴文字串
 &lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%afpalindromic-string-%e8%bf%b4%e6%96%87%e5%ad%97%e4%b8%b2"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;所謂的Palindromic String(迴文字串) 就是以一個字元為中間，而它的左邊以及右邊的組成字元相同。&lt;br&gt;
-例子:&lt;br&gt;
-&lt;code&gt;abcdcba&lt;/code&gt; 以&lt;code&gt;d&lt;/code&gt;為中心的左跟右的字元一樣。&lt;br&gt;
-&lt;code&gt;cdc&lt;/code&gt;左跟右都為&lt;code&gt;c&lt;/code&gt;&lt;br&gt;
-&lt;code&gt;bcdcb&lt;/code&gt; 左跟右都為&lt;code&gt;b&lt;/code&gt;&lt;br&gt;
+&lt;/h2&gt;&lt;p&gt;所謂的Palindromic String(迴文字串) 就是以一個字元為中間，而它的左邊以及右邊的組成字元相同。
+例子:
+&lt;code&gt;abcdcba&lt;/code&gt; 以&lt;code&gt;d&lt;/code&gt;為中心的左跟右的字元一樣。
+&lt;code&gt;cdc&lt;/code&gt;左跟右都為&lt;code&gt;c&lt;/code&gt;
+&lt;code&gt;bcdcb&lt;/code&gt; 左跟右都為&lt;code&gt;b&lt;/code&gt;
 &lt;code&gt;abcdcba&lt;/code&gt; 左跟右都為&lt;code&gt;a&lt;/code&gt;&lt;/p&gt;</description></item><item><title>[Leetcode] Letter Combinations of a Phone Number(Medium)</title><link>http://localhost:1313/archives/leetcodes/leetcode17/</link><pubDate>Mon, 09 May 2022 21:50:34 +0800</pubDate><guid>http://localhost:1313/archives/leetcodes/leetcode17/</guid><description>&lt;h2 id="leetcode-17---letter-combinations-of-a-phone-number"&gt;LeetCode 17 - Letter Combinations of a Phone Number
 &lt;a class="header-anchor" href="#leetcode-17---letter-combinations-of-a-phone-number"&gt;&lt;/a&gt;
 &lt;/h2&gt;&lt;p&gt;Given a string containing digits from &lt;code&gt;2-9&lt;/code&gt; inclusive, return all possible letter combinations that the number could represent. Return the answer in &lt;strong&gt;any order&lt;/strong&gt;.&lt;/p&gt;

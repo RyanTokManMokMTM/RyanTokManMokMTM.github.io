@@ -10,72 +10,72 @@
 &lt;a href="http://localhost:1313/achievement/note/balance-tree" title="平衡樹的文章" &gt;
  平衡樹的文章
  
-&lt;/a&gt;。&lt;/p&gt;</description></item><item><title>[筆記] 淺談資料庫事務(Transcation)</title><link>http://localhost:1313/archives/note/database-transaction/</link><pubDate>Sat, 23 Nov 2024 22:11:45 +0800</pubDate><guid>http://localhost:1313/archives/note/database-transaction/</guid><description>&lt;h2 id="簡介"&gt;簡介
+&lt;/a&gt;。&lt;/p&gt;</description></item><item><title>[筆記] 淺談資料庫事務(Transaction)</title><link>http://localhost:1313/archives/note/database-transaction/</link><pubDate>Sat, 23 Nov 2024 22:11:45 +0800</pubDate><guid>http://localhost:1313/archives/note/database-transaction/</guid><description>&lt;h2 id="簡介"&gt;簡介
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;這篇文章主要是想要討論一下資料庫筆一個重要的概念&lt;strong&gt;事務(Transcation)&lt;/strong&gt;。接下來的文章主要會分成一下幾個部分繼續討論：&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;這篇文章主要是想要討論一下資料庫筆一個重要的概念&lt;strong&gt;事務(Transaction)&lt;/strong&gt;。接下來的文章主要會分成一下幾個部分繼續討論：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;什麼是資料庫的事務(Transcation)&lt;/li&gt;
-&lt;li&gt;事務(Transcation)的4大特性為何&lt;/li&gt;
+&lt;li&gt;什麼是資料庫的事務(Transaction)&lt;/li&gt;
+&lt;li&gt;事務(Transaction)的4大特性為何&lt;/li&gt;
 &lt;li&gt;一致性問題和解決方法&lt;/li&gt;
 &lt;li&gt;MVCC和鎖的簡單介紹&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id="什麼是事務transcation"&gt;什麼是事務(Transcation)
-&lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%af%e4%ba%8b%e5%8b%99transcation"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;在資料庫系統中，我們都會對數據進行讀寫操作，但是如果我們要對數據做一系列的操作(2個或以上的操作)，正在被操作的數據我們不希望能被其他人修改從而影響了結果，而且即便途中操作失敗，也希望他能回到原本的狀態。而資料庫為我們提供一個這樣的方法使得數據的操作要麼是&lt;strong&gt;全部都成功，要麼全部都是失敗&lt;/strong&gt;，這就是事務(Transcation)，也可以稱之為「交易」。&lt;/p&gt;</description></item><item><title>[筆記] 淺談資料庫事務(Transcation)</title><link>http://localhost:1313/techs/note/database-transaction/</link><pubDate>Sat, 23 Nov 2024 22:11:45 +0800</pubDate><guid>http://localhost:1313/techs/note/database-transaction/</guid><description>&lt;h2 id="簡介"&gt;簡介
+&lt;h2 id="什麼是事務transaction"&gt;什麼是事務(Transaction)
+&lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%af%e4%ba%8b%e5%8b%99transaction"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;在資料庫系統中，我們都會對數據進行讀寫操作，但是如果我們要對數據做一系列的操作(2個或以上的操作)，正在被操作的數據我們不希望能被其他人修改從而影響了結果，而且即便途中操作失敗，也希望他能回到原本的狀態。而資料庫為我們提供一個這樣的方法使得數據的操作要麼是&lt;strong&gt;全部都成功，要麼全部都是失敗&lt;/strong&gt;，這就是事務(Transaction)，也可以稱之為「交易」。&lt;/p&gt;</description></item><item><title>[筆記] 淺談資料庫事務(Transaction)</title><link>http://localhost:1313/techs/note/database-transaction/</link><pubDate>Sat, 23 Nov 2024 22:11:45 +0800</pubDate><guid>http://localhost:1313/techs/note/database-transaction/</guid><description>&lt;h2 id="簡介"&gt;簡介
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;這篇文章主要是想要討論一下資料庫筆一個重要的概念&lt;strong&gt;事務(Transcation)&lt;/strong&gt;。接下來的文章主要會分成一下幾個部分繼續討論：&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;這篇文章主要是想要討論一下資料庫筆一個重要的概念&lt;strong&gt;事務(Transaction)&lt;/strong&gt;。接下來的文章主要會分成一下幾個部分繼續討論：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;什麼是資料庫的事務(Transcation)&lt;/li&gt;
-&lt;li&gt;事務(Transcation)的4大特性為何&lt;/li&gt;
+&lt;li&gt;什麼是資料庫的事務(Transaction)&lt;/li&gt;
+&lt;li&gt;事務(Transaction)的4大特性為何&lt;/li&gt;
 &lt;li&gt;一致性問題和解決方法&lt;/li&gt;
 &lt;li&gt;MVCC和鎖的簡單介紹&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id="什麼是事務transcation"&gt;什麼是事務(Transcation)
-&lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%af%e4%ba%8b%e5%8b%99transcation"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;在資料庫系統中，我們都會對數據進行讀寫操作，但是如果我們要對數據做一系列的操作(2個或以上的操作)，正在被操作的數據我們不希望能被其他人修改從而影響了結果，而且即便途中操作失敗，也希望他能回到原本的狀態。而資料庫為我們提供一個這樣的方法使得數據的操作要麼是&lt;strong&gt;全部都成功，要麼全部都是失敗&lt;/strong&gt;，這就是事務(Transcation)，也可以稱之為「交易」。&lt;/p&gt;</description></item><item><title>[筆記] 平衡樹 Balance Tree</title><link>http://localhost:1313/archives/note/balance-tree/</link><pubDate>Thu, 31 Oct 2024 15:28:20 +0800</pubDate><guid>http://localhost:1313/archives/note/balance-tree/</guid><description>&lt;h2 id="簡介"&gt;簡介
+&lt;h2 id="什麼是事務transaction"&gt;什麼是事務(Transaction)
+&lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%af%e4%ba%8b%e5%8b%99transaction"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;在資料庫系統中，我們都會對數據進行讀寫操作，但是如果我們要對數據做一系列的操作(2個或以上的操作)，正在被操作的數據我們不希望能被其他人修改從而影響了結果，而且即便途中操作失敗，也希望他能回到原本的狀態。而資料庫為我們提供一個這樣的方法使得數據的操作要麼是&lt;strong&gt;全部都成功，要麼全部都是失敗&lt;/strong&gt;，這就是事務(Transaction)，也可以稱之為「交易」。&lt;/p&gt;</description></item><item><title>[筆記] 平衡樹 Balance Tree</title><link>http://localhost:1313/archives/note/balance-tree/</link><pubDate>Thu, 31 Oct 2024 15:28:20 +0800</pubDate><guid>http://localhost:1313/archives/note/balance-tree/</guid><description>&lt;h2 id="簡介"&gt;簡介
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;在講述Balance Tree之前，我們先來看一種情況。現在我們根據數據來建立一棵Binary Search Tree，譬如說以下的數據 : [4,5,6,7,8,9,10], 我們就會建立出以下這顆 Binary Search Tree:&lt;br&gt;
+&lt;/h2&gt;&lt;p&gt;在講述Balance Tree之前，我們先來看一種情況。現在我們根據數據來建立一棵Binary Search Tree，譬如說以下的數據 : [4,5,6,7,8,9,10], 我們就會建立出以下這顆 Binary Search Tree:
 &lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/imgs-custom/helper/balance-tree/unblanceTree.png" alt="unbalance-tree" /&gt;&lt;/p&gt;</description></item><item><title>[筆記] 平衡樹 Balance Tree</title><link>http://localhost:1313/techs/note/balance-tree/</link><pubDate>Thu, 31 Oct 2024 15:28:20 +0800</pubDate><guid>http://localhost:1313/techs/note/balance-tree/</guid><description>&lt;h2 id="簡介"&gt;簡介
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;在講述Balance Tree之前，我們先來看一種情況。現在我們根據數據來建立一棵Binary Search Tree，譬如說以下的數據 : [4,5,6,7,8,9,10], 我們就會建立出以下這顆 Binary Search Tree:&lt;br&gt;
+&lt;/h2&gt;&lt;p&gt;在講述Balance Tree之前，我們先來看一種情況。現在我們根據數據來建立一棵Binary Search Tree，譬如說以下的數據 : [4,5,6,7,8,9,10], 我們就會建立出以下這顆 Binary Search Tree:
 &lt;img src="http://localhost:1313/imgs/img-lazy-loading.gif" data-src="http://localhost:1313/imgs-custom/helper/balance-tree/unblanceTree.png" alt="unbalance-tree" /&gt;&lt;/p&gt;</description></item><item><title>[筆記] Linked List 資料結構</title><link>http://localhost:1313/archives/note/note-linkedlist/</link><pubDate>Fri, 10 Mar 2023 14:42:22 +0800</pubDate><guid>http://localhost:1313/archives/note/note-linkedlist/</guid><description>&lt;p&gt;Linked List是一個很常用的資料結構，&lt;/p&gt;
 &lt;h2 id="設計linked-list"&gt;設計Linked List
 &lt;a class="header-anchor" href="#%e8%a8%ad%e8%a8%88linked-list"&gt;&lt;/a&gt;
 &lt;/h2&gt;</description></item><item><title>[筆記] Linked List 資料結構</title><link>http://localhost:1313/techs/note/note-linkedlist/</link><pubDate>Fri, 10 Mar 2023 14:42:22 +0800</pubDate><guid>http://localhost:1313/techs/note/note-linkedlist/</guid><description>&lt;p&gt;Linked List是一個很常用的資料結構，&lt;/p&gt;
 &lt;h2 id="設計linked-list"&gt;設計Linked List
 &lt;a class="header-anchor" href="#%e8%a8%ad%e8%a8%88linked-list"&gt;&lt;/a&gt;
-&lt;/h2&gt;</description></item><item><title>[筆記] Binary Search 演算法</title><link>http://localhost:1313/archives/note/note-binarysearch/</link><pubDate>Thu, 09 Mar 2023 13:48:46 +0800</pubDate><guid>http://localhost:1313/archives/note/note-binarysearch/</guid><description>&lt;p&gt;Binary Search 演算法是用於在一個有序array中搜尋一個值的演算法 - TC:O(log n)。相較於Linear Search(線性搜尋) - TC:O(n),其效率大大提高。&lt;/p&gt;</description></item><item><title>[筆記] Binary Search 演算法</title><link>http://localhost:1313/techs/note/note-binarysearch/</link><pubDate>Thu, 09 Mar 2023 13:48:46 +0800</pubDate><guid>http://localhost:1313/techs/note/note-binarysearch/</guid><description>&lt;p&gt;Binary Search 演算法是用於在一個有序array中搜尋一個值的演算法 - TC:O(log n)。相較於Linear Search(線性搜尋) - TC:O(n),其效率大大提高。&lt;/p&gt;</description></item><item><title>[筆記] KMP - Knuth-Morris-Pratt 演算法</title><link>http://localhost:1313/archives/note/note-kmp/</link><pubDate>Mon, 06 Mar 2023 12:32:40 +0800</pubDate><guid>http://localhost:1313/archives/note/note-kmp/</guid><description>&lt;p&gt;KMP(Knuth-Morris-Pratt) 算法是一個用於字符串匹配的一個算法，但確實有點抽象和複雜，因此打算寫一篇筆記來紀錄一下這個算法！&lt;br&gt;
-給定一個&lt;code&gt;text&lt;/code&gt;以及&lt;code&gt;pattern&lt;/code&gt;字符串，透過KMP 算法可以在&lt;code&gt;text&lt;/code&gt;中是否存在&lt;code&gt;pattern&lt;/code&gt;這個字符串。&lt;/p&gt;</description></item><item><title>[筆記] KMP - Knuth-Morris-Pratt 演算法</title><link>http://localhost:1313/techs/note/note-kmp/</link><pubDate>Mon, 06 Mar 2023 12:32:40 +0800</pubDate><guid>http://localhost:1313/techs/note/note-kmp/</guid><description>&lt;p&gt;KMP(Knuth-Morris-Pratt) 算法是一個用於字符串匹配的一個算法，但確實有點抽象和複雜，因此打算寫一篇筆記來紀錄一下這個算法！&lt;br&gt;
+&lt;/h2&gt;</description></item><item><title>[筆記] Binary Search 演算法</title><link>http://localhost:1313/archives/note/note-binarysearch/</link><pubDate>Thu, 09 Mar 2023 13:48:46 +0800</pubDate><guid>http://localhost:1313/archives/note/note-binarysearch/</guid><description>&lt;p&gt;Binary Search 演算法是用於在一個有序array中搜尋一個值的演算法 - TC:O(log n)。相較於Linear Search(線性搜尋) - TC:O(n),其效率大大提高。&lt;/p&gt;</description></item><item><title>[筆記] Binary Search 演算法</title><link>http://localhost:1313/techs/note/note-binarysearch/</link><pubDate>Thu, 09 Mar 2023 13:48:46 +0800</pubDate><guid>http://localhost:1313/techs/note/note-binarysearch/</guid><description>&lt;p&gt;Binary Search 演算法是用於在一個有序array中搜尋一個值的演算法 - TC:O(log n)。相較於Linear Search(線性搜尋) - TC:O(n),其效率大大提高。&lt;/p&gt;</description></item><item><title>[筆記] KMP - Knuth-Morris-Pratt 演算法</title><link>http://localhost:1313/archives/note/note-kmp/</link><pubDate>Mon, 06 Mar 2023 12:32:40 +0800</pubDate><guid>http://localhost:1313/archives/note/note-kmp/</guid><description>&lt;p&gt;KMP(Knuth-Morris-Pratt) 算法是一個用於字符串匹配的一個算法，但確實有點抽象和複雜，因此打算寫一篇筆記來紀錄一下這個算法！
+給定一個&lt;code&gt;text&lt;/code&gt;以及&lt;code&gt;pattern&lt;/code&gt;字符串，透過KMP 算法可以在&lt;code&gt;text&lt;/code&gt;中是否存在&lt;code&gt;pattern&lt;/code&gt;這個字符串。&lt;/p&gt;</description></item><item><title>[筆記] KMP - Knuth-Morris-Pratt 演算法</title><link>http://localhost:1313/techs/note/note-kmp/</link><pubDate>Mon, 06 Mar 2023 12:32:40 +0800</pubDate><guid>http://localhost:1313/techs/note/note-kmp/</guid><description>&lt;p&gt;KMP(Knuth-Morris-Pratt) 算法是一個用於字符串匹配的一個算法，但確實有點抽象和複雜，因此打算寫一篇筆記來紀錄一下這個算法！
 給定一個&lt;code&gt;text&lt;/code&gt;以及&lt;code&gt;pattern&lt;/code&gt;字符串，透過KMP 算法可以在&lt;code&gt;text&lt;/code&gt;中是否存在&lt;code&gt;pattern&lt;/code&gt;這個字符串。&lt;/p&gt;</description></item><item><title>[筆記]TrieTree(前綴樹/字典樹)</title><link>http://localhost:1313/archives/note/trietree/</link><pubDate>Tue, 21 Jun 2022 11:19:28 +0800</pubDate><guid>http://localhost:1313/archives/note/trietree/</guid><description>&lt;h1 id="introduction"&gt;Introduction
 &lt;a class="header-anchor" href="#introduction"&gt;&lt;/a&gt;
 &lt;/h1&gt;&lt;h2 id="什麼是trietree"&gt;什麼是TrieTree?
 &lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%aftrietree"&gt;&lt;/a&gt;
 &lt;/h2&gt;
  &lt;blockquote&gt;
- &lt;p&gt;Trie稱為前綴樹或字典樹,是有序樹的一種,Node的key通常為String類型。Trie Tree與Binary-Searching Tree不同的點是,Trie Tree的Key並不會直接保存在Node中,而是它在Tree中的位置所決定的。一個Node中的所有的childrens都有相同的Prefix(前綴)。假設有個Node的key 為&lt;code&gt;T&lt;/code&gt;,它的children將會是&lt;code&gt;Time&lt;/code&gt;, &lt;code&gt;Tim&lt;/code&gt;, &lt;code&gt;Test&lt;/code&gt;等,因為他們都會相同的Prefix(前綴)&lt;code&gt;T&lt;/code&gt;。&lt;/p&gt;</description></item><item><title>[筆記]TrieTree(前綴樹/字典樹)</title><link>http://localhost:1313/techs/note/trietree/</link><pubDate>Tue, 21 Jun 2022 11:19:28 +0800</pubDate><guid>http://localhost:1313/techs/note/trietree/</guid><description>&lt;h1 id="introduction"&gt;Introduction
+ &lt;p&gt;Trie稱為前綴樹或字典樹,是有序樹的一種,Node的key通常為String類型。Trie Tree與Binary-Searching Tree不同的點是,Trie Tree的Key並不會直接保存在Node中,而是它在Tree中的位置所決定的。一個Node中的所有的children都有相同的Prefix(前綴)。假設有個Node的key 為&lt;code&gt;T&lt;/code&gt;,它的children將會是&lt;code&gt;Time&lt;/code&gt;, &lt;code&gt;Tim&lt;/code&gt;, &lt;code&gt;Test&lt;/code&gt;等,因為他們都會相同的Prefix(前綴)&lt;code&gt;T&lt;/code&gt;。&lt;/p&gt;</description></item><item><title>[筆記]TrieTree(前綴樹/字典樹)</title><link>http://localhost:1313/techs/note/trietree/</link><pubDate>Tue, 21 Jun 2022 11:19:28 +0800</pubDate><guid>http://localhost:1313/techs/note/trietree/</guid><description>&lt;h1 id="introduction"&gt;Introduction
 &lt;a class="header-anchor" href="#introduction"&gt;&lt;/a&gt;
 &lt;/h1&gt;&lt;h2 id="什麼是trietree"&gt;什麼是TrieTree?
 &lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%aftrietree"&gt;&lt;/a&gt;
 &lt;/h2&gt;
  &lt;blockquote&gt;
- &lt;p&gt;Trie稱為前綴樹或字典樹,是有序樹的一種,Node的key通常為String類型。Trie Tree與Binary-Searching Tree不同的點是,Trie Tree的Key並不會直接保存在Node中,而是它在Tree中的位置所決定的。一個Node中的所有的childrens都有相同的Prefix(前綴)。假設有個Node的key 為&lt;code&gt;T&lt;/code&gt;,它的children將會是&lt;code&gt;Time&lt;/code&gt;, &lt;code&gt;Tim&lt;/code&gt;, &lt;code&gt;Test&lt;/code&gt;等,因為他們都會相同的Prefix(前綴)&lt;code&gt;T&lt;/code&gt;。&lt;/p&gt;</description></item><item><title>[筆記]Palindromic String(迴文字串)</title><link>http://localhost:1313/archives/note/palindromicstring/</link><pubDate>Thu, 16 Jun 2022 12:26:03 +0800</pubDate><guid>http://localhost:1313/archives/note/palindromicstring/</guid><description>&lt;h1 id="introduction"&gt;Introduction
+ &lt;p&gt;Trie稱為前綴樹或字典樹,是有序樹的一種,Node的key通常為String類型。Trie Tree與Binary-Searching Tree不同的點是,Trie Tree的Key並不會直接保存在Node中,而是它在Tree中的位置所決定的。一個Node中的所有的children都有相同的Prefix(前綴)。假設有個Node的key 為&lt;code&gt;T&lt;/code&gt;,它的children將會是&lt;code&gt;Time&lt;/code&gt;, &lt;code&gt;Tim&lt;/code&gt;, &lt;code&gt;Test&lt;/code&gt;等,因為他們都會相同的Prefix(前綴)&lt;code&gt;T&lt;/code&gt;。&lt;/p&gt;</description></item><item><title>[筆記]Palindromic String(迴文字串)</title><link>http://localhost:1313/archives/note/palindromicstring/</link><pubDate>Thu, 16 Jun 2022 12:26:03 +0800</pubDate><guid>http://localhost:1313/archives/note/palindromicstring/</guid><description>&lt;h1 id="introduction"&gt;Introduction
 &lt;a class="header-anchor" href="#introduction"&gt;&lt;/a&gt;
 &lt;/h1&gt;&lt;h2 id="什麼是palindromic-string-迴文字串"&gt;什麼是Palindromic String 迴文字串
 &lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%afpalindromic-string-%e8%bf%b4%e6%96%87%e5%ad%97%e4%b8%b2"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;所謂的Palindromic String(迴文字串) 就是以一個字元為中間，而它的左邊以及右邊的組成字元相同。&lt;br&gt;
-例子:&lt;br&gt;
-&lt;code&gt;abcdcba&lt;/code&gt; 以&lt;code&gt;d&lt;/code&gt;為中心的左跟右的字元一樣。&lt;br&gt;
-&lt;code&gt;cdc&lt;/code&gt;左跟右都為&lt;code&gt;c&lt;/code&gt;&lt;br&gt;
-&lt;code&gt;bcdcb&lt;/code&gt; 左跟右都為&lt;code&gt;b&lt;/code&gt;&lt;br&gt;
+&lt;/h2&gt;&lt;p&gt;所謂的Palindromic String(迴文字串) 就是以一個字元為中間，而它的左邊以及右邊的組成字元相同。
+例子:
+&lt;code&gt;abcdcba&lt;/code&gt; 以&lt;code&gt;d&lt;/code&gt;為中心的左跟右的字元一樣。
+&lt;code&gt;cdc&lt;/code&gt;左跟右都為&lt;code&gt;c&lt;/code&gt;
+&lt;code&gt;bcdcb&lt;/code&gt; 左跟右都為&lt;code&gt;b&lt;/code&gt;
 &lt;code&gt;abcdcba&lt;/code&gt; 左跟右都為&lt;code&gt;a&lt;/code&gt;&lt;/p&gt;</description></item><item><title>[筆記]Palindromic String(迴文字串)</title><link>http://localhost:1313/techs/note/palindromicstring/</link><pubDate>Thu, 16 Jun 2022 12:26:03 +0800</pubDate><guid>http://localhost:1313/techs/note/palindromicstring/</guid><description>&lt;h1 id="introduction"&gt;Introduction
 &lt;a class="header-anchor" href="#introduction"&gt;&lt;/a&gt;
 &lt;/h1&gt;&lt;h2 id="什麼是palindromic-string-迴文字串"&gt;什麼是Palindromic String 迴文字串
 &lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%afpalindromic-string-%e8%bf%b4%e6%96%87%e5%ad%97%e4%b8%b2"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;所謂的Palindromic String(迴文字串) 就是以一個字元為中間，而它的左邊以及右邊的組成字元相同。&lt;br&gt;
-例子:&lt;br&gt;
-&lt;code&gt;abcdcba&lt;/code&gt; 以&lt;code&gt;d&lt;/code&gt;為中心的左跟右的字元一樣。&lt;br&gt;
-&lt;code&gt;cdc&lt;/code&gt;左跟右都為&lt;code&gt;c&lt;/code&gt;&lt;br&gt;
-&lt;code&gt;bcdcb&lt;/code&gt; 左跟右都為&lt;code&gt;b&lt;/code&gt;&lt;br&gt;
+&lt;/h2&gt;&lt;p&gt;所謂的Palindromic String(迴文字串) 就是以一個字元為中間，而它的左邊以及右邊的組成字元相同。
+例子:
+&lt;code&gt;abcdcba&lt;/code&gt; 以&lt;code&gt;d&lt;/code&gt;為中心的左跟右的字元一樣。
+&lt;code&gt;cdc&lt;/code&gt;左跟右都為&lt;code&gt;c&lt;/code&gt;
+&lt;code&gt;bcdcb&lt;/code&gt; 左跟右都為&lt;code&gt;b&lt;/code&gt;
 &lt;code&gt;abcdcba&lt;/code&gt; 左跟右都為&lt;code&gt;a&lt;/code&gt;&lt;/p&gt;</description></item><item><title>[Note]Simple RateLimiter Example Based on IP</title><link>http://localhost:1313/archives/note/simple-ratelimiter-example-based-on-ip/</link><pubDate>Wed, 30 Mar 2022 16:05:57 +0800</pubDate><guid>http://localhost:1313/archives/note/simple-ratelimiter-example-based-on-ip/</guid><description>&lt;h3 id="基於gin實作rate-limiter"&gt;基於Gin實作Rate Limiter
 &lt;a class="header-anchor" href="#%e5%9f%ba%e6%96%bcgin%e5%af%a6%e4%bd%9crate-limiter"&gt;&lt;/a&gt;
 &lt;/h3&gt;&lt;p&gt;假設我們有2個APIs,而每個API都需要消耗1個&lt;code&gt;Tokens&lt;/code&gt;&lt;/p&gt;
@@ -138,13 +138,13 @@
  &lt;blockquote&gt;
  &lt;p&gt;簡單來說就是運用Token Bucket的系統會以一個設定的速率往桶子(Bucket)裡面丟令牌(Token)。如果請求(Request)需要被處理時，就必需得Bucket裡的Token。當桶子裡面的沒有Token可以分配/獲取時，也就是說Bucket現在是空的(Token已經被其他令牌拿完了)，系統則會拒絕這個請求的服務。&lt;/p&gt;</description></item><item><title>[Note]What Is JWT(Json Web Token)-EN</title><link>http://localhost:1313/archives/note/jwt-note/</link><pubDate>Thu, 24 Mar 2022 13:52:49 +0800</pubDate><guid>http://localhost:1313/archives/note/jwt-note/</guid><description>&lt;h2 id="what-is-jwtjson-web-token"&gt;What is JWT(Json Web Token)?
 &lt;a class="header-anchor" href="#what-is-jwtjson-web-token"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;The full name of JWT is Json Web Token. Acccording to the definition, JWT is a proposed Internet standard for creating data with optinal signature and/or opntional encryption whose payload holds JSON that asserts some number of clamis.&lt;br&gt;
+&lt;/h2&gt;&lt;p&gt;The full name of JWT is Json Web Token. According to the definition, JWT is a proposed Internet standard for creating data with optional signature and/or opntional encryption whose payload holds JSON that asserts some number of clamis.
 It&amp;rsquo;s used for &lt;em&gt;identity authentication&lt;/em&gt; between client and the server that allows accessing resources in the server.&lt;/p&gt;
 &lt;h2 id="the-structure-of-jwt"&gt;The Structure of JWT
 &lt;a class="header-anchor" href="#the-structure-of-jwt"&gt;&lt;/a&gt;
 &lt;/h2&gt;&lt;p&gt;JWT consists of three parts including:&lt;/p&gt;</description></item><item><title>[Note]What Is JWT(Json Web Token)-EN</title><link>http://localhost:1313/techs/note/jwt-note/</link><pubDate>Thu, 24 Mar 2022 13:52:49 +0800</pubDate><guid>http://localhost:1313/techs/note/jwt-note/</guid><description>&lt;h2 id="what-is-jwtjson-web-token"&gt;What is JWT(Json Web Token)?
 &lt;a class="header-anchor" href="#what-is-jwtjson-web-token"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;The full name of JWT is Json Web Token. Acccording to the definition, JWT is a proposed Internet standard for creating data with optinal signature and/or opntional encryption whose payload holds JSON that asserts some number of clamis.&lt;br&gt;
+&lt;/h2&gt;&lt;p&gt;The full name of JWT is Json Web Token. According to the definition, JWT is a proposed Internet standard for creating data with optional signature and/or opntional encryption whose payload holds JSON that asserts some number of clamis.
 It&amp;rsquo;s used for &lt;em&gt;identity authentication&lt;/em&gt; between client and the server that allows accessing resources in the server.&lt;/p&gt;
 &lt;h2 id="the-structure-of-jwt"&gt;The Structure of JWT
 &lt;a class="header-anchor" href="#the-structure-of-jwt"&gt;&lt;/a&gt;

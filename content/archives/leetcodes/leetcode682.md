@@ -64,18 +64,18 @@ class Solution {
 public:
     int calPoints(vector<string>& ops) {
         //ops : + D C x
-        // vector<int> s; //or using a stack 
+        // vector<int> s; //or using a stack
         stack<int> sk; //O(n)
         //O(n)
         for(auto i : ops) {
             if(i == "+"){
-                
+
                 int a = sk.top();
                 sk.pop();
-                
+
                 int b = sk.top();
                 sk.push(a);
-                
+
                 sk.push(a+b);
             }else if(i == "D"){
                 sk.push(sk.top() * 2);
@@ -85,16 +85,14 @@ public:
                 sk.push(stoi(i));
             }
         }
-        
+
         int res = 0;
-        
+
         //O(n)
         while(!sk.empty()){
             res += sk.top();sk.pop();
-        } 
+        }
         return res;
     }
 };
 ```
-
-

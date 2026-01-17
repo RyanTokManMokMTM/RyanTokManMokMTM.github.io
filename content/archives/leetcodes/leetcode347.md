@@ -43,7 +43,7 @@ public:
         vector<int> res;
         unordered_map<int,int> map;
         priority_queue<pair<int,int>> q;
-        for(auto i : nums) map[i]++; //counter numbers 
+        for(auto i : nums) map[i]++; //counter numbers
         for(auto it : map) q.push({it.second,it.first}); //according to the second for priority
         while(k-- > 0) {
             res.push_back(q.top().second);
@@ -53,4 +53,3 @@ public:
     }
 };
 ```
-

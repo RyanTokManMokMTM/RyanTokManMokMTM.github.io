@@ -15,7 +15,7 @@ author: jackson.tmm
 > 定義:建立一個接口,讓子類自己決定實現哪一個Factory,重點在於工廠，透過工廠的Static method 進行生成的Object
 
 ### 簡單例子
-*注: 以下程式單純用於解釋，並不能實際執行*  
+*注: 以下程式單純用於解釋，並不能實際執行*
 ```
 透過Factory 類的Static 方法調用方法，傳入參數生成相關的Product
 ```
@@ -74,5 +74,5 @@ int main(){
   * 如果有新的Product 需要生成，就必修要修改Factory類
 
 ---
-參考資料:  
+參考資料:
 [史上最全设计模式导学目录（完整版）](https://blog.csdn.net/LoveLion/article/details/17517213)

@@ -46,11 +46,11 @@ public:
         if(changed.size() % 2 != 0) return {}; //must be an even size
         vector<int> res;
         int n = changed.size();
-        sort(changed.begin(),changed.end()); 
+        sort(changed.begin(),changed.end());
         unordered_map<int,int> m;
         for(auto num : changed) m[num]++; //number frequency
         for(auto num : changed){
-           
+
             if(m.count(num) && m[num] > 0){ //num is exist?
                 m[num]--;
                 if(!m.count(num * 2) || m[num*2] == 0){ //num * 2 is not exist or num*2 is empty
@@ -65,5 +65,3 @@ public:
     }
 };
 ```
-
-

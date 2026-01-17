@@ -6,15 +6,15 @@ description: |
   電影社群應用程式，整合OTT資源搜尋與社群討論
   解決電影資源分散問題，提供合法OTT平台連結
   技術棧：SwiftUI + Go-Zero + MySQL + AWS + K8S
-tags: 
+tags:
     - ios-app
     - app-dev
-categories: 
+categories:
     - project
 author: jackson.tmm
 ---
 
-[**Movie App - Frontend**](https://github.com/RyanTokManMokMTM/MovieAppSwiftUI.git)   
+[**Movie App - Frontend**](https://github.com/RyanTokManMokMTM/MovieAppSwiftUI.git)
 [**Movie App - Backend**](https://github.com/RyanTokManMokMTM/movie-server)
 
 ![client](/imgs-custom/ott_app/movie-app/AppImg.png)
@@ -52,7 +52,7 @@ author: jackson.tmm
 ### App 測試影片
 
 #### 階段性測試
-<video src="/videos/ott-app.mov" controls="controls" width="500" height="300"></video> 
+<video src="/videos/ott-app.mov" controls="controls" width="500" high="300"></video>
 
 #### 最新版本
-<video src="/videos/final-version.mp4" controls="controls" width="500" height="300"></video> 
+<video src="/videos/final-version.mp4" controls="controls" width="500" high="300"></video>

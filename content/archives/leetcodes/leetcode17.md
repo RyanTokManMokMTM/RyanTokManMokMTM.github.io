@@ -54,13 +54,13 @@ public:
         solution(res,0,digits,"");
         return res;
     }
-    
+
     void solution(vector<string>& res,int index,string &digits,string phone){
         if(index == digits.length()){
             res.push_back(phone);
             return;
         }
-        
+
         auto numList = temp[digits[index]];
         for(int i = 0;i<numList.length();i++){
             phone += numList[i];
@@ -70,5 +70,3 @@ public:
     }
 };
 ```
-
-

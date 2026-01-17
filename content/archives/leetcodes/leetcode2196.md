@@ -34,9 +34,9 @@ The resulting binary tree is shown in the diagram.
 ```
 
 ## How can we solve this problem?
-這是給定一個2維的Array,根據`Array[i]`建構一棵`Binary tree`。主要得問題是哪一個是成為**Tree root**呢?要怎麼知道有哪些`Child Node`呢?  
-* 我們透過`Map`來幫助我們記錄所有**Child Node**,以便之後的建構  
-* 因每個**Child Node**都必須有一個**Parent Node**,也就是說在`Map`中能找到的**Node**必定是有**Parent**的，當找到1個**Node**沒有在`Map`中，也就代表著該**Node**必定是整棵`Binary Tree`的`Head`。  
+這是給定一個2維的Array,根據`Array[i]`建構一棵`Binary tree`。主要得問題是哪一個是成為**Tree root**呢?要怎麼知道有哪些`Child Node`呢?
+* 我們透過`Map`來幫助我們記錄所有**Child Node**,以便之後的建構
+* 因每個**Child Node**都必須有一個**Parent Node**,也就是說在`Map`中能找到的**Node**必定是有**Parent**的，當找到1個**Node**沒有在`Map`中，也就代表著該**Node**必定是整棵`Binary Tree`的`Head`。
 根據`1`跟`2`的邏輯,並使用一個Loop來建構`Binary Tree`即可。
 
 #### Solution:
@@ -61,7 +61,7 @@ public:
         //creating all node ->child node
         for(int i = 0;i<des.size();i++)
             m[des[i][1]] = new TreeNode(des[i][1]); // all child node,except head node
-        
+
         for(int i = 0;i<des.size();i++){
             //getting root node from map
             if(m.find(des[i][0]) == m.end()){ //getting head node
@@ -72,12 +72,10 @@ public:
             if(des[i][2]){
                 m[des[i][0]]->left = m.find(des[i][1]) == m.end() ? new TreeNode(des[i][1]) : m[des[i][1]];
             }else {
-                m[des[i][0]]->right = m.find(des[i][1]) == m.end() ? new TreeNode(des[i][1]) : m[des[i][1]];;   
+                m[des[i][0]]->right = m.find(des[i][1]) == m.end() ? new TreeNode(des[i][1]) : m[des[i][1]];;
             }
         }
         return head;
     }
 };
 ```
-
-

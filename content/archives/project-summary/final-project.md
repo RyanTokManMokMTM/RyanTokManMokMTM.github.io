@@ -6,10 +6,10 @@ description: |
   長庚大學畢業專題：OTT電影推薦系統
   整合電影資訊與社群功能，提供個人化推薦
   技術棧：SwiftUI + Vapor + PostgreSQL
-tags: 
+tags:
     - ios-app
     - app-dev
-categories: 
+categories:
     - project
 author: jackson.tmm
 ---
@@ -27,10 +27,10 @@ Project have been changed/updated
 * Vapor Swift Backend framework
 #### Database:
 
-* PostgresSQL Database
+* postgresql Database
 
 ### Demo Video
-<video src="/videos/final.MP4" controls="controls" width="500" height="300"></video>
+<video src="/videos/final.MP4" controls="controls" width="500" high="300"></video>
 
 <!-- ### Updated Video
-<video src="/videos/ott-app.mov" controls="controls" width="500" height="300"></video> -->
+<video src="/videos/ott-app.mov" controls="controls" width="500" high="300"></video> -->

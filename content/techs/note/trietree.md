@@ -9,14 +9,14 @@ categories:
 ---
 
 # Introduction
-## 什麼是TrieTree?  
-> Trie稱為前綴樹或字典樹,是有序樹的一種,Node的key通常為String類型。Trie Tree與Binary-Searching Tree不同的點是,Trie Tree的Key並不會直接保存在Node中,而是它在Tree中的位置所決定的。一個Node中的所有的childrens都有相同的Prefix(前綴)。假設有個Node的key 為`T`,它的children將會是`Time`, `Tim`, `Test`等,因為他們都會相同的Prefix(前綴)`T`。
+## 什麼是TrieTree?
+> Trie稱為前綴樹或字典樹,是有序樹的一種,Node的key通常為String類型。Trie Tree與Binary-Searching Tree不同的點是,Trie Tree的Key並不會直接保存在Node中,而是它在Tree中的位置所決定的。一個Node中的所有的children都有相同的Prefix(前綴)。假設有個Node的key 為`T`,它的children將會是`Time`, `Tim`, `Test`等,因為他們都會相同的Prefix(前綴)`T`。
 
 ## Trie Tree 的應用
 * 字符前綴匹配 - 網頁URL,搜尋等
     * 搜索關鍵字時,返回前綴最相似的可能結果
 
-## Trie Tree 結構圖  
+## Trie Tree 結構圖
 ![TrieTree](/imgs-custom/note/trieTree.png)
 
 # Trie Tree Template
@@ -25,7 +25,7 @@ class TrieNode{
 public:
     TrieNode(){
         //suppose we are considering a string consist with a-z
-        //at most 26 childrens for a node
+        //at most 26 children for a node
         child = vector<TrieNode*>(26);
     }
     vector<TrieNode*> child; //
@@ -45,5 +45,5 @@ public:
 };
 ```
 
-#### 參考資料  
+#### 參考資料
 https://zh.wikipedia.org/wiki/Trie

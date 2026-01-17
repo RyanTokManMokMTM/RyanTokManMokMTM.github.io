@@ -40,20 +40,20 @@ Explanation: Play the tokens in this order to get a score of 2:
 ```
 
 ## How can we solve this problem?
-這題的解題思路是這樣透過貪心(`gready`),也就是說我能用多少`power`換分就用多少，如果不夠了我就用分換`power`。換句話說，就是先從最低的`token`開始換,直到足夠的`power`後，就以分來換取最高的`power`,直到不符合條件未知或者沒有任何`token`可以買為止。  
+這題的解題思路是這樣透過貪心(`gready`),也就是說我能用多少`power`換分就用多少，如果不夠了我就用分換`power`。換句話說，就是先從最低的`token`開始換,直到足夠的`power`後，就以分來換取最高的`power`,直到不符合條件未知或者沒有任何`token`可以買為止。
 *因為要知道當前最大和最小，所以要先排序*
 #### Solution:
 ```c++
 class Solution {
 public:
     int bagOfTokensScore(vector<int>& tokens, int power) {
-        //maxinum 
+        //maximum
         if(tokens.empty())return 0;
         int score = 0;
         sort(tokens.begin(),tokens.end());
         /*
-        strategy: get the mininum token
-        if not enough -> get maxinum token
+        strategy: get the minimum token
+        if not enough -> get maximum token
         if it has enough power -> get this token
         */
         int i = 0;
@@ -69,12 +69,9 @@ public:
                 power += tokens[j--];
             } else break;
         }
-        
+
         return res;
     }
 };
 
 ```
-
-
-

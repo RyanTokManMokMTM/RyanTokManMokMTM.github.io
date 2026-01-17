@@ -10,12 +10,12 @@ categories:
 ---
 # Introduction
 ## 什麼是Palindromic String 迴文字串
-所謂的Palindromic String(迴文字串) 就是以一個字元為中間，而它的左邊以及右邊的組成字元相同。  
-例子:  
-`abcdcba` 以`d`為中心的左跟右的字元一樣。   
-`cdc`左跟右都為`c`  
-`bcdcb` 左跟右都為`b`  
-`abcdcba` 左跟右都為`a`  
+所謂的Palindromic String(迴文字串) 就是以一個字元為中間，而它的左邊以及右邊的組成字元相同。
+例子:
+`abcdcba` 以`d`為中心的左跟右的字元一樣。
+`cdc`左跟右都為`c`
+`bcdcb` 左跟右都為`b`
+`abcdcba` 左跟右都為`a`
 
 ## 要怎麼知道String是否為什麼是palindrome(迴文)
 要知道String是否palindrome，我們先得知道Palindromic的規則:

@@ -14,10 +14,10 @@ author: jackson.tmm
 > 定義:建立一個接口,讓子類自己決定實現哪一個Factory,其**重點是繼承了Simple Factory Patterns的優點,同時解決了它的問題**
 
 ### 簡單例子
-*注: 以下程式單純用於解釋，並不能實際執行*  
+*注: 以下程式單純用於解釋，並不能實際執行*
 ```
-可透過子類繼承Factory的抽象類自主決定生產什麼樣的Product。  
-生產的Product在透過里氏替換原則(Lisko Subsititution princeple)替換成繼承與Logger的子類，即可換成的需要的Logger。
+可透過子類繼承Factory的抽象類自主決定生產什麼樣的Product。
+生產的Product在透過里氏替換原則(Lisko Subsititution principle)替換成繼承與Logger的子類，即可換成的需要的Logger。
 ```
 ```c++
 class Logger{
@@ -29,7 +29,7 @@ class Logger{
 class DatabaseLogger: public Logger{
     pubic:
     	void wirteLog(){
-            //Wirte DB log message
+            //Write DB log message
         }
 }
 
@@ -40,7 +40,7 @@ class FileLogger : public Logger{
         }
 }
 
-//Abstruct Factory
+//Abstract Factory
 class Factory{
     public:
     	virtual Logger* createLogger() = 0;
@@ -50,7 +50,7 @@ class Factory{
 class FileLoggerFactory : public Factory{
     public:
     	Logger* createLogger(){
-            //init file logger 
+            //init file logger
             //TODO init etc
 
             //create file logger
@@ -83,7 +83,7 @@ int main(){
     //只需更新xml中的設置，在代碼中新增新的Product 以及新增的Factory 並重新編譯便可
 
     //除了默認的設置方法外，還想透過傳入String的方法來自定義設計，例如連接要DB，文件的路徑等等
-    //可以透過Override Abstruct class 的func來進行設置
+    //可以透過Override Abstract class 的func來進行設置
     /*
     	class Factory{
             public:
@@ -106,5 +106,5 @@ int main(){
 * 為了擴展性,加入了抽象類，Client都使用Abstract class 進行編程，增加了系統的抽象性和理解難度
 
 ---
-參考資料:  
+參考資料:
 [史上最全设计模式导学目录（完整版）](https://blog.csdn.net/LoveLion/article/details/17517213)

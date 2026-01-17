@@ -3,16 +3,16 @@ title: "[開發者日記] 聊天通訊APP(二) - Demo"
 date: 2023-04-24T12:24:38+08:00
 draft: false
 categories:
-    - side-project 
-tags: 
+    - side-project
+tags:
     - chat-app
 ---
 
-這篇文章主要是展示一下整個App的Demo，廢話不多說，先上視頻:  
-<video src="/videos/chat-app/full-demo-1.mp4" controls="controls" width="500" height="300"></video> 
+這篇文章主要是展示一下整個App的Demo，廢話不多說，先上視頻:
+<video src="/videos/chat-app/full-demo-1.mp4" controls="controls" width="500" high="300"></video>
 
 ### Demo說明
-這個App的詳細介紹在[[開發者日記] 聊天通訊APP(一)](/achievement/chat-app-init)中已經有基本的介紹，這裡就不作過多的介紹了。  
+這個App的詳細介紹在[[開發者日記] 聊天通訊APP(一)](/achievement/chat-app-init)中已經有基本的介紹，這裡就不作過多的介紹了。
 這裡主要是說明一下以上Demo中所展示的內容：
 * 用戶登入和註冊
 * 用戶資訊修改，包括上傳Avatar, Cover, 修改Status Message等
@@ -27,5 +27,5 @@ tags:
 * 下拉刷新更新好友動態
 * 給動態留言，並透過socket發送給特定之用戶
 
-[Backend Github](https://github.com/RyanTokManMokMTM/chat-app-server)  
+[Backend Github](https://github.com/RyanTokManMokMTM/chat-app-server)
 [IOS Client Github](https://github.com/RyanTokManMokMTM/swiftui-chat-app)

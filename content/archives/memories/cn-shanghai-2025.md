@@ -38,7 +38,7 @@ tags:
 # Absolute link for visit
 #url: "cn-shanghai-2025.html"
 # 开启文章置顶，数字越小越靠前
-# Sticky post set-top in home page and the smaller nubmer will more forward.
+# Sticky post set-top in home page and the smaller number will more forward.
 #weight: 1
 # 开启数学公式渲染，可选值： mathjax, katex
 # Support Math Formulas render, options: mathjax, katex
@@ -49,5 +49,5 @@ tags:
 ---
 
 #### 享受快樂的時光❤️❤️❤️❤️
-![trip-view](/imgs-custom/trips/2025/shanghai/trip-food.png)
+![trip-food](/imgs-custom/trips/2025/shanghai/trip-food.png)
 ![trip-view](/imgs-custom/trips/2025/shanghai/trip-view.png)

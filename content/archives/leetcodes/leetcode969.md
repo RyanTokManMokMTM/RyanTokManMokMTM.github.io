@@ -25,7 +25,7 @@ example
 ```
 Input: arr = [3,2,4,1]
 Output: [4,2,4,3]
-Explanation: 
+Explanation:
 We perform 4 pancake flips, with k values 4, 2, 4, and 3.
 Starting state: arr = [3, 2, 4, 1]
 After 1st flip (k = 4): arr = [1, 4, 2, 3]
@@ -41,7 +41,7 @@ Note that other answers, such as [3, 3], would also be accepted.
 ```
 
 ## How can we solve this problem?
-這題我我們要關注的點是如何將當前數字範圍(`[0,n)`)中最大的元素移動到`array`的最後。從上述例子中，我們可以觀察到:  
+這題我我們要關注的點是如何將當前數字範圍(`[0,n)`)中最大的元素移動到`array`的最後。從上述例子中，我們可以觀察到:
 * 翻轉[0,最大值的Index] -> 最大值就會被移動到最前面
 * 翻轉[0,n) -> 最大值就會被移動的最後面
 我們只需要重複以上步驟，每次做完就代表著[n-i,n-1]的這段範圍是已經被排序了。所以，每次做完只關注`n-i-i`即可(就是當前位置的前面的所有**未排序**元素`[x,x,x,|y(n-i),y,y(n-1)]`)。
@@ -56,65 +56,65 @@ public:
         //move the large element to the  front then flip n-1
         [4,2,3,1] 4(3)
         [1,3,2,4] n 4
-        
+
         [3,1,2,4] 3(2)
         [2,1,3,4] n-1 3
         [1,2,3,4] 1 ,3 2 ,4
         */
-        
+
         // we need to push the large number to the back
-        // so we need to find out the maxinum number in [0,n]
-        // then reverse [0,maxinum index] and then reverse whole list to make the large number at the end of the list(n)
-        
+        // so we need to find out the maximum number in [0,n]
+        // then reverse [0,maximum index] and then reverse whole list to make the large number at the end of the list(n)
+
         for(auto it = arr.end(); it != arr.begin(); it--){
             auto maxVal = max_element(arr.begin(),it);
-            
+
             //where is this element in the list
             if(distance(maxVal,it) > 1){
-                //if current val is not the maxinum
+                //if current val is not the maximum
                 if(maxVal != arr.begin()){ //if current value is not the first one -> no need to put it at the front of the array
                     reverse(arr.begin(),maxVal + 1);
                     res.push_back(distance(arr.begin(),maxVal) + 1);
                 }
-                
-                //move the maxinum value to the back
+
+                //move the maximum value to the back
                 reverse(arr.begin(),it);
-                res.push_back(distance(arr.begin(),it)); //don't filp sorted element at the end of the array
+                res.push_back(distance(arr.begin(),it)); //don't flip sorted element at the end of the array
             }
         }
-        
-        // filp(arr,arr.size());
+
+        // flip(arr,arr.size());
         return res;
     }
-    
-    
-    
-//     void filp(vector<int>& arr,int n){
+
+
+
+//     void flip(vector<int>& arr,int n){
 //         if(n == 0) return;
-        
-//         //find the maximun
+
+//         //find the maximum
 //         int max = 0;
 //         int idx = 0;
 //         for(int i = 0;i<n;i++){
 //             if(arr[i] > max){
 //                 max = arr[i];
-//                 idx = i; 
+//                 idx = i;
 //             }
 //         }
-        
+
 //         // move the max value to the front -> flip idx + 1
 //         res.push_back(idx + 1);
 //         //swap the value
 //         swapVal(arr,0,idx);
-        
+
 //         //move the large element to the end
 //         swapVal(arr,0,n-1);
 //         res.push_back(n);
-        
+
 //         //need doing this approach til sorted
-//         filp(arr,n-1);
+//         flip(arr,n-1);
 //     }
-    
+
 //     void swapVal(vector<int>& arr,int i,int j){
 //         while(i < j){
 //             int temp = arr[i];
@@ -126,5 +126,3 @@ public:
 //     }
 };
 ```
-
-

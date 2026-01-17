@@ -7,19 +7,19 @@ url = "about.html"
 type = "about"
 +++
 
-### Introduction  
-你好~ 歡迎來到我的網站!  
-我是Jackson.tmm, 是一個從香港來到台灣讀大學的四年級學生。~~目前就讀於**長庚大學-資訊工程學系(Computer Science And Information Engineering)**~~。目前已經畢業了。我目前主要是研究學習**後端開發**的技術。  
+### Introduction
+你好~ 歡迎來到我的網站!
+我是Jackson.tmm, 是一個從香港來到台灣讀大學的四年級學生。~~目前就讀於**長庚大學-資訊工程學系(Computer Science And Information Engineering)**~~。目前已經畢業了。我目前主要是研究學習**後端開發**的技術。
 
 [Resume(EN)](/cv/2024/MOKTOKMAN_Resume_version1.pdf)
 <img src="https://leetcard.jacoblin.cool/_jacksontmm?theme=nord&font=Quicksand&ext=heatmap"/>
-<!-- 
+<!--
 ### More About me
-我超喜歡TFBoy的，是**TFBoys的忠實粉絲**,特別是易烊千璽(Jackson yee)！！！我叫Jackson也是這個原因，想跟千璽一樣強！哈哈哈。從他們出道開始就開始喜歡他們了(應該快9年了)。  
+我超喜歡TFBoy的，是**TFBoys的忠實粉絲**,特別是易烊千璽(Jackson yee)！！！我叫Jackson也是這個原因，想跟千璽一樣強！哈哈哈。從他們出道開始就開始喜歡他們了(應該快9年了)。
 除了寫程式以外，我也**喜歡設計跟音樂**！你沒看錯，我一個後端喜歡設計，哈哈哈哈(**不要問我為什麼不選前端，哈哈哈**)
 
 
-### Why i choose Computer Science? 
+### Why i choose Computer Science?
 要從我小時候獲得了一台單核心CPU,512MB RAM,還沒有DisplayCard的電腦開始說起(雖然很爛)。哪個時候因為喜歡玩遊戲，所以,對於遊戲製作這件事是哪時候的夢想。直到了中學(大概是國一或國二)，因某某網絡遊戲關服，但卻對此心有不甘。所以，便與網絡上認識的小夥伴一起研究放出來的源代碼(雖然看不太懂)，這也是我接觸程式的開始。到了高中我便一心想要往Computer Science方向前進，也因此選擇了Information Computer Technology(ICT)科目。雖然我其他科目的成績沒有很好，但是在ICT的這門科中，連續拿了3年的第一名。但是因為高考失利，但又希望自己能學習到CS相關的科目，因此來到了台灣就讀CS科系。
 
 ### A special and meaningful experience during my university
@@ -41,10 +41,10 @@ type = "about"
 ![shield](/imgs-custom/shield.jpg)
 ![shield2](/imgs-custom/shield2.jpg)
 
-**2020年 - 送給自己20歲的生日禮物的一顆排球模型** 
+**2020年 - 送給自己20歲的生日禮物的一顆排球模型**
 ![volleyball](/imgs-custom/20-birth.jpg)
 
-**2020年 - 香港霓虹燈** 
+**2020年 - 香港霓虹燈**
 ![volleyball](/imgs-custom/hongkong-light.jpg)
 
 **2020年 - 模擬水還是很好玩的(渲染了12小時 (◑‿◐) )**
@@ -78,7 +78,7 @@ type = "about"
 * 搞設計，寫程式
 * 跟朋友分享、交流
 * 特別喜歡宇宙/人類起源相關的奇怪知識
- 
+
 ### Current Plan
 * 學更多有關後端開發，系統設計相關的技術
 * 學好英文(看電影不要看字幕，能更外國人交流的程度)
@@ -87,5 +87,4 @@ type = "about"
 
 ### Contact Me:
 * [Email](RyanTokManMokMTM@hotmail.com)
-* [@Jacksontmm]() in Telegram  
-
+* [@Jacksontmm]() in Telegram

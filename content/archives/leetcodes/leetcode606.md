@@ -30,10 +30,10 @@ Explanation: Almost the same as the first example, except we cannot omit the fir
 ```
 
 ## How can we solve this problem?
-這題就是要讓我們講以`string`的方式輸出**Binary Tree**。只要注意他的規則就可以解決這題。  
+這題就是要讓我們講以`string`的方式輸出**Binary Tree**。只要注意他的規則就可以解決這題。
 * **node**的*children*都會被`()`包裹住
-* **node**如果有`left-child`沒有`right-child`可以無視`right-child`的`()`  
-* **node**如果有`right-child`沒有`left-child`,`left-child`的位置必須包含一個`()`  
+* **node**如果有`left-child`沒有`right-child`可以無視`right-child`的`()`
+* **node**如果有`right-child`沒有`left-child`,`left-child`的位置必須包含一個`()`
 根據以上這幾條輸出規則，透過**postorder traversal**就可以解決。
 > postorder traversal : traverse Left-child -> Right-child -> self node
 
@@ -57,20 +57,20 @@ public:
         solution(root,res);
         return res;
     }
-    
+
     //Solution A
     string constructStr(TreeNode* root){
         if(!root) return "";
         string cur = to_string(root->val);
-        
+
         if(root->left)  cur += '(' + tree2str(root->left) +')';
         else if(root->right)  cur += "()"; //for no left child but right child case
-        
+
         if(root->right) cur += '(' + tree2str(root->right) +')';
-        
+
         return cur;
     }
-    
+
 
     //Solution B
     void solution(TreeNode* root,string &res){
@@ -80,7 +80,7 @@ public:
             res+= "(";
             solution(root->left,res);
             res+= ")";
-            
+
             if(root->right){
                 res+= "(";
                 solution(root->right,res);
@@ -91,5 +91,3 @@ public:
     }
 };
 ```
-
-

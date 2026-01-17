@@ -41,8 +41,8 @@ Explanation: By calling next repeatedly until hasNext returns false, the order o
 ```
 
 ## How can we solve this problem?
-這一題就是一題設計的題目,可以想象成是一個`FileSystem`，裡面可能存的是文件(`Integer`)或者是文件夾(`List`)。因此，我們可以發現他就是一顆`Tree`。所以，我們只要從左到右拿到`Integer`,並順序輸出即可。  
-如圖:  
+這一題就是一題設計的題目,可以想象成是一個`FileSystem`，裡面可能存的是文件(`Integer`)或者是文件夾(`List`)。因此，我們可以發現他就是一顆`Tree`。所以，我們只要從左到右拿到`Integer`,並順序輸出即可。
+如圖:
 ![helper](/imgs-custom/leetcodesHelper/341-helper.png)
 
 #### Solution(Recursion):
@@ -68,12 +68,12 @@ Explanation: By calling next repeatedly until hasNext returns false, the order o
 
 //calling hasNext -> next
 class NestedIterator {
-    vector<int> ans;
+    vector<int> and;
     // vector<NestedInteger> list;
     int cur = 0;
     void getValue(vector<NestedInteger>& data){
         for(int i = 0;i<data.size();i++){
-            if(data[i].isInteger()) ans.push_back(data[i].getInteger());
+            if(data[i].isInteger()) and.push_back(data[i].getInteger());
             else getValue(data[i].getList());
         }
     }
@@ -81,13 +81,13 @@ public:
     NestedIterator(vector<NestedInteger> &nestedList) {
         getValue(nestedList);
     }
-    
+
     int next() {
-        return ans[cur++];
+        return and[cur++];
     }
-    
+
     bool hasNext() {
-        return cur < ans.size() ? true:false;
+        return cur < and.size() ? true:false;
     }
 };
 
@@ -121,13 +121,13 @@ public:
 
 //calling hasNext -> next
 class NestedIterator {
-    // vector<int> ans;
+    // vector<int> and;
     vector<NestedInteger> list;
 public:
     NestedIterator(vector<NestedInteger> &nestedList) {
         list = nestedList;
     }
-    
+
     int next() {
         //here we always return the first one
         // cout << storage.size() << endl;
@@ -136,24 +136,24 @@ public:
         storage.erase(storage.begin());
         return res;
     }
-    
+
     bool hasNext() {
         //we check our storage here
         //if the first elements is not a integer ,we try to get the interget from the list and append to our storage
-        
+
         while(!storage.empty() && !storage.front().isInteger()){
 
             //get the first one from the storage
             vector<NestedInteger> data = storage.front().getList();
             storage.erase(storage.begin());
-            
+
             //append to the front of the storage that retrieved from the list
             for(int i = data.size()-1;i>=0;i--)
                 storage.insert(storage.begin(),data[i]);
         }
         // if(storage.front().isInteger()) cout << storage.front().getInteger();
 
-        
+
         return !storage.empty();
     }
 };
@@ -164,5 +164,3 @@ public:
  * while (i.hasNext()) cout << i.next();
  */
 ```
-
-

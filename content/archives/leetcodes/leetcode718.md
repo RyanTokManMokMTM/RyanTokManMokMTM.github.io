@@ -34,13 +34,13 @@ public:
         /*
         [0,1,1,1,1]
         [1,0,1,0,1]
-        
+
         we need to know where
         the max length between num 1 and num 2
         suppose i = 0,j = 0
         dp[0][0] = the longest length of subarray in num2[i:n-1]num2[j:m-1]
-              
-        
+
+
         */
         int n = nums1.size();
         int m = nums2.size();
@@ -52,14 +52,12 @@ public:
                     dp[i][j] = 1 + dp[i-1][j-1];
                 }
                  res = max(dp[i][j],res);
-               
+
             }
         }
-        
+
         return res;
     }
-        
+
 };
 ```
-
-

@@ -1,0 +1,19 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+        files: ^content/
+      - id: end-of-file-fixer
+        files: ^content/
+      - id: check-yaml
+        files: ^content/
+      - id: check-added-large-files
+        files: ^content/
+
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.3.0
+    hooks:
+      - id: codespell
+        args: [--write-changes]
+        files: ^content/

@@ -3,8 +3,8 @@ title: "[Note]Token Bucket algorithm introduction and play with golang rate Limi
 date: 2022-03-29T18:33:07+08:00
 draft: false
 toc: false
-description: "Learning about Token Bucket algorithm and using golang rate package for implementating the limiter"
-tags: 
+description: "Learning about Token Bucket algorithm and using golang rate package for implementing the limiter"
+tags:
     - rate limiter
     - backend
 categories:
@@ -29,10 +29,10 @@ author: jackson.tmm
 
 ---
 
-## Go 實現/使用Token Bucket 
-Go 的time/rate package 提供了Limiter的實作，而這個Limiter便是實作了Token Bucket的方式來達到限流的目的。  
-**今天我們就來學習一下這麼使用go 提供Limiter來實作Rate Limiter**  
-### 要如何新增一個Limiter呢? 
+## Go 實現/使用Token Bucket
+Go 的time/rate package 提供了Limiter的實作，而這個Limiter便是實作了Token Bucket的方式來達到限流的目的。
+**今天我們就來學習一下這麼使用go 提供Limiter來實作Rate Limiter**
+### 要如何新增一個Limiter呢?
 
 >   func NewLimiter(r Limit, b int) *Limiter
 
@@ -51,12 +51,12 @@ limiter := rate.NewLimiter(100,1)
 
 Limiter提供了多個Function: `Allow`,`Reserve`,`Wait`,`AllowN`,`ReserveN`,`WaitN`
 
-最主要使用為以下的3個種Function(都會消耗一個Tokens): 
+最主要使用為以下的3個種Function(都會消耗一個Tokens):
 
 *   **Allow**
     *   ```func (lim *Limiter) Allow() bool``` 是 `AllowN(time.Now(), 1)`的縮寫
     *   它會*消耗*掉一個Tokens
-    *   如果有token的話會`return true` 否者會token不足 `return false` 
+    *   如果有token的話會`return true` 否者會token不足 `return false`
 *   **Reserve**
     *   ```func (lim *Limiter) Reserve() *Reservation```  是 ```ReserveN(time.Now(), 1)```的縮寫
     *   每次會*消耗*掉一個token
@@ -123,7 +123,7 @@ func (lim *Limiter) ReserveN(now time.Time, n int) *Reservation
 
 `ReserveN`的主要作用
 
->   `ReserveN` returns a Reservation that indicates how long the caller must wait before n events happen. 
+>   `ReserveN` returns a Reservation that indicates how long the caller must wait before n events happen.
 >
 >   回傳一個`Reservation `表面在event執行前需要等待多久，這個`Reservation`被limiter納入考量內
 >
@@ -195,10 +195,10 @@ func WaitDemo() {
 
 ### 設定Bucket 和 Rate
 
-可透過`func (lim *Limiter) SetBurst(newBurst int)`設定 `Bucket size`  
+可透過`func (lim *Limiter) SetBurst(newBurst int)`設定 `Bucket size`
 可透過`func (lim *Limiter) SetLimit(newLimit Limit)`設定 `Limit/Rate`
 
 ---
-參考資料:  
-[[go-pkg] time/rate package](https://pjchender.blogspot.com/2020/11/go-pkg-timerate-package.html)  
+參考資料:
+[[go-pkg] time/rate package](https://pjchender.blogspot.com/2020/11/go-pkg-timerate-package.html)
 [rate Documentation](https://pkg.go.dev/golang.org/x/time/rate)

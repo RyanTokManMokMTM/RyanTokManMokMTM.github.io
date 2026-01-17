@@ -10,26 +10,26 @@
 &lt;a href="http://localhost:1313/achievement/note/balance-tree" title="平衡樹的文章" &gt;
  平衡樹的文章
  
-&lt;/a&gt;。&lt;/p&gt;</description></item><item><title>[筆記] 淺談資料庫事務(Transcation)</title><link>http://localhost:1313/archives/note/database-transaction/</link><pubDate>Sat, 23 Nov 2024 22:11:45 +0800</pubDate><guid>http://localhost:1313/archives/note/database-transaction/</guid><description>&lt;h2 id="簡介"&gt;簡介
+&lt;/a&gt;。&lt;/p&gt;</description></item><item><title>[筆記] 淺談資料庫事務(Transaction)</title><link>http://localhost:1313/archives/note/database-transaction/</link><pubDate>Sat, 23 Nov 2024 22:11:45 +0800</pubDate><guid>http://localhost:1313/archives/note/database-transaction/</guid><description>&lt;h2 id="簡介"&gt;簡介
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;這篇文章主要是想要討論一下資料庫筆一個重要的概念&lt;strong&gt;事務(Transcation)&lt;/strong&gt;。接下來的文章主要會分成一下幾個部分繼續討論：&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;這篇文章主要是想要討論一下資料庫筆一個重要的概念&lt;strong&gt;事務(Transaction)&lt;/strong&gt;。接下來的文章主要會分成一下幾個部分繼續討論：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;什麼是資料庫的事務(Transcation)&lt;/li&gt;
-&lt;li&gt;事務(Transcation)的4大特性為何&lt;/li&gt;
+&lt;li&gt;什麼是資料庫的事務(Transaction)&lt;/li&gt;
+&lt;li&gt;事務(Transaction)的4大特性為何&lt;/li&gt;
 &lt;li&gt;一致性問題和解決方法&lt;/li&gt;
 &lt;li&gt;MVCC和鎖的簡單介紹&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id="什麼是事務transcation"&gt;什麼是事務(Transcation)
-&lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%af%e4%ba%8b%e5%8b%99transcation"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;在資料庫系統中，我們都會對數據進行讀寫操作，但是如果我們要對數據做一系列的操作(2個或以上的操作)，正在被操作的數據我們不希望能被其他人修改從而影響了結果，而且即便途中操作失敗，也希望他能回到原本的狀態。而資料庫為我們提供一個這樣的方法使得數據的操作要麼是&lt;strong&gt;全部都成功，要麼全部都是失敗&lt;/strong&gt;，這就是事務(Transcation)，也可以稱之為「交易」。&lt;/p&gt;</description></item><item><title>[筆記] 淺談資料庫事務(Transcation)</title><link>http://localhost:1313/techs/note/database-transaction/</link><pubDate>Sat, 23 Nov 2024 22:11:45 +0800</pubDate><guid>http://localhost:1313/techs/note/database-transaction/</guid><description>&lt;h2 id="簡介"&gt;簡介
+&lt;h2 id="什麼是事務transaction"&gt;什麼是事務(Transaction)
+&lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%af%e4%ba%8b%e5%8b%99transaction"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;在資料庫系統中，我們都會對數據進行讀寫操作，但是如果我們要對數據做一系列的操作(2個或以上的操作)，正在被操作的數據我們不希望能被其他人修改從而影響了結果，而且即便途中操作失敗，也希望他能回到原本的狀態。而資料庫為我們提供一個這樣的方法使得數據的操作要麼是&lt;strong&gt;全部都成功，要麼全部都是失敗&lt;/strong&gt;，這就是事務(Transaction)，也可以稱之為「交易」。&lt;/p&gt;</description></item><item><title>[筆記] 淺談資料庫事務(Transaction)</title><link>http://localhost:1313/techs/note/database-transaction/</link><pubDate>Sat, 23 Nov 2024 22:11:45 +0800</pubDate><guid>http://localhost:1313/techs/note/database-transaction/</guid><description>&lt;h2 id="簡介"&gt;簡介
 &lt;a class="header-anchor" href="#%e7%b0%a1%e4%bb%8b"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;這篇文章主要是想要討論一下資料庫筆一個重要的概念&lt;strong&gt;事務(Transcation)&lt;/strong&gt;。接下來的文章主要會分成一下幾個部分繼續討論：&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;這篇文章主要是想要討論一下資料庫筆一個重要的概念&lt;strong&gt;事務(Transaction)&lt;/strong&gt;。接下來的文章主要會分成一下幾個部分繼續討論：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;什麼是資料庫的事務(Transcation)&lt;/li&gt;
-&lt;li&gt;事務(Transcation)的4大特性為何&lt;/li&gt;
+&lt;li&gt;什麼是資料庫的事務(Transaction)&lt;/li&gt;
+&lt;li&gt;事務(Transaction)的4大特性為何&lt;/li&gt;
 &lt;li&gt;一致性問題和解決方法&lt;/li&gt;
 &lt;li&gt;MVCC和鎖的簡單介紹&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id="什麼是事務transcation"&gt;什麼是事務(Transcation)
-&lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%af%e4%ba%8b%e5%8b%99transcation"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;在資料庫系統中，我們都會對數據進行讀寫操作，但是如果我們要對數據做一系列的操作(2個或以上的操作)，正在被操作的數據我們不希望能被其他人修改從而影響了結果，而且即便途中操作失敗，也希望他能回到原本的狀態。而資料庫為我們提供一個這樣的方法使得數據的操作要麼是&lt;strong&gt;全部都成功，要麼全部都是失敗&lt;/strong&gt;，這就是事務(Transcation)，也可以稱之為「交易」。&lt;/p&gt;</description></item></channel></rss>
+&lt;h2 id="什麼是事務transaction"&gt;什麼是事務(Transaction)
+&lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%af%e4%ba%8b%e5%8b%99transaction"&gt;&lt;/a&gt;
+&lt;/h2&gt;&lt;p&gt;在資料庫系統中，我們都會對數據進行讀寫操作，但是如果我們要對數據做一系列的操作(2個或以上的操作)，正在被操作的數據我們不希望能被其他人修改從而影響了結果，而且即便途中操作失敗，也希望他能回到原本的狀態。而資料庫為我們提供一個這樣的方法使得數據的操作要麼是&lt;strong&gt;全部都成功，要麼全部都是失敗&lt;/strong&gt;，這就是事務(Transaction)，也可以稱之為「交易」。&lt;/p&gt;</description></item></channel></rss>

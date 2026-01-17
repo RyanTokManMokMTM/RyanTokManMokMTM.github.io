@@ -42,11 +42,11 @@
 &lt;/h2&gt;
  &lt;blockquote&gt;
  &lt;p&gt;簡單而言就是: 由一個工廠來生產全部產品
-定義:建立一個接口,讓子類自己決定實現哪一個Factory,重點在於工廠，透過工廠的Static method 進行生成的Object&lt;/p&gt;</description></item><item><title>[Note]Design Pattern Princeple</title><link>http://localhost:1313/archives/design-pattern/design-pattern-princeple/</link><pubDate>Sun, 27 Mar 2022 16:18:55 +0800</pubDate><guid>http://localhost:1313/archives/design-pattern/design-pattern-princeple/</guid><description>&lt;h2 id="什麼是design-pattern設計模式呢"&gt;什麼是Design Pattern(設計模式)呢?
+定義:建立一個接口,讓子類自己決定實現哪一個Factory,重點在於工廠，透過工廠的Static method 進行生成的Object&lt;/p&gt;</description></item><item><title>[Note]Design Pattern Principle</title><link>http://localhost:1313/archives/design-pattern/design-pattern-princeple/</link><pubDate>Sun, 27 Mar 2022 16:18:55 +0800</pubDate><guid>http://localhost:1313/archives/design-pattern/design-pattern-princeple/</guid><description>&lt;h2 id="什麼是design-pattern設計模式呢"&gt;什麼是Design Pattern(設計模式)呢?
 &lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%afdesign-pattern%e8%a8%ad%e8%a8%88%e6%a8%a1%e5%bc%8f%e5%91%a2"&gt;&lt;/a&gt;
 &lt;/h2&gt;
  &lt;blockquote&gt;
- &lt;p&gt;設計模式(Design Pattern) 是對軟體設計中普遍存在（反覆出現）的各種問題，所提出的解決方案。用於描述在各種不同的情況下，&lt;strong&gt;如何解決問題的一種方案&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>[Note]Design Pattern Princeple</title><link>http://localhost:1313/techs/design-pattern/design-pattern-princeple/</link><pubDate>Sun, 27 Mar 2022 16:18:55 +0800</pubDate><guid>http://localhost:1313/techs/design-pattern/design-pattern-princeple/</guid><description>&lt;h2 id="什麼是design-pattern設計模式呢"&gt;什麼是Design Pattern(設計模式)呢?
+ &lt;p&gt;設計模式(Design Pattern) 是對軟體設計中普遍存在（反覆出現）的各種問題，所提出的解決方案。用於描述在各種不同的情況下，&lt;strong&gt;如何解決問題的一種方案&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>[Note]Design Pattern Principle</title><link>http://localhost:1313/techs/design-pattern/design-pattern-princeple/</link><pubDate>Sun, 27 Mar 2022 16:18:55 +0800</pubDate><guid>http://localhost:1313/techs/design-pattern/design-pattern-princeple/</guid><description>&lt;h2 id="什麼是design-pattern設計模式呢"&gt;什麼是Design Pattern(設計模式)呢?
 &lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%afdesign-pattern%e8%a8%ad%e8%a8%88%e6%a8%a1%e5%bc%8f%e5%91%a2"&gt;&lt;/a&gt;
 &lt;/h2&gt;
  &lt;blockquote&gt;

@@ -3,15 +3,15 @@ title: "[開發者日記] 聊天通訊APP(四) - 最終章"
 date: 2023-05-01T19:25:38+08:00
 draft: false
 categories:
-    - side-project 
-tags: 
-    - chat-app  
+    - side-project
+tags:
+    - chat-app
 ---
 
 ### 簡介
 在之前[序章](/achievement/chat-app-init)中，雖然已經大概介紹過這個app在幹嘛。但是因為這次是**最終章**的成品展示(或許有些部分沒實現😂)，所以就允許我囉嗦得再說一次吧！
 
-這個app主要是focus在Websocket，也就是實時通訊上。雖然但是HTTP的部分還是不能少的🤣，哈哈哈。所以這個App的Server-side包含了HTTP和Websocket 2個部分。HTTP的部分主要是用作CURD,而Websocket的部分則是用於個人通訊和群組通訊。  
+這個app主要是focus在Websocket，也就是實時通訊上。雖然但是HTTP的部分還是不能少的🤣，哈哈哈。所以這個App的Server-side包含了HTTP和Websocket 2個部分。HTTP的部分主要是用作CURD,而Websocket的部分則是用於個人通訊和群組通訊。
 
 ### Tech Stack
 * SwiftUI
@@ -24,7 +24,7 @@ tags:
 
 
 App的功能如下：
-* 基礎功能：  
+* 基礎功能：
     * 用戶登入與註冊
     * 用戶資料修改，包括用戶頭像，名字和狀態訊息(Status Message)
     * 獲取用戶資訊
@@ -46,14 +46,14 @@ App的功能如下：
 * 核心功能
     * 個人聊天 - 透過Websocket 發送訊息
     * 群組聊天 - 透過Websocket 發送訊息
-    * 各聊天室都支援以下訊息:  
+    * 各聊天室都支援以下訊息:
         1. 文字
         2. 圖片(如:jpg,png)
         3. 文件(如:pdf,docx,txt,ppt,etc.)
         4. 音頻(如:wav,mp3)
         5. 視頻(暫只支援mp4)
 ### 功能細節(後端)
-HTTP API的部分就不一一詳細解說了，也僅僅是CRUD而已，😂哈哈哈。  
+HTTP API的部分就不一一詳細解說了，也僅僅是CRUD而已，😂哈哈哈。
 ```
 用戶API
 - POST /api/v1/user/signup -> 用戶註冊
@@ -70,7 +70,7 @@ HTTP API的部分就不一一詳細解說了，也僅僅是CRUD而已，😂哈�
 群組API
 - POST /api/v1/group -> 建立群組
 - POST /api/v1/group/join/:group_id -> 加入特定群組
-- DELTE /api/v1/group/leave/:group_id -> 離開特定群組
+- DELETE /api/v1/group/leave/:group_id -> 離開特定群組
 - GET /api/v1/group -> 獲取群組資訊
 - GET /api/v1/group/members/:group_id -> 獲取群組人員
 - POST /api/v1/group/avatar/:group_id -> 更新群組頭像
@@ -102,7 +102,7 @@ HTTP API的部分就不一一詳細解說了，也僅僅是CRUD而已，😂哈�
 - POST /api/v1/file/upload -> 上傳任何文件
 ```
 
-接下來就核心的Websocket的部分了！  
+接下來就核心的Websocket的部分了！
 因為要進行通訊，那我們就得預先定義好前端和後端都看得懂的格式，否則難以進行溝通。以下是我定義的格式(我是使用ProtoBuffer)：
 ```protobuf
 message Message {
@@ -112,13 +112,13 @@ message Message {
   string toUUID = 4; //receiver uuid
   string content = 5; //sending content
   int32 contentType = 6; //sending content type. For example 1: text, 2: file, 3: audio, 4: video....
-  int32 type = 7; //For example: "heatbeat" for checking server/client health , video call/audio call ->"webrtc"
+  int32 type = 7; //For example: "heartbeat" for check ing server/client health , video call/audio call ->"webrtc"
   int32 messageType = 8; //1: single 2: group
   string groupName = 9; // will have data iff messageType = 2
   string groupAvatar = 10; //will have data iff messageType = 2
   string urlPath = 11; //file url path or other path
   string fileName = 12; //sending file name
-  int32 fileSize = 13; //sending file size 
+  int32 fileSize = 13; //sending file size
   int32 storyAvailableTime = 14; //reply story created time
 }
 ```
@@ -145,11 +145,11 @@ const (
 	FILE
 	AUDIO
 	VIDEO
-	STORY 
+	STORY
 	SYS
 )
 ```
-從上可見，我定義了7種。這7種分別是什麼呢？  
+從上可見，我定義了7種。這7種分別是什麼呢？
 **messageType** 可以為1(單聊)或者2(群聊)，且**type**為4(訊息類型)
 - TEXT - 是純文件類型,只有`content`中有內容。
 - IMAGE - 是圖片類型, `urlPath`中會有該圖片的url
@@ -163,8 +163,8 @@ const (
 
 
 
-#### 以上的格式是怎麼用於訊息發送的呢？  
-**A為發送者(UUID:123)，B為接收者(UUID:321)**。 
+#### 以上的格式是怎麼用於訊息發送的呢？
+**A為發送者(UUID:123)，B為接收者(UUID:321)**。
 
 ##### 情境一：發送文字。
 
@@ -195,16 +195,16 @@ B接收的內容如下:
     "messageType" : 1, //1為單人聊天
 }
 ```
----  
-##### 情境二：發送圖片。  
-在透過websocket發送內容之前，會先透過API上傳圖片到Server，然後Server會回傳圖片的URL。然後再發送該URL即可。  
+---
+##### 情境二：發送圖片。
+在透過websocket發送內容之前，會先透過API上傳圖片到Server，然後Server會回傳圖片的URL。然後再發送該URL即可。
 假設Server回傳的URL如下：
 ```json
 {
     "code":200,
     "path":"/image.jpg"
 }
-``` 
+```
 
 A 發送圖片給B，以下是發送內容：
 ```json
@@ -233,19 +233,19 @@ B接收的內容如下:
     "urlPath" : "/image.jpg"
 }
 ```
-因為知道`contentType`是`2`,所以知道是圖片類型，也知道`urlPath`保存了圖片的URL。  
+因為知道`contentType`是`2`,所以知道是圖片類型，也知道`urlPath`保存了圖片的URL。
 
 ---
 
-以上都是單聊的情況，那群聊呢？群聊就跟單聊有些不一樣了呢😂  
-因為群聊是的接收對象會是群組的UUID,如果不處理一下的話，哪發送者會是發送訊息的人，在Client-side做處理的時候會出錯(因為發送者是A，不是群，哈哈哈)  
+以上都是單聊的情況，那群聊呢？群聊就跟單聊有些不一樣了呢😂
+因為群聊是的接收對象會是群組的UUID,如果不處理一下的話，哪發送者會是發送訊息的人，在Client-side做處理的時候會出錯(因為發送者是A，不是群，哈哈哈)
 ```
 群組訊息發送思路：
 發送者 : A -> Group // A 發送訊息到群組
 接收者 : B <- Group // B 接收來自群組的訊息
 ```
 
-**A為發送者(UUID:123)，B為接收者(UUID:321), 群組G(UUID:G123)**。 
+**A為發送者(UUID:123)，B為接收者(UUID:321), 群組G(UUID:G123)**。
 ##### 情境一：發送文字。
 A 發送`Hello!`給到群組G，以下是發送內容：
 ```json
@@ -279,16 +279,16 @@ B接收的內容如下:
 }
 ```
 
----  
-##### 情境二：發送圖片。  
-在透過websocket發送內容之前，會先透過API上傳圖片到Server，然後Server會回傳圖片的URL。然後再發送該URL即可。  
+---
+##### 情境二：發送圖片。
+在透過websocket發送內容之前，會先透過API上傳圖片到Server，然後Server會回傳圖片的URL。然後再發送該URL即可。
 假設Server回傳的URL如下：
 ```json
 {
     "code":200,
     "path":"/image.jpg"
 }
-``` 
+```
 
 A 發送圖片給B，以下是發送內容：
 ```json
@@ -326,8 +326,8 @@ B接收的內容如下:
 
 #### 你有可能會問：欸，如果在通訊的過程中，用戶沒有在線或者沒有連接上server，哪訊息不就消息了嗎？哪用戶不就收不到訊息了？
 這個問題問的好，對於這個問題我也google很久解決方案。最後找到了解決方案，也就是將離線的消息，也就是用戶接收不到的消息用一個Container保存起來。當用戶上線時，或者重新連接到server時，就將這個消息發送
-給他就好了(傳輸過程中丟失的問題，暫時不考慮蛤🤣)！這樣用戶就能在離線的情況下也能收到發送給他們的消息了！  
-而在這個APP裡面我是透過Redis來實現的。因為我們的消息一但發送給用戶就會馬上刪除掉了，如果用SQL的話，就頻繁的做IO，影響效能。所以這裡就使用Redis來幫我實現。而是用來Hash的數據類型來保每個用戶的離線消息！  
+給他就好了(傳輸過程中丟失的問題，暫時不考慮蛤🤣)！這樣用戶就能在離線的情況下也能收到發送給他們的消息了！
+而在這個APP裡面我是透過Redis來實現的。因為我們的消息一但發送給用戶就會馬上刪除掉了，如果用SQL的話，就頻繁的做IO，影響效能。所以這裡就使用Redis來幫我實現。而是用來Hash的數據類型來保每個用戶的離線消息！
 
 > 獲取用戶離線消息
 ```golang
@@ -358,9 +358,8 @@ if err != nil {
 
 
 ### 最終Demo
-<video src="/videos/chat-app/chat-app-final.mp4" controls="controls" width="500"></video> 
+<video src="/videos/chat-app/chat-app-final.mp4" controls="controls" width="500"></video>
 
 ### Source Code
 [Frontend](https://github.com/RyanTokManMokMTM/swiftui-chat-app)
 [Backend](https://github.com/RyanTokManMokMTM/chat-app-server)
-

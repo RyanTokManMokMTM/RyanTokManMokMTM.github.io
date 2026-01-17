@@ -15,7 +15,7 @@ You are given an array of strings `products` and a string `searchWord`.
 Design a system that suggests at most three product names from `products` after each character of `searchWord` is typed. Suggested products should have common prefix with `searchWord`. If there are more than three products with a common prefix return the three lexicographically minimums products.
 
 Return a *list of lists of the suggested products* after each character of `searchWord` is typed.
-example:  
+example:
 ```
 Input: products = ["mobile","mouse","moneypot","monitor","mousepad"], searchWord = "mouse"
 Output: [
@@ -40,8 +40,8 @@ Output: [["baggage","bags","banner"],["baggage","bags","banner"],["baggage","bag
 ```
 
 ## How can we solve this problem?
-這題要我們解決的問題是在給定的`products`中,給輸入關鍵字/搜尋關鍵字(`searchWord`)返回建議的`product`，也就是說只要`searchWord`與`products`中的某些`product`的前綴(`prefix`)一致,返回所有包含這個前綴(`prefix`)就可以了。 因為這題會架設*一個一個字*的輸入,所以結果會是`searchWord`的長度哪麼多個List。  
-因為這題有關於字串前綴(`Suffix`),我們可以直接透過![Trie Tree](/notes/trietree)來解。我們只需為透過`Products`來建構**Trie Tree**,並加入到*Tree Node*的List中即可(題目說到最多3個，所以List最多保存3個)。  
+這題要我們解決的問題是在給定的`products`中,給輸入關鍵字/搜尋關鍵字(`searchWord`)返回建議的`product`，也就是說只要`searchWord`與`products`中的某些`product`的前綴(`prefix`)一致,返回所有包含這個前綴(`prefix`)就可以了。 因為這題會架設*一個一個字*的輸入,所以結果會是`searchWord`的長度哪麼多個List。
+因為這題有關於字串前綴(`Suffix`),我們可以直接透過![Trie Tree](/notes/trietree)來解。我們只需為透過`Products`來建構**Trie Tree**,並加入到*Tree Node*的List中即可(題目說到最多3個，所以List最多保存3個)。
 *因題目要求，結果需為按字典排序(`lexicographically order`),所有要先對`products`進行排序。*
 
 #### Solution:
@@ -52,7 +52,7 @@ class TrieNode{
     TrieNode(){
         node = vector<TrieNode*>(26);
     }
-    
+
     vector<TrieNode*> node;
     vector<string> w;
     static void addWords(TrieNode* root ,string str){
@@ -86,9 +86,8 @@ public:
         vector<vector<string>> res;
         sort(products.begin(),products.end());// n log n
         TrieNode* root = new TrieNode();
-        for(auto product : products) TrieNode::addWords(root,product);   
+        for(auto product : products) TrieNode::addWords(root,product);
         return TrieNode::getWords(root,searchWord);
     }
 };
 ```
-

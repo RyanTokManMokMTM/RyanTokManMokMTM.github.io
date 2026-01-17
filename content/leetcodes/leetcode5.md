@@ -33,13 +33,13 @@ public:
     string longestPalindrome(string s) {
         /*
         Using an easy solution
-        
-        "babad" 
-        finding all posible palindrome string starting at index i(mid point)
+
+        "babad"
+        finding all possible palindrome string starting at index i(mid point)
         odd case:
         i-1 i i+1 ? Palindrome
         i-2 i-1 i i+1 i+2  ?Palindrome
-        
+
         what about even case.We're simply starting at index i and i+1
         i-1 [i,i+1] i+2 ?Palindrome
         */
@@ -47,22 +47,22 @@ public:
         int len = 0;
         int startPoint = 0;
         //O(n * n(finding Palindrome))
-        
-        
+
+
         for(int i = 0;i<n;i++){
             int cur = max(getLen(s,i,i,n),getLen(s,i,i+1,n)); // which one is longest? odd or even
             if(cur > len){
                 //update our len and starting point
                 len = cur;
-                startPoint = i - (len-1)/2; //(len-1) for even case 
+                startPoint = i - (len-1)/2; //(len-1) for even case
                 //suppose the len is 3 and the index is 1 ,then the starting point will be 1 - (3-1)/2 => 0-> len str[0...2]
                 //suppose the len is 4 and the index is 1 ,then the starting point will be 1 - (4-1)/2 => 0-> len str[0...2]
             }
         }
-        
+
         return s.substr(startPoint,len);
     }
-    
+
     //str[i..j] is our middle point of Palindrome
     int getLen(string&str,int i,int j,int n){
         //left(i) right(j)
@@ -78,5 +78,3 @@ public:
     }
 };
 ```
-
-

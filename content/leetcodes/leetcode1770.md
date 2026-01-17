@@ -39,7 +39,7 @@ Explanation: An optimal solution is as follows:
 - Choose from the start, [-3,-3,-2,7,1], adding -3 * -5 = 15 to the score.
 - Choose from the start, [-3,-2,7,1], adding -3 * 3 = -9 to the score.
 - Choose from the end, [-2,7,1], adding 1 * 4 = 4 to the score.
-- Choose from the end, [-2,7], adding 7 * 6 = 42 to the score. 
+- Choose from the end, [-2,7], adding 7 * 6 = 42 to the score.
 The total score is 50 + 15 - 9 + 4 + 42 = 102.
 ```
 
@@ -55,36 +55,33 @@ class Solution {
 public:
     int maximumScore(vector<int>& nums, vector<int>& multipliers) {
         //n >= m
-        //socre : 0
+        //score : 0
         //m operations
         //[3,2,1]
         int m = multipliers.size();
         int n = nums.size();
-        
+
         dp = vector<vector<int>>(m+1,vector<int>(m+1,INT_MIN));
-        
+
         return solution(nums,multipliers,0,n-1,n,m);
     }
-    
-    
+
+
     int solution(vector<int>& nums, vector<int>& multipliers,int i,int j,int n,int m){
-        
+
         int currentMul = n - (j - i + 1); //the rest of size of the sub-array is the index of current multipliers
         if(currentMul == m) return 0;
         //current maxvalue = choose first or choose end?
-        
+
         if(dp[i][currentMul] != INT_MIN) return dp[i][currentMul];
 
         //choose the front val
-        return dp[i][currentMul] = 
+        return dp[i][currentMul] =
             max(
             (nums[i] * multipliers[currentMul]) + solution(nums,multipliers,i+1,j,n,m),// take left
             (nums[j] * multipliers[currentMul]) + solution(nums,multipliers,i,j-1,n,m) //take right
-        );           
+        );
     }
-    
+
 };
 ```
-
-
-

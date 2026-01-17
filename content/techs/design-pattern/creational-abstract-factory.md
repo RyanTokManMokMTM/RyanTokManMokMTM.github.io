@@ -13,7 +13,7 @@ author: jackson.tmm
 > 定義: 又稱為Kit模式。提供一個創建系列相關或者互相依賴的Interface，而無需指定其具體的class
 
 ### 簡單例子
-*注: 以下程式單純用於解釋，並不能實際執行*  
+*注: 以下程式單純用於解釋，並不能實際執行*
 ```
 透過定義不同組件的Abstraction類,並把Abstraction類組合在一起。通過繼承抽象工廠的方式，定義不同的工廠類，生成不同的Product。
 
@@ -134,7 +134,7 @@ class SummerFactory : public UIFactory{
 
 ```c++
 int main(){
-    //就是透過工廠生成接口生成不同的工廠 
+    //就是透過工廠生成接口生成不同的工廠
     //再透過不同的工廠調用其生產的product
 
     //Summer 工廠
@@ -182,5 +182,5 @@ int main(){
 
 
 ---
-參考資料:  
+參考資料:
 [史上最全设计模式导学目录（完整版）](https://blog.csdn.net/LoveLion/article/details/17517213)

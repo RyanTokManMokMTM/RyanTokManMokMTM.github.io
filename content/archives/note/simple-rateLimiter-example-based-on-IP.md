@@ -4,7 +4,7 @@ date: 2022-03-30T16:05:57+08:00
 draft: false
 toc: false
 description: "A rate limiter example that implements in gin web framework"
-tags: 
+tags:
     - backend
     - rate limiter
 categories:
@@ -30,7 +30,7 @@ var (
 )
 ```
 
-#### Post API Controller exapmle
+#### Post API Controller example
 
 ```go
 type PostCase struct {
@@ -53,7 +53,7 @@ func (p *PostUseCase) GetPost(ctx *gin.Context) {
 
 ```
 
- #### Ping API Controller exapmle
+ #### Ping API Controller example
 
 ```go
 type HealthCheck struct {
@@ -83,7 +83,7 @@ func (hc *HealthCheck) Pong(ctx *gin.Context) {
 
 #### 保存Limiter的結構
 包含了2個成員(Member):
-*   **Limters**: 主要是用於保存不同IP下的Limiter(storage)
+*   **Limiters**: 主要是用於保存不同IP下的Limiter(storage)
 *   **Lock** : 因為有可能會有很多人同時存取這個Map,為了防止Race condition,因此需要使用Mutex進行保護
 
 ```go
@@ -94,7 +94,7 @@ type Limiters struct {
 ```
 #### 定義Rate Limiter的結構
 包含了3個成員(Member):
-*   **Limter** : 一個rate limiter的實例
+*   **Limiter** : 一個rate limiter的實例
 *   **LastAccess** : 上次存取這個limiter的時間
 
 
@@ -124,7 +124,7 @@ func (ls *Limiters) GetLimiter(r rate.Limit, b int, key string) *Limiter {
 
 	ls.Limiters[key] = newLimiter
 	return newLimiter
-}	
+}
 ```
 
 #### 定義一個定期檢查Rate Limiter的function
@@ -192,7 +192,7 @@ func RateLimiter() gin.HandlerFunc {
 func newLimiters(r rate.Limit, b int, key string) *limiter.Limiter {
 	onceTask.Do(func() {
 		log.Println("run once")
-		go global.Limiters.ClearNotUseLimiter(global.AppSetting.LimterClearTime)
+		go global.Limiters.ClearNotUseLimiter(global.AppSetting.LimiterClearTime)
 	})
 	return global.Limiters.GetLimiter(r, b, key)
 }
@@ -200,6 +200,6 @@ func newLimiters(r rate.Limit, b int, key string) *limiter.Limiter {
 以上便是基於IP實作Rate Limiter的簡單方法
 
 ---
-參考資料:  
-[[go-pkg] time/rate package](https://pjchender.blogspot.com/2020/11/go-pkg-timerate-package.html)  
+參考資料:
+[[go-pkg] time/rate package](https://pjchender.blogspot.com/2020/11/go-pkg-timerate-package.html)
 [rate Documentation](https://pkg.go.dev/golang.org/x/time/rate)

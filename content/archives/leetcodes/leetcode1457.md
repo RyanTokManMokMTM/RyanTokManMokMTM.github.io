@@ -19,12 +19,12 @@ Given a binary tree where node values are digits from 1 to 9. A path in the bina
 example
 ```
 Input: root = [2,3,1,3,1,null,1]
-Output: 2 
+Output: 2
 Explanation: The figure above represents the given binary tree. There are three paths going from the root node to leaf nodes: the red path [2,3,3], the green path [2,1,1], and the path [2,3,1]. Among these paths only red path and green path are pseudo-palindromic paths since the red path [2,3,3] can be rearranged in [3,2,3] (palindrome) and the green path [2,1,1] can be rearranged in [1,2,1] (palindrome).
 ```
 ```
 Input: root = [2,1,1,1,3,null,null,null,null,null,1]
-Output: 1 
+Output: 1
 Explanation: The figure above represents the given binary tree. There are three paths going from the root node to leaf nodes: the green path [2,1,1], the path [2,1,3,1], and the path [2,1]. Among these paths only the green path is pseudo-palindromic since [2,1,1] can be rearranged in [1,2,1] (palindrome).
 ```
 ```
@@ -33,11 +33,11 @@ Output: 1
 ```
 ## How can we solve this problem?
 這一題簡單的來說就是讓我們從**Binary Tree**中找到有幾條`path`是一個*Palindromic(Pseudo-Palindromic)偽迴文串*。
-也就是說從`root到leaft`的`path`是一個**Palindromic**。 (我們只需要知道path是否能組成*Palindromic*即可) 
+也就是說從`root到leaft`的`path`是一個**Palindromic**。 (我們只需要知道path是否能組成*Palindromic*即可)
 
-哪我們要怎麼知道`path`是不是**Palindromic**的呢?  
-解決這個問題之前,我們先來看一下**Palindromic**分成了以下2個case。  
-1. Odd(Path長度為基數): aabbdbbaa => a:2,b:2, d:1 
+哪我們要怎麼知道`path`是不是**Palindromic**的呢?
+解決這個問題之前,我們先來看一下**Palindromic**分成了以下2個case。
+1. Odd(Path長度為基數): aabbdbbaa => a:2,b:2, d:1
     > 從這裡我們可以看得出來,只會有**1個值/字符是基數,其餘的都會是偶數**。
 2. Even(Path長度為偶數): aabb => a:2,b:2
     > 從這裡我們可以看得出來,所有**值/字符都是偶數**。
@@ -65,7 +65,7 @@ public:
         solution(root,counter);
         return res;
     }
-    
+
     void solution(TreeNode* root,vector<int> &counter){
         //m uses to count how many number in the path
         //for odd case there will only remind 1 number such that xyzUyxz l
@@ -79,20 +79,19 @@ public:
             for(auto n : counter){
                 if(n % 2 == 1) oddOccur ++;
             }
-            
+
             //odd element at most appears once
             if(oddOccur <= 1) res++;
             counter[root->val]--;
-            
+
             return;
         }
-    
+
         solution(root->left,counter);
         solution(root->right,counter);
-        
+
         //check
         counter[root->val]--;
     }
 };
 ```
-

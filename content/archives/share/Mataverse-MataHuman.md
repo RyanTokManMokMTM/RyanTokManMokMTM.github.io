@@ -6,7 +6,7 @@ description: |
   探索元宇宙中的虛擬數字人技術
   使用 Reallusion Character Creator 和 iClone 製作個人化虛擬角色
   包含音頻驅動動畫和燈光效果展示
-tags: 
+tags:
     - matehuman
 categories:
     - shared
@@ -25,19 +25,19 @@ author: jackson.tmm
 * Reallusion Character Creator
 * Reallusion IClone
 
-**實作步驟也十分的簡單:**  
+**實作步驟也十分的簡單:**
 我們將透過**Reallusion Character Creator**製作我們**數字人**的外觀,然後再將**數字人**傳入**Reallusion IClone**做動畫,也就是透過IClone的音頻生成數字人動畫的功能製作動畫。
 
-Step 1:  
+Step 1:
 進入**Reallusion Character Creator**製作角色(以博主自定義的角色為例)，如下圖:
 ![Reallusion Character Creator](/imgs-custom/metahumanCC/cc4.png)
 
-Step 2:  
-將剛才在**CC(Character Creator)** 製作的角色匯入到**IClone**中,如下圖:  
+Step 2:
+將剛才在**CC(Character Creator)** 製作的角色匯入到**IClone**中,如下圖:
 *Character Creator中: File->Export->Send to IClone*
 ![Reallusion Character Creator](/imgs-custom/metahumanCC/ic1.png)
 
-匯入音頻文件   
+匯入音頻文件
 *Modify->Facial->Create Script->Audio File*
 ![Reallusion Character Creator](/imgs-custom/metahumanCC/ic2.png)
 
@@ -47,15 +47,15 @@ Step 2:
 
 ## Demo展示
 #### 燈光一展示:
-<video src="/videos/metahuman1.mp4" controls="controls" width="500" height="300"></video>
+<video src="/videos/metahuman1.mp4" controls="controls" width="500" high="300"></video>
 
 #### 燈光二展示
-<video src="/videos/metahuman2.mp4" controls="controls" width="500" height="300"></video>
+<video src="/videos/metahuman2.mp4" controls="controls" width="500" high="300"></video>
 
 ## 結論
 有沒有發現很簡單又很好玩呢!我們透過**Reallusion**工具讓我們能在很短的時間內就可以完成一個屬於自己的MetaHuman。除此之外**Reallusion**還提供很多很強大的功能，例如:**圖片生成3D角色模型,手機臉部動作捕捉,與Unreal Engine 5的MetaHuman工具連動**等等，有機會的話再跟大家分享。
 <!-- 最後給大家分享一張虛擬網美照><
 ![Reallusion Character Creator](/imgs-custom/metahumanCC/pose.png) -->
 
-**參考資料:**  
-[Reallusion](www.reallusion.com)  
+**參考資料:**
+[Reallusion](www.reallusion.com)

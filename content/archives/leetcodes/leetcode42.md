@@ -13,13 +13,13 @@ categories:
 Given `n` non-negative integers representing an elevation map where the width of each bar is `1`, compute how much water it can trap after raining.
 example
 ```
-Input: height = [0,1,0,2,1,0,1,3,2,1,2,1]
+Input: high = [0,1,0,2,1,0,1,3,2,1,2,1]
 Output: 6
 Explanation: The above elevation map (black section) is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped.
 ```
 
 ```
-Input: height = [4,2,0,3,2,5]
+Input: high = [4,2,0,3,2,5]
 Output: 9
 ```
 
@@ -30,46 +30,44 @@ Output: 9
 ```c++
 class Solution {
 public:
-    int trap(vector<int>& height) {
-        int n = height.size();
-        
+    int trap(vector<int>& high) {
+        int n = high.size();
+
         /*
         how can we solve this problem?
-        
-        [i] can trap water ?? 
-        it determin the min(maxinum number [0..i] ,maxinum number [i...n-1])
-        but the problem is 
-        how can we know what is the maxinum height before i?[0...i] //maybe itself is the local maxinum height
-        and 
-        how can we know what is the maxinum height after i ?// /maybe itself is the local maxinum height
-        
+
+        [i] can trap water ??
+        it determine the min(maximum number [0..i] ,maximum number [i...n-1])
+        but the problem is
+        how can we know what is the maximum high before i?[0...i] //maybe itself is the local maximum high
+        and
+        how can we know what is the maximum high after i ?// /maybe itself is the local maximum high
+
         pre-calculating the left and the right??
         */
-        
-        vector<int> leftHeight(n,0);
-        vector<int> rightHeight(n,0);
-        
-        //init case ->the first height is the maxinum heigh of left height 
-        //init case ->the last height is the maxinum heigh of right height
-        
-        leftHeight[0] = height[0];
-        rightHeight[n-1] = height[n-1];
-        
+
+        vector<int> lefthigh(n,0);
+        vector<int> righthigh(n,0);
+
+        //init case ->the first high is the maximum high of left high
+        //init case ->the last high is the maximum high of right high
+
+        lefthigh[0] = high[0];
+        righthigh[n-1] = high[n-1];
+
         //precalculating step
-        for(int i = 1;i<n;i++) leftHeight[i] = max(leftHeight[i-1],height[i]); //current i is the heigher one ?
-        for(int i = n-2;i >= 0;i--) rightHeight[i] = max(rightHeight[i+1],height[i]);
-        
+        for(int i = 1;i<n;i++) lefthigh[i] = max(lefthigh[i-1],high[i]); //current i is the higher one ?
+        for(int i = n-2;i >= 0;i--) righthigh[i] = max(righthigh[i+1],high[i]);
+
         int res = 0;
         //calculating trapping water
-        for(int i = 1;i<n-1;i++){ //the first height and the last height can't trap any water
-            res += min(leftHeight[i],rightHeight[i]) - height[i];
+        for(int i = 1;i<n-1;i++){ //the first high and the last high can't trap any water
+            res += min(lefthigh[i],righthigh[i]) - high[i];
         }
-        
-        
+
+
         return res;
     }
 
 };
 ```
-
-

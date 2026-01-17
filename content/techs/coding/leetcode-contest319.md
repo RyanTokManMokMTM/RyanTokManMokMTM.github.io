@@ -2,7 +2,7 @@
 title: "[總結]Leetcode 週賽第319場復盤總結"
 date: 2022-11-13T11:45:46+08:00
 draft: false
-tag: 
+tag:
     - leetcode-contest
 categories:
     - coding
@@ -19,9 +19,9 @@ categories:
 
 You are given a non-negative floating point number rounded to two decimal places `celsius`, that denotes **the temperature in Celsius**.
 
-You should convert Celsius into **Kelvin** and **Fahrenheit** and return it as an array `ans = [kelvin, fahrenheit].`
+You should convert Celsius into **Kelvin** and **Fahrenheit** and return it as an array `and = [kelvin, fahrenheit].`
 
-Return the array `ans`. Answers within **10<sup>5</sup>** of the actual answer will be accepted.
+Return the array `and`. Answers within **10<sup>5</sup>** of the actual answer will be accepted.
 
 **Example**
 ```
@@ -72,7 +72,7 @@ Explanation: There are no subarrays of nums where 2 is the least common multiple
 ```
 ##### 解題思路
 這一題要注意的是*LCM*的計算以及*subarry*的定義
-> Subarray 是 在array中連續的一組array，跟subsequence不一樣呢~  
+> Subarray 是 在array中連續的一組array，跟subsequence不一樣呢~
 
 這題的重點是要關注`subarray`的部分，也就是我們要知道`[i : n-1] where i = 0 to n - 1`的`LCM`是否與K相等。 所以我們要一個一個subarray的去找從`size為1` 擴展至`n - i - 1`, 檢查擴展的過程中是否存在`LCM`與K相等。
 
@@ -81,21 +81,21 @@ Explanation: There are no subarrays of nums where 2 is the least common multiple
 class Solution {
 public:
     int subarrayLCM(vector<int>& nums, int k) {
-        int ans = 0;
+        int and = 0;
         for(int i = 0;i<nums.size();i++){
             unsigned int curLCM = 1;
             for(int j = i;j<nums.size();j++){
                 curLCM = lcm(curLCM,nums[j]); //[for i to n]
-                if(curLCM == k) ans++;
+                if(curLCM == k) and++;
             }
         }
-        
-        return ans;
+
+        return and;
     }
 };
 ```
 
-### Minimum Number of Operations to Sort a Binary Tree by Level - Medium  
+### Minimum Number of Operations to Sort a Binary Tree by Level - Medium
 You are given the root of a binary tree with **unique values**.
 
 In one operation, you can choose any two nodes **at the same level** and swap their values.
@@ -106,13 +106,13 @@ The **level** of a node is the number of edges along the path between it and the
 
 **Example**
 ```
-     1        
-    /   \     
-  4       3   
- / \     / \  
+     1
+    /   \
+  4       3
+ / \     / \
 7   6   8    5
-       /    / 
-      9    10 
+       /    /
+      9    10
 Input: root = [1,4,3,7,6,8,5,null,null,null,null,9,null,10]
 Output: 3
 Explanation:
@@ -124,9 +124,9 @@ It can be proven that 3 is the minimum number of operations needed.
 ```
 
 ```
-   1   
-  / \  
- 3   2 
+   1
+  / \
+ 3   2
 / \ / \
 7 6 5 4
 Input: root = [1,3,2,7,6,5,4]
@@ -140,11 +140,11 @@ It can be proven that 3 is the minimum number of operations needed.
 ```
 
 ```
-   1  
-  / \ 
+   1
+  / \
  2   3
-/ \ / 
-4 5 6 
+/ \ /
+4 5 6
 Input: root = [1,2,3,4,5,6]
 Output: 0
 Explanation: Each level is already sorted in increasing order so return 0.
@@ -155,15 +155,15 @@ Explanation: Each level is already sorted in increasing order so return 0.
 
 假設我們現在有下面的這個情況
 ```
-2 - 4 - 1 - 5  
+2 - 4 - 1 - 5
 ```
 我們要透過最少的swap的次數，使之變為有序的。
 哪應該要怎麼解呢？
 
-我們是不是只需要將他們移動到他們各自對應的正確的`index`就可以了呢?  
-比如: `2 - 4 - 1 - 5` 這裡的`1`應該在`index 0`的位置,`2`應該在`index 1` 的位置,如此類推。最後就會得出 `1 - 2 - 4 -5`  
+我們是不是只需要將他們移動到他們各自對應的正確的`index`就可以了呢?
+比如: `2 - 4 - 1 - 5` 這裡的`1`應該在`index 0`的位置,`2`應該在`index 1` 的位置,如此類推。最後就會得出 `1 - 2 - 4 -5`
 
-由此可見，我們只需要將錯誤的`index` 與 正確的`index`連接在一起(也就是Swap) ，哪我們只要知道一共有多少條node連接到同一條edge上 , 哪我們就知道`swap`了多少回了。  
+由此可見，我們只需要將錯誤的`index` 與 正確的`index`連接在一起(也就是Swap) ，哪我們只要知道一共有多少條node連接到同一條edge上 , 哪我們就知道`swap`了多少回了。
 例如： `7 6 4 5`  => `7(移動到5的位置) -> 5(移動到6的位置) -> 6(移動到4的位置) -> 4`代表了 `swap(7,5)` + `swap(5,6)` + `swap(6,4)`
 `swap(7,5)` => `5 6 4 7`
 `swap(5,6)` => `6 5 4 7`
@@ -175,20 +175,20 @@ Explanation: Each level is already sorted in increasing order so return 0.
 ```c++
     int helper(vector<int>& res){
         if(res.size() <= 1) return 0; //no need
-        
+
         int swapTime = 0;
         vector<pair<int,int>> g;
         for(int i = 0;i<res.size();i++){ //building the graph //O(res.size())
             g.push_back({res[i],i});
         }
-        
+
         sort(g.begin(),g.end());//sort it by value not index
         vector<int> nodeVisited(res.size());
         for(int i = 0;i<res.size();i++){
-            
+
             //if current value need to keep in current index -> continue or is already swapped
             if(nodeVisited[i] || g[i].second == i) continue;
-            
+
             int count = 0;
             int start = i;
             while(!nodeVisited[start]){
@@ -231,29 +231,29 @@ public:
                 if(front->left != nullptr) q.push(front->left);
                 if(front->right != nullptr) q.push(front->right);
             }
-            
+
             minTime += helper(res);
         }
-        
+
         return minTime;
     }
-    
+
     int helper(vector<int>& res){
         if(res.size() <= 1) return 0; //no need
-        
+
         int swapTime = 0;
         vector<pair<int,int>> g;
         for(int i = 0;i<res.size();i++){ //building the graph //O(res.size())
             g.push_back({res[i],i});
         }
-        
+
         sort(g.begin(),g.end());//sort it by value not index
         vector<int> nodeVisited(res.size());
         for(int i = 0;i<res.size();i++){
-            
+
             //if current value need to keep in current index -> continue or is already swapped
             if(nodeVisited[i] || g[i].second == i) continue;
-            
+
             int count = 0;
             int start = i;
             while(!nodeVisited[start]){

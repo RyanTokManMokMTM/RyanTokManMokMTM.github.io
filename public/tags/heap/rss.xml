@@ -66,8 +66,8 @@
 &lt;p&gt;You start your journey from building &lt;code&gt;0&lt;/code&gt; and move to the next building by possibly using bricks or ladders.&lt;/p&gt;
 &lt;p&gt;While moving from building &lt;code&gt;i&lt;/code&gt; to building &lt;code&gt;i+1&lt;/code&gt; (&lt;strong&gt;0-indexed&lt;/strong&gt;),&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;If the current building&amp;rsquo;s height is &lt;strong&gt;greater than or equal&lt;/strong&gt; to the next building&amp;rsquo;s height, you do not need a ladder or bricks.&lt;/li&gt;
-&lt;li&gt;If the current building&amp;rsquo;s height is &lt;strong&gt;less than&lt;/strong&gt; the next building&amp;rsquo;s height, you can either use one ladder or &lt;code&gt;(h[i+1] - h[i])&lt;/code&gt; bricks.
+&lt;li&gt;If the current building&amp;rsquo;s high is &lt;strong&gt;greater than or equal&lt;/strong&gt; to the next building&amp;rsquo;s high, you do not need a ladder or bricks.&lt;/li&gt;
+&lt;li&gt;If the current building&amp;rsquo;s high is &lt;strong&gt;less than&lt;/strong&gt; the next building&amp;rsquo;s high, you can either use one ladder or &lt;code&gt;(h[i+1] - h[i])&lt;/code&gt; bricks.
 &lt;em&gt;Return the furthest building index (0-indexed) you can reach if you use the given ladders and bricks optimally.&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;example:&lt;/p&gt;</description></item><item><title>[Leetcode] Furthest Building You Can Reach(Medium)</title><link>http://localhost:1313/leetcodes/leetcodes1642/</link><pubDate>Tue, 21 Jun 2022 22:55:43 +0800</pubDate><guid>http://localhost:1313/leetcodes/leetcodes1642/</guid><description>&lt;h2 id="leetcode-1642---furthest-building-you-can-reach"&gt;LeetCode 1642 - Furthest Building You Can Reach
@@ -76,8 +76,8 @@
 &lt;p&gt;You start your journey from building &lt;code&gt;0&lt;/code&gt; and move to the next building by possibly using bricks or ladders.&lt;/p&gt;
 &lt;p&gt;While moving from building &lt;code&gt;i&lt;/code&gt; to building &lt;code&gt;i+1&lt;/code&gt; (&lt;strong&gt;0-indexed&lt;/strong&gt;),&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;If the current building&amp;rsquo;s height is &lt;strong&gt;greater than or equal&lt;/strong&gt; to the next building&amp;rsquo;s height, you do not need a ladder or bricks.&lt;/li&gt;
-&lt;li&gt;If the current building&amp;rsquo;s height is &lt;strong&gt;less than&lt;/strong&gt; the next building&amp;rsquo;s height, you can either use one ladder or &lt;code&gt;(h[i+1] - h[i])&lt;/code&gt; bricks.
+&lt;li&gt;If the current building&amp;rsquo;s high is &lt;strong&gt;greater than or equal&lt;/strong&gt; to the next building&amp;rsquo;s high, you do not need a ladder or bricks.&lt;/li&gt;
+&lt;li&gt;If the current building&amp;rsquo;s high is &lt;strong&gt;less than&lt;/strong&gt; the next building&amp;rsquo;s high, you can either use one ladder or &lt;code&gt;(h[i+1] - h[i])&lt;/code&gt; bricks.
 &lt;em&gt;Return the furthest building index (0-indexed) you can reach if you use the given ladders and bricks optimally.&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;example:&lt;/p&gt;</description></item><item><title>[Leetcode] Kth Largest Element in a Stream(Easy)</title><link>http://localhost:1313/archives/leetcodes/leetcode703/</link><pubDate>Fri, 08 Apr 2022 20:21:39 +0800</pubDate><guid>http://localhost:1313/archives/leetcodes/leetcode703/</guid><description>&lt;h2 id="leetcode-703---kth-largest-element-in-a-stream"&gt;LeetCode 703 - Kth Largest Element in a Stream

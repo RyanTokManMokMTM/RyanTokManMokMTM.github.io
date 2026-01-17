@@ -49,7 +49,7 @@ public:
                 }
             }
             upperRow ++; //moving down
-            
+
             //moving down
             if(upperRow <= lowerRow){
                 for(int i = upperRow;i<=lowerRow;i++){
@@ -57,7 +57,7 @@ public:
                 }
             }
             lowerCol--;
-            
+
             //moving right
             if(lowerCol >= upperCol){
                 for(int i = lowerCol;i>=upperCol;i--){
@@ -72,11 +72,9 @@ public:
                 }
             }
             upperCol ++;
-            
-        }     
+
+        }
         return res;
     }
 };
 ```
-
-

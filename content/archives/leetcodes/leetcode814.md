@@ -20,7 +20,7 @@ example
 ```
 Input: root = [1,null,0,0,1]
 Output: [1,null,0,null,1]
-Explanation: 
+Explanation:
 Only the red nodes satisfy the property "every subtree not containing a 1".
 The diagram on the right represents the answer.
 ```
@@ -41,39 +41,37 @@ class Solution {
 public:
     TreeNode* pruneTree(TreeNode* root) {
         if(!root) return nullptr;
-        
+
         root->left = solution(root->left); //contain 1?
         root->right = solution(root->right); //contain 1?
-    
+
         if (root->val == 0 && !root->left && !root->right) return nullptr; //remove itself
 
         return root;
     }
-    
+
     // TreeNode* solution(TreeNode* root){
     //     if(!root) return nullptr;
-        
+
     //     root->left = solution(root->left); //contain 1?
     //     root->right = solution(root->right); //contain 1?
-    
+
     //     if(root->val == 0 && !root->left && !root->right) return nullptr; //remove itself
 
     //     return root;
     // }
-    
+
     // bool solutionA(TreeNode* root){
     //     if(!root) return false;
     //     if(!root->left && !root->right) return root->val == 1;
-        
+
     //     bool left = solution(root->left); //contain 1?
     //     bool right = solution(root->right); //contain 1?
-        
+
     //     if(!left) root->left = nullptr;
     //     if(!right) root->right = nullptr;
-        
+
     //     return left || right || root->val == 1;
     // }
 };
 ```
-
-

@@ -52,7 +52,7 @@ example&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- Choose from the start, [-3,-3,-2,7,1], adding -3 * -5 = 15 to the score.
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- Choose from the start, [-3,-2,7,1], adding -3 * 3 = -9 to the score.
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- Choose from the end, [-2,7,1], adding 1 * 4 = 4 to the score.
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- Choose from the end, [-2,7], adding 7 * 6 = 42 to the score. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- Choose from the end, [-2,7], adding 7 * 6 = 42 to the score.
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;The total score is 50 + 15 - 9 + 4 + 42 = 102.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -113,7 +113,7 @@ example&lt;/li&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- Choose from the start, [-3,-3,-2,7,1], adding -3 * -5 = 15 to the score.
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- Choose from the start, [-3,-2,7,1], adding -3 * 3 = -9 to the score.
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- Choose from the end, [-2,7,1], adding 1 * 4 = 4 to the score.
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- Choose from the end, [-2,7], adding 7 * 6 = 42 to the score. 
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;- Choose from the end, [-2,7], adding 7 * 6 = 42 to the score.
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;The total score is 50 + 15 - 9 + 4 + 42 = 102.&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -122,7 +122,7 @@ example&lt;/li&gt;
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
 &lt;/h2&gt;&lt;p&gt;這題最主要的重點是對於每個&lt;code&gt;multipliers[i]&lt;/code&gt;,它只能挑選最左邊或者最右邊的值。所有，我們需要知道&lt;code&gt;multipliers[i]&lt;/code&gt;拿最左邊的值最後的結果比較大，還是拿最右邊後的結果比較大。為了避免重複計算而超時，所以我們需要使用&lt;code&gt;dp&lt;/code&gt;來幫助我們記錄當前最優解。&lt;code&gt;注:因multipliers最多為m個，所有最多只能從nums拿m個數字&lt;/code&gt;&lt;/p&gt;</description></item><item><title>[Leetcode DP] Counting Bits(Easy)</title><link>http://localhost:1313/archives/leetcodes/leetcodes338/</link><pubDate>Thu, 23 Jun 2022 11:33:51 +0800</pubDate><guid>http://localhost:1313/archives/leetcodes/leetcodes338/</guid><description>&lt;h2 id="leetcode-338---counting-bits"&gt;LeetCode 338 - Counting Bits
 &lt;a class="header-anchor" href="#leetcode-338---counting-bits"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;Given an integer &lt;code&gt;n&lt;/code&gt;, return an &lt;em&gt;array &lt;code&gt;ans&lt;/code&gt; of length &lt;code&gt;n + 1&lt;/code&gt; such that for each &lt;code&gt;i&lt;/code&gt; (&lt;code&gt;0 &amp;lt;= i &amp;lt;= n&lt;/code&gt;), &lt;code&gt;ans[i]&lt;/code&gt; is the &lt;strong&gt;number&lt;/strong&gt; of &lt;code&gt;1&lt;/code&gt;&amp;rsquo;s in the binary representation of &lt;code&gt;i&lt;/code&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;Given an integer &lt;code&gt;n&lt;/code&gt;, return an &lt;em&gt;array &lt;code&gt;and&lt;/code&gt; of length &lt;code&gt;n + 1&lt;/code&gt; such that for each &lt;code&gt;i&lt;/code&gt; (&lt;code&gt;0 &amp;lt;= i &amp;lt;= n&lt;/code&gt;), &lt;code&gt;and[i]&lt;/code&gt; is the &lt;strong&gt;number&lt;/strong&gt; of &lt;code&gt;1&lt;/code&gt;&amp;rsquo;s in the binary representation of &lt;code&gt;i&lt;/code&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;example:&lt;/p&gt;
 
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
@@ -174,7 +174,7 @@ example&lt;/li&gt;
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
 &lt;/h2&gt;&lt;p&gt;這題要我們解決的問題是給定一個數字&lt;code&gt;n&lt;/code&gt;,回傳&lt;code&gt;0 - n&lt;/code&gt;中每個數字包含了多少個為1的&lt;code&gt;bits&lt;/code&gt;。例如: &lt;code&gt;n=2 =&amp;gt; 00,01,10&lt;/code&gt;,回傳的結果便會是&lt;code&gt;[0,1,1]&lt;/code&gt;。&lt;/p&gt;</description></item><item><title>[Leetcode DP] Counting Bits(Easy)</title><link>http://localhost:1313/leetcodes/leetcodes338/</link><pubDate>Thu, 23 Jun 2022 11:33:51 +0800</pubDate><guid>http://localhost:1313/leetcodes/leetcodes338/</guid><description>&lt;h2 id="leetcode-338---counting-bits"&gt;LeetCode 338 - Counting Bits
 &lt;a class="header-anchor" href="#leetcode-338---counting-bits"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;Given an integer &lt;code&gt;n&lt;/code&gt;, return an &lt;em&gt;array &lt;code&gt;ans&lt;/code&gt; of length &lt;code&gt;n + 1&lt;/code&gt; such that for each &lt;code&gt;i&lt;/code&gt; (&lt;code&gt;0 &amp;lt;= i &amp;lt;= n&lt;/code&gt;), &lt;code&gt;ans[i]&lt;/code&gt; is the &lt;strong&gt;number&lt;/strong&gt; of &lt;code&gt;1&lt;/code&gt;&amp;rsquo;s in the binary representation of &lt;code&gt;i&lt;/code&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;Given an integer &lt;code&gt;n&lt;/code&gt;, return an &lt;em&gt;array &lt;code&gt;and&lt;/code&gt; of length &lt;code&gt;n + 1&lt;/code&gt; such that for each &lt;code&gt;i&lt;/code&gt; (&lt;code&gt;0 &amp;lt;= i &amp;lt;= n&lt;/code&gt;), &lt;code&gt;and[i]&lt;/code&gt; is the &lt;strong&gt;number&lt;/strong&gt; of &lt;code&gt;1&lt;/code&gt;&amp;rsquo;s in the binary representation of &lt;code&gt;i&lt;/code&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;example:&lt;/p&gt;
 
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
@@ -300,20 +300,20 @@ example&lt;/li&gt;
 &lt;a class="header-anchor" href="#introduction"&gt;&lt;/a&gt;
 &lt;/h1&gt;&lt;h2 id="什麼是palindromic-string-迴文字串"&gt;什麼是Palindromic String 迴文字串
 &lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%afpalindromic-string-%e8%bf%b4%e6%96%87%e5%ad%97%e4%b8%b2"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;所謂的Palindromic String(迴文字串) 就是以一個字元為中間，而它的左邊以及右邊的組成字元相同。&lt;br&gt;
-例子:&lt;br&gt;
-&lt;code&gt;abcdcba&lt;/code&gt; 以&lt;code&gt;d&lt;/code&gt;為中心的左跟右的字元一樣。&lt;br&gt;
-&lt;code&gt;cdc&lt;/code&gt;左跟右都為&lt;code&gt;c&lt;/code&gt;&lt;br&gt;
-&lt;code&gt;bcdcb&lt;/code&gt; 左跟右都為&lt;code&gt;b&lt;/code&gt;&lt;br&gt;
+&lt;/h2&gt;&lt;p&gt;所謂的Palindromic String(迴文字串) 就是以一個字元為中間，而它的左邊以及右邊的組成字元相同。
+例子:
+&lt;code&gt;abcdcba&lt;/code&gt; 以&lt;code&gt;d&lt;/code&gt;為中心的左跟右的字元一樣。
+&lt;code&gt;cdc&lt;/code&gt;左跟右都為&lt;code&gt;c&lt;/code&gt;
+&lt;code&gt;bcdcb&lt;/code&gt; 左跟右都為&lt;code&gt;b&lt;/code&gt;
 &lt;code&gt;abcdcba&lt;/code&gt; 左跟右都為&lt;code&gt;a&lt;/code&gt;&lt;/p&gt;</description></item><item><title>[筆記]Palindromic String(迴文字串)</title><link>http://localhost:1313/techs/note/palindromicstring/</link><pubDate>Thu, 16 Jun 2022 12:26:03 +0800</pubDate><guid>http://localhost:1313/techs/note/palindromicstring/</guid><description>&lt;h1 id="introduction"&gt;Introduction
 &lt;a class="header-anchor" href="#introduction"&gt;&lt;/a&gt;
 &lt;/h1&gt;&lt;h2 id="什麼是palindromic-string-迴文字串"&gt;什麼是Palindromic String 迴文字串
 &lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%afpalindromic-string-%e8%bf%b4%e6%96%87%e5%ad%97%e4%b8%b2"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;所謂的Palindromic String(迴文字串) 就是以一個字元為中間，而它的左邊以及右邊的組成字元相同。&lt;br&gt;
-例子:&lt;br&gt;
-&lt;code&gt;abcdcba&lt;/code&gt; 以&lt;code&gt;d&lt;/code&gt;為中心的左跟右的字元一樣。&lt;br&gt;
-&lt;code&gt;cdc&lt;/code&gt;左跟右都為&lt;code&gt;c&lt;/code&gt;&lt;br&gt;
-&lt;code&gt;bcdcb&lt;/code&gt; 左跟右都為&lt;code&gt;b&lt;/code&gt;&lt;br&gt;
+&lt;/h2&gt;&lt;p&gt;所謂的Palindromic String(迴文字串) 就是以一個字元為中間，而它的左邊以及右邊的組成字元相同。
+例子:
+&lt;code&gt;abcdcba&lt;/code&gt; 以&lt;code&gt;d&lt;/code&gt;為中心的左跟右的字元一樣。
+&lt;code&gt;cdc&lt;/code&gt;左跟右都為&lt;code&gt;c&lt;/code&gt;
+&lt;code&gt;bcdcb&lt;/code&gt; 左跟右都為&lt;code&gt;b&lt;/code&gt;
 &lt;code&gt;abcdcba&lt;/code&gt; 左跟右都為&lt;code&gt;a&lt;/code&gt;&lt;/p&gt;</description></item><item><title>[Leetcode] Delete Operation for Two Strings(Medium)</title><link>http://localhost:1313/archives/leetcodes/leetcode583/</link><pubDate>Tue, 14 Jun 2022 13:37:49 +0800</pubDate><guid>http://localhost:1313/archives/leetcodes/leetcode583/</guid><description>&lt;h2 id="leetcode-583---delete-operation-for-two-strings"&gt;LeetCode 583 - Delete Operation for Two Strings
 &lt;a class="header-anchor" href="#leetcode-583---delete-operation-for-two-strings"&gt;&lt;/a&gt;
 &lt;/h2&gt;&lt;p&gt;Given two strings &lt;code&gt;word1&lt;/code&gt; and &lt;code&gt;word2&lt;/code&gt;, return the minimum number of steps required to make &lt;code&gt;word1&lt;/code&gt; and &lt;code&gt;word2&lt;/code&gt; the same.&lt;/p&gt;
@@ -347,11 +347,11 @@ example&lt;/p&gt;
 
 &lt;h2 id="how-can-we-solve-this-problem"&gt;How can we solve this problem?
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;這題要我們解決的問題是給定2個字串&lt;code&gt;Word1&lt;/code&gt;和&lt;code&gt;Word2&lt;/code&gt;,每次從&lt;code&gt;Word1&lt;/code&gt;或者&lt;code&gt;Word2&lt;/code&gt;中移除1個Character，問我們最少需要多少步使得2個string一樣。&lt;br&gt;
-首先,我們需要先知道這2個&lt;code&gt;Word&lt;/code&gt;有哪些Character的是一致的。為了能獲得他們之間的最長共同子字串，我們可以透過&lt;code&gt;Longest Commond Substring&lt;/code&gt;來得到他們之間共同子字串的長度，只要每個字串的長度減去LCM的長度，就可以知道各自需要多少步。最後相加起來即可。&lt;br&gt;
+&lt;/h2&gt;&lt;p&gt;這題要我們解決的問題是給定2個字串&lt;code&gt;Word1&lt;/code&gt;和&lt;code&gt;Word2&lt;/code&gt;,每次從&lt;code&gt;Word1&lt;/code&gt;或者&lt;code&gt;Word2&lt;/code&gt;中移除1個Character，問我們最少需要多少步使得2個string一樣。
+首先,我們需要先知道這2個&lt;code&gt;Word&lt;/code&gt;有哪些Character的是一致的。為了能獲得他們之間的最長共同子字串，我們可以透過&lt;code&gt;Longest Common Substring&lt;/code&gt;來得到他們之間共同子字串的長度，只要每個字串的長度減去LCM的長度，就可以知道各自需要多少步。最後相加起來即可。
 
-&lt;a href="http://localhost:1313/leetcodenotes/lcm" title="Longest Commond Substring Template" &gt;
- Longest Commond Substring Template
+&lt;a href="http://localhost:1313/leetcodenotes/lcm" title="Longest Common Substring Template" &gt;
+ Longest Common Substring Template
  
 &lt;/a&gt;&lt;/p&gt;</description></item><item><title>[Leetcode] Delete Operation for Two Strings(Medium)</title><link>http://localhost:1313/leetcodes/leetcode583/</link><pubDate>Tue, 14 Jun 2022 13:37:49 +0800</pubDate><guid>http://localhost:1313/leetcodes/leetcode583/</guid><description>&lt;h2 id="leetcode-583---delete-operation-for-two-strings"&gt;LeetCode 583 - Delete Operation for Two Strings
 &lt;a class="header-anchor" href="#leetcode-583---delete-operation-for-two-strings"&gt;&lt;/a&gt;
@@ -386,17 +386,17 @@ example&lt;/p&gt;
 
 &lt;h2 id="how-can-we-solve-this-problem"&gt;How can we solve this problem?
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;這題要我們解決的問題是給定2個字串&lt;code&gt;Word1&lt;/code&gt;和&lt;code&gt;Word2&lt;/code&gt;,每次從&lt;code&gt;Word1&lt;/code&gt;或者&lt;code&gt;Word2&lt;/code&gt;中移除1個Character，問我們最少需要多少步使得2個string一樣。&lt;br&gt;
-首先,我們需要先知道這2個&lt;code&gt;Word&lt;/code&gt;有哪些Character的是一致的。為了能獲得他們之間的最長共同子字串，我們可以透過&lt;code&gt;Longest Commond Substring&lt;/code&gt;來得到他們之間共同子字串的長度，只要每個字串的長度減去LCM的長度，就可以知道各自需要多少步。最後相加起來即可。&lt;br&gt;
+&lt;/h2&gt;&lt;p&gt;這題要我們解決的問題是給定2個字串&lt;code&gt;Word1&lt;/code&gt;和&lt;code&gt;Word2&lt;/code&gt;,每次從&lt;code&gt;Word1&lt;/code&gt;或者&lt;code&gt;Word2&lt;/code&gt;中移除1個Character，問我們最少需要多少步使得2個string一樣。
+首先,我們需要先知道這2個&lt;code&gt;Word&lt;/code&gt;有哪些Character的是一致的。為了能獲得他們之間的最長共同子字串，我們可以透過&lt;code&gt;Longest Common Substring&lt;/code&gt;來得到他們之間共同子字串的長度，只要每個字串的長度減去LCM的長度，就可以知道各自需要多少步。最後相加起來即可。
 
-&lt;a href="http://localhost:1313/leetcodenotes/lcm" title="Longest Commond Substring Template" &gt;
- Longest Commond Substring Template
+&lt;a href="http://localhost:1313/leetcodenotes/lcm" title="Longest Common Substring Template" &gt;
+ Longest Common Substring Template
  
 &lt;/a&gt;&lt;/p&gt;</description></item><item><title>[筆記]Longest Common SubString(最長公共子序列)</title><link>http://localhost:1313/archives/coding/lcm/</link><pubDate>Tue, 14 Jun 2022 13:11:28 +0800</pubDate><guid>http://localhost:1313/archives/coding/lcm/</guid><description>&lt;h1 id="introduction"&gt;Introduction
 &lt;a class="header-anchor" href="#introduction"&gt;&lt;/a&gt;
 &lt;/h1&gt;&lt;h2 id="什麼是最長公共子序列"&gt;什麼是最長公共子序列?
 &lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%af%e6%9c%80%e9%95%b7%e5%85%ac%e5%85%b1%e5%ad%90%e5%ba%8f%e5%88%97"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;給定2個字串&lt;code&gt;string A&lt;/code&gt;和&lt;code&gt;string B&lt;/code&gt;,2個字串中所共同擁有的最長的子字串。&lt;br&gt;
+&lt;/h2&gt;&lt;p&gt;給定2個字串&lt;code&gt;string A&lt;/code&gt;和&lt;code&gt;string B&lt;/code&gt;,2個字串中所共同擁有的最長的子字串。
 例如:&lt;/p&gt;
 
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
@@ -427,7 +427,7 @@ example&lt;/p&gt;
 &lt;a class="header-anchor" href="#introduction"&gt;&lt;/a&gt;
 &lt;/h1&gt;&lt;h2 id="什麼是最長公共子序列"&gt;什麼是最長公共子序列?
 &lt;a class="header-anchor" href="#%e4%bb%80%e9%ba%bc%e6%98%af%e6%9c%80%e9%95%b7%e5%85%ac%e5%85%b1%e5%ad%90%e5%ba%8f%e5%88%97"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;給定2個字串&lt;code&gt;string A&lt;/code&gt;和&lt;code&gt;string B&lt;/code&gt;,2個字串中所共同擁有的最長的子字串。&lt;br&gt;
+&lt;/h2&gt;&lt;p&gt;給定2個字串&lt;code&gt;string A&lt;/code&gt;和&lt;code&gt;string B&lt;/code&gt;,2個字串中所共同擁有的最長的子字串。
 例如:&lt;/p&gt;
 
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;

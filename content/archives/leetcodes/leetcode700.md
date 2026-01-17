@@ -25,26 +25,26 @@ Output: []
 ```
 
 ## How can we solve this problem?
-在解決問題之前，我們需要知道什麼是`Binary Search Tree`。根據`BST`的定義:  
+在解決問題之前，我們需要知道什麼是`Binary Search Tree`。根據`BST`的定義:
 * `Binary Search Tree` 基於`Binary Tree`
-* `left sub-tree`的所有Node value 都小於root value 
-* `right sub-tree`的所有Node value 都大於root value 
+* `left sub-tree`的所有Node value 都小於root value
+* `right sub-tree`的所有Node value 都大於root value
 * `Binary Search Tree`的key/value都是unique的
-<!-- Before solving this problem, we need to kown what is a Binary Search Tree. According to Binary Search Tree definition:   -->
+<!-- Before solving this problem, we need to known what is a Binary Search Tree. According to Binary Search Tree definition:   -->
 <!-- * `Binary Search Tree` is base on a Binary Tree
-* All elememts in `left sub-tree` are less than root value 
-* All elememts in `right sub-tree` are greater than root value
+* All elements in `left sub-tree` are less than root value
+* All elements in `right sub-tree` are greater than root value
 * Key/Value in `Binary Search Tree` are unique -->
 
-現在我們知道什麼是`BST`了。這個問題是要在`BST`中找`val`，我們通過以下幾個條件以及遞歸幫我們求解:  
-* `left sub-tree`的所有Node value 都小於root value 
-* `right sub-tree`的所有Node value 都大於root value 
+現在我們知道什麼是`BST`了。這個問題是要在`BST`中找`val`，我們通過以下幾個條件以及遞歸幫我們求解:
+* `left sub-tree`的所有Node value 都小於root value
+* `right sub-tree`的所有Node value 都大於root value
 
 如果`val`是小於root,就移動到`左子樹(left sub-tree)`，否者移動到`右子樹(right sub-tree)`,直到找到`val`並返回`root的pointer`或者沒有找到返回`null`
-<!-- 
+<!--
 Now we know what is a `Binary Search Tree`, so we can start to solve this problem. This problem is asking about the sub-tree of the value. For solving this problem, we can use recursion to help us to search the value by applying some rules of `Binary Search Tree`: -->
-<!-- * All elememts in `left sub-tree` are less than root value 
-* All elememts in `right sub-tree` are greater than root value -->
+<!-- * All elements in `left sub-tree` are less than root value
+* All elements in `right sub-tree` are greater than root value -->
 
 
 <!-- If the `val` is less than the root value, pass the left child pointer to the recursive function. Otherwise, pass the right child pointer to the recursive function. After it finds the value, return its root as the result. -->
@@ -73,7 +73,7 @@ class Solution {
 public:
     TreeNode* searchBST(TreeNode* root, int val) {
         if(root == nullptr) return root;
-        
+
         //check val
         if(root->val > val){
             //go to left
@@ -86,5 +86,3 @@ public:
     }
 };
 ```
-
-

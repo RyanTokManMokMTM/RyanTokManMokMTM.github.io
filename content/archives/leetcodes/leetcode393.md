@@ -58,12 +58,12 @@ But the second continuation byte does not start with 10, so it is invalid.
 
 因此讀取到`(110xx xxx)/(1110 xxxx)/(1111 0xxx)` 為UTF-8開頭,接下來就會包含`n-1個為10xx xxxx`的`BYTE`(**1-byte的除外(0xxx xxxx)**)。如果不符號這個條件直接返回*false*即可。
 
-> 小提示：  
-> 0(`b00000000`) - 127(b`01111111`) : `0xxx xxxx`的最小值與最大值的範圍  
-> 128(`b10000000`) - 191(`b10111111`) : `10xx xxxx`的最小值與最大值的範圍  
-> 192(`b11000000`) - 223(`b11011111`) : `110x xxxx`的最小值與最大值的範圍  
-> 224(`b11100000`) - 239(`b11101111`) : `1110 xxxx`的最小值與最大值的範圍  
-> 240(`b11000000`) - 247(`b11011111`) : `1111 0xxx`的最小值與最大值的範圍  
+> 小提示：
+> 0(`b00000000`) - 127(b`01111111`) : `0xxx xxxx`的最小值與最大值的範圍
+> 128(`b10000000`) - 191(`b10111111`) : `10xx xxxx`的最小值與最大值的範圍
+> 192(`b11000000`) - 223(`b11011111`) : `110x xxxx`的最小值與最大值的範圍
+> 224(`b11100000`) - 239(`b11101111`) : `1110 xxxx`的最小值與最大值的範圍
+> 240(`b11000000`) - 247(`b11011111`) : `1111 0xxx`的最小值與最大值的範圍
 
 #### Solution:
 ```c++
@@ -85,34 +85,33 @@ public:
           1  1  1   1 0 x x x
           128+64+32+16
         */
-        
+
         /*
         0xxxxx
         data[i]
-        
-        
+
+
         */
-        
+
         int n = data.size();
         int byteCount = 0;
         for(int i = 0;i<n;i++){
             //there may be not only one nbyte code??
             if(byteCount == 0){
                 if(data[i] >= 0 && data[i] < 128 ) byteCount = 0; // for unicode
-                else if(data[i] >= 192  && data[i] < 224) byteCount = 1; 
+                else if(data[i] >= 192  && data[i] < 224) byteCount = 1;
                 else if(data[i] >= 224 && data[i] < 240) byteCount = 2;
                 else if(data[i] >= 240 && data[i] < 248) byteCount = 3;
-                else return false;   
+                else return false;
             }else {
                 if(data[i] < 128 || data[i] > 191) return false; //less/greater than 10xxxxx
                 byteCount--;
             }
         }
-        
+
         //
-        
+
         return byteCount == 0;
     }
 };
 ```
-

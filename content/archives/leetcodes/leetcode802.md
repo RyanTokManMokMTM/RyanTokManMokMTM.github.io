@@ -12,15 +12,15 @@ cetegories:
 ---
 
 ## 820 - Short Encoding of Words
-A **valid encoding** of an array of `words` is any reference string s and array of indices indices such that:  
+A **valid encoding** of an array of `words` is any reference string s and array of indices indices such that:
 
 * `words.length` == `indices.length`
 * The reference string `s` ends with the `'#'` character.
 * For each index indices[i], the **substring** of s starting from `indices[i]` and up to (but not including) the next `'#'` character is equal to `words[i]`.
-  
+
 Given an array of `words`, return the length of the shortest reference string `s` possible of any valid encoding of `words`.
 
-example:  
+example:
 ```
 Input: words = ["time", "me", "bell"]
 Output: 10
@@ -40,7 +40,7 @@ Explanation: A valid encoding would be s = "t#" and indices = [0].
 這題看上去好像很難理解它要我們解決什麼問題。但是我們可以從例子中可以觀察到他就只是單純用`#`來分隔每個子串。例如:`time,me,bell`會以這樣的方式進行Encoding,`time#me#bell`。但是問題要找出我們最短的是Encoding 長度為多少，也就是有重疊的`Word`我們無需額外加入到子串中，就剛才的例子我們可以看得出來`time`和`me`都包含了`me`。所以,我們Encoding會從`time#me#bell`縮短為`time#bell#`
 
 #### 哪我們要怎麼知道是否不用額外加入到字串中呢?
-題目中有給出幾個條件(不符合條件需插入至String結尾):  
+題目中有給出幾個條件(不符合條件需插入至String結尾):
 * 對於任何`words[j]`,從string中的`indices[i]` 到`#`前,與`words[j]`相同,也就是與`words[j]`是string的後綴(suffix)。例如：`time`和`me`, `me`是`time`的後綴。
 * `words[i]`的長度等於`indices`的長度。也就是`words[i]`-`indices`會等於`words[j]`。例如`words[i]`為4,`indices`為1,`words[j]`為2。`4-1` != `2`，也就是代表`words[j]`不是`words[i]`的後綴。
 
@@ -53,10 +53,10 @@ public:
     TrieNode(){
         node = vector<TrieNode*>(26);
     }
-    vector<TrieNode*> node; 
+    vector<TrieNode*> node;
 };
 
-    
+
 int AddWord(TrieNode* root,string& w){
     int res = -1; //if some words have the same suffix,it will return 0 ,-1+'#' = 0
     for(auto i = w.rbegin();i<w.rend();i++){
@@ -66,7 +66,7 @@ int AddWord(TrieNode* root,string& w){
         }
         root = root->node[*i - 'a'];
     }
-    return res + 1; //extra 
+    return res + 1; //extra
 }
 
 
@@ -80,7 +80,7 @@ public:
         TrieNode* root = new TrieNode();
         for(int i = 0;i<words.size();i++)
             res += AddWord(root,words[i]);
-        
+
         // findShortWords(0,root,res);
         return res;
     }
@@ -103,7 +103,7 @@ public:
         set<string> unique(words.begin(),words.end()); //O(n)
         vector<string> list;
         for(auto word : unique) list.push_back(word); //O(n)
-        
+
         //sorting by word size
         //O n log n
         sort(list.begin(),list.end(),[&](string& a,string& b){
@@ -121,7 +121,7 @@ public:
                 if(index != -1 && list[i].length() == index + list[j].length()){
                   v[j] = 1;
                 }else{
-                    while((index = list[i].find(list[j],index)) != -1){ 
+                    while((index = list[i].find(list[j],index)) != -1){
                         if(list[i].length() == index + list[j].length()) {
                             v[j] = 1;
                             break;

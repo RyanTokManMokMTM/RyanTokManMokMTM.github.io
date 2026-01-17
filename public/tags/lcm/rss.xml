@@ -31,11 +31,11 @@ example&lt;/p&gt;
 
 &lt;h2 id="how-can-we-solve-this-problem"&gt;How can we solve this problem?
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;這題要我們解決的問題是給定2個字串&lt;code&gt;Word1&lt;/code&gt;和&lt;code&gt;Word2&lt;/code&gt;,每次從&lt;code&gt;Word1&lt;/code&gt;或者&lt;code&gt;Word2&lt;/code&gt;中移除1個Character，問我們最少需要多少步使得2個string一樣。&lt;br&gt;
-首先,我們需要先知道這2個&lt;code&gt;Word&lt;/code&gt;有哪些Character的是一致的。為了能獲得他們之間的最長共同子字串，我們可以透過&lt;code&gt;Longest Commond Substring&lt;/code&gt;來得到他們之間共同子字串的長度，只要每個字串的長度減去LCM的長度，就可以知道各自需要多少步。最後相加起來即可。&lt;br&gt;
+&lt;/h2&gt;&lt;p&gt;這題要我們解決的問題是給定2個字串&lt;code&gt;Word1&lt;/code&gt;和&lt;code&gt;Word2&lt;/code&gt;,每次從&lt;code&gt;Word1&lt;/code&gt;或者&lt;code&gt;Word2&lt;/code&gt;中移除1個Character，問我們最少需要多少步使得2個string一樣。
+首先,我們需要先知道這2個&lt;code&gt;Word&lt;/code&gt;有哪些Character的是一致的。為了能獲得他們之間的最長共同子字串，我們可以透過&lt;code&gt;Longest Common Substring&lt;/code&gt;來得到他們之間共同子字串的長度，只要每個字串的長度減去LCM的長度，就可以知道各自需要多少步。最後相加起來即可。
 
-&lt;a href="http://localhost:1313/leetcodenotes/lcm" title="Longest Commond Substring Template" &gt;
- Longest Commond Substring Template
+&lt;a href="http://localhost:1313/leetcodenotes/lcm" title="Longest Common Substring Template" &gt;
+ Longest Common Substring Template
  
 &lt;/a&gt;&lt;/p&gt;</description></item><item><title>[Leetcode] Delete Operation for Two Strings(Medium)</title><link>http://localhost:1313/leetcodes/leetcode583/</link><pubDate>Tue, 14 Jun 2022 13:37:49 +0800</pubDate><guid>http://localhost:1313/leetcodes/leetcode583/</guid><description>&lt;h2 id="leetcode-583---delete-operation-for-two-strings"&gt;LeetCode 583 - Delete Operation for Two Strings
 &lt;a class="header-anchor" href="#leetcode-583---delete-operation-for-two-strings"&gt;&lt;/a&gt;
@@ -70,10 +70,10 @@ example&lt;/p&gt;
 
 &lt;h2 id="how-can-we-solve-this-problem"&gt;How can we solve this problem?
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;這題要我們解決的問題是給定2個字串&lt;code&gt;Word1&lt;/code&gt;和&lt;code&gt;Word2&lt;/code&gt;,每次從&lt;code&gt;Word1&lt;/code&gt;或者&lt;code&gt;Word2&lt;/code&gt;中移除1個Character，問我們最少需要多少步使得2個string一樣。&lt;br&gt;
-首先,我們需要先知道這2個&lt;code&gt;Word&lt;/code&gt;有哪些Character的是一致的。為了能獲得他們之間的最長共同子字串，我們可以透過&lt;code&gt;Longest Commond Substring&lt;/code&gt;來得到他們之間共同子字串的長度，只要每個字串的長度減去LCM的長度，就可以知道各自需要多少步。最後相加起來即可。&lt;br&gt;
+&lt;/h2&gt;&lt;p&gt;這題要我們解決的問題是給定2個字串&lt;code&gt;Word1&lt;/code&gt;和&lt;code&gt;Word2&lt;/code&gt;,每次從&lt;code&gt;Word1&lt;/code&gt;或者&lt;code&gt;Word2&lt;/code&gt;中移除1個Character，問我們最少需要多少步使得2個string一樣。
+首先,我們需要先知道這2個&lt;code&gt;Word&lt;/code&gt;有哪些Character的是一致的。為了能獲得他們之間的最長共同子字串，我們可以透過&lt;code&gt;Longest Common Substring&lt;/code&gt;來得到他們之間共同子字串的長度，只要每個字串的長度減去LCM的長度，就可以知道各自需要多少步。最後相加起來即可。
 
-&lt;a href="http://localhost:1313/leetcodenotes/lcm" title="Longest Commond Substring Template" &gt;
- Longest Commond Substring Template
+&lt;a href="http://localhost:1313/leetcodenotes/lcm" title="Longest Common Substring Template" &gt;
+ Longest Common Substring Template
  
 &lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

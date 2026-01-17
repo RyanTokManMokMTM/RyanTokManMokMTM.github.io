@@ -52,7 +52,7 @@
 
 &lt;h2 id="how-can-we-solve-this-problem"&gt;How can we solve this problem?
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;這題就是要移除&lt;code&gt;Array&lt;/code&gt;中2個elements加起來等於&lt;code&gt;k&lt;/code&gt;的操作有幾次。&lt;br&gt;
+&lt;/h2&gt;&lt;p&gt;這題就是要移除&lt;code&gt;Array&lt;/code&gt;中2個elements加起來等於&lt;code&gt;k&lt;/code&gt;的操作有幾次。
 第一個解法，我們可以使用&lt;code&gt;sorting&lt;/code&gt;以及&lt;code&gt;two-pointer approach&lt;/code&gt;來解決。先將&lt;code&gt;array&lt;/code&gt;排序，然後設置&lt;code&gt;i&lt;/code&gt;為0,&lt;code&gt;j&lt;/code&gt;為&lt;code&gt;n-1&lt;/code&gt;,直接使用iteration找出&lt;code&gt;nums[i]+nums[j] = k&lt;/code&gt;的數，然後&lt;code&gt;answer+1&lt;/code&gt;即可。&lt;/p&gt;</description></item><item><title>[Leetcode] Max Number of K-Sum Pairs(Medium)</title><link>http://localhost:1313/leetcodes/leetcode1679/</link><pubDate>Wed, 04 May 2022 20:11:43 +0800</pubDate><guid>http://localhost:1313/leetcodes/leetcode1679/</guid><description>&lt;h2 id="leetcode-1679---max-number-of-k-sum-pairs"&gt;LeetCode 1679 - Max Number of K-Sum Pairs
 &lt;a class="header-anchor" href="#leetcode-1679---max-number-of-k-sum-pairs"&gt;&lt;/a&gt;
 &lt;/h2&gt;&lt;p&gt;You are given an integer array &lt;code&gt;nums&lt;/code&gt; and an integer &lt;code&gt;k&lt;/code&gt;.&lt;/p&gt;
@@ -99,7 +99,7 @@
 
 &lt;h2 id="how-can-we-solve-this-problem"&gt;How can we solve this problem?
 &lt;a class="header-anchor" href="#how-can-we-solve-this-problem"&gt;&lt;/a&gt;
-&lt;/h2&gt;&lt;p&gt;這題就是要移除&lt;code&gt;Array&lt;/code&gt;中2個elements加起來等於&lt;code&gt;k&lt;/code&gt;的操作有幾次。&lt;br&gt;
+&lt;/h2&gt;&lt;p&gt;這題就是要移除&lt;code&gt;Array&lt;/code&gt;中2個elements加起來等於&lt;code&gt;k&lt;/code&gt;的操作有幾次。
 第一個解法，我們可以使用&lt;code&gt;sorting&lt;/code&gt;以及&lt;code&gt;two-pointer approach&lt;/code&gt;來解決。先將&lt;code&gt;array&lt;/code&gt;排序，然後設置&lt;code&gt;i&lt;/code&gt;為0,&lt;code&gt;j&lt;/code&gt;為&lt;code&gt;n-1&lt;/code&gt;,直接使用iteration找出&lt;code&gt;nums[i]+nums[j] = k&lt;/code&gt;的數，然後&lt;code&gt;answer+1&lt;/code&gt;即可。&lt;/p&gt;</description></item><item><title>[Leetcode] Top K Frequent Elements(Medium)</title><link>http://localhost:1313/archives/leetcodes/leetcode347/</link><pubDate>Sat, 09 Apr 2022 06:22:34 +0800</pubDate><guid>http://localhost:1313/archives/leetcodes/leetcode347/</guid><description>&lt;h2 id="leetcode-347---top-k-frequent-elements"&gt;LeetCode 347 - Top K Frequent Elements
 &lt;a class="header-anchor" href="#leetcode-347---top-k-frequent-elements"&gt;&lt;/a&gt;
 &lt;/h2&gt;&lt;p&gt;Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.&lt;/p&gt;

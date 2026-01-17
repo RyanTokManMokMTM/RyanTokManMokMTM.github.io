@@ -41,7 +41,7 @@ Output: [["root/a/2.txt","root/c/d/4.txt"],["root/a/1.txt","root/c/3.txt"]]
 class Solution {
 public:
     vector<vector<string>> findDuplicate(vector<string>& paths) {
-        //format : directory fileName(content) fileName2(contnet)
+        //format : directory fileName(content) fileName2(content)
         //abcd : "root/a/1.txt","root/c 3.txt(abcd)"
         unordered_map<string,vector<string>> m;
         vector<vector<string>> res;
@@ -56,7 +56,7 @@ public:
             string root = str.substr(0,i);
             i++; //after sapce
             vector<string> files;
-            
+
             while(i < n){
                 //find file name
                 //find file content
@@ -64,28 +64,26 @@ public:
                 while(str[i] != '('){
                     fileName += str[i++];
                 }
-                
+
                 // cout << fileName << " ";
-                
+
                 i++; //skip (
                 while(str[i] != ')') fileContent += str[i++];
                 // cout << fileContent << endl;
                 i+=2; //skip and move to next file
-                
+
                 m[fileContent].push_back(root + "/" + fileName);
             }
-            
+
         }
-        
+
         for(auto &ele : m){
             if(ele.second.size() > 1) res.push_back(ele.second);
         }
 
         return res;
     }
-    
+
 
 };
 ```
-
-

@@ -13,7 +13,7 @@ Given an integer array `nums`, move all the even integers at the beginning of th
 
 Return **any array** that satisfies this condition.
 
-example:  
+example:
 ```
 Input: nums = [3,1,2,4]
 Output: [2,4,3,1]
@@ -38,7 +38,7 @@ public:
     vector<int> sortArrayByParity(vector<int>& nums) {
         int i = 0;
         int j = nums.size() - 1;
-        
+
         //O(n)
         while(i < j){
             //i is even skip
@@ -52,5 +52,3 @@ public:
     }
 };
 ```
-
-

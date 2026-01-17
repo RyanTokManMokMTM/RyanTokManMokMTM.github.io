@@ -8,16 +8,16 @@ description: |
   JWT (JSON Web Token) 完整解析：Header、Payload、Signature 三部分結構
   探討 JWT 在身份認證中的應用和工作流程
   包含 HMAC 簽名演算法和 Base64URL 編碼機制
-tags: 
+tags:
     - token
     - backend
-categories: 
+categories:
     - note
 author: jackson.tmm
 ---
 
 ## What is JWT(Json Web Token)?
-The full name of JWT is Json Web Token. Acccording to the definition, JWT is a proposed Internet standard for creating data with optinal signature and/or opntional encryption whose payload holds JSON that asserts some number of clamis.  
+The full name of JWT is Json Web Token. According to the definition, JWT is a proposed Internet standard for creating data with optional signature and/or opntional encryption whose payload holds JSON that asserts some number of clamis.
 It's used for *identity authentication* between client and the server that allows accessing resources in the server.
 
 ## The Structure of JWT
@@ -38,12 +38,12 @@ Header typically consists of two parts
 ```
 This information will be encoded by *base64Url algorithm* in order to generate the JWT Header
 
-### JWT payload 
-In payload  is typically  saving some users information and other useful information.  
+### JWT payload
+In payload  is typically  saving some users information and other useful information.
 
 *Be carefulthat payload must not include any secret information due to base64Url algorithm is easy to be decrypted.*
 
-JWT Payload standard claims 
+JWT Payload standard claims
 ```json
 {
   "sub" :"",//subject
@@ -73,7 +73,7 @@ HMACSHA256(
 ```
 And these three partes will be combined by a `.` as following format: `xxx.yyy.zzz`
 ```
-//exmaple
+//example
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.cThIIoDvwdueQB468K5xDc5633seEFoqwxjF_xSJyQQ
 ```
 
@@ -84,12 +84,12 @@ sequenceDiagram
     Note over Client,Server: User logs in
     alt is authenticated
     Server->>Client:HTTP Status:200 {"token":eyxxx.xx.x}
-    Note over Server,Client: Loged in Succeed
+    Note over Server,Client: Logged in Succeed
     else Unauthorized
     Server->>Client: HTTP Status:401 {"msg":xxx}
-    Note over Server,Client: Loged in Failed
+    Note over Server,Client: Logged in Failed
     end
-    Client->>Server: POST /user/profile {"Authorization":"Bear token"} 
+    Client->>Server: POST /user/profile {"Authorization":"Bear token"}
     Note over Server,Client: Get User Profile with token
     alt succeed
     Server-->Client: HTTP Status:200 {"profile":eyxxx.xx.x}

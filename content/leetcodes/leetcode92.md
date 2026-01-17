@@ -26,7 +26,7 @@ Output: [5]
 ```
 
 ## How can we solve this problem?
-這一題的問題非常的簡單,就是要讓我們在給定的一個`list`中翻轉(Reverse)`[left,right]`之間的Node,並返回結果。這題跟**Reverse Linked List I**解法類似,不同的是多了個翻轉範圍。  
+這一題的問題非常的簡單,就是要讓我們在給定的一個`list`中翻轉(Reverse)`[left,right]`之間的Node,並返回結果。這題跟**Reverse Linked List I**解法類似,不同的是多了個翻轉範圍。
 首先，我們要做的是在的翻轉的開始的位置。然後再透過recursive來翻轉List,最後返回的`node/head`再由`left`位置的Node的前一個`Node`接起來(如有)就可以了~
 
 ![LeetCode92](/imgs-custom/leetcodesHelper/92-helper.png)
@@ -70,25 +70,25 @@ public:
             //reverse the list
             return reverseList(right,head); //reverse the list and return the new head which node is the right node
         }
-        
+
         head->next = reverseBetween(head->next,left - 1,right - 1); //keep finding the starting point
         return  head;
     }
 
-    
-    ListNode* reverseList(int right,ListNode* head){ 
+
+    ListNode* reverseList(int right,ListNode* head){
         if(right == 1){
             theNodeAfter = head->next;
             return head;
         }
-        
-        ListNode* last = reverseList(right-1,head->next); 
+
+        ListNode* last = reverseList(right-1,head->next);
         head->next->next=head;
         head->next=theNodeAfter; //
         return last;
     }
-    
-//     void reverseList(int i ,int n,ListNode* head){ 
+
+//     void reverseList(int i ,int n,ListNode* head){
 //         if(i == n){
 //             afterBreak = head->next;
 //             head->next = nullptr;
@@ -96,13 +96,11 @@ public:
 //             last = head;
 //             return;
 //         }
-        
-//         reverseList(i+1,n,head->next); 
+
+//         reverseList(i+1,n,head->next);
 //         head->next =nullptr;
 //         last->next = head;
 //         last = last->next;
 //     }
 };
 ```
-
-

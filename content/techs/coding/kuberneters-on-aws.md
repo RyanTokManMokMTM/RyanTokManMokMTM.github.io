@@ -14,12 +14,12 @@ tags:
 
 ## 這篇文章主要是講述如何在AWS雲服務中部署Kubernetes集群
 
-首先，我們需要準備使用一下工具進行設置  
+首先，我們需要準備使用一下工具進行設置
 * KOps - 一個能讓我們輕鬆無痛部署Kubernetes到任何雲服務的工具，可以想象為集群的kubectl
 * AWS IAM - 申請一個能讓Kops存取權限的賬號
 * AWS S3 Bucket - 用來作為存取Kubernets資料的資料庫
 * AWS Route53 - 用於使用自定義Domain Name 並連接到Master Node中
-* GoDady - 作為DNS 服務供應商 
+* GoDady - 作為DNS 服務供應商
 
 #### 前置工作
 
@@ -56,7 +56,7 @@ brew update && brew install kops
 > 如果還沒有AWS 賬號，可以先去申請一個再完成下面的步驟
 
 *透過UI設置*
-1. 搜尋`IAM`,在`Access management`中選擇`Users`。 
+1. 搜尋`IAM`,在`Access management`中選擇`Users`。
 如下圖所示
 ![IAM-USERS](/imgs-custom/kops/IAM-Users.png)
 
@@ -88,7 +88,7 @@ brew update && brew install kops
 3. `Default region name` 可以不輸入，使用DEFAULT即可
 4. `Default output format` 可以不輸入 ，使用DEFAULT即可
 
-*透過AWS Cli 設置* 
+*透過AWS Cli 設置*
 ```
 aws iam create-group --group-name kops
 
@@ -110,7 +110,7 @@ aws iam create-access-key --user-name kops
 > 記得要設置AWS
 
 ##### 使用AWS Route53 設置DNS
-> 故博主已在GoDady購買Domain Name - 所以以projectdomaindns.com   
+> 故博主已在GoDady購買Domain Name - 所以以projectdomaindns.com
 *透過UI建立aws route53*
 1. 搜尋`Route53`
 2. 新增`Domain Name` - **注意:Domain Name 必須要跟註冊的一樣！**
@@ -122,7 +122,7 @@ aws iam create-access-key --user-name kops
 
 ![godadydns](/imgs-custom/kops/godady-dns.png)
 
-*透過Terminal建立 aws route53*  
+*透過Terminal建立 aws route53*
 **注意:Domain Name 必須要跟註冊的一樣！**
 ```
 ID=$(uuidgen) && aws route53 create-hosted-zone --name projectdomaindns.com --caller-reference $ID | jq .DelegationSet.NameServers
@@ -133,7 +133,7 @@ ID=$(uuidgen) && aws route53 create-hosted-zone --name projectdomaindns.com --ca
 **博主設置的地區是新加坡 - Asia Pacific (Singapore) ap-southeast-1**
 *透過UI建立aws s3*
 1. 搜尋`aws S3`
-2. 建立`Bucket` - *Bucket名字必須是唯一的*  
+2. 建立`Bucket` - *Bucket名字必須是唯一的*
 > **要注意的是`Region`以及`Block Public Access settings for this bucket`**
 - Region 要記得你設置的區域，建議跟部署集群地區一致~
 - `Block Public Access` 設置為public~
@@ -143,7 +143,7 @@ ID=$(uuidgen) && aws route53 create-hosted-zone --name projectdomaindns.com --ca
 ```
 aws s3api create-bucket --bucket k8s-example \
 --region  ap-southeast-1 \
---create-bucket-configuration LocationConstraint=ap-southeast-1 
+--create-bucket-configuration LocationConstraint=ap-southeast-1
 ```
 
 > --create-bucket-configuration LocationConstraint=ap-southeast-1 這個設定對於us-east-1地區以外的都必須要加上，不然會出錯
@@ -174,7 +174,7 @@ kops create cluster \
 * node-count - 一般node的數量
 * state - 存放S3的Bucket
 
-以上指令運行完後的結果如下:  
+以上指令運行完後的結果如下:
 ![kops-create](/imgs-custom/kops/kops-create.png)
 > 如果設置完，需要修改可以使用 kops edit
 ##### 建立Cluster
@@ -187,10 +187,10 @@ kops update cluster --name projectdomaindns.com --yes --admin --state=s3://k8s-b
 然後就是漫長的等待...... 5 - 20分鐘左右.
 可以透過一下指令檢查是否完成部署，使用`--wait 10m` 10分鐘內會不斷的檢測~
 ```
- kops validate cluster --wait 10m --state=${S3} 
+ kops validate cluster --wait 10m --state=${S3}
 ```
 
-完成部署後，會顯示`ready`的狀態  
+完成部署後，會顯示`ready`的狀態
 ![ready-state](/imgs-custom/kops/kops-ready.png)
 
 透過`kubectl get nodes`也可以看到3個`nodes`,他們的`Name`就會是`AWS EC2`主機的名字咯~
@@ -232,7 +232,7 @@ spec:
         - name: api-server
           image: jacksontmm/demo-server:v1
           ports:
-           - containerPort: 8080   ~                                        
+           - containerPort: 8080   ~
 ```
 上面這份config簡單來說就是會有3個一模一樣的`pod`,但是`IP`不同
 
@@ -258,11 +258,11 @@ kubectl expose deploy demo-deploy --name=deploy-svc --type=NodePort --port=8080
 執行`kubectl get service`會發現多了一個`service`的`Name`為`deploy-svc`，也就是我們剛才所建立的！
 ![svc](/imgs-custom/kops/service.png)
 
-現在我們只需要透過expose 的port,**port:31176**,就可以存取了！ 
+現在我們只需要透過expose 的port,**port:31176**,就可以存取了！
 
 > *注意：要先去將Master node(EC2)的31176 port 對外開放哦~ 不然會進不去 哈哈哈 - 設置secret group 的inbound 即可*
 
-打開瀏覽器輸入`http://13.212.80.234:31176/ping`,就會看到`pong`回傳回來!  
+打開瀏覽器輸入`http://13.212.80.234:31176/ping`,就會看到`pong`回傳回來!
 > 13.212.80.234為Master node 的public ip
 
 ![response](/imgs-custom/kops/response.png)
@@ -276,6 +276,6 @@ kops delete cluster --name=${cluster name}--state=s3://${s3 name} --yes
 
 ---
 #### 參考資料
-* [Kubernetes 30天學習筆記](https://ithelp.ithome.com.tw/articles/10195765)  
+* [Kubernetes 30天學習筆記](https://ithelp.ithome.com.tw/articles/10195765)
 * [kOps - Kubernetes Operations](https://kops.sigs.k8s.io/getting_started/aws/)
 * [Manage Kubernetes Clusters on AWS Using Kops](https://aws.amazon.com/cn/blogs/compute/kubernetes-clusters-aws-kops/)

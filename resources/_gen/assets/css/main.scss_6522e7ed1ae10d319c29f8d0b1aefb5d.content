@@ -3702,6 +3702,55 @@ header.header {
   padding: .85em .95em;
 }
 
+.post-body .post-alert-error {
+  padding: 0 0 0 10px;
+  border-left: 6px solid #DC3545;
+  font-size: 0.825em;
+  color: #DC3545;
+}
+
+.post-body .post-alert-help {
+  padding: 0 0 0 10px;
+  border-left: 6px solid #967ADC;
+  font-size: 0.825em;
+  color: #967ADC;
+}
+
+.post-body .post-alert-important {
+  padding: 0 0 0 10px;
+  border-left: 6px solid #007BFF;
+  font-size: 0.825em;
+  color: #007BFF;
+}
+
+.post-body .post-alert-info {
+  padding: 0 0 0 10px;
+  border-left: 6px solid #4A90E2;
+  font-size: 0.825em;
+  color: #4A90E2;
+}
+
+.post-body .post-alert-note {
+  padding: 0 0 0 10px;
+  border-left: 6px solid #17A2B8;
+  font-size: 0.825em;
+  color: #17A2B8;
+}
+
+.post-body .post-alert-success {
+  padding: 0 0 0 10px;
+  border-left: 6px solid #32CD32;
+  font-size: 0.825em;
+  color: #32CD32;
+}
+
+.post-body .post-alert-warning {
+  padding: 0 0 0 10px;
+  border-left: 6px solid #F39C12;
+  font-size: 0.825em;
+  color: #F39C12;
+}
+
 .post-body .post-alert-title, .post-body .post-expired-title {
   display: flex;
   align-items: center;

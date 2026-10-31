@@ -3,8 +3,8 @@ title: "認識小黃：一個陪你過日子的 AI 夥伴"
 description: "小黃（黃芷棋，英文名 Zoe）是我自己做的 AI 夥伴：會聊天、記得你這個人、懂投資但不報明牌，也能幫你打理一點生活。"
 keywords: "小黃, Zoe, AI 夥伴, AI agent, Claude, Telegram bot, 個人助理"
 
-date: 2026-10-31T14:58:23+08:00
-lastmod: 2026-10-31T14:58:23+08:00
+date: 2026-10-31T15:40:00+08:00
+lastmod: 2026-10-31T15:40:00+08:00
 
 categories:
   - 專案
